@@ -1,0 +1,120 @@
+> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/agent-network/providers.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/agent-network/providers.mdx)
+
+# Providers
+
+A **provider** is an upstream LLM service that NetBird routes requests to. Connecting one
+stores its API key server-side and exposes it through your keyless, tunnel-only
+[agent network endpoint](https://docs.netbird.io/agent-network/how-it-works#llm-apis-and-ai-gateways), so agents
+never hold a provider key.
+
+![agent network providers list](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/agent-network/providers/agent-network-providers-list.png)
+
+## Supported Providers
+
+When you connect a provider, the picker groups the catalog into first-party **AI
+Providers**, multi-provider **AI Gateways**, and a **Custom** catch-all.
+
+### AI Providers
+
+First-party vendor APIs:
+
+- OpenAI
+- Anthropic
+- Azure OpenAI
+- AWS Bedrock
+- Google Vertex AI
+- Mistral
+- Kimi (Moonshot AI)
+
+### AI Gateways
+
+Routing and aggregation layers that sit in front of multiple providers. NetBird can also
+forward the calling agent's identity to these so the gateway can apply its own attribution
+and budgets (see [How It Works](https://docs.netbird.io/agent-network/how-it-works#llm-apis-and-ai-gateways)):
+
+- LiteLLM Proxy
+- Portkey AI Gateway
+- Bifrost
+- Cloudflare AI Gateway
+- Vercel AI Gateway
+- OpenRouter
+
+### Custom
+
+- Custom / Self-hosted: any OpenAI-compatible endpoint, including local models served by
+  Ollama, vLLM, or a private GPU host.
+
+## Connect a Provider
+
+1. Go to **Agent Network → Providers** and click **Connect Provider**.
+2. Select the provider or gateway. NetBird pre-fills the upstream URL and the correct auth
+   header for that vendor.
+3. Paste the provider's **API key**. It is stored encrypted server-side and never sent to
+   callers.
+4. *(Optional)* Restrict the **allowed models** and set **per-model pricing** used for cost
+   estimates in usage and logs.
+5. *(Optional, gateways)* Fill any gateway-specific fields (for example a Portkey config
+   ID) and the identity headers used for attribution.
+6. Save the provider.
+
+![agent network connect provider modal](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/agent-network/providers/agent-network-create-provider.png)
+
+## Custom & Self-hosted Providers
+
+Pick **Custom / Self-hosted** for any OpenAI-compatible endpoint that isn't a first-party
+vendor or a named gateway, a private inference server, an on-prem deployment, or a local
+model runtime like Ollama or vLLM (vLLM also has its own named entry). NetBird talks to it
+the same way it talks to OpenAI: you provide the **Upstream URL** where requests are
+forwarded and, if the endpoint requires one, an **API key** sent as a bearer token.
+
+![custom provider settings with the Skip TLS Verification switch](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/agent-network/providers/agent-network-custom-provider.png)
+
+### Skip TLS Verification
+
+Self-hosted endpoints often serve HTTPS with a self-signed or otherwise untrusted
+certificate, which makes the proxy reject the connection with an unknown-certificate error.
+Enable **Skip TLS Verification** on a custom provider to disable upstream TLS certificate
+validation so requests go through anyway.
+
+> **Warning**
+>
+> This turns off certificate checks for that provider's upstream traffic, which removes
+> protection against man-in-the-middle attacks. Use it only for quick testing. For anything
+> beyond that, mount your CA / trusted certificates on your proxy instances instead of
+> skipping verification.
+
+The switch appears only for custom (self-hosted) providers and is **off by default**.
+
+### Identity Metadata
+
+By default NetBird stamps the caller's **user** and the **group that authorized the request**
+onto each upstream request, so the provider or gateway can attribute usage to the real caller
+instead of the shared API key. The exact header or field is provider-specific. See the
+provider's [integration guide](https://docs.netbird.io/agent-network/integrations) for details (for example, AWS
+Bedrock carries it in a header used for [cost-allocation tags](https://docs.netbird.io/agent-network/integrations/bedrock#cost-allocation),
+and AI gateways receive their own attribution headers).
+
+This is controlled by the **Forward identity metadata** toggle on the provider, which is **on by
+default** and shown only for providers that support it (first-party APIs such as OpenAI or
+Anthropic have no such metadata channel, so the toggle doesn't appear for them). Turn it off
+to keep the caller's identity out of the upstream request.
+
+![Connect Provider modal with the Disable identity metadata toggle](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/agent-network/providers/agent-network-provider-metadata.png)
+
+## Models and Pricing
+
+Each provider carries a list of models it serves. Leaving the list empty makes the
+provider a catch-all that accepts any model (typical for gateways); listing specific models
+restricts routing to them. Per-model input/output prices drive the cost figures shown in
+[Usage & Logs](https://docs.netbird.io/agent-network/usage-and-logs); adjust them if your negotiated rates differ
+from the catalog defaults.
+
+## The Keyless Endpoint
+
+All connected providers share a single account endpoint, generated when you connect your
+first provider and reachable only over the NetBird overlay.
+
+![agent network endpoint on the Providers page](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/agent-network/quickstart/agent-network-endpoint.png)
+
+Agents send normal provider requests to the endpoint without an API key; which identities
+may reach which providers is governed by [Policies](https://docs.netbird.io/agent-network/policies).

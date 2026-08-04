@@ -1,0 +1,73 @@
+> Release-pinned source for Traefik Proxy v3.7.10: [docs/content/reference/routing-configuration/http/middlewares/grpcweb.md](https://github.com/traefik/traefik/blob/2a2349356c01b1b1f7ecddb0c17b30c97f5241e7/docs/content/reference/routing-configuration/http/middlewares/grpcweb.md)
+
+The `grpcWeb` middleware converts gRPC Web requests to HTTP/2 gRPC requests before forwarding them to the backends.
+
+> **Tip**
+> Please note, that Traefik needs to communicate using gRPC with the backends (h2c or HTTP/2 over TLS).
+> Check out [Exposing gRPC Services](https://doc.traefik.io/traefik/v3.7/expose/overview#exposing-grpc-services) for more details.
+
+## Configuration Examples
+
+**Structured (YAML)**
+
+```yaml
+http:
+  middlewares:
+    test-grpcweb:
+      grpcWeb:
+        allowOrigins:
+          - "*"
+```
+
+**Structured (TOML)**
+
+```toml
+[http.middlewares]
+  [http.middlewares.test-grpcweb.grpcWeb]
+    allowOrigins = ["*"]
+```
+
+**Labels**
+
+```yaml
+labels:
+  - "traefik.http.middlewares.test-grpcweb.grpcweb.allowOrigins=*"
+```
+
+**Tags**
+
+```json
+{
+  //...
+  "Tags" : [
+    "traefik.http.middlewares.test-grpcweb.grpcWeb.allowOrigins=*"
+  ]
+}
+```
+
+**Kubernetes**
+
+```yaml
+apiVersion: traefik.io/v1alpha1
+kind: Middleware
+metadata:
+  name: test-grpcweb
+spec:
+  grpcWeb:
+    allowOrigins:
+      - "*"
+```
+
+## Configuration Options
+
+| Field                                       | Description                                                                                                                                       | Default | Required |
+| :------------------------------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------ | :------ | :------- |
+| <a id="opt-allowOrigins"></a>`allowOrigins` | List of allowed origins. <br /> A wildcard origin `*` can also be configured to match all requests.<br /> More information [here](#alloworigins). | \[]     | No       |
+
+### allowOrigins
+
+More information including how to use the settings can be found at:
+
+- [Mozilla.org](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin)
+- [w3](https://fetch.spec.whatwg.org/#http-access-control-allow-origin)
+- [IETF](https://tools.ietf.org/html/rfc6454#section-7.1)

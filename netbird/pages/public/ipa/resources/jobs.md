@@ -1,0 +1,835 @@
+> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/ipa/resources/jobs.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/ipa/resources/jobs.mdx)
+
+## List Jobs   (GET /api/peers/{peerId}/jobs)
+
+Retrieve all jobs for a given peer
+
+### Path Parameters
+
+**peerId (type: string; required)**
+
+The unique identifier of a peer
+
+**GET /api/peers/{peerId}/jobs Request**
+
+**cURL**
+
+```bash
+curl -X GET https://api.netbird.io/api/peers/{peerId}/jobs \
+-H 'Accept: application/json' \
+-H 'Authorization: Token <TOKEN>' 
+```
+
+```js
+const axios = require('axios');
+
+let config = {
+  method: 'get',
+  maxBodyLength: Infinity,
+  url: '/api/peers/{peerId}/jobs',
+  headers: {     
+    'Accept': 'application/json',    
+    'Authorization': 'Token <TOKEN>'
+  }  
+};
+
+axios(config)
+.then((response) => {
+  console.log(JSON.stringify(response.data));
+})
+.catch((error) => {
+  console.log(error);
+});
+```
+
+```python
+import requests
+import json
+
+url = "https://api.netbird.io/api/peers/{peerId}/jobs"
+
+headers = {     
+  'Accept': 'application/json',
+  'Authorization': 'Token <TOKEN>'
+}
+
+response = requests.request("GET", url, headers=headers)
+
+print(response.text)
+```
+
+```go
+package main
+
+import (
+  "fmt"
+  "strings"
+  "net/http"
+  "io/ioutil"
+)
+
+func main() {
+
+  url := "https://api.netbird.io/api/peers/{peerId}/jobs"
+  method := "GET"
+  
+  client := &http.Client {
+  }
+  req, err := http.NewRequest(method, url, nil)
+
+  if err != nil {
+    fmt.Println(err)
+    return
+  }
+  
+    
+  req.Header.Add("Accept", "application/json")
+  req.Header.Add("Authorization", "Token <TOKEN>")
+
+  res, err := client.Do(req)
+  if err != nil {
+    fmt.Println(err)
+    return
+  }
+  defer res.Body.Close()
+
+  body, err := ioutil.ReadAll(res.Body)
+  if err != nil {
+    fmt.Println(err)
+    return
+  }
+  fmt.Println(string(body))
+}
+```
+
+```ruby
+require "uri"
+require "json"
+require "net/http"
+
+url = URI("https://api.netbird.io/api/peers/{peerId}/jobs")
+
+https = Net::HTTP.new(url.host, url.port)
+https.use_ssl = true
+
+request = Net::HTTP::Get.new(url)
+request["Accept"] = "application/json"
+request["Authorization"] = "Token <TOKEN>"
+
+response = https.request(request)
+puts response.read_body
+```
+
+```java
+OkHttpClient client = new OkHttpClient().newBuilder()
+  .build();
+
+Request request = new Request.Builder()
+  .url("https://api.netbird.io/api/peers/{peerId}/jobs")
+  .method("GET")    
+  .addHeader("Accept", "application/json")
+  .addHeader("Authorization: Token <TOKEN>")
+  .build();
+Response response = client.newCall(request).execute();
+```
+
+```php
+<?php
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => 'https://api.netbird.io/api/peers/{peerId}/jobs',
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => '',
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 0,
+  CURLOPT_FOLLOWLOCATION => true,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => 'GET',  
+  CURLOPT_HTTPHEADER => array(        
+    'Accept: application/json',
+    'Authorization: Token <TOKEN>'
+  ),
+));
+
+$response = curl_exec($curl);
+
+curl_close($curl);
+echo $response;
+```
+
+**Response**
+
+**Example**
+
+```json
+[
+  {
+    "id": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "completed_at": {
+      "type": "string",
+      "format": "date-time",
+      "nullable": true
+    },
+    "triggered_by": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "succeeded",
+        "failed"
+      ]
+    },
+    "failed_reason": {
+      "type": "string",
+      "nullable": true
+    },
+    "workload": {
+      "oneOf": [
+        {
+          "type": "bundle",
+          "parameters": {
+            "bundle_for": true,
+            "bundle_for_time": 2,
+            "log_file_count": 100,
+            "anonymize": false
+          },
+          "result": {
+            "upload_key": "upload_key_123"
+          }
+        }
+      ],
+      "discriminator": {
+        "propertyName": "type",
+        "mapping": {
+          "bundle": "#/components/schemas/BundleWorkloadResponse"
+        }
+      }
+    }
+  }
+]
+```
+
+**Schema**
+
+```json
+[
+  {
+    "id": "string",
+    "created_at": "string",
+    "completed_at": "string",
+    "triggered_by": "string",
+    "status": "string",
+    "failed_reason": "string",
+    "workload": {
+      "oneOf": [
+        {
+          "type": "string",
+          "parameters": {
+            "bundle_for": "boolean",
+            "bundle_for_time": "integer",
+            "log_file_count": "integer",
+            "anonymize": "boolean"
+          },
+          "result": {
+            "upload_key": "string"
+          }
+        }
+      ],
+      "discriminator": {
+        "propertyName": "type",
+        "mapping": {
+          "bundle": "#/components/schemas/BundleWorkloadResponse"
+        }
+      }
+    }
+  }
+]
+```
+
+***
+
+## Create Job   (POST /api/peers/{peerId}/jobs)
+
+Create a new job for a given peer
+
+### Path Parameters
+
+**peerId (type: string; required)**
+
+The unique identifier of a peer
+
+### Request-Body Parameters
+
+**workload (required)**
+
+**POST /api/peers/{peerId}/jobs Request**
+
+**cURL**
+
+```bash
+curl -X POST https://api.netbird.io/api/peers/{peerId}/jobs \
+-H 'Accept: application/json' \
+-H 'Content-Type: application/json' \
+-H 'Authorization: Token <TOKEN>' \
+--data-raw '{
+  "workload": {
+    "oneOf": [
+      {
+        "type": "bundle",
+        "parameters": {
+          "bundle_for": true,
+          "bundle_for_time": 2,
+          "log_file_count": 100,
+          "anonymize": false
+        }
+      }
+    ],
+    "discriminator": {
+      "propertyName": "type",
+      "mapping": {
+        "bundle": "#/components/schemas/BundleWorkloadRequest"
+      }
+    }
+  }
+}'
+```
+
+```js
+const axios = require('axios');
+let data = JSON.stringify({
+  "workload": {
+    "oneOf": [
+      {
+        "type": "bundle",
+        "parameters": {
+          "bundle_for": true,
+          "bundle_for_time": 2,
+          "log_file_count": 100,
+          "anonymize": false
+        }
+      }
+    ],
+    "discriminator": {
+      "propertyName": "type",
+      "mapping": {
+        "bundle": "#/components/schemas/BundleWorkloadRequest"
+      }
+    }
+  }
+});
+let config = {
+  method: 'post',
+  maxBodyLength: Infinity,
+  url: '/api/peers/{peerId}/jobs',
+  headers: {     
+    'Accept': 'application/json',    
+    'Content-Type': 'application/json',
+    'Authorization': 'Token <TOKEN>'
+  },  
+  data : data
+};
+
+axios(config)
+.then((response) => {
+  console.log(JSON.stringify(response.data));
+})
+.catch((error) => {
+  console.log(error);
+});
+```
+
+```python
+import requests
+import json
+
+url = "https://api.netbird.io/api/peers/{peerId}/jobs"
+payload = json.dumps({
+  "workload": {
+    "oneOf": [
+      {
+        "type": "bundle",
+        "parameters": {
+          "bundle_for": true,
+          "bundle_for_time": 2,
+          "log_file_count": 100,
+          "anonymize": false
+        }
+      }
+    ],
+    "discriminator": {
+      "propertyName": "type",
+      "mapping": {
+        "bundle": "#/components/schemas/BundleWorkloadRequest"
+      }
+    }
+  }
+})
+headers = {   
+  'Content-Type': 'application/json',  
+  'Accept': 'application/json',
+  'Authorization': 'Token <TOKEN>'
+}
+
+response = requests.request("POST", url, headers=headers, data=payload)
+
+print(response.text)
+```
+
+```go
+package main
+
+import (
+  "fmt"
+  "strings"
+  "net/http"
+  "io/ioutil"
+)
+
+func main() {
+
+  url := "https://api.netbird.io/api/peers/{peerId}/jobs"
+  method := "POST"
+  
+  payload := strings.NewReader(`{
+  "workload": {
+    "oneOf": [
+      {
+        "type": "bundle",
+        "parameters": {
+          "bundle_for": true,
+          "bundle_for_time": 2,
+          "log_file_count": 100,
+          "anonymize": false
+        }
+      }
+    ],
+    "discriminator": {
+      "propertyName": "type",
+      "mapping": {
+        "bundle": "#/components/schemas/BundleWorkloadRequest"
+      }
+    }
+  }
+}`)
+  client := &http.Client {
+  }
+  req, err := http.NewRequest(method, url, payload)
+
+  if err != nil {
+    fmt.Println(err)
+    return
+  }
+  
+  
+  req.Header.Add("Content-Type", "application/json")  
+  req.Header.Add("Accept", "application/json")
+  req.Header.Add("Authorization", "Token <TOKEN>")
+
+  res, err := client.Do(req)
+  if err != nil {
+    fmt.Println(err)
+    return
+  }
+  defer res.Body.Close()
+
+  body, err := ioutil.ReadAll(res.Body)
+  if err != nil {
+    fmt.Println(err)
+    return
+  }
+  fmt.Println(string(body))
+}
+```
+
+```ruby
+require "uri"
+require "json"
+require "net/http"
+
+url = URI("https://api.netbird.io/api/peers/{peerId}/jobs")
+
+https = Net::HTTP.new(url.host, url.port)
+https.use_ssl = true
+
+request = Net::HTTP::Post.new(url)
+request["Content-Type"] = "application/json"
+request["Accept"] = "application/json"
+request["Authorization"] = "Token <TOKEN>"
+
+request.body = JSON.dump({
+  "workload": {
+    "oneOf": [
+      {
+        "type": "bundle",
+        "parameters": {
+          "bundle_for": true,
+          "bundle_for_time": 2,
+          "log_file_count": 100,
+          "anonymize": false
+        }
+      }
+    ],
+    "discriminator": {
+      "propertyName": "type",
+      "mapping": {
+        "bundle": "#/components/schemas/BundleWorkloadRequest"
+      }
+    }
+  }
+})
+response = https.request(request)
+puts response.read_body
+```
+
+```java
+OkHttpClient client = new OkHttpClient().newBuilder()
+  .build();
+MediaType mediaType = MediaType.parse("application/json");
+RequestBody body = RequestBody.create(mediaType, '{
+  "workload": {
+    "oneOf": [
+      {
+        "type": "bundle",
+        "parameters": {
+          "bundle_for": true,
+          "bundle_for_time": 2,
+          "log_file_count": 100,
+          "anonymize": false
+        }
+      }
+    ],
+    "discriminator": {
+      "propertyName": "type",
+      "mapping": {
+        "bundle": "#/components/schemas/BundleWorkloadRequest"
+      }
+    }
+  }
+}');
+Request request = new Request.Builder()
+  .url("https://api.netbird.io/api/peers/{peerId}/jobs")
+  .method("POST", body)  
+  .addHeader("Content-Type", "application/json")  
+  .addHeader("Accept", "application/json")
+  .addHeader("Authorization: Token <TOKEN>")
+  .build();
+Response response = client.newCall(request).execute();
+```
+
+```php
+<?php
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => 'https://api.netbird.io/api/peers/{peerId}/jobs',
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => '',
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 0,
+  CURLOPT_FOLLOWLOCATION => true,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => 'POST',  
+  CURLOPT_POSTFIELDS => '{
+  "workload": {
+    "oneOf": [
+      {
+        "type": "bundle",
+        "parameters": {
+          "bundle_for": true,
+          "bundle_for_time": 2,
+          "log_file_count": 100,
+          "anonymize": false
+        }
+      }
+    ],
+    "discriminator": {
+      "propertyName": "type",
+      "mapping": {
+        "bundle": "#/components/schemas/BundleWorkloadRequest"
+      }
+    }
+  }
+}',
+  CURLOPT_HTTPHEADER => array(    
+    'Content-Type: application/json',    
+    'Accept: application/json',
+    'Authorization: Token <TOKEN>'
+  ),
+));
+
+$response = curl_exec($curl);
+
+curl_close($curl);
+echo $response;
+```
+
+***
+
+## Get Job   (GET /api/peers/{peerId}/jobs/{jobId})
+
+Retrieve details of a specific job
+
+### Path Parameters
+
+**peerId (type: string; required)**
+
+The unique identifier of a peer
+
+**jobId (type: string; required)**
+
+The unique identifier of a job
+
+**GET /api/peers/{peerId}/jobs/{jobId} Request**
+
+**cURL**
+
+```bash
+curl -X GET https://api.netbird.io/api/peers/{peerId}/jobs/{jobId} \
+-H 'Accept: application/json' \
+-H 'Authorization: Token <TOKEN>' 
+```
+
+```js
+const axios = require('axios');
+
+let config = {
+  method: 'get',
+  maxBodyLength: Infinity,
+  url: '/api/peers/{peerId}/jobs/{jobId}',
+  headers: {     
+    'Accept': 'application/json',    
+    'Authorization': 'Token <TOKEN>'
+  }  
+};
+
+axios(config)
+.then((response) => {
+  console.log(JSON.stringify(response.data));
+})
+.catch((error) => {
+  console.log(error);
+});
+```
+
+```python
+import requests
+import json
+
+url = "https://api.netbird.io/api/peers/{peerId}/jobs/{jobId}"
+
+headers = {     
+  'Accept': 'application/json',
+  'Authorization': 'Token <TOKEN>'
+}
+
+response = requests.request("GET", url, headers=headers)
+
+print(response.text)
+```
+
+```go
+package main
+
+import (
+  "fmt"
+  "strings"
+  "net/http"
+  "io/ioutil"
+)
+
+func main() {
+
+  url := "https://api.netbird.io/api/peers/{peerId}/jobs/{jobId}"
+  method := "GET"
+  
+  client := &http.Client {
+  }
+  req, err := http.NewRequest(method, url, nil)
+
+  if err != nil {
+    fmt.Println(err)
+    return
+  }
+  
+    
+  req.Header.Add("Accept", "application/json")
+  req.Header.Add("Authorization", "Token <TOKEN>")
+
+  res, err := client.Do(req)
+  if err != nil {
+    fmt.Println(err)
+    return
+  }
+  defer res.Body.Close()
+
+  body, err := ioutil.ReadAll(res.Body)
+  if err != nil {
+    fmt.Println(err)
+    return
+  }
+  fmt.Println(string(body))
+}
+```
+
+```ruby
+require "uri"
+require "json"
+require "net/http"
+
+url = URI("https://api.netbird.io/api/peers/{peerId}/jobs/{jobId}")
+
+https = Net::HTTP.new(url.host, url.port)
+https.use_ssl = true
+
+request = Net::HTTP::Get.new(url)
+request["Accept"] = "application/json"
+request["Authorization"] = "Token <TOKEN>"
+
+response = https.request(request)
+puts response.read_body
+```
+
+```java
+OkHttpClient client = new OkHttpClient().newBuilder()
+  .build();
+
+Request request = new Request.Builder()
+  .url("https://api.netbird.io/api/peers/{peerId}/jobs/{jobId}")
+  .method("GET")    
+  .addHeader("Accept", "application/json")
+  .addHeader("Authorization: Token <TOKEN>")
+  .build();
+Response response = client.newCall(request).execute();
+```
+
+```php
+<?php
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => 'https://api.netbird.io/api/peers/{peerId}/jobs/{jobId}',
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => '',
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 0,
+  CURLOPT_FOLLOWLOCATION => true,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => 'GET',  
+  CURLOPT_HTTPHEADER => array(        
+    'Accept: application/json',
+    'Authorization: Token <TOKEN>'
+  ),
+));
+
+$response = curl_exec($curl);
+
+curl_close($curl);
+echo $response;
+```
+
+**Response**
+
+**Example**
+
+```json
+{
+  "id": {
+    "type": "string"
+  },
+  "created_at": {
+    "type": "string",
+    "format": "date-time"
+  },
+  "completed_at": {
+    "type": "string",
+    "format": "date-time",
+    "nullable": true
+  },
+  "triggered_by": {
+    "type": "string"
+  },
+  "status": {
+    "type": "string",
+    "enum": [
+      "pending",
+      "succeeded",
+      "failed"
+    ]
+  },
+  "failed_reason": {
+    "type": "string",
+    "nullable": true
+  },
+  "workload": {
+    "oneOf": [
+      {
+        "type": "bundle",
+        "parameters": {
+          "bundle_for": true,
+          "bundle_for_time": 2,
+          "log_file_count": 100,
+          "anonymize": false
+        },
+        "result": {
+          "upload_key": "upload_key_123"
+        }
+      }
+    ],
+    "discriminator": {
+      "propertyName": "type",
+      "mapping": {
+        "bundle": "#/components/schemas/BundleWorkloadResponse"
+      }
+    }
+  }
+}
+```
+
+**Schema**
+
+```json
+{
+  "id": "string",
+  "created_at": "string",
+  "completed_at": "string",
+  "triggered_by": "string",
+  "status": "string",
+  "failed_reason": "string",
+  "workload": {
+    "oneOf": [
+      {
+        "type": "string",
+        "parameters": {
+          "bundle_for": "boolean",
+          "bundle_for_time": "integer",
+          "log_file_count": "integer",
+          "anonymize": "boolean"
+        },
+        "result": {
+          "upload_key": "string"
+        }
+      }
+    ],
+    "discriminator": {
+      "propertyName": "type",
+      "mapping": {
+        "bundle": "#/components/schemas/BundleWorkloadResponse"
+      }
+    }
+  }
+}
+```
+
+***

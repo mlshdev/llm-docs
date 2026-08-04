@@ -1,0 +1,72 @@
+> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/network-routes/overlapping-routes.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/manage/network-routes/overlapping-routes.mdx)
+
+# Resolving Overlapping Routes
+
+NetBird [Routes](https://docs.netbird.io/manage/network-routes) enable peers to access external networks such as VPCs, LANs, or office networks. When multiple networks have overlapping IP ranges, NetBird's route selection feature lets you choose which routes to apply on the client side.
+
+> **Note**
+>
+> Route selection requires NetBird client version 0.27.4 or later.
+
+## Using Route Selection
+
+You can select routes through the CLI or the desktop app.
+
+### CLI
+
+List available routes:
+
+```bash
+netbird routes list
+```
+
+Example output:
+
+```
+Available Routes:
+
+  - ID: aws-vpc-ireland
+    Network: 172.17.0.0/16
+    Status: Selected
+
+  - ID: aws-vpc-ohio
+    Network: 172.17.0.0/16
+    Status: Selected
+```
+
+In this example, both routes have the same network range and are both selected, causing a conflict. To resolve this, select only one route:
+
+```bash
+netbird routes select aws-vpc-ireland
+```
+
+> **Note**
+>
+> Running `netbird routes select` deselects all other routes by default.
+
+Additional examples:
+
+```bash
+# Select all routes
+netbird routes select all
+
+# Select multiple routes
+netbird routes select route1 route2
+
+# Append a route without deselecting others
+netbird routes select -a route3
+```
+
+### GUI
+
+Open the desktop app, switch to **Advanced** view, and select **Resources**. Use the **Overlapping** filter to narrow the list, then toggle each resource you want to use. You can also search by name and use **Enable all** or **Disable all** for bulk changes.
+
+![Overlapping resource selection in the NetBird desktop app](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/network-routes/overlapping-routes/select-network-routes.png)
+
+### Enabling All Routes
+
+Use `netbird routes select all` in the CLI or the corresponding button in the GUI to select all available routes, including any added in the future. This restores the default behavior.
+
+### Disabling All Routes
+
+Use `netbird routes deselect all` in the CLI or the GUI button to deselect all routes, including any added in the future.

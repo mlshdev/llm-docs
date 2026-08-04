@@ -1,0 +1,55 @@
+> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/observability/combined.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/selfhosted/observability/combined.mdx)
+
+# Combined deployment metrics
+
+The combined container (the default for new installations via `getting-started.sh`) runs Management, Signal, and Relay in a single process. All three services share **one** OpenTelemetry meter provider and emit to a **single** `/metrics` endpoint.
+
+## Endpoint
+
+| Setting     | Default              |
+| ----------- | -------------------- |
+| Address     | `0.0.0.0`            |
+| Port        | `9090`               |
+| Path        | `/metrics`           |
+| Config key  | `server.metricsPort` |
+| Config file | `config.yaml`        |
+
+Set it in `config.yaml`:
+
+```yaml
+server:
+  metricsPort: 9090
+```
+
+Then restart the container:
+
+```bash
+docker compose restart netbird-server
+```
+
+A single Prometheus job scrapes all three services:
+
+```yaml
+scrape_configs:
+  - job_name: 'netbird'
+    static_configs:
+      - targets: ['netbird.example.com:9090']
+```
+
+> **Note**
+>
+> For the full set of combined-container settings, see the [config.yaml.example](https://github.com/netbirdio/netbird/blob/main/combined/config.yaml.example) reference file.
+
+## What's emitted
+
+The combined `/metrics` endpoint returns the union of:
+
+- All [Management metrics](https://docs.netbird.io/selfhosted/observability/management) — `management_*` series.
+- All [Signal metrics](https://docs.netbird.io/selfhosted/observability/signal), each one rewritten with a `signal_` prefix so it doesn't collide with the rest of the endpoint. For example, standalone Signal exposes `active_peers` and `messages_forwarded_total`; in the combined container these become `signal_active_peers` and `signal_messages_forwarded_total`.
+- All [Relay metrics](https://docs.netbird.io/selfhosted/observability/relay) — `relay_*` series. Emitted only when the embedded relay is enabled (no `relays` override set in `config.yaml`).
+
+If you point the combined server at an external Signal (`server.signalUri`) or external Relay (`server.relays`), the corresponding local service is disabled and its metrics will not appear on this endpoint — scrape the external service directly instead.
+
+## Health endpoint
+
+The combined container also exposes a separate healthcheck server on `:9000` by default (`server.healthcheckAddress`). The healthcheck endpoint does not expose metrics.

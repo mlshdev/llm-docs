@@ -1,0 +1,147 @@
+> Release-pinned source for Traefik Proxy v3.7.10: [docs/content/reference/install-configuration/providers/kubernetes/kubernetes-gateway.md](https://github.com/traefik/traefik/blob/2a2349356c01b1b1f7ecddb0c17b30c97f5241e7/docs/content/reference/install-configuration/providers/kubernetes/kubernetes-gateway.md)
+
+# Traefik & Kubernetes with Gateway API
+
+The Kubernetes Gateway provider is a Traefik implementation of the [Gateway API](https://gateway-api.sigs.k8s.io/)
+specification from the Kubernetes Special Interest Groups (SIGs).
+
+This provider supports Standard version [v1.6.1](https://github.com/kubernetes-sigs/gateway-api/releases/tag/v1.6.1) of the Gateway API specification.
+
+It fully supports all `HTTPRoute` core and some extended features, like `BackendTLSPolicy`, `GRPCRoute`, and `TLSRoute` resources from the [Standard channel](https://gateway-api.sigs.k8s.io/concepts/versioning/?h=#release-channels), as well as `TCPRoute` from the [Experimental channel](https://gateway-api.sigs.k8s.io/concepts/versioning/?h=#release-channels).
+
+For more details, check out the conformance [report](https://github.com/kubernetes-sigs/gateway-api/tree/main/conformance/reports/v1.6.1/traefik-traefik).
+
+> **Using The Helm Chart**
+> When using the Traefik [Helm Chart](https://doc.traefik.io/traefik/v3.7/getting-started/kubernetes#install-traefik), the RBAC (Role-Based Access Control) are automatically managed for you.
+
+## Requirements
+
+Traefik follows the [Kubernetes support policy](https://kubernetes.io/releases/version-skew-policy/#supported-versions),
+and supports at least the latest three minor versions of Kubernetes.
+General functionality cannot be guaranteed for older versions.
+
+1. Install/update the Kubernetes Gateway API CRDs.
+
+   ```bash
+   # Install Gateway API CRDs from the Standard channel.
+   kubectl apply -f https://github.com/kubernetes-sigs/gateway-api/releases/download/v1.6.1/standard-install.yaml
+   ```
+
+2. If you are not using the Helm Chart, install/update the Traefik [RBAC](https://raw.githubusercontent.com/traefik/traefik/2a2349356c01b1b1f7ecddb0c17b30c97f5241e7/docs/content/reference/dynamic-configuration/kubernetes-gateway-rbac.yml) for Gateway API.
+
+   ```bash
+   # Install Traefik RBACs for Gateway API.
+   kubectl apply -f https://raw.githubusercontent.com/traefik/traefik/v3.7/docs/content/reference/dynamic-configuration/kubernetes-gateway-rbac.yml
+   ```
+
+## Configuration Example
+
+You can enable the `kubernetesGateway` provider as detailed below:
+
+**File (YAML)**
+
+```yaml
+providers:
+  kubernetesGateway: {}
+  # ...
+```
+
+**File (TOML)**
+
+```toml
+[providers.kubernetesGateway]
+# ...
+```
+
+**CLI**
+
+```bash
+--providers.kubernetesgateway=true
+```
+
+**Helm Chart Values**
+
+```yaml
+## Values file
+providers:
+  kubernetesGateway:
+    enabled: true
+```
+
+## Configuration Options
+
+| Field                                                                                                                                             | Description                                                                                                                                                                                                                                                                                                                                                                          | Default | Required |
+| :------------------------------------------------------------------------------------------------------------------------------------------------ | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------ | :------- |
+| <a id="opt-providers-providersThrottleDuration"></a>`providers.providersThrottleDuration`                                                         | Minimum amount of time to wait for, after a configuration reload, before taking into account any new configuration refresh event.<br />If multiple events occur within this time, only the most recent one is taken into account, and all others are discarded.<br />**This option cannot be set per provider, but the throttling algorithm applies to each of them independently.** | 2s      | No       |
+| <a id="opt-providers-kubernetesGateway-endpoint"></a>`providers.kubernetesGateway.endpoint`                                                       | Server endpoint URL.<br />More information [here](#endpoint).                                                                                                                                                                                                                                                                                                                        | ""      | No       |
+| <a id="opt-providers-kubernetesGateway-experimentalChannel"></a>`providers.kubernetesGateway.experimentalChannel`                                 | Toggles support for the Experimental Channel resources ([Gateway API release channels documentation](https://gateway-api.sigs.k8s.io/concepts/versioning/#release-channels)).<br />(ex: `TCPRoute`)                                                                                                                                                                                  | false   | No       |
+| <a id="opt-providers-kubernetesGateway-token"></a>`providers.kubernetesGateway.token`                                                             | Bearer token used for the Kubernetes client configuration. Accepts either the token value directly or a path to a file containing the token.                                                                                                                                                                                                                                         | ""      | No       |
+| <a id="opt-providers-kubernetesGateway-certAuthFilePath"></a>`providers.kubernetesGateway.certAuthFilePath`                                       | Path to the certificate authority file.<br />Used for the Kubernetes client configuration.                                                                                                                                                                                                                                                                                           | ""      | No       |
+| <a id="opt-providers-kubernetesGateway-namespaces"></a>`providers.kubernetesGateway.namespaces`                                                   | Array of namespaces to watch.<br />If left empty, watch all namespaces.                                                                                                                                                                                                                                                                                                              | \[]     | No       |
+| <a id="opt-providers-kubernetesGateway-labelSelector"></a>`providers.kubernetesGateway.labelSelector`                                             | Allow filtering on `GatewayClass` only. If left empty, Traefik processes all GatewayClass objects in the configured namespaces.<br />See [label-selectors](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors) for details.                                                                                                                   | ""      | No       |
+| <a id="opt-providers-kubernetesGateway-throttleDuration"></a>`providers.kubernetesGateway.throttleDuration`                                       | Minimum amount of time to wait between two Kubernetes events before producing a new configuration.<br />This prevents a Kubernetes cluster that updates many times per second from continuously changing your Traefik configuration.<br />If empty, every event is caught.                                                                                                           | 0s      | No       |
+| <a id="opt-providers-kubernetesGateway-nativeLBByDefault"></a>`providers.kubernetesGateway.nativeLBByDefault`                                     | Defines whether to use Native Kubernetes load-balancing mode by default. For more information, please check out the `traefik.io/service.nativelb` service annotation documentation.                                                                                                                                                                                                  | false   | No       |
+| <a id="opt-providers-kubernetesGateway-statusAddress-hostname"></a>`providers.kubernetesGateway.`<br />`statusAddress.hostname`                   | Hostname copied to the Gateway `status.addresses`.                                                                                                                                                                                                                                                                                                                                   | ""      | No       |
+| <a id="opt-providers-kubernetesGateway-statusAddress-ip"></a>`providers.kubernetesGateway.`<br />`statusAddress.ip`                               | IP address copied to the Gateway `status.addresses`, and currently only supports one IP value (IPv4 or IPv6).                                                                                                                                                                                                                                                                        | ""      | No       |
+| <a id="opt-providers-kubernetesGateway-statusAddress-service-namespace"></a>`providers.kubernetesGateway.`<br />`statusAddress.service.namespace` | The namespace of the Kubernetes service to copy status addresses from.<br />When using third parties tools like External-DNS, this option can be used to copy the service `loadbalancer.status` (containing the service's endpoints IPs) to the Gateway `status.addresses`.                                                                                                          | ""      | No       |
+| <a id="opt-providers-kubernetesGateway-statusAddress-service-name"></a>`providers.kubernetesGateway.`<br />`statusAddress.service.name`           | The name of the Kubernetes service to copy status addresses from.<br />When using third parties tools like External-DNS, this option can be used to copy the service `loadbalancer.status` (containing the service's endpoints IPs) to the Gateway `status.addresses`.                                                                                                               | ""      | No       |
+| <a id="opt-providers-kubernetesGateway-crossProviderNamespaces"></a>`providers.kubernetesGateway.crossProviderNamespaces`                         | List of namespaces from which Gateway API routes (`HTTPRoute`, `TCPRoute`, `TLSRoute`) are allowed to declare a `backendRef` of kind `TraefikService`.<br />When unset, all namespaces are allowed. When set to `[]`, every such backendRef is rejected and the route is dropped.                                                                                                    | \[]     | No       |
+| <a id="opt-providers-kubernetesGateway-qps"></a>`providers.kubernetesGateway.qps`                                                                 | Defines the maximum QPS to the Kubernetes API server. Setting this to a negative value will disable client-side ratelimiting.                                                                                                                                                                                                                                                        | 50      | No       |
+| <a id="opt-providers-kubernetesGateway-burst"></a>`providers.kubernetesGateway.burst`                                                             | Defines the maximum burst of requests to the Kubernetes API server.                                                                                                                                                                                                                                                                                                                  | 100     | No       |
+
+### `endpoint`
+
+The Kubernetes server endpoint URL.
+
+When deployed into Kubernetes, Traefik reads the environment variables
+`KUBERNETES_SERVICE_HOST` and `KUBERNETES_SERVICE_PORT` or `KUBECONFIG` to
+construct the endpoint.
+
+The access token is looked up
+in `/var/run/secrets/kubernetes.io/serviceaccount/token`
+and the SSL CA certificate in `/var/run/secrets/kubernetes.io/serviceaccount/ca.crt`.
+Both are mounted automatically when deployed inside Kubernetes.
+
+The endpoint may be specified to override the environment variable values
+inside a cluster.
+
+When the environment variables are not found, Traefik tries to connect to
+the Kubernetes API server with an external-cluster client.
+In this case, the endpoint is required.
+Specifically, it may be set to the URL used by `kubectl proxy` to connect to a
+Kubernetes cluster using the granted authentication
+and authorization of the associated kubeconfig.
+
+**File (YAML)**
+
+```yaml
+providers:
+  kubernetesGateway:
+    endpoint: "http://localhost:8080"
+    # ...
+```
+
+**File (TOML)**
+
+```toml
+[providers.kubernetesGateway]
+  endpoint = "http://localhost:8080"
+  # ...
+```
+
+**CLI**
+
+```bash
+--providers.kubernetesgateway.endpoint=http://localhost:8080
+```
+
+## Routing Configuration
+
+See the dedicated section in [routing](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/gateway-api).
+
+> **Routing Configuration**
+> When using the Kubernetes Gateway API provider, Traefik uses the Gateway API
+> CRDs to retrieve its routing configuration.
+> Check out the Gateway API concepts [documentation](https://gateway-api.sigs.k8s.io/concepts/api-overview/),
+> and the dedicated [routing section](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/gateway-api)
+> in the Traefik documentation.

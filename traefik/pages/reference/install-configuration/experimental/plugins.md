@@ -1,0 +1,95 @@
+> Release-pinned source for Traefik Proxy v3.7.10: [docs/content/reference/install-configuration/experimental/plugins.md](https://github.com/traefik/traefik/blob/2a2349356c01b1b1f7ecddb0c17b30c97f5241e7/docs/content/reference/install-configuration/experimental/plugins.md)
+
+# Traefik Plugins Experimental Configuration
+
+## Overview
+
+This guide provides instructions on how to configure and use the new experimental `plugins` install configuration option in Traefik. The `plugins` option introduces a system to extend Traefik capabilities with custom middlewares and providers.
+
+> **Experimental**
+> The `plugins` option is currently experimental and subject to change in future releases.
+> Use with caution in production environments.
+
+## Enabling Plugins
+
+The plugins option is an install configuration parameter.
+To enable a plugin, you need to define it in your Traefik install configuration
+
+**File (YAML)**
+
+```yaml
+experimental:
+  plugins:
+    plugin-name: # The name of the plugin in the routing configuration
+      moduleName: "github.com/github-organization/github-repository" # The plugin module name
+      version: "vX.XX.X" # The version to use
+```
+
+**File (TOML)**
+
+```toml
+[experimental.plugins.plugin-name]
+  moduleName = "github.com/github-organization/github-repository" # The plugin module name
+  version = "vX.XX.X" # The version to use
+```
+
+**CLI**
+
+```bash
+# The plugin module name
+# With plugin-name the name of the plugin in the routing configuration
+--experimental.plugins.plugin-name.modulename=github.com/github-organization/github-repository
+--experimental.plugins.plugin-name.version=vX.XX.X # The version to use
+```
+
+To learn more about how to add a new plugin to a Traefik instance, please refer to the [developer documentation](https://plugins.traefik.io/install).
+
+### Plugin Options
+
+| Field                                                   | Description                                          | Type      | Required |
+| ------------------------------------------------------- | ---------------------------------------------------- | --------- | -------- |
+| <a id="opt-moduleName"></a>`moduleName`                 | Plugin's module name.                                | string    | Yes      |
+| <a id="opt-version"></a>`version`                       | Plugin's version.                                    | string    | Yes      |
+| <a id="opt-hash"></a>`hash`                             | Plugin's hash to validate.                           | string    | No       |
+| <a id="opt-settings"></a>`settings`                     | Plugin's settings (works only for wasm plugins).     | object    | No       |
+| <a id="opt-settings-envs"></a>`settings.envs`           | Environment variables to forward to the wasm guest.  | \[]string | No       |
+| <a id="opt-settings-mounts"></a>`settings.mounts`       | Directory to mount to the wasm guest.                | \[]string | No       |
+| <a id="opt-settings-useUnsafe"></a>`settings.useUnsafe` | Allow the plugin to use unsafe and syscall packages. | bool      | No       |
+
+## Local Plugins
+
+Local plugins allow you to use plugins from a local directory, without publishing them to the Traefik plugin catalog.
+
+**File (YAML)**
+
+```yaml
+experimental:
+  localPlugins:
+    plugin-name: # The name of the plugin in the routing configuration
+      moduleName: "github.com/github-organization/github-repository" # The plugin module name
+```
+
+**File (TOML)**
+
+```toml
+[experimental.localPlugins.plugin-name]
+  moduleName = "github.com/github-organization/github-repository" # The plugin module name
+```
+
+**CLI**
+
+```bash
+# The plugin module name
+# With plugin-name the name of the plugin in the routing configuration
+--experimental.localplugins.plugin-name.modulename=github.com/github-organization/github-repository
+```
+
+### Local Plugin Options
+
+| Field                                                     | Description                                          | Type      | Required |
+| --------------------------------------------------------- | ---------------------------------------------------- | --------- | -------- |
+| <a id="opt-moduleName-2"></a>`moduleName`                 | Plugin's module name.                                | string    | Yes      |
+| <a id="opt-settings-2"></a>`settings`                     | Plugin's settings (works only for wasm plugins).     | object    | No       |
+| <a id="opt-settings-envs-2"></a>`settings.envs`           | Environment variables to forward to the wasm guest.  | \[]string | No       |
+| <a id="opt-settings-mounts-2"></a>`settings.mounts`       | Directory to mount to the wasm guest.                | \[]string | No       |
+| <a id="opt-settings-useUnsafe-2"></a>`settings.useUnsafe` | Allow the plugin to use unsafe and syscall packages. | bool      | No       |

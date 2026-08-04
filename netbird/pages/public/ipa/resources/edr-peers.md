@@ -1,0 +1,501 @@
+> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/ipa/resources/edr-peers.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/ipa/resources/edr-peers.mdx)
+
+## Bypass compliance for a non-compliant peer   (POST /api/peers/{peer-id}/edr/bypass)
+
+Allows an admin to bypass EDR compliance checks for a specific peer.
+The peer will remain bypassed until the admin revokes it OR the device becomes
+naturally compliant in the EDR system.
+
+**POST /api/peers/{peer-id}/edr/bypass Request**
+
+**cURL**
+
+```bash
+curl -X POST https://api.netbird.io/api/peers/{peer-id}/edr/bypass \
+-H 'Accept: application/json' \
+-H 'Authorization: Token <TOKEN>' 
+```
+
+```js
+const axios = require('axios');
+
+let config = {
+  method: 'post',
+  maxBodyLength: Infinity,
+  url: '/api/peers/{peer-id}/edr/bypass',
+  headers: {     
+    'Accept': 'application/json',    
+    'Authorization': 'Token <TOKEN>'
+  }  
+};
+
+axios(config)
+.then((response) => {
+  console.log(JSON.stringify(response.data));
+})
+.catch((error) => {
+  console.log(error);
+});
+```
+
+```python
+import requests
+import json
+
+url = "https://api.netbird.io/api/peers/{peer-id}/edr/bypass"
+
+headers = {     
+  'Accept': 'application/json',
+  'Authorization': 'Token <TOKEN>'
+}
+
+response = requests.request("POST", url, headers=headers)
+
+print(response.text)
+```
+
+```go
+package main
+
+import (
+  "fmt"
+  "strings"
+  "net/http"
+  "io/ioutil"
+)
+
+func main() {
+
+  url := "https://api.netbird.io/api/peers/{peer-id}/edr/bypass"
+  method := "POST"
+  
+  client := &http.Client {
+  }
+  req, err := http.NewRequest(method, url, nil)
+
+  if err != nil {
+    fmt.Println(err)
+    return
+  }
+  
+    
+  req.Header.Add("Accept", "application/json")
+  req.Header.Add("Authorization", "Token <TOKEN>")
+
+  res, err := client.Do(req)
+  if err != nil {
+    fmt.Println(err)
+    return
+  }
+  defer res.Body.Close()
+
+  body, err := ioutil.ReadAll(res.Body)
+  if err != nil {
+    fmt.Println(err)
+    return
+  }
+  fmt.Println(string(body))
+}
+```
+
+```ruby
+require "uri"
+require "json"
+require "net/http"
+
+url = URI("https://api.netbird.io/api/peers/{peer-id}/edr/bypass")
+
+https = Net::HTTP.new(url.host, url.port)
+https.use_ssl = true
+
+request = Net::HTTP::Post.new(url)
+request["Accept"] = "application/json"
+request["Authorization"] = "Token <TOKEN>"
+
+response = https.request(request)
+puts response.read_body
+```
+
+```java
+OkHttpClient client = new OkHttpClient().newBuilder()
+  .build();
+
+Request request = new Request.Builder()
+  .url("https://api.netbird.io/api/peers/{peer-id}/edr/bypass")
+  .method("POST")    
+  .addHeader("Accept", "application/json")
+  .addHeader("Authorization: Token <TOKEN>")
+  .build();
+Response response = client.newCall(request).execute();
+```
+
+```php
+<?php
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => 'https://api.netbird.io/api/peers/{peer-id}/edr/bypass',
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => '',
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 0,
+  CURLOPT_FOLLOWLOCATION => true,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => 'POST',  
+  CURLOPT_HTTPHEADER => array(        
+    'Accept: application/json',
+    'Authorization: Token <TOKEN>'
+  ),
+));
+
+$response = curl_exec($curl);
+
+curl_close($curl);
+echo $response;
+```
+
+**Response**
+
+**Example**
+
+```json
+{
+  "peer_id": "chacbco6lnnbn6cg5s91"
+}
+```
+
+**Schema**
+
+```json
+{
+  "peer_id": "string"
+}
+```
+
+***
+
+## Revoke compliance bypass for a peer   (DELETE /api/peers/{peer-id}/edr/bypass)
+
+Removes the compliance bypass, subjecting the peer to normal EDR validation.
+
+**DELETE /api/peers/{peer-id}/edr/bypass Request**
+
+**cURL**
+
+```bash
+curl -X DELETE https://api.netbird.io/api/peers/{peer-id}/edr/bypass \
+-H 'Authorization: Token <TOKEN>' 
+```
+
+```js
+const axios = require('axios');
+
+let config = {
+  method: 'delete',
+  maxBodyLength: Infinity,
+  url: '/api/peers/{peer-id}/edr/bypass',
+  headers: {         
+    'Authorization': 'Token <TOKEN>'
+  }  
+};
+
+axios(config)
+.then((response) => {
+  console.log(JSON.stringify(response.data));
+})
+.catch((error) => {
+  console.log(error);
+});
+```
+
+```python
+import requests
+import json
+
+url = "https://api.netbird.io/api/peers/{peer-id}/edr/bypass"
+
+headers = {     
+  'Authorization': 'Token <TOKEN>'
+}
+
+response = requests.request("DELETE", url, headers=headers)
+
+print(response.text)
+```
+
+```go
+package main
+
+import (
+  "fmt"
+  "strings"
+  "net/http"
+  "io/ioutil"
+)
+
+func main() {
+
+  url := "https://api.netbird.io/api/peers/{peer-id}/edr/bypass"
+  method := "DELETE"
+  
+  client := &http.Client {
+  }
+  req, err := http.NewRequest(method, url, nil)
+
+  if err != nil {
+    fmt.Println(err)
+    return
+  }
+  
+    
+  req.Header.Add("Authorization", "Token <TOKEN>")
+
+  res, err := client.Do(req)
+  if err != nil {
+    fmt.Println(err)
+    return
+  }
+  defer res.Body.Close()
+
+  body, err := ioutil.ReadAll(res.Body)
+  if err != nil {
+    fmt.Println(err)
+    return
+  }
+  fmt.Println(string(body))
+}
+```
+
+```ruby
+require "uri"
+require "json"
+require "net/http"
+
+url = URI("https://api.netbird.io/api/peers/{peer-id}/edr/bypass")
+
+https = Net::HTTP.new(url.host, url.port)
+https.use_ssl = true
+
+request = Net::HTTP::Delete.new(url)
+request["Authorization"] = "Token <TOKEN>"
+
+response = https.request(request)
+puts response.read_body
+```
+
+```java
+OkHttpClient client = new OkHttpClient().newBuilder()
+  .build();
+
+Request request = new Request.Builder()
+  .url("https://api.netbird.io/api/peers/{peer-id}/edr/bypass")
+  .method("DELETE")    
+  .addHeader("Authorization: Token <TOKEN>")
+  .build();
+Response response = client.newCall(request).execute();
+```
+
+```php
+<?php
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => 'https://api.netbird.io/api/peers/{peer-id}/edr/bypass',
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => '',
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 0,
+  CURLOPT_FOLLOWLOCATION => true,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => 'DELETE',  
+  CURLOPT_HTTPHEADER => array(        
+    'Authorization: Token <TOKEN>'
+  ),
+));
+
+$response = curl_exec($curl);
+
+curl_close($curl);
+echo $response;
+```
+
+***
+
+## List all bypassed peers   (GET /api/peers/edr/bypassed)
+
+Returns all peers that have compliance bypassed by an admin.
+
+**GET /api/peers/edr/bypassed Request**
+
+**cURL**
+
+```bash
+curl -X GET https://api.netbird.io/api/peers/edr/bypassed \
+-H 'Accept: application/json' \
+-H 'Authorization: Token <TOKEN>' 
+```
+
+```js
+const axios = require('axios');
+
+let config = {
+  method: 'get',
+  maxBodyLength: Infinity,
+  url: '/api/peers/edr/bypassed',
+  headers: {     
+    'Accept': 'application/json',    
+    'Authorization': 'Token <TOKEN>'
+  }  
+};
+
+axios(config)
+.then((response) => {
+  console.log(JSON.stringify(response.data));
+})
+.catch((error) => {
+  console.log(error);
+});
+```
+
+```python
+import requests
+import json
+
+url = "https://api.netbird.io/api/peers/edr/bypassed"
+
+headers = {     
+  'Accept': 'application/json',
+  'Authorization': 'Token <TOKEN>'
+}
+
+response = requests.request("GET", url, headers=headers)
+
+print(response.text)
+```
+
+```go
+package main
+
+import (
+  "fmt"
+  "strings"
+  "net/http"
+  "io/ioutil"
+)
+
+func main() {
+
+  url := "https://api.netbird.io/api/peers/edr/bypassed"
+  method := "GET"
+  
+  client := &http.Client {
+  }
+  req, err := http.NewRequest(method, url, nil)
+
+  if err != nil {
+    fmt.Println(err)
+    return
+  }
+  
+    
+  req.Header.Add("Accept", "application/json")
+  req.Header.Add("Authorization", "Token <TOKEN>")
+
+  res, err := client.Do(req)
+  if err != nil {
+    fmt.Println(err)
+    return
+  }
+  defer res.Body.Close()
+
+  body, err := ioutil.ReadAll(res.Body)
+  if err != nil {
+    fmt.Println(err)
+    return
+  }
+  fmt.Println(string(body))
+}
+```
+
+```ruby
+require "uri"
+require "json"
+require "net/http"
+
+url = URI("https://api.netbird.io/api/peers/edr/bypassed")
+
+https = Net::HTTP.new(url.host, url.port)
+https.use_ssl = true
+
+request = Net::HTTP::Get.new(url)
+request["Accept"] = "application/json"
+request["Authorization"] = "Token <TOKEN>"
+
+response = https.request(request)
+puts response.read_body
+```
+
+```java
+OkHttpClient client = new OkHttpClient().newBuilder()
+  .build();
+
+Request request = new Request.Builder()
+  .url("https://api.netbird.io/api/peers/edr/bypassed")
+  .method("GET")    
+  .addHeader("Accept", "application/json")
+  .addHeader("Authorization: Token <TOKEN>")
+  .build();
+Response response = client.newCall(request).execute();
+```
+
+```php
+<?php
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => 'https://api.netbird.io/api/peers/edr/bypassed',
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => '',
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 0,
+  CURLOPT_FOLLOWLOCATION => true,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => 'GET',  
+  CURLOPT_HTTPHEADER => array(        
+    'Accept: application/json',
+    'Authorization: Token <TOKEN>'
+  ),
+));
+
+$response = curl_exec($curl);
+
+curl_close($curl);
+echo $response;
+```
+
+**Response**
+
+**Example**
+
+```json
+[
+  {
+    "peer_id": "chacbco6lnnbn6cg5s91"
+  }
+]
+```
+
+**Schema**
+
+```json
+[
+  {
+    "peer_id": "string"
+  }
+]
+```
+
+***

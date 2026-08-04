@@ -1,0 +1,194 @@
+> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/identity-providers/managed/advanced/microsoft-entra-id.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/selfhosted/identity-providers/managed/advanced/microsoft-entra-id.mdx)
+
+# Microsoft and Entra ID SSO with NetBird Self-Hosted (Legacy)
+
+Use Microsoft accounts for authentication with NetBird. This supports both personal Microsoft accounts and Microsoft Entra ID (formerly Azure AD) for work and school accounts.
+
+## Standalone Setup (Advanced)
+
+> **Note**
+>
+> NetBird includes built-in [local user management](https://docs.netbird.io/selfhosted/identity-providers/local) powered by an embedded IdP, allowing you to create and manage users directly without requiring an external identity provider. You can also add **multiple external identity providers** alongside local users, giving users multiple login options.
+>
+> We highly recommend using the simpler setup that adds Microsoft as an external IdP directly in the NetBird Management Dashboard. This approach requires minimal configuration, works alongside local users, and doesn't require replacing your embedded IdP. See the [Management Setup (Recommended)](https://docs.netbird.io/selfhosted/identity-providers/managed/microsoft-entra-id#management-setup-recommended) section in the main Microsoft Entra ID documentation.
+>
+> The standalone setup below replaces your embedded IdP entirely and is only recommended for experienced Microsoft Entra ID administrators who need full control over authentication and user management.
+
+Use Microsoft Entra ID as your primary identity provider instead of NetBird's embedded IdP. This option gives you full control over authentication and user management, is recommended for experienced Microsoft Entra ID administrators as it also requires additional setup and ongoing maintenance.
+
+For most deployments, the [embedded IdP](https://docs.netbird.io/selfhosted/identity-providers/local) is the simpler choice — it's built into NetBird, fully integrated, and requires minimal configuration to get started. For this implementation, go back up to the Management Setup (Recommended) section above.
+
+> **Note**
+>
+> If you prefer to have full control over authentication, consider self-hosted alternatives like [PocketID](https://docs.netbird.io/selfhosted/identity-providers/pocketid).
+
+### Prerequisites
+
+- An Azure account with appropriate permissions
+- Docker and Docker Compose for NetBird
+
+### Step 1: Create and Configure Azure AD Application
+
+1. Navigate to [Azure Active Directory](https://portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/~/Overview)
+2. Click **App Registrations** → **+ New registration**
+3. Fill in:
+   - **Name**: `Netbird`
+   - **Supported account types**: `Accounts in this organizational directory only (Default Directory only - Single tenant)`
+   - **Redirect URI**: Select `Single-page application (SPA)` and enter `https://<yournetbirddomain.com>/silent-auth`
+4. Click **Register**
+5. After registration, note the **Application (client) ID** from the Overview page (you'll need this in Step 3)
+
+![New application](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/managed/microsoft-entra-id/azure/azure-new-application.png)
+
+### Step 2: Configure Platform Settings
+
+1. Click **Authentication** on the left menu
+2. Under **Single-page application**, add another URI: `https://<yournetbirddomain.com>/auth`
+
+![SPA URI setup](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/managed/microsoft-entra-id/azure/azure-spa-uri-setup.png)
+
+3. Scroll down and configure options as shown:
+
+![Flows setup](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/managed/microsoft-entra-id/azure/azure-flows-setup.png)
+
+4. Click **Add a Platform** → **Mobile and desktop applications**
+5. Add custom redirect URI: `http://localhost:53000`
+6. Click **Configure**
+
+### Step 3: Create Application Scope
+
+1. Click **Expose an API** on the left menu
+2. Under **Application ID URI**, click **Set** then **Save**
+3. Click **+ Add a Scope**
+4. Fill in:
+   - **Scope name**: `api`
+5. Click **Add scope**
+
+![Add scope](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/managed/microsoft-entra-id/azure/azure-add-scope.png)
+
+6. Under **Authorized client applications**, click **+ Add a client application**
+7. Enter your **Client ID** (the Application (client) ID you noted when creating the app registration in Step 1)
+8. Click **Add application**
+
+![Add application scope](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/managed/microsoft-entra-id/azure/azure-add-application-scope.png)
+
+### Step 4: Add API Permissions
+
+1. Click **API permissions** on the left menu
+2. Click **Add a permission**
+3. Select **My APIs** tab → **Netbird** → check `api` permission → **Add permissions**
+
+![NetBird API permissions](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/managed/microsoft-entra-id/azure/azure-netbird-api-permisssions.png)
+
+4. Click **Add a permission** again
+5. Select **Microsoft Graph** → **Application permissions**
+6. Search for `User.Read` and select `User.Read.All`
+7. Click **Add permissions**
+
+![OpenID permissions](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/managed/microsoft-entra-id/azure/azure-openid-permissions.png)
+
+8. Click **Grant admin consent for Default Directory** → **Yes**
+
+![Grant admin consent](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/managed/microsoft-entra-id/azure/azure-grant-admin-conset.png)
+
+### Step 5: Update Token Version
+
+1. Click **Manifest** on the left menu
+2. Find `requestedAccessTokenVersion` and change from `null` to `2`
+3. Click **Save**
+
+### Step 6: Generate Client Secret
+
+1. Click **Certificates & secrets** on the left menu
+2. Click **New client secret**
+3. Fill in:
+   - **Description**: `Netbird`
+4. Click **Add**
+5. Copy the **Value** immediately
+
+![Client secret](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/managed/microsoft-entra-id/azure/azure-client-secret.png)
+
+6. Click **Overview** and note:
+   - **Application (client) ID**
+   - **Object ID**
+   - **Directory (tenant) ID**
+
+### Step 7: Configure NetBird
+
+Your authority OIDC configuration will be available at:
+
+```bash
+https://login.microsoftonline.com/<Directory (tenant) ID>/v2.0/.well-known/openid-configuration
+```
+
+> **Note**
+>
+> Double-check if the endpoint returns a JSON response by calling it from your browser.
+
+Set properties in the `setup.env` file:
+
+```shell
+NETBIRD_DOMAIN="<YOUR_DOMAIN>"
+NETBIRD_AUTH_OIDC_CONFIGURATION_ENDPOINT="https://login.microsoftonline.com/<Directory (tenant) ID>/v2.0/.well-known/openid-configuration"
+NETBIRD_USE_AUTH0=false
+NETBIRD_AUTH_CLIENT_ID="<Application (client) ID>"
+NETBIRD_AUTH_SUPPORTED_SCOPES="openid profile email offline_access User.Read api://<Application (client) ID>/api"
+NETBIRD_AUTH_AUDIENCE="<Application (client) ID>"
+NETBIRD_AUTH_REDIRECT_URI="/auth"
+NETBIRD_AUTH_SILENT_REDIRECT_URI="/silent-auth"
+NETBIRD_AUTH_USER_ID_CLAIM="oid"
+NETBIRD_TOKEN_SOURCE="idToken"
+
+NETBIRD_AUTH_DEVICE_AUTH_PROVIDER="none"
+
+NETBIRD_MGMT_IDP="azure"
+NETBIRD_IDP_MGMT_CLIENT_ID="<Application (client) ID>"
+NETBIRD_IDP_MGMT_CLIENT_SECRET="<CLIENT_SECRET>"
+NETBIRD_IDP_MGMT_EXTRA_OBJECT_ID="<Object ID>"
+NETBIRD_IDP_MGMT_EXTRA_GRAPH_API_ENDPOINT="https://graph.microsoft.com/v1.0"
+```
+
+### Step 8: Continue with NetBird Setup
+
+You've configured all required resources in Azure AD. Continue with the [NetBird Self-hosting Guide](https://docs.netbird.io/selfhosted/selfhosted-guide#step-4-disable-single-account-mode-optional).
+
+***
+
+## Troubleshooting
+
+### "AADSTS50011: The redirect URI specified in the request does not match"
+
+- Ensure the redirect URI in Azure exactly matches what NetBird provides
+- Check platform type (SPA vs Mobile/Desktop)
+- Verify no trailing slashes
+
+### "AADSTS700016: Application not found"
+
+- Verify the Application (client) ID is correct
+- Check tenant ID for single-tenant apps
+- Ensure the app registration is in the correct directory
+
+### Users from wrong tenant signing in
+
+- Use single-tenant configuration for organization-only access
+- Verify "Supported account types" setting in app registration
+
+### Token validation errors
+
+- Ensure `requestedAccessTokenVersion` is set to `2` in the manifest
+- Verify all scopes are properly configured
+- Check that admin consent was granted
+
+***
+
+> **Note**
+>
+> NetBird includes built-in [local user management](https://docs.netbird.io/selfhosted/identity-providers/local) powered by an embedded IdP, allowing you to create and manage users directly without requiring an external identity provider. You can also add **multiple external identity providers** alongside local users, giving users multiple login options.
+>
+> We highly recommend using the simpler setup that adds Microsoft as an external IdP directly in the NetBird Management Dashboard. This approach requires minimal configuration, works alongside local users, and doesn't require replacing your embedded IdP. See the [Management Setup (Recommended)](https://docs.netbird.io/selfhosted/identity-providers/managed/microsoft-entra-id#management-setup-recommended) section in the main Microsoft Entra ID documentation.
+
+## Related Resources
+
+- [Microsoft Identity Platform Documentation](https://docs.microsoft.com/en-us/azure/active-directory/develop/)
+- [Azure Portal](https://portal.azure.com/)
+- [Embedded IdP Overview](https://docs.netbird.io/selfhosted/identity-providers/local)

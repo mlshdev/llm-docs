@@ -1,0 +1,133 @@
+> Release-pinned source for Traefik Proxy v3.7.10: [docs/content/reference/routing-configuration/tcp/serverstransport.md](https://github.com/traefik/traefik/blob/2a2349356c01b1b1f7ecddb0c17b30c97f5241e7/docs/content/reference/routing-configuration/tcp/serverstransport.md)
+
+ServersTransport allows to configure the transport between Traefik and your TCP servers.
+
+## Configuration Example
+
+Declare the serversTransport:
+
+**Structured (YAML)**
+
+```yaml
+tcp:
+  serversTransports:
+    mytransport:
+      dialTimeout: "30s"
+      dialKeepAlive: "20s"
+      terminationDelay: "200ms"
+      tls:
+        serverName: "example.com"
+        certificates:
+          - "/path/to/cert1.pem"
+          - "/path/to/cert2.pem"
+        insecureSkipVerify: true
+        rootCAs:
+          - "/path/to/rootca.pem"
+        peerCertURI: "spiffe://example.org/peer"
+        spiffe:
+          ids:
+            - "spiffe://example.org/id1"
+            - "spiffe://example.org/id2"
+          trustDomain: "example.org"
+```
+
+**Structured (TOML)**
+
+```toml
+[tcp.serversTransports.mytransport]
+  dialTimeout = "30s"
+  dialKeepAlive = "20s"
+  terminationDelay = "200ms"
+
+  [tcp.serversTransports.mytransport.tls]
+    serverName = "example.com"
+    certificates = ["/path/to/cert1.pem", "/path/to/cert2.pem"]
+    insecureSkipVerify = true
+    rootCAs = ["/path/to/rootca.pem"]
+    peerCertURI = "spiffe://example.org/peer"
+
+  [tcp.serversTransports.mytransport.tls.spiffe]
+    ids = ["spiffe://example.org/id1", "spiffe://example.org/id2"]
+    trustDomain = "example.org"
+```
+
+Attach the serversTransport to a service:
+
+**Structured (YAML)**
+
+```yaml
+tcp:
+  services:
+    Service01:
+      loadBalancer:
+        serversTransport: mytransport
+```
+
+**Structured(TOML)**
+
+```toml
+## Dynamic configuration
+[tcp.services]
+  [tcp.services.Service01]
+    [tcp.services.Service01.loadBalancer]
+      serversTransport = "mytransport"
+```
+
+**Labels**
+
+```yaml
+labels:
+  - "traefik.tcp.services.Service01.loadBalancer.serversTransport=mytransport"
+```
+
+**Tags**
+
+```json
+{
+  // ...
+  "Tags": [
+    "traefik.tcp.services.Service01.loadBalancer.serversTransport=mytransport"
+  ]
+}
+```
+
+## Configuration Options
+
+| Field                                                                                                             | Description                                                                                                                                                                                                        | Default | Required |
+| :---------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------ | :------- |
+| <a id="opt-serverstransport-dialTimeout"></a>`serverstransport.`<br />`dialTimeout`                               | Defines the timeout when dialing the backend TCP service. If zero, no timeout exists.                                                                                                                              | 30s     | No       |
+| <a id="opt-serverstransport-dialKeepAlive"></a>`serverstransport.`<br />`dialKeepAlive`                           | Defines the interval between keep-alive probes for an active network connection.                                                                                                                                   | 15s     | No       |
+| <a id="opt-serverstransport-terminationDelay"></a>`serverstransport.`<br />`terminationDelay`                     | Sets the time limit for the proxy to fully terminate connections on both sides after initiating the termination sequence, with a negative value indicating no deadline. More Information [here](#terminationdelay) | 100ms   | No       |
+| <a id="opt-serverstransport-proxyProtocol"></a>`serverstransport.`<br />`proxyProtocol`                           | Defines the Proxy Protocol configuration. An empty `proxyProtocol` section enables Proxy Protocol version 2.                                                                                                       |         | No       |
+| <a id="opt-serverstransport-proxyProtocol-version"></a>`serverstransport.`<br />`proxyProtocol.version`           | Traefik supports PROXY Protocol version 1 and 2 on TCP Services. More Information [here](#proxyprotocolversion)                                                                                                    | 2       | No       |
+| <a id="opt-serverstransport-tls"></a>`serverstransport.`<br />`tls`                                               | Defines the TLS configuration. An empty `tls` section enables TLS.                                                                                                                                                 |         | No       |
+| <a id="opt-serverstransport-tls-serverName"></a>`serverstransport.`<br />`tls`<br />`.serverName`                 | Configures the server name that will be used for SNI.                                                                                                                                                              |         | No       |
+| <a id="opt-serverstransport-tls-certificates"></a>`serverstransport.`<br />`tls`<br />`.certificates`             | Defines the list of certificates (as file paths, or data bytes) that will be set as client certificates for mTLS.                                                                                                  |         | No       |
+| <a id="opt-serverstransport-tls-insecureSkipVerify"></a>`serverstransport.`<br />`tls`<br />`.insecureSkipVerify` | Controls whether the server's certificate chain and host name is verified.                                                                                                                                         | false   | No       |
+| <a id="opt-serverstransport-tls-rootCAs"></a>`serverstransport.`<br />`tls`<br />`.rootCAs`                       | Defines the root certificate authorities to use when verifying server certificates. (for mTLS connections).                                                                                                        |         | No       |
+| <a id="opt-serverstransport-tls-peerCertURI"></a>`serverstransport.`<br />`tls.`<br />`peerCertURI`               | Defines the URI used to match against SAN URIs during the server's certificate verification.                                                                                                                       | ""      | No       |
+| <a id="opt-serverstransport-tls-spiffe"></a>`serverstransport.`<br />`tls.spiffe`                                 | Defines the SPIFFE configuration. An empty `spiffe` section enables SPIFFE (that allows any SPIFFE ID).                                                                                                            |         | No       |
+| <a id="opt-serverstransport-tls-spiffe-ids"></a>`serverstransport.`<br />`tls.spiffe`<br />`.ids`                 | Allow SPIFFE IDs.<br />This takes precedence over the SPIFFE TrustDomain.                                                                                                                                          |         | No       |
+| <a id="opt-serverstransport-tls-spiffe-trustDomain"></a>`serverstransport.`<br />`tls.spiffe`<br />`.trustDomain` | Allow SPIFFE trust domain.                                                                                                                                                                                         | ""      | No       |
+
+> **SPIFFE**
+> Please note that SPIFFE must be enabled in the [install configuration](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/tls/spiffe) (formerly known as static configuration) before using it to secure the connection between Traefik and the backends.
+
+### `terminationDelay`
+
+As a proxy between a client and a server, it can happen that either side (e.g. client side) decides to terminate its writing capability on the connection (i.e. issuance of a FIN packet).
+The proxy needs to propagate that intent to the other side, and so when that happens, it also does the same on its connection with the other side (e.g. backend side).
+
+However, if for some reason (bad implementation, or malicious intent) the other side does not eventually do the same as well,
+the connection would stay half-open, which would lock resources for however long.
+
+To that end, as soon as the proxy enters this termination sequence, it sets a deadline on fully terminating the connections on both sides.
+
+The termination delay controls that deadline.
+A negative value means an infinite deadline (i.e. the connection is never fully terminated by the proxy itself).
+
+### `proxyProtocol.version`
+
+Traefik supports [PROXY Protocol](https://www.haproxy.org/download/2.0/doc/proxy-protocol.txt) version 1 and 2 on TCP Services.
+It can be configured by setting `proxyProtocol.version` on the serversTransport.
+The option specifies the version of the protocol to be used. Either 1 or 2.

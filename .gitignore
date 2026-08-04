@@ -1,0 +1,7 @@
+node_modules/
+_site/
+.serena/
+.DS_Store
+session-*.md
+resume.txt
+*.tmp

@@ -1,0 +1,65 @@
+> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/peers/lazy-connection.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/manage/peers/lazy-connection.mdx)
+
+# Lazy Connections
+
+Lazy connections reduce resource use in large NetBird networks by opening peer connections only when traffic needs them, rather than maintaining every possible full-mesh connection continuously.
+
+> **Note**
+>
+> Lazy connections require NetBird v0.50.1 or later on the client, the peers it communicates with, and self-hosted Management and Signal servers.
+
+## How Lazy Connections Work
+
+When lazy connections are enabled, the client:
+
+- Starts a connection to a peer when traffic is sent to it.
+- Tears down an established peer connection after it has been idle for the configured inactivity threshold.
+- Keeps peers used for ingress forwarding connected so forwarding targets remain reachable.
+- Reopens all applicable peer connections when lazy connections are disabled.
+
+The default inactivity threshold is `15m`. Change it with `NB_LAZY_CONN_INACTIVITY_THRESHOLD`, using a [Go duration](https://pkg.go.dev/time#ParseDuration) such as `30m` or `1h`.
+
+> **Note**
+>
+> The first request to an idle peer can take slightly longer while NetBird establishes the connection.
+
+### DNS warm-up
+
+When the local NetBird resolver returns an A or AAAA record for an idle peer, it starts waking that peer before the application sends its first packet. The resolver waits for up to two seconds by default for one matching peer to connect, reducing the chance that the application's first request races the lazy connection.
+
+Set `NB_DNS_LAZY_WARMUP_TIMEOUT` on the daemon to change this per-query wait. The value must be a positive Go duration, for example `5s`. Invalid, zero, or negative values fall back to the `2s` default.
+
+## Enable Lazy Connections in Management
+
+The account setting in the NetBird Dashboard is the normal source of truth. When it is enabled, compatible clients activate their lazy connection manager. When it is disabled, clients stop lazy mode and immediately attempt to connect to all applicable peers.
+
+Existing active connections are not interrupted merely because lazy mode is enabled. They become eligible for teardown after the inactivity threshold.
+
+## Override the Management Setting on a Client
+
+Set `NB_LAZY_CONN` on the NetBird daemon when one client must override the account setting:
+
+```bash
+# Force lazy connections on
+sudo netbird service reconfigure --service-env NB_LAZY_CONN=on
+
+# Force lazy connections off
+sudo netbird service reconfigure --service-env NB_LAZY_CONN=off
+```
+
+`on` and `off` override Management in both directions. Leave the variable unset to follow the Management setting. See [Client Environment Variables](https://docs.netbird.io/client/environment-variables#ice-and-connectivity) for service configuration details.
+
+On MDM-managed clients, the boolean `lazyConnection` policy key provides the same local override: `true` forces lazy connections on, `false` forces them off, and an absent key defers to Management. If both are configured, `NB_LAZY_CONN` takes precedence over MDM.
+
+> **Note**
+>
+> The deprecated `NB_ENABLE_EXPERIMENTAL_LAZY_CONN` variable is no longer used. The deprecated `netbird up --enable-lazy-connection` flag is also inert in v0.75. Use the Management setting, `NB_LAZY_CONN`, or the MDM policy instead.
+
+## Get started
+
+[Use NetBird](https://netbird.io/pricing)
+
+- Make sure to [star us on GitHub](https://github.com/netbirdio/netbird)
+- Follow us [on X](https://x.com/netbird)
+- Join our Slack Channel
+- NetBird [latest release](https://github.com/netbirdio/netbird/releases) on GitHub

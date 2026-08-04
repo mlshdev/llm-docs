@@ -1,0 +1,601 @@
+> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/ipa/resources/self-hosted-proxies.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/ipa/resources/self-hosted-proxies.mdx)
+
+## List Proxy Tokens   (GET /api/reverse-proxies/proxy-tokens)
+
+Returns all proxy access tokens for the account
+
+**GET /api/reverse-proxies/proxy-tokens Request**
+
+**cURL**
+
+```bash
+curl -X GET https://api.netbird.io/api/reverse-proxies/proxy-tokens \
+-H 'Accept: application/json' \
+-H 'Authorization: Token <TOKEN>' 
+```
+
+```js
+const axios = require('axios');
+
+let config = {
+  method: 'get',
+  maxBodyLength: Infinity,
+  url: '/api/reverse-proxies/proxy-tokens',
+  headers: {     
+    'Accept': 'application/json',    
+    'Authorization': 'Token <TOKEN>'
+  }  
+};
+
+axios(config)
+.then((response) => {
+  console.log(JSON.stringify(response.data));
+})
+.catch((error) => {
+  console.log(error);
+});
+```
+
+```python
+import requests
+import json
+
+url = "https://api.netbird.io/api/reverse-proxies/proxy-tokens"
+
+headers = {     
+  'Accept': 'application/json',
+  'Authorization': 'Token <TOKEN>'
+}
+
+response = requests.request("GET", url, headers=headers)
+
+print(response.text)
+```
+
+```go
+package main
+
+import (
+  "fmt"
+  "strings"
+  "net/http"
+  "io/ioutil"
+)
+
+func main() {
+
+  url := "https://api.netbird.io/api/reverse-proxies/proxy-tokens"
+  method := "GET"
+  
+  client := &http.Client {
+  }
+  req, err := http.NewRequest(method, url, nil)
+
+  if err != nil {
+    fmt.Println(err)
+    return
+  }
+  
+    
+  req.Header.Add("Accept", "application/json")
+  req.Header.Add("Authorization", "Token <TOKEN>")
+
+  res, err := client.Do(req)
+  if err != nil {
+    fmt.Println(err)
+    return
+  }
+  defer res.Body.Close()
+
+  body, err := ioutil.ReadAll(res.Body)
+  if err != nil {
+    fmt.Println(err)
+    return
+  }
+  fmt.Println(string(body))
+}
+```
+
+```ruby
+require "uri"
+require "json"
+require "net/http"
+
+url = URI("https://api.netbird.io/api/reverse-proxies/proxy-tokens")
+
+https = Net::HTTP.new(url.host, url.port)
+https.use_ssl = true
+
+request = Net::HTTP::Get.new(url)
+request["Accept"] = "application/json"
+request["Authorization"] = "Token <TOKEN>"
+
+response = https.request(request)
+puts response.read_body
+```
+
+```java
+OkHttpClient client = new OkHttpClient().newBuilder()
+  .build();
+
+Request request = new Request.Builder()
+  .url("https://api.netbird.io/api/reverse-proxies/proxy-tokens")
+  .method("GET")    
+  .addHeader("Accept", "application/json")
+  .addHeader("Authorization: Token <TOKEN>")
+  .build();
+Response response = client.newCall(request).execute();
+```
+
+```php
+<?php
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => 'https://api.netbird.io/api/reverse-proxies/proxy-tokens',
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => '',
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 0,
+  CURLOPT_FOLLOWLOCATION => true,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => 'GET',  
+  CURLOPT_HTTPHEADER => array(        
+    'Accept: application/json',
+    'Authorization: Token <TOKEN>'
+  ),
+));
+
+$response = curl_exec($curl);
+
+curl_close($curl);
+echo $response;
+```
+
+**Response**
+
+**Example**
+
+```json
+[
+  {
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "expires_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "last_used": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "revoked": {
+      "type": "boolean"
+    }
+  }
+]
+```
+
+**Schema**
+
+```json
+[
+  {
+    "id": "string",
+    "name": "string",
+    "expires_at": "string",
+    "created_at": "string",
+    "last_used": "string",
+    "revoked": "boolean"
+  }
+]
+```
+
+***
+
+## Create a Proxy Token   (POST /api/reverse-proxies/proxy-tokens)
+
+Generate an account-scoped proxy access token for self-hosted proxy registration
+
+### Request-Body Parameters
+
+**name (type: string; required)**
+
+Human-readable token name
+
+**expires\_in (type: integer; optional; min: 0)**
+
+Token expiration in seconds (0 = never expires)
+
+**POST /api/reverse-proxies/proxy-tokens Request**
+
+**cURL**
+
+```bash
+curl -X POST https://api.netbird.io/api/reverse-proxies/proxy-tokens \
+-H 'Accept: application/json' \
+-H 'Content-Type: application/json' \
+-H 'Authorization: Token <TOKEN>' \
+--data-raw '{
+  "name": "my-proxy-token",
+  "expires_in": 0
+}'
+```
+
+```js
+const axios = require('axios');
+let data = JSON.stringify({
+  "name": "my-proxy-token",
+  "expires_in": 0
+});
+let config = {
+  method: 'post',
+  maxBodyLength: Infinity,
+  url: '/api/reverse-proxies/proxy-tokens',
+  headers: {     
+    'Accept': 'application/json',    
+    'Content-Type': 'application/json',
+    'Authorization': 'Token <TOKEN>'
+  },  
+  data : data
+};
+
+axios(config)
+.then((response) => {
+  console.log(JSON.stringify(response.data));
+})
+.catch((error) => {
+  console.log(error);
+});
+```
+
+```python
+import requests
+import json
+
+url = "https://api.netbird.io/api/reverse-proxies/proxy-tokens"
+payload = json.dumps({
+  "name": "my-proxy-token",
+  "expires_in": 0
+})
+headers = {   
+  'Content-Type': 'application/json',  
+  'Accept': 'application/json',
+  'Authorization': 'Token <TOKEN>'
+}
+
+response = requests.request("POST", url, headers=headers, data=payload)
+
+print(response.text)
+```
+
+```go
+package main
+
+import (
+  "fmt"
+  "strings"
+  "net/http"
+  "io/ioutil"
+)
+
+func main() {
+
+  url := "https://api.netbird.io/api/reverse-proxies/proxy-tokens"
+  method := "POST"
+  
+  payload := strings.NewReader(`{
+  "name": "my-proxy-token",
+  "expires_in": 0
+}`)
+  client := &http.Client {
+  }
+  req, err := http.NewRequest(method, url, payload)
+
+  if err != nil {
+    fmt.Println(err)
+    return
+  }
+  
+  
+  req.Header.Add("Content-Type", "application/json")  
+  req.Header.Add("Accept", "application/json")
+  req.Header.Add("Authorization", "Token <TOKEN>")
+
+  res, err := client.Do(req)
+  if err != nil {
+    fmt.Println(err)
+    return
+  }
+  defer res.Body.Close()
+
+  body, err := ioutil.ReadAll(res.Body)
+  if err != nil {
+    fmt.Println(err)
+    return
+  }
+  fmt.Println(string(body))
+}
+```
+
+```ruby
+require "uri"
+require "json"
+require "net/http"
+
+url = URI("https://api.netbird.io/api/reverse-proxies/proxy-tokens")
+
+https = Net::HTTP.new(url.host, url.port)
+https.use_ssl = true
+
+request = Net::HTTP::Post.new(url)
+request["Content-Type"] = "application/json"
+request["Accept"] = "application/json"
+request["Authorization"] = "Token <TOKEN>"
+
+request.body = JSON.dump({
+  "name": "my-proxy-token",
+  "expires_in": 0
+})
+response = https.request(request)
+puts response.read_body
+```
+
+```java
+OkHttpClient client = new OkHttpClient().newBuilder()
+  .build();
+MediaType mediaType = MediaType.parse("application/json");
+RequestBody body = RequestBody.create(mediaType, '{
+  "name": "my-proxy-token",
+  "expires_in": 0
+}');
+Request request = new Request.Builder()
+  .url("https://api.netbird.io/api/reverse-proxies/proxy-tokens")
+  .method("POST", body)  
+  .addHeader("Content-Type", "application/json")  
+  .addHeader("Accept", "application/json")
+  .addHeader("Authorization: Token <TOKEN>")
+  .build();
+Response response = client.newCall(request).execute();
+```
+
+```php
+<?php
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => 'https://api.netbird.io/api/reverse-proxies/proxy-tokens',
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => '',
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 0,
+  CURLOPT_FOLLOWLOCATION => true,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => 'POST',  
+  CURLOPT_POSTFIELDS => '{
+  "name": "my-proxy-token",
+  "expires_in": 0
+}',
+  CURLOPT_HTTPHEADER => array(    
+    'Content-Type: application/json',    
+    'Accept: application/json',
+    'Authorization: Token <TOKEN>'
+  ),
+));
+
+$response = curl_exec($curl);
+
+curl_close($curl);
+echo $response;
+```
+
+**Response**
+
+**Example**
+
+```json
+{
+  "id": {
+    "type": "string"
+  },
+  "name": {
+    "type": "string"
+  },
+  "expires_at": {
+    "type": "string",
+    "format": "date-time"
+  },
+  "created_at": {
+    "type": "string",
+    "format": "date-time"
+  },
+  "last_used": {
+    "type": "string",
+    "format": "date-time"
+  },
+  "revoked": {
+    "type": "boolean"
+  },
+  "plain_token": "nbx_abc123..."
+}
+```
+
+**Schema**
+
+```json
+{
+  "id": "string",
+  "name": "string",
+  "expires_at": "string",
+  "created_at": "string",
+  "last_used": "string",
+  "revoked": "boolean",
+  "plain_token": "string"
+}
+```
+
+***
+
+## Revoke a Proxy Token   (DELETE /api/reverse-proxies/proxy-tokens/{tokenId})
+
+Revoke an account-scoped proxy access token
+
+### Path Parameters
+
+**tokenId (type: string; required)**
+
+The unique identifier of the proxy token
+
+**DELETE /api/reverse-proxies/proxy-tokens/{tokenId} Request**
+
+**cURL**
+
+```bash
+curl -X DELETE https://api.netbird.io/api/reverse-proxies/proxy-tokens/{tokenId} \
+-H 'Authorization: Token <TOKEN>' 
+```
+
+```js
+const axios = require('axios');
+
+let config = {
+  method: 'delete',
+  maxBodyLength: Infinity,
+  url: '/api/reverse-proxies/proxy-tokens/{tokenId}',
+  headers: {         
+    'Authorization': 'Token <TOKEN>'
+  }  
+};
+
+axios(config)
+.then((response) => {
+  console.log(JSON.stringify(response.data));
+})
+.catch((error) => {
+  console.log(error);
+});
+```
+
+```python
+import requests
+import json
+
+url = "https://api.netbird.io/api/reverse-proxies/proxy-tokens/{tokenId}"
+
+headers = {     
+  'Authorization': 'Token <TOKEN>'
+}
+
+response = requests.request("DELETE", url, headers=headers)
+
+print(response.text)
+```
+
+```go
+package main
+
+import (
+  "fmt"
+  "strings"
+  "net/http"
+  "io/ioutil"
+)
+
+func main() {
+
+  url := "https://api.netbird.io/api/reverse-proxies/proxy-tokens/{tokenId}"
+  method := "DELETE"
+  
+  client := &http.Client {
+  }
+  req, err := http.NewRequest(method, url, nil)
+
+  if err != nil {
+    fmt.Println(err)
+    return
+  }
+  
+    
+  req.Header.Add("Authorization", "Token <TOKEN>")
+
+  res, err := client.Do(req)
+  if err != nil {
+    fmt.Println(err)
+    return
+  }
+  defer res.Body.Close()
+
+  body, err := ioutil.ReadAll(res.Body)
+  if err != nil {
+    fmt.Println(err)
+    return
+  }
+  fmt.Println(string(body))
+}
+```
+
+```ruby
+require "uri"
+require "json"
+require "net/http"
+
+url = URI("https://api.netbird.io/api/reverse-proxies/proxy-tokens/{tokenId}")
+
+https = Net::HTTP.new(url.host, url.port)
+https.use_ssl = true
+
+request = Net::HTTP::Delete.new(url)
+request["Authorization"] = "Token <TOKEN>"
+
+response = https.request(request)
+puts response.read_body
+```
+
+```java
+OkHttpClient client = new OkHttpClient().newBuilder()
+  .build();
+
+Request request = new Request.Builder()
+  .url("https://api.netbird.io/api/reverse-proxies/proxy-tokens/{tokenId}")
+  .method("DELETE")    
+  .addHeader("Authorization: Token <TOKEN>")
+  .build();
+Response response = client.newCall(request).execute();
+```
+
+```php
+<?php
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => 'https://api.netbird.io/api/reverse-proxies/proxy-tokens/{tokenId}',
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => '',
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 0,
+  CURLOPT_FOLLOWLOCATION => true,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => 'DELETE',  
+  CURLOPT_HTTPHEADER => array(        
+    'Authorization: Token <TOKEN>'
+  ),
+));
+
+$response = curl_exec($curl);
+
+curl_close($curl);
+echo $response;
+```
+
+***

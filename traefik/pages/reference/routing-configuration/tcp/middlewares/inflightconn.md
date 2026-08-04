@@ -1,0 +1,62 @@
+> Release-pinned source for Traefik Proxy v3.7.10: [docs/content/reference/routing-configuration/tcp/middlewares/inflightconn.md](https://github.com/traefik/traefik/blob/2a2349356c01b1b1f7ecddb0c17b30c97f5241e7/docs/content/reference/routing-configuration/tcp/middlewares/inflightconn.md)
+
+To proactively prevent Services from being overwhelmed with high load, the number of allowed simultaneous connections by IP can be limited with the `inFlightConn` TCP middleware.
+
+## Configuration Examples
+
+**Structured (YAML)**
+
+```yaml
+# Limiting to 10 simultaneous connections
+tcp:
+  middlewares:
+    test-inflightconn:
+      inFlightConn:
+        amount: 10
+```
+
+**Structured (TOML)**
+
+```toml
+# Limiting to 10 simultaneous connections
+[tcp.middlewares]
+  [tcp.middlewares.test-inflightconn.inFlightConn]
+    amount = 10
+```
+
+**Labels**
+
+```yaml
+labels:
+  - "traefik.tcp.middlewares.test-inflightconn.inflightconn.amount=10"
+```
+
+**Tags**
+
+```json
+// Limiting to 10 simultaneous connections
+{
+  //..
+  "Tags" : [
+    "traefik.tcp.middlewares.test-inflightconn.inflightconn.amount=10"
+  ]
+}
+```
+
+**Kubernetes**
+
+```yaml
+apiVersion: traefik.io/v1alpha1
+kind: MiddlewareTCP
+metadata:
+  name: test-inflightconn
+spec:
+  inFlightConn:
+    amount: 10
+```
+
+## Configuration Options
+
+| Field                           | Description                                                                                                                                                                       | Default | Required |
+| :------------------------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | -------- |
+| <a id="opt-amount"></a>`amount` | The `amount` option defines the maximum amount of allowed simultaneous connections. <br /> The middleware closes the connection if there are already `amount` connections opened. | 0       | Yes      |

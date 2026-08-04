@@ -1,0 +1,15 @@
+# Release-pinned LLM documentation
+
+> LLM-friendly documentation generated from immutable stable release tags. Each project includes provenance, normalized pages, an index, and a full concatenated corpus.
+
+## Projects
+
+- [Traefik Proxy v3.7.10](traefik/llms.txt): [full corpus](traefik/llms-full.txt), [manifest](traefik/manifest.json)
+- [NetBird v0.76.1](netbird/llms.txt): [full corpus](netbird/llms-full.txt), [manifest](netbird/manifest.json)
+- [Podman v6.0.2](podman/llms.txt): [full corpus](podman/llms-full.txt), [manifest](podman/manifest.json)
+
+## Update policy
+
+- Drafts and prereleases are ignored.
+- Stable releases are discovered by scheduled GitHub API reconciliation.
+- NetBird updates only after the separate documentation repository contains the API-generation commit for the same product tag.

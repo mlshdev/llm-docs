@@ -1,0 +1,179 @@
+> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/get-started/install/macos.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/get-started/install/macos.mdx)
+
+# MacOS Installation
+
+The NetBird client (agent) allows a peer to join a pre-existing NetBird deployment. If a NetBird deployment is not yet available, there are both managed and [self-hosted](https://docs.netbird.io/selfhosted/selfhosted-quickstart) options available.
+
+## Install with one command
+
+```bash
+curl -fsSL https://pkgs.netbird.io/install.sh | sh
+```
+
+This installs the full NetBird application, including the desktop UI and the daemon service.
+
+### Package install
+
+1. Download the latest MacOS release installer for your [processor](https://support.apple.com/en-us/HT211814):
+   - Intel: [Download NetBird for Intel](https://pkgs.netbird.io/macos/amd64)
+   - M1 & M2: [Download NetBird for Apple Silicon](https://pkgs.netbird.io/macos/arm64)\\
+
+     *If you require an older version checkout NetBird [releases](https://github.com/netbirdio/netbird/releases/latest)*
+2. Proceed with the installation steps
+3. This will install the NetBird app into /Applications and add the daemon service
+4. After installing, you can follow the steps from [Running NetBird with SSO Login](#running-netbird-with-sso-login) steps.
+
+> To uninstall the client remove the app from /Applications
+
+### Homebrew install
+
+1. Download and install homebrew at <https://brew.sh/>
+2. If netbird was previously installed with homebrew, you will need to run:
+
+```bash
+# Stop and uninstall daemon service:
+sudo netbird service stop
+sudo netbird service uninstall
+# unlink the app
+brew unlink netbird
+```
+
+> netbird will copy any existing configuration from the netbird's default configuration paths to the new NetBird's default location
+
+3. Install the client
+
+```bash
+  # for CLI only
+  brew install netbirdio/tap/netbird
+  # for GUI package
+  brew install --cask netbirdio/tap/netbird-ui
+```
+
+4. If you installed CLI only, you need to install and start the client daemon service:
+
+```bash
+ sudo netbird service install
+ sudo netbird service start
+```
+
+### CLI-only install (binary)
+
+If you need only the CLI client without the desktop UI — for example, on headless servers or for MDM/fleet deployments — you can install the standalone binary directly.
+
+#### One-command binary install
+
+> **Warning**
+>
+> The macOS binary tarballs from GitHub releases are **not Apple code-signed or notarized**. Only the official `.pkg` installer from [pkgs.netbird.io](https://pkgs.netbird.io) contains signed binaries. The unsigned binary will trigger Gatekeeper warnings and may be blocked by MDM policies. For managed fleet deployments, see [Building a CLI-Only .pkg for MDM Deployment](https://docs.netbird.io/manage/integrations/mdm-deployment/macos-cli-pkg-deployment) which includes steps for signing the binary with your own Developer ID.
+
+The install script supports a binary-only mode that downloads the tarball, extracts the `netbird` binary to `/usr/local/bin/`, and registers the launchd daemon:
+
+```bash
+curl -fsSL https://pkgs.netbird.io/install.sh | USE_BIN_INSTALL=true SKIP_UI_APP=true sh
+```
+
+To update an existing binary install, add the `UPDATE_NETBIRD` flag:
+
+```bash
+curl -fsSL https://pkgs.netbird.io/install.sh | USE_BIN_INSTALL=true SKIP_UI_APP=true UPDATE_NETBIRD=true sh
+```
+
+#### Manual binary install
+
+1. Checkout NetBird [releases](https://github.com/netbirdio/netbird/releases/latest)
+2. Download the latest release for macOS:
+
+```bash
+  # For Apple Silicon (M1, M2, M3, M4):
+  curl -L -o ./netbird.tar.gz https://github.com/netbirdio/netbird/releases/download/v<VERSION>/netbird_<VERSION>_darwin_arm64.tar.gz
+
+  # For Intel:
+  curl -L -o ./netbird.tar.gz https://github.com/netbirdio/netbird/releases/download/v<VERSION>/netbird_<VERSION>_darwin_amd64.tar.gz
+
+  # Universal binary (works on both architectures):
+  curl -L -o ./netbird.tar.gz https://github.com/netbirdio/netbird/releases/download/v<VERSION>/netbird_<VERSION>_darwin_all.tar.gz
+```
+
+> **Note**
+>
+> Replace **VERSION** with the latest released version (e.g., `0.36.5`). You can find version numbers on the [releases page](https://github.com/netbirdio/netbird/releases/latest).
+
+3. Extract and install the binary:
+
+```bash
+  tar xzf ./netbird.tar.gz
+  sudo mv netbird /usr/local/bin/netbird
+  sudo chown root:wheel /usr/local/bin/netbird
+  sudo chmod +x /usr/local/bin/netbird
+```
+
+4. Install and start the daemon service:
+
+```bash
+  sudo netbird service install
+  sudo netbird service start
+```
+
+This creates a launchd daemon at `/Library/LaunchDaemons/netbird.plist` that runs as root (required for managing the WireGuard network interface).
+
+> **Warning**
+>
+> Automatic updates via the NetBird dashboard do **not** work for binary-only installs. The auto-updater requires the official `.pkg` installer (it checks for the `io.netbird.client` package receipt). For binary installs, you must update manually or push updates through your MDM solution. See [Building a CLI-Only .pkg for MDM Deployment](https://docs.netbird.io/manage/integrations/mdm-deployment/macos-cli-pkg-deployment) for a managed approach.
+
+## Running NetBird with SSO Login
+
+### Desktop UI Application
+
+Launch the desktop app and click **Connect** in the main window or menu-bar menu. On first launch, choose NetBird Cloud or enter the URL of your self-hosted deployment. NetBird opens your browser to authenticate the device. See the [desktop app guide](https://docs.netbird.io/client/desktop-app) for the complete interface.
+
+### CLI
+
+Alternatively, you could use command line. Simply run
+
+```bash
+netbird up
+```
+
+> It will open your browser, and you will be prompt for email and password. Follow the instructions.
+
+![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/get-started/netbird-sso-login-cmd.gif)
+
+Check connection status:
+
+```bash
+  netbird status
+```
+
+### Running NetBird with a Setup Key
+
+In case you are activating a server peer, you can use a [setup key](https://docs.netbird.io/manage/peers/register-machines-using-setup-keys) as described in the steps below.
+
+> This is especially helpful when you are running multiple server instances with infrastructure-as-code tools like ansible and terraform.
+
+For unattended deployments across many machines, pre-populate the client config so each peer registers on first start. See [Bootstrap peers via config file](https://docs.netbird.io/manage/peers/bootstrap-via-config-file).
+
+1. Login to the Management Service. You need to have a `setup key` in hand (see [setup keys](https://docs.netbird.io/manage/peers/register-machines-using-setup-keys)).
+
+```bash
+  netbird up --setup-key <SETUP KEY>
+```
+
+Alternatively, if you are hosting your own Management Service provide `--management-url` property pointing to your Management Service:
+
+```bash
+  netbird up --setup-key <SETUP KEY> --management-url http://localhost:33073
+```
+
+> You could also omit the `--setup-key` property. In this case, the tool will prompt for the key.
+
+2. Check connection status:
+
+```bash
+  netbird status
+```
+
+3. Check your IP:
+
+```bash
+  sudo ifconfig utun100
+```

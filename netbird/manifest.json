@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "project": "netbird",
+  "title": "NetBird",
+  "repository": "netbirdio/netbird",
+  "tag": "v0.76.1",
+  "releaseId": 363285132,
+  "releasePublishedAt": "2026-07-31T19:33:52Z",
+  "sourceCommit": "0780a806f2cc2e8a6a51782cfffe0591b7c3fa9c",
+  "docsCommit": "14375a092774f250d45a85f6d5f3c524d99fd111",
+  "documentCount": 337,
+  "notes": [
+    "Public docs are pinned to netbirdio/docs commit 14375a092774f250d45a85f6d5f3c524d99fd111; its commit message matches v0.76.1 and it changes generated API resource pages.",
+    "NetBird does not tag its public docs repository; non-API pages are an evergreen snapshot at that exact commit, not a formally versioned manual.",
+    "Release-tagged technical architecture documents are included separately from the public documentation snapshot."
+  ]
+}

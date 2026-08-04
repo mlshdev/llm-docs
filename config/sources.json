@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "projects": [
+    {
+      "id": "traefik",
+      "title": "Traefik Proxy",
+      "repository": "traefik/traefik",
+      "homepage": "https://doc.traefik.io/traefik/"
+    },
+    {
+      "id": "netbird",
+      "title": "NetBird",
+      "repository": "netbirdio/netbird",
+      "docsRepository": "netbirdio/docs",
+      "homepage": "https://docs.netbird.io/"
+    },
+    {
+      "id": "podman",
+      "title": "Podman",
+      "repository": "podman-container-tools/podman",
+      "homepage": "https://docs.podman.io/"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+traefik/** linguist-generated=true
+netbird/** linguist-generated=true
+podman/** linguist-generated=true
+llms-full.txt linguist-generated=true
+**/llms-full.txt linguist-generated=true
+llms-full.txt -diff
+**/llms-full.txt -diff

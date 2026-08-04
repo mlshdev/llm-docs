@@ -1,0 +1,77 @@
+> Release-pinned source for Traefik Proxy v3.7.10: [docs/content/reference/routing-configuration/kubernetes/crd/http/serverstransport.md](https://github.com/traefik/traefik/blob/2a2349356c01b1b1f7ecddb0c17b30c97f5241e7/docs/content/reference/routing-configuration/kubernetes/crd/http/serverstransport.md)
+
+A `ServersTransport` allows you to configure the connection between Traefik and the HTTP servers in Kubernetes.
+
+Before creating `ServersTransport` objects, you need to apply the [Traefik Kubernetes CRDs](https://doc.traefik.io/traefik/reference/dynamic-configuration/kubernetes-crd/#definitions) to your Kubernetes cluster.
+
+This registers the `ServersTransport` kind and other Traefik-specific resources.
+
+It can be applied on a service using:
+
+- The option `services.serverstransport` on a [`IngressRoute`](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/crd/http/ingressroute) (if the service is a Kubernetes Service)
+- The option `serverstransport` on a [`TraefikService`](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/crd/http/traefikservice) (if the service is a Kubernetes Service)
+
+> **Reference a ServersTransport CRD from another namespace**
+> The value must be of form `namespace-name@kubernetescrd`, and the `allowCrossNamespace` option must be enabled at the provider level.
+
+## Configuration Example
+
+**serversTransport**
+
+```yaml
+apiVersion: traefik.io/v1alpha1
+kind: ServersTransport
+metadata:
+  name: mytransport
+  namespace: default
+
+spec:
+  serverName: example.org
+  insecureSkipVerify: true
+```
+
+**IngressRoute**
+
+```yaml
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: testroute
+  namespace: default
+
+spec:
+  entryPoints:
+    - web
+  routes:
+  - match: Host(`example.com`)
+    kind: Rule
+    services:
+    - name: whoami
+      port: 80
+      serversTransport: mytransport
+```
+
+## Configuration Options
+
+| Field                                                                                                                                         | Description                                                                                                                                             | Default | Required |
+| :-------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------ | :------ | :------- |
+| <a id="opt-serverstransport-serverName"></a>`serverstransport.`<br />`serverName`                                                             | Defines the server name that will be used for SNI.                                                                                                      |         | No       |
+| <a id="opt-serverstransport-insecureSkipVerify"></a>`serverstransport.`<br />`insecureSkipVerify`                                             | Controls whether the server's certificate chain and host name is verified.                                                                              | false   | No       |
+| <a id="opt-serverstransport-rootCAs"></a>`serverstransport.`<br />`rootCAs`                                                                   | Set of root certificate authorities to use when verifying server certificates.                                                                          |         | No       |
+| <a id="opt-serverstransport-certificatesSecrets"></a>`serverstransport.`<br />`certificatesSecrets`                                           | Certificates to present to the server for mTLS.                                                                                                         |         | No       |
+| <a id="opt-serverstransport-maxIdleConnsPerHost"></a>`serverstransport.`<br />`maxIdleConnsPerHost`                                           | Maximum idle (keep-alive) connections to keep per-host.                                                                                                 | 0       | No       |
+| <a id="opt-serverstransport-disableHTTP2"></a>`serverstransport.`<br />`disableHTTP2`                                                         | Disables HTTP/2 for connections with servers.                                                                                                           | false   | No       |
+| <a id="opt-serverstransport-peerCertURI"></a>`serverstransport.`<br />`peerCertURI`                                                           | Defines the URI used to match against SAN URIs during the server's certificate verification.                                                            | ""      | No       |
+| <a id="opt-serverstransport-forwardingTimeouts-dialTimeout"></a>`serverstransport.`<br />`forwardingTimeouts.dialTimeout`                     | Amount of time to wait until a connection to a server can be established.<br />Zero means no timeout.                                                   | 30s     | No       |
+| <a id="opt-serverstransport-forwardingTimeouts-responseHeaderTimeout"></a>`serverstransport.`<br />`forwardingTimeouts.responseHeaderTimeout` | Amount of time to wait for a server's response headers after fully writing the request (including its body, if any).<br />Zero means no timeout         | 0s      | No       |
+| <a id="opt-serverstransport-forwardingTimeouts-idleConnTimeout"></a>`serverstransport.`<br />`forwardingTimeouts.idleConnTimeout`             | Maximum amount of time an idle (keep-alive) connection will remain idle before closing itself.<br />Zero means no timeout.                              | 90s     | No       |
+| <a id="opt-serverstransport-forwardingTimeouts-readIdleTimeout"></a>`serverstransport.`<br />`forwardingTimeouts.readIdleTimeout`             | Timeout after which a health check using a ping frame will be carried out if no frame is received on the HTTP/2 connection.<br />Zero means no timeout. | 0s      | No       |
+| <a id="opt-serverstransport-forwardingTimeouts-pingTimeout"></a>`serverstransport.`<br />`forwardingTimeouts.pingTimeout`                     | Timeout after which the HTTP/2 connection will be closed if a response to a ping is not received.<br />Zero means no timeout.                           | 0s      | No       |
+| <a id="opt-serverstransport-spiffe-ids"></a>`serverstransport.`<br />`spiffe.ids`                                                             | Allow SPIFFE IDs.<br />This takes precedence over the SPIFFE TrustDomain.                                                                               |         | No       |
+| <a id="opt-serverstransport-spiffe-trustDomain"></a>`serverstransport.`<br />`spiffe.trustDomain`                                             | Allow SPIFFE trust domain.                                                                                                                              | ""      | No       |
+| <a id="opt-serverstransport-cipherSuites"></a>`serverstransport.`<br />`cipherSuites`                                                         | Defines the cipher suites to use when contacting backend servers.                                                                                       | \[]     | No       |
+| <a id="opt-serverstransport-minVersion"></a>`serverstransport.`<br />`minVersion`                                                             | Defines the minimum TLS version to use when contacting backend servers.                                                                                 | ""      | No       |
+| <a id="opt-serverstransport-maxVersion"></a>`serverstransport.`<br />`maxVersion`                                                             | Defines the maximum TLS version to use when contacting backend servers.                                                                                 | ""      | No       |
+
+> **CA Secret**
+> The CA secret must contain a base64 encoded certificate under either a tls.ca or a ca.crt key.

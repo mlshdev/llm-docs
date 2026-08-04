@@ -1,0 +1,55 @@
+> Release-pinned source for Traefik Proxy v3.7.10: [docs/content/reference/routing-configuration/kubernetes/crd/tcp/serverstransporttcp.md](https://github.com/traefik/traefik/blob/2a2349356c01b1b1f7ecddb0c17b30c97f5241e7/docs/content/reference/routing-configuration/kubernetes/crd/tcp/serverstransporttcp.md)
+
+`ServersTransportTCP` is the CRD implementation of [ServersTransportTCP](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/tcp/serverstransport).
+
+Before creating `ServersTransportTCP` objects, you need to apply the [Traefik Kubernetes CRDs](https://doc.traefik.io/traefik/reference/dynamic-configuration/kubernetes-crd/#definitions) to your Kubernetes cluster.
+
+This registers the `ServersTransportTCP` kind and other Traefik-specific resources.
+
+> **Default serversTransportTCP**
+> If no `serversTransportTCP` is specified, the `default@internal` will be used. The `default@internal` `serversTransportTCP` is created from the install configuration (formerly known as static configuration).
+> **ServersTransport reference**
+> By default, the referenced `ServersTransportTCP` CRD must be defined in the same Kubernetes service namespace.
+>
+> To reference a `ServersTransportTCP` CRD from another namespace, the value must be of form `namespace-name@kubernetescrd`, and the `allowCrossNamespace` option must be enabled.
+>
+> If the `ServersTransportTCP` CRD is defined in another provider the cross-provider format `name@provider` should be used.
+
+## Configuration Example
+
+**ServersTransportTCP**
+
+```yaml
+apiVersion: traefik.io/v1alpha1
+kind: ServersTransportTCP
+metadata:
+  name: mytransport
+  namespace: default
+
+spec:
+  proxyProtocol:
+    version: 2
+  terminationDelay: 100ms
+  tls:
+    serverName: example.org
+    insecureSkipVerify: true
+```
+
+## Configuration Options
+
+| Field                                                             | Description                                                                                                                                                                                                                                                                                                                                                                                | Default | Required |
+| ----------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------- | -------- |
+| <a id="opt-dialTimeout"></a>`dialTimeout`                         | The amount of time to wait until a connection to a server can be established. If zero, no timeout exists.                                                                                                                                                                                                                                                                                  | 30s     | No       |
+| <a id="opt-dialKeepAlive"></a>`dialKeepAlive`                     | The interval between keep-alive probes for an active network connection.<br />If this option is set to zero, keep-alive probes are sent with a default value (currently 15 seconds),<br />if supported by the protocol and operating system. Network protocols or operating systems that do not support keep-alives ignore this field.<br />If negative, keep-alive probes are turned off. | 15s     | No       |
+| <a id="opt-proxyProtocol"></a>`proxyProtocol`                     | Defines the Proxy Protocol configuration. An empty `proxyProtocol` section enables Proxy Protocol version 2.                                                                                                                                                                                                                                                                               |         | No       |
+| <a id="opt-proxyProtocol-version"></a>`proxyProtocol.version`     | Traefik supports PROXY Protocol version 1 and 2 on TCP Services.                                                                                                                                                                                                                                                                                                                           |         | No       |
+| <a id="opt-terminationDelay"></a>`terminationDelay`               | Defines the delay to wait before fully terminating the connection, after one connected peer has closed its writing capability.                                                                                                                                                                                                                                                             | 100ms   | No       |
+| <a id="opt-tls-serverName"></a>`tls.serverName`                   | ServerName used to contact the server.                                                                                                                                                                                                                                                                                                                                                     | ""      | No       |
+| <a id="opt-tls-insecureSkipVerify"></a>`tls.insecureSkipVerify`   | Controls whether the server's certificate chain and host name is verified.                                                                                                                                                                                                                                                                                                                 | false   | No       |
+| <a id="opt-tls-peerCertURI"></a>`tls.peerCertURI`                 | Defines the URI used to match against SAN URIs during the server's certificate verification.                                                                                                                                                                                                                                                                                               | ""      | No       |
+| <a id="opt-tls-rootCAs"></a>`tls.rootCAs`                         | Defines a list of CA certificate Secrets or ConfigMaps used to validate server certificates.<br />Each entry can reference either a Secret (`secret`) or a ConfigMap (`configMap`) by name. The referenced resource must contain a certificate under either a `tls.ca` or a `ca.crt` key.                                                                                                  |         | No       |
+| <a id="opt-tls-rootCAsSecrets"></a>`tls.rootCAsSecrets`           | **Deprecated: use `tls.rootCAs` instead.** Defines the set of root certificate authorities to use when verifying server certificates.<br />The CA secret must contain a base64 encoded certificate under either a `tls.ca` or a `ca.crt` key.                                                                                                                                              | ""      | No       |
+| <a id="opt-tls-certificatesSecrets"></a>`tls.certificatesSecrets` | Certificates to present to the server for mTLS.                                                                                                                                                                                                                                                                                                                                            | ""      | No       |
+| <a id="opt-spiffe"></a>`spiffe`                                   | Configures [SPIFFE](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/tls/spiffe) options.                                                                                                                                                                                                                                                                               | ""      | No       |
+| <a id="opt-spiffe-ids"></a>`spiffe.ids`                           | Defines the allowed SPIFFE IDs. This takes precedence over the SPIFFE `trustDomain`.                                                                                                                                                                                                                                                                                                       | ""      | No       |
+| <a id="opt-spiffe-trustDomain"></a>`spiffe.trustDomain`           | Defines the allowed SPIFFE trust domain.                                                                                                                                                                                                                                                                                                                                                   | ""      | No       |

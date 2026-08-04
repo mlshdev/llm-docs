@@ -1,0 +1,11 @@
+node_modules/
+_site/
+.serena/
+traefik/
+netbird/
+podman/
+llms.txt
+llms-full.txt
+bun.lock
+session-*.md
+resume.txt

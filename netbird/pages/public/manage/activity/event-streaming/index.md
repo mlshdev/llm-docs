@@ -1,0 +1,26 @@
+> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/activity/event-streaming/index.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/manage/activity/event-streaming/index.mdx)
+
+# Stream Network Activity to Third-Party SIEM Platforms
+
+![event-streaming-integration](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/activity/event-streaming/event-streaming-integration.png)
+
+Security Information and Event Management (SIEM) systems play a critical role in network security by monitoring,
+detecting, and responding to security threats in real-time. By aggregating and analyzing activity across the network,
+SIEMs help identify anomalous patterns and potential breaches, providing a centralized view of security events.
+
+NetBird provides an event streaming feature that allows you to stream network [activity events](https://docs.netbird.io/manage/activity/traffic-events-logging)
+to third-party SIEM systems, such as [Datadog](https://www.datadoghq.com/dg/security/siem-solution/), [Amazon S3](https://aws.amazon.com/s3/), [Amazon Data Firehose](https://aws.amazon.com/firehose/), and others through a generic HTTP integration.
+
+> **Note**
+>
+> This feature is only available in the cloud version of NetBird.
+
+This documentation provides step-by-step guides and best practices for integrating NetBird activity event streaming with
+supported third-party platforms. To get started, select one of the following integrations:
+
+- [Datadog](https://docs.netbird.io/manage/activity/event-streaming/datadog)
+- [Amazon S3](https://docs.netbird.io/manage/activity/event-streaming/amazon-s3)
+- [Amazon Data Firehose](https://docs.netbird.io/manage/activity/event-streaming/amazon-firehose)
+- [SentinelOne Data Lake](https://docs.netbird.io/manage/activity/event-streaming/sentinelone-data-lake)
+- [Generic HTTP](https://docs.netbird.io/manage/activity/event-streaming/generic-http)
+- [Wazuh](https://docs.netbird.io/manage/activity/event-streaming/wazuh)

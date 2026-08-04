@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "project": "traefik",
+  "title": "Traefik Proxy",
+  "repository": "traefik/traefik",
+  "tag": "v3.7.10",
+  "releaseId": 363062739,
+  "releasePublishedAt": "2026-07-31T12:49:21Z",
+  "sourceCommit": "2a2349356c01b1b1f7ecddb0c17b30c97f5241e7",
+  "documentCount": 160,
+  "notes": [
+    "Pages follow docs/mkdocs.yml navigation order from the immutable release tag.",
+    "MkDocs include fragments are expanded; repeated commercial callouts and non-text assets are omitted."
+  ]
+}

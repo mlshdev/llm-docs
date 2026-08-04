@@ -1,0 +1,437 @@
+> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/get-started/install/linux.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/get-started/install/linux.mdx)
+
+# Linux Installation
+
+The NetBird client (agent) allows a peer to join a pre-existing NetBird deployment. If a NetBird deployment is not yet available, there are both managed and [self-hosted](https://docs.netbird.io/selfhosted/selfhosted-quickstart) options available.
+
+## Desktop App Dependencies
+
+The desktop app introduced in NetBird v0.75.0 renders its interface in a GTK 4 WebKit webview. The `netbird-ui` package does not declare these libraries as dependencies, so install them alongside it.
+
+> **Warning**
+>
+> The desktop app requires **GTK 4.10 or newer** and **WebKitGTK 6.0**. On older GTK 4 releases the app starts but crashes as soon as it opens a file dialog, so install the `netbird` CLI only on those systems.
+
+Minimum releases that satisfy both requirements:
+
+| Distribution             | Desktop app                                                                           | CLI                   |
+| ------------------------ | ------------------------------------------------------------------------------------- | --------------------- |
+| Ubuntu                   | 24.04 LTS and newer                                                                   | any supported release |
+| Debian                   | 13 (trixie) and newer                                                                 | any supported release |
+| Fedora                   | 43 and newer                                                                          | any supported release |
+| RHEL / AlmaLinux / Rocky | 10 and newer, with [EPEL](https://docs.fedoraproject.org/en-US/epel/getting-started/) | any supported release |
+| Amazon Linux             | not available                                                                         | 2 and 2023            |
+
+Ubuntu 22.04 (GTK 4.6) and Debian 12 (GTK 4.8) ship WebKitGTK 6.0 but their GTK 4 is below 4.10, so the desktop app is not supported there. RHEL 9 provides neither GTK 4.10 nor WebKitGTK 6.0.
+
+**Debian 13+ / Ubuntu 24.04+**
+
+```bash
+sudo apt-get install libgtk-4-1 libwebkitgtk-6.0-4 xdg-utils
+```
+
+**Fedora 43+ / RHEL 10+**
+
+```bash
+sudo dnf install gtk4 webkitgtk6.0 xdg-utils
+```
+
+On other distributions, install the equivalent **GTK 4** (4.10+), **WebKitGTK 6.0**, and **xdg-utils** packages from your package manager. Many desktop systems already include some or all of them.
+
+> **Note**
+>
+> Linux `netbird-ui` packages are built for **x86\_64** only. On arm64 and other architectures, use the `netbird` CLI.
+
+## Linux Install Script
+
+```bash
+curl -fsSL https://pkgs.netbird.io/install.sh | sh
+```
+
+### Ubuntu/Debian (APT)
+
+1. Add the repository:
+
+```bash
+ sudo apt-get update
+ sudo apt-get install ca-certificates curl gnupg -y
+ curl -sSL https://pkgs.netbird.io/debian/public.key | sudo gpg --dearmor --output /usr/share/keyrings/netbird-archive-keyring.gpg
+ echo 'deb [signed-by=/usr/share/keyrings/netbird-archive-keyring.gpg] https://pkgs.netbird.io/debian stable main' | sudo tee /etc/apt/sources.list.d/netbird.list
+```
+
+2. Update APT's cache
+
+```bash
+ sudo apt-get update
+```
+
+3. Install the package
+
+```bash
+ # for CLI only
+ sudo apt-get install netbird
+ # for the desktop app (Ubuntu 24.04+ / Debian 13+)
+ sudo apt-get install netbird-ui libgtk-4-1 libwebkitgtk-6.0-4 xdg-utils
+```
+
+### RHEL 9 / Amazon Linux 2 (YUM)
+
+> **Note**
+>
+> These releases do not provide GTK 4.10 or WebKitGTK 6.0, so the desktop app is not available. Install the CLI and manage NetBird with `netbird` commands.
+
+1. Add the repository:
+
+```bash
+sudo tee /etc/yum.repos.d/netbird.repo <<EOF
+[netbird]
+name=netbird
+baseurl=https://pkgs.netbird.io/yum/
+enabled=1
+gpgcheck=1
+gpgkey=https://pkgs.netbird.io/yum/repodata/repomd.xml.key
+repo_gpgcheck=1
+EOF
+```
+
+2. Install the package
+
+```bash
+ sudo yum install netbird
+```
+
+### Fedora / RHEL 10+ / Amazon Linux 2023 (DNF)
+
+1. Create the repository file:
+
+```bash
+sudo tee /etc/yum.repos.d/netbird.repo <<EOF
+[netbird]
+name=netbird
+baseurl=https://pkgs.netbird.io/yum/
+enabled=1
+gpgcheck=1
+gpgkey=https://pkgs.netbird.io/yum/repodata/repomd.xml.key
+repo_gpgcheck=1
+EOF
+```
+
+2. Import the file
+
+```bash
+#Fedora 40 or earlier/Amazon Linux 2023** (DNF 4)
+ sudo dnf config-manager --add-repo /etc/yum.repos.d/netbird.repo
+#Fedora 41 or later (DNF 5)
+ sudo dnf config-manager addrepo --from-repofile=/etc/yum.repos.d/netbird.repo
+```
+
+3. Install the package
+
+```bash
+ # for CLI only
+ sudo dnf install netbird
+ # for the desktop app (Fedora 43+ / RHEL 10+)
+ sudo dnf install netbird-ui gtk4 webkitgtk6.0 xdg-utils
+```
+
+On RHEL, AlmaLinux and Rocky Linux 10, `webkitgtk6.0` comes from EPEL, so enable it before installing the desktop app:
+
+```bash
+ sudo dnf install epel-release -y
+```
+
+Amazon Linux 2023 does not provide GTK 4 or WebKitGTK 6.0, so install the CLI only there.
+
+The tray icon uses the D-Bus StatusNotifierItem protocol. GNOME does not support it natively, so on GNOME desktops install `gnome-shell-extension-appindicator` and enable it:
+
+```
+sudo dnf install gnome-shell-extension-appindicator
+sudo gnome-extensions enable appindicatorsupport@rgcjonas.gmail.com
+```
+
+Under X11, you may need to restart GNOME Shell (Alt+F2, r, ⏎) after that. Under Wayland you need to logout and login again.
+
+### Fedora Silverblue (Atomic) / Universal Blue (rpm-ostree)
+
+1. Create the repository file:
+
+```bash
+sudo tee /etc/yum.repos.d/netbird.repo <<EOF
+[netbird]
+name=netbird
+baseurl=https://pkgs.netbird.io/yum/
+enabled=1
+gpgcheck=1
+gpgkey=https://pkgs.netbird.io/yum/repodata/repomd.xml.key
+repo_gpgcheck=1
+EOF
+```
+
+3. Install the package
+
+```bash
+ # for CLI only
+ rpm-ostree install netbird
+ # for the desktop app
+ rpm-ostree install netbird-ui gtk4 webkitgtk6.0 xdg-utils
+ # Don't forget to reboot to apply
+```
+
+4. Start the service
+
+```bash
+systemctl enable --now netbird
+```
+
+### Fedora Silverblue / Universal Blue / SteamOS / Immutable Distros (Homebrew)
+
+> **Note**
+>
+> Requires installation of [Homebrew](https://docs.brew.sh/Homebrew-on-Linux), Universal Blue images should have Homebrew preinstalled.
+>
+> This method does not install the NetBird GUI. It installs the CLI only.
+
+1. If NetBird was previously installed with Homebrew, you will need to run:
+
+```bash
+# Stop and uninstall daemon service:
+sudo netbird service stop
+sudo netbird service uninstall
+# unlink the app
+brew unlink netbird
+```
+
+NetBird will copy any existing configuration from the NetBird's default configuration paths to the new default location.
+
+2. Install Netbird
+
+```bash
+brew install netbirdio/tap/netbird
+```
+
+> **Note**
+>
+> If it gives you an error saying to install Clang, you can install it with
+>
+> ```bash
+> brew install llvm
+> ```
+>
+> If that still doesn't work after that, try restarting your terminal to update the path.
+
+3. Install and start the client daemon service:
+
+```bash
+  sudo /home/linuxbrew/.linuxbrew/bin/netbird service install
+  sudo /home/linuxbrew/.linuxbrew/bin/netbird service start
+```
+
+You may need to adjust this command if you are not using the default `/home/linuxbrew/.linuxbrew` prefix for your Homebrew install.
+
+> **Note**
+>
+> On Fedora-based systems including Universal Blue, SELinux may block NetBird from running due to homebrew installing it in \~/linuxbrew.
+>
+> You can fix this by running
+>
+> ```bash
+> sudo semanage fcontext -a -t bin_t \
+>   '/home/linuxbrew/\.linuxbrew/Cellar/netbird/[^/]+/bin/netbird'
+> sudo restorecon -Rv /home/linuxbrew/.linuxbrew/Cellar/netbird
+> sudo systemctl restart netbird
+> ```
+>
+> If your Homebrew prefix is set to something other than /home/linuxbrew/.linuxbrew, you may need to adjust those commands to match.
+>
+> You can verify that the NetBird service is running properly before and after making these changes by running:
+>
+> ```bash
+> sudo systemctl status netbird
+> ```
+
+### Fedora Silverblue / Universal Blue / SteamOS / Immutable Distros (Distrobox)
+
+> **Note**
+>
+> Requires installation of [Distrobox](https://distrobox.it/), Universal Blue images should have Distrobox preinstalled.
+
+> **Warning**
+>
+> You will also need to maintain and update Debian inside the Distrobox container.
+
+1. Create a distrobox container
+
+```bash
+distrobox create netbird --init --image debian:13 -a "--cap-add=NET_ADMIN" --additional-packages systemd --root
+```
+
+2. Install inside the container
+
+```bash
+distrobox enter --root netbird
+curl -fsSL https://pkgs.netbird.io/install.sh | sh
+```
+
+3. Export the Netbird binary to the host
+
+```bash
+#from inside the container
+distrobox-export -b /usr/bin/netbird
+```
+
+### openSUSE (zypper)
+
+1. Add the repository:
+
+```
+sudo zypper addrepo https://pkgs.netbird.io/yum/ netbird
+```
+
+2. Install the package / GPG key
+
+- Key Fingerprint: `AA9C 09AA 9DEA 2F58 112B 40DF DFFE AB2F D267 A61F`
+- Key ID: `DFFEAB2FD267A61F`
+- Email: `dev@netbird.io`
+
+```
+# MicroOS (immutable OS with selinux)
+transactional-update pkg in netbird
+reboot
+
+# Tumbleweed / Leap
+zypper in netbird
+```
+
+> **Note**
+>
+> These commands install the CLI. To use the desktop app, install `netbird-ui` together with your distribution's GTK 4.10+ and WebKitGTK 6.0 packages; openSUSE names them differently from Debian and Fedora, so check with `zypper search webkitgtk`.
+
+### NixOS 22.11+/unstable
+
+1. Edit your [`configuration.nix`](https://nixos.org/manual/nixos/stable/index.html#sec-changing-config)
+
+```nix
+ { config, pkgs, ... }:
+ {
+   services.netbird.enable = true; # for netbird service & CLI
+   environment.systemPackages = [ pkgs.netbird-ui ]; # for GUI
+ }
+```
+
+2. Build and apply new configuration
+
+```bash
+ sudo nixos-rebuild switch
+```
+
+### Binary Install
+
+**Installation from binary (CLI only)**
+
+1. Checkout NetBird [releases](https://github.com/netbirdio/netbird/releases/latest)
+2. Download the latest release:
+
+```bash
+  curl -L -o ./netbird_<VERSION>.tar.gz https://github.com/netbirdio/netbird/releases/download/v<VERSION>/netbird_<VERSION>_<OS>_<Arch>.tar.gz
+```
+
+> **Note**
+>
+> You need to replace some variables from the URL above:
+>
+> - Replace **VERSION** with the latest released version.
+> - Replace **OS** with "linux", "darwin" for MacOS or "windows"
+> - Replace **Arch** with your target system CPU architecture
+
+3. Decompress
+
+```bash
+  tar xzf ./netbird_<VERSION>.tar.gz
+  sudo mv netbird /usr/bin/netbird
+  sudo chown root:root /usr/bin/netbird
+  sudo chmod +x /usr/bin/netbird
+```
+
+After that you may need to add /usr/bin in your PATH environment variable:
+
+```bash
+  export PATH=$PATH:/usr/bin
+```
+
+4. Install and run the service
+
+```bash
+  sudo netbird service install
+  sudo netbird service start
+```
+
+## Updating
+
+If your NetBird client was installed through a package manager, use that to update.
+If you used the one-command script to install, you can follow this to update:
+
+```bash
+netbird down
+curl -fsSLO https://pkgs.netbird.io/install.sh
+chmod +x install.sh
+./install.sh --update
+netbird up
+```
+
+## Running NetBird with SSO Login
+
+### Desktop UI Application
+
+Launch the desktop app and click **Connect** in the main window or system-tray menu. On first launch, choose NetBird Cloud or enter the URL of your self-hosted deployment. NetBird opens your browser to authenticate the device. See the [desktop app guide](https://docs.netbird.io/client/desktop-app) for the complete interface.
+
+### CLI
+
+Alternatively, you could use command line. Simply run
+
+```bash
+netbird up
+```
+
+> It will open your browser, and you will be prompt for email and password. Follow the instructions.
+
+![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/get-started/netbird-sso-login-cmd.gif)
+
+Check connection status:
+
+```bash
+  netbird status
+```
+
+## Running NetBird with a Setup Key
+
+In case you are activating a server peer, you can use a [setup key](https://docs.netbird.io/manage/peers/register-machines-using-setup-keys) as described in the steps below.
+
+> This is especially helpful when you are running multiple server instances with infrastructure-as-code tools like ansible and terraform.
+
+For unattended deployments across many machines, pre-populate the client config so each peer registers on first start. See [Bootstrap peers via config file](https://docs.netbird.io/manage/peers/bootstrap-via-config-file).
+
+1. Login to the Management Service. You need to have a `setup key` in hand (see [setup keys](https://docs.netbird.io/manage/peers/register-machines-using-setup-keys)).
+
+```bash
+  netbird up --setup-key <SETUP KEY>
+```
+
+Alternatively, if you are hosting your own Management Service provide `--management-url` property pointing to your Management Service:
+
+```bash
+  netbird up --setup-key <SETUP KEY> --management-url http://localhost:33073
+```
+
+> You could also omit the `--setup-key` property. In this case, the tool will prompt for the key.
+
+2. Check connection status:
+
+```bash
+  netbird status
+```
+
+3. Check your IP:
+
+```bash
+  ip addr show wt0
+```

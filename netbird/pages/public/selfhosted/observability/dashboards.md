@@ -1,0 +1,53 @@
+> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/observability/dashboards.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/selfhosted/observability/dashboards.mdx)
+
+# Grafana dashboards
+
+NetBird ships ready-to-use Grafana dashboards for the Management, Signal, and Relay services. They are maintained in the `netbirdio/netbird` repository under [`infrastructure_files/observability/grafana/dashboards`](https://github.com/netbirdio/netbird/tree/main/infrastructure_files/observability/grafana/dashboards) and import directly into Grafana.
+
+## Available dashboards
+
+| Service    | Dashboard JSON                                                                                                                            |
+| ---------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| Management | [`management.json`](https://github.com/netbirdio/netbird/blob/main/infrastructure_files/observability/grafana/dashboards/management.json) |
+| Signal     | [`signal.json`](https://github.com/netbirdio/netbird/blob/main/infrastructure_files/observability/grafana/dashboards/signal.json)         |
+| Relay      | [`relay.json`](https://github.com/netbirdio/netbird/blob/main/infrastructure_files/observability/grafana/dashboards/relay.json)           |
+
+### Management
+
+Covers peer-update fan-out, store latency, gRPC `Sync` / `Login` / `GetServerKey` rates and latencies, HTTP API request rates and latencies by endpoint and method, IdP request rates, network-map object counts, and update-channel queue length and operation durations.
+
+### Signal
+
+Covers active peers, peer connection durations, message forwarding throughput and latency, message-forward failures, registration / deregistration rates and failure rates, and gRPC RPC rates and latencies for the Signal service.
+
+### Relay
+
+Covers connected peers (total / active / idle), peer authentication latency, peer store latency, and inbound/outbound relay traffic bandwidth.
+
+## Importing a dashboard
+
+1. In Grafana, go to **Dashboards → New → Import**.
+2. Upload the JSON file (or paste its contents) and click **Load**.
+3. Select your Prometheus datasource and complete the import.
+
+## Dashboard variables
+
+The dashboards expose these template variables:
+
+| Variable      | Purpose                                                        |
+| ------------- | -------------------------------------------------------------- |
+| `datasource`  | Selects the Prometheus datasource.                             |
+| `cluster`     | Filters NetBird instances by cluster.                          |
+| `environment` | Filters by environment (`dev`, `staging`, `uat`, `prod`).      |
+| `job`         | Selects a specific NetBird instance when multiple are running. |
+| `host`        | Filters metrics by host.                                       |
+
+Your deployment may use only a subset of these variables; unused ones can be left at the default `All`.
+
+> **Note**
+>
+> The Management dashboard expects HTTP request metrics to carry an `exported_endpoint` label rather than `endpoint`. If your Prometheus relabeling drops or renames this label, edit the dashboard panel queries accordingly.
+
+## Scraping for the dashboards
+
+The dashboards assume a Prometheus scrape configuration that reaches the `/metrics` endpoint of each NetBird service. See [Service endpoints](https://docs.netbird.io/selfhosted/observability#service-endpoints) for defaults and per-service overrides.

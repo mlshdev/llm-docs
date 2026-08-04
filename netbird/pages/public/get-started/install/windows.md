@@ -1,0 +1,128 @@
+> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/get-started/install/windows.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/get-started/install/windows.mdx)
+
+# Windows Installation
+
+The NetBird client (agent) allows a peer to join a pre-existing NetBird deployment. If a NetBird deployment is not yet available, there are both managed and [self-hosted](https://docs.netbird.io/selfhosted/selfhosted-quickstart) options available.
+
+1. Download the latest Windows release:
+   - [EXE Installer](https://pkgs.netbird.io/windows/x64)\\
+
+   - [MSI Installer](https://pkgs.netbird.io/windows/msi/x64)\\
+
+2. Execute the installer and proceed with the installation steps
+
+3. This will install the UI client in the `C:\Program Files\NetBird` and add the daemon service
+
+4. After installing, you can follow the steps from [Running NetBird with SSO Login](#running-netbird-with-sso-login).
+
+> **Note**
+>
+> To uninstall the client and service, you can use Add/Remove programs
+
+## Silent and Automated Installation
+
+Both installers support silent (unattended) installation for use with RMM tools, MDM platforms, and scripted deployments.
+
+### EXE Installer (NSIS)
+
+Run the EXE installer with the `/S` flag for a silent installation:
+
+```bash
+netbird_installer_<VERSION>_windows_amd64.exe /S
+```
+
+The installer no longer writes a machine-wide `HKLM\Software\Microsoft\Windows\CurrentVersion\Run` entry. Starting with v0.75.0, the desktop app manages launch at login as a per-user preference.
+
+### MSI Installer
+
+Run the MSI installer with `msiexec` for a silent installation:
+
+```bash
+msiexec /i netbird_installer_<VERSION>_windows_amd64.msi /quiet
+```
+
+The MSI does not expose an `AUTOSTART` property. On a fresh desktop installation, the app enables **Launch NetBird UI at Login** for the current user the first time the UI runs. Upgrades preserve the user's existing preference. Users can change it under **Settings → General**, and administrators can suppress or remove the per-user registration with the [`disableAutostart` MDM setting](https://docs.netbird.io/client/mdm-integration#disableAutostart).
+
+> **Note**
+>
+> **Launch NetBird UI at Login** affects only the graphical interface. The NetBird background service starts independently and can maintain connectivity even when the UI does not launch.
+
+### Combining with a Setup Key
+
+For fully automated deployments where peers should register without user interaction, combine silent installation with a [setup key](https://docs.netbird.io/manage/peers/register-machines-using-setup-keys):
+
+```bash
+netbird_installer_<VERSION>_windows_amd64.exe /S
+netbird up --setup-key <SETUP KEY>
+```
+
+Or with the MSI installer:
+
+```bash
+msiexec /i netbird_installer_<VERSION>_windows_amd64.msi /quiet
+netbird up --setup-key <SETUP KEY>
+```
+
+> **Note**
+>
+> For MDM-specific deployment guides, see [Deploy with Intune](https://docs.netbird.io/manage/integrations/mdm-deployment/intune-netbird-integration) or [Deploy with Acronis](https://docs.netbird.io/manage/for-partners/acronis-integration).
+
+## Running NetBird with SSO Login
+
+### Desktop UI Application
+
+Launch the desktop app and click **Connect** in the main window or system-tray menu. On first launch, choose NetBird Cloud or enter the URL of your self-hosted deployment. NetBird opens your browser to authenticate the device. See the [desktop app guide](https://docs.netbird.io/client/desktop-app) for the complete interface.
+
+### CLI
+
+Alternatively, you could use command line. Simply run
+
+```bash
+netbird up
+```
+
+> It will open your browser, and you will be prompt for email and password. Follow the instructions.
+
+![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/get-started/netbird-sso-login-cmd.gif)
+
+Check connection status:
+
+```bash
+  netbird status
+```
+
+## Running NetBird with a Setup Key
+
+In case you are activating a server peer, you can use a [setup key](https://docs.netbird.io/manage/peers/register-machines-using-setup-keys) as described in the steps below.
+
+> This is especially helpful when you are running multiple server instances with infrastructure-as-code tools like ansible and terraform.
+
+For unattended deployments across many machines, pre-populate the client config so each peer registers on first start. See [Bootstrap peers via config file](https://docs.netbird.io/manage/peers/bootstrap-via-config-file).
+
+1. Login to the Management Service. You need to have a `setup key` in hand (see [setup keys](https://docs.netbird.io/manage/peers/register-machines-using-setup-keys)).
+
+For all systems:
+
+```bash
+netbird up --setup-key <SETUP KEY>
+```
+
+Alternatively, if you are hosting your own Management Service provide `--management-url` property pointing to your Management Service:
+
+```bash
+  netbird up --setup-key <SETUP KEY> --management-url http://localhost:33073
+```
+
+> You could also omit the `--setup-key` property. In this case, the tool will prompt for the key.
+
+2. Check connection status:
+
+```bash
+netbird status
+```
+
+3. Check your IP:
+
+```bash
+netsh interface ip show config name="wt0"
+```

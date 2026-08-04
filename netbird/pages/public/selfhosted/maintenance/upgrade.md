@@ -1,0 +1,92 @@
+> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/maintenance/upgrade.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/selfhosted/maintenance/upgrade.mdx)
+
+# Upgrade Your Self-Hosted NetBird Installation
+
+## Check for Updates
+
+The NetBird Dashboard displays an update indicator at the bottom of the left navigation menu when a new version is available:
+
+![update-available](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/maintenance/update-available.png)
+
+You can also check the current version programmatically via the API (requires authentication):
+
+```bash
+curl 'https://your-netbird-domain/api/instance/version' \
+  -H 'accept: application/json' \
+  -H 'authorization: Bearer <your-access-token>'
+```
+
+Example response:
+
+```json
+{
+    "dashboard_available_version": "2.28.0",
+    "management_available_version": "0.64.1",
+    "management_current_version": "0.64.0",
+    "management_update_available": true
+}
+```
+
+## Check Release Notes
+
+Before upgrading, review the release notes for any breaking changes or migration steps:
+
+- **Dashboard**: <https://github.com/netbirdio/dashboard/releases>
+- **Management, Signal, and Relay**: <https://github.com/netbirdio/netbird/releases>
+
+> **Note**
+>
+> Management, Signal, and Relay are all part of the same repository and share the same version numbers.
+
+## Upgrade Steps
+
+To upgrade NetBird to the latest version:
+
+1. Run the backup steps described in the [backup](https://docs.netbird.io/selfhosted/maintenance/backup) section.
+2. Review the release notes (see above) for any breaking changes.
+3. Pull the latest NetBird docker images:
+   ```bash
+   docker compose pull netbird-server dashboard
+   ```
+   If you have the [Reverse Proxy](https://docs.netbird.io/manage/reverse-proxy) enabled, also pull the proxy image:
+   ```bash
+   docker compose pull proxy
+   ```
+4. Restart the NetBird containers with the new images:
+   ```bash
+   docker compose up -d --force-recreate netbird-server dashboard
+   ```
+   If you pulled the proxy image above, include it in the restart:
+   ```bash
+   docker compose up -d --force-recreate netbird-server dashboard proxy
+   ```
+
+> **Note**
+>
+> For upgrades from older versions (pre-v0.26.0), see the Legacy upgrade notes below.
+
+## Legacy Setup (Separate Containers)
+
+If your deployment uses the older setup with separate containers (`management`, `signal`, `relay`, `coturn`), pull and recreate those containers instead:
+
+```bash
+docker compose pull management dashboard signal relay
+```
+
+```bash
+docker compose up -d --force-recreate management dashboard signal relay
+```
+
+If you have the [Reverse Proxy](https://docs.netbird.io/manage/reverse-proxy) enabled, also pull and recreate the proxy:
+
+```bash
+docker compose pull proxy && docker compose up -d --force-recreate proxy
+```
+
+## Get In Touch
+
+Feel free to ping us on Slack if you have any questions.
+
+- NetBird managed version: <https://app.netbird.io>
+- Make sure to [star us on GitHub](https://github.com/netbirdio/netbird)
+- Follow us [on X](https://x.com/netbird)

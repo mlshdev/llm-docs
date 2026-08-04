@@ -1,0 +1,123 @@
+> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/activity/event-streaming/amazon-s3.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/manage/activity/event-streaming/amazon-s3.mdx)
+
+# Stream Network Activity to Amazon S3
+
+[Amazon Simple Storage Service (Amazon S3)](https://aws.amazon.com/s3/) is a scalable, high-speed, web-based cloud storage service.
+You can use Amazon S3 to store and analyze large amounts of data, including network activity events from NetBird.
+
+NetBird integrates with Amazon S3 and sends activity events to an S3 bucket in real-time once they occur. For every event,
+NetBird creates a new object in the S3 bucket, which you can then analyze, filter, and query using Amazon tools.
+
+Storing one event per object is not the most efficient way to save data in S3, therefore NetBird provides an
+[alternative integration](https://docs.netbird.io/manage/activity/event-streaming/amazon-firehose) that uses Amazon Data Firehose for a more efficient
+data ingestion.
+
+> **Note**
+>
+> This feature is only available in the cloud version of NetBird.
+
+## Prerequisites
+
+Before you start creating and configuring an Amazon S3 event streaming integration, ensure that you have the following:
+
+- An AWS account with the permissions to create and manage S3 buckets.
+- Permissions to create and manage IAM users, roles and policies.
+
+If you don't have the required permissions, ask your AWS administrator to grant them to you.
+
+## Create an S3 Bucket
+
+- Navigate to the [S3 dashboard](https://console.aws.amazon.com/s3/home)
+- Select the correct region in the top menu
+- Click `Create bucket`
+- Give it a descriptive name like `netbird-activity-events`
+- (Optional) Change bucket configurations to your needs
+- Click `Create bucket`
+
+## Create an IAM User
+
+- Navigate to the [IAM Dashboard](https://console.aws.amazon.com/iam/home)
+- Create an IAM User (for details see the [Amazon Docs](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html))
+- Create a custom policy with the following permissions:
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:PutObject",
+                "s3:PutObjectAcl"
+            ],
+            "Resource": "arn:aws:s3:::netbird-activity-events/*"
+        }
+    ]
+}
+```
+
+- Attach the policy to the IAM user
+- Select the user and navigate to the `Security credentials` tab
+- Click `Create access key`
+- Select `Third-party service` and click `Next`
+- Give it a description
+- Store `Access key` and `Secret access key` in a secure place. You will need these when configuring an integration in NetBird.
+
+## Create an Integration in NetBird
+
+- Navigate to the [Integrations » Event Streaming](https://preview.netbird.io/integrations) tab in the NetBird dashboard
+
+![event-streaming-integration](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/activity/event-streaming/event-streaming-integration.png)
+
+- Enable and configure the `Amazon S3` integration
+- First select the region your S3 bucket is created in
+
+![s3-region-select](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/activity/event-streaming/amazon-s3/s3-region-select.png)
+
+- Then enter the S3 bucket name you created in Step 1 and click `Next`
+
+![s3-bucket-name](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/activity/event-streaming/amazon-s3/s3-bucket-name.png)
+
+- Enter the `Access key` and `Secret access key` you created in Step 2 and click `Connect`
+
+![s3-iam-credentials](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/activity/event-streaming/amazon-s3/s3-iam-credentials.png)
+
+## Verify the Integration
+
+After configuring the integration in NetBird, you can verify that the integration is working correctly by checking
+the S3 bucket for newly created objects. If the integration is successful, you should see two `.json` files in your bucket
+containing the following events:
+
+- `integration test`
+- `integration created`
+
+![verify-amazon-s3-integration](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/activity/event-streaming/amazon-s3/verify-amazon-s3-integration.png)
+
+```json
+{
+    "timestamp": "2024-04-11T19:01:05.381074+02:00",
+    "message": "integration test",
+    "id": 0,
+    "initiator_id": "netbird",
+    "target_id": "netbird",
+    "meta": null,
+    "reference": ""
+}
+```
+
+```json
+{
+    "timestamp": "2024-04-11T19:01:08.769292+02:00",
+    "message": "integration created",
+    "id": 0,
+    "initiator_id": "netbird",
+    "target_id": "netbird",
+    "meta": null,
+    "reference": ""
+}
+```
+
+The integration test event is sent to validate whether the provided credentials are correct and NetBird can stream events.
+The integration created event is sent when the integration is successfully created.
+
+The integration is now set up and ready to stream network activity events to Amazon S3.

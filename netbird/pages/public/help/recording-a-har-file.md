@@ -1,0 +1,43 @@
+> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/help/recording-a-har-file.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/help/recording-a-har-file.mdx)
+
+# Record a HAR file
+
+When something breaks in the browser, like the dashboard failing to load, an SSO login that never completes, or a reverse proxy returning errors, the problem lives in the traffic between your browser and the server. A [debug bundle](https://docs.netbird.io/help/troubleshooting-client#debug-bundle) captures the client and daemon, but it can't see any of that. A HAR file can.
+
+A HAR (HTTP Archive) file is a recording of every network request your browser made, with the timing, headers, and responses for each. Recording one while you reproduce the failing action gives Support the exact exchange your browser had with the server, so we can see what actually went wrong instead of guessing from a description.
+
+> **Warning**
+>
+> A HAR file contains everything your browser sent and received, including cookies, authorization headers, session tokens, and request and response bodies. Treat it like a live credential: share it **only** with NetBird Support through a private channel, never in a public GitHub Discussion or issue. Where your browser offers a **sanitized** export (Chrome and Edge do), prefer it. If a HAR with live tokens is exposed, sign out to invalidate the session.
+
+## Before you record
+
+Two things trip people up, so set them first:
+
+- **Open DevTools before you reproduce the problem.** A HAR only contains requests captured while the Network tab was recording. Anything that happened before you opened it is lost.
+- **Turn on "Preserve log" (Chrome, Edge) or "Persist Logs" (Firefox).** Login and SSO flows redirect the page one or more times, and by default each navigation clears the log, wiping the exact requests that failed. Preserving the log keeps everything across redirects.
+
+## Record and export
+
+The flow is the same in every browser:
+
+1. Open **DevTools** (`F12`, or right-click the page and choose **Inspect**) and select the **Network** tab.
+2. Enable **Preserve log** / **Persist Logs**.
+3. Clear the current log so the capture is clean.
+4. Reproduce the problem, following the same steps that fail. Wait for it to fail before stopping.
+5. Export everything as a `.har` file.
+
+The export step, per browser:
+
+- **Google Chrome**: in the Network tab, click the download (export) icon, or right-click any request and choose **Save all as HAR (sanitized)**. See [Save network requests to a HAR file](https://developer.chrome.com/docs/devtools/network/reference/#save-as-har).
+- **Microsoft Edge**: uses the same DevTools as Chrome, so right-click a request and choose **Save all as HAR (sanitized)**, or use the export icon. See [Network features reference](https://learn.microsoft.com/en-us/microsoft-edge/devtools/network/reference).
+- **Mozilla Firefox**: in the Network tab, right-click a request (or use the settings menu) and choose **Save All As HAR**. See [Network Monitor toolbar](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/toolbar/index.html).
+- **Safari**: first enable the Develop menu (**Settings → Advanced → Show features for web developers**), then open **Web Inspector** (`⌥⌘I`) and select the **Network** tab. Use the **Export** button to save the recording as a `.har` file. Apple's [Network tab](https://support.apple.com/guide/safari-developer/network-tab-dev1f3525e58/mac) reference covers the tab itself but not the export, which lives in the top-right of the Network tab.
+
+> **Note**
+>
+> On Chrome and Edge, the plain **Save all as HAR** option includes sensitive headers, while **Save all as HAR (sanitized)** strips them. Use the sanitized version unless Support asks for the full capture.
+
+## Share it with NetBird
+
+Attach the `.har` file to your existing conversation with the team: reply to your [NetBird Support](https://docs.netbird.io/help/netbird-support) email, or send it in the channel Support asked you to use. If you were sent here without an open case, start from [Report bugs and issues](https://docs.netbird.io/help/report-bug-issues) to reach the right place. Keep it off public channels, for the reasons in the warning above.

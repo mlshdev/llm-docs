@@ -1,0 +1,85 @@
+> Release-pinned source for Traefik Proxy v3.7.10: [docs/content/reference/install-configuration/providers/hashicorp/consul.md](https://github.com/traefik/traefik/blob/2a2349356c01b1b1f7ecddb0c17b30c97f5241e7/docs/content/reference/install-configuration/providers/hashicorp/consul.md)
+
+# Traefik & Consul
+
+## Configuration Example
+
+You can enable the Consul provider as detailed below:
+
+**File (YAML)**
+
+```yaml
+providers:
+  consul: {}
+```
+
+**File (TOML)**
+
+```toml
+[providers.consul]
+```
+
+**CLI**
+
+```bash
+--providers.consul=true
+```
+
+## Configuration Options
+
+| Field                                                                                             | Description                                                                                                                                                                                                                                                                                                                                                                          | Default          | Required |
+| :------------------------------------------------------------------------------------------------ | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------- | :------- |
+| <a id="opt-providers-providersThrottleDuration"></a>`providers.providersThrottleDuration`         | Minimum amount of time to wait for, after a configuration reload, before taking into account any new configuration refresh event.<br />If multiple events occur within this time, only the most recent one is taken into account, and all others are discarded.<br />**This option cannot be set per provider, but the throttling algorithm applies to each of them independently.** | 2s               | No       |
+| <a id="opt-providers-consul-endpoints"></a>`providers.consul.endpoints`                           | Defines the endpoint to access Consul.                                                                                                                                                                                                                                                                                                                                               | "127.0.0.1:8500" | yes      |
+| <a id="opt-providers-consul-rootKey"></a>`providers.consul.rootKey`                               | Defines the root key of the configuration.                                                                                                                                                                                                                                                                                                                                           | "traefik"        | yes      |
+| <a id="opt-providers-consul-namespaces"></a>`providers.consul.namespaces`                         | Defines the namespaces to query. See [here](#namespaces) for more information                                                                                                                                                                                                                                                                                                        | ""               | no       |
+| <a id="opt-providers-consul-token"></a>`providers.consul.token`                                   | Defines a token with which to connect to Consul.                                                                                                                                                                                                                                                                                                                                     | ""               | no       |
+| <a id="opt-providers-consul-tls"></a>`providers.consul.tls`                                       | Defines the TLS configuration used for the secure connection to Consul                                                                                                                                                                                                                                                                                                               | -                | No       |
+| <a id="opt-providers-consul-tls-ca"></a>`providers.consul.tls.ca`                                 | Defines the path to the certificate authority used for the secure connection to Consul, it defaults to the system bundle.                                                                                                                                                                                                                                                            | -                | Yes      |
+| <a id="opt-providers-consul-tls-cert"></a>`providers.consul.tls.cert`                             | Defines the path to the public certificate used for the secure connection to Consul. When using this option, setting the `key` option is required.                                                                                                                                                                                                                                   | -                | Yes      |
+| <a id="opt-providers-consul-tls-key"></a>`providers.consul.tls.key`                               | Defines the path to the private key used for the secure connection to Consul. When using this option, setting the `cert` option is required.                                                                                                                                                                                                                                         | -                | Yes      |
+| <a id="opt-providers-consul-tls-insecureSkipVerify"></a>`providers.consul.tls.insecureSkipVerify` | Instructs the provider to accept any certificate presented by Consul when establishing a TLS connection, regardless of the hostnames the certificate covers.                                                                                                                                                                                                                         | false            | No       |
+
+### `namespaces`
+
+The `namespaces` option defines the namespaces to query.
+When using the `namespaces` option, the discovered configuration object names will be suffixed as shown below:
+
+```text
+<resource-name>@consul-<namespace>
+```
+
+> **Warning**
+> The namespaces option only works with [Consul Enterprise](https://www.consul.io/docs/enterprise),
+> which provides the [Namespaces](https://www.consul.io/docs/enterprise/namespaces) feature.
+> **Warning**
+> One should only define either the `namespaces` option or the `namespace` option.
+> **File (YAML)**
+
+```yaml
+providers:
+  consul:
+    namespaces:
+      - "ns1"
+      - "ns2"
+    # ...
+```
+
+**File (TOML)**
+
+```toml
+[providers.consul]
+  namespaces = ["ns1", "ns2"]
+  # ...
+```
+
+**CLI**
+
+```bash
+--providers.consul.namespaces=ns1,ns2
+# ...
+```
+
+## Routing Configuration
+
+See the dedicated section in [routing](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/other-providers/kv).

@@ -1,0 +1,87 @@
+> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/team/single-sign-on/aws-cognito.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/manage/team/single-sign-on/aws-cognito.mdx)
+
+# AWS Cognito on NetBird Cloud
+
+You can use [AWS Cognito](https://aws.amazon.com/cognito/) as your Identity Provider with NetBird, but it will require some additional configuration steps. Amazon Cognito is a fully managed customer identity and access management (CIAM) service that provides authentication, authorization, and user management for web and mobile applications, with native support for OpenID Connect, OAuth 2.0, and SAML 2.0.
+
+> **Note**
+>
+> Support for OIDC-compliant IdPs is available on the Team plan and higher.
+> The Free plan supports Google, Microsoft, and social logins.
+
+## Prerequisites
+
+Before you start, make sure you meet the following requirements:
+
+- An AWS account with permissions to manage Amazon Cognito
+- An existing Cognito **User Pool**. If you don't have one yet, follow the [AWS guide to create a user pool](https://docs.aws.amazon.com/cognito/latest/developerguide/getting-started-user-pools.html)
+- **Self-service sign-up disabled** on the user pool (recommended)
+
+> **Note**
+>
+> Disabling self-service sign-up prevents unauthorized users from registering through the Cognito Hosted UI. With this setting off, only administrators can add users (via the AWS Console, AWS CLI, or your provisioning workflow), ensuring that only approved identities can authenticate to NetBird.
+
+## Step 1: Create an App Client
+
+Sign in to the [AWS Management Console](https://console.aws.amazon.com/) and open the **Amazon Cognito** service. Select the AWS Region of your user pool, click **User pools** in the left sidebar, then open the user pool you want to use.
+
+In the left navigation, expand **Applications** and click **App clients**. On the **App clients and analytics** page, click **Create app client**.
+
+Fill in the form with the following values:
+
+- **Application type**: `Traditional web application`
+- **Name your application**: `NetBird`
+- **Add a return URL**: `https://login.netbird.io/login/callback`
+
+Click **Create app client** to save.
+
+![aws-cognito-app-client](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/team/single-sign-on/aws-cognito-idp/app-client.png)
+
+## Step 2: Verify Managed Login Pages Configuration
+
+In the same app client, open the **Login pages** tab, locate the **Managed login pages configuration** section, and click **Edit**. The values are pre-populated based on what you entered when creating the app client. Confirm they match the following, updating any that differ:
+
+- **Allowed callback URLs**: `https://login.netbird.io/login/callback`
+- **Identity providers**: `Cognito user pool`
+- **OAuth 2.0 grant types**: `Authorization code grant`
+- **OpenID Connect scopes**: `openid`, `email`, `profile`
+
+![aws-cognito-callback-urls](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/team/single-sign-on/aws-cognito-idp/callback-urls.png)
+
+![aws-cognito-oauth-settings](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/team/single-sign-on/aws-cognito-idp/oauth-settings.png)
+
+Click **Save changes** to apply the configuration.
+
+## Step 3: Copy the Client Credentials and Issuer URL
+
+From the app client overview page, copy the following values:
+
+- **Client ID**
+- **Client secret** (click **Show client secret** to reveal it)
+
+Your Cognito **Issuer URL** follows this format:
+
+```
+https://cognito-idp.<region>.amazonaws.com/<user-pool-id>
+```
+
+For example, a user pool with ID `us-east-1_AbCdEfGhI` in the `us-east-1` region has the issuer URL `https://cognito-idp.us-east-1.amazonaws.com/us-east-1_AbCdEfGhI`. The OIDC discovery document is available at `<issuer-url>/.well-known/openid-configuration`.
+
+![aws-cognito-client-credentials](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/team/single-sign-on/aws-cognito-idp/client-credentials.png)
+
+## Step 4: Share Configuration with NetBird
+
+Send the following information to the NetBird support team at <support@netbird.io>:
+
+- **Client ID**
+- **Client Secret**
+- **Issuer URL** (e.g., `https://cognito-idp.us-east-1.amazonaws.com/us-east-1_AbCdEfGhI`)
+- **Email domains for your users**
+
+> **Note**
+>
+> We recommend using a secure channel to share the Client Secret. You can send a separate email and use a secret sharing service like: \\
+>
+> - <https://onetimesecret.com/en/> \\
+>
+> - <https://password.link/en> \\
