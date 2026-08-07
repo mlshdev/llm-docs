@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/network-routes/access-control.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/manage/network-routes/access-control.mdx)
+> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/network-routes/access-control.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/manage/network-routes/access-control.mdx)
 
 # Configuring Routes with Access Control
 
@@ -35,19 +35,19 @@ In this example, we create a route with the following settings (see [Key Concept
 - **Distribution Groups:** `devs`
 - **Access Control Groups:** `servers`
 
-![Network route configuration with access control](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/network-routes/access-control/network-route-acl.png)
+![Network route configuration with access control](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/network-routes/access-control/network-route-acl.png)
 
 Click **Continue** to proceed.
 
-![Network route group settings](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/network-routes/access-control/network-route-acl-group-settings.png)
+![Network route group settings](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/network-routes/access-control/network-route-acl-group-settings.png)
 
 Complete the configuration and click **Add Route** to save.
 
-![Saved network route](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/network-routes/access-control/network-route-acl-saved.png)
+![Saved network route](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/network-routes/access-control/network-route-acl-saved.png)
 
 Because you assigned an access control group, you will be prompted to create a policy:
 
-![Policy creation prompt](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/network-routes/access-control/network-route-acl-prompt.png)
+![Policy creation prompt](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/network-routes/access-control/network-route-acl-prompt.png)
 
 Click **Create Policy** to continue.
 
@@ -66,13 +66,13 @@ In this example, we create a policy with:
 - **Source Groups:** `devs`
 - **Destination Groups:** `servers`
 
-![Create access control policy](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/network-routes/access-control/network-acl-create-policy.png)
+![Create access control policy](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/network-routes/access-control/network-acl-create-policy.png)
 
 You can create new groups by typing a name in the source or destination input fields.
 
 Click **Add Policy** to save. The policy appears in the table.
 
-![New policy in table](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/network-routes/access-control/network-acl-new-policy.png)
+![New policy in table](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/network-routes/access-control/network-acl-new-policy.png)
 
 With this configuration, peers connected to your routing peer can only access port 80 on the routed network.
 

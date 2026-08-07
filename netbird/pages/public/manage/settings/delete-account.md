@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/settings/delete-account.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/manage/settings/delete-account.mdx)
+> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/settings/delete-account.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/manage/settings/delete-account.mdx)
 
 # Delete your NetBird account
 
@@ -12,11 +12,11 @@ To delete your NetBird organization account, you must be a user with the [owner 
 
 Go to the `Settings` tab, then click on `Danger Zone`. Review the message and click on the `Delete Account` button.
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/settings/account-settings-danger-zone.png)
+![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/settings/account-settings-danger-zone.png)
 
 To confirm, click on the `Delete` button.
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/settings/account-settings-delete-account-confirm.png)
+![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/settings/account-settings-delete-account-confirm.png)
 
 After you delete your account, your session will end, and you will be redirected to the login page.
 

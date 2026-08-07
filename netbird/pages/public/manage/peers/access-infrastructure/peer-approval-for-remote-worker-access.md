@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/peers/access-infrastructure/peer-approval-for-remote-worker-access.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/manage/peers/access-infrastructure/peer-approval-for-remote-worker-access.mdx)
+> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/peers/access-infrastructure/peer-approval-for-remote-worker-access.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/manage/peers/access-infrastructure/peer-approval-for-remote-worker-access.mdx)
 
 # Peer Approval for Remote Worker Access with NetBird
 
@@ -43,15 +43,15 @@ Before onboarding remote workers, ensure your organization has appropriate [acce
 
 Navigate to `Access Control > Policies` in the NetBird admin console, then click `Add Policy` or edit an existing one to define these restrictions. Here's a sample policy that grant any member of the `Freelancers` group access to the resources in the group `On-Premise-DB`.
 
-![NetBird Freelancer Access Control Policy](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/peers/access-infrastructure/peer-approval-for-remote-worker-access/peer-0-01.png)
+![NetBird Freelancer Access Control Policy](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/access-infrastructure/peer-approval-for-remote-worker-access/peer-0-01.png)
 
 If necessary, you can also set [posture checks](https://docs.netbird.io/manage/access-control/posture-checks) for this policy.
 
-![NetBird Freelancer Posture Check](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/peers/access-infrastructure/peer-approval-for-remote-worker-access/peer-0-02.png)
+![NetBird Freelancer Posture Check](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/access-infrastructure/peer-approval-for-remote-worker-access/peer-0-02.png)
 
 Moreover, it is a best practice to disable the `Default` policy to enforce only restrictive, custom-defined access controls.
 
-![NetBird Access Policy View](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/peers/access-infrastructure/peer-approval-for-remote-worker-access/peer-0-03.png)
+![NetBird Access Policy View](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/access-infrastructure/peer-approval-for-remote-worker-access/peer-0-03.png)
 
 With appropriate access policies in place, you're ready to enable NetBird's Peer Approval feature.
 
@@ -59,7 +59,7 @@ With appropriate access policies in place, you're ready to enable NetBird's Peer
 
 To enable peer approval, go to `Settings > Authentication` and activate the `Peer approval` toggle, then click `Save Changes`.
 
-![NetBird Freelancer Device Dashboard](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/peers/access-infrastructure/peer-approval-for-remote-worker-access/peer-a-02.png)
+![NetBird Freelancer Device Dashboard](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/access-infrastructure/peer-approval-for-remote-worker-access/peer-a-02.png)
 
 With `Peer Approval` activated, new members will see an `Approval required` message when joining. Administrators must grant access, ensuring only vetted users enter the NetBird network, thus enhancing overall security.
 
@@ -67,47 +67,47 @@ With `Peer Approval` activated, new members will see an `Approval required` mess
 
 To invite a new user to join your NetBird network, go to `Team > Users` and click the `Invite User` button.
 
-![NetBird Invite Users](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/peers/access-infrastructure/peer-approval-for-remote-worker-access/peer-a-03.png)
+![NetBird Invite Users](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/access-infrastructure/peer-approval-for-remote-worker-access/peer-a-03.png)
 
 A pop-up window appears for new user registration. Enter the user's name, email address, and select the `Freelancers` group from the dropdown menu. NetBird's auto-assignment feature instantly links the new user to the `Freelancers` group upon network entry, automatically applying the associated access policy you just created.
 
-![NetBird Invite User Pop Up](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/peers/access-infrastructure/peer-approval-for-remote-worker-access/peer-a-04.png)
+![NetBird Invite User Pop Up](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/access-infrastructure/peer-approval-for-remote-worker-access/peer-a-04.png)
 
 After clicking `Send Invitation`, you'll return to the `Users` dashboard. Here, the new user appears with a `Pending` status, awaiting their acceptance of the invitation and any required approvals.
 
-![NetBird New User Pending](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/peers/access-infrastructure/peer-approval-for-remote-worker-access/peer-a-05.png)
+![NetBird New User Pending](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/access-infrastructure/peer-approval-for-remote-worker-access/peer-a-05.png)
 
 ## 4. Installing NetBird On The Remote Worker Device
 
 Access the secondary email account used to mimic the freelancer. In the inbox, locate the invitation email from NetBird. This email contains a secure link to join your organization's NetBird network, initiating the freelancer's onboarding process.
 
-![Email NetBird Invitation](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/peers/access-infrastructure/peer-approval-for-remote-worker-access/peer-a-06.png)
+![Email NetBird Invitation](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/access-infrastructure/peer-approval-for-remote-worker-access/peer-a-06.png)
 
 After clicking the invitation link, you'll be directed to NetBird's secure account creation page. Follow the on-screen instructions to create a new password.
 
-![NetBird Login](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/peers/access-infrastructure/peer-approval-for-remote-worker-access/peer-a-07.png)
+![NetBird Login](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/access-infrastructure/peer-approval-for-remote-worker-access/peer-a-07.png)
 
 Upon logging in, you'll arrive at NetBird's Peers dashboard. Locate and click the `Add Peer` button to initiate the [Getting Started](https://docs.netbird.io/get-started) Wizard, which guides you through the process of adding a new device to the network.
 
-![NetBird Freelancer Peers Dashboard](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/peers/access-infrastructure/peer-approval-for-remote-worker-access/peer-a-08.png)
+![NetBird Freelancer Peers Dashboard](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/access-infrastructure/peer-approval-for-remote-worker-access/peer-a-08.png)
 
 The wizard will detect your operating system and provide detailed step-by-step instructions on how to [install NetBird](https://docs.netbird.io/get-started/install).
 
-![NetBird Freelancer Install Client](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/peers/access-infrastructure/peer-approval-for-remote-worker-access/peer-a-09.png)
+![NetBird Freelancer Install Client](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/access-infrastructure/peer-approval-for-remote-worker-access/peer-a-09.png)
 
 During your initial connection to NetBird, a system dialog will appear requesting authorization. This prompt asks for permission to access your profile and email information, which is necessary for NetBird to establish your account and network access.
 
-![NetBird Authorize App](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/peers/access-infrastructure/peer-approval-for-remote-worker-access/peer-a-10.png)
+![NetBird Authorize App](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/access-infrastructure/peer-approval-for-remote-worker-access/peer-a-10.png)
 
 After completing the installation, your device will appear in the Peers dashboard. Hover over the `+1` in the `Assigned Groups` column to confirm the device has automaticaclly assigned to the `Freelancers` group as expected.
 
-![NetBird Freelancer Peers Listed](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/peers/access-infrastructure/peer-approval-for-remote-worker-access/peer-a-11.png)
+![NetBird Freelancer Peers Listed](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/access-infrastructure/peer-approval-for-remote-worker-access/peer-a-11.png)
 
 ## 5. Approving Peers
 
 Back to your primary account, you'll notice the newly added user's status is now displayed as `Active` in the `Users` dashboard. This status update confirms that the device has successfully added to the NetBird network and is ready for secure communication.
 
-![NetBird Peers Dashboard](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/peers/access-infrastructure/peer-approval-for-remote-worker-access/peer-a-12.png)
+![NetBird Peers Dashboard](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/access-infrastructure/peer-approval-for-remote-worker-access/peer-a-12.png)
 
 However, your approval is required before the user's device can fully connect to the NetBird network. To grant network access:
 
@@ -116,15 +116,15 @@ However, your approval is required before the user's device can fully connect to
 - Click the `Approve` button next to the device
 - Confirm the action when prompted
 
-![NetBird Approve New Peer](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/peers/access-infrastructure/peer-approval-for-remote-worker-access/peer-a-13.png)
+![NetBird Approve New Peer](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/access-infrastructure/peer-approval-for-remote-worker-access/peer-a-13.png)
 
 After approval, the device is granted full access to network resources allocated to the `Freelancers` group. The freelancer can now view all accessible network resources in their `Peers` dashboard:
 
-![NetBird Freelancer Peers View](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/peers/access-infrastructure/peer-approval-for-remote-worker-access/peer-a-16.png)
+![NetBird Freelancer Peers View](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/access-infrastructure/peer-approval-for-remote-worker-access/peer-a-16.png)
 
 Likewise, as an administrator, you can click on the user's device to see which resources and peers the freelancer has access to.
 
-![NetBird Main Account Peers View](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/peers/access-infrastructure/peer-approval-for-remote-worker-access/peer-a-17.png)
+![NetBird Main Account Peers View](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/access-infrastructure/peer-approval-for-remote-worker-access/peer-a-17.png)
 
 ## 6. Automating Peer Approval with EDR Integration (optional)
 
@@ -139,6 +139,6 @@ Key aspects of NetBird's EDR integration:
 
 To activate this feature, navigate to `Integrations > EDR` and activate the CrowdStrike integration toggle.
 
-![NetBird EDR Integration](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/peers/access-infrastructure/peer-approval-for-remote-worker-access/peer-a-18.png)
+![NetBird EDR Integration](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/access-infrastructure/peer-approval-for-remote-worker-access/peer-a-18.png)
 
 For more information regarding NetBird's EDR integration, refer to the [documentation](https://docs.netbird.io/manage/access-control/endpoint-detection-and-response)

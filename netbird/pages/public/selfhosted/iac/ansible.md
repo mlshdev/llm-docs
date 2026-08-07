@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/iac/ansible.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/selfhosted/iac/ansible.mdx)
+> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/iac/ansible.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/selfhosted/iac/ansible.mdx)
 
 # Configure NetBird with Ansible
 
@@ -119,7 +119,7 @@ The collection ships a module for every resource type:
 - **Routes** — `netbird_route` (the deprecated routes API; use `netbird_network` for new setups)
 - **Reverse-proxy services** — `netbird_service` (publish a domain and forward it to one or more targets)
 - **DNS settings and nameserver groups** — `netbird_dns`
-- **DNS zones with records** — `netbird_dns_zone`
+- **DNS zones with records** — `netbird_dns_zone` (the zone `name` is optional and defaults to its `domain`)
 - **Identity providers** — `netbird_idp`
 - **Personal access tokens** — `netbird_token`
 - **Account settings** — `netbird_account`
@@ -159,4 +159,16 @@ The key secret is returned by the API **only when the key is first created**. On
 
 For modules like `netbird_user`, `netbird_group`, and `netbird_setup_key`, omitting a list field (for example `auto_groups` or `peers`) preserves the existing value rather than clearing it. To remove all members, pass an explicit empty list (`[]`).
 
-A setup key is mostly fixed once created: only its `revoked` state and `auto_groups` change on later runs, so re-running with a different `key_type` or `expires_in` is silently ignored. Rotate the key to change those.
+A setup key is mostly fixed once created: only its `revoked` state and `auto_groups` change on later runs. Asking for a different `name`, `key_type`, or `usage_limit` on an existing key produces a warning, not a change. Revocation is one-way: the API refuses to un-revoke a key, so the module leaves a revoked key revoked and says so.
+
+To replace a key that can no longer enrol peers (revoked, expired, or out of uses), set `rotate_when_invalid: true` together with `name`. The module creates the replacement first, returns its secret once like any new key, and only then deletes the unusable key.
+
+Since collection version 1.3.0, a network router's `masquerade` defaults to `true`, matching the Dashboard and `netbird_route`. A router created earlier under the old `false` default and declared without an explicit value is updated to `true` on the next run. Set `masquerade: false` explicitly to keep the old behavior.
+
+### A task fails because a name matches more than one object
+
+NetBird does not enforce unique names, so a lookup by name can match several objects; an IdP-synced group colliding with a hand-made one is the usual way it happens. Rather than guessing which one you meant, the module fails and reports the count. Rename or remove the duplicates, or address the intended object by its ID parameter (`group_id`, `policy_id`, and so on) instead of by name.
+
+### Deleting a group is refused
+
+The API refuses to delete a group that any setup key's or user's `auto_groups` still references, and its error names only the first blocker it finds. The module's error lists every owner instead. Remove the group from those owners, or set `unpin_auto_groups: true` on the delete task: the module then edits each owner's `auto_groups` (changing nothing else about them) and deletes the group.

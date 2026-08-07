@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/for-partners/acronis-integration.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/manage/for-partners/acronis-integration.mdx)
+> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/for-partners/acronis-integration.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/manage/for-partners/acronis-integration.mdx)
 
 # Deploying NetBird with Acronis Cyber Protect Cloud
 
@@ -38,15 +38,15 @@ For example, let's create an access policy. While the steps are the same for mac
 - Set the source group to `IT Administrators` and the destination group to `Windows Workstations`
 - Configure the protocol and port settings based on required access patterns (e.g., TCP 22 for SSH access to servers, TCP 80 for web servers, etc.)
 
-![Access Control Policy settings](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-windows-01.png)
+![Access Control Policy settings](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-windows-01.png)
 
 Provide a descriptive name for the policy, such as "IT to Windows machines" that indicates its purpose, and click `Save` to create and activate the policy.
 
-![Access Control Policy name](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-windows-02.png)
+![Access Control Policy name](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-windows-02.png)
 
 This access policy will automatically apply to all devices managed by Acronis Cyber Protect Cloud that belong to users in the `IT Administrators` group, providing them secure access to designated resources while preventing lateral movement to unauthorized systems. The policy enforcement occurs at the network level, complementing Acronis Cyber Protect Cloud's device-level monitoring and management capabilities.
 
-![Access Control Policy list](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-windows-03.png)
+![Access Control Policy list](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-windows-03.png)
 
 Moreover, users will only gain this network access when their devices are actively monitored and maintained through Acronis Cyber Protect Cloud, creating a comprehensive security approach where device health monitoring and network access controls work together. This combination ensures that only properly managed and compliant devices can establish secure network connections to protected resources.
 
@@ -62,19 +62,19 @@ This section demonstrates how to create a software package in Acronis Cyber Prot
 
 Log in to Acronis Cyber Protect Cloud, navigate to `SOFTWARE MANAGEMENT > My packages` and click the `Add package` button:
 
-![Add package](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-windows-04.png)
+![Add package](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-windows-04.png)
 
 In the `General information` tab, provide a descriptive name for the package (e.g., "NetBird EXE Installer") and specify the vendor name. Optionally, add a package description and select the appropriate license type from the dropdown menu. Click `Next` to continue.
 
-![General information](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-windows-05.png)
+![General information](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-windows-05.png)
 
 In the `Upload package` tab, enter the installer version (required field) and select the target architecture type. Click the `+ Upload` button in the top right corner to upload the NetBird installer package.
 
-![Upload package](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-windows-06.png)
+![Upload package](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-windows-06.png)
 
 Select the NetBird installer file from your local system. Once the upload completes, click `Next` to proceed.
 
-![Upload package](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-windows-07.png)
+![Upload package](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-windows-07.png)
 
 In the `Install / Uninstall commands` tab, configure the silent installation parameters by entering the following commands:
 
@@ -85,19 +85,19 @@ The `/S` parameter ensures silent installation without user prompts for NetBird'
 
 > **Note**: If you're using NetBird's MSI installer instead of the EXE installer, use `/qn` in the **Installation options** field instead of `"{{full_path}}" /S`. The **Uninstallation options** field remains the same (`{{uninstall_cmd}} /S`) for both installer types. Starting with v0.75.0, neither installer creates a machine-wide UI autostart entry and the MSI has no `AUTOSTART` property. The desktop app manages **Launch NetBird UI at Login** per user. Use the [`disableAutostart` MDM setting](https://docs.netbird.io/client/mdm-integration#disableAutostart) to suppress it on managed endpoints.
 
-![Install / Uninstall commands](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-windows-08.png)
+![Install / Uninstall commands](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-windows-08.png)
 
 In the `Summary` tab, review all package configuration details for accuracy. Check the required boxes to confirm your settings and accept the End User License Agreement (EULA) terms. Click `Next` to proceed.
 
-![Summary](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-windows-09.png)
+![Summary](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-windows-09.png)
 
 The `Digital signature check` tab provides security verification options for the uploaded package. Enable digital signature checking to ensure package integrity and authenticity—this represents a security best practice for enterprise deployments. Click `Add package` to complete the package creation process.
 
-![Digital signature check](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-windows-10.png)
+![Digital signature check](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-windows-10.png)
 
 Acronis will perform the digital signature verification automatically. Once completed, you'll see a `Verified` status next to the NetBird package in your software library.
 
-![My packages list](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-windows-11.png)
+![My packages list](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-windows-11.png)
 
 With the NetBird package successfully added to your Acronis software library, you can now proceed to deploy it across your managed Windows machines.
 
@@ -109,43 +109,43 @@ Acronis Cyber Protect Cloud provides multiple deployment methods for installing 
 
 To install NetBird from the available packages, navigate to `SOFTWARE MANAGEMENT > My packages` and click the three-dot menu next to the NetBird package. Select `Install` from the dropdown options.
 
-![Install NetBird from My packages](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-windows-12.png)
+![Install NetBird from My packages](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-windows-12.png)
 
 In the `Deploy software` window, click `+ Add workloads` and select your target machines from the available endpoints.
 
-![Add workloads](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-windows-13.png)
+![Add workloads](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-windows-13.png)
 
 For this example, we selected a single endpoint called `Windows-11`. Click the `Install now` button to begin the immediate deployment process.
 
-![Windows-11 Workload](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-windows-14.png)
+![Windows-11 Workload](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-windows-14.png)
 
 Monitor the installation progress by navigating to `MONITORING > Activities`, where you can track the deployment status across all selected machines.
 
-![Activities menu](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-windows-15.png)
+![Activities menu](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-windows-15.png)
 
 Verify successful installation by navigating to `SOFTWARE MANAGEMENT > Software inventory`, where NetBird should appear in the installed software list for each target machine.
 
-![Software inventory](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-windows-16.png)
+![Software inventory](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-windows-16.png)
 
 **Method 2: Bulk Selection from Device Management**
 
 Alternatively, navigate to `DEVICES > All devices` and select the checkboxes for all target endpoints you want to include in the deployment. Click on any selected device to open the right sidebar, then select `Deploy software`. This approach opens the same `Deploy software` interface with your pre-selected workloads ready for deployment.
 
-![Install NetBird from All devices](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-windows-17.png)
+![Install NetBird from All devices](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-windows-17.png)
 
 **Method 3: Scheduled Deployment Plans**
 
 For more advanced deployment control, use Acronis' deployment plans feature. Navigate to `MANAGEMENT > Software deployment plans` and click `+ Create plan` in the upper right corner.
 
-![Software deployment plans](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-windows-18.png)
+![Software deployment plans](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-windows-18.png)
 
 In the `Create software deployment plan` window, click the pencil icon to customize the plan name, select either `Install` or `Uninstall` under Action, and click `Select software` to add the NetBird package. Configure your preferred deployment schedule by setting the specific date and time for automated execution.
 
-![Create software deployment plan](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-windows-19.png)
+![Create software deployment plan](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-windows-19.png)
 
 After configuring the plan parameters, click `Create` to save the plan for future use, or click `+ Add workloads` to immediately select target endpoints and execute the deployment.
 
-![Selecting workloads](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-windows-20.png)
+![Selecting workloads](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-windows-20.png)
 
 The advantage of deployment plans is that they enable scheduled, repeatable installations across multiple client environments, allowing MSPs to standardize NetBird deployments during designated maintenance windows while maintaining consistent configuration management across all managed endpoints.
 
@@ -257,7 +257,7 @@ Next, on the right sidebar:
 - If needed, Acronis lets you pass `Arguments` to the installer, such as setup keys and the management URL.
 - Once done, set the script's status to `Approved` and click `Save`.
 
-![Add NetBird EXE PowerShell script](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-windows-22.png)
+![Add NetBird EXE PowerShell script](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-windows-22.png)
 
 Using a similar procedure, you can add the following script to use the MSI installer instead of the EXE installer:
 
@@ -403,7 +403,7 @@ Write-Host "NetBird MSI installation completed successfully!" -ForegroundColor G
 
 The script downloads the official `.msi` installer and uses the silent flag to install NetBird on Windows machines, just as the `.exe` installer.
 
-![Add NetBird MSI PowerShell script](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-windows-23.png)
+![Add NetBird MSI PowerShell script](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-windows-23.png)
 
 Likewise, you can add an **Uninstall NetBird** script:
 
@@ -530,7 +530,7 @@ Write-Host "NetBird uninstallation process completed!" -ForegroundColor Green
 
 The script executes `netbird_uninstall.exe` using the silent flag to remove NetBird from Windows endpoints.
 
-![Add NetBird Uninstaller PowerShell script](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-windows-24.png)
+![Add NetBird Uninstaller PowerShell script](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-windows-24.png)
 
 If you need to edit or delete any script, you can do it by navigating to `MANAGEMENT > Script repository > My scripts`
 
@@ -542,11 +542,11 @@ As with packages, you can use different methods to deploy NetBird scripts to Win
 
 Navigate to `MANAGEMENT > Script repository > My scripts`, click the three-dot menu on the script you want to install, and select `Script quick run`:
 
-![Script quick run](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-windows-25.png)
+![Script quick run](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-windows-25.png)
 
 Next, you can select the workloads where you want to run the script and click the `Run now` button.
 
-![Run Script](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-windows-26.png)
+![Run Script](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-windows-26.png)
 
 As before, you can follow the installation progress by navigating to `MONITORING > Activities`.
 
@@ -559,11 +559,11 @@ Navigate to `MANAGEMENT > Scripting plans` and click on `Create plan`. Next:
 - Add the desired workloads
 - Once ready, click the `Create` button.
 
-![Create Scripting Plan](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-windows-27.png)
+![Create Scripting Plan](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-windows-27.png)
 
 From `MANAGEMENT > Scripting plans`, you can click on the three-dot menu of any plan to view its details, edit it, or manually run it.
 
-![Manually Running a Scripting Plan](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-windows-28.png)
+![Manually Running a Scripting Plan](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-windows-28.png)
 
 ## Installing NetBird in macOS using a Bash Script
 
@@ -590,7 +590,7 @@ Configure the following properties in the right sidebar:
 - **Arguments:** If needed, you can pass parameters to the script through the `Arguments` field, such as setup keys for automated enrollment.
 - Once configured, set the script's status to `Approved` and click `Save`.
 
-![Add NetBird Bash Script script](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-macos-01.png)
+![Add NetBird Bash Script script](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-macos-01.png)
 
 If you need to manage your scripts, you can do it by navigating to `MANAGEMENT > Script repository > My scripts`
 
@@ -606,7 +606,7 @@ Once the script is saved, you can run it on-demand from `My scripts` or add it t
 - Click `Run now` to deploy the script to the chosen devices.
 - To track the installation status, go to `MONITORING > Activities`.
 
-![Quick Run NetBird Bash Script script](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-macos-02.png)
+![Quick Run NetBird Bash Script script](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-macos-02.png)
 
 **Method 2: Scheduled Scripting Plans**
 
@@ -621,7 +621,7 @@ First, navigate to `MANAGEMENT > Scripting plans` and click `Create plan`.  In t
 
 Once all settings are configured, click `Create` to save and activate the plan.
 
-![Quick Run NetBird Bash Script script](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-macos-03.png)
+![Quick Run NetBird Bash Script script](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-macos-03.png)
 
 Tip: You can manually trigger any plan outside its schedule. Go to `MANAGEMENT > Scripting plans`, find the plan you want to execute, click its three-dot menu, and run it.
 
@@ -635,4 +635,4 @@ To confirm that your Acronis-deployed Windows (or macOS) endpoints successfully 
 
 This verification step ensures that your automated deployment process has completed successfully and that devices are ready to enforce the access control policies configured for your organization's security requirements.
 
-![Windows 11 Peer](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-windows-21.png)
+![Windows 11 Peer](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/for-partners/acronis-windows-netbird-integration/acronis-windows-21.png)

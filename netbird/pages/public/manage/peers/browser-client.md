@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/peers/browser-client.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/manage/peers/browser-client.mdx)
+> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/peers/browser-client.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/manage/peers/browser-client.mdx)
 
 # Browser Client - Web-based Remote Access
 
@@ -38,7 +38,7 @@ The easiest way to connect is directly from the Peers dashboard:
 2. Find the peer you want to access
 3. In the **Remote Access** section, click the **SSH** or **RDP** button
 
-![peer-list-view](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/peers/browser-client/peer-list-view.png)
+![peer-list-view](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/browser-client/peer-list-view.png)
 
 ### SSH Connection
 
@@ -51,13 +51,13 @@ When connecting via SSH:
 >
 > Before connecting via SSH, make sure that SSH Access is enabled both on the target peer and in the NetBird Dashboard. Learn more about [enabling SSH access](https://docs.netbird.io/manage/peers/ssh).
 
-![ssh-credentials-modal](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/peers/browser-client/ssh-credentials-modal.png)
+![ssh-credentials-modal](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/browser-client/ssh-credentials-modal.png)
 
 3. Adjust the SSH username in the credentials modal if required
 4. Click **Connect**
 5. A terminal window will open in your browser with your SSH session
 
-![ssh-terminal-connected](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/peers/browser-client/ssh-terminal-connected.png)
+![ssh-terminal-connected](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/browser-client/ssh-terminal-connected.png)
 
 ### RDP Connection
 
@@ -66,7 +66,7 @@ For RDP access:
 1. Click the **RDP** button for your target machine
 2. A new window will open with a credentials modal - enter your RDP server credentials:
 
-![rdp-credentials-modal](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/peers/browser-client/rdp-credentials-modal.png)
+![rdp-credentials-modal](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/browser-client/rdp-credentials-modal.png)
 
 - **Username**: Your username (can include domain: `DOMAIN\username`)
 - **Password**: Your password for the RDP server
@@ -74,7 +74,7 @@ For RDP access:
 3. Click **Connect**
 4. In the same window, a certificate warning dialog will appear - review the certificate details
 
-![rdp-certificate-modal](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/peers/browser-client/rdp-certificate-modal.png)
+![rdp-certificate-modal](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/browser-client/rdp-certificate-modal.png)
 
 > **Note**
 >
@@ -83,7 +83,7 @@ For RDP access:
 5. Click **Accept and Continue** to proceed with the connection
 6. The remote desktop will load in the window
 
-![rdp-connected-session](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/peers/browser-client/rdp-connected-session.png)
+![rdp-connected-session](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/browser-client/rdp-connected-session.png)
 
 ## Connection Management
 

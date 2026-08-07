@@ -8,11 +8,11 @@
       "sourceCommit": "2a2349356c01b1b1f7ecddb0c17b30c97f5241e7"
     },
     "netbird": {
-      "tag": "v0.76.1",
-      "releaseId": 363285132,
-      "releasePublishedAt": "2026-07-31T19:33:52Z",
-      "sourceCommit": "0780a806f2cc2e8a6a51782cfffe0591b7c3fa9c",
-      "docsCommit": "14375a092774f250d45a85f6d5f3c524d99fd111"
+      "tag": "v0.76.2",
+      "releaseId": 366709569,
+      "releasePublishedAt": "2026-08-07T11:39:30Z",
+      "sourceCommit": "2ce632360241d850eaef4fe4dd680d88ec19dddc",
+      "docsCommit": "447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e"
     },
     "podman": {
       "tag": "v6.0.2",

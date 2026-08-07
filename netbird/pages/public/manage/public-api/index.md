@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/public-api/index.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/manage/public-api/index.mdx)
+> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/public-api/index.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/manage/public-api/index.mdx)
 
 # Use service users and tokens to access NetBird's public API
 
@@ -22,12 +22,12 @@ The most common usage scenarios:
 
 To create a service user, you'll need to log in to your organization's account at <https://app.netbird.io> and navigate to the "Team" -> "Service Users" section of your account.
 
-![service-user-overview](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/public-api/service-user-overview.png)
+![service-user-overview](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/public-api/service-user-overview.png)
 
 From there, you can create a new service user and specify a role that the user should have.
 User role allows read-only access, use the admin for write access.
 
-![service-user-creation-popup](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/public-api/service-user-creation.png)
+![service-user-creation-popup](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/public-api/service-user-creation.png)
 
 > **Note**
 >
@@ -37,16 +37,16 @@ User role allows read-only access, use the admin for write access.
 
 To create an access token, you'll need to log in to your account and navigate to the "Team" section and look for your user or create a [service user](#service-users) to use for your API requests.
 
-![personal-access-token-overview](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/public-api/personal-access-token-overview.png)
+![personal-access-token-overview](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/public-api/personal-access-token-overview.png)
 
 From there, you can create a new token and specify expiration for the token. You won't be able to modify your token.
 
-![personal-access-creation-popup](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/public-api/personal-access-token-creation.png)
+![personal-access-creation-popup](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/public-api/personal-access-token-creation.png)
 
 After the token was generated successfully you will see a plain version of your token to copy and store in a secure place.
 Be aware that once you close the popup it is impossible to see the plain version of the token again as NetBird only stores a hashed version of the token.
 
-![personal-access-token-example](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/public-api/personal-access-token-example.png)
+![personal-access-token-example](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/public-api/personal-access-token-example.png)
 
 > **Note**
 >

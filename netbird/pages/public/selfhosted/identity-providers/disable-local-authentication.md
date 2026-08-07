@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/identity-providers/disable-local-authentication.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/selfhosted/identity-providers/disable-local-authentication.mdx)
+> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/identity-providers/disable-local-authentication.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/selfhosted/identity-providers/disable-local-authentication.mdx)
 
 # Disable Local Authentication
 
@@ -25,11 +25,11 @@ Before disabling local authentication:
 2. Log out and log in with your new admin account via the external IdP. NetBird will notify you that the user requires approval.
 3. Log back in as your original NetBird-local admin and navigate to **Team > Users**. You should see the new IdP user pending approval:
 
-![Approve User](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/approve_user.png)
+![Approve User](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/approve_user.png)
 
 4. Approve the request, click on the user, select **Owner** as the role, confirm the ownership transfer, and save.
 
-![Change Owner](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/change-owner.png)
+![Change Owner](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/change-owner.png)
 
 5. Verify you can log in via the external IdP with full owner access.
 

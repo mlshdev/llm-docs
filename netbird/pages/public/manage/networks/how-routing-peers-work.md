@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/networks/how-routing-peers-work.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/manage/networks/how-routing-peers-work.mdx)
+> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/networks/how-routing-peers-work.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/manage/networks/how-routing-peers-work.mdx)
 
 # How Routing Peers Work
 
@@ -37,7 +37,7 @@ NetBird offers two ways to configure routing peers. Both are actively maintained
 
 ## Mental model: how traffic flows
 
-![Routing peer bridging NetBird overlay to a private network](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/networks/netbird-network-routes.png)
+![Routing peer bridging NetBird overlay to a private network](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/networks/netbird-network-routes.png)
 
 The walkthrough below describes the **Linux kernel-mode** path, where forwarding and firewalling happen in the kernel via `nftables` / `iptables`. On other platforms, NetBird performs the same logical steps in a userspace filter, but the implementation differs.
 
@@ -101,9 +101,9 @@ Multiple routing peers can serve the same network or route. Behavior depends on 
 
 ### Primary / failover (different metrics)
 
-The lower-metric peer carries all traffic. The higher-metric peer is held in reserve and only takes over when the primary becomes unreachable. Failover is automatic and immediate — clients begin sending traffic through the standby as soon as the primary stops responding. When the primary comes back online, clients switch back to it immediately. Established TCP connections through the previous peer reset and applications must reconnect.
+The lower-metric peer carries all traffic. The higher-metric peer is held in reserve and only takes over when the primary becomes unreachable. Failover is automatic: clients start sending traffic through the standby once the primary is seen as unreachable, normally within seconds. When the primary comes back online, clients switch back to it. With masquerade on, the default, established TCP connections through the previous peer reset and applications must reconnect, because the standby translates them to a different source address. With masquerade off they are not translated, and behave differently: see [High availability with masquerade off](https://docs.netbird.io/manage/networks/masquerade#high-availability-with-masquerade-off).
 
-**Example.** Routing Peer A has a lower metric than Routing Peer B. When Peer A goes down, all traffic fails over to Peer B. When Peer A comes back online, all traffic switches back to Peer A immediately.
+**Example.** Routing Peer A has a lower metric than Routing Peer B. When Peer A goes down, all traffic fails over to Peer B. When Peer A comes back online, all traffic switches back to Peer A.
 
 ### Latency switching (equal metrics)
 
@@ -130,9 +130,11 @@ Turn masquerade off when:
 
 With masquerade off, you must add a return route on the destination network pointing the NetBird CIDR (default `100.64.0.0/10`) at the routing peer.
 
+High availability then needs one more thing from you. Clients still move to the standby peer on their own, but that return route keeps pointing at the peer that just failed, so replies are dropped even though the outbound direction has recovered. The destination network has to be able to follow the failover too. See [High availability with masquerade off](https://docs.netbird.io/manage/networks/masquerade#high-availability-with-masquerade-off).
+
 > **Note**
 >
-> Masquerade can only be turned off on Linux routing peers. High availability also stops working with masquerade off, because return traffic must flow back through one specific routing peer's LAN address — the destination network has no way to follow a failover.
+> Masquerade can only be turned off on Linux routing peers.
 
 ## Access control behavior
 

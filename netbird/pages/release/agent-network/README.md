@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.1: [agent-network/README.md](https://github.com/netbirdio/netbird/blob/0780a806f2cc2e8a6a51782cfffe0591b7c3fa9c/agent-network/README.md)
+> Release-pinned source for NetBird v0.76.2: [agent-network/README.md](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/agent-network/README.md)
 
 # NetBird Agent Network
 

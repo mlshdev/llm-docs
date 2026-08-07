@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.1: [docs/agent-networks/modules/22-management-handlers-wiring.md](https://github.com/netbirdio/netbird/blob/0780a806f2cc2e8a6a51782cfffe0591b7c3fa9c/docs/agent-networks/modules/22-management-handlers-wiring.md)
+> Release-pinned source for NetBird v0.76.2: [docs/agent-networks/modules/22-management-handlers-wiring.md](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/modules/22-management-handlers-wiring.md)
 
 # management/handlers + wiring — HTTP API + gRPC delivery
 
@@ -204,7 +204,7 @@ Handler tests use a real sqlite store + real manager + always-allow permissions 
 
 ## Cross-references
 
-- Upstream: [shared/api](https://github.com/netbirdio/netbird/blob/0780a806f2cc2e8a6a51782cfffe0591b7c3fa9c/docs/agent-networks/modules/10-shared-api.md), [management/agentnetwork](https://github.com/netbirdio/netbird/blob/0780a806f2cc2e8a6a51782cfffe0591b7c3fa9c/docs/agent-networks/modules/21-management-agentnetwork.md), [management/store](https://github.com/netbirdio/netbird/blob/0780a806f2cc2e8a6a51782cfffe0591b7c3fa9c/docs/agent-networks/modules/20-management-store.md)
-- Downstream: [proxy/runtime](https://github.com/netbirdio/netbird/blob/0780a806f2cc2e8a6a51782cfffe0591b7c3fa9c/docs/agent-networks/modules/33-proxy-runtime.md)
-- End-to-end flow: [../01-end-to-end-flows.md](https://github.com/netbirdio/netbird/blob/0780a806f2cc2e8a6a51782cfffe0591b7c3fa9c/docs/agent-networks/01-end-to-end-flows.md)
-- Top-level: [../00-overview.md](https://github.com/netbirdio/netbird/blob/0780a806f2cc2e8a6a51782cfffe0591b7c3fa9c/docs/agent-networks/00-overview.md)
+- Upstream: [shared/api](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/modules/10-shared-api.md), [management/agentnetwork](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/modules/21-management-agentnetwork.md), [management/store](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/modules/20-management-store.md)
+- Downstream: [proxy/runtime](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/modules/33-proxy-runtime.md)
+- End-to-end flow: [../01-end-to-end-flows.md](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/01-end-to-end-flows.md)
+- Top-level: [../00-overview.md](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/00-overview.md)

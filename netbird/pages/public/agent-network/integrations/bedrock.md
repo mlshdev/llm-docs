@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/agent-network/integrations/bedrock.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/agent-network/integrations/bedrock.mdx)
+> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/agent-network/integrations/bedrock.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/agent-network/integrations/bedrock.mdx)
 
 # AWS Bedrock
 
@@ -45,9 +45,20 @@ for details.
 5. Save the provider. The key is now held server-side, the next step authorizes who can use
    it.
 
-![Connect the AWS Bedrock provider in NetBird Agent Network](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/agent-network/integrations/agent-network-bedrock-connect.png)
+![Connect the AWS Bedrock provider in NetBird Agent Network](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/agent-network/integrations/agent-network-bedrock-connect.png)
 
 See [Providers](https://docs.netbird.io/agent-network/providers) for details.
+
+### Cross-Region Inference Profiles
+
+Bedrock also exposes cross-region inference profiles, model IDs prefixed with a geography
+code such as `eu.` or `us.`, that route a request across a set of regions instead of pinning
+it to one. If the profile you need isn't in the picker, add it the same way as any
+[model not in the catalog](https://docs.netbird.io/agent-network/providers#adding-a-model-not-in-the-catalog): type
+the full profile ID into the **Model** field on the **Models** tab, for example
+`eu.anthropic.claude-sonnet-5`, and set its input/output pricing yourself.
+
+![Models tab with a geo-specific Bedrock inference profile ID and manually entered input/output pricing](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/agent-network/providers/agent-network-custom-model.png)
 
 ## Create a Policy
 
@@ -82,7 +93,7 @@ and group. Values are sanitized to Bedrock's accepted character set before they 
 
 The provider's **Mappings** tab shows exactly what NetBird sends:
 
-![Bedrock identity metadata mapping: user to user email and group to groups in the X-Amzn-Bedrock-Request-Metadata header](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/agent-network/integrations/agent-network-bedrock-mappings.png)
+![Bedrock identity metadata mapping: user to user email and group to groups in the X-Amzn-Bedrock-Request-Metadata header](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/agent-network/integrations/agent-network-bedrock-mappings.png)
 
 ## Use with Claude Code
 

@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/reverse-proxy/bring-your-own-proxy.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/manage/reverse-proxy/bring-your-own-proxy.mdx)
+> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/reverse-proxy/bring-your-own-proxy.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/manage/reverse-proxy/bring-your-own-proxy.mdx)
 
 # Bring Your Own Proxy
 
@@ -93,13 +93,13 @@ Navigate to **Reverse Proxy** > **Clusters** in the NetBird dashboard. The table
 
 Click **Setup Self-Hosted Cluster** to open the wizard.
 
-![Clusters page in the dashboard with the Setup Self-Hosted Cluster button](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/reverse-proxy/byop/byop-self-hosted-proxies-empty.png)
+![Clusters page in the dashboard with the Setup Self-Hosted Cluster button](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/reverse-proxy/byop/byop-self-hosted-proxies-empty.png)
 
 ### Step 2: Choose your domain
 
 In the **Domain** tab, enter the domain that this proxy cluster will be reachable on, e.g., `proxy.company.com`. This becomes the proxy's `NB_PROXY_DOMAIN` and the suffix of every public service URL hosted on it (`{subdomain}.proxy.company.com`).
 
-![Setup Cluster modal showing the Domain tab with the requirements callout](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/reverse-proxy/byop/byop-setup-modal-domain.png)
+![Setup Cluster modal showing the Domain tab with the requirements callout](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/reverse-proxy/byop/byop-setup-modal-domain.png)
 
 The wizard reminds you of the host requirements — public IP, Docker, ports 80 and 443 free. Click **Continue** to move to the DNS step.
 
@@ -114,7 +114,7 @@ In the **DNS Records** tab, add the two `A` records shown in the table at your d
 
 The wildcard record is required so that every service domain (`{subdomain}.proxy.company.com`) resolves to your proxy. If you run an HA cluster, point both records at all replicas (round-robin) or at the IP of a load balancer / floating IP that fronts them.
 
-![Setup Cluster modal showing the DNS Records tab with copyable A record entries](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/reverse-proxy/byop/byop-setup-modal-dns.png)
+![Setup Cluster modal showing the DNS Records tab with copyable A record entries](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/reverse-proxy/byop/byop-setup-modal-dns.png)
 
 > **Note**
 >
@@ -126,7 +126,7 @@ Click **Continue** to move to the install step.
 
 Switching to the **Run the Proxy** tab automatically generates a one-time, account-scoped proxy token and embeds it into a ready-to-run `docker run` command:
 
-![Setup Cluster modal showing the Run the Proxy tab with the generated docker run command](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/reverse-proxy/byop/byop-setup-modal-install.png)
+![Setup Cluster modal showing the Run the Proxy tab with the generated docker run command](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/reverse-proxy/byop/byop-setup-modal-install.png)
 
 ```shell
 docker run -d \
@@ -168,7 +168,7 @@ Click **Finish Setup** to close the wizard.
 
 Back on the **Clusters** page, the new account cluster appears once the proxy registers, with a count of connected proxies and an **Online** badge. A non-zero connected count means at least one replica is alive and exchanging mappings with management.
 
-![Clusters page showing a connected account cluster with one proxy](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/reverse-proxy/byop/byop-self-hosted-proxies-connected.png)
+![Clusters page showing a connected account cluster with one proxy](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/reverse-proxy/byop/byop-self-hosted-proxies-connected.png)
 
 You can also check the proxy's own health probe — by default it binds to `localhost:8080` on the proxy host, so run this on the box itself:
 
@@ -197,7 +197,7 @@ A BYOP cluster whose proxy runs embedded as a NetBird peer (`netbird proxy` mode
 
 With a **Proxy Cluster** target (or **Direct Upstream** enabled on a peer/resource target), the service is still reachable only over the NetBird tunnel and still gated by group membership, but the proxy reaches the upstream directly via its host network stack — no WireGuard peer is required between the proxy and the backend:
 
-![Diagram of a NetBird-Only service with Direct Upstream: the device tunnels to the proxy cluster, the management service checks group membership, and the proxy reaches the backend service directly over the host network stack with no WireGuard peer](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/reverse-proxy/byop/netbird-only-direct-upstream-diagram.png)
+![Diagram of a NetBird-Only service with Direct Upstream: the device tunnels to the proxy cluster, the management service checks group membership, and the proxy reaches the backend service directly over the host network stack with no WireGuard peer](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/reverse-proxy/byop/netbird-only-direct-upstream-diagram.png)
 
 NetBird Cloud's shared clusters do not currently advertise `Private`. Running your own BYOP cluster is the supported way to enable private services for an account on Cloud. For self-hosted, the same applies — the proxy must be running with the flag set.
 
@@ -209,7 +209,7 @@ When the selected base domain does *not* advertise the `Private` capability:
 
 To verify the capability is set, check the cluster row on the **Clusters** page — a **Private** badge appears in the Features column when at least one connected proxy is running in embedded mode.
 
-![Clusters page row showing the Private feature badge in the Features column](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/reverse-proxy/byop/byop-clusters-private-feature.png)
+![Clusters page row showing the Private feature badge in the Features column](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/reverse-proxy/byop/byop-clusters-private-feature.png)
 
 ## High availability
 

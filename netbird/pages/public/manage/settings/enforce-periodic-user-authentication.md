@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/settings/enforce-periodic-user-authentication.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/manage/settings/enforce-periodic-user-authentication.mdx)
+> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/settings/enforce-periodic-user-authentication.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/manage/settings/enforce-periodic-user-authentication.mdx)
 
 # Enforce periodic user authentication
 
@@ -11,7 +11,7 @@ Every new network has this feature enabled, and the expiration period is set to 
 
 Expired peers will appear in the peers' view with the status `Login required`.
 
-![peer-needs-login.png](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/team/peer-needs-login.png)
+![peer-needs-login.png](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/team/peer-needs-login.png)
 
 ## Configure and disable expiration
 
@@ -19,7 +19,7 @@ The expiration period can be set to anything between one hour and 180 days.
 Go to the Web UI `Settings` tab and set the desired period in the Authentication section.
 You can also disable the expiration for the whole network in the same section.
 
-![peer-login-expiration](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/team/peer-login-expiration.png)
+![peer-login-expiration](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/team/peer-login-expiration.png)
 
 > **Note**
 >
@@ -33,7 +33,7 @@ With NetBird you can disable login expiration per peer without disabling expirat
 In `Peers` click on the peer you want to disable expiration for and use the Login Expiration switch. (Session expiration only applies to peers with a user behind them; peers enrolled with a setup key are already exempt.)
 Peers with `Expiration disabled` will be marked with a corresponding label in the Peers table.
 
-![peer-login-expiration](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/team/individual-peer-login-expiration.png)
+![peer-login-expiration](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/team/individual-peer-login-expiration.png)
 
 ## Get started
 

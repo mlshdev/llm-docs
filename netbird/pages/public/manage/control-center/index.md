@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/control-center/index.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/manage/control-center/index.mdx)
+> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/control-center/index.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/manage/control-center/index.mdx)
 
 # Visualize Remote Access with Control Center
 
@@ -25,7 +25,7 @@ Control Center is a topological view in the NetBird dashboard that visualizes wh
 
 Use this to understand what a specific machine can reach.
 
-![Control Center Peer View](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/control-center/control-center-peer-view.png)
+![Control Center Peer View](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/control-center/control-center-peer-view.png)
 
 - Click the peer node, then search or choose another peer from the dropdown to switch focus.
 - The graph shows the peer's access control policy nodes and the reachable resources.
@@ -35,7 +35,7 @@ Use this to understand what a specific machine can reach.
 
 Use this view to see what resources a specific user can access.
 
-![Control Center User View](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/control-center/control-center-user-view.png)
+![Control Center User View](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/control-center/control-center-user-view.png)
 
 - Click the user node, then search or choose another user from the dropdown to switch focus.
 - The graph shows the users peers, access control policy nodes and the reachable resources.
@@ -46,7 +46,7 @@ Use this view to see what resources a specific user can access.
 
 Use this to validate team-level access.
 
-![Control Center Groups View](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/control-center/control-center-groups-view.png)
+![Control Center Groups View](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/control-center/control-center-groups-view.png)
 
 - Click a group node, then search or choose from the dropdown to switch groups.
 - The layout shows which resources that group can reach and via which policies.
@@ -60,7 +60,7 @@ Common checks:
 
 Use this to see who can access resources in your routed [networks](https://docs.netbird.io/manage/networks).
 
-![Control Center Network View](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/control-center/control-center-network-view.png)
+![Control Center Network View](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/control-center/control-center-network-view.png)
 
 - Toggle **All Networks** or select a specific network.
 - The network node shows its resources. Connecting lines display the port allowed by the policy and which groups have access.

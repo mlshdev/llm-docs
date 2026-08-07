@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/peers/access-infrastructure/secure-remote-webserver-access.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/manage/peers/access-infrastructure/secure-remote-webserver-access.mdx)
+> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/peers/access-infrastructure/secure-remote-webserver-access.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/manage/peers/access-infrastructure/secure-remote-webserver-access.mdx)
 
 # Secure Remote Web Server Access: SSH Without Port Exposure
 
@@ -39,7 +39,7 @@ With prerequisites in place, you'll be prepared to establish an encrypted point-
 
 Login to NetBird and navigate to `Peers` → `User Devices`. Ensure you see your local peer connected.
 
-![NetBird Local Peer](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/peers/access-infrastructure/secure-remote-webserver-access/owyUeUn.png)
+![NetBird Local Peer](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/access-infrastructure/secure-remote-webserver-access/owyUeUn.png)
 
 To add your remote web server to NetBird's peer network, first you need to generate a setup key:
 
@@ -48,7 +48,7 @@ To add your remote web server to NetBird's peer network, first you need to gener
 - Configure the key by assigning it a descriptive name (e.g., "Remote Web Server"), setting an expiration date, and defining auto-assigned groups (if required). Read the documentation for [detailed setup key configuration](https://docs.netbird.io/manage/peers/register-machines-using-setup-keys).
 - Copy the generated key to a secure location as you'll need it shortly
 
-![NetBird Creating Setup Key](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/peers/access-infrastructure/secure-remote-webserver-access/jQ5rhEb.png)
+![NetBird Creating Setup Key](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/access-infrastructure/secure-remote-webserver-access/jQ5rhEb.png)
 
 Next, install the NetBird agent on the VM.
 
@@ -100,7 +100,7 @@ Peers count: 0/0 Connected
 
 Now, go back to NetBird's `Peers` view and ensure your remote web server is connected.
 
-![NetBird Peers Network](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/peers/access-infrastructure/secure-remote-webserver-access/8I1WVEx.png)
+![NetBird Peers Network](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/access-infrastructure/secure-remote-webserver-access/8I1WVEx.png)
 
 ## 2. Configuring NetBird Access Control Policies
 
@@ -121,7 +121,7 @@ For this specific use case, we've implemented a simple access policy:
 
 This policy restricts SSH access to the `Testing Environment`, permitting only authorized members from the group `Freelancers` to connect.
 
-![NetBird Access Policy](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/peers/access-infrastructure/secure-remote-webserver-access/AgB9Asr.png)
+![NetBird Access Policy](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/access-infrastructure/secure-remote-webserver-access/AgB9Asr.png)
 
 After establishing the policy, assign peers to their respective groups. To add the remote web server to the `Testing Environment` group:
 
@@ -129,18 +129,18 @@ After establishing the policy, assign peers to their respective groups. To add t
 - Click on the name of the peer you want to edit, in this case, `webserver`
 - Find the `Assigned Groups` field and select `Testing Environment` from the dropdown list.
 
-![NetBird Web Server Peer](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/peers/access-infrastructure/secure-remote-webserver-access/QXb6lLs.png)
+![NetBird Web Server Peer](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/access-infrastructure/secure-remote-webserver-access/QXb6lLs.png)
 
 While you're there, take note of the IP addresses listed on the left. Use the quick copy buttons to get `NetBird IP-Address` and `Domain Name`. Alternatively, you can hover over the peer in the peers' list and copy the IP addresses as shown below:
 
-![NetBird IP Addresses](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/peers/access-infrastructure/secure-remote-webserver-access/EVZssES.png)
+![NetBird IP Addresses](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/access-infrastructure/secure-remote-webserver-access/EVZssES.png)
 
 With your remote server configured and the corresponding access policy enabled, the final step is to assign users to the appropriate group:
 
 - Locate your user in the peers' list and click on it
 - Find the `Assigned Groups` field and select `Freelancers` from the dropdown list.
 
-![NetBird Local User Peer](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/peers/access-infrastructure/secure-remote-webserver-access/LoNxwd4.png)
+![NetBird Local User Peer](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/access-infrastructure/secure-remote-webserver-access/LoNxwd4.png)
 
 ## 3. Establishing a Secure SSH Connection to Access the Internal Web Service
 
@@ -148,19 +148,19 @@ NetBird streamlines secure connections without traditional firewall complexities
 
 To verify your setup, simply ping the web server from a third-party device outside of the NetBird network using the web server's NetBird-assigned IP:
 
-![Terminal No Access to Web Server](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/peers/access-infrastructure/secure-remote-webserver-access/iHiFujr.png)
+![Terminal No Access to Web Server](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/access-infrastructure/secure-remote-webserver-access/iHiFujr.png)
 
 There is no response from the host. Now, ping the web server from your configured local machine:
 
-![Terminal Access to Web Server](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/peers/access-infrastructure/secure-remote-webserver-access/HKsAcFE.png)
+![Terminal Access to Web Server](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/access-infrastructure/secure-remote-webserver-access/HKsAcFE.png)
 
 As expected, all packets were transmitted. Now, you can securely SSH into your remote web server from your local peer, either using the NetBird-assigned domain name or IP address:
 
-![Terminal SSH into Web Server using NetBird domain](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/peers/access-infrastructure/ssh-webserver-netbird.png)
+![Terminal SSH into Web Server using NetBird domain](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/access-infrastructure/ssh-webserver-netbird.png)
 
 This straightforward test confirms your successful implementation of a secure, firewall-free connection to your remote web server via NetBird, demonstrating its power in simplifying robust network security.
 
-![Terminal Fastfetch from Web Server](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/peers/access-infrastructure/secure-remote-webserver-access/YoECY8k.png)
+![Terminal Fastfetch from Web Server](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/access-infrastructure/secure-remote-webserver-access/YoECY8k.png)
 
 ## Get Started
 

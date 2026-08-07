@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/dns/dns-settings.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/manage/dns/dns-settings.mdx)
+> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/dns/dns-settings.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/manage/dns/dns-settings.mdx)
 
 # DNS Settings
 
@@ -46,7 +46,7 @@ netbird up --disable-dns=false
 2. Click the groups selection box and select existing groups, or type a new group name and press enter to create one inline
 3. Click **Save Changes**
 
-![DNS settings](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/dns/netbird-dns-settings.png)
+![DNS settings](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/dns/netbird-dns-settings.png)
 
 > **Note**
 >

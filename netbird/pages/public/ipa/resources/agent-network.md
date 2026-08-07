@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/ipa/resources/agent-network.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/ipa/resources/agent-network.mdx)
+> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/ipa/resources/agent-network.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/ipa/resources/agent-network.mdx)
 
 ## List Agent Network access logs   (GET /api/agent-network/access-logs)
 
@@ -1198,7 +1198,7 @@ echo $response;
 
 ## Retrieve Agent Network settings   (GET /api/agent-network/settings)
 
-Returns the per-account Agent Network gateway settings (cluster, subdomain, endpoint). Returns 404 when no provider has been created yet — settings are lazily bootstrapped on first provider create.
+Returns the per-account Agent Network gateway settings (cluster, subdomain, endpoint). Before the account is bootstrapped — on first provider create (`bootstrap_cluster`) or via PUT with `cluster` — the response carries the default values with empty cluster, subdomain and endpoint.
 
 **GET /api/agent-network/settings Request**
 
@@ -1387,9 +1387,13 @@ echo $response;
 
 ## Update Agent Network settings   (PUT /api/agent-network/settings)
 
-Updates the mutable account-level Agent Network settings (collection toggles). Cluster and subdomain are immutable and ignored if sent. Returns 404 when settings have not been bootstrapped (no provider created yet).
+Updates the account-level Agent Network settings; the request replaces every mutable field (collection toggles and retention). When the account has no settings row yet, providing `cluster` bootstraps it (assigning the subdomain that forms the agent endpoint); without `cluster` the request returns 404. Sending a `cluster` different from the assigned one is rejected (the cluster is immutable once assigned). The subdomain is always server-assigned and immutable.
 
 ### Request-Body Parameters
+
+**cluster (type: string; optional)**
+
+Address of the NetBird proxy cluster fronting this account's agent-network endpoint. When the account has no settings row yet, providing it bootstraps the row (assigning the subdomain that forms the agent endpoint). The cluster is immutable once assigned — later updates must omit it or send the assigned value; any other value is rejected.
 
 **enable\_log\_collection (type: boolean; required)**
 
@@ -1417,6 +1421,7 @@ curl -X PUT https://api.netbird.io/api/agent-network/settings \
 -H 'Content-Type: application/json' \
 -H 'Authorization: Token <TOKEN>' \
 --data-raw '{
+  "cluster": "eu.proxy.netbird.io",
   "enable_log_collection": true,
   "enable_prompt_collection": true,
   "redact_pii": true,
@@ -1427,6 +1432,7 @@ curl -X PUT https://api.netbird.io/api/agent-network/settings \
 ```js
 const axios = require('axios');
 let data = JSON.stringify({
+  "cluster": "eu.proxy.netbird.io",
   "enable_log_collection": true,
   "enable_prompt_collection": true,
   "redact_pii": true,
@@ -1459,6 +1465,7 @@ import json
 
 url = "https://api.netbird.io/api/agent-network/settings"
 payload = json.dumps({
+  "cluster": "eu.proxy.netbird.io",
   "enable_log_collection": true,
   "enable_prompt_collection": true,
   "redact_pii": true,
@@ -1491,6 +1498,7 @@ func main() {
   method := "PUT"
   
   payload := strings.NewReader(`{
+  "cluster": "eu.proxy.netbird.io",
   "enable_log_collection": true,
   "enable_prompt_collection": true,
   "redact_pii": true,
@@ -1542,6 +1550,7 @@ request["Accept"] = "application/json"
 request["Authorization"] = "Token <TOKEN>"
 
 request.body = JSON.dump({
+  "cluster": "eu.proxy.netbird.io",
   "enable_log_collection": true,
   "enable_prompt_collection": true,
   "redact_pii": true,
@@ -1556,6 +1565,7 @@ OkHttpClient client = new OkHttpClient().newBuilder()
   .build();
 MediaType mediaType = MediaType.parse("application/json");
 RequestBody body = RequestBody.create(mediaType, '{
+  "cluster": "eu.proxy.netbird.io",
   "enable_log_collection": true,
   "enable_prompt_collection": true,
   "redact_pii": true,
@@ -1586,6 +1596,7 @@ curl_setopt_array($curl, array(
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
   CURLOPT_CUSTOMREQUEST => 'PUT',  
   CURLOPT_POSTFIELDS => '{
+  "cluster": "eu.proxy.netbird.io",
   "enable_log_collection": true,
   "enable_prompt_collection": true,
   "redact_pii": true,
@@ -3688,15 +3699,15 @@ Anthropic-shape cache rate — cost per 1k cache-creation tokens (additive to in
 
 **extra\_values (type: object; optional)**
 
-Operator-typed values for catalog-declared extra headers (see AgentNetworkProvider.extra\_values). When present on a request, the whole map replaces the stored values. Empty strings drop the corresponding key.
+Operator-typed values for catalog-declared extra headers (see AgentNetworkProvider.extra\_values). The request's map replaces the stored values; empty strings drop the corresponding key.
 
 **identity\_header\_user\_id (type: string; optional)**
 
-Wire header name for the caller's display identity. See AgentNetworkProvider.identity\_header\_user\_id. When omitted on a request, the stored value is left unchanged; pass an empty string explicitly to clear it (which disables stamping for this dimension).
+Wire header name for the caller's display identity. See AgentNetworkProvider.identity\_header\_user\_id. Empty or omitted disables stamping for this dimension.
 
 **identity\_header\_groups (type: string; optional)**
 
-Wire header name for the caller's groups CSV. See AgentNetworkProvider.identity\_header\_groups. Same omit / empty semantics as `identity_header_user_id`.
+Wire header name for the caller's groups CSV. See AgentNetworkProvider.identity\_header\_groups. Same semantics as `identity_header_user_id`.
 
 **enabled (type: boolean; optional)**
 
@@ -3704,11 +3715,11 @@ Whether the provider is enabled. Defaults to true on create.
 
 **skip\_tls\_verification (type: boolean; optional)**
 
-Skip upstream TLS certificate verification when the proxy dials this provider's URL. For self-hosted / internal gateways behind a private or self-signed certificate. Defaults to false. When omitted on update, the stored value is left unchanged.
+Skip upstream TLS certificate verification when the proxy dials this provider's URL. For self-hosted / internal gateways behind a private or self-signed certificate. Defaults to false.
 
 **metadata\_disabled (type: boolean; optional)**
 
-Disable identity metadata injection (the caller's user + authorizing group) for this provider. Defaults to false (metadata is injected). When omitted on update, the stored value is left unchanged.
+Disable identity metadata injection (the caller's user + authorizing group) for this provider. Defaults to false (metadata is injected).
 
 **POST /api/agent-network/providers Request**
 
@@ -4403,15 +4414,15 @@ Anthropic-shape cache rate — cost per 1k cache-creation tokens (additive to in
 
 **extra\_values (type: object; optional)**
 
-Operator-typed values for catalog-declared extra headers (see AgentNetworkProvider.extra\_values). When present on a request, the whole map replaces the stored values. Empty strings drop the corresponding key.
+Operator-typed values for catalog-declared extra headers (see AgentNetworkProvider.extra\_values). The request's map replaces the stored values; empty strings drop the corresponding key.
 
 **identity\_header\_user\_id (type: string; optional)**
 
-Wire header name for the caller's display identity. See AgentNetworkProvider.identity\_header\_user\_id. When omitted on a request, the stored value is left unchanged; pass an empty string explicitly to clear it (which disables stamping for this dimension).
+Wire header name for the caller's display identity. See AgentNetworkProvider.identity\_header\_user\_id. Empty or omitted disables stamping for this dimension.
 
 **identity\_header\_groups (type: string; optional)**
 
-Wire header name for the caller's groups CSV. See AgentNetworkProvider.identity\_header\_groups. Same omit / empty semantics as `identity_header_user_id`.
+Wire header name for the caller's groups CSV. See AgentNetworkProvider.identity\_header\_groups. Same semantics as `identity_header_user_id`.
 
 **enabled (type: boolean; optional)**
 
@@ -4419,11 +4430,11 @@ Whether the provider is enabled. Defaults to true on create.
 
 **skip\_tls\_verification (type: boolean; optional)**
 
-Skip upstream TLS certificate verification when the proxy dials this provider's URL. For self-hosted / internal gateways behind a private or self-signed certificate. Defaults to false. When omitted on update, the stored value is left unchanged.
+Skip upstream TLS certificate verification when the proxy dials this provider's URL. For self-hosted / internal gateways behind a private or self-signed certificate. Defaults to false.
 
 **metadata\_disabled (type: boolean; optional)**
 
-Disable identity metadata injection (the caller's user + authorizing group) for this provider. Defaults to false (metadata is injected). When omitted on update, the stored value is left unchanged.
+Disable identity metadata injection (the caller's user + authorizing group) for this provider. Defaults to false (metadata is injected).
 
 **PUT /api/agent-network/providers/{providerId} Request**
 

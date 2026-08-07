@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/dns/internal-dns-servers.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/manage/dns/internal-dns-servers.mdx)
+> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/dns/internal-dns-servers.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/manage/dns/internal-dns-servers.mdx)
 
 # Internal DNS Servers
 
@@ -44,16 +44,16 @@ To resolve internal domains through NetBird, create a **match domain** Nameserve
 1. Go to **DNS** → **Nameservers** → **Add Nameserver**
 2. Choose **Custom DNS**
 
-![Add nameserver](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/dns/netbird-nameserver-add-button.png)
+![Add nameserver](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/dns/netbird-nameserver-add-button.png)
 
 3. Add the IP addresses of your internal DNS servers (e.g., `192.168.0.32`)
 4. Select the **Distribution Groups** — the peer groups that should use this nameserver
 
-![Custom DNS provider](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/dns/netbird-nameserver-custom.png)
+![Custom DNS provider](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/dns/netbird-nameserver-custom.png)
 
 5. Under **Domains**, add a **Match Domain** and enter your internal domains (e.g., `corp.local`, `company.internal`)
 
-![Add match domain](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/dns/netbird-nameserver-add-domain.png)
+![Add match domain](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/dns/netbird-nameserver-add-domain.png)
 
 6. Save the nameserver
 

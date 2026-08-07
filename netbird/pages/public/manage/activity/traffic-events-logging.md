@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/activity/traffic-events-logging.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/manage/activity/traffic-events-logging.mdx)
+> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/activity/traffic-events-logging.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/manage/activity/traffic-events-logging.mdx)
 
 # Traffic Events Logging
 
@@ -32,7 +32,7 @@ connection on both the user's machine and the CRM server. If the connection was 
 [policy](https://docs.netbird.io/manage/access-control/manage-network-access#managing-policies) that restricts access to the CRM server,
 NetBird would log the blocked event on the peer that refused the connection.
 
-![traffic-events-p2p-diagram](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/activity/traffic-events-logging/p2p-traffic-events.png)
+![traffic-events-p2p-diagram](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/activity/traffic-events-logging/p2p-traffic-events.png)
 
 #### Successful P2P Connection Events
 
@@ -41,7 +41,7 @@ NetBird helps you better understand connection flows by aggregating related even
 For example, in a successful peer-to-peer connection scenario, a user initiates a connection from the peer `Alice` to the peer `server`.
 This is illustrated in the screenshot below.
 
-![traffic-events-p2p-successful-connection](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/activity/traffic-events-logging/p2p-successful-connection.png)
+![traffic-events-p2p-successful-connection](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/activity/traffic-events-logging/p2p-successful-connection.png)
 
 You'll see two aggregated flow records, one reported by each peer (source and destination). The record from `Alice` counts the connection start and end from the initiator's perspective.
 
@@ -59,7 +59,7 @@ The initiating peer `Alice` will still report the connection attempt but won't b
 In this scenario, the `IT Admins to Servers` policy is configured to allow only ping requests (`ICMP`),
 meaning all `HTTP` requests are intentionally not allowed. The screenshot below illustrates this behavior.
 
-![traffic-events-p2p-blocked-connection](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/activity/traffic-events-logging/p2p-blocked-connection.png)
+![traffic-events-p2p-blocked-connection](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/activity/traffic-events-logging/p2p-blocked-connection.png)
 
 ### Peer-to-Network Resource Connections
 
@@ -72,7 +72,7 @@ you used the [NetBird Networks feature](https://docs.netbird.io/manage/networks)
 and port 443, NetBird would log the traffic events for that connection on the user's machine and the routing peer that
 routed the connection to the CRM server. If the connection was blocked, NetBird would log the blocked event on the routing peer.
 
-![traffic-events-routed-diagram](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/activity/traffic-events-logging/routed-traffic-events.png)
+![traffic-events-routed-diagram](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/activity/traffic-events-logging/routed-traffic-events.png)
 
 #### Successful Peer-to-Network Resource Events
 
@@ -81,7 +81,7 @@ The traffic is routed through a routing peer, which logs the connection event an
 The access is permitted by the policy `IT Admins to AWS Servers`, which allows connections over the `TCP` protocol on port `443`.
 Note the `ROUTER` column in the table, which identifies the routing peer responsible for routing to the internal network resource.
 
-![network-resource-succesful-connection](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/activity/traffic-events-logging/network-resource-successful-connection.png)
+![network-resource-succesful-connection](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/activity/traffic-events-logging/network-resource-successful-connection.png)
 
 > **Note**
 >
@@ -94,7 +94,7 @@ The screenshot below demonstrates this behavior: the routing peer blocks a conne
 the policy `IT Admins to AWS Servers` does not permit connections over the `HTTP` protocol on port `6432`.
 The routing peer's aggregate shows the number of dropped attempts, so repeated application retries increase the drop count instead of creating one top-level row for every attempt.
 
-![network-resource-succesful-connection](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/activity/traffic-events-logging/network-resource-blocked-connection.png)
+![network-resource-succesful-connection](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/activity/traffic-events-logging/network-resource-blocked-connection.png)
 
 > **Note**
 >
@@ -125,7 +125,7 @@ However, packet size reporting at the kernel level is disabled by default to min
 > You can optionally enable `Traffic Reporting (Kernel)` to capture additional details, such as network packet sizes,
 > at the kernel level. Be aware that enabling this option may lead to higher CPU usage on the NetBird client.
 
-![traffic-events-logging-settings](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/activity/traffic-events-logging/traffic-events-logging-settings.png)
+![traffic-events-logging-settings](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/activity/traffic-events-logging/traffic-events-logging-settings.png)
 
 ### Limiting Traffic Events to Specific Groups
 
@@ -137,7 +137,7 @@ You can scope traffic events logging to only the peers that belong to specific g
 To configure this setting, navigate to `Settings > Networks` in the Experimental section, open the Group Selector under `Enable Traffic Events`
 choose the groups you want to include, and click `Save Groups`.
 
-![traffic-events-groups-logging-settings](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/activity/traffic-events-logging/traffic-events-groups-logging-settings.png)
+![traffic-events-groups-logging-settings](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/activity/traffic-events-logging/traffic-events-groups-logging-settings.png)
 
 ## Log Retention
 
@@ -280,13 +280,13 @@ You can use endpoint addresses, destination ports, and the other flow fields to 
 
 The peer Maycons-MacBook-Pro.local initiates a connection to the Web server on destination port TCP/80. A successful aggregate has non-zero start and end counters and totals the packets and bytes transferred in the reporting window:
 
-![P2P TCP Allowed](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/activity/traffic-events-logging/p2p-tcp-allow.png)
+![P2P TCP Allowed](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/activity/traffic-events-logging/p2p-tcp-allow.png)
 
 Use the reporter, source, destination, direction, protocol, and destination port to align the two perspectives. An end can be reported in a later window when the operating system keeps the TCP session open.
 
 The UDP connection is very similar:
 
-![P2P UDP Allowed](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/activity/traffic-events-logging/p2p-udp-allow.png)
+![P2P UDP Allowed](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/activity/traffic-events-logging/p2p-udp-allow.png)
 
 > **Note**
 >
@@ -296,11 +296,11 @@ When a connection is blocked, you may see similar entries to the following event
 
 **TCP**:
 
-![P2P TCP Blocked](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/activity/traffic-events-logging/p2p-tcp-blocked.png)
+![P2P TCP Blocked](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/activity/traffic-events-logging/p2p-tcp-blocked.png)
 
 **UDP**:
 
-![P2P UDP Blocked](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/activity/traffic-events-logging/p2p-udp-blocked.png)
+![P2P UDP Blocked](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/activity/traffic-events-logging/p2p-udp-blocked.png)
 
 On the refusing side, retries increase `num_of_drops`; the client does not record a successful start or end for traffic it rejected.
 
@@ -312,7 +312,7 @@ On the refusing side, retries increase `num_of_drops`; the client does not recor
 
 ICMP events are similar to TCP and UDP events. The main difference is that ICMP doesn't have ports:
 
-![P2P ICMP Allowed](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/activity/traffic-events-logging/p2p-icmp-allowed.png)
+![P2P ICMP Allowed](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/activity/traffic-events-logging/p2p-icmp-allowed.png)
 
 > **Note**
 >
@@ -324,17 +324,17 @@ Routed events follow the same pattern as P2P events. The main difference is that
 
 **ICMP**:
 
-![Routed ICMP Allowed](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/activity/traffic-events-logging/routed-icmp-allowed.png)
+![Routed ICMP Allowed](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/activity/traffic-events-logging/routed-icmp-allowed.png)
 
 **TCP**:
 
-![Routed TCP Allowed](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/activity/traffic-events-logging/routed-tcp-allowed.png)
+![Routed TCP Allowed](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/activity/traffic-events-logging/routed-tcp-allowed.png)
 
 For routed aggregates, the source or destination can be a resource or network route. The record identifies the routing peer that reported it. The source or destination identifier can be unknown on the routing-peer side for DNS resources.
 
 For site-2-site connections, the events will be similar to the above examples, but you will see a routing peer for each event:
 
-![S2S TCP Allowed](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/activity/traffic-events-logging/s2s-tcp-allowed.png)
+![S2S TCP Allowed](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/activity/traffic-events-logging/s2s-tcp-allowed.png)
 
 ## Limitations
 

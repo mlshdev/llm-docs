@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.1: [docs/agent-networks/modules/50-path-routed-providers.md](https://github.com/netbirdio/netbird/blob/0780a806f2cc2e8a6a51782cfffe0591b7c3fa9c/docs/agent-networks/modules/50-path-routed-providers.md)
+> Release-pinned source for NetBird v0.76.2: [docs/agent-networks/modules/50-path-routed-providers.md](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/modules/50-path-routed-providers.md)
 
 # path-routed providers — Vertex AI + Bedrock
 
@@ -6,13 +6,13 @@ This guide pulls the **path-routed** provider story together in one place
 because it crosses the catalog, the synthesiser, the request parser, and the
 router. The relevant building blocks are the `llm_router` /
 `llm_request_parser` middlewares
-([31-proxy-middleware-builtin.md](https://github.com/netbirdio/netbird/blob/0780a806f2cc2e8a6a51782cfffe0591b7c3fa9c/docs/agent-networks/modules/31-proxy-middleware-builtin.md)), the
-per-provider parser surface ([32-proxy-llm-parsers.md](https://github.com/netbirdio/netbird/blob/0780a806f2cc2e8a6a51782cfffe0591b7c3fa9c/docs/agent-networks/modules/32-proxy-llm-parsers.md)),
+([31-proxy-middleware-builtin.md](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/modules/31-proxy-middleware-builtin.md)), the
+per-provider parser surface ([32-proxy-llm-parsers.md](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/modules/32-proxy-llm-parsers.md)),
 and the synthesiser's catalog → `ProviderRoute` mapping
-([21-management-agentnetwork.md](https://github.com/netbirdio/netbird/blob/0780a806f2cc2e8a6a51782cfffe0591b7c3fa9c/docs/agent-networks/modules/21-management-agentnetwork.md)).
+([21-management-agentnetwork.md](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/modules/21-management-agentnetwork.md)).
 
-Sibling modules: [31-proxy-middleware-builtin.md](https://github.com/netbirdio/netbird/blob/0780a806f2cc2e8a6a51782cfffe0591b7c3fa9c/docs/agent-networks/modules/31-proxy-middleware-builtin.md)
-(router + request parser) and [32-proxy-llm-parsers.md](https://github.com/netbirdio/netbird/blob/0780a806f2cc2e8a6a51782cfffe0591b7c3fa9c/docs/agent-networks/modules/32-proxy-llm-parsers.md)
+Sibling modules: [31-proxy-middleware-builtin.md](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/modules/31-proxy-middleware-builtin.md)
+(router + request parser) and [32-proxy-llm-parsers.md](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/modules/32-proxy-llm-parsers.md)
 (Bedrock parser + pricing).
 
 ***
@@ -36,7 +36,7 @@ and the synthesiser copies the result onto the router route as the `Vertex` /
 (synthesizer.go:450-451).
 On the request leg `llm_router.Invoke` dispatches `isVertexPath` / `isBedrockPath`
 **before** the model lookup
-([llm\_router/middleware.go:138-216](https://github.com/netbirdio/netbird/blob/0780a806f2cc2e8a6a51782cfffe0591b7c3fa9c/proxy/internal/middleware/builtin/llm_router/middleware.go))
+([llm\_router/middleware.go:138-216](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/proxy/internal/middleware/builtin/llm_router/middleware.go))
 so a model the parser extracted from the path can't be claimed by a same-vendor
 *body-routed* provider (e.g. `claude-*` on `api.anthropic.com`).
 
@@ -66,11 +66,11 @@ The synthesiser recognises the `keyfile::` prefix in `providerAuthHeader`
 (synthesizer.go:897-903),
 emits **no** static auth value, and carries the base64 key material on the
 route as `GCPServiceAccountKeyB64`
-([factory.go:56-61](https://github.com/netbirdio/netbird/blob/0780a806f2cc2e8a6a51782cfffe0591b7c3fa9c/proxy/internal/middleware/builtin/llm_router/factory.go)).
+([factory.go:56-61](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/proxy/internal/middleware/builtin/llm_router/factory.go)).
 At request time the router mints a short-lived OAuth2 access token from the key
 (cloud-platform scope) and injects `Authorization: Bearer <access-token>` —
 never the key itself
-([llm\_router/middleware.go:621-692](https://github.com/netbirdio/netbird/blob/0780a806f2cc2e8a6a51782cfffe0591b7c3fa9c/proxy/internal/middleware/builtin/llm_router/middleware.go)):
+([llm\_router/middleware.go:621-692](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/proxy/internal/middleware/builtin/llm_router/middleware.go)):
 
 - One auto-refreshing `oauth2.TokenSource` is cached per key (keyed by a
   SHA-256 of the base64 material), so token minting happens once and refreshes
@@ -84,7 +84,7 @@ never the key itself
 ### Metering — Anthropic-on-Vertex only
 
 The request parser extracts `{publisher, model, action}` from the path
-(`parseVertexPath`, [llm\_request\_parser/middleware.go:237-263](https://github.com/netbirdio/netbird/blob/0780a806f2cc2e8a6a51782cfffe0591b7c3fa9c/proxy/internal/middleware/builtin/llm_request_parser/middleware.go)),
+(`parseVertexPath`, [llm\_request\_parser/middleware.go:237-263](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/proxy/internal/middleware/builtin/llm_request_parser/middleware.go)),
 strips the `@version` suffix from the model, and maps the publisher to a parser
 surface via `vertexPublisherVendor`:
 
@@ -100,7 +100,7 @@ surface via `vertexPublisherVendor`:
 `llm.provider` for a Vertex publisher, `llm_router` returns
 `llm_policy.unmeterable_publisher` (403) rather than forwarding the request
 uncounted — serving it would bypass token / budget metering
-([llm\_router/middleware.go:144-162, 712-728](https://github.com/netbirdio/netbird/blob/0780a806f2cc2e8a6a51782cfffe0591b7c3fa9c/proxy/internal/middleware/builtin/llm_router/middleware.go)).
+([llm\_router/middleware.go:144-162, 712-728](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/proxy/internal/middleware/builtin/llm_router/middleware.go)).
 A Gemini parser would lift this restriction; until then the `google` publisher
 is omitted from the catalog.
 
@@ -137,7 +137,7 @@ Bedrock model ids in the request path must be the cross-region
 **inference-profile** form, e.g.
 `eu.anthropic.claude-sonnet-4-5-20250929-v1:0`. The bare
 `anthropic.claude-…` id is rejected by AWS. `normalizeBedrockModel`
-([llm\_request\_parser/middleware.go:398-414](https://github.com/netbirdio/netbird/blob/0780a806f2cc2e8a6a51782cfffe0591b7c3fa9c/proxy/internal/middleware/builtin/llm_request_parser/middleware.go))
+([llm\_request\_parser/middleware.go:398-414](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/proxy/internal/middleware/builtin/llm_request_parser/middleware.go))
 strips the region prefix (`us.` / `eu.` / `apac.` / `global.`), an optional ARN
 wrapper, and the `-YYYYMMDD-vN[:N]` version/throughput suffix so the normalised
 id (`anthropic.claude-sonnet-4-5`) matches the catalog/pricing key.
@@ -146,7 +146,7 @@ id (`anthropic.claude-sonnet-4-5`) matches the catalog/pricing key.
 
 `/model/{modelId}/{action}` where action ∈ `invoke`,
 `invoke-with-response-stream`, `converse`, `converse-stream`
-([llm\_request\_parser/middleware.go:363-390](https://github.com/netbirdio/netbird/blob/0780a806f2cc2e8a6a51782cfffe0591b7c3fa9c/proxy/internal/middleware/builtin/llm_request_parser/middleware.go)).
+([llm\_request\_parser/middleware.go:363-390](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/proxy/internal/middleware/builtin/llm_request_parser/middleware.go)).
 `invoke` / `converse` are non-streaming; the `-stream` actions set the streaming
 flag.
 
@@ -155,7 +155,7 @@ flag.
   cache buckets.
 - **Converse** uses the unified camelCase shape with a precomputed `totalTokens`.
 - The `BedrockParser` reads both shapes on the response leg
-  ([bedrock.go](https://github.com/netbirdio/netbird/blob/0780a806f2cc2e8a6a51782cfffe0591b7c3fa9c/proxy/internal/llm/bedrock.go)); the request parser
+  ([bedrock.go](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/proxy/internal/llm/bedrock.go)); the request parser
   doesn't need to distinguish them (`ParseRequest` is a no-op — model + stream
   come from the path).
 
@@ -164,7 +164,7 @@ flag.
 The `-stream` actions return `application/vnd.amazon.eventstream` (the AWS
 binary event-stream framing), and streaming **is metered**.
 `accumulateBedrockStream`
-([llm\_response\_parser/streaming\_bedrock.go](https://github.com/netbirdio/netbird/blob/0780a806f2cc2e8a6a51782cfffe0591b7c3fa9c/proxy/internal/middleware/builtin/llm_response_parser/streaming_bedrock.go))
+([llm\_response\_parser/streaming\_bedrock.go](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/proxy/internal/middleware/builtin/llm_response_parser/streaming_bedrock.go))
 decodes the frames with `aws-sdk-go-v2/aws/protocol/eventstream`:
 
 - InvokeModel `chunk` frames wrap a base64 `{"bytes":…}` payload carrying a
@@ -184,14 +184,14 @@ providers that also use `/model/...`. Both the request parser
 When the prefix is present, the router sets
 `RewriteUpstream.StripPathPrefix = "/bedrock"` so the **native** path
 (`/model/...`) is what reaches `bedrock-runtime.<region>.amazonaws.com`
-([llm\_router/middleware.go:168-184, 320-348](https://github.com/netbirdio/netbird/blob/0780a806f2cc2e8a6a51782cfffe0591b7c3fa9c/proxy/internal/middleware/builtin/llm_router/middleware.go)).
+([llm\_router/middleware.go:168-184, 320-348](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/proxy/internal/middleware/builtin/llm_router/middleware.go)).
 
 ## Model allowlist on path-routed providers
 
 Because the model lives in the URL rather than the body, a path-routed provider
 credential could otherwise be used for any model the upstream supports. The
 router still enforces the route's `Models` allowlist via `matchPathRoute`
-([llm\_router/middleware.go:370-416](https://github.com/netbirdio/netbird/blob/0780a806f2cc2e8a6a51782cfffe0591b7c3fa9c/proxy/internal/middleware/builtin/llm_router/middleware.go)):
+([llm\_router/middleware.go:370-416](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/proxy/internal/middleware/builtin/llm_router/middleware.go)):
 
 1. Filter to routes of the matching style (`Vertex` / `Bedrock`).
 2. Filter to routes whose `AllowedGroupIDs` authorise the caller's groups
@@ -207,7 +207,7 @@ upstream serves (still subject to the unmeterable-publisher gate on Vertex).
 
 Model-less OpenAI endpoints (`GET /v1/models`) are **never** routed to a
 Vertex/Bedrock provider — `matchModelless` skips path-routed routes
-([llm\_router/middleware.go:427-462](https://github.com/netbirdio/netbird/blob/0780a806f2cc2e8a6a51782cfffe0591b7c3fa9c/proxy/internal/middleware/builtin/llm_router/middleware.go))
+([llm\_router/middleware.go:427-462](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/proxy/internal/middleware/builtin/llm_router/middleware.go))
 so a model-listing call can't be rewritten onto an upstream that would 404 it.
 
 ## Catalog ↔ pricing cross-check
@@ -247,7 +247,7 @@ the relevant entries.
 
 ## Cross-references
 
-- Router + request-parser detail: [31-proxy-middleware-builtin.md](https://github.com/netbirdio/netbird/blob/0780a806f2cc2e8a6a51782cfffe0591b7c3fa9c/docs/agent-networks/modules/31-proxy-middleware-builtin.md)
-- Bedrock parser + pricing + SSE / event-stream: [32-proxy-llm-parsers.md](https://github.com/netbirdio/netbird/blob/0780a806f2cc2e8a6a51782cfffe0591b7c3fa9c/docs/agent-networks/modules/32-proxy-llm-parsers.md)
-- Catalog → route synthesis + `keyfile::` handling: [21-management-agentnetwork.md](https://github.com/netbirdio/netbird/blob/0780a806f2cc2e8a6a51782cfffe0591b7c3fa9c/docs/agent-networks/modules/21-management-agentnetwork.md)
-- Overview: [../00-overview.md](https://github.com/netbirdio/netbird/blob/0780a806f2cc2e8a6a51782cfffe0591b7c3fa9c/docs/agent-networks/00-overview.md)
+- Router + request-parser detail: [31-proxy-middleware-builtin.md](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/modules/31-proxy-middleware-builtin.md)
+- Bedrock parser + pricing + SSE / event-stream: [32-proxy-llm-parsers.md](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/modules/32-proxy-llm-parsers.md)
+- Catalog → route synthesis + `keyfile::` handling: [21-management-agentnetwork.md](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/modules/21-management-agentnetwork.md)
+- Overview: [../00-overview.md](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/00-overview.md)

@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/get-started/install/truenas.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/get-started/install/truenas.mdx)
+> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/get-started/install/truenas.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/get-started/install/truenas.mdx)
 
 # Install NetBird on TrueNAS
 
@@ -12,11 +12,11 @@ NetBird can now be installed on TrueNAS via [TrueNAS Apps](https://apps.truenas.
 
 1. In TrueNAS, go to **Apps** and search for **NetBird**. If it doesn't appear, refresh the catalog (e.g., **Discover Apps** or the catalog refresh option in your TrueNAS version).
 
-![Refresh TrueNAS catalog and search for NetBird](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/get-started/truenas/truenas-refresh-catalog.png)
+![Refresh TrueNAS catalog and search for NetBird](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/get-started/truenas/truenas-refresh-catalog.png)
 
 2. Click **Install** and configure the app as described below. Most defaults are fine; the main fields you need to set are **Hostname** and **Setup Key**.
 
-![Install NetBird app on TrueNAS](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/get-started/truenas/truenas-install-netbird.png)
+![Install NetBird app on TrueNAS](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/get-started/truenas/truenas-install-netbird.png)
 
 3. After installation, confirm the app is **Running** in the Apps list.
 4. Open your [NetBird dashboard](https://app.netbird.io/) and go to **Peers** → **Servers**. You should see your TrueNAS peer listed. Rename it (e.g., "TrueNAS" or "NAS") if you like for easier identification.
@@ -25,7 +25,7 @@ NetBird can now be installed on TrueNAS via [TrueNAS Apps](https://apps.truenas.
 
 When you install the NetBird app, TrueNAS shows an **Edit Netbird Client** form. Use this as a guide:
 
-![NetBird client configuration form with Setup Key](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/get-started/truenas/truenas-config-setupkey.png)
+![NetBird client configuration form with Setup Key](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/get-started/truenas/truenas-config-setupkey.png)
 
 **Netbird Client Configuration**
 

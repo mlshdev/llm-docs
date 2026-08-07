@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/agent-network/index.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/agent-network/index.mdx)
+> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/agent-network/index.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/agent-network/index.mdx)
 
 # What is NetBird Agent Network?
 
@@ -21,7 +21,7 @@ The NetBird Control Center below captures it in essence: the agents on the left 
 databases, servers, and LLM APIs on the right, only where the policies in the middle
 allow it.
 
-![agent network](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/agent-network/overview/agent-network-control-center-v2.png)
+![agent network](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/agent-network/overview/agent-network-control-center-v2.png)
 
 ## Two Use Cases
 
@@ -39,7 +39,7 @@ real identity from your identity provider like Okta, Microsoft Entra ID, Google,
 and others. That lets you apply per-identity policies, token and cost limits, model guardrails, and
 full audit logs to outbound LLM traffic.
 
-![agent network llm policy](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/agent-network/overview/agent-network-llm-policy.png)
+![agent network llm policy](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/agent-network/overview/agent-network-llm-policy.png)
 
 ### Agentic Access to Internal Resources and Local Models
 
@@ -51,7 +51,7 @@ NetBird’s overlay network traverses firewalls and works across datacenters and
 configuring security groups, or changing network topology. Each agent connects with its own identity, and access policies
 define exactly which resources it can reach, just like any other NetBird peer in the network.
 
-![agent network llm policy](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/agent-network/overview/agent-network-internal-resources-policy.png)
+![agent network llm policy](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/agent-network/overview/agent-network-internal-resources-policy.png)
 
 ## How NetBird Fits in Your Enterprise IT Stack
 

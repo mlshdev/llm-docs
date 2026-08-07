@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/use-cases/kubernetes/routing-peer.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/use-cases/kubernetes/routing-peer.mdx)
+> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/use-cases/kubernetes/routing-peer.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/use-cases/kubernetes/routing-peer.mdx)
 
 # Routing Peer
 
@@ -86,3 +86,29 @@ spec:
 ```
 
 Members of the `All` NetBird group can now reach the nginx service at `nginx.default.prod.company.internal` through the NetBird network.
+
+## NetworkEgress
+
+The network router can also be used for egress traffic to reach other peers within the NetBird network. The network egress resource defines the target and links it to a network router. The target can either be a FQDN hostname or an IP address. Generally using a hostname is preferable especially if the target resource is hosted in another Kubernetes cluster. Egress through the network router works by assigning a random destination port for each network egress resource. This way the destination address and port can be rewritten before reaching the tunnel. Native Kubernetes services are used for directing the traffic to the network router, meaning normal service discovery can be used for external peers.
+
+Create a network egress resource in the namespace where it will be consumed. The operator will create an accompanying service with the same name for the egress resource. In this example the target is the nginx deployment from the network resource example.
+
+```yaml
+apiVersion: netbird.io/v1alpha1
+kind: NetworkEgress
+metadata:
+  name: nginx
+  namespace: default
+spec:
+  networkRouterRef:
+    name: prod
+    namespace: netbird
+  target:
+    fqdn:
+      hostname: nginx.default.prod.company.internal
+  ports:
+    - name: http
+      port: 80
+```
+
+Once the network egress resource has been reconciled an HTTP request to `nginx.default.svc.cluster.local.` should reach the external resource.

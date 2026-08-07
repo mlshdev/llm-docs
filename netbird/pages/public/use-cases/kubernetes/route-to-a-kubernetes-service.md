@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/use-cases/kubernetes/route-to-a-kubernetes-service.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/use-cases/kubernetes/route-to-a-kubernetes-service.mdx)
+> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/use-cases/kubernetes/route-to-a-kubernetes-service.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/use-cases/kubernetes/route-to-a-kubernetes-service.mdx)
 
 # Route to a Kubernetes service with high availability
 
@@ -8,7 +8,7 @@ This guide walks the whole journey: create the NetBird-side pieces the operator 
 
 A NetBird client (for example, your laptop) reaches a private Kubernetes `ClusterIP` Service by a stable DNS name, with traffic flowing through a pool of routing-peer pods spread across your nodes. Lose a pod or a node and clients fail over automatically to a healthy peer.
 
-![A NetBird client reaching a Kubernetes service through three routing-peer pods, one per node](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/integrations/kubernetes/use-cases/route-to-a-kubernetes-service/topology.svg)
+![A NetBird client reaching a Kubernetes service through three routing-peer pods, one per node](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/integrations/kubernetes/use-cases/route-to-a-kubernetes-service/topology.svg)
 
 ## Prerequisites
 
@@ -28,7 +28,7 @@ In the dashboard, go to **DNS > Zones > Add Zone**:
 - **Name**: `k8s.company.internal`
 - **Distribution Groups**: `kubernetes-clients` — only peers in these groups can resolve the zone's records.
 
-![The k8s.company.internal custom DNS zone, distributed to the kubernetes-clients group, with the operator-created nginx record](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/integrations/kubernetes/use-cases/route-to-a-kubernetes-service/01-dns-zone.png)
+![The k8s.company.internal custom DNS zone, distributed to the kubernetes-clients group, with the operator-created nginx record](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/integrations/kubernetes/use-cases/route-to-a-kubernetes-service/01-dns-zone.png)
 
 > **Note**
 >
@@ -52,7 +52,7 @@ Then create a policy via **Access Control > Policies > Add policy**:
 - **Destination**: `kubernetes-services`
 - **Protocol/Ports**: `TCP` `80` (match your Service's port)
 
-![The kubernetes-access policy allowing kubernetes-clients to reach kubernetes-services over TCP 80](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/integrations/kubernetes/use-cases/route-to-a-kubernetes-service/02-access-policy.png)
+![The kubernetes-access policy allowing kubernetes-clients to reach kubernetes-services over TCP 80](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/integrations/kubernetes/use-cases/route-to-a-kubernetes-service/02-access-policy.png)
 
 See [Manage network access](https://docs.netbird.io/manage/access-control/manage-network-access).
 
@@ -139,7 +139,7 @@ spec:
 
 The Service must be type `ClusterIP`. The operator creates the record `nginx.default.k8s.company.internal` (`<service>.<namespace>.<zone>`) pointing at the Service's ClusterIP. The `kubernetes` network now shows its routing peers and the resource:
 
-![The kubernetes network with its routing peers and the nginx resource](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/integrations/kubernetes/use-cases/route-to-a-kubernetes-service/03-network.png)
+![The kubernetes network with its routing peers and the nginx resource](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/integrations/kubernetes/use-cases/route-to-a-kubernetes-service/03-network.png)
 
 ## Step 5: Verify and test failover
 
@@ -150,7 +150,7 @@ kubectl -n netbird get pods -l app.kubernetes.io/name=networkrouter -o wide
 kubectl -n netbird get pdb
 ```
 
-![kubectl get pods -o wide showing the routing peers on different nodes](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/integrations/kubernetes/use-cases/route-to-a-kubernetes-service/04-pods-across-nodes.png)
+![kubectl get pods -o wide showing the routing peers on different nodes](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/integrations/kubernetes/use-cases/route-to-a-kubernetes-service/04-pods-across-nodes.png)
 
 From a NetBird client in `kubernetes-clients`, resolve and reach the service:
 
@@ -181,7 +181,7 @@ app.k8s.company.internal   CNAME   nginx.default.k8s.company.internal
 
 In the dashboard, that's **DNS > Zones >** the zone's **Add** button: a `CNAME` record with hostname `app` and the operator's record as the target.
 
-![Adding a CNAME record with hostname app targeting nginx.default.k8s.company.internal in the k8s.company.internal zone](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/integrations/kubernetes/use-cases/route-to-a-kubernetes-service/friendly-dns-cname.png)
+![Adding a CNAME record with hostname app targeting nginx.default.k8s.company.internal in the k8s.company.internal zone](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/integrations/kubernetes/use-cases/route-to-a-kubernetes-service/friendly-dns-cname.png)
 
 Because it targets the operator-managed record, the alias keeps resolving if the service's ClusterIP changes. A static `A` record straight to the ClusterIP also works, but it goes stale when the ClusterIP changes — prefer the CNAME.
 

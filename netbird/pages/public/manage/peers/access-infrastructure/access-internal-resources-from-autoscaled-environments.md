@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/peers/access-infrastructure/access-internal-resources-from-autoscaled-environments.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/manage/peers/access-infrastructure/access-internal-resources-from-autoscaled-environments.mdx)
+> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/peers/access-infrastructure/access-internal-resources-from-autoscaled-environments.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/manage/peers/access-infrastructure/access-internal-resources-from-autoscaled-environments.mdx)
 
 # Access Internal Resources From Autoscaled Environments
 
@@ -57,7 +57,7 @@ To create an appropriate setup key for this use case:
 
 Here's an example:
 
-![NetBird Setup Keys](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/peers/access-infrastructure/access-internal-resources-from-autoscaled-environments/autoscaled-01.png)
+![NetBird Setup Keys](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/access-infrastructure/access-internal-resources-from-autoscaled-environments/autoscaled-01.png)
 
 This configuration allows for dynamic management of your Kubernetes pods within the NetBird network. As your cluster scales up, new pods will seamlessly join the network. When pods are terminated or remain offline, they'll be automatically removed, maintaining a clean and efficient network topology.
 
@@ -69,7 +69,7 @@ Follow these steps to configure the network route:
 
 In the NetBird dashboard, navigate to `Network Routing` → `Routes` and click on `Add Route` to create a new network route.
 
-![NetBird Add Route](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/peers/access-infrastructure/access-internal-resources-from-autoscaled-environments/autoscaled-02.png)
+![NetBird Add Route](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/access-infrastructure/access-internal-resources-from-autoscaled-environments/autoscaled-02.png)
 
 - In the `Network Range` field, enter the private IP range of your Kubernetes Pods. This is typically something like `10.0.0.0/16` for many Kubernetes clusters, but it may vary depending on your specific setup. If you're unsure, you can check this range in your Kubernetes configuration or consult your cluster administrator.
 - Navigate to the `Peer Group` tab and select your Kubernetes cluster's group as the routing peer. This group should contain all your cluster's nodes and will automatically include all the Pods running on these nodes.
@@ -77,15 +77,15 @@ In the NetBird dashboard, navigate to `Network Routing` → `Routes` and click o
 - Review your settings to ensure everything is correct. The route you're creating will allow traffic from your local machine (in the distribution group) to reach the Kubernetes Pods (in the peer group) via the specified network range.
 - Once you're satisfied with the configuration, click the `Continue` button.
 
-![NetBird Create a New Route](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/peers/access-infrastructure/access-internal-resources-from-autoscaled-environments/autoscaled-03.png)
+![NetBird Create a New Route](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/access-infrastructure/access-internal-resources-from-autoscaled-environments/autoscaled-03.png)
 
 Provide a descriptive name for your route, such as `NetBird K8s Demo`.
 
-![NetBird Route Name](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/peers/access-infrastructure/access-internal-resources-from-autoscaled-environments/autoscaled-04.png)
+![NetBird Route Name](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/access-infrastructure/access-internal-resources-from-autoscaled-environments/autoscaled-04.png)
 
 This setup creates a secure pathway for your local machine to communicate with the Pods in your Kubernetes cluster through the NetBird network. As new Pods are created or removed due to autoscaling, they'll automatically be included in or excluded from this route, maintaining seamless access without manual intervention.
 
-![NetBird Network Route Created](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/peers/access-infrastructure/access-internal-resources-from-autoscaled-environments/autoscaled-06.png)
+![NetBird Network Route Created](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/access-infrastructure/access-internal-resources-from-autoscaled-environments/autoscaled-06.png)
 
 ## 3. Setting Up Access Policies for Secure Communication
 
@@ -102,15 +102,15 @@ To create a new access policy:
 
 Your access policy must look similar to this:
 
-![NetBird Access Policy](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/peers/access-infrastructure/access-internal-resources-from-autoscaled-environments/autoscaled-07.png)
+![NetBird Access Policy](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/access-infrastructure/access-internal-resources-from-autoscaled-environments/autoscaled-07.png)
 
 Click `Continue` and name your policy:
 
-![NetBird Access Policy Name](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/peers/access-infrastructure/access-internal-resources-from-autoscaled-environments/autoscaled-08.png)
+![NetBird Access Policy Name](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/access-infrastructure/access-internal-resources-from-autoscaled-environments/autoscaled-08.png)
 
 Once you save your policy, it is a good practice to disable or modify the default `All` group policy to prevent unrestricted access.
 
-![NetBird Access Policies](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/peers/access-infrastructure/access-internal-resources-from-autoscaled-environments/autoscaled-09.png)
+![NetBird Access Policies](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/access-infrastructure/access-internal-resources-from-autoscaled-environments/autoscaled-09.png)
 
 This tailored access policy ensures that only authorized devices (your local machine) can communicate with the Kubernetes cluster, significantly improving your network's security posture. As your environment scales, this policy will automatically apply to new pods, maintaining consistent access control.
 
@@ -217,7 +217,7 @@ kubectl apply -f quote-app.yaml
 
 After a few seconds, the app will appear in NetBird's `Peers` dashboard. If you hover over the `Assigned Groups`, you'll notice the app automatically joined the group `Kubernetes Cluster` as expected.
 
-![NetBird App Joined NetBird](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/peers/access-infrastructure/access-internal-resources-from-autoscaled-environments/autoscaled-10.png)
+![NetBird App Joined NetBird](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/access-infrastructure/access-internal-resources-from-autoscaled-environments/autoscaled-10.png)
 
 ## 5. Configuring Horizontal Pod Autoscaler (HPA)
 
@@ -316,18 +316,18 @@ quote-hpa   Deployment/quote   cpu: 1%/20%    1         3         1          32m
 
 If you go to NetBird `Peers` dashboard, you will see new peers automatically joining the network as pods scale up.
 
-![NetBird Two Peers](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/peers/access-infrastructure/access-internal-resources-from-autoscaled-environments/autoscaled-11.png)
+![NetBird Two Peers](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/access-infrastructure/access-internal-resources-from-autoscaled-environments/autoscaled-11.png)
 
 As you can see, all peers join the same group, meaning all share the same access policy you defined.
 
-![NetBird Three Peers](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/peers/access-infrastructure/access-internal-resources-from-autoscaled-environments/autoscaled-12.png)
+![NetBird Three Peers](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/access-infrastructure/access-internal-resources-from-autoscaled-environments/autoscaled-12.png)
 
 Conversely, when scaling down, peers are removed from the group and then terminated.
 
-![NetBird Scaling Down Peers](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/peers/access-infrastructure/access-internal-resources-from-autoscaled-environments/autoscaled-13.png)
+![NetBird Scaling Down Peers](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/access-infrastructure/access-internal-resources-from-autoscaled-environments/autoscaled-13.png)
 
 When ready, stop the load generator by pressing `Ctrl+C` in its terminal window; eventually, you will see only one app peer in the dashboard.
 
-![NetBird Initial State](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/peers/access-infrastructure/access-internal-resources-from-autoscaled-environments/autoscaled-14.png)
+![NetBird Initial State](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/access-infrastructure/access-internal-resources-from-autoscaled-environments/autoscaled-14.png)
 
 This demonstration showcases NetBird's powerful capabilities in seamlessly managing network connections within a dynamic, autoscaling Kubernetes environment. NetBird automatically adapts to your cluster's changing topology without any manual intervention, ensuring secure and efficient connectivity as pods scale up or down. This automation saves significant time and effort in network management and enhances your environment's security posture. By integrating NetBird, you're implementing a robust, scalable networking solution that keeps pace with your application's demands while maintaining strict access controls.

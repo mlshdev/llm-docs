@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.1: [docs/agent-networks/modules/20-management-store.md](https://github.com/netbirdio/netbird/blob/0780a806f2cc2e8a6a51782cfffe0591b7c3fa9c/docs/agent-networks/modules/20-management-store.md)
+> Release-pinned source for NetBird v0.76.2: [docs/agent-networks/modules/20-management-store.md](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/modules/20-management-store.md)
 
 # management/store — persistence for agent-network entities
 
@@ -9,7 +9,7 @@
 
 This module is the persistence layer for the Agent Network feature. Everything the management server stores about LLM proxying — providers, policies, guardrails, the per-account settings row, a usage-counter table written on every proxied LLM request, and the account-budget rules — flows through the methods added to `store.Store`. The module owns six tables, six entity types from `management/server/agentnetwork/types`, and a single hot-path upsert (`IncrementAgentNetworkConsumption`) consumed by the proxy fleet.
 
-Out of scope here: the catalog of provider definitions (compiled-in, no DB), the synthesizer/manager built on top of these CRUDs (covered in [21-management-agentnetwork.md](https://github.com/netbirdio/netbird/blob/0780a806f2cc2e8a6a51782cfffe0591b7c3fa9c/docs/agent-networks/modules/21-management-agentnetwork.md)), and the HTTP handlers that translate API requests into Save/Delete calls.
+Out of scope here: the catalog of provider definitions (compiled-in, no DB), the synthesizer/manager built on top of these CRUDs (covered in [21-management-agentnetwork.md](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/modules/21-management-agentnetwork.md)), and the HTTP handlers that translate API requests into Save/Delete calls.
 
 ## Files
 
@@ -114,6 +114,6 @@ Gap: there is no store-level test for providers (encryption round-trip), policie
 
 ## Cross-references
 
-- Upstream: [shared/api](https://github.com/netbirdio/netbird/blob/0780a806f2cc2e8a6a51782cfffe0591b7c3fa9c/docs/agent-networks/modules/10-shared-api.md), [management/agentnetwork](https://github.com/netbirdio/netbird/blob/0780a806f2cc2e8a6a51782cfffe0591b7c3fa9c/docs/agent-networks/modules/21-management-agentnetwork.md)
-- End-to-end flow: [../01-end-to-end-flows.md](https://github.com/netbirdio/netbird/blob/0780a806f2cc2e8a6a51782cfffe0591b7c3fa9c/docs/agent-networks/01-end-to-end-flows.md)
-- Top-level: [../00-overview.md](https://github.com/netbirdio/netbird/blob/0780a806f2cc2e8a6a51782cfffe0591b7c3fa9c/docs/agent-networks/00-overview.md)
+- Upstream: [shared/api](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/modules/10-shared-api.md), [management/agentnetwork](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/modules/21-management-agentnetwork.md)
+- End-to-end flow: [../01-end-to-end-flows.md](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/01-end-to-end-flows.md)
+- Top-level: [../00-overview.md](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/00-overview.md)

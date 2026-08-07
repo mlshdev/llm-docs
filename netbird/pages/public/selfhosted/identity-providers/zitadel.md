@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/identity-providers/zitadel.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/selfhosted/identity-providers/zitadel.mdx)
+> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/identity-providers/zitadel.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/selfhosted/identity-providers/zitadel.mdx)
 
 # Zitadel with NetBird Self-Hosted
 
@@ -22,12 +22,12 @@ Add Zitadel as an external IdP directly in the NetBird Management Dashboard. Thi
 1. Log in to your Zitadel Console
 2. If you don't have a project yet, click **New Project** (or navigate to an existing project)
 
-![Create project](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/self-hosted/zitadel/01_create-project-zitadel.png)
+![Create project](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/zitadel/01_create-project-zitadel.png)
 
 3. Fill in the project details:
    - **Name**: `NetBird` (or your preferred name)
 
-![Name project](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/self-hosted/zitadel/02_name-project-zitadel.png)
+![Name project](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/zitadel/02_name-project-zitadel.png)
 
 4. Click **Create**
 
@@ -36,19 +36,19 @@ Add Zitadel as an external IdP directly in the NetBird Management Dashboard. Thi
 1. Make sure you're in your project (select it from the project dropdown if needed)
 2. Click **New** in the **Applications** section
 
-![New application](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/self-hosted/zitadel/03_new-app-zitadel.png)
+![New application](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/zitadel/03_new-app-zitadel.png)
 
 3. Fill in:
    - **Name**: `NetBird`
    - **Type**: `Web`
 
-![Application type Web](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/self-hosted/zitadel/04_app-new-type-web-zitadel.png)
+![Application type Web](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/zitadel/04_app-new-type-web-zitadel.png)
 
 4. Click **Continue**
 5. Configure authentication:
    - **Authentication Method**: `Code` (not PKCE)
 
-![Select Code authentication](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/self-hosted/zitadel/05_app-select-code-zitadel.png)
+![Select Code authentication](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/zitadel/05_app-select-code-zitadel.png)
 
 6. **Don't click Create yet** — you'll add the redirect URI in Step 4
 
@@ -69,7 +69,7 @@ Add Zitadel as an external IdP directly in the NetBird Management Dashboard. Thi
 
 5. NetBird will display a **Redirect URL** — **copy this URL** (but don't click **Save** yet)
 
-![Copy callback URL from NetBird](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/self-hosted/zitadel/06_copy-callback-url-netbird-zitadel.png)
+![Copy callback URL from NetBird](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/zitadel/06_copy-callback-url-netbird-zitadel.png)
 
 ### Step 4: Complete Application Configuration in Zitadel
 
@@ -77,15 +77,15 @@ Add Zitadel as an external IdP directly in the NetBird Management Dashboard. Thi
 2. In the redirect URIs field, paste the redirect URL you copied from NetBird
    - *(Optional)* In the **Post Logout URIs** field, add `https://netbird.example.com/oauth2/logout/callback` (replace `netbird.example.com` with your NetBird dashboard domain) so logout redirects back to NetBird cleanly
 
-![Add redirect URI](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/self-hosted/zitadel/07_add_redirect-uri-zitadel.png)
+![Add redirect URI](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/zitadel/07_add_redirect-uri-zitadel.png)
 
 3. Click **Create**
 
-![Click Create application](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/self-hosted/zitadel/08_click-create-app-zitadel.png)
+![Click Create application](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/zitadel/08_click-create-app-zitadel.png)
 
 4. Now you will have the Client ID and Secret displayed.
 
-![Copy Client ID](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/self-hosted/zitadel/09_copy-client-id-zitadel.png)
+![Copy Client ID](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/zitadel/09_copy-client-id-zitadel.png)
 
 ### Step 5: Complete NetBird Setup
 
@@ -93,7 +93,7 @@ Add Zitadel as an external IdP directly in the NetBird Management Dashboard. Thi
 2. In the identity provider form, paste the **Client ID and Secret** you displayed in Step 4
 3. Click **Save**
 
-![Fill NetBird configuration](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/self-hosted/zitadel/10_fill-netbird-config-zitadel.png)
+![Fill NetBird configuration](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/zitadel/10_fill-netbird-config-zitadel.png)
 
 ### Step 6: Configure Token Settings in Zitadel
 
@@ -103,7 +103,7 @@ Add Zitadel as an external IdP directly in the NetBird Management Dashboard. Thi
    - **Include user's profile info in the ID Token**
    - **User roles inside ID Token** (if group mapping is needed)
 
-![Token settings](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/self-hosted/zitadel/11_token-settings-zitadel.png)
+![Token settings](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/zitadel/11_token-settings-zitadel.png)
 
 4. Click **Save**
 
@@ -143,7 +143,7 @@ function groupsClaim(ctx, api) {
 
 5. Click **Add**
 
-![Create action](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/self-hosted/zitadel/jwt_create-action.png)
+![Create action](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/zitadel/jwt_create-action.png)
 
 #### Step 2: Configure Action Triggers
 
@@ -153,9 +153,9 @@ function groupsClaim(ctx, api) {
    - **Pre Userinfo creation**
    - **Pre access token creation**
 
-![Add trigger](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/self-hosted/zitadel/jwt_add-trigger.png)
+![Add trigger](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/zitadel/jwt_add-trigger.png)
 
-![Add trigger](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/self-hosted/zitadel/jwt_triggers.png)
+![Add trigger](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/zitadel/jwt_triggers.png)
 
 #### Step 3: Assign Roles to Users
 

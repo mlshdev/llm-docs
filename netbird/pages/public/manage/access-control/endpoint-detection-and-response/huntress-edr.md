@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/access-control/endpoint-detection-and-response/huntress-edr.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/manage/access-control/endpoint-detection-and-response/huntress-edr.mdx)
+> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/access-control/endpoint-detection-and-response/huntress-edr.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/manage/access-control/endpoint-detection-and-response/huntress-edr.mdx)
 
 # Restrict Network Access with Huntress EDR
 
@@ -40,16 +40,16 @@ Before you start creating and configuring a Huntress integration, ensure that yo
 - Navigate to the [Integrations » EDR](https://app.netbird.io/integrations?tab=edr) tab in the NetBird dashboard
 - Click **Connect Huntress** to start the configuration wizard
 
-![Huntress integration getting started](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/access-control/endpoint-detection-and-response/huntress-edr/getting-started.png)
+![Huntress integration getting started](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/access-control/endpoint-detection-and-response/huntress-edr/getting-started.png)
 
 - Click the **Get Started** button to initiate the integration process
 - Enter the API key and secret you created in the previous step and click **Continue** to verify the connection
 
-![Huntress API configuration](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/access-control/endpoint-detection-and-response/huntress-edr/api-config.png)
+![Huntress API configuration](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/access-control/endpoint-detection-and-response/huntress-edr/api-config.png)
 
 - Select the **groups** you want to apply the integration to and click **Connect**
 
-![Huntress group configuration](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/access-control/endpoint-detection-and-response/huntress-edr/group-config.png)
+![Huntress group configuration](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/access-control/endpoint-detection-and-response/huntress-edr/group-config.png)
 
 > **Note**
 >
@@ -61,11 +61,11 @@ Before you start creating and configuring a Huntress integration, ensure that yo
   - **Managed Microsoft Defender**: Requires Defender to be enabled, up-to-date, scanned recently, and no conflicting antivirus detected.
   - **Firewall**: Requires an active firewall with all required profiles enabled.
 
-![edr-integrations](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/access-control/endpoint-detection-and-response/huntress-edr/compliance-config.png)
+![edr-integrations](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/access-control/endpoint-detection-and-response/huntress-edr/compliance-config.png)
 
 - Configure the **Huntress Sync Window** (default is 24 hours). This setting determines which devices NetBird will consider for network access based on their recent activity in Huntress. Only devices that have been active and reporting to Huntress within this time window will be synchronized. These devices must then also meet the configured compliance criteria to gain network access.
 
-![edr-integrations](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/access-control/endpoint-detection-and-response/huntress-edr/sync-config.png)
+![edr-integrations](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/access-control/endpoint-detection-and-response/huntress-edr/sync-config.png)
 
 - Click **Connect** to complete the integration setup
 
@@ -73,7 +73,7 @@ Before you start creating and configuring a Huntress integration, ensure that yo
   Peers without the Huntress agent or those that don't meet the compliance requirements will appear with an `Approval required` mark in the peers list and won't be able to access
   the network until they have the agent installed and satisfy all the specified security requirements.
 
-![edr-approval-required](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/access-control/endpoint-detection-and-response/huntress-edr/edr-approval-required.png)
+![edr-approval-required](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/access-control/endpoint-detection-and-response/huntress-edr/edr-approval-required.png)
 
 > **Note**
 >

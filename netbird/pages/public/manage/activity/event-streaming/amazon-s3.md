@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/activity/event-streaming/amazon-s3.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/manage/activity/event-streaming/amazon-s3.mdx)
+> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/activity/event-streaming/amazon-s3.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/manage/activity/event-streaming/amazon-s3.mdx)
 
 # Stream Network Activity to Amazon S3
 
@@ -67,20 +67,20 @@ If you don't have the required permissions, ask your AWS administrator to grant 
 
 - Navigate to the [Integrations » Event Streaming](https://preview.netbird.io/integrations) tab in the NetBird dashboard
 
-![event-streaming-integration](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/activity/event-streaming/event-streaming-integration.png)
+![event-streaming-integration](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/activity/event-streaming/event-streaming-integration.png)
 
 - Enable and configure the `Amazon S3` integration
 - First select the region your S3 bucket is created in
 
-![s3-region-select](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/activity/event-streaming/amazon-s3/s3-region-select.png)
+![s3-region-select](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/activity/event-streaming/amazon-s3/s3-region-select.png)
 
 - Then enter the S3 bucket name you created in Step 1 and click `Next`
 
-![s3-bucket-name](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/activity/event-streaming/amazon-s3/s3-bucket-name.png)
+![s3-bucket-name](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/activity/event-streaming/amazon-s3/s3-bucket-name.png)
 
 - Enter the `Access key` and `Secret access key` you created in Step 2 and click `Connect`
 
-![s3-iam-credentials](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/activity/event-streaming/amazon-s3/s3-iam-credentials.png)
+![s3-iam-credentials](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/activity/event-streaming/amazon-s3/s3-iam-credentials.png)
 
 ## Verify the Integration
 
@@ -91,7 +91,7 @@ containing the following events:
 - `integration test`
 - `integration created`
 
-![verify-amazon-s3-integration](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/activity/event-streaming/amazon-s3/verify-amazon-s3-integration.png)
+![verify-amazon-s3-integration](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/activity/event-streaming/amazon-s3/verify-amazon-s3-integration.png)
 
 ```json
 {

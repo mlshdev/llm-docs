@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/identity-providers/authentik.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/selfhosted/identity-providers/authentik.mdx)
+> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/identity-providers/authentik.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/selfhosted/identity-providers/authentik.mdx)
 
 # Authentik with NetBird Self-Hosted
 
@@ -19,11 +19,11 @@ Add Authentik as an external IdP directly in the NetBird Management Dashboard. T
 2. Click **Applications** on the left menu, then click **Providers**
 3. Click **Create** to create a new provider
 
-![Create provider](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/self-hosted/authentik/1_create-provider-athentik.png)
+![Create provider](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/authentik/1_create-provider-athentik.png)
 
 4. Select **OAuth2/OpenID Provider** and click **Next**
 
-![Select OAuth2/OpenID Provider type](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/self-hosted/authentik/2_type-oauth2-athentik.png)
+![Select OAuth2/OpenID Provider type](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/authentik/2_type-oauth2-athentik.png)
 
 5. Fill in the form with the following values:
    - **Name**: `NetBird`
@@ -32,7 +32,7 @@ Add Authentik as an external IdP directly in the NetBird Management Dashboard. T
    - **Redirect URIs/Origins**: Leave empty for now (you'll add this in Step 5)
    - **Signing Key**: Select any cert present, e.g., `authentik Self-signed Certificate`
 
-![Provider configuration with authorization flow](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/self-hosted/authentik/3_new-provider-auth-flow-athentik.png)
+![Provider configuration with authorization flow](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/authentik/3_new-provider-auth-flow-athentik.png)
 
 6. Click **Finish**
 7. Note the **Client ID** and **Client Secret** — you'll need these for Step 3
@@ -42,14 +42,14 @@ Add Authentik as an external IdP directly in the NetBird Management Dashboard. T
 1. Click **Applications** on the left menu, then click **Applications**
 2. Click **Create** to create a new application
 
-![Create application](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/self-hosted/authentik/4_create-application-athentik.png)
+![Create application](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/authentik/4_create-application-athentik.png)
 
 3. Fill in the form:
    - **Name**: `NetBird`
    - **Slug**: `netbird`
    - **Provider**: Select the `NetBird` provider you created in Step 1
 
-![Application name and slug](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/self-hosted/authentik/5_app-name-slug-athentik.png)
+![Application name and slug](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/authentik/5_app-name-slug-athentik.png)
 
 4. Click **Create**
 
@@ -70,20 +70,20 @@ Add Authentik as an external IdP directly in the NetBird Management Dashboard. T
 
 5. **Copy the Redirect URL** that NetBird displays (but don't click **Add Provider** yet)
 
-![NetBird configuration and copy redirect URL](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/self-hosted/authentik/6_netbird-config-copy-url-athentik.png)
+![NetBird configuration and copy redirect URL](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/authentik/6_netbird-config-copy-url-athentik.png)
 
 ### Step 4: Configure Redirect URI in Authentik
 
 1. Return to Authentik admin → **Providers** → **NetBird**
 2. Click **Edit**
 
-![Edit provider redirect URIs](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/self-hosted/authentik/7_providers-edit-uri.png)
+![Edit provider redirect URIs](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/authentik/7_providers-edit-uri.png)
 
 3. Under **Redirect URIs/Origins**, add the redirect URL you copied from NetBird
    - *(Optional)* Add a second **Strict** entry, `https://netbird.example.com/oauth2/logout/callback` (replace `netbird.example.com` with your NetBird dashboard domain), so logout redirects back to NetBird cleanly. Authentik validates post-logout redirects against this same allowlist.
 4. Select **Strict** (not Regex) to match the exact URL from NetBird
 
-![Add redirect URI in Strict mode](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/self-hosted/authentik/8_add-uri-strict-athentik.png)
+![Add redirect URI in Strict mode](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/authentik/8_add-uri-strict-athentik.png)
 
 5. Click **Update**
 

@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/agent-network/integrations/codex.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/agent-network/integrations/codex.mdx)
+> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/agent-network/integrations/codex.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/agent-network/integrations/codex.mdx)
 
 # Keyless Access to Codex
 
@@ -31,7 +31,7 @@ endpoint.
 2. Select **OpenAI** (or another OpenAI-compatible provider or gateway) and paste its API key.
 3. Save the provider. The key is now held server-side, the next step authorizes who can use it.
 
-![connect OpenAI provider in NetBird Agent Network](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/agent-network/integrations/agent-network-connect-openai.png)
+![connect OpenAI provider in NetBird Agent Network](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/agent-network/integrations/agent-network-connect-openai.png)
 
 See [Providers](https://docs.netbird.io/agent-network/providers) for details.
 
@@ -48,7 +48,7 @@ before anyone can route Codex through it.
    so Codex usage stays within budget, and [guardrails](https://docs.netbird.io/agent-network/policies/guardrails)
    such as a model allowlist.
 
-![create a NetBird Agent Network policy authorizing Codex](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/agent-network/integrations/agent-network-create-policy-codex.png)
+![create a NetBird Agent Network policy authorizing Codex](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/agent-network/integrations/agent-network-create-policy-codex.png)
 
 See [Policies](https://docs.netbird.io/agent-network/policies) for details.
 

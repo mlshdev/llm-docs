@@ -1,365 +1,366 @@
-# NetBird v0.76.1
+# NetBird v0.76.2
 
-> Documentation generated from the latest stable release of [netbirdio/netbird](https://github.com/netbirdio/netbird) and pinned to immutable source commit `0780a806f2cc2e8a6a51782cfffe0591b7c3fa9c`.
+> Documentation generated from the latest stable release of [netbirdio/netbird](https://github.com/netbirdio/netbird) and pinned to immutable source commit `2ce632360241d850eaef4fe4dd680d88ec19dddc`.
 
-- [Full documentation](llms-full.txt): Complete normalized corpus for NetBird v0.76.1.
+- [Full documentation](llms-full.txt): Complete normalized corpus for NetBird v0.76.2.
 - [Provenance manifest](manifest.json): Release, commit, document count, and generation notes.
-- Public docs are pinned to netbirdio/docs commit 14375a092774f250d45a85f6d5f3c524d99fd111; its commit message matches v0.76.1 and it changes generated API resource pages.
+- Public docs are pinned to netbirdio/docs commit 447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e; its commit message matches v0.76.2 and it changes generated API resource pages.
 - NetBird does not tag its public docs repository; non-API pages are an evergreen snapshot at that exact commit, not a formally versioned manual.
 - Release-tagged technical architecture documents are included separately from the public documentation snapshot.
 
 ## About NetBird
 
-- [FAQ](pages/public/about-netbird/faq.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/about-netbird/faq.mdx`.
-- [How NetBird Works](pages/public/about-netbird/how-netbird-works.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/about-netbird/how-netbird-works.mdx`.
-- [NetBird vs. Traditional VPN](pages/public/about-netbird/netbird-vs-traditional-vpn.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/about-netbird/netbird-vs-traditional-vpn.mdx`.
-- [Ports & Firewalls](pages/public/about-netbird/ports-and-firewalls.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/about-netbird/ports-and-firewalls.mdx`.
-- [Self-hosted vs. Cloud-hosted NetBird](pages/public/about-netbird/self-hosted-vs-cloud.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/about-netbird/self-hosted-vs-cloud.mdx`.
-- [Understanding NAT and Connectivity](pages/public/about-netbird/understanding-nat-and-connectivity.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/about-netbird/understanding-nat-and-connectivity.mdx`.
+- [FAQ](pages/public/about-netbird/faq.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/about-netbird/faq.mdx`.
+- [How NetBird Works](pages/public/about-netbird/how-netbird-works.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/about-netbird/how-netbird-works.mdx`.
+- [NetBird vs. Traditional VPN](pages/public/about-netbird/netbird-vs-traditional-vpn.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/about-netbird/netbird-vs-traditional-vpn.mdx`.
+- [Ports & Firewalls](pages/public/about-netbird/ports-and-firewalls.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/about-netbird/ports-and-firewalls.mdx`.
+- [Self-hosted vs. Cloud-hosted NetBird](pages/public/about-netbird/self-hosted-vs-cloud.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/about-netbird/self-hosted-vs-cloud.mdx`.
+- [Understanding NAT and Connectivity](pages/public/about-netbird/understanding-nat-and-connectivity.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/about-netbird/understanding-nat-and-connectivity.mdx`.
 
 ## Agent network
 
-- [Global Limits](pages/public/agent-network/global-limits.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/agent-network/global-limits.mdx`.
-- [How Agent Network Works](pages/public/agent-network/how-it-works.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/agent-network/how-it-works.mdx`.
-- [What is NetBird Agent Network?](pages/public/agent-network/index.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/agent-network/index.mdx`.
-- [AWS Bedrock](pages/public/agent-network/integrations/bedrock.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/agent-network/integrations/bedrock.mdx`.
-- [Keyless Access to Claude Code](pages/public/agent-network/integrations/claude-code.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/agent-network/integrations/claude-code.mdx`.
-- [Keyless Access to Codex](pages/public/agent-network/integrations/codex.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/agent-network/integrations/codex.mdx`.
-- [Integrations](pages/public/agent-network/integrations/index.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/agent-network/integrations/index.mdx`.
-- [Kimi (Moonshot AI)](pages/public/agent-network/integrations/kimi.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/agent-network/integrations/kimi.mdx`.
-- [LiteLLM](pages/public/agent-network/integrations/litellm.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/agent-network/integrations/litellm.mdx`.
-- [Google Vertex AI](pages/public/agent-network/integrations/vertex-ai.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/agent-network/integrations/vertex-ai.mdx`.
-- [vLLM](pages/public/agent-network/integrations/vllm.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/agent-network/integrations/vllm.mdx`.
-- [Guardrails](pages/public/agent-network/policies/guardrails.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/agent-network/policies/guardrails.mdx`.
-- [Policies](pages/public/agent-network/policies/index.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/agent-network/policies/index.mdx`.
-- [Token & Budget Limits](pages/public/agent-network/policies/limits.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/agent-network/policies/limits.mdx`.
-- [Providers](pages/public/agent-network/providers.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/agent-network/providers.mdx`.
-- [NetBird Agent Network Quickstart](pages/public/agent-network/quickstart.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/agent-network/quickstart.mdx`.
-- [Access Logs](pages/public/agent-network/usage-and-logs/access-logs.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/agent-network/usage-and-logs/access-logs.mdx`.
-- [Usage & Logs](pages/public/agent-network/usage-and-logs/index.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/agent-network/usage-and-logs/index.mdx`.
-- [Log Collection & Retention](pages/public/agent-network/usage-and-logs/log-collection.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/agent-network/usage-and-logs/log-collection.mdx`.
-- [Usage Overview](pages/public/agent-network/usage-and-logs/usage-overview.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/agent-network/usage-and-logs/usage-overview.mdx`.
+- [Clusters](pages/public/agent-network/clusters.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/agent-network/clusters.mdx`.
+- [Global Limits](pages/public/agent-network/global-limits.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/agent-network/global-limits.mdx`.
+- [How Agent Network Works](pages/public/agent-network/how-it-works.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/agent-network/how-it-works.mdx`.
+- [What is NetBird Agent Network?](pages/public/agent-network/index.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/agent-network/index.mdx`.
+- [AWS Bedrock](pages/public/agent-network/integrations/bedrock.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/agent-network/integrations/bedrock.mdx`.
+- [Keyless Access to Claude Code](pages/public/agent-network/integrations/claude-code.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/agent-network/integrations/claude-code.mdx`.
+- [Keyless Access to Codex](pages/public/agent-network/integrations/codex.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/agent-network/integrations/codex.mdx`.
+- [Integrations](pages/public/agent-network/integrations/index.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/agent-network/integrations/index.mdx`.
+- [Kimi (Moonshot AI)](pages/public/agent-network/integrations/kimi.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/agent-network/integrations/kimi.mdx`.
+- [LiteLLM](pages/public/agent-network/integrations/litellm.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/agent-network/integrations/litellm.mdx`.
+- [Google Vertex AI](pages/public/agent-network/integrations/vertex-ai.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/agent-network/integrations/vertex-ai.mdx`.
+- [vLLM](pages/public/agent-network/integrations/vllm.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/agent-network/integrations/vllm.mdx`.
+- [Guardrails](pages/public/agent-network/policies/guardrails.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/agent-network/policies/guardrails.mdx`.
+- [Policies](pages/public/agent-network/policies/index.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/agent-network/policies/index.mdx`.
+- [Token & Budget Limits](pages/public/agent-network/policies/limits.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/agent-network/policies/limits.mdx`.
+- [Providers](pages/public/agent-network/providers.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/agent-network/providers.mdx`.
+- [NetBird Agent Network Quickstart](pages/public/agent-network/quickstart.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/agent-network/quickstart.mdx`.
+- [Access Logs](pages/public/agent-network/usage-and-logs/access-logs.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/agent-network/usage-and-logs/access-logs.mdx`.
+- [Usage & Logs](pages/public/agent-network/usage-and-logs/index.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/agent-network/usage-and-logs/index.mdx`.
+- [Log Collection & Retention](pages/public/agent-network/usage-and-logs/log-collection.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/agent-network/usage-and-logs/log-collection.mdx`.
+- [Usage Overview](pages/public/agent-network/usage-and-logs/usage-overview.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/agent-network/usage-and-logs/usage-overview.mdx`.
 
 ## Client
 
-- [Block Inbound Connections](pages/public/client/block-inbound-connections.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/client/block-inbound-connections.mdx`.
-- [Connect on Startup](pages/public/client/connect-on-startup.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/client/connect-on-startup.mdx`.
-- [NetBird Desktop App](pages/public/client/desktop-app.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/client/desktop-app.mdx`.
-- [Client Environment Variables](pages/public/client/environment-variables.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/client/environment-variables.mdx`.
-- [gRPC Daemon Socket](pages/public/client/grpc-socket.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/client/grpc-socket.mdx`.
-- [HTTP/JSON Daemon Socket](pages/public/client/json-socket.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/client/json-socket.mdx`.
-- [MDM Integration](pages/public/client/mdm-integration.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/client/mdm-integration.mdx`.
-- [Enable Quantum-Resistance](pages/public/client/post-quantum-cryptography.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/client/post-quantum-cryptography.mdx`.
-- [Switching Between NetBird Accounts with Profiles](pages/public/client/profiles.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/client/profiles.mdx`.
+- [Block Inbound Connections](pages/public/client/block-inbound-connections.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/client/block-inbound-connections.mdx`.
+- [Connect on Startup](pages/public/client/connect-on-startup.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/client/connect-on-startup.mdx`.
+- [NetBird Desktop App](pages/public/client/desktop-app.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/client/desktop-app.mdx`.
+- [Client Environment Variables](pages/public/client/environment-variables.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/client/environment-variables.mdx`.
+- [gRPC Daemon Socket](pages/public/client/grpc-socket.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/client/grpc-socket.mdx`.
+- [HTTP/JSON Daemon Socket](pages/public/client/json-socket.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/client/json-socket.mdx`.
+- [MDM Integration](pages/public/client/mdm-integration.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/client/mdm-integration.mdx`.
+- [Enable Quantum-Resistance](pages/public/client/post-quantum-cryptography.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/client/post-quantum-cryptography.mdx`.
+- [Switching Between NetBird Accounts with Profiles](pages/public/client/profiles.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/client/profiles.mdx`.
 
 ## Getting started
 
-- [NetBird Agent command line interface (CLI)](pages/public/get-started/cli.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/get-started/cli.mdx`.
-- [Getting Started](pages/public/get-started/index.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/get-started/index.mdx`.
-- [Install NetBird on an Android TV](pages/public/get-started/install/android-tv.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/get-started/install/android-tv.mdx`.
-- [Install NetBird on an Android](pages/public/get-started/install/android.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/get-started/install/android.mdx`.
-- [Docker Installation](pages/public/get-started/install/docker.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/get-started/install/docker.mdx`.
-- [Install NetBird](pages/public/get-started/install/index.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/get-started/install/index.mdx`.
-- [iOS](pages/public/get-started/install/ios.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/get-started/install/ios.mdx`.
-- [Linux Installation](pages/public/get-started/install/linux.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/get-started/install/linux.mdx`.
-- [MacOS Installation](pages/public/get-started/install/macos.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/get-started/install/macos.mdx`.
-- [NetBird client on MikroTik router](pages/public/get-started/install/mikrotik.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/get-started/install/mikrotik.mdx`.
-- [Mobile Applications](pages/public/get-started/install/mobile.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/get-started/install/mobile.mdx`.
-- [OpenWrt Installation](pages/public/get-started/install/openwrt.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/get-started/install/openwrt.mdx`.
-- [OPNsense Installation](pages/public/get-started/install/opnsense.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/get-started/install/opnsense.mdx`.
-- [pfSense Installation](pages/public/get-started/install/pfsense.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/get-started/install/pfsense.mdx`.
-- [Install NetBird on Proxmox VE](pages/public/get-started/install/proxmox-ve.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/get-started/install/proxmox-ve.mdx`.
-- [Install NetBird on the Raspberry Pi](pages/public/get-started/install/raspberrypi.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/get-started/install/raspberrypi.mdx`.
-- [Synology Installation](pages/public/get-started/install/synology.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/get-started/install/synology.mdx`.
-- [Install NetBird on TrueNAS](pages/public/get-started/install/truenas.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/get-started/install/truenas.mdx`.
-- [tvOS (Apple TV)](pages/public/get-started/install/tvos.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/get-started/install/tvos.mdx`.
-- [Windows Installation](pages/public/get-started/install/windows.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/get-started/install/windows.mdx`.
+- [NetBird Agent command line interface (CLI)](pages/public/get-started/cli.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/get-started/cli.mdx`.
+- [Getting Started](pages/public/get-started/index.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/get-started/index.mdx`.
+- [Install NetBird on an Android TV](pages/public/get-started/install/android-tv.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/get-started/install/android-tv.mdx`.
+- [Install NetBird on an Android](pages/public/get-started/install/android.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/get-started/install/android.mdx`.
+- [Docker Installation](pages/public/get-started/install/docker.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/get-started/install/docker.mdx`.
+- [Install NetBird](pages/public/get-started/install/index.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/get-started/install/index.mdx`.
+- [iOS](pages/public/get-started/install/ios.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/get-started/install/ios.mdx`.
+- [Linux Installation](pages/public/get-started/install/linux.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/get-started/install/linux.mdx`.
+- [MacOS Installation](pages/public/get-started/install/macos.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/get-started/install/macos.mdx`.
+- [NetBird client on MikroTik router](pages/public/get-started/install/mikrotik.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/get-started/install/mikrotik.mdx`.
+- [Mobile Applications](pages/public/get-started/install/mobile.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/get-started/install/mobile.mdx`.
+- [OpenWrt Installation](pages/public/get-started/install/openwrt.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/get-started/install/openwrt.mdx`.
+- [OPNsense Installation](pages/public/get-started/install/opnsense.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/get-started/install/opnsense.mdx`.
+- [pfSense Installation](pages/public/get-started/install/pfsense.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/get-started/install/pfsense.mdx`.
+- [Install NetBird on Proxmox VE](pages/public/get-started/install/proxmox-ve.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/get-started/install/proxmox-ve.mdx`.
+- [Install NetBird on the Raspberry Pi](pages/public/get-started/install/raspberrypi.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/get-started/install/raspberrypi.mdx`.
+- [Synology Installation](pages/public/get-started/install/synology.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/get-started/install/synology.mdx`.
+- [Install NetBird on TrueNAS](pages/public/get-started/install/truenas.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/get-started/install/truenas.mdx`.
+- [tvOS (Apple TV)](pages/public/get-started/install/tvos.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/get-started/install/tvos.mdx`.
+- [Windows Installation](pages/public/get-started/install/windows.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/get-started/install/windows.mdx`.
 
 ## Help and troubleshooting
 
-- [Community Support](pages/public/help/community-support.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/help/community-support.mdx`.
-- [NetBird Support](pages/public/help/netbird-support.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/help/netbird-support.mdx`.
-- [Record a HAR file](pages/public/help/recording-a-har-file.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/help/recording-a-har-file.mdx`.
-- [Report bugs and issues](pages/public/help/report-bug-issues.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/help/report-bug-issues.mdx`.
-- [Support Matrix](pages/public/help/support-matrix/index.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/help/support-matrix/index.mdx`.
-- [Kubernetes Operator Support Matrix](pages/public/help/support-matrix/kubernetes-operator.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/help/support-matrix/kubernetes-operator.mdx`.
-- [Android TV](pages/public/help/support-matrix/netbird-client/android-tv.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/help/support-matrix/netbird-client/android-tv.mdx`.
-- [Android](pages/public/help/support-matrix/netbird-client/android.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/help/support-matrix/netbird-client/android.mdx`.
-- [NetBird Client Support Matrix](pages/public/help/support-matrix/netbird-client/index.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/help/support-matrix/netbird-client/index.mdx`.
-- [iOS](pages/public/help/support-matrix/netbird-client/ios.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/help/support-matrix/netbird-client/ios.mdx`.
-- [Linux](pages/public/help/support-matrix/netbird-client/linux.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/help/support-matrix/netbird-client/linux.mdx`.
-- [macOS](pages/public/help/support-matrix/netbird-client/macos.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/help/support-matrix/netbird-client/macos.mdx`.
-- [tvOS](pages/public/help/support-matrix/netbird-client/tvos.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/help/support-matrix/netbird-client/tvos.mdx`.
-- [Windows](pages/public/help/support-matrix/netbird-client/windows.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/help/support-matrix/netbird-client/windows.mdx`.
-- [Self-Hosted Support Matrix](pages/public/help/support-matrix/self-hosted.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/help/support-matrix/self-hosted.mdx`.
-- [Terraform Provider Support Matrix](pages/public/help/support-matrix/terraform-provider.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/help/support-matrix/terraform-provider.mdx`.
-- [Pending approval and account invitations](pages/public/help/troubleshooting-account-access.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/help/troubleshooting-account-access.mdx`.
-- [NetBird client on Android](pages/public/help/troubleshooting-client/android.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/help/troubleshooting-client/android.mdx`.
-- [NetBird client on iOS](pages/public/help/troubleshooting-client/ios.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/help/troubleshooting-client/ios.mdx`.
-- [NetBird client on Linux](pages/public/help/troubleshooting-client/linux.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/help/troubleshooting-client/linux.mdx`.
-- [NetBird client on macOS](pages/public/help/troubleshooting-client/macos.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/help/troubleshooting-client/macos.mdx`.
-- [NetBird client on Windows](pages/public/help/troubleshooting-client/windows.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/help/troubleshooting-client/windows.mdx`.
-- [Troubleshooting client issues](pages/public/help/troubleshooting-client.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/help/troubleshooting-client.mdx`.
-- [Troubleshooting relayed connections](pages/public/help/troubleshooting-relayed-connections.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/help/troubleshooting-relayed-connections.mdx`.
-- [Troubleshooting resource connectivity](pages/public/help/troubleshooting-resource-connectivity.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/help/troubleshooting-resource-connectivity.mdx`.
-- [Troubleshooting](pages/public/help/troubleshooting.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/help/troubleshooting.mdx`.
+- [Community Support](pages/public/help/community-support.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/help/community-support.mdx`.
+- [NetBird Support](pages/public/help/netbird-support.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/help/netbird-support.mdx`.
+- [Record a HAR file](pages/public/help/recording-a-har-file.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/help/recording-a-har-file.mdx`.
+- [Report bugs and issues](pages/public/help/report-bug-issues.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/help/report-bug-issues.mdx`.
+- [Support Matrix](pages/public/help/support-matrix/index.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/help/support-matrix/index.mdx`.
+- [Kubernetes Operator Support Matrix](pages/public/help/support-matrix/kubernetes-operator.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/help/support-matrix/kubernetes-operator.mdx`.
+- [Android TV](pages/public/help/support-matrix/netbird-client/android-tv.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/help/support-matrix/netbird-client/android-tv.mdx`.
+- [Android](pages/public/help/support-matrix/netbird-client/android.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/help/support-matrix/netbird-client/android.mdx`.
+- [NetBird Client Support Matrix](pages/public/help/support-matrix/netbird-client/index.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/help/support-matrix/netbird-client/index.mdx`.
+- [iOS](pages/public/help/support-matrix/netbird-client/ios.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/help/support-matrix/netbird-client/ios.mdx`.
+- [Linux](pages/public/help/support-matrix/netbird-client/linux.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/help/support-matrix/netbird-client/linux.mdx`.
+- [macOS](pages/public/help/support-matrix/netbird-client/macos.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/help/support-matrix/netbird-client/macos.mdx`.
+- [tvOS](pages/public/help/support-matrix/netbird-client/tvos.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/help/support-matrix/netbird-client/tvos.mdx`.
+- [Windows](pages/public/help/support-matrix/netbird-client/windows.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/help/support-matrix/netbird-client/windows.mdx`.
+- [Self-Hosted Support Matrix](pages/public/help/support-matrix/self-hosted.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/help/support-matrix/self-hosted.mdx`.
+- [Terraform Provider Support Matrix](pages/public/help/support-matrix/terraform-provider.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/help/support-matrix/terraform-provider.mdx`.
+- [Pending approval and account invitations](pages/public/help/troubleshooting-account-access.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/help/troubleshooting-account-access.mdx`.
+- [NetBird client on Android](pages/public/help/troubleshooting-client/android.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/help/troubleshooting-client/android.mdx`.
+- [NetBird client on iOS](pages/public/help/troubleshooting-client/ios.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/help/troubleshooting-client/ios.mdx`.
+- [NetBird client on Linux](pages/public/help/troubleshooting-client/linux.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/help/troubleshooting-client/linux.mdx`.
+- [NetBird client on macOS](pages/public/help/troubleshooting-client/macos.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/help/troubleshooting-client/macos.mdx`.
+- [NetBird client on Windows](pages/public/help/troubleshooting-client/windows.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/help/troubleshooting-client/windows.mdx`.
+- [Troubleshooting client issues](pages/public/help/troubleshooting-client.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/help/troubleshooting-client.mdx`.
+- [Troubleshooting relayed connections](pages/public/help/troubleshooting-relayed-connections.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/help/troubleshooting-relayed-connections.mdx`.
+- [Troubleshooting resource connectivity](pages/public/help/troubleshooting-resource-connectivity.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/help/troubleshooting-resource-connectivity.mdx`.
+- [Troubleshooting](pages/public/help/troubleshooting.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/help/troubleshooting.mdx`.
 
 ## Documentation
 
-- [Introduction to NetBird](pages/public/introduction.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/introduction.mdx`.
+- [Introduction to NetBird](pages/public/introduction.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/introduction.mdx`.
 
 ## API reference
 
-- [Authentication](pages/public/ipa/guides/authentication.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/ipa/guides/authentication.mdx`.
-- [Errors](pages/public/ipa/guides/errors.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/ipa/guides/errors.mdx`.
-- [MSP API access](pages/public/ipa/guides/msp-api-access.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/ipa/guides/msp-api-access.mdx`.
-- [Quickstart](pages/public/ipa/guides/quickstart.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/ipa/guides/quickstart.mdx`.
-- [NetBird REST API](pages/public/ipa/introduction.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/ipa/introduction.mdx`.
-- [Accounts](pages/public/ipa/resources/accounts.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/ipa/resources/accounts.mdx`.
-- [Agent Network](pages/public/ipa/resources/agent-network.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/ipa/resources/agent-network.mdx`.
-- [DNS Zones](pages/public/ipa/resources/dns-zones.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/ipa/resources/dns-zones.mdx`.
-- [DNS](pages/public/ipa/resources/dns.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/ipa/resources/dns.mdx`.
-- [EDR Falcon Integrations](pages/public/ipa/resources/edr-falcon-integrations.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/ipa/resources/edr-falcon-integrations.mdx`.
-- [EDR FleetDM Integrations](pages/public/ipa/resources/edr-fleetdm-integrations.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/ipa/resources/edr-fleetdm-integrations.mdx`.
-- [EDR Huntress Integrations](pages/public/ipa/resources/edr-huntress-integrations.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/ipa/resources/edr-huntress-integrations.mdx`.
-- [EDR Intune Integrations](pages/public/ipa/resources/edr-intune-integrations.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/ipa/resources/edr-intune-integrations.mdx`.
-- [EDR Peers](pages/public/ipa/resources/edr-peers.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/ipa/resources/edr-peers.mdx`.
-- [EDR SentinelOne Integrations](pages/public/ipa/resources/edr-sentinelone-integrations.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/ipa/resources/edr-sentinelone-integrations.mdx`.
-- [Event Streaming Integrations](pages/public/ipa/resources/event-streaming-integrations.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/ipa/resources/event-streaming-integrations.mdx`.
-- [Events](pages/public/ipa/resources/events.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/ipa/resources/events.mdx`.
-- [Geo Locations](pages/public/ipa/resources/geo-locations.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/ipa/resources/geo-locations.mdx`.
-- [Groups](pages/public/ipa/resources/groups.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/ipa/resources/groups.mdx`.
-- [Identity Providers](pages/public/ipa/resources/identity-providers.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/ipa/resources/identity-providers.mdx`.
-- [IDP Azure Integrations](pages/public/ipa/resources/idp-azure-integrations.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/ipa/resources/idp-azure-integrations.mdx`.
-- [IDP Google Integrations](pages/public/ipa/resources/idp-google-integrations.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/ipa/resources/idp-google-integrations.mdx`.
-- [IDP Okta SCIM Integrations](pages/public/ipa/resources/idp-okta-scim-integrations.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/ipa/resources/idp-okta-scim-integrations.mdx`.
-- [IDP SCIM Integrations](pages/public/ipa/resources/idp-scim-integrations.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/ipa/resources/idp-scim-integrations.mdx`.
-- [Ingress Ports](pages/public/ipa/resources/ingress-ports.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/ipa/resources/ingress-ports.mdx`.
-- [Instance](pages/public/ipa/resources/instance.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/ipa/resources/instance.mdx`.
-- [Invoice](pages/public/ipa/resources/invoice.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/ipa/resources/invoice.mdx`.
-- [Jobs](pages/public/ipa/resources/jobs.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/ipa/resources/jobs.mdx`.
-- [MSP](pages/public/ipa/resources/msp.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/ipa/resources/msp.mdx`.
-- [Networks](pages/public/ipa/resources/networks.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/ipa/resources/networks.mdx`.
-- [Notifications](pages/public/ipa/resources/notifications.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/ipa/resources/notifications.mdx`.
-- [Peers](pages/public/ipa/resources/peers.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/ipa/resources/peers.mdx`.
-- [Policies](pages/public/ipa/resources/policies.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/ipa/resources/policies.mdx`.
-- [Posture Checks](pages/public/ipa/resources/posture-checks.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/ipa/resources/posture-checks.mdx`.
-- [Routes](pages/public/ipa/resources/routes.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/ipa/resources/routes.mdx`.
-- [Self-Hosted Proxies](pages/public/ipa/resources/self-hosted-proxies.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/ipa/resources/self-hosted-proxies.mdx`.
-- [Services](pages/public/ipa/resources/services.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/ipa/resources/services.mdx`.
-- [Setup Keys](pages/public/ipa/resources/setup-keys.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/ipa/resources/setup-keys.mdx`.
-- [Tokens](pages/public/ipa/resources/tokens.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/ipa/resources/tokens.mdx`.
-- [Usage](pages/public/ipa/resources/usage.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/ipa/resources/usage.mdx`.
-- [Users](pages/public/ipa/resources/users.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/ipa/resources/users.mdx`.
+- [Authentication](pages/public/ipa/guides/authentication.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/ipa/guides/authentication.mdx`.
+- [Errors](pages/public/ipa/guides/errors.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/ipa/guides/errors.mdx`.
+- [MSP API access](pages/public/ipa/guides/msp-api-access.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/ipa/guides/msp-api-access.mdx`.
+- [Quickstart](pages/public/ipa/guides/quickstart.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/ipa/guides/quickstart.mdx`.
+- [NetBird REST API](pages/public/ipa/introduction.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/ipa/introduction.mdx`.
+- [Accounts](pages/public/ipa/resources/accounts.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/ipa/resources/accounts.mdx`.
+- [Agent Network](pages/public/ipa/resources/agent-network.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/ipa/resources/agent-network.mdx`.
+- [DNS Zones](pages/public/ipa/resources/dns-zones.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/ipa/resources/dns-zones.mdx`.
+- [DNS](pages/public/ipa/resources/dns.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/ipa/resources/dns.mdx`.
+- [EDR Falcon Integrations](pages/public/ipa/resources/edr-falcon-integrations.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/ipa/resources/edr-falcon-integrations.mdx`.
+- [EDR FleetDM Integrations](pages/public/ipa/resources/edr-fleetdm-integrations.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/ipa/resources/edr-fleetdm-integrations.mdx`.
+- [EDR Huntress Integrations](pages/public/ipa/resources/edr-huntress-integrations.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/ipa/resources/edr-huntress-integrations.mdx`.
+- [EDR Intune Integrations](pages/public/ipa/resources/edr-intune-integrations.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/ipa/resources/edr-intune-integrations.mdx`.
+- [EDR Peers](pages/public/ipa/resources/edr-peers.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/ipa/resources/edr-peers.mdx`.
+- [EDR SentinelOne Integrations](pages/public/ipa/resources/edr-sentinelone-integrations.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/ipa/resources/edr-sentinelone-integrations.mdx`.
+- [Event Streaming Integrations](pages/public/ipa/resources/event-streaming-integrations.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/ipa/resources/event-streaming-integrations.mdx`.
+- [Events](pages/public/ipa/resources/events.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/ipa/resources/events.mdx`.
+- [Geo Locations](pages/public/ipa/resources/geo-locations.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/ipa/resources/geo-locations.mdx`.
+- [Groups](pages/public/ipa/resources/groups.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/ipa/resources/groups.mdx`.
+- [Identity Providers](pages/public/ipa/resources/identity-providers.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/ipa/resources/identity-providers.mdx`.
+- [IDP Azure Integrations](pages/public/ipa/resources/idp-azure-integrations.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/ipa/resources/idp-azure-integrations.mdx`.
+- [IDP Google Integrations](pages/public/ipa/resources/idp-google-integrations.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/ipa/resources/idp-google-integrations.mdx`.
+- [IDP Okta SCIM Integrations](pages/public/ipa/resources/idp-okta-scim-integrations.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/ipa/resources/idp-okta-scim-integrations.mdx`.
+- [IDP SCIM Integrations](pages/public/ipa/resources/idp-scim-integrations.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/ipa/resources/idp-scim-integrations.mdx`.
+- [Ingress Ports](pages/public/ipa/resources/ingress-ports.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/ipa/resources/ingress-ports.mdx`.
+- [Instance](pages/public/ipa/resources/instance.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/ipa/resources/instance.mdx`.
+- [Invoice](pages/public/ipa/resources/invoice.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/ipa/resources/invoice.mdx`.
+- [Jobs](pages/public/ipa/resources/jobs.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/ipa/resources/jobs.mdx`.
+- [MSP](pages/public/ipa/resources/msp.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/ipa/resources/msp.mdx`.
+- [Networks](pages/public/ipa/resources/networks.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/ipa/resources/networks.mdx`.
+- [Notifications](pages/public/ipa/resources/notifications.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/ipa/resources/notifications.mdx`.
+- [Peers](pages/public/ipa/resources/peers.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/ipa/resources/peers.mdx`.
+- [Policies](pages/public/ipa/resources/policies.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/ipa/resources/policies.mdx`.
+- [Posture Checks](pages/public/ipa/resources/posture-checks.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/ipa/resources/posture-checks.mdx`.
+- [Routes](pages/public/ipa/resources/routes.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/ipa/resources/routes.mdx`.
+- [Self-Hosted Proxies](pages/public/ipa/resources/self-hosted-proxies.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/ipa/resources/self-hosted-proxies.mdx`.
+- [Services](pages/public/ipa/resources/services.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/ipa/resources/services.mdx`.
+- [Setup Keys](pages/public/ipa/resources/setup-keys.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/ipa/resources/setup-keys.mdx`.
+- [Tokens](pages/public/ipa/resources/tokens.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/ipa/resources/tokens.mdx`.
+- [Usage](pages/public/ipa/resources/usage.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/ipa/resources/usage.mdx`.
+- [Users](pages/public/ipa/resources/users.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/ipa/resources/users.mdx`.
 
 ## Management
 
-- [Bypass Compliance for Non-Compliant Peers](pages/public/manage/access-control/endpoint-detection-and-response/bypass-compliance.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/access-control/endpoint-detection-and-response/bypass-compliance.mdx`.
-- [Restrict Network Access with CrowdStrike Falcon®](pages/public/manage/access-control/endpoint-detection-and-response/crowdstrike-edr.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/access-control/endpoint-detection-and-response/crowdstrike-edr.mdx`.
-- [Restrict Network Access with FleetDM](pages/public/manage/access-control/endpoint-detection-and-response/fleetdm-edr.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/access-control/endpoint-detection-and-response/fleetdm-edr.mdx`.
-- [Restrict Network Access with Huntress EDR](pages/public/manage/access-control/endpoint-detection-and-response/huntress-edr.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/access-control/endpoint-detection-and-response/huntress-edr.mdx`.
-- [Integrate NetBird with MDM & EDR Platforms](pages/public/manage/access-control/endpoint-detection-and-response/index.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/access-control/endpoint-detection-and-response/index.mdx`.
-- [Allow Only Intune-Managed Devices to Access Your Network](pages/public/manage/access-control/endpoint-detection-and-response/intune-mdm.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/access-control/endpoint-detection-and-response/intune-mdm.mdx`.
-- [Restrict Network Access with SentinelOne Singularity™](pages/public/manage/access-control/endpoint-detection-and-response/sentinelone-edr.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/access-control/endpoint-detection-and-response/sentinelone-edr.mdx`.
-- [Understanding Groups and Access Policies](pages/public/manage/access-control/index.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/access-control/index.mdx`.
-- [Managing Access with NetBird: Groups and Access Policies](pages/public/manage/access-control/manage-network-access.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/access-control/manage-network-access.mdx`.
-- [Connecting from the office](pages/public/manage/access-control/posture-checks/connecting-from-the-office.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/access-control/posture-checks/connecting-from-the-office.mdx`.
-- [Understanding NetBird Posture Checks](pages/public/manage/access-control/posture-checks/index.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/access-control/posture-checks/index.mdx`.
-- [Stream Network Activity to Amazon Data Firehose](pages/public/manage/activity/event-streaming/amazon-firehose.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/activity/event-streaming/amazon-firehose.mdx`.
-- [Stream Network Activity to Amazon S3](pages/public/manage/activity/event-streaming/amazon-s3.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/activity/event-streaming/amazon-s3.mdx`.
-- [Stream Network Activity to Datadog Cloud SIEM](pages/public/manage/activity/event-streaming/datadog.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/activity/event-streaming/datadog.mdx`.
-- [Stream Network Activity to a Generic HTTP Endpoint](pages/public/manage/activity/event-streaming/generic-http.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/activity/event-streaming/generic-http.mdx`.
-- [Stream Network Activity to Third-Party SIEM Platforms](pages/public/manage/activity/event-streaming/index.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/activity/event-streaming/index.mdx`.
-- [Stream Network Activity to SentinelOne Singularity Data Lake](pages/public/manage/activity/event-streaming/sentinelone-data-lake.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/activity/event-streaming/sentinelone-data-lake.mdx`.
-- [Stream Activity Events to Wazuh](pages/public/manage/activity/event-streaming/wazuh.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/activity/event-streaming/wazuh.mdx`.
-- [Audit Events Logging](pages/public/manage/activity/index.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/activity/index.mdx`.
-- [Traffic Events Logging](pages/public/manage/activity/traffic-events-logging.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/activity/traffic-events-logging.mdx`.
-- [Client Metrics](pages/public/manage/client-metrics.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/client-metrics.mdx`.
-- [Visualize Remote Access with Control Center](pages/public/manage/control-center/index.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/control-center/index.mdx`.
-- [Custom Zones](pages/public/manage/dns/custom-zones.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/dns/custom-zones.mdx`.
-- [DNS Aliases for Routed Networks](pages/public/manage/dns/dns-aliases-for-routed-networks.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/dns/dns-aliases-for-routed-networks.mdx`.
-- [DNS Settings](pages/public/manage/dns/dns-settings.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/dns/dns-settings.mdx`.
-- [Extra DNS Labels](pages/public/manage/dns/extra-dns-labels.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/dns/extra-dns-labels.mdx`.
-- [DNS in NetBird](pages/public/manage/dns/index.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/dns/index.mdx`.
-- [Internal DNS Servers](pages/public/manage/dns/internal-dns-servers.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/dns/internal-dns-servers.mdx`.
-- [Configuring Nameservers](pages/public/manage/dns/nameserver-groups.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/dns/nameserver-groups.mdx`.
-- [Private DNS Behind Routing Peers](pages/public/manage/dns/private-dns-behind-routing-peers.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/dns/private-dns-behind-routing-peers.mdx`.
-- [DNS Troubleshooting](pages/public/manage/dns/troubleshooting.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/dns/troubleshooting.mdx`.
-- [Deploying NetBird with Acronis Cyber Protect Cloud](pages/public/manage/for-partners/acronis-integration.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/for-partners/acronis-integration.mdx`.
-- [NetBird Distributor Portal for Distributors](pages/public/manage/for-partners/distributor-portal.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/for-partners/distributor-portal.mdx`.
-- [NetBird MSP Portal for Managed Service Providers](pages/public/manage/for-partners/msp-portal.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/for-partners/msp-portal.mdx`.
-- [Deploying NetBird with Intune](pages/public/manage/integrations/mdm-deployment/intune-netbird-integration.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/integrations/mdm-deployment/intune-netbird-integration.mdx`.
-- [Deploying NetBird's with Jamf Pro](pages/public/manage/integrations/mdm-deployment/jamf-pro-netbird-integration.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/integrations/mdm-deployment/jamf-pro-netbird-integration.mdx`.
-- [Deploying NetBird with Kandji MDM](pages/public/manage/integrations/mdm-deployment/kandji-netbird-integration.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/integrations/mdm-deployment/kandji-netbird-integration.mdx`.
-- [Building a CLI-Only .pkg for macOS MDM Deployment](pages/public/manage/integrations/mdm-deployment/macos-cli-pkg-deployment.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/integrations/mdm-deployment/macos-cli-pkg-deployment.mdx`.
-- [Deploying NetBird with Group Policy (GPO)](pages/public/manage/integrations/mdm-deployment/windows-gpo-deployment.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/integrations/mdm-deployment/windows-gpo-deployment.mdx`.
-- [Configuring Routes with Access Control](pages/public/manage/network-routes/access-control.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/network-routes/access-control.mdx`.
-- [Advanced Configuration](pages/public/manage/network-routes/advanced-configuration.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/network-routes/advanced-configuration.mdx`.
-- [Routes](pages/public/manage/network-routes/index.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/network-routes/index.mdx`.
-- [Resolving Overlapping Routes](pages/public/manage/network-routes/overlapping-routes.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/network-routes/overlapping-routes.mdx`.
-- [Site-to-Site](pages/public/manage/network-routes/use-cases/site-to-site.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/network-routes/use-cases/site-to-site.mdx`.
-- [How Routing Peers Work](pages/public/manage/networks/how-routing-peers-work.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/networks/how-routing-peers-work.mdx`.
-- [Networks](pages/public/manage/networks/index.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/networks/index.mdx`.
-- [Masquerade](pages/public/manage/networks/masquerade.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/networks/masquerade.mdx`.
-- [Sizing Routing Peers](pages/public/manage/networks/sizing-routing-peers.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/networks/sizing-routing-peers.mdx`.
-- [Access Internal Resources From Autoscaled Environments](pages/public/manage/peers/access-infrastructure/access-internal-resources-from-autoscaled-environments.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/peers/access-infrastructure/access-internal-resources-from-autoscaled-environments.mdx`.
-- [Peer Approval for Remote Worker Access with NetBird](pages/public/manage/peers/access-infrastructure/peer-approval-for-remote-worker-access.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/peers/access-infrastructure/peer-approval-for-remote-worker-access.mdx`.
-- [Secure Remote Web Server Access: SSH Without Port Exposure](pages/public/manage/peers/access-infrastructure/secure-remote-webserver-access.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/peers/access-infrastructure/secure-remote-webserver-access.mdx`.
-- [Add Servers to the Network with Setup Keys](pages/public/manage/peers/access-infrastructure/setup-keys-add-servers-to-network.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/peers/access-infrastructure/setup-keys-add-servers-to-network.mdx`.
-- [Add peers to your NetBird network](pages/public/manage/peers/add-machines-to-your-network.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/peers/add-machines-to-your-network.mdx`.
-- [Approve peers](pages/public/manage/peers/approve-peers.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/peers/approve-peers.mdx`.
-- [Client Automatic Updates](pages/public/manage/peers/auto-update.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/peers/auto-update.mdx`.
-- [Bootstrap peers via config file](pages/public/manage/peers/bootstrap-via-config-file.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/peers/bootstrap-via-config-file.mdx`.
-- [Browser Client Technical Architecture](pages/public/manage/peers/browser-client/architecture.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/peers/browser-client/architecture.mdx`.
-- [Browser Client - Web-based Remote Access](pages/public/manage/peers/browser-client.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/peers/browser-client.mdx`.
-- [Lazy Connections](pages/public/manage/peers/lazy-connection.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/peers/lazy-connection.mdx`.
-- [Automate Deployments and Onboard Machines at Scale with Setup Keys](pages/public/manage/peers/register-machines-using-setup-keys.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/peers/register-machines-using-setup-keys.mdx`.
-- [Remote Jobs](pages/public/manage/peers/remote-jobs.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/peers/remote-jobs.mdx`.
-- [SSH Access](pages/public/manage/peers/ssh.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/peers/ssh.mdx`.
-- [Use service users and tokens to access NetBird's public API](pages/public/manage/public-api/index.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/public-api/index.mdx`.
-- [Reverse Proxy Access Logs](pages/public/manage/reverse-proxy/access-logs.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/reverse-proxy/access-logs.mdx`.
-- [Reverse Proxy Authentication and Access Restrictions](pages/public/manage/reverse-proxy/authentication.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/reverse-proxy/authentication.mdx`.
-- [Bring Your Own Proxy](pages/public/manage/reverse-proxy/bring-your-own-proxy.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/reverse-proxy/bring-your-own-proxy.mdx`.
-- [Custom Domains](pages/public/manage/reverse-proxy/custom-domains.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/reverse-proxy/custom-domains.mdx`.
-- [Expose from CLI](pages/public/manage/reverse-proxy/expose-from-cli.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/reverse-proxy/expose-from-cli.mdx`.
-- [Reverse Proxy](pages/public/manage/reverse-proxy/index.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/reverse-proxy/index.mdx`.
-- [Backend Service Configuration](pages/public/manage/reverse-proxy/service-configuration.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/reverse-proxy/service-configuration.mdx`.
-- [Reverse Proxy Troubleshooting](pages/public/manage/reverse-proxy/troubleshooting.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/reverse-proxy/troubleshooting.mdx`.
-- [Delete your NetBird account](pages/public/manage/settings/delete-account.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/settings/delete-account.mdx`.
-- [Enforce periodic user authentication](pages/public/manage/settings/enforce-periodic-user-authentication.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/settings/enforce-periodic-user-authentication.mdx`.
-- [IPv6 Overlay Addressing](pages/public/manage/settings/ipv6.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/settings/ipv6.mdx`.
-- [Multi-Factor Authentication (MFA)](pages/public/manage/settings/multi-factor-authentication.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/settings/multi-factor-authentication.mdx`.
-- [Notifications](pages/public/manage/settings/notifications.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/settings/notifications.mdx`.
-- [Plans and billing](pages/public/manage/settings/plans-and-billing.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/settings/plans-and-billing.mdx`.
-- [Add users to your network](pages/public/manage/team/add-users-to-your-network.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/team/add-users-to-your-network.mdx`.
-- [Approve users](pages/public/manage/team/approve-users.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/team/approve-users.mdx`.
-- [Automatically Offboard Team Members from NetBird](pages/public/manage/team/auto-offboard-users.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/team/auto-offboard-users.mdx`.
-- [Enable NetBird for Microsoft Entra ID](pages/public/manage/team/entra-id-app-enablement.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/team/entra-id-app-enablement.mdx`.
-- [Provision Users and Groups From Google Workspace (Embedded IdP)](pages/public/manage/team/idp-sync/embedded/google-workspace-sync.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/team/idp-sync/embedded/google-workspace-sync.mdx`.
-- [Provision Users and Groups From JumpCloud (Embedded IdP)](pages/public/manage/team/idp-sync/embedded/jumpcloud-sync.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/team/idp-sync/embedded/jumpcloud-sync.mdx`.
-- [Provision Users and Groups From Keycloak (Embedded IdP)](pages/public/manage/team/idp-sync/embedded/keycloak-sync.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/team/idp-sync/embedded/keycloak-sync.mdx`.
-- [Provision Users and Groups From Microsoft Entra ID via SCIM (Embedded IdP)](pages/public/manage/team/idp-sync/embedded/microsoft-entra-id-scim-sync.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/team/idp-sync/embedded/microsoft-entra-id-scim-sync.mdx`.
-- [Provision Users and Groups From Microsoft Entra ID via API (Embedded IdP)](pages/public/manage/team/idp-sync/embedded/microsoft-entra-id-sync.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/team/idp-sync/embedded/microsoft-entra-id-sync.mdx`.
-- [Provision Users and Groups From Google Workspace](pages/public/manage/team/idp-sync/google-workspace-sync.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/team/idp-sync/google-workspace-sync.mdx`.
-- [Provision Users and Groups From Your Identity Provider](pages/public/manage/team/idp-sync/index.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/team/idp-sync/index.mdx`.
-- [Provision Users and Groups From JumpCloud](pages/public/manage/team/idp-sync/jumpcloud-sync.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/team/idp-sync/jumpcloud-sync.mdx`.
-- [Provision Users and Groups From Keycloak](pages/public/manage/team/idp-sync/keycloak-sync.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/team/idp-sync/keycloak-sync.mdx`.
-- [Provision Users and Groups From Microsoft Entra ID via SCIM](pages/public/manage/team/idp-sync/microsoft-entra-id-scim-sync.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/team/idp-sync/microsoft-entra-id-scim-sync.mdx`.
-- [Provision Users and Groups From Microsoft Entra ID via API](pages/public/manage/team/idp-sync/microsoft-entra-id-sync.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/team/idp-sync/microsoft-entra-id-sync.mdx`.
-- [Provision Users and Groups from Okta](pages/public/manage/team/idp-sync/okta-sync.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/team/idp-sync/okta-sync.mdx`.
-- [Auth0 on NetBird Cloud](pages/public/manage/team/single-sign-on/auth0.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/team/single-sign-on/auth0.mdx`.
-- [Authentik on NetBird Cloud](pages/public/manage/team/single-sign-on/authentik.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/team/single-sign-on/authentik.mdx`.
-- [AWS Cognito on NetBird Cloud](pages/public/manage/team/single-sign-on/aws-cognito.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/team/single-sign-on/aws-cognito.mdx`.
-- [cidaas on NetBird Cloud](pages/public/manage/team/single-sign-on/cidaas.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/team/single-sign-on/cidaas.mdx`.
-- [Duo Security on NetBird Cloud](pages/public/manage/team/single-sign-on/duo-security.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/team/single-sign-on/duo-security.mdx`.
-- [Authenticate to NetBird with Single Sign On (SSO)](pages/public/manage/team/single-sign-on/index.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/team/single-sign-on/index.mdx`.
-- [JumpCloud on NetBird Cloud](pages/public/manage/team/single-sign-on/jumpcloud.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/team/single-sign-on/jumpcloud.mdx`.
-- [Keycloak on NetBird Cloud](pages/public/manage/team/single-sign-on/keycloak.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/team/single-sign-on/keycloak.mdx`.
-- [Zitadel on NetBird Cloud](pages/public/manage/team/single-sign-on/zitadel.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/team/single-sign-on/zitadel.mdx`.
-- [Zoho on NetBird Cloud](pages/public/manage/team/single-sign-on/zoho.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/team/single-sign-on/zoho.mdx`.
-- [User Roles](pages/public/manage/team/user-roles.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/team/user-roles.mdx`.
+- [Bypass Compliance for Non-Compliant Peers](pages/public/manage/access-control/endpoint-detection-and-response/bypass-compliance.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/access-control/endpoint-detection-and-response/bypass-compliance.mdx`.
+- [Restrict Network Access with CrowdStrike Falcon®](pages/public/manage/access-control/endpoint-detection-and-response/crowdstrike-edr.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/access-control/endpoint-detection-and-response/crowdstrike-edr.mdx`.
+- [Restrict Network Access with FleetDM](pages/public/manage/access-control/endpoint-detection-and-response/fleetdm-edr.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/access-control/endpoint-detection-and-response/fleetdm-edr.mdx`.
+- [Restrict Network Access with Huntress EDR](pages/public/manage/access-control/endpoint-detection-and-response/huntress-edr.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/access-control/endpoint-detection-and-response/huntress-edr.mdx`.
+- [Integrate NetBird with MDM & EDR Platforms](pages/public/manage/access-control/endpoint-detection-and-response/index.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/access-control/endpoint-detection-and-response/index.mdx`.
+- [Allow Only Intune-Managed Devices to Access Your Network](pages/public/manage/access-control/endpoint-detection-and-response/intune-mdm.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/access-control/endpoint-detection-and-response/intune-mdm.mdx`.
+- [Restrict Network Access with SentinelOne Singularity™](pages/public/manage/access-control/endpoint-detection-and-response/sentinelone-edr.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/access-control/endpoint-detection-and-response/sentinelone-edr.mdx`.
+- [Understanding Groups and Access Policies](pages/public/manage/access-control/index.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/access-control/index.mdx`.
+- [Managing Access with NetBird: Groups and Access Policies](pages/public/manage/access-control/manage-network-access.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/access-control/manage-network-access.mdx`.
+- [Connecting from the office](pages/public/manage/access-control/posture-checks/connecting-from-the-office.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/access-control/posture-checks/connecting-from-the-office.mdx`.
+- [Understanding NetBird Posture Checks](pages/public/manage/access-control/posture-checks/index.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/access-control/posture-checks/index.mdx`.
+- [Stream Network Activity to Amazon Data Firehose](pages/public/manage/activity/event-streaming/amazon-firehose.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/activity/event-streaming/amazon-firehose.mdx`.
+- [Stream Network Activity to Amazon S3](pages/public/manage/activity/event-streaming/amazon-s3.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/activity/event-streaming/amazon-s3.mdx`.
+- [Stream Network Activity to Datadog Cloud SIEM](pages/public/manage/activity/event-streaming/datadog.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/activity/event-streaming/datadog.mdx`.
+- [Stream Network Activity to a Generic HTTP Endpoint](pages/public/manage/activity/event-streaming/generic-http.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/activity/event-streaming/generic-http.mdx`.
+- [Stream Network Activity to Third-Party SIEM Platforms](pages/public/manage/activity/event-streaming/index.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/activity/event-streaming/index.mdx`.
+- [Stream Network Activity to SentinelOne Singularity Data Lake](pages/public/manage/activity/event-streaming/sentinelone-data-lake.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/activity/event-streaming/sentinelone-data-lake.mdx`.
+- [Stream Activity Events to Wazuh](pages/public/manage/activity/event-streaming/wazuh.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/activity/event-streaming/wazuh.mdx`.
+- [Audit Events Logging](pages/public/manage/activity/index.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/activity/index.mdx`.
+- [Traffic Events Logging](pages/public/manage/activity/traffic-events-logging.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/activity/traffic-events-logging.mdx`.
+- [Client Metrics](pages/public/manage/client-metrics.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/client-metrics.mdx`.
+- [Visualize Remote Access with Control Center](pages/public/manage/control-center/index.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/control-center/index.mdx`.
+- [Custom Zones](pages/public/manage/dns/custom-zones.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/dns/custom-zones.mdx`.
+- [DNS Aliases for Routed Networks](pages/public/manage/dns/dns-aliases-for-routed-networks.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/dns/dns-aliases-for-routed-networks.mdx`.
+- [DNS Settings](pages/public/manage/dns/dns-settings.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/dns/dns-settings.mdx`.
+- [Extra DNS Labels](pages/public/manage/dns/extra-dns-labels.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/dns/extra-dns-labels.mdx`.
+- [DNS in NetBird](pages/public/manage/dns/index.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/dns/index.mdx`.
+- [Internal DNS Servers](pages/public/manage/dns/internal-dns-servers.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/dns/internal-dns-servers.mdx`.
+- [Configuring Nameservers](pages/public/manage/dns/nameserver-groups.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/dns/nameserver-groups.mdx`.
+- [Private DNS Behind Routing Peers](pages/public/manage/dns/private-dns-behind-routing-peers.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/dns/private-dns-behind-routing-peers.mdx`.
+- [DNS Troubleshooting](pages/public/manage/dns/troubleshooting.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/dns/troubleshooting.mdx`.
+- [Deploying NetBird with Acronis Cyber Protect Cloud](pages/public/manage/for-partners/acronis-integration.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/for-partners/acronis-integration.mdx`.
+- [NetBird Distributor Portal for Distributors](pages/public/manage/for-partners/distributor-portal.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/for-partners/distributor-portal.mdx`.
+- [NetBird MSP Portal for Managed Service Providers](pages/public/manage/for-partners/msp-portal.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/for-partners/msp-portal.mdx`.
+- [Deploying NetBird with Intune](pages/public/manage/integrations/mdm-deployment/intune-netbird-integration.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/integrations/mdm-deployment/intune-netbird-integration.mdx`.
+- [Deploying NetBird's with Jamf Pro](pages/public/manage/integrations/mdm-deployment/jamf-pro-netbird-integration.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/integrations/mdm-deployment/jamf-pro-netbird-integration.mdx`.
+- [Deploying NetBird with Kandji MDM](pages/public/manage/integrations/mdm-deployment/kandji-netbird-integration.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/integrations/mdm-deployment/kandji-netbird-integration.mdx`.
+- [Building a CLI-Only .pkg for macOS MDM Deployment](pages/public/manage/integrations/mdm-deployment/macos-cli-pkg-deployment.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/integrations/mdm-deployment/macos-cli-pkg-deployment.mdx`.
+- [Deploying NetBird with Group Policy (GPO)](pages/public/manage/integrations/mdm-deployment/windows-gpo-deployment.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/integrations/mdm-deployment/windows-gpo-deployment.mdx`.
+- [Configuring Routes with Access Control](pages/public/manage/network-routes/access-control.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/network-routes/access-control.mdx`.
+- [Advanced Configuration](pages/public/manage/network-routes/advanced-configuration.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/network-routes/advanced-configuration.mdx`.
+- [Routes](pages/public/manage/network-routes/index.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/network-routes/index.mdx`.
+- [Resolving Overlapping Routes](pages/public/manage/network-routes/overlapping-routes.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/network-routes/overlapping-routes.mdx`.
+- [Site-to-Site](pages/public/manage/network-routes/use-cases/site-to-site.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/network-routes/use-cases/site-to-site.mdx`.
+- [How Routing Peers Work](pages/public/manage/networks/how-routing-peers-work.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/networks/how-routing-peers-work.mdx`.
+- [Networks](pages/public/manage/networks/index.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/networks/index.mdx`.
+- [Masquerade](pages/public/manage/networks/masquerade.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/networks/masquerade.mdx`.
+- [Sizing Routing Peers](pages/public/manage/networks/sizing-routing-peers.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/networks/sizing-routing-peers.mdx`.
+- [Access Internal Resources From Autoscaled Environments](pages/public/manage/peers/access-infrastructure/access-internal-resources-from-autoscaled-environments.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/peers/access-infrastructure/access-internal-resources-from-autoscaled-environments.mdx`.
+- [Peer Approval for Remote Worker Access with NetBird](pages/public/manage/peers/access-infrastructure/peer-approval-for-remote-worker-access.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/peers/access-infrastructure/peer-approval-for-remote-worker-access.mdx`.
+- [Secure Remote Web Server Access: SSH Without Port Exposure](pages/public/manage/peers/access-infrastructure/secure-remote-webserver-access.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/peers/access-infrastructure/secure-remote-webserver-access.mdx`.
+- [Add Servers to the Network with Setup Keys](pages/public/manage/peers/access-infrastructure/setup-keys-add-servers-to-network.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/peers/access-infrastructure/setup-keys-add-servers-to-network.mdx`.
+- [Add peers to your NetBird network](pages/public/manage/peers/add-machines-to-your-network.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/peers/add-machines-to-your-network.mdx`.
+- [Approve peers](pages/public/manage/peers/approve-peers.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/peers/approve-peers.mdx`.
+- [Client Automatic Updates](pages/public/manage/peers/auto-update.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/peers/auto-update.mdx`.
+- [Bootstrap peers via config file](pages/public/manage/peers/bootstrap-via-config-file.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/peers/bootstrap-via-config-file.mdx`.
+- [Browser Client Technical Architecture](pages/public/manage/peers/browser-client/architecture.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/peers/browser-client/architecture.mdx`.
+- [Browser Client - Web-based Remote Access](pages/public/manage/peers/browser-client.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/peers/browser-client.mdx`.
+- [Lazy Connections](pages/public/manage/peers/lazy-connection.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/peers/lazy-connection.mdx`.
+- [Automate Deployments and Onboard Machines at Scale with Setup Keys](pages/public/manage/peers/register-machines-using-setup-keys.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/peers/register-machines-using-setup-keys.mdx`.
+- [Remote Jobs](pages/public/manage/peers/remote-jobs.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/peers/remote-jobs.mdx`.
+- [SSH Access](pages/public/manage/peers/ssh.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/peers/ssh.mdx`.
+- [Use service users and tokens to access NetBird's public API](pages/public/manage/public-api/index.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/public-api/index.mdx`.
+- [Reverse Proxy Access Logs](pages/public/manage/reverse-proxy/access-logs.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/reverse-proxy/access-logs.mdx`.
+- [Reverse Proxy Authentication and Access Restrictions](pages/public/manage/reverse-proxy/authentication.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/reverse-proxy/authentication.mdx`.
+- [Bring Your Own Proxy](pages/public/manage/reverse-proxy/bring-your-own-proxy.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/reverse-proxy/bring-your-own-proxy.mdx`.
+- [Custom Domains](pages/public/manage/reverse-proxy/custom-domains.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/reverse-proxy/custom-domains.mdx`.
+- [Expose from CLI](pages/public/manage/reverse-proxy/expose-from-cli.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/reverse-proxy/expose-from-cli.mdx`.
+- [Reverse Proxy](pages/public/manage/reverse-proxy/index.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/reverse-proxy/index.mdx`.
+- [Backend Service Configuration](pages/public/manage/reverse-proxy/service-configuration.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/reverse-proxy/service-configuration.mdx`.
+- [Reverse Proxy Troubleshooting](pages/public/manage/reverse-proxy/troubleshooting.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/reverse-proxy/troubleshooting.mdx`.
+- [Delete your NetBird account](pages/public/manage/settings/delete-account.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/settings/delete-account.mdx`.
+- [Enforce periodic user authentication](pages/public/manage/settings/enforce-periodic-user-authentication.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/settings/enforce-periodic-user-authentication.mdx`.
+- [IPv6 Overlay Addressing](pages/public/manage/settings/ipv6.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/settings/ipv6.mdx`.
+- [Multi-Factor Authentication (MFA)](pages/public/manage/settings/multi-factor-authentication.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/settings/multi-factor-authentication.mdx`.
+- [Notifications](pages/public/manage/settings/notifications.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/settings/notifications.mdx`.
+- [Plans and billing](pages/public/manage/settings/plans-and-billing.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/settings/plans-and-billing.mdx`.
+- [Add users to your network](pages/public/manage/team/add-users-to-your-network.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/team/add-users-to-your-network.mdx`.
+- [Approve users](pages/public/manage/team/approve-users.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/team/approve-users.mdx`.
+- [Automatically Offboard Team Members from NetBird](pages/public/manage/team/auto-offboard-users.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/team/auto-offboard-users.mdx`.
+- [Enable NetBird for Microsoft Entra ID](pages/public/manage/team/entra-id-app-enablement.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/team/entra-id-app-enablement.mdx`.
+- [Provision Users and Groups From Google Workspace (Embedded IdP)](pages/public/manage/team/idp-sync/embedded/google-workspace-sync.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/team/idp-sync/embedded/google-workspace-sync.mdx`.
+- [Provision Users and Groups From JumpCloud (Embedded IdP)](pages/public/manage/team/idp-sync/embedded/jumpcloud-sync.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/team/idp-sync/embedded/jumpcloud-sync.mdx`.
+- [Provision Users and Groups From Keycloak (Embedded IdP)](pages/public/manage/team/idp-sync/embedded/keycloak-sync.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/team/idp-sync/embedded/keycloak-sync.mdx`.
+- [Provision Users and Groups From Microsoft Entra ID via SCIM (Embedded IdP)](pages/public/manage/team/idp-sync/embedded/microsoft-entra-id-scim-sync.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/team/idp-sync/embedded/microsoft-entra-id-scim-sync.mdx`.
+- [Provision Users and Groups From Microsoft Entra ID via API (Embedded IdP)](pages/public/manage/team/idp-sync/embedded/microsoft-entra-id-sync.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/team/idp-sync/embedded/microsoft-entra-id-sync.mdx`.
+- [Provision Users and Groups From Google Workspace](pages/public/manage/team/idp-sync/google-workspace-sync.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/team/idp-sync/google-workspace-sync.mdx`.
+- [Provision Users and Groups From Your Identity Provider](pages/public/manage/team/idp-sync/index.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/team/idp-sync/index.mdx`.
+- [Provision Users and Groups From JumpCloud](pages/public/manage/team/idp-sync/jumpcloud-sync.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/team/idp-sync/jumpcloud-sync.mdx`.
+- [Provision Users and Groups From Keycloak](pages/public/manage/team/idp-sync/keycloak-sync.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/team/idp-sync/keycloak-sync.mdx`.
+- [Provision Users and Groups From Microsoft Entra ID via SCIM](pages/public/manage/team/idp-sync/microsoft-entra-id-scim-sync.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/team/idp-sync/microsoft-entra-id-scim-sync.mdx`.
+- [Provision Users and Groups From Microsoft Entra ID via API](pages/public/manage/team/idp-sync/microsoft-entra-id-sync.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/team/idp-sync/microsoft-entra-id-sync.mdx`.
+- [Provision Users and Groups from Okta](pages/public/manage/team/idp-sync/okta-sync.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/team/idp-sync/okta-sync.mdx`.
+- [Auth0 on NetBird Cloud](pages/public/manage/team/single-sign-on/auth0.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/team/single-sign-on/auth0.mdx`.
+- [Authentik on NetBird Cloud](pages/public/manage/team/single-sign-on/authentik.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/team/single-sign-on/authentik.mdx`.
+- [AWS Cognito on NetBird Cloud](pages/public/manage/team/single-sign-on/aws-cognito.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/team/single-sign-on/aws-cognito.mdx`.
+- [cidaas on NetBird Cloud](pages/public/manage/team/single-sign-on/cidaas.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/team/single-sign-on/cidaas.mdx`.
+- [Duo Security on NetBird Cloud](pages/public/manage/team/single-sign-on/duo-security.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/team/single-sign-on/duo-security.mdx`.
+- [Authenticate to NetBird with Single Sign On (SSO)](pages/public/manage/team/single-sign-on/index.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/team/single-sign-on/index.mdx`.
+- [JumpCloud on NetBird Cloud](pages/public/manage/team/single-sign-on/jumpcloud.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/team/single-sign-on/jumpcloud.mdx`.
+- [Keycloak on NetBird Cloud](pages/public/manage/team/single-sign-on/keycloak.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/team/single-sign-on/keycloak.mdx`.
+- [Zitadel on NetBird Cloud](pages/public/manage/team/single-sign-on/zitadel.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/team/single-sign-on/zitadel.mdx`.
+- [Zoho on NetBird Cloud](pages/public/manage/team/single-sign-on/zoho.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/team/single-sign-on/zoho.mdx`.
+- [User Roles](pages/public/manage/team/user-roles.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/team/user-roles.mdx`.
 
 ## Self-hosting
 
-- [Automated setup with a Personal Access Token](pages/public/selfhosted/automated-setup.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/automated-setup.mdx`.
-- [Getting Started with NetBird Enterprise Commercial License](pages/public/selfhosted/enterprise/getting-started.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/enterprise/getting-started.mdx`.
-- [NetBird Enterprise Commercial License](pages/public/selfhosted/enterprise/index.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/enterprise/index.mdx`.
-- [Environment Variables Configuration](pages/public/selfhosted/environment-variables.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/environment-variables.mdx`.
-- [External Reverse Proxy Setup for Self-Hosted NetBird](pages/public/selfhosted/external-reverse-proxy.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/external-reverse-proxy.mdx`.
-- [Configure NetBird with Ansible](pages/public/selfhosted/iac/ansible.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/iac/ansible.mdx`.
-- [ADFS SSO with NetBird Self-Hosted](pages/public/selfhosted/identity-providers/adfs.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/identity-providers/adfs.mdx`.
-- [Authentik SSO with NetBird Self-Hosted (Advanced)](pages/public/selfhosted/identity-providers/advanced/authentik.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/identity-providers/advanced/authentik.mdx`.
-- [Keycloak SSO with NetBird Self-Hosted (Advanced)](pages/public/selfhosted/identity-providers/advanced/keycloak.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/identity-providers/advanced/keycloak.mdx`.
-- [PocketID SSO with NetBird Self-Hosted (Advanced)](pages/public/selfhosted/identity-providers/advanced/pocketid.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/identity-providers/advanced/pocketid.mdx`.
-- [Zitadel SSO with NetBird Self-Hosted (Advanced)](pages/public/selfhosted/identity-providers/advanced/zitadel.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/identity-providers/advanced/zitadel.mdx`.
-- [Authentik with NetBird Self-Hosted](pages/public/selfhosted/identity-providers/authentik.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/identity-providers/authentik.mdx`.
-- [Disable Local Authentication](pages/public/selfhosted/identity-providers/disable-local-authentication.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/identity-providers/disable-local-authentication.mdx`.
-- [Enable MFA for local users](pages/public/selfhosted/identity-providers/enable-local-mfa.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/identity-providers/enable-local-mfa.mdx`.
-- [Generic OIDC Provider with NetBird Self-Hosted](pages/public/selfhosted/identity-providers/generic-oidc.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/identity-providers/generic-oidc.mdx`.
-- [Authentication and Identity Providers (IdPs)](pages/public/selfhosted/identity-providers/index.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/identity-providers/index.mdx`.
-- [Keycloak with NetBird Self-Hosted](pages/public/selfhosted/identity-providers/keycloak.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/identity-providers/keycloak.mdx`.
-- [Local User Management](pages/public/selfhosted/identity-providers/local.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/identity-providers/local.mdx`.
-- [Auth0 SSO with NetBird Self-Hosted (Legacy)](pages/public/selfhosted/identity-providers/managed/advanced/auth0.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/identity-providers/managed/advanced/auth0.mdx`.
-- [Google Workspace SSO with NetBird Self-Hosted (Legacy)](pages/public/selfhosted/identity-providers/managed/advanced/google-workspace.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/identity-providers/managed/advanced/google-workspace.mdx`.
-- [JumpCloud SSO with NetBird Self-Hosted (Legacy)](pages/public/selfhosted/identity-providers/managed/advanced/jumpcloud.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/identity-providers/managed/advanced/jumpcloud.mdx`.
-- [Microsoft and Entra ID SSO with NetBird Self-Hosted (Legacy)](pages/public/selfhosted/identity-providers/managed/advanced/microsoft-entra-id.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/identity-providers/managed/advanced/microsoft-entra-id.mdx`.
-- [Okta SSO with NetBird Self-Hosted (Legacy)](pages/public/selfhosted/identity-providers/managed/advanced/okta.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/identity-providers/managed/advanced/okta.mdx`.
-- [Auth0 SSO with NetBird Self-Hosted](pages/public/selfhosted/identity-providers/managed/auth0.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/identity-providers/managed/auth0.mdx`.
-- [Duo SSO with NetBird Self-Hosted](pages/public/selfhosted/identity-providers/managed/duo.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/identity-providers/managed/duo.mdx`.
-- [Google Workspace SSO with NetBird Self-Hosted](pages/public/selfhosted/identity-providers/managed/google-workspace.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/identity-providers/managed/google-workspace.mdx`.
-- [JumpCloud SSO with NetBird Self-Hosted](pages/public/selfhosted/identity-providers/managed/jumpcloud.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/identity-providers/managed/jumpcloud.mdx`.
-- [Microsoft and Entra ID SSO with NetBird Self-Hosted](pages/public/selfhosted/identity-providers/managed/microsoft-entra-id.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/identity-providers/managed/microsoft-entra-id.mdx`.
-- [Okta SSO with NetBird Self-Hosted](pages/public/selfhosted/identity-providers/managed/okta.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/identity-providers/managed/okta.mdx`.
-- [PocketID with NetBird Self-Hosted](pages/public/selfhosted/identity-providers/pocketid.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/identity-providers/pocketid.mdx`.
-- [Zitadel with NetBird Self-Hosted](pages/public/selfhosted/identity-providers/zitadel.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/identity-providers/zitadel.mdx`.
-- [Activity Events MySQL store](pages/public/selfhosted/maintenance/activity-mysql-store.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/maintenance/activity-mysql-store.mdx`.
-- [Activity Events Postgresql store](pages/public/selfhosted/maintenance/activity-postgres-store.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/maintenance/activity-postgres-store.mdx`.
-- [Self-hosted admin CLI](pages/public/selfhosted/maintenance/admin-cli.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/maintenance/admin-cli.mdx`.
-- [Back Up Your Self-Hosted NetBird Installation](pages/public/selfhosted/maintenance/backup.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/maintenance/backup.mdx`.
-- [Self-Hosted Deployment Configuration Files Reference](pages/public/selfhosted/maintenance/configuration-files.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/maintenance/configuration-files.mdx`.
-- [Protect the dashboard with CrowdSec AppSec](pages/public/selfhosted/maintenance/crowdsec-dashboard.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/maintenance/crowdsec-dashboard.mdx`.
-- [CrowdSec IP Reputation](pages/public/selfhosted/maintenance/crowdsec.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/maintenance/crowdsec.mdx`.
-- [Management Geolocation](pages/public/selfhosted/maintenance/geo-support.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/maintenance/geo-support.mdx`.
-- [Management PostgreSQL store](pages/public/selfhosted/maintenance/postgres-store.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/maintenance/postgres-store.mdx`.
-- [Remove Your Self-Hosted NetBird Installation](pages/public/selfhosted/maintenance/remove.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/maintenance/remove.mdx`.
-- [Running a Highly Available Self-Hosted Deployment](pages/public/selfhosted/maintenance/scaling/high-availability.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/maintenance/scaling/high-availability.mdx`.
-- [Migrate from SQLite to PostgreSQL](pages/public/selfhosted/maintenance/scaling/migrate-sqlite-to-postgresql.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/maintenance/scaling/migrate-sqlite-to-postgresql.mdx`.
-- [Running Multiple Proxy Instances](pages/public/selfhosted/maintenance/scaling/multiple-proxy-instances.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/maintenance/scaling/multiple-proxy-instances.mdx`.
-- [Splitting Your Self-Hosted Deployment](pages/public/selfhosted/maintenance/scaling/scaling-your-self-hosted-deployment.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/maintenance/scaling/scaling-your-self-hosted-deployment.mdx`.
-- [Set Up External Relay Servers](pages/public/selfhosted/maintenance/scaling/set-up-external-relays.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/maintenance/scaling/set-up-external-relays.mdx`.
-- [Set Up External Signal Server](pages/public/selfhosted/maintenance/scaling/set-up-external-signal.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/maintenance/scaling/set-up-external-signal.mdx`.
-- [Management SQLite store](pages/public/selfhosted/maintenance/sqlite-store.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/maintenance/sqlite-store.mdx`.
-- [Upgrade Your Self-Hosted NetBird Installation](pages/public/selfhosted/maintenance/upgrade.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/maintenance/upgrade.mdx`.
-- [VPS Marketplaces](pages/public/selfhosted/marketplaces/index.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/marketplaces/index.mdx`.
-- [Deploy NetBird on Vultr](pages/public/selfhosted/marketplaces/vultr.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/marketplaces/vultr.mdx`.
-- [Migration Guide: Combined Container Setup](pages/public/selfhosted/migration/combined-container.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/migration/combined-container.mdx`.
-- [Migration Guide: From Coturn to Embedded STUN Server](pages/public/selfhosted/migration/coturn-to-stun-migration.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/migration/coturn-to-stun-migration.mdx`.
-- [Migration Guide: Enable Reverse Proxy Feature](pages/public/selfhosted/migration/enable-reverse-proxy.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/migration/enable-reverse-proxy.mdx`.
-- [Migration Guide: External IdP to Embedded IdP](pages/public/selfhosted/migration/external-to-embedded-idp.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/migration/external-to-embedded-idp.mdx`.
-- [Combined deployment metrics](pages/public/selfhosted/observability/combined.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/observability/combined.mdx`.
-- [Grafana dashboards](pages/public/selfhosted/observability/dashboards.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/observability/dashboards.mdx`.
-- [Observability](pages/public/selfhosted/observability/index.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/observability/index.mdx`.
-- [Management metrics](pages/public/selfhosted/observability/management.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/observability/management.mdx`.
-- [Proxy metrics](pages/public/selfhosted/observability/proxy.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/observability/proxy.mdx`.
-- [Relay metrics](pages/public/selfhosted/observability/relay.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/observability/relay.mdx`.
-- [Signal metrics](pages/public/selfhosted/observability/signal.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/observability/signal.mdx`.
-- [Advanced guide](pages/public/selfhosted/selfhosted-guide.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/selfhosted-guide.mdx`.
-- [Self-Hosting Quickstart Guide (5 min)](pages/public/selfhosted/selfhosted-quickstart.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/selfhosted-quickstart.mdx`.
-- [Certificate issues](pages/public/selfhosted/troubleshooting/certificates.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/troubleshooting/certificates.mdx`.
-- [Connectivity issues](pages/public/selfhosted/troubleshooting/connectivity.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/troubleshooting/connectivity.mdx`.
-- [Dashboard issues](pages/public/selfhosted/troubleshooting/dashboard.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/troubleshooting/dashboard.mdx`.
-- [Database issues](pages/public/selfhosted/troubleshooting/database.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/troubleshooting/database.mdx`.
-- [Embedded IdP issues](pages/public/selfhosted/troubleshooting/identity-provider.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/troubleshooting/identity-provider.mdx`.
-- [Installation script issues](pages/public/selfhosted/troubleshooting/installation.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/troubleshooting/installation.mdx`.
-- [Troubleshooting](pages/public/selfhosted/troubleshooting.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/troubleshooting.mdx`.
+- [Automated setup with a Personal Access Token](pages/public/selfhosted/automated-setup.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/automated-setup.mdx`.
+- [Getting Started with NetBird Enterprise Commercial License](pages/public/selfhosted/enterprise/getting-started.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/enterprise/getting-started.mdx`.
+- [NetBird Enterprise Commercial License](pages/public/selfhosted/enterprise/index.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/enterprise/index.mdx`.
+- [Environment Variables Configuration](pages/public/selfhosted/environment-variables.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/environment-variables.mdx`.
+- [External Reverse Proxy Setup for Self-Hosted NetBird](pages/public/selfhosted/external-reverse-proxy.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/external-reverse-proxy.mdx`.
+- [Configure NetBird with Ansible](pages/public/selfhosted/iac/ansible.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/iac/ansible.mdx`.
+- [ADFS SSO with NetBird Self-Hosted](pages/public/selfhosted/identity-providers/adfs.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/identity-providers/adfs.mdx`.
+- [Authentik SSO with NetBird Self-Hosted (Advanced)](pages/public/selfhosted/identity-providers/advanced/authentik.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/identity-providers/advanced/authentik.mdx`.
+- [Keycloak SSO with NetBird Self-Hosted (Advanced)](pages/public/selfhosted/identity-providers/advanced/keycloak.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/identity-providers/advanced/keycloak.mdx`.
+- [PocketID SSO with NetBird Self-Hosted (Advanced)](pages/public/selfhosted/identity-providers/advanced/pocketid.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/identity-providers/advanced/pocketid.mdx`.
+- [Zitadel SSO with NetBird Self-Hosted (Advanced)](pages/public/selfhosted/identity-providers/advanced/zitadel.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/identity-providers/advanced/zitadel.mdx`.
+- [Authentik with NetBird Self-Hosted](pages/public/selfhosted/identity-providers/authentik.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/identity-providers/authentik.mdx`.
+- [Disable Local Authentication](pages/public/selfhosted/identity-providers/disable-local-authentication.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/identity-providers/disable-local-authentication.mdx`.
+- [Enable MFA for local users](pages/public/selfhosted/identity-providers/enable-local-mfa.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/identity-providers/enable-local-mfa.mdx`.
+- [Generic OIDC Provider with NetBird Self-Hosted](pages/public/selfhosted/identity-providers/generic-oidc.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/identity-providers/generic-oidc.mdx`.
+- [Authentication and Identity Providers (IdPs)](pages/public/selfhosted/identity-providers/index.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/identity-providers/index.mdx`.
+- [Keycloak with NetBird Self-Hosted](pages/public/selfhosted/identity-providers/keycloak.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/identity-providers/keycloak.mdx`.
+- [Local User Management](pages/public/selfhosted/identity-providers/local.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/identity-providers/local.mdx`.
+- [Auth0 SSO with NetBird Self-Hosted (Legacy)](pages/public/selfhosted/identity-providers/managed/advanced/auth0.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/identity-providers/managed/advanced/auth0.mdx`.
+- [Google Workspace SSO with NetBird Self-Hosted (Legacy)](pages/public/selfhosted/identity-providers/managed/advanced/google-workspace.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/identity-providers/managed/advanced/google-workspace.mdx`.
+- [JumpCloud SSO with NetBird Self-Hosted (Legacy)](pages/public/selfhosted/identity-providers/managed/advanced/jumpcloud.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/identity-providers/managed/advanced/jumpcloud.mdx`.
+- [Microsoft and Entra ID SSO with NetBird Self-Hosted (Legacy)](pages/public/selfhosted/identity-providers/managed/advanced/microsoft-entra-id.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/identity-providers/managed/advanced/microsoft-entra-id.mdx`.
+- [Okta SSO with NetBird Self-Hosted (Legacy)](pages/public/selfhosted/identity-providers/managed/advanced/okta.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/identity-providers/managed/advanced/okta.mdx`.
+- [Auth0 SSO with NetBird Self-Hosted](pages/public/selfhosted/identity-providers/managed/auth0.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/identity-providers/managed/auth0.mdx`.
+- [Duo SSO with NetBird Self-Hosted](pages/public/selfhosted/identity-providers/managed/duo.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/identity-providers/managed/duo.mdx`.
+- [Google Workspace SSO with NetBird Self-Hosted](pages/public/selfhosted/identity-providers/managed/google-workspace.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/identity-providers/managed/google-workspace.mdx`.
+- [JumpCloud SSO with NetBird Self-Hosted](pages/public/selfhosted/identity-providers/managed/jumpcloud.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/identity-providers/managed/jumpcloud.mdx`.
+- [Microsoft and Entra ID SSO with NetBird Self-Hosted](pages/public/selfhosted/identity-providers/managed/microsoft-entra-id.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/identity-providers/managed/microsoft-entra-id.mdx`.
+- [Okta SSO with NetBird Self-Hosted](pages/public/selfhosted/identity-providers/managed/okta.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/identity-providers/managed/okta.mdx`.
+- [PocketID with NetBird Self-Hosted](pages/public/selfhosted/identity-providers/pocketid.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/identity-providers/pocketid.mdx`.
+- [Zitadel with NetBird Self-Hosted](pages/public/selfhosted/identity-providers/zitadel.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/identity-providers/zitadel.mdx`.
+- [Activity Events MySQL store](pages/public/selfhosted/maintenance/activity-mysql-store.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/maintenance/activity-mysql-store.mdx`.
+- [Activity Events Postgresql store](pages/public/selfhosted/maintenance/activity-postgres-store.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/maintenance/activity-postgres-store.mdx`.
+- [Self-hosted admin CLI](pages/public/selfhosted/maintenance/admin-cli.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/maintenance/admin-cli.mdx`.
+- [Back Up Your Self-Hosted NetBird Installation](pages/public/selfhosted/maintenance/backup.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/maintenance/backup.mdx`.
+- [Self-Hosted Deployment Configuration Files Reference](pages/public/selfhosted/maintenance/configuration-files.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/maintenance/configuration-files.mdx`.
+- [Protect the dashboard with CrowdSec AppSec](pages/public/selfhosted/maintenance/crowdsec-dashboard.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/maintenance/crowdsec-dashboard.mdx`.
+- [CrowdSec IP Reputation](pages/public/selfhosted/maintenance/crowdsec.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/maintenance/crowdsec.mdx`.
+- [Management Geolocation](pages/public/selfhosted/maintenance/geo-support.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/maintenance/geo-support.mdx`.
+- [Management PostgreSQL store](pages/public/selfhosted/maintenance/postgres-store.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/maintenance/postgres-store.mdx`.
+- [Remove Your Self-Hosted NetBird Installation](pages/public/selfhosted/maintenance/remove.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/maintenance/remove.mdx`.
+- [Running a Highly Available Self-Hosted Deployment](pages/public/selfhosted/maintenance/scaling/high-availability.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/maintenance/scaling/high-availability.mdx`.
+- [Migrate from SQLite to PostgreSQL](pages/public/selfhosted/maintenance/scaling/migrate-sqlite-to-postgresql.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/maintenance/scaling/migrate-sqlite-to-postgresql.mdx`.
+- [Running Multiple Proxy Instances](pages/public/selfhosted/maintenance/scaling/multiple-proxy-instances.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/maintenance/scaling/multiple-proxy-instances.mdx`.
+- [Splitting Your Self-Hosted Deployment](pages/public/selfhosted/maintenance/scaling/scaling-your-self-hosted-deployment.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/maintenance/scaling/scaling-your-self-hosted-deployment.mdx`.
+- [Set Up External Relay Servers](pages/public/selfhosted/maintenance/scaling/set-up-external-relays.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/maintenance/scaling/set-up-external-relays.mdx`.
+- [Set Up External Signal Server](pages/public/selfhosted/maintenance/scaling/set-up-external-signal.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/maintenance/scaling/set-up-external-signal.mdx`.
+- [Management SQLite store](pages/public/selfhosted/maintenance/sqlite-store.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/maintenance/sqlite-store.mdx`.
+- [Upgrade Your Self-Hosted NetBird Installation](pages/public/selfhosted/maintenance/upgrade.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/maintenance/upgrade.mdx`.
+- [VPS Marketplaces](pages/public/selfhosted/marketplaces/index.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/marketplaces/index.mdx`.
+- [Deploy NetBird on Vultr](pages/public/selfhosted/marketplaces/vultr.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/marketplaces/vultr.mdx`.
+- [Migration Guide: Combined Container Setup](pages/public/selfhosted/migration/combined-container.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/migration/combined-container.mdx`.
+- [Migration Guide: From Coturn to Embedded STUN Server](pages/public/selfhosted/migration/coturn-to-stun-migration.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/migration/coturn-to-stun-migration.mdx`.
+- [Migration Guide: Enable Reverse Proxy Feature](pages/public/selfhosted/migration/enable-reverse-proxy.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/migration/enable-reverse-proxy.mdx`.
+- [Migration Guide: External IdP to Embedded IdP](pages/public/selfhosted/migration/external-to-embedded-idp.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/migration/external-to-embedded-idp.mdx`.
+- [Combined deployment metrics](pages/public/selfhosted/observability/combined.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/observability/combined.mdx`.
+- [Grafana dashboards](pages/public/selfhosted/observability/dashboards.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/observability/dashboards.mdx`.
+- [Observability](pages/public/selfhosted/observability/index.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/observability/index.mdx`.
+- [Management metrics](pages/public/selfhosted/observability/management.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/observability/management.mdx`.
+- [Proxy metrics](pages/public/selfhosted/observability/proxy.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/observability/proxy.mdx`.
+- [Relay metrics](pages/public/selfhosted/observability/relay.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/observability/relay.mdx`.
+- [Signal metrics](pages/public/selfhosted/observability/signal.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/observability/signal.mdx`.
+- [Advanced guide](pages/public/selfhosted/selfhosted-guide.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/selfhosted-guide.mdx`.
+- [Self-Hosting Quickstart Guide (5 min)](pages/public/selfhosted/selfhosted-quickstart.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/selfhosted-quickstart.mdx`.
+- [Certificate issues](pages/public/selfhosted/troubleshooting/certificates.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/troubleshooting/certificates.mdx`.
+- [Connectivity issues](pages/public/selfhosted/troubleshooting/connectivity.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/troubleshooting/connectivity.mdx`.
+- [Dashboard issues](pages/public/selfhosted/troubleshooting/dashboard.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/troubleshooting/dashboard.mdx`.
+- [Database issues](pages/public/selfhosted/troubleshooting/database.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/troubleshooting/database.mdx`.
+- [Embedded IdP issues](pages/public/selfhosted/troubleshooting/identity-provider.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/troubleshooting/identity-provider.mdx`.
+- [Installation script issues](pages/public/selfhosted/troubleshooting/installation.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/troubleshooting/installation.mdx`.
+- [Troubleshooting](pages/public/selfhosted/troubleshooting.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/troubleshooting.mdx`.
 
 ## Use cases
 
-- [Examples](pages/public/use-cases/cloud/aws-ecs-terraform.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/use-cases/cloud/aws-ecs-terraform.mdx`.
-- [Open Source Distributed AI Stack: ArgoCD, MicroK8s, vLLM, and NetBird](pages/public/use-cases/cloud/distributed-multi-cloud-ai.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/use-cases/cloud/distributed-multi-cloud-ai.mdx`.
-- [Cloud Use Cases](pages/public/use-cases/cloud/index.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/use-cases/cloud/index.mdx`.
-- [Running NetBird on serverless environments (FaaS)](pages/public/use-cases/cloud/netbird-on-faas.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/use-cases/cloud/netbird-on-faas.mdx`.
-- [Homelab Use Cases](pages/public/use-cases/homelab/index.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/use-cases/homelab/index.mdx`.
-- [Use Cases](pages/public/use-cases/index.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/use-cases/index.mdx`.
-- [API Server Proxy](pages/public/use-cases/kubernetes/api-server-proxy.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/use-cases/kubernetes/api-server-proxy.mdx`.
-- [Client Sidecar](pages/public/use-cases/kubernetes/client-sidecar.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/use-cases/kubernetes/client-sidecar.mdx`.
-- [Kubernetes Gateway API Integration Beta - experimental](pages/public/use-cases/kubernetes/gateway-api.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/use-cases/kubernetes/gateway-api.mdx`.
-- [Getting Started](pages/public/use-cases/kubernetes/index.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/use-cases/kubernetes/index.mdx`.
-- [Route to a Kubernetes service with high availability](pages/public/use-cases/kubernetes/route-to-a-kubernetes-service.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/use-cases/kubernetes/route-to-a-kubernetes-service.mdx`.
-- [Routing Peer](pages/public/use-cases/kubernetes/routing-peer.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/use-cases/kubernetes/routing-peer.mdx`.
-- [Deploy routing peers to a Kubernetes cluster](pages/public/use-cases/kubernetes/routing-peers-and-kubernetes.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/use-cases/kubernetes/routing-peers-and-kubernetes.mdx`.
-- [Access Home Devices (VPN-to-Site)](pages/public/use-cases/remote-access/access-home-devices.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/use-cases/remote-access/access-home-devices.mdx`.
-- [Active Directory & Windows File Shares](pages/public/use-cases/remote-access/active-directory.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/use-cases/remote-access/active-directory.mdx`.
-- [Cloud to On-Premise Access (VPN-to-Site)](pages/public/use-cases/remote-access/cloud-to-on-premise.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/use-cases/remote-access/cloud-to-on-premise.mdx`.
-- [Configuring Exit Nodes for Internet Traffic](pages/public/use-cases/remote-access/exit-nodes.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/use-cases/remote-access/exit-nodes.mdx`.
-- [Remote Access](pages/public/use-cases/remote-access/index.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/use-cases/remote-access/index.mdx`.
-- [Overlapping IPs for Resources](pages/public/use-cases/remote-access/overlapping-ips-for-resources.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/use-cases/remote-access/overlapping-ips-for-resources.mdx`.
-- [Reach Services on the Routing Peer](pages/public/use-cases/remote-access/reach-services-on-the-routing-peer.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/use-cases/remote-access/reach-services-on-the-routing-peer.mdx`.
-- [Site-to-Site](pages/public/use-cases/remote-access/site-to-site.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/use-cases/remote-access/site-to-site.mdx`.
-- [Site-to-VPN: Clientless Devices Reaching NetBird Peers](pages/public/use-cases/remote-access/site-to-vpn.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/use-cases/remote-access/site-to-vpn.mdx`.
-- [Implementing Zero Trust with NetBird](pages/public/use-cases/security/implement-zero-trust.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/use-cases/security/implement-zero-trust.mdx`.
-- [Security Use Cases](pages/public/use-cases/security/index.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/use-cases/security/index.mdx`.
-- [Private Proxy Without Public Inbound Ports](pages/public/use-cases/security/private-no-inbound.md): Source `netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/use-cases/security/private-no-inbound.mdx`.
+- [Examples](pages/public/use-cases/cloud/aws-ecs-terraform.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/use-cases/cloud/aws-ecs-terraform.mdx`.
+- [Open Source Distributed AI Stack: ArgoCD, MicroK8s, vLLM, and NetBird](pages/public/use-cases/cloud/distributed-multi-cloud-ai.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/use-cases/cloud/distributed-multi-cloud-ai.mdx`.
+- [Cloud Use Cases](pages/public/use-cases/cloud/index.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/use-cases/cloud/index.mdx`.
+- [Running NetBird on serverless environments (FaaS)](pages/public/use-cases/cloud/netbird-on-faas.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/use-cases/cloud/netbird-on-faas.mdx`.
+- [Homelab Use Cases](pages/public/use-cases/homelab/index.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/use-cases/homelab/index.mdx`.
+- [Use Cases](pages/public/use-cases/index.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/use-cases/index.mdx`.
+- [API Server Proxy](pages/public/use-cases/kubernetes/api-server-proxy.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/use-cases/kubernetes/api-server-proxy.mdx`.
+- [Client Sidecar](pages/public/use-cases/kubernetes/client-sidecar.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/use-cases/kubernetes/client-sidecar.mdx`.
+- [Kubernetes Gateway API Integration Beta - experimental](pages/public/use-cases/kubernetes/gateway-api.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/use-cases/kubernetes/gateway-api.mdx`.
+- [Getting Started](pages/public/use-cases/kubernetes/index.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/use-cases/kubernetes/index.mdx`.
+- [Route to a Kubernetes service with high availability](pages/public/use-cases/kubernetes/route-to-a-kubernetes-service.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/use-cases/kubernetes/route-to-a-kubernetes-service.mdx`.
+- [Routing Peer](pages/public/use-cases/kubernetes/routing-peer.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/use-cases/kubernetes/routing-peer.mdx`.
+- [Deploy routing peers to a Kubernetes cluster](pages/public/use-cases/kubernetes/routing-peers-and-kubernetes.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/use-cases/kubernetes/routing-peers-and-kubernetes.mdx`.
+- [Access Home Devices (VPN-to-Site)](pages/public/use-cases/remote-access/access-home-devices.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/use-cases/remote-access/access-home-devices.mdx`.
+- [Active Directory & Windows File Shares](pages/public/use-cases/remote-access/active-directory.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/use-cases/remote-access/active-directory.mdx`.
+- [Cloud to On-Premise Access (VPN-to-Site)](pages/public/use-cases/remote-access/cloud-to-on-premise.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/use-cases/remote-access/cloud-to-on-premise.mdx`.
+- [Configuring Exit Nodes for Internet Traffic](pages/public/use-cases/remote-access/exit-nodes.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/use-cases/remote-access/exit-nodes.mdx`.
+- [Remote Access](pages/public/use-cases/remote-access/index.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/use-cases/remote-access/index.mdx`.
+- [Overlapping IPs for Resources](pages/public/use-cases/remote-access/overlapping-ips-for-resources.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/use-cases/remote-access/overlapping-ips-for-resources.mdx`.
+- [Reach Services on the Routing Peer](pages/public/use-cases/remote-access/reach-services-on-the-routing-peer.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/use-cases/remote-access/reach-services-on-the-routing-peer.mdx`.
+- [Site-to-Site](pages/public/use-cases/remote-access/site-to-site.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/use-cases/remote-access/site-to-site.mdx`.
+- [Site-to-VPN: Clientless Devices Reaching NetBird Peers](pages/public/use-cases/remote-access/site-to-vpn.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/use-cases/remote-access/site-to-vpn.mdx`.
+- [Implementing Zero Trust with NetBird](pages/public/use-cases/security/implement-zero-trust.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/use-cases/security/implement-zero-trust.mdx`.
+- [Security Use Cases](pages/public/use-cases/security/index.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/use-cases/security/index.mdx`.
+- [Private Proxy Without Public Inbound Ports](pages/public/use-cases/security/private-no-inbound.md): Source `netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/use-cases/security/private-no-inbound.mdx`.
 
 ## Release technical architecture
 

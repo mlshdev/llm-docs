@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/client/grpc-socket.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/client/grpc-socket.mdx)
+> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/client/grpc-socket.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/client/grpc-socket.mdx)
 
 # gRPC Daemon Socket
 
@@ -110,7 +110,7 @@ netbird --daemon-addr tcp://127.0.0.1:41731 status
 
 ## Privileged Operations
 
-Any local user can reach the socket, so the daemon authorizes individual operations
+On the default sockets any local user can connect, so the daemon authorizes operations
 by the identity of whoever calls it, read from the kernel rather than supplied by
 the client: `SO_PEERCRED` on Linux, `LOCAL_PEERCRED` on macOS, and the named-pipe
 client token on Windows. A caller whose identity cannot be established is refused.
@@ -118,18 +118,27 @@ client token on Windows. A caller whose identity cannot be established is refuse
 Since 0.76.0 the following require root, or an administrator on Windows, because
 they decide who may obtain a shell on the machine:
 
-| Change                                        | Refused when                                                             |
-| --------------------------------------------- | ------------------------------------------------------------------------ |
-| Enable the NetBird SSH server                 | the caller is not privileged                                             |
-| Enable SSH root login                         | the caller is not privileged                                             |
-| Disable SSH authentication                    | the caller is not privileged                                             |
-| Change the management URL                     | the caller is not privileged and that profile has the SSH server enabled |
-| Deregister the peer (logout, profile removal) | the caller is not privileged and that profile has the SSH server enabled |
+| Change                        | Refused when                                                             |
+| ----------------------------- | ------------------------------------------------------------------------ |
+| Enable the NetBird SSH server | the caller is not privileged                                             |
+| Enable SSH root login         | the caller is not privileged                                             |
+| Disable SSH authentication    | the caller is not privileged                                             |
+| Change the management URL     | the caller is not privileged and that profile has the SSH server enabled |
+| Deregister the peer (logout)  | the caller is not privileged and that profile has the SSH server enabled |
 
-Only the direction that creates the capability is guarded. Turning any of them off
-is always allowed, and restating a value that is already set is not a change, so an
-integration that submits a whole settings form does not start failing once an
-administrator enables SSH.
+Only the direction that creates the capability is guarded. Turning the SSH server or
+root login off, and re-enabling SSH authentication, are always allowed, and restating a
+value that is already set is not a change, so an integration that submits a whole
+settings form does not start failing once an administrator enables SSH.
+
+Removing a profile is not refused. An unprivileged caller removes it locally and the
+daemon skips the deregistration, which leaves the peer registered on the management
+server rather than detached from it.
+
+A profile written before the SSH server flag existed counts as having it enabled,
+because the daemon reads an unset flag the same way the engine does. The management URL
+and deregistration guards therefore apply on those installations even though nobody
+enabled SSH explicitly.
 
 A refusal comes back as gRPC `PermissionDenied` carrying a `google.rpc.ErrorInfo`
 detail, so an integration can recognise it without parsing the message:

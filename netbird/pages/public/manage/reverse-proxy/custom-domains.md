@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/reverse-proxy/custom-domains.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/manage/reverse-proxy/custom-domains.mdx)
+> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/reverse-proxy/custom-domains.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/manage/reverse-proxy/custom-domains.mdx)
 
 # Custom Domains
 
@@ -54,7 +54,7 @@ Follow these steps to add a custom domain to your account:
 4. Select the target **proxy cluster** that will handle traffic for this domain.
 5. Click **Save**.
 
-![Add Domain modal showing domain name and proxy cluster fields](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/reverse-proxy/custom-domains/custom-domains-add.png)
+![Add Domain modal showing domain name and proxy cluster fields](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/reverse-proxy/custom-domains/custom-domains-add.png)
 
 After saving, the domain appears in your list with a **Pending Verification** status. You must complete CNAME verification before you can use the domain with a service.
 
@@ -87,11 +87,11 @@ The exact target value depends on the proxy cluster you selected when adding the
 
 After creating the DNS record, return to the **Reverse Proxy** > **Custom Domains** page and click **Verify Domain** next to the domain.
 
-![Domain verification modal showing CNAME record details](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/reverse-proxy/custom-domains/custom-domains-verification.png)
+![Domain verification modal showing CNAME record details](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/reverse-proxy/custom-domains/custom-domains-verification.png)
 
 Confirm that the dialog reflects CNAME record you added to your domain provider and click **Start Verification**.
 
-![Start Verification Dialog](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/reverse-proxy/custom-domains/custom-domains-start-verification.png)
+![Start Verification Dialog](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/reverse-proxy/custom-domains/custom-domains-start-verification.png)
 
 NetBird performs a CNAME lookup on `*.<your-domain>` and verifies that it resolves to a known proxy cluster. Once verification succeeds, the domain status changes to **Active** and it becomes available in the domain selector when creating or editing services.
 

@@ -1,10 +1,10 @@
-> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/reverse-proxy/authentication.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/manage/reverse-proxy/authentication.mdx)
+> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/reverse-proxy/authentication.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/manage/reverse-proxy/authentication.mdx)
 
 # Reverse Proxy Authentication and Access Restrictions
 
 NetBird Reverse Proxy supports multiple authentication methods and connection-level access restrictions to control who can access your exposed services. You can enable one or more methods on each service, or leave a service completely public. Authentication and access restrictions are configured per service in the **Authentication** tab when creating or editing a service.
 
-![Authentication tab showing all available authentication methods](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/reverse-proxy/authentication/reverse-proxy-add-service-auth.png)
+![Authentication tab showing all available authentication methods](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/reverse-proxy/authentication/reverse-proxy-add-service-auth.png)
 
 ## Authentication methods
 
@@ -23,7 +23,7 @@ NetBird-Only Access is mutually exclusive with the operator auth methods on the 
 
 NetBird-Only Access restricts the service to peers running inside your own NetBird network. Unlike SSO or password, there is no login page — the proxy verifies the client through its WireGuard tunnel before serving any traffic. Clients that are not on a NetBird peer in your account cannot reach the service at all.
 
-![NetBird-Only Access configuration modal with access group selection](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/reverse-proxy/authentication/auth-netbird-only-modal.png)
+![NetBird-Only Access configuration modal with access group selection](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/reverse-proxy/authentication/auth-netbird-only-modal.png)
 
 **How it works:**
 
@@ -33,7 +33,7 @@ NetBird-Only Access restricts the service to peers running inside your own NetBi
 
 By default the proxy reaches the backend over the encrypted WireGuard tunnel through a NetBird peer — the service is reachable only from inside your NetBird network, and access is gated by group membership:
 
-![Diagram of a NetBird-Only service: the device tunnels to the proxy cluster, the management service checks group membership, and requests from allowed users are forwarded over WireGuard through a NetBird peer to the backend service while others get a 403](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/reverse-proxy/authentication/netbird-only-via-peer-diagram.png)
+![Diagram of a NetBird-Only service: the device tunnels to the proxy cluster, the management service checks group membership, and requests from allowed users are forwarded over WireGuard through a NetBird peer to the backend service while others get a 403](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/reverse-proxy/authentication/netbird-only-via-peer-diagram.png)
 
 For services that target a **Proxy Cluster** (or have **Direct Upstream** enabled), the proxy dials the backend directly from its own host network stack instead of through a peer — see [Private services](https://docs.netbird.io/manage/reverse-proxy/bring-your-own-proxy#private-services-net-bird-only-access).
 
@@ -54,7 +54,7 @@ NetBird Cloud's shared clusters do not currently advertise the `Private` capabil
 
 Enabling NetBird-Only Access applies an implicit allow rule for the NetBird network range on the **Access Control** tab — additional CIDR rules you add are layered on top of that baseline. Country and CrowdSec checks are skipped on the overlay path because the source address is always a NetBird CGNAT address with no meaningful geo or reputation data.
 
-![Access Control tab on a NetBird-only service, showing the default-allow callout](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/reverse-proxy/reverse-proxy-access-control-modal.png)
+![Access Control tab on a NetBird-only service, showing the default-allow callout](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/reverse-proxy/reverse-proxy-access-control-modal.png)
 
 **Identity headers stamped on upstream requests:**
 
@@ -75,7 +75,7 @@ SSO authentication requires users to authenticate through your identity provider
 
 You can optionally restrict access to specific **distribution groups** from your IdP. When groups are configured, only users who belong to at least one of the selected groups are allowed through after authenticating.
 
-![SSO configuration modal with group selection](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/reverse-proxy/authentication/auth-sso-modal.png)
+![SSO configuration modal with group selection](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/reverse-proxy/authentication/auth-sso-modal.png)
 
 **Key details:**
 
@@ -94,7 +94,7 @@ You can optionally restrict access to specific **distribution groups** from your
 
 Password authentication protects a service with a shared password that you define. When a user visits the service URL, they are prompted to enter the password before they can proceed. Passwords are securely hashed using **Argon2id** on the backend - the plaintext password is never stored.
 
-![Password configuration modal](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/reverse-proxy/authentication/auth-password-modal.png)
+![Password configuration modal](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/reverse-proxy/authentication/auth-password-modal.png)
 
 **Key details:**
 
@@ -109,7 +109,7 @@ Password authentication protects a service with a shared password that you defin
 
 PIN code authentication works similarly to password authentication but is limited to numeric input. When a user visits the service URL, they are prompted to enter the PIN code. PINs are securely hashed using **Argon2id** on the backend, just like passwords.
 
-![PIN Code configuration modal](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/reverse-proxy/authentication/auth-pin-modal.png)
+![PIN Code configuration modal](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/reverse-proxy/authentication/auth-pin-modal.png)
 
 **Key details:**
 
@@ -151,7 +151,7 @@ Services can also be configured without any authentication. When no authenticati
 >
 > When you save a service with no authentication configured, the dashboard displays a warning: **"This service will be publicly accessible to everyone on the internet without any restrictions."** You must confirm before the service is saved. Make sure this is intentional before proceeding.
 
-![Warning dialog displayed when saving a service without authentication](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/reverse-proxy/authentication/auth-no-auth-warning.png)
+![Warning dialog displayed when saving a service without authentication](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/reverse-proxy/authentication/auth-no-auth-warning.png)
 
 **Best for:** Public-facing websites, APIs that handle their own authentication internally, or services that are intentionally open to the internet.
 
@@ -181,7 +181,7 @@ Access restrictions control which connections are allowed to reach your service 
 
 Access restrictions are evaluated **before** authentication. If a connection is blocked by an access restriction rule, it is rejected immediately without any authentication check.
 
-![Authentication tab showing all available authentication methods](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/reverse-proxy/authentication/access-restrictions-geo-ip.png)
+![Authentication tab showing all available authentication methods](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/reverse-proxy/authentication/access-restrictions-geo-ip.png)
 
 ### IP CIDR restrictions
 
@@ -216,6 +216,33 @@ The evaluation logic mirrors CIDR restrictions: if an allowed list is present, t
 >
 > GeoIP accuracy depends on the database quality and the client's IP address. VPN and proxy users may appear from a different country than their physical location.
 
+### Combining allowlists (match all or any)
+
+Allowlist matching happens at two levels: within a single list, and across the different lists.
+
+**Within a single list**, entries are OR-ed. A connection matches the allowed CIDRs if its IP falls in *any* one of them, and it matches the allowed countries if its country is *any* one of them. Adding more entries to a list widens what that list accepts.
+
+**Across lists** (allowed CIDRs versus allowed countries), the **Allow match** setting controls how the two combine when both are configured:
+
+- **All**: a connection must match every configured list. With an allowed CIDR and an allowed country, the client must be in the CIDR *and* in the country. This is the behavior when the setting is unset, so existing services and services created through the API keep matching all lists.
+- **Any**: a connection is allowed if it matches at least one configured list, for example an allowed country *or* an allowed CIDR. New services created in the dashboard default to **Any**.
+
+Allow match only affects allowlists. Blocklists are independent and always take priority: a connection matching any blocked CIDR or blocked country is rejected even in **Any** mode.
+
+**Example**: allow all traffic from the US, plus a specific office network abroad:
+
+| Field             | Value            |
+| ----------------- | ---------------- |
+| Allowed countries | `US`             |
+| Allowed CIDRs     | `203.0.113.0/24` |
+| Allow match       | `Any`            |
+
+With **Any**, a US client is allowed even if it is not in the CIDR, and a client in `203.0.113.0/24` is allowed even though it is located abroad. Under **All**, only clients that are both in the US and in the CIDR would pass.
+
+> **Note**
+>
+> **Any** is also the right choice when an allowed CIDR covers a private or LAN range. Private addresses have no country, so pairing such a CIDR with a country allowlist under **All** would deny those clients (their country cannot be resolved). With **Any**, the CIDR match alone admits them.
+
 ### CrowdSec IP reputation
 
 [CrowdSec](https://www.crowdsec.net) is an open-source security engine that maintains a community-curated database of known malicious IP addresses. When enabled, the proxy checks every incoming client IP against a local cache of CrowdSec decisions and blocks connections from flagged addresses.
@@ -239,7 +266,7 @@ CrowdSec decisions include different remediation types (ban, captcha, throttle).
 Access restrictions and authentication methods are independent layers:
 
 1. **Connection arrives** at the proxy.
-2. **Access restrictions** are evaluated first: IP CIDRs, then country, then CrowdSec. If the connection is blocked at any layer, it is rejected with no further processing.
+2. **Access restrictions** are evaluated first. Allowlists combine according to the [Allow match](#combining-allowlists-match-all-or-any) setting; blocklists and CrowdSec always reject on match. If the connection is blocked, it is rejected with no further processing.
 3. **Authentication** is evaluated next (for HTTP services): SSO, password, PIN, or header auth.
 4. If both layers pass, the request is forwarded to the backend.
 
@@ -252,9 +279,9 @@ Authentication and access control are configured in separate tabs of the service
 - **Authentication** tab (HTTP services only): SSO, password, PIN, and header authentication
 - **Access Control** tab (all service modes): IP CIDR and country restrictions
 
-![Authentication tab showing all available authentication methods](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/reverse-proxy/reverse-proxy-auth-modal.png)
+![Authentication tab showing all available authentication methods](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/reverse-proxy/reverse-proxy-auth-modal.png)
 
-![Access Control tab on a service, showing the rule list and the NetBird-only baseline callout](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/reverse-proxy/reverse-proxy-access-control-modal.png)
+![Access Control tab on a service, showing the rule list and the NetBird-only baseline callout](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/reverse-proxy/reverse-proxy-access-control-modal.png)
 
 ### Setting up NetBird-Only Access (private services)
 

@@ -1,11 +1,11 @@
-> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/agent-network/policies/limits.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/agent-network/policies/limits.mdx)
+> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/agent-network/policies/limits.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/agent-network/policies/limits.mdx)
 
 # Token & Budget Limits
 
 Limits cap how much a policy's callers can consume. They come in two halves,
 each enforceable per user and per group over a fixed time window.
 
-![agent network token and budget limits on a policy](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/agent-network/policies/agent-network-policy-limits.png)
+![agent network token and budget limits on a policy](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/agent-network/policies/agent-network-policy-limits.png)
 
 To enable limits, open the policy's **Limits** tab when creating or editing a policy, turn
 on the token and/or budget limit, and set the per-user and per-group caps and window.

@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/get-started/install/android-tv.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/get-started/install/android-tv.mdx)
+> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/get-started/install/android-tv.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/get-started/install/android-tv.mdx)
 
 # Install NetBird on an Android TV
 
@@ -12,7 +12,7 @@ The Android TV app supports devices running Android 8.0 or later.
 
 NetBird has an official Android application that you can download at Google Play Store:
 
-[![playstore](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/get-started/android/google-play-badge.png)](https://play.google.com/store/apps/details?id=io.netbird.client)
+[![playstore](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/get-started/android/google-play-badge.png)](https://play.google.com/store/apps/details?id=io.netbird.client)
 
 APK releases are also available to install directly on your Android device via the [NetBird Android GitHub repository](https://github.com/netbirdio/android-client/releases).
 
@@ -22,11 +22,11 @@ APK releases are also available to install directly on your Android device via t
 
 Upon first launch, NetBird will inform you that it's using the default managemet server.
 
-![firstinstall](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/get-started/android/first-install-dialog.png)
+![firstinstall](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/get-started/android/first-install-dialog.png)
 
 Select 'Continue' to ackownledge and you'll be greeted with the app's main screen.
 
-![android-tv-main-screen](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/get-started/android-tv/main-screen.png)
+![android-tv-main-screen](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/get-started/android-tv/main-screen.png)
 
 ### Management Server Configuration
 
@@ -36,17 +36,17 @@ Select 'Continue' to ackownledge and you'll be greeted with the app's main scree
 
 Select the hamburger menu on the top left of the main screen (or hold the left directional button) and navigate to the 'Change Server' menu.
 
-![android-tv-main-menu](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/get-started/android-tv/main-menu-change-server.png)
+![android-tv-main-menu](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/get-started/android-tv/main-menu-change-server.png)
 
 Changing servers erases the device's current NetBird config, so you'll need to confirm the action before proceeding:
 
-![confirm-erase-cponfig](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/get-started/android-tv/change-server.png)
+![confirm-erase-cponfig](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/get-started/android-tv/change-server.png)
 
 Enter your management server endpoint. For cloud users, this is `https://api.netbird.io:443`. For self-hosted users, it's usually `https://your_management_server_url:443`, but you can refer to the `exposedAddress` field in your `config.yaml` (or `management.json` for older multi-container setups) if you're unsure.
 
 If enrolling the device with a setup key, select '+ Add this device with a setup key' and enter your setup key. Select 'change' to apply your new management server config, and if successful you'll see the following:
 
-![serverchanged](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/get-started/android/server-changed.png)
+![serverchanged](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/get-started/android/server-changed.png)
 
 You're now ready to connect to your Netbird network!
 
@@ -54,7 +54,7 @@ You're now ready to connect to your Netbird network!
 
 Select the NetBird logo button to connect. The app will request permission to create a VPN connection:
 
-![vpnconnectionrequest](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/get-started/android/vpn-connection-request.png)
+![vpnconnectionrequest](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/get-started/android/vpn-connection-request.png)
 
 Select 'OK'. If you didn't enter a setup key in the 'Change Server' menu, then you'll need to authenticate with your SSO provider. NetBird will open a browser window where you'll be instructed to sign in to your SSO provider.
 
@@ -69,7 +69,7 @@ After logging in, NetBird will confirm your authentication. Once you close the b
 Since Android TV doesn't ship with a built-in browser, and entering credentials with a remote may be less than ideal, the TV client uses a slightly different authentication flow to the mobile app. If you're not using a setup key, then after you grant the app permission
 to create a VPN connection, you'll be presented a QR code and device ID:
 
-![tvssoqr](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/get-started/android/tv-sso-qr-dialog.png)
+![tvssoqr](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/get-started/android/tv-sso-qr-dialog.png)
 
 Scan the QR code with your phone and you'll be able to sign in to your SSO provider there. If asked to confirm your device code, confirm that the code underneath the QR code matches the one presented by your SSO provider. Once you've completed
 the SSO flow, the QR code dialog in the NetBird app will automatically dismiss itself, and your device should now be connected!

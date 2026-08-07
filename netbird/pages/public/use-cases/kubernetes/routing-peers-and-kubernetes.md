@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/use-cases/kubernetes/routing-peers-and-kubernetes.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/use-cases/kubernetes/routing-peers-and-kubernetes.mdx)
+> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/use-cases/kubernetes/routing-peers-and-kubernetes.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/use-cases/kubernetes/routing-peers-and-kubernetes.mdx)
 
 # Deploy routing peers to a Kubernetes cluster
 
@@ -35,7 +35,7 @@ suit your needs.
 
 See the screenshot below for reference:
 
-![k8s-create-setup-key](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/use-cases/routing-peers-and-kubernetes/k8s-create-setup-key.png)
+![k8s-create-setup-key](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/use-cases/routing-peers-and-kubernetes/k8s-create-setup-key.png)
 
 With your setup key created, note it down for the next steps.
 
@@ -50,11 +50,11 @@ Set the distribution group to `hetzner-servers`. This group is used to distribut
 
 See the screenshot below for reference:
 
-![k8s-add-network-route](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/use-cases/routing-peers-and-kubernetes/k8s-add-network-route.png)
+![k8s-add-network-route](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/use-cases/routing-peers-and-kubernetes/k8s-add-network-route.png)
 
 Click on Name & Description to give your route a name and description. Then click on `Add Route` to save your changes.
 
-![k8s-name-network-route](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/use-cases/routing-peers-and-kubernetes/k8s-name-network-route.png)
+![k8s-name-network-route](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/use-cases/routing-peers-and-kubernetes/k8s-name-network-route.png)
 
 ### Step 3: Create an access control policy
 
@@ -63,11 +63,11 @@ Navigate to Access Control Policies in the NetBird management dashboard and clic
 Set the source group to `hetzner-servers` and the destination group to `kubernetes-routers`. This configuration allows
 the Hetzner servers to access the kubernetes pods.
 
-![k8s-add-access-control-policy](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/use-cases/routing-peers-and-kubernetes/k8s-add-access-control-policy.png)
+![k8s-add-access-control-policy](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/use-cases/routing-peers-and-kubernetes/k8s-add-access-control-policy.png)
 
 Click on Name & Description to give your policy a name and description. Then click on `Add Policy` to save your changes.
 
-![k8s-name-access-control-policy](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/use-cases/routing-peers-and-kubernetes/k8s-name-access-control-policy.png)
+![k8s-name-access-control-policy](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/use-cases/routing-peers-and-kubernetes/k8s-name-access-control-policy.png)
 
 ### Step 4: Deploy the NetBird agent
 
@@ -180,7 +180,7 @@ kubectl logs -l app=netbird
 
 You can also verify that the agent is connected to the NetBird management dashboard by checking the dashboard.
 
-![k8s-netbird-agent-connected](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/use-cases/routing-peers-and-kubernetes/k8s-netbird-agent-connected.png)
+![k8s-netbird-agent-connected](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/use-cases/routing-peers-and-kubernetes/k8s-netbird-agent-connected.png)
 
 ## Conclusion
 

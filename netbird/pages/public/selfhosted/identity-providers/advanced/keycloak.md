@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/identity-providers/advanced/keycloak.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/selfhosted/identity-providers/advanced/keycloak.mdx)
+> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/identity-providers/advanced/keycloak.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/selfhosted/identity-providers/advanced/keycloak.mdx)
 
 # Keycloak SSO with NetBird Self-Hosted (Advanced)
 
@@ -26,7 +26,7 @@ For most deployments, the [embedded IdP](https://docs.netbird.io/selfhosted/iden
 
 After completing this guide, you can log in to your self-hosted NetBird Dashboard and add machines to your network using the [Interactive SSO Login feature](https://docs.netbird.io/get-started/install#running-net-bird-with-sso-login) over Keycloak.
 
-![Keycloak auth flow](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/keycloak-auth-grant.gif)
+![Keycloak auth flow](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/keycloak-auth-grant.gif)
 
 ### Prerequisites
 
@@ -46,7 +46,7 @@ Ensure your Keycloak instance is available at `https://YOUR-KEYCLOAK-HOST-AND-PO
    - **Realm name**: `netbird`
 5. Click **Create**
 
-![Create realm](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/keycloak-create-realm.png)
+![Create realm](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/keycloak-create-realm.png)
 
 ### Step 3: Create a User
 
@@ -57,14 +57,14 @@ Ensure your Keycloak instance is available at `https://YOUR-KEYCLOAK-HOST-AND-PO
    - **Username**: `netbird`
 5. Click **Create**
 
-![Create user](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/keycloak-create-user.png)
+![Create user](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/keycloak-create-user.png)
 
 6. Click **Credentials** tab
 7. Click **Set password**
 8. Fill in the password and set **Temporary** to `Off`
 9. Click **Save**
 
-![Set password](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/keycloak-set-password.png)
+![Set password](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/keycloak-set-password.png)
 
 ### Step 4: Create NetBird Client
 
@@ -74,11 +74,11 @@ Ensure your Keycloak instance is available at `https://YOUR-KEYCLOAK-HOST-AND-PO
    - **Client ID**: `netbird-client`
 3. Click **Next**
 
-![Create client](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/keycloak-create-client.png)
+![Create client](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/keycloak-create-client.png)
 
 4. Enable the authentication options as shown:
 
-![Enable auth](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/keycloak-enable-auth.png)
+![Enable auth](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/keycloak-enable-auth.png)
 
 5. Click **Save**
 
@@ -92,7 +92,7 @@ Ensure your Keycloak instance is available at `https://YOUR-KEYCLOAK-HOST-AND-PO
    - **Web origins**: `+`
 3. Click **Save**
 
-![Access settings](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/keycloak-access-settings.png)
+![Access settings](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/keycloak-access-settings.png)
 
 ### Step 6: Create Client Scope
 
@@ -104,13 +104,13 @@ Ensure your Keycloak instance is available at `https://YOUR-KEYCLOAK-HOST-AND-PO
    - **Protocol**: `OpenID Connect`
 4. Click **Save**
 
-![Create client scope](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/keycloak-create-client-scope.png)
+![Create client scope](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/keycloak-create-client-scope.png)
 
 5. Switch to the **Mappers** tab
 6. Click **Configure a new mapper**
 7. Choose **Audience** mapping
 
-![Configure audience mapper](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/keycloak-configure-audience-mapper.png)
+![Configure audience mapper](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/keycloak-configure-audience-mapper.png)
 
 8. Fill in:
    - **Name**: `Audience for NetBird Management API`
@@ -118,7 +118,7 @@ Ensure your Keycloak instance is available at `https://YOUR-KEYCLOAK-HOST-AND-PO
    - **Add to access token**: `On`
 9. Click **Save**
 
-![Audience mapper config](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/keycloak-configure-audience-mapper-2.png)
+![Audience mapper config](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/keycloak-configure-audience-mapper-2.png)
 
 ### Step 7: Add Client Scope to NetBird Client
 
@@ -128,7 +128,7 @@ Ensure your Keycloak instance is available at `https://YOUR-KEYCLOAK-HOST-AND-PO
 4. Choose `api`
 5. Click **Add** choosing `Default`
 
-![Add client scope](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/keycloak-add-client-scope.png)
+![Add client scope](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/keycloak-add-client-scope.png)
 
 ### Step 8: Create NetBird-Backend Client
 
@@ -138,17 +138,17 @@ Ensure your Keycloak instance is available at `https://YOUR-KEYCLOAK-HOST-AND-PO
    - **Client ID**: `netbird-backend`
 3. Click **Next**
 
-![Create backend client](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/keycloak-create-backend-client.png)
+![Create backend client](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/keycloak-create-backend-client.png)
 
 4. Enable authentication as shown:
 
-![Backend client auth](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/keycloak-backend-client-auth.png)
+![Backend client auth](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/keycloak-backend-client-auth.png)
 
 5. Click **Save**
 6. Go to **Credentials** tab
 7. Copy the **Client secret**
 
-![Backend client credentials](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/keycloak-backend-client-credentials.png)
+![Backend client credentials](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/keycloak-backend-client-credentials.png)
 
 ### Step 9: Add View-Users Role
 
@@ -157,11 +157,11 @@ Ensure your Keycloak instance is available at `https://YOUR-KEYCLOAK-HOST-AND-PO
 3. Click **Assign roles**
 4. Select **Filter by clients** and search for `view-users`
 
-![Service account role](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/keycloak-service-account-role.png)
+![Service account role](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/keycloak-service-account-role.png)
 
 5. Check the role checkbox and click **Assign**
 
-![Add role](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/keycloak-add-role.png)
+![Add role](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/keycloak-add-role.png)
 
 > **Note**
 >

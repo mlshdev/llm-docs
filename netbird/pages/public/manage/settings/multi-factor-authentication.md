@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/settings/multi-factor-authentication.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/manage/settings/multi-factor-authentication.mdx)
+> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/settings/multi-factor-authentication.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/manage/settings/multi-factor-authentication.mdx)
 
 # Multi-Factor Authentication (MFA)
 
@@ -26,7 +26,7 @@ After enabling, you can `Logout` and log back in to see the MFA prompt.
 - If a user is not part of the account and MFA is enabled, the first-time `Sign Up` will not require MFA. \
   &#x20;Only subsequent logins will require MFA.
 
-![MFA Settings](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/settings/mfa/mfa-settings.png)
+![MFA Settings](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/settings/mfa/mfa-settings.png)
 
 ### Remember Browser for MFA
 
@@ -44,7 +44,7 @@ Click on a specific user to see their MFA status.
 - `Active` - MFA is enabled and user **has completed** the MFA setup.
 - `Not enrolled` - MFA is enabled but user **has not completed** the MFA setup yet.
 
-![MFA Status](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/settings/mfa/mfa-not-enrolled.png)
+![MFA Status](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/settings/mfa/mfa-not-enrolled.png)
 
 ## Reset MFA
 
@@ -57,7 +57,7 @@ This will reset MFA for the user, and they will need to set it up again during t
 > Currently NetBird does not provide recovery codes for MFA. Make sure to have multiple administrators configured to prevent lockout situations.
 > If all `Owners` or `Admins` lose access to the Dashboard, you should contact <support@netbird.io> for assistance.
 
-![MFA Reset](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/settings/mfa/mfa-reset-mfa.png)
+![MFA Reset](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/settings/mfa/mfa-reset-mfa.png)
 
 ## Get started
 

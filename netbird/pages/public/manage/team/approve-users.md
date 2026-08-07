@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/team/approve-users.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/manage/team/approve-users.mdx)
+> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/team/approve-users.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/manage/team/approve-users.mdx)
 
 # Approve users
 
@@ -11,13 +11,13 @@ Navigate to the Dashboard's `Settings` page and the `Authentication` tab and ena
 - **Enabled**: Require manual approval for new users joining via domain matching. Users will be blocked until approved. Learn how to approve or reject users in the section [below](#approve-or-reject-user).
 - **Disabled**: Manual approval for new users is not required. Users joining via domain matching will be automatically added to the organization.
 
-![netbird-authentication-settings-approval](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/team/approve-users/netbird-authentication-settings-approval.png)
+![netbird-authentication-settings-approval](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/team/approve-users/netbird-authentication-settings-approval.png)
 
 ## Approve or reject user
 
 To approve a user, navigate to the [Users Page](https://app.netbird.io/team/users) and click the `Approve` or `Reject` button on the right side of the users table.
 
-![netbird-user-approval](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/team/approve-users/netbird-user-approval.png)
+![netbird-user-approval](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/team/approve-users/netbird-user-approval.png)
 
 ## Get started
 

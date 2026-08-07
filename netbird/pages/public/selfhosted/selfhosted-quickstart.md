@@ -1,12 +1,14 @@
-> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/selfhosted-quickstart.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/selfhosted/selfhosted-quickstart.mdx)
+> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/selfhosted-quickstart.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/selfhosted/selfhosted-quickstart.mdx)
 
 # Self-Hosting Quickstart Guide (5 min)
 
 NetBird is open source and can be self-hosted on your servers. If you would like to learn more about the architecture please refer to the [Architecture section](https://docs.netbird.io/about-netbird/how-netbird-works).
 
-> **Note**
->
-> This is the quickest way to try self-hosted NetBird. It should take around 5 minutes to get started if you already have a public domain and a VM.
+Prefer not to manage the infrastructure yourself? **[NetBird Cloud](https://docs.netbird.io/get-started)** is the managed version of NetBird, no servers or domain required.
+
+[Cloud vs Self-Hosted](https://docs.netbird.io/about-netbird/self-hosted-vs-cloud)
+
+[Try NetBird Cloud](https://app.netbird.io)
 
 ## Infrastructure requirements
 
@@ -102,7 +104,7 @@ See an example `config.yaml` file in the [NetBird GitHub repository](https://git
 
 The script deploys NetBird **without any users**. Once complete, you'll need to create your first user:
 
-![NetBird setup page](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/quickstart/setup.png)
+![NetBird setup page](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/quickstart/setup.png)
 
 1. Open your browser and navigate to `https://netbird.example.com`
 2. You'll be redirected to the setup page (`/setup`)

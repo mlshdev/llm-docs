@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/settings/plans-and-billing.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/manage/settings/plans-and-billing.mdx)
+> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/settings/plans-and-billing.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/manage/settings/plans-and-billing.mdx)
 
 # Plans and billing
 
@@ -13,7 +13,7 @@ NetBird offers diverse plans to accommodate various networking needs, ensuring s
 
 - **Business Plan:** At **€12 per user per month**, the Business Plan offers enhanced network security with a Zero Trust approach. It supports unlimited users and includes features like device approvals and integrations (MDM and EDR) for comprehensive control, device posture checks and activity events streaming, making it an excellent choice for organizations seeking advanced security solutions.
 
-![pricing-overview](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/settings/pricing-overview.png)
+![pricing-overview](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/settings/pricing-overview.png)
 
 Details can be found on our [pricing page](https://netbird.io/pricing).
 
@@ -32,7 +32,7 @@ If the next month only 70 connect, you pay for 70 users.
 
 Refer to our pricing calculator on the [pricing page](https://netbird.io/pricing#calculator) to estimate your monthly costs based on your expected usage.
 
-![pricing-calculator](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/settings/plans-and-billing/calculator.png)
+![pricing-calculator](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/settings/plans-and-billing/calculator.png)
 
 ## Machine-based Usage
 
@@ -59,19 +59,19 @@ automatically adjust the machine costs as detailed in the following sections.
 
 To start or change your current plan, navigate to `Settings` > `Plans & Billing` and choose the plan you wish to upgrade or downgrade to.
 
-![chose-plan](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/settings/plans-and-billing/chose-plan.png)
+![chose-plan](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/settings/plans-and-billing/chose-plan.png)
 
 **Payment Information**
 
 Next, you'll be directed to enter your payment information. Available payment options currently include credit cards, Google Pay, and Link.
 
-![payment-information](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/settings/payment-information.png)
+![payment-information](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/settings/payment-information.png)
 
 **Confirmation and Billing Cycle**
 
 After successfully submitting your payment information, the updated version of your plan will be reflected in your account.
 
-![plans-billing-overview](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/settings/plans-and-billing/plans-billing-overview.png)
+![plans-billing-overview](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/settings/plans-and-billing/plans-billing-overview.png)
 
 > **Note**
 >

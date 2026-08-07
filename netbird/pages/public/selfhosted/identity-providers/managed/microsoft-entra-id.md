@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/identity-providers/managed/microsoft-entra-id.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/selfhosted/identity-providers/managed/microsoft-entra-id.mdx)
+> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/identity-providers/managed/microsoft-entra-id.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/selfhosted/identity-providers/managed/microsoft-entra-id.mdx)
 
 # Microsoft and Entra ID SSO with NetBird Self-Hosted
 
@@ -23,7 +23,7 @@ Add Microsoft as an external IdP directly in the NetBird Management Dashboard. C
 1. Navigate to [Entra Admin Center](https://entra.microsoft.com/))
 2. Click **App registrations** → **New registration**
 
-![New registration](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/managed/microsoft-entra-id/1_new-registration-microsoft-entra.png)
+![New registration](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/managed/microsoft-entra-id/1_new-registration-microsoft-entra.png)
 
 3. Fill in:
    - **Name**: `NetBird`
@@ -68,7 +68,7 @@ Add Microsoft as an external IdP directly in the NetBird Management Dashboard. C
 
 5. **Copy the Redirect URL** that NetBird displays (but don't click **Add Provider** yet)
 
-![Copy URL redirect](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/managed/microsoft-entra-id/2_copy-url-redirect-microsoft-entra.png)
+![Copy URL redirect](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/managed/microsoft-entra-id/2_copy-url-redirect-microsoft-entra.png)
 
 ### Step 3: Complete App Registration
 
@@ -85,7 +85,7 @@ Add Microsoft as an external IdP directly in the NetBird Management Dashboard. C
 4. Paste the redirect URL you copied from NetBird in the **Redirect URI** field
    - *(Optional)* Add NetBird's logout callback as an additional **Web** redirect URI: `https://netbird.example.com/oauth2/logout/callback` (replace `netbird.example.com` with your NetBird dashboard domain). Entra validates the post-logout redirect against the registered redirect URIs, so this lets logout return to NetBird cleanly.
 
-![Select web and paste URI](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/managed/microsoft-entra-id/3_select-web-paste-uri-microsoft-entra.png)
+![Select web and paste URI](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/managed/microsoft-entra-id/3_select-web-paste-uri-microsoft-entra.png)
 
 5. Click **Configure**
 
@@ -94,13 +94,13 @@ Add Microsoft as an external IdP directly in the NetBird Management Dashboard. C
 1. Go to **Certificates & secrets**
 2. Click **New client secret**
 
-![New client secret](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/managed/microsoft-entra-id/4_new-client-secret-microsoft-entra.png)
+![New client secret](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/managed/microsoft-entra-id/4_new-client-secret-microsoft-entra.png)
 
 3. Add a description and expiration
 4. Click **Add**
 5. Copy the **Value** immediately (it won't be shown again) — you'll need this for Step 6
 
-![Copy secret](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/managed/microsoft-entra-id/5_copy-secret-microsoft-entra.png)
+![Copy secret](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/managed/microsoft-entra-id/5_copy-secret-microsoft-entra.png)
 
 ### Step 6: Complete NetBird Setup
 
@@ -110,7 +110,7 @@ Add Microsoft as an external IdP directly in the NetBird Management Dashboard. C
    - **Client Secret**: Paste the **Value** from Step 5
    - **Issuer URL**: Paste the **Issuer URL** you constructed in Step 3 (for Entra ID only)
 
-![NetBird config filled](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/managed/microsoft-entra-id/6_netbird-config-filled-microsoft-entra.png)
+![NetBird config filled](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/managed/microsoft-entra-id/6_netbird-config-filled-microsoft-entra.png)
 
 3. Click **Add Provider**
 
@@ -131,7 +131,7 @@ To sync Entra ID groups with NetBird, you need to configure your app registratio
 2. Navigate to **Token configuration**
 3. Click **Add groups claim**
 
-![Add groups claim](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/managed/microsoft-entra-id/jwt_add-groups-claim.png)
+![Add groups claim](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/managed/microsoft-entra-id/jwt_add-groups-claim.png)
 
 4. Select the group types to include:
    - **Security groups** - Recommended for most use cases
@@ -140,7 +140,7 @@ To sync Entra ID groups with NetBird, you need to configure your app registratio
    - **Group ID** - Returns Azure object IDs (default)
 6. Click **Add**
 
-![Add groups claim](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/managed/microsoft-entra-id/jwt_configure-groups-claim.png)
+![Add groups claim](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/managed/microsoft-entra-id/jwt_configure-groups-claim.png)
 
 > **Note**
 >

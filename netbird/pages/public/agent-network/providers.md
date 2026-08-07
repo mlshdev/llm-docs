@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/agent-network/providers.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/agent-network/providers.mdx)
+> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/agent-network/providers.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/agent-network/providers.mdx)
 
 # Providers
 
@@ -7,7 +7,7 @@ stores its API key server-side and exposes it through your keyless, tunnel-only
 [agent network endpoint](https://docs.netbird.io/agent-network/how-it-works#llm-apis-and-ai-gateways), so agents
 never hold a provider key.
 
-![agent network providers list](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/agent-network/providers/agent-network-providers-list.png)
+![agent network providers list](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/agent-network/providers/agent-network-providers-list.png)
 
 ## Supported Providers
 
@@ -57,7 +57,7 @@ and budgets (see [How It Works](https://docs.netbird.io/agent-network/how-it-wor
    ID) and the identity headers used for attribution.
 6. Save the provider.
 
-![agent network connect provider modal](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/agent-network/providers/agent-network-create-provider.png)
+![agent network connect provider modal](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/agent-network/providers/agent-network-create-provider.png)
 
 ## Custom & Self-hosted Providers
 
@@ -67,7 +67,7 @@ model runtime like Ollama or vLLM (vLLM also has its own named entry). NetBird t
 the same way it talks to OpenAI: you provide the **Upstream URL** where requests are
 forwarded and, if the endpoint requires one, an **API key** sent as a bearer token.
 
-![custom provider settings with the Skip TLS Verification switch](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/agent-network/providers/agent-network-custom-provider.png)
+![custom provider settings with the Skip TLS Verification switch](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/agent-network/providers/agent-network-custom-provider.png)
 
 ### Skip TLS Verification
 
@@ -99,22 +99,49 @@ default** and shown only for providers that support it (first-party APIs such as
 Anthropic have no such metadata channel, so the toggle doesn't appear for them). Turn it off
 to keep the caller's identity out of the upstream request.
 
-![Connect Provider modal with the Disable identity metadata toggle](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/agent-network/providers/agent-network-provider-metadata.png)
+![Connect Provider modal with the Disable identity metadata toggle](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/agent-network/providers/agent-network-provider-metadata.png)
 
 ## Models and Pricing
 
 Each provider carries a list of models it serves. Leaving the list empty makes the
 provider a catch-all that accepts any model (typical for gateways); listing specific models
-restricts routing to them. Per-model input/output prices drive the cost figures shown in
+restricts routing to them. Per-model prices drive the cost figures shown in
 [Usage & Logs](https://docs.netbird.io/agent-network/usage-and-logs); adjust them if your negotiated rates differ
 from the catalog defaults.
+
+Each model has an **input** and **output** price per 1k tokens, plus optional
+**cache** rates that match how the provider bills prompt caching. Which cache
+fields apply depends on the provider's pricing surface: OpenAI-shape providers
+use a single **cached input** rate (cached tokens are a subset of the prompt),
+while Anthropic-shape providers, including Claude on Amazon Bedrock and Google
+Vertex AI, use separate **cache read** and **cache creation** rates (additive
+buckets on top of input). Gateways and custom providers expose all cache fields,
+since NetBird can't know the upstream shape ahead of time.
+
+Leave a cache rate **blank** to inherit NetBird's default for that model when one
+exists; set it to **0** to bill that cache bucket at the plain input rate (no
+discount). See [how caching is metered](https://docs.netbird.io/agent-network/usage-and-logs/access-logs)
+for how these buckets appear in the cost breakdown.
+
+Self-hosters can seed the catalog defaults these fields prefill from with a
+pricing file. See
+[`server.agentNetwork.pricingDefaultsFile`](https://docs.netbird.io/selfhosted/maintenance/configuration-files#agent-network-settings).
+
+### Adding a Model Not in the Catalog
+
+If the model you need isn't in the picker, type its model ID directly into the **Model** field
+instead of selecting from the list, for example `eu.anthropic.claude-sonnet-5`. A model NetBird
+doesn't know has no catalog defaults, so set its **input** and **output** prices (and cache
+rates, if applicable) yourself for usage and logs to report accurate costs.
+
+![Models tab with a custom model ID and manually entered input/output pricing](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/agent-network/providers/agent-network-custom-model.png)
 
 ## The Keyless Endpoint
 
 All connected providers share a single account endpoint, generated when you connect your
 first provider and reachable only over the NetBird overlay.
 
-![agent network endpoint on the Providers page](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/agent-network/quickstart/agent-network-endpoint.png)
+![agent network endpoint on the Providers page](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/agent-network/quickstart/agent-network-endpoint.png)
 
 Agents send normal provider requests to the endpoint without an API key; which identities
 may reach which providers is governed by [Policies](https://docs.netbird.io/agent-network/policies).

@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/reverse-proxy/access-logs.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/manage/reverse-proxy/access-logs.mdx)
+> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/reverse-proxy/access-logs.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/manage/reverse-proxy/access-logs.mdx)
 
 # Reverse Proxy Access Logs
 
@@ -8,7 +8,7 @@ NetBird logs every request and connection that passes through your reverse proxy
 
 Access logs are available in the NetBird dashboard under **Activity** > **Proxy Events**. This view displays a table of all HTTP requests and L4 connections that have passed through your reverse proxy services, with filters to narrow down results by time range, status, or other fields.
 
-![Proxy Events table showing reverse proxy access log entries](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/reverse-proxy/access-logs/access-logs-table.png)
+![Proxy Events table showing reverse proxy access log entries](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/reverse-proxy/access-logs/access-logs-table.png)
 
 You can also retrieve access logs programmatically using the API:
 

@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/team/single-sign-on/aws-cognito.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/manage/team/single-sign-on/aws-cognito.mdx)
+> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/team/single-sign-on/aws-cognito.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/manage/team/single-sign-on/aws-cognito.mdx)
 
 # AWS Cognito on NetBird Cloud
 
@@ -35,7 +35,7 @@ Fill in the form with the following values:
 
 Click **Create app client** to save.
 
-![aws-cognito-app-client](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/team/single-sign-on/aws-cognito-idp/app-client.png)
+![aws-cognito-app-client](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/team/single-sign-on/aws-cognito-idp/app-client.png)
 
 ## Step 2: Verify Managed Login Pages Configuration
 
@@ -46,9 +46,9 @@ In the same app client, open the **Login pages** tab, locate the **Managed login
 - **OAuth 2.0 grant types**: `Authorization code grant`
 - **OpenID Connect scopes**: `openid`, `email`, `profile`
 
-![aws-cognito-callback-urls](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/team/single-sign-on/aws-cognito-idp/callback-urls.png)
+![aws-cognito-callback-urls](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/team/single-sign-on/aws-cognito-idp/callback-urls.png)
 
-![aws-cognito-oauth-settings](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/team/single-sign-on/aws-cognito-idp/oauth-settings.png)
+![aws-cognito-oauth-settings](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/team/single-sign-on/aws-cognito-idp/oauth-settings.png)
 
 Click **Save changes** to apply the configuration.
 
@@ -67,7 +67,7 @@ https://cognito-idp.<region>.amazonaws.com/<user-pool-id>
 
 For example, a user pool with ID `us-east-1_AbCdEfGhI` in the `us-east-1` region has the issuer URL `https://cognito-idp.us-east-1.amazonaws.com/us-east-1_AbCdEfGhI`. The OIDC discovery document is available at `<issuer-url>/.well-known/openid-configuration`.
 
-![aws-cognito-client-credentials](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/team/single-sign-on/aws-cognito-idp/client-credentials.png)
+![aws-cognito-client-credentials](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/team/single-sign-on/aws-cognito-idp/client-credentials.png)
 
 ## Step 4: Share Configuration with NetBird
 

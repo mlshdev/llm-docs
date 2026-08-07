@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/peers/access-infrastructure/setup-keys-add-servers-to-network.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/manage/peers/access-infrastructure/setup-keys-add-servers-to-network.mdx)
+> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/peers/access-infrastructure/setup-keys-add-servers-to-network.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/manage/peers/access-infrastructure/setup-keys-add-servers-to-network.mdx)
 
 # Add Servers to the Network with Setup Keys
 
@@ -53,7 +53,7 @@ To seamlessly integrate virtual machines or Docker containers into your NetBird 
 
 Here's an example:
 
-![NetBird Generating Setup Key](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/peers/access-infrastructure/setup-keys-add-servers-to-network/setup-keys-add-server-01.png)
+![NetBird Generating Setup Key](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/access-infrastructure/setup-keys-add-servers-to-network/setup-keys-add-server-01.png)
 
 This setup key will serve as your secure passport for adding both your VM and Docker container to the NetBird network,
 ensuring a consistent integration process.
@@ -132,7 +132,7 @@ sudo systemctl enable netbird
 
 Finally, log into your NetBird dashboard and navigate to `Peers` to confirm your VM is listed and connected.
 
-![NetBird Peers View](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/peers/access-infrastructure/setup-keys-add-servers-to-network/setup-keys-add-server-02.png)
+![NetBird Peers View](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/access-infrastructure/setup-keys-add-servers-to-network/setup-keys-add-server-02.png)
 
 By using the setup key, you've securely added your VM to the NetBird network with minimal manual configuration, demonstrating the efficiency and security benefits of this approach.
 
@@ -176,7 +176,7 @@ Now that your VM is connected to the NetBird secure network, you can verify the 
 
 To locate the NetBird-assigned IP or domain, go to `Peers` in your NetBird dashboard and hover your cursor over the VM's name.
 
-![NetBird Peers IP Address or Domain](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/peers/access-infrastructure/setup-keys-add-servers-to-network/setup-keys-add-server-03.png)
+![NetBird Peers IP Address or Domain](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/access-infrastructure/setup-keys-add-servers-to-network/setup-keys-add-server-03.png)
 
 Verify connectivity to the VM from any NetBird-connected device using:
 
@@ -193,7 +193,7 @@ $ curl 100.85.148.249:8080
 
 Alternatively, you can go to `http://VM_NETBIRD_DOMAIN:8080` using your browser:
 
-![NetBird Welcome Page](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/peers/access-infrastructure/setup-keys-add-servers-to-network/setup-keys-add-server-04.png)
+![NetBird Welcome Page](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/access-infrastructure/setup-keys-add-servers-to-network/setup-keys-add-server-04.png)
 
 Keep in mind that this tutorial used the default `All` group for simplicity. However, implementing [NetBird's Access Policy](https://docs.netbird.io/manage/access-control/manage-network-access) to restrict peer-to-peer connections to specific user groups is a best practice for gaining granular control over resource access, thus improving your network's overall security posture in various scenarios.
 

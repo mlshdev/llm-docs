@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/activity/index.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/manage/activity/index.mdx)
+> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/activity/index.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/manage/activity/index.mdx)
 
 # Audit Events Logging
 
@@ -16,7 +16,7 @@ To get started with event logging in NetBird, watch this introductory video:
 
 The audit events logging feature is enabled by default for every NetBird network. You can access the activity log in the web UI under the [Audit Events tab](https://app.netbird.io/events/audit). This view provides a centralized log of network events. You can use the search bar to search by activity name, and apply filters for timeframes, event types, and users.
 
-![activity-monitoring](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/activity/activity-monitoring.png)
+![activity-monitoring](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/activity/activity-monitoring.png)
 
 The current version of NetBird tracks a wide range of network changes that occur in the Management server, such as modifications to peers, groups, system settings, setup keys, and access control policies.
 

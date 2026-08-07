@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/identity-providers/pocketid.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/selfhosted/identity-providers/pocketid.mdx)
+> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/identity-providers/pocketid.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/selfhosted/identity-providers/pocketid.mdx)
 
 # PocketID with NetBird Self-Hosted
 
@@ -24,7 +24,7 @@ Add PocketID as an external IdP directly in the NetBird Management Dashboard. Th
 3. Select **OIDC Clients**
 4. Click **Add** to create a new client
 
-![Add OIDC client](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/self-hosted/pocketid/1_add-oidc-client-pocketid.png)
+![Add OIDC client](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/pocketid/1_add-oidc-client-pocketid.png)
 
 5. Fill in the form:
    - **Name**: `NetBird`
@@ -32,11 +32,11 @@ Add PocketID as an external IdP directly in the NetBird Management Dashboard. Th
    - **PKCE**: Off
 6. Click **Save**
 
-![Save OIDC client](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/self-hosted/pocketid/2_save-oidc-client-pocketid.png)
+![Save OIDC client](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/pocketid/2_save-oidc-client-pocketid.png)
 
 7. Note the **Client ID** and **Client Secret**
 
-![Note client ID](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/self-hosted/pocketid/3_note-client-id-pocketid.png)
+![Note client ID](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/pocketid/3_note-client-id-pocketid.png)
 
 ### Step 2: Add Identity Provider in NetBird
 
@@ -59,20 +59,20 @@ Add PocketID as an external IdP directly in the NetBird Management Dashboard. Th
 
 5. Click **Save**
 
-![NetBird configuration](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/self-hosted/pocketid/4_netbird-config-pocketid.png)
+![NetBird configuration](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/pocketid/4_netbird-config-pocketid.png)
 
 ### Step 3: Configure Redirect URI
 
 After saving, NetBird displays the **Redirect URL**. Copy this URL and add it to your PocketID client:
 
-![Copy redirect URL from NetBird](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/self-hosted/pocketid/5_copy-redirect-netbird-pocketid.png)
+![Copy redirect URL from NetBird](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/pocketid/5_copy-redirect-netbird-pocketid.png)
 
 1. Return to PocketID console → **OIDC Clients**
 2. Edit your NetBird client
 3. Add the redirect URL to **Callback URLs**
    - *(Optional)* In **Logout Callback URLs**, add `https://netbird.example.com/oauth2/logout/callback` (replace `netbird.example.com` with your NetBird dashboard domain) so logout redirects back to NetBird cleanly
 
-![Add callback URL](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/self-hosted/pocketid/6_add-callback-url-pocketid.png)
+![Add callback URL](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/pocketid/6_add-callback-url-pocketid.png)
 
 4. Click **Save**
 
@@ -84,7 +84,7 @@ After saving, NetBird displays the **Redirect URL**. Copy this URL and add it to
    - **Name**: `NetBird`
 4. Click **Save**
 
-![Add user group](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/self-hosted/pocketid/7_add-user-group-pocketid.png)
+![Add user group](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/pocketid/7_add-user-group-pocketid.png)
 
 5. Add users to the NetBird group:
    - Click on the **NetBird** group
@@ -92,13 +92,13 @@ After saving, NetBird displays the **Redirect URL**. Copy this URL and add it to
    - Select the users who should have access to NetBird
    - Click **Save** or **Add**
 
-![Add users to group](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/self-hosted/pocketid/8_add-group-to-user-pocketid.png)
+![Add users to group](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/pocketid/8_add-group-to-user-pocketid.png)
 
 6. Go to **OIDC Clients** → **NetBird** (the client you created earlier)
 7. Find the **Groups** or **User Groups** section
 8. Add the **NetBird** group to the client
 
-![Add group to OIDC client](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/self-hosted/pocketid/9_add-group-to-oidc-pocketid.png)
+![Add group to OIDC client](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/pocketid/9_add-group-to-oidc-pocketid.png)
 
 9. Click **Save**
 

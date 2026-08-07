@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/maintenance/sqlite-store.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/selfhosted/maintenance/sqlite-store.mdx)
+> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/maintenance/sqlite-store.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/selfhosted/maintenance/sqlite-store.mdx)
 
 # Management SQLite store
 
@@ -12,7 +12,7 @@ SQLite is the default storage engine for NetBird Management. It requires no exte
 
 For a high-level overview of the SQLite schema, refer to the Entity Relationship Diagram (ERD) below:
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/sqlite-erd.png)
+![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/sqlite-erd.png)
 
 ## Configuration
 

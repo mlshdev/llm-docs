@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/get-started/cli.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/get-started/cli.mdx)
+> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/get-started/cli.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/get-started/cli.mdx)
 
 # NetBird Agent command line interface (CLI)
 
@@ -587,7 +587,9 @@ netbird ssh -R 8080:localhost:3000 user@100.119.230.104
 
 **Connection fails:**
 
-- Ensure SSH is enabled on the target peer, which requires root or an administrator:
+- Ensure SSH is enabled on the target peer, which requires root or an administrator.
+  The commands below use `sudo` for Linux and macOS; on Windows run the same ones
+  without it, from an elevated prompt:
   ```shell
   sudo netbird down; sudo netbird up --allow-server-ssh
   ```
@@ -598,18 +600,21 @@ netbird ssh -R 8080:localhost:3000 user@100.119.230.104
 
 - Complete the OIDC flow when prompted (browser window will open)
 - Verify your IdP is properly configured
-- To disable JWT authentication, as root or an administrator: `sudo netbird down; sudo netbird up --allow-server-ssh --disable-ssh-auth`
+- To disable JWT authentication, as root or an administrator: `sudo netbird down; sudo netbird up --allow-server-ssh --disable-ssh-auth`.
+  This drops per-user authentication for SSH on that peer, leaving any peer the ACL
+  policy allows able to connect, so use it to isolate a problem and re-enable it with
+  `sudo netbird down; sudo netbird up --allow-server-ssh` afterwards.
 
 **Port forwarding not working:**
 
 - Ensure the server has the appropriate flags:
   ```shell
-  sudo netbird up --allow-server-ssh \
+  sudo netbird down; sudo netbird up --allow-server-ssh \
     --enable-ssh-local-port-forwarding \
     --enable-ssh-remote-port-forwarding
   ```
 
-![netbird ssh dashboard](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/peers/ssh/ssh-dashboard.png)
+![netbird ssh dashboard](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/ssh/ssh-dashboard.png)
 
 ### expose
 
@@ -995,7 +1000,7 @@ This will output:
   -S, --system-info                Adds system information to the debug bundle (default true)
   -U, --upload-bundle              Uploads the debug bundle to a server
       --upload-bundle-url string   Service URL to get an upload URL for the debug bundle (default "https://upload.debug.netbird.io/upload-url")
-      --upload-bundle-insecure     Allow uploading to an http or untrusted-TLS upload server (self-hosted); requires root
+      --upload-bundle-insecure     Allow uploading to an http or untrusted-TLS upload server (self-hosted); requires root on Linux and macOS, or an administrator on Windows
 ```
 
 ### debug for
@@ -1042,7 +1047,7 @@ Log level restored to INFO
   -S, --system-info                Adds system information to the debug bundle (default true)
   -U, --upload-bundle              Uploads the debug bundle to a server
       --upload-bundle-url string   Service URL to get an upload URL for the debug bundle (default "https://upload.debug.netbird.io/upload-url")
-      --upload-bundle-insecure     Allow uploading to an http or untrusted-TLS upload server (self-hosted); requires root
+      --upload-bundle-insecure     Allow uploading to an http or untrusted-TLS upload server (self-hosted); requires root on Linux and macOS, or an administrator on Windows
 ```
 
 ### debug log

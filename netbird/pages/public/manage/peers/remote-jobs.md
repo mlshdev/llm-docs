@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/manage/peers/remote-jobs.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/manage/peers/remote-jobs.mdx)
+> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/peers/remote-jobs.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/manage/peers/remote-jobs.mdx)
 
 # Remote Jobs
 
@@ -76,7 +76,7 @@ On success, the job returns an **upload key** that can be used to retrieve the d
    - Toggle **Anonymize Log Data** to strip sensitive information
 6. Click **Create Debug Bundle**
 
-![create debug bundle modal](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/peers/remote-jobs/debug-bundle.png)
+![create debug bundle modal](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/remote-jobs/debug-bundle.png)
 
 > **Note**
 >
@@ -92,7 +92,7 @@ The **Remote Jobs** tab on the peer detail page shows all jobs for that peer, so
 - **Parameters** - Hover to view the full parameter configuration
 - **Output** - On success, the result (e.g., upload key with copy button). On failure, the error reason.
 
-![remote job history table](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/manage/peers/remote-jobs/remote-job-history.png)
+![remote job history table](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/remote-jobs/remote-job-history.png)
 
 ## Using the API
 

@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/agent-network/integrations/vllm.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/agent-network/integrations/vllm.mdx)
+> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/agent-network/integrations/vllm.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/agent-network/integrations/vllm.mdx)
 
 # vLLM
 
@@ -33,7 +33,7 @@ same network as the proxy so the proxy can reach it directly.
    model name the server serves.
 6. Save the provider.
 
-![connect a self-hosted vLLM provider in NetBird Agent Network](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/agent-network/integrations/agent-network-connect-vllm.png)
+![connect a self-hosted vLLM provider in NetBird Agent Network](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/agent-network/integrations/agent-network-connect-vllm.png)
 
 ## Create a Policy
 
@@ -47,7 +47,7 @@ before anyone can route through it.
 4. Optionally attach per-user or per-group [token and budget limits](https://docs.netbird.io/agent-network/policies/limits)
    and [guardrails](https://docs.netbird.io/agent-network/policies/guardrails) such as a model allowlist.
 
-![create a NetBird Agent Network policy authorizing vLLM](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/agent-network/integrations/agent-network-create-policy-vllm.png)
+![create a NetBird Agent Network policy authorizing vLLM](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/agent-network/integrations/agent-network-create-policy-vllm.png)
 
 See [Policies](https://docs.netbird.io/agent-network/policies) for details.
 

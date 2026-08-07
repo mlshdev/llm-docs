@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/maintenance/configuration-files.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/selfhosted/maintenance/configuration-files.mdx)
+> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/maintenance/configuration-files.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/selfhosted/maintenance/configuration-files.mdx)
 
 # Self-Hosted Deployment Configuration Files Reference
 
@@ -413,6 +413,14 @@ Connection string for postgres engine. Example: `host=localhost port=5432 user=p
 **server.authStore.file (type: string)**
 
 Custom SQLite file path. Optional, defaults to `{dataDir}/idp.db`.
+
+### Agent Network Settings
+
+Configures the [Agent Network](https://docs.netbird.io/agent-network) (LLM gateway) served by the combined server.
+
+**server.agentNetwork.pricingDefaultsFile (type: string)**
+
+Path to a YAML file holding the default LLM pricing table used to seed the model catalog and meter request costs. A relative path is resolved against `dataDir`, so a bare filename such as `pricing.yaml` lands in the data directory. When empty, `{dataDir}/defaults_llm_pricing.yaml` is probed; if no file is present, the compiled-in defaults are used. The schema maps each surface (`openai`, `anthropic`, `bedrock`) to a model to its rates in USD per 1k tokens (`input_per_1k`, `output_per_1k`, and the optional `cached_input_per_1k` / `cache_read_per_1k` / `cache_creation_per_1k`). On the `bedrock` surface, model keys must be the **normalized** id costs are metered under rather than the full id pasted from AWS: drop any `arn:…` wrapper, the cross-region inference-profile prefix (`us.`, `eu.`, `apac.`, `global.`), and the trailing version or throughput suffix (`-v1:0`, `-20250929-v1:0`). For example, requests for `eu.anthropic.claude-sonnet-5` are priced from the key `anthropic.claude-sonnet-5`. File entries replace the compiled-in entry for the same surface and model; everything else keeps the compiled-in rates. The file is re-read periodically (mtime poll). An explicitly configured path that fails to load fails startup; runtime reload errors keep the previous table. Operator price overrides set in the dashboard take precedence over these defaults.
 
 ***
 

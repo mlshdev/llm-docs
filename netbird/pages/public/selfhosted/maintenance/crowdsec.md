@@ -1,8 +1,8 @@
-> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/maintenance/crowdsec.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/selfhosted/maintenance/crowdsec.mdx)
+> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/maintenance/crowdsec.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/selfhosted/maintenance/crowdsec.mdx)
 
 # CrowdSec IP Reputation
 
-![CrowdSec IP Reputation Overview](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/maintenance/crowdsec-overview.png)
+![CrowdSec IP Reputation Overview](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/maintenance/crowdsec-overview.png)
 
 [CrowdSec](https://www.crowdsec.net) is an open-source security engine that combines local detection with a crowdsourced threat feed. Agents installed across the CrowdSec community share decisions about malicious IPs, and that shared intelligence is redistributed as blocklists that any CrowdSec instance can consume. NetBird Proxy integrates with CrowdSec to check every incoming client IP against a local decision cache and block connections from flagged addresses before they reach your services. For background on the wider CrowdSec platform, see the [CrowdSec documentation](https://docs.crowdsec.net).
 
@@ -28,6 +28,12 @@ The proxy advertises a `supports_crowdsec` capability to the management plane, w
 
 Configuration is provided to the proxy via `--crowdsec-api-url` / `--crowdsec-api-key` command-line flags or the equivalent `NB_PROXY_CROWDSEC_API_URL` / `NB_PROXY_CROWDSEC_API_KEY` environment variables. The setup guide writes these to `proxy.env` automatically.
 
+The proxy must receive the original client IP for reputation checks to work. Docker deployments behind Traefik should use the PROXY protocol configuration in the [migration guide](https://docs.netbird.io/selfhosted/migration/enable-reverse-proxy#preserve-client-ip-addresses-through-traefik). Otherwise, every connection can appear to originate from Traefik.
+
+> **Note**
+>
+> Every active proxy in a multi-instance cluster must have CrowdSec configured for the cluster to advertise CrowdSec support. Configure each instance with access to a LAPI and a valid bouncer key.
+
 ## Enforcement modes
 
 | Mode        | Behavior                                                                                                                                                  |
@@ -42,7 +48,7 @@ CrowdSec decisions include several remediation types (ban, captcha, throttle). T
 
 Observe-mode verdicts are recorded in the NetBird proxy access logs, not in the CrowdSec Console. When a service is in observe mode and CrowdSec flags an IP, the connection is allowed but the verdict is attached to the log entry as metadata, while the `deny_reason` field stays empty. In the dashboard's reverse proxy event log, these entries render with an observe-mode badge on the reason cell and show the decision type (ban, captcha, throttle, unavailable) so you can audit what would have been blocked before switching the service to enforce. The CrowdSec Console shows the aggregate view of community decisions and scenarios but does not know which of your proxy requests the bouncer was consulted on.
 
-![CrowdSec observe-mode badge in proxy event logs](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/maintenance/crowdsec-observe-badge.png)
+![CrowdSec observe-mode badge in proxy event logs](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/maintenance/crowdsec-observe-badge.png)
 
 Access restrictions are evaluated in a fixed order: CIDR, then country, then CrowdSec. A denial at any earlier layer short-circuits the rest, and CrowdSec can never relax a CIDR or country decision. See the [restriction evaluation order](https://docs.netbird.io/manage/reverse-proxy/authentication#restriction-evaluation-order) reference for the full precedence table and worked examples.
 

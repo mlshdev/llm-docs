@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/identity-providers/managed/advanced/auth0.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/selfhosted/identity-providers/managed/advanced/auth0.mdx)
+> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/identity-providers/managed/advanced/auth0.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/selfhosted/identity-providers/managed/advanced/auth0.mdx)
 
 # Auth0 SSO with NetBird Self-Hosted (Legacy)
 
@@ -83,18 +83,18 @@ This enables machine authorization via your Identity Provider as an alternative 
    - **Application type**: `Native`
 4. Click **Create**
 
-![Create interactive login app](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/managed/auth0/advanced/auth0-create-interactive-login-app.png)
+![Create interactive login app](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/managed/auth0/advanced/auth0-create-interactive-login-app.png)
 
 5. Click **Settings** tab
 6. Copy **Client ID** to `NETBIRD_AUTH_DEVICE_AUTH_CLIENT_ID`
 
-![Interactive login settings](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/managed/auth0/advanced/auth0-interactive-login-settings.png)
+![Interactive login settings](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/managed/auth0/advanced/auth0-interactive-login-settings.png)
 
 7. Scroll to **Advanced Settings**
 8. Enable **Device Code**
 9. Click **Save Changes**
 
-![Grant types](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/managed/auth0/advanced/auth0-grant-types.png)
+![Grant types](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/managed/auth0/advanced/auth0-grant-types.png)
 
 ### Step 4: Create Machine to Machine Application
 
@@ -107,14 +107,14 @@ This application authorizes access to Auth0 Management API.
    - **Application type**: `Machine to Machine Applications`
 4. Click **Create**
 
-![Create machine app](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/managed/auth0/advanced/auth0-create-machine-app.png)
+![Create machine app](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/managed/auth0/advanced/auth0-create-machine-app.png)
 
 5. Configure:
    - **API**: `Auth0 Management API`
    - **Permissions**: `read:users`, `update:users`, `create:users`, `read:users_app_metadata`, `update:users_app_metadata`, `create:users_app_metadata`
 6. Click **Authorize**
 
-![Machine authorization](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/managed/auth0/advanced/auth0-machine-authorization.png)
+![Machine authorization](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/managed/auth0/advanced/auth0-machine-authorization.png)
 
 > **Note**
 >
@@ -126,7 +126,7 @@ This application authorizes access to Auth0 Management API.
    - **Client Secret** → `NETBIRD_IDP_MGMT_CLIENT_SECRET`
    - **Domain** → `NETBIRD_IDP_MGMT_EXTRA_AUDIENCE` (format: `https://<DOMAIN>/api/v2/`)
 
-![Machine settings](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/managed/auth0/advanced/auth0-machine-settings.png)
+![Machine settings](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/managed/auth0/advanced/auth0-machine-settings.png)
 
 ### Step 5: Configure NetBird
 

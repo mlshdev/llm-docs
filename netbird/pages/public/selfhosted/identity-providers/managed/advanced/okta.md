@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.1: [netbirdio/docs@14375a092774f250d45a85f6d5f3c524d99fd111:src/pages/selfhosted/identity-providers/managed/advanced/okta.mdx](https://github.com/netbirdio/docs/blob/14375a092774f250d45a85f6d5f3c524d99fd111/src/pages/selfhosted/identity-providers/managed/advanced/okta.mdx)
+> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/identity-providers/managed/advanced/okta.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/selfhosted/identity-providers/managed/advanced/okta.mdx)
 
 # Okta SSO with NetBird Self-Hosted (Legacy)
 
@@ -37,7 +37,7 @@ For most deployments, the [embedded IdP](https://docs.netbird.io/selfhosted/iden
    - **Application type**: `Single-Page Application`
 5. Click **Next**
 
-![New SPA application](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/managed/okta/advanced/okta-new-single-page-application.png)
+![New SPA application](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/managed/okta/advanced/okta-new-single-page-application.png)
 
 6. Fill in:
    - **App integration name**: `Netbird`
@@ -49,14 +49,14 @@ For most deployments, the [embedded IdP](https://docs.netbird.io/selfhosted/iden
    - **Sign-out redirect URIs**: `https://<yournetbirddomain.com>/`
 7. Click **Save**
 
-![SPA application config](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/managed/okta/advanced/okta-single-page-application.png)
+![SPA application config](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/managed/okta/advanced/okta-single-page-application.png)
 
 8. Note the **Client ID**
 9. Click **Sign On** tab
 10. Under **OpenID Connect ID Token**, click **Edit** and set **Issuer** to use the `Okta URL`
 11. Click **Save**
 
-![Sign-on configuration](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/managed/okta/advanced/okta-single-sign-on-configuration.png)
+![Sign-on configuration](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/managed/okta/advanced/okta-single-sign-on-configuration.png)
 
 ### Step 2: Create Native Application (for Device Auth)
 
@@ -67,21 +67,21 @@ For most deployments, the [embedded IdP](https://docs.netbird.io/selfhosted/iden
    - **Application type**: `Native Application`
 4. Click **Next**
 
-![New native application](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/managed/okta/advanced/okta-new-native-application.png)
+![New native application](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/managed/okta/advanced/okta-new-native-application.png)
 
 5. Fill in:
    - **App integration name**: `Netbird Native App`
    - **Grant type**: `Device Authorization`
 6. Click **Save**
 
-![Native application config](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/managed/okta/advanced/okta-native-application.png)
+![Native application config](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/managed/okta/advanced/okta-native-application.png)
 
 7. Note the **Client ID** (for device auth)
 8. Click **Sign On** tab
 9. Under **OpenID Connect ID Token**, set **Issuer** to use the `Okta URL`
 10. Click **Save**
 
-![Native sign-on configuration](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/managed/okta/advanced/okta-native-sign-on-configuration.png)
+![Native sign-on configuration](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/managed/okta/advanced/okta-native-sign-on-configuration.png)
 
 ### Step 3: Generate API Token
 
@@ -93,7 +93,7 @@ For most deployments, the [embedded IdP](https://docs.netbird.io/selfhosted/iden
 5. Click **Create token**
 6. Copy the token value and click **OK, got it**
 
-![Generate token](https://raw.githubusercontent.com/netbirdio/docs/14375a092774f250d45a85f6d5f3c524d99fd111/public/docs-static/img/selfhosted/identity-providers/managed/okta/advanced/okta-generate-token.png)
+![Generate token](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/managed/okta/advanced/okta-generate-token.png)
 
 ### Step 4: Configure NetBird
 
