@@ -1,4 +1,4 @@
-> Release-pinned source for Podman v6.0.2: [docs/source/markdown/podman-quadlet-list.1.md.in](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-quadlet-list.1.md.in)
+> Release-pinned source for Podman v6.1.0: [docs/source/markdown/podman-quadlet-list.1.md.in](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-quadlet-list.1.md.in)
 
 # podman-quadlet-list
 
@@ -24,11 +24,11 @@ If there is more than one filter, the `--filter` option should be passed multipl
 
 Supported filters:
 
-| Filter | Description                                                                                                                                       |
-| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| name   | Filter by quadlet name                                                                                                                            |
-| status | Filter by quadlet status. Valid values: `Not loaded`, `active/running`, `inactive/dead`, `failed/failed`, `activating/start`, `deactivating/stop` |
-| pod    | Filter by the `Pod=` value (displays only for .container units)                                                                                   |
+| Filter | Description                                                                                                                                                          |
+| ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| name   | Filter by quadlet name                                                                                                                                               |
+| pod    | Filter by the `Pod=` value (displays only for .container units)                                                                                                      |
+| status | Filter by quadlet status. Valid values: `Not loaded`, `loaded template`, `active/running`, `inactive/dead`, `failed/failed`, `activating/start`, `deactivating/stop` |
 
 #### **--format**=*format*
 
@@ -36,14 +36,14 @@ Pretty-print output to JSON or using a Go template (default "{{range .}}{{.Name}
 
 Print results with a Go template.
 
-| **Placeholder** | **Description**                                                  |
-| --------------- | ---------------------------------------------------------------- |
-| .App            | Name of application if Quadlet is part of an app                 |
-| .Name           | Name of the Quadlet file                                         |
-| .Path           | Quadlet file path on disk                                        |
-| .Pod            | Pod quadlet file from `Pod=` in `[Container]` (empty if not set) |
-| .Status         | Quadlet status corresponding to systemd unit                     |
-| .UnitName       | Systemd unit name corresponding to quadlet                       |
+| **Placeholder** | **Description**                                                                                                                  |
+| --------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| .App            | Name of application if Quadlet is part of an app                                                                                 |
+| .Name           | Name of the Quadlet file                                                                                                         |
+| .Path           | Quadlet file path on disk                                                                                                        |
+| .Pod            | Pod quadlet file from `Pod=` in `[Container]` (empty if not set)                                                                 |
+| .Status         | Quadlet status corresponding to systemd unit (`Not loaded` and `loaded template` are from podman, other values are from systemd) |
+| .UnitName       | Systemd unit name corresponding to quadlet                                                                                       |
 
 #### **--noheading**, **-n**
 
@@ -89,4 +89,4 @@ sample-quadlet.service
 
 ## SEE ALSO
 
-**[podman(1)](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman.1.md)**, **[podman-quadlet(1)](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-quadlet.1.md)**, **[podman-systemd.unit(5)](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-systemd.unit.5.md)**
+**[podman(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman.1.md)**, **[podman-quadlet(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-quadlet.1.md)**, **[podman-systemd.unit(5)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-systemd.unit.5.md)**

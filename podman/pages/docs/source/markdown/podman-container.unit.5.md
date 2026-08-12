@@ -1,4 +1,4 @@
-> Release-pinned source for Podman v6.0.2: [docs/source/markdown/podman-container.unit.5.md.in](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-container.unit.5.md.in)
+> Release-pinned source for Podman v6.1.0: [docs/source/markdown/podman-container.unit.5.md.in](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-container.unit.5.md.in)
 
 # podman-container.unit
 
@@ -78,6 +78,7 @@ Valid options for `[Container]` are listed below:
 | HostName=example.com               | --hostname example.com                               |
 | HttpProxy=true                     | --http-proxy=true                                    |
 | Image=ubi8                         | Image specification - ubi8                           |
+| ImageVolume=tmpfs                  | --image-volume tmpfs                                 |
 | IP=192.5.0.1                       | --ip 192.5.0.1                                       |
 | IP6=2001:db8::1                    | --ip6 2001:db8::1                                    |
 | Label="XYZ"                        | --label "XYZ"                                        |
@@ -212,7 +213,7 @@ Add an annotation to the container. This option can be set multiple times.
 
 ### `AutoUpdate=registry`
 
-Indicates whether the container will be auto-updated ([podman-auto-update(1)](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-auto-update.1.md.in)). The following values are supported:
+Indicates whether the container will be auto-updated ([podman-auto-update(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-auto-update.1.md.in)). The following values are supported:
 
 - `registry`: Requires a fully-qualified image reference (e.g., quay.io/podman/stable:latest) to be used to create the container. This enforcement is necessary to know which image to actually check and pull. If an image ID was used, Podman does not know which image to check/pull anymore.
 
@@ -258,7 +259,7 @@ container's primary IP address (also see the
 
 The name is not the hostname inside the container; see
 **HostName=**. See
-**[podman-network(1)](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-network.1.md)** for more on network DNS.
+**[podman-network(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-network.1.md)** for more on network DNS.
 
 ### `ContainersConfModule=module`
 
@@ -505,7 +506,7 @@ This option can only be used with a private UTS namespace `--uts=private`
 
 When **HostName=** is unset and the container uses a private UTS namespace (default), Podman sets the hostname to the first 12 characters of the container ID. The container name assigned with **ContainerName=** is not used unless *container\_name\_as\_hostname=true* is set in `containers.conf`.
 
-Podman network DNS registers the container name, the short container ID (first 12 characters), and any explicitly set **--hostname** as DNS names. The default hostname matches the short ID alias. See **[podman-network(1)](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-network.1.md)**.
+Podman network DNS registers the container name, the short container ID (first 12 characters), and any explicitly set **--hostname** as DNS names. The default hostname matches the short ID alias. See **[podman-network(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-network.1.md)**.
 
 ### `HttpProxy=`
 
@@ -537,6 +538,15 @@ Special Cases:
 
 - If the `name` of the image ends with `.image`, Quadlet will use the image pulled by the corresponding `.image` file, and the generated systemd service contains a dependency on the `$name-image.service` (or the service name set in the .image file). Note that the corresponding `.image` file must exist.
 - If the `name` of the image ends with `.build`, Quadlet will use the image built by the corresponding `.build` file, and the generated systemd service contains a dependency on the `$name-build.service`. Note: the corresponding `.build` file must exist.
+
+### `ImageVolume=mode`
+
+Tells Podman how to handle the builtin image volumes. Default is **bind**.
+
+- **bind**: An anonymous named volume is created and mounted into the container.
+- **tmpfs**: The volume is mounted onto the container as a tmpfs, which allows the users to create
+  content that disappears when the container is stopped.
+- **ignore**: All volumes are just ignored and no action is taken.
 
 ### `IP=IPv4`
 
@@ -691,9 +701,14 @@ Options specific to type=**volume**:
 
 - *subpath*: Mount only a specific subpath within the volume, instead of the whole volume.
 
+- *relabel*: *shared*, *private*. Recursively walk the mount and set the security system (e.g. SELinux) label on each file to grant access permissions from the container context.
+  *shared* applies a label that grants permissions to all containers, while *private* applies a label that grants permissions to this specific container.
+
+- *z*, *Z*: shorthand for *relabel=shared* and *relabel=private*, respectively.
+
 - *idmap*: If specified, create an idmapped mount to the target user namespace in the container.
   The idmap option is only supported by Podman in rootful mode. The Linux kernel does not allow the use of idmapped file systems for unprivileged users.
-  The idmap option supports a custom mapping that can be different than the user namespace used by the container.
+  The idmap option supports a custom mapping that can be different from the user namespace used by the container.
   The mapping can be specified after the idmap option like: `idmap=uids=0-1-10#10-11-10;gids=0-100-10`.  For each triplet, the first value is the
   start of the backing file system IDs that are mapped to the second value on the host.  The length of this mapping is given in the third value.
   Multiple ranges are separated with #.  If the specified mapping is prepended with a '@', then the mapping is considered relative to the container
@@ -713,9 +728,18 @@ Options specific to **bind** and **glob**:
 
 - *bind-nonrecursive*: do not set up a recursive bind mount. By default it is recursive.
 
-- *relabel*: *shared*, *private*.
+- *relabel*: *shared*, *private*. Recursively walk the mount and set the security system (e.g. SELinux) label on each file to grant access permissions from the container context.
+  *shared* applies a label that grants permissions to all containers, while *private* applies a label that grants permissions to this specific container.
 
-- *idmap*: *true* or *false* (default if unspecified: *false*).  If true, create an idmapped mount to the target user namespace in the container. The idmap option is only supported by Podman in rootful mode.
+- *z*, *Z*: shorthand for *relabel=shared* and *relabel=private*, respectively.
+
+- *idmap*: If specified, create an idmapped mount to the target user namespace in the container.
+  The idmap option is only supported by Podman in rootful mode. The Linux kernel does not allow the use of idmapped file systems for unprivileged users.
+  The idmap option supports a custom mapping that can be different from the user namespace used by the container.
+  The mapping can be specified after the idmap option like: `idmap=uids=0-1-10#10-11-10;gids=0-100-10`.  For each triplet, the first value is the
+  start of the backing file system IDs that are mapped to the second value on the host.  The length of this mapping is given in the third value.
+  Multiple ranges are separated with #.  If the specified mapping is prepended with a '@', then the mapping is considered relative to the container
+  user namespace. The host ID for the mapping is changed to account for the relative position of the container user in the container user namespace.
 
 - *U*, *chown*: *true* or *false* (default if unspecified: *false*). Recursively change the owner and group of the source volume based on the UID and GID of the container.
 
@@ -758,6 +782,10 @@ Examples:
 - `type=bind,src=/path/on/host,dst=/path/in/container,relabel=shared`
 
 - `type=bind,src=/path/on/host,dst=/path/in/container,relabel=shared,U=true`
+
+- `type=bind,src=/path/on/host,dst=/path/in/container,idmap`
+
+- `type=bind,src=/path/on/host,dst=/path/in/container,idmap=uids=0-1-10;gids=0-100-10`
 
 - `type=devpts,destination=/dev/pts`
 
@@ -811,7 +839,7 @@ Valid *mode* values are:
 
   For example, to set a static IPv4 address and a static mac address, use `--network bridge:ip=10.88.0.10,mac=44:33:22:11:00:99`.
 
-- *\<network name or ID>***\[:OPTIONS,...]**: Connect to a user-defined network; this is the network name or ID from a network created by **[podman network create](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-network-create.1.md.in)**. It is possible to specify the same options described under the bridge mode above. Use the **--network** option multiple times to specify additional networks. \
+- *\<network name or ID>***\[:OPTIONS,...]**: Connect to a user-defined network; this is the network name or ID from a network created by **[podman network create](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-network-create.1.md.in)**. It is possible to specify the same options described under the bridge mode above. Use the **--network** option multiple times to specify additional networks. \
   For backwards compatibility it is also possible to specify comma-separated networks on the first **--network** argument, however this prevents you from using the options described under the bridge section above.
 
 - **none**: Create a network namespace for the container but do not configure network interfaces for it, thus the container has no network connectivity.
@@ -1892,7 +1920,7 @@ WantedBy=multi-user.target
 
 # SEE ALSO
 
-[podman-run(1)](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-run.1.md.in),
-[podman-systemd.unit(5)](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-systemd.unit.5.md),
+[podman-run(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-run.1.md.in),
+[podman-systemd.unit(5)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-systemd.unit.5.md),
 [systemd.service(5)](https://www.freedesktop.org/software/systemd/man/systemd.service.html),
 [systemd.unit(5)](https://www.freedesktop.org/software/systemd/man/systemd.unit.html)

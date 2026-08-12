@@ -1,4 +1,4 @@
-> Release-pinned source for Podman v6.0.2: [docs/tutorials/macos_autostart.md](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/tutorials/macos_autostart.md)
+> Release-pinned source for Podman v6.1.0: [docs/tutorials/macos_autostart.md](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/tutorials/macos_autostart.md)
 
 # Running Podman on macOS startup with launchd
 
@@ -152,6 +152,6 @@ $ cat /tmp/podman-machine-start.err.log
 
 ## SEE ALSO
 
-**[podman-machine-start(1)](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-machine-start.1.md.in)**, **[podman-machine(1)](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-machine.1.md)**
+**[podman-machine-start(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-machine-start.1.md.in)**, **[podman-machine(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-machine.1.md)**
 
 Apple's [launchd documentation](https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLaunchdJobs.html)

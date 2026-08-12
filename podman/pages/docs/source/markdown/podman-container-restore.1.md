@@ -1,4 +1,4 @@
-> Release-pinned source for Podman v6.0.2: [docs/source/markdown/podman-container-restore.1.md](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-container-restore.1.md)
+> Release-pinned source for Podman v6.1.0: [docs/source/markdown/podman-container-restore.1.md](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-container-restore.1.md)
 
 # podman-container-restore
 
@@ -119,7 +119,7 @@ with **--import, -i**.*
 
 Restore a container into the pod *name*. The destination pod for this restore
 has to have the same namespaces shared as the pod this container was checkpointed
-from (see **[podman pod create --share](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-pod-create.1.md.in#--share)**).\
+from (see **[podman pod create --share](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-pod-create.1.md.in#--share)**).\
 *IMPORTANT: This OPTION is only available for a checkpoint image or in combination
 with **--import, -i**.*
 
@@ -154,7 +154,7 @@ The default is **false**.
 Replaces the ports that the *container* publishes, as configured during the
 initial *container* start, with a new set of port forwarding rules.
 
-For more details, see **[podman run --publish](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-run.1.md.in#--publish)**.\
+For more details, see **[podman run --publish](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-run.1.md.in#--publish)**.\
 *IMPORTANT: This OPTION is only available for a checkpoint image or in combination
 with **--import, -i**.*
 
@@ -209,7 +209,7 @@ Start a container with the name "foobar-1". Create a checkpoint image "foobar-ch
 
 ## SEE ALSO
 
-**[podman(1)](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman.1.md)**, **[podman-container-checkpoint(1)](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-container-checkpoint.1.md)**, **[podman-run(1)](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-run.1.md.in)**, **[podman-pod-create(1)](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-pod-create.1.md.in)**, **criu(8)**
+**[podman(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman.1.md)**, **[podman-container-checkpoint(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-container-checkpoint.1.md)**, **[podman-run(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-run.1.md.in)**, **[podman-pod-create(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-pod-create.1.md.in)**, **criu(8)**
 
 ## HISTORY
 

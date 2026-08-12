@@ -1,4 +1,4 @@
-> Release-pinned source for Podman v6.0.2: [install.md](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/install.md)
+> Release-pinned source for Podman v6.1.0: [install.md](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/install.md)
 
 # libpod Installation Instructions
 

@@ -1,4 +1,4 @@
-> Release-pinned source for Podman v6.0.2: [docs/source/markdown/podman-systemd.unit.5.md](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-systemd.unit.5.md)
+> Release-pinned source for Podman v6.1.0: [docs/source/markdown/podman-systemd.unit.5.md](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-systemd.unit.5.md)
 
 # podman-systemd.unit
 
@@ -10,13 +10,13 @@ podman-systemd.unit - systemd units using Podman Quadlet
 
 *name*.artifact, *name*.build, *name*.container, *name*.image, *name*.kube, *name*.network, *name*.pod, *name*.volume
 
-- **`.build`** — Builds a container image from a Containerfile. See [podman-build.unit(5)](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-build.unit.5.md.in).
-- **`.container`** — Defines and manages a single container. See [podman-container.unit(5)](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-container.unit.5.md.in).
-- **`.image`** — Pulls and caches a container image. See [podman-image.unit(5)](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-image.unit.5.md.in).
-- **`.kube`** — Deploys containers from Kubernetes YAML using [podman-kube.unit(5)](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-kube.unit.5.md.in).
-- **`.network`** — Creates a Podman network for containers and pods. See [podman-network.unit(5)](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-network.unit.5.md.in).
-- **`.pod`** — Creates a Podman pod that containers can join. See [podman-pod.unit(5)](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-pod.unit.5.md.in).
-- **`.volume`** — Ensures a named Podman volume exists. See [podman-volume.unit(5)](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-volume.unit.5.md.in).
+- **`.build`** — Builds a container image from a Containerfile. See [podman-build.unit(5)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-build.unit.5.md.in).
+- **`.container`** — Defines and manages a single container. See [podman-container.unit(5)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-container.unit.5.md.in).
+- **`.image`** — Pulls and caches a container image. See [podman-image.unit(5)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-image.unit.5.md.in).
+- **`.kube`** — Deploys containers from Kubernetes YAML using [podman-kube.unit(5)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-kube.unit.5.md.in).
+- **`.network`** — Creates a Podman network for containers and pods. See [podman-network.unit(5)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-network.unit.5.md.in).
+- **`.pod`** — Creates a Podman pod that containers can join. See [podman-pod.unit(5)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-pod.unit.5.md.in).
+- **`.volume`** — Ensures a named Podman volume exists. See [podman-volume.unit(5)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-volume.unit.5.md.in).
 
 ### Podman rootful unit search path
 
@@ -394,6 +394,7 @@ Valid options for `[Container]` are listed below:
 | HostName=example.com               | --hostname example.com                               |
 | HttpProxy=true                     | --http-proxy=true                                    |
 | Image=ubi8                         | Image specification - ubi8                           |
+| ImageVolume=tmpfs                  | --image-volume tmpfs                                 |
 | IP=192.5.0.1                       | --ip 192.5.0.1                                       |
 | IP6=2001:db8::1                    | --ip6 2001:db8::1                                    |
 | Label="XYZ"                        | --label "XYZ"                                        |
@@ -490,7 +491,7 @@ Sets the apparmor confinement profile for the container. A value of `unconfined`
 
 ### `AutoUpdate=`
 
-Indicates whether the container will be auto-updated ([podman-auto-update(1)](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-auto-update.1.md.in)). The following values are supported:
+Indicates whether the container will be auto-updated ([podman-auto-update(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-auto-update.1.md.in)). The following values are supported:
 
 - `registry`: Requires a fully-qualified image reference (e.g., quay.io/podman/stable:latest) to be used to create the container. This enforcement is necessary to know which image to actually check and pull. If an image ID was used, Podman does not know which image to check/pull anymore.
 
@@ -731,6 +732,11 @@ Special Cases:
 
 - If the `name` of the image ends with `.image`, Quadlet will use the image pulled by the corresponding `.image` file, and the generated systemd service contains a dependency on the `$name-image.service` (or the service name set in the .image file). Note that the corresponding `.image` file must exist.
 - If the `name` of the image ends with `.build`, Quadlet will use the image built by the corresponding `.build` file, and the generated systemd service contains a dependency on the `$name-build.service`. Note: the corresponding `.build` file must exist.
+
+### `ImageVolume=`
+
+Tells Podman how to handle the builtin image volumes. Default is **bind**.
+Equivalent to the Podman `--image-volume` option.
 
 ### `IP=`
 
@@ -1361,7 +1367,7 @@ Supported keys in the `[Kube]` section are:
 
 ### `AutoUpdate=`
 
-Indicates whether containers will be auto-updated ([podman-auto-update(1)](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-auto-update.1.md.in)). AutoUpdate can be specified multiple times. The following values are supported:
+Indicates whether containers will be auto-updated ([podman-auto-update(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-auto-update.1.md.in)). AutoUpdate can be specified multiple times. The following values are supported:
 
 - `registry`: Requires a fully-qualified image reference (e.g., quay.io/podman/stable:latest) to be used to create the container. This enforcement is necessary to know which images to actually check and pull. If an image ID was used, Podman does not know which image to check/pull anymore.
 
@@ -2581,21 +2587,21 @@ Options=iam_role,endpoint=${AWS_REGION},use_xattr,listobjectsv2,del_cache,use_ca
 # `iam_role` assumes inside EC2, if not, Use `profile=` instead
 ```
 
-For more examples, please see the [podman-quadlet-basic-usage.7](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-quadlet-basic-usage.7.md).
+For more examples, please see the [podman-quadlet-basic-usage.7](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-quadlet-basic-usage.7.md).
 
 ## SEE ALSO
 
-- **[podman-auto-update(1)](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-auto-update.1.md.in)**
-- **[podman-build.unit(5)](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-build.unit.5.md.in),**
-- **[podman-container.unit(5)](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-container.unit.5.md.in),**
-- **[podman-image.unit(5)](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-image.unit.5.md.in),**
-- **[podman-kube.unit(5)](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-kube.unit.5.md.in),**
-- **[podman-network-create(1)](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-network-create.1.md.in)**,
-- **[podman-network.unit(5)](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-network.unit.5.md.in),**
-- **[podman-pod.unit(5)](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-pod.unit.5.md.in),**
-- **[podman-quadlet-basic-usage.7](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-quadlet-basic-usage.7.md),**
-- **[podman-run(1)](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-run.1.md.in)**,
-- **[podman-volume.unit(5)](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-volume.unit.5.md.in),**
+- **[podman-auto-update(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-auto-update.1.md.in)**
+- **[podman-build.unit(5)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-build.unit.5.md.in),**
+- **[podman-container.unit(5)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-container.unit.5.md.in),**
+- **[podman-image.unit(5)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-image.unit.5.md.in),**
+- **[podman-kube.unit(5)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-kube.unit.5.md.in),**
+- **[podman-network-create(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-network-create.1.md.in)**,
+- **[podman-network.unit(5)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-network.unit.5.md.in),**
+- **[podman-pod.unit(5)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-pod.unit.5.md.in),**
+- **[podman-quadlet-basic-usage.7](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-quadlet-basic-usage.7.md),**
+- **[podman-run(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-run.1.md.in)**,
+- **[podman-volume.unit(5)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-volume.unit.5.md.in),**
 - **[systemd-analyze(1)](https://www.freedesktop.org/software/systemd/man/latest/systemd-analyze.html)**,
 - **[systemd.service(5)](https://www.freedesktop.org/software/systemd/man/systemd.service.html)**,
 - **[systemd.unit(5)](https://www.freedesktop.org/software/systemd/man/systemd.unit.html)**

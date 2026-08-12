@@ -1,4 +1,4 @@
-> Release-pinned source for Podman v6.0.2: [docs/tutorials/podman_tutorial.md](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/tutorials/podman_tutorial.md)
+> Release-pinned source for Podman v6.1.0: [docs/tutorials/podman_tutorial.md](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/tutorials/podman_tutorial.md)
 
 ![PODMAN logo](https://raw.githubusercontent.com/containers/common/main/logos/podman-logo-full-vert.png)
 
@@ -8,7 +8,7 @@ Podman is a utility provided as part of the libpod library.  It can be used to c
 containers. The following tutorial will teach you how to set up Podman and perform some basic
 commands with Podman.
 
-If you are running on a Mac or Windows PC, you should instead follow the [Mac and Windows tutorial](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/tutorials/mac_win_client.md)
+If you are running on a Mac or Windows PC, you should instead follow the [Mac and Windows tutorial](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/tutorials/mac_win_client.md)
 to set up the remote Podman client.
 
 **NOTE**: the code samples are intended to be run as a non-root user, and use `sudo` where
@@ -184,9 +184,9 @@ You can verify the deletion of the container by running *podman ps -a*.
 
 ## Integration Tests
 
-For more information on how to set up and run the integration tests in your environment, checkout the Integration Tests [README.md](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/test/README.md)
+For more information on how to set up and run the integration tests in your environment, checkout the Integration Tests [README.md](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/test/README.md)
 
 ## More information
 
-For more information on Podman and its subcommands, checkout the asciiart demos on the [README.md](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/README.md#commands)
+For more information on Podman and its subcommands, checkout the asciiart demos on the [README.md](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/README.md#commands)
 page.

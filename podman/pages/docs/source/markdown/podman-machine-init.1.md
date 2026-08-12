@@ -1,4 +1,4 @@
-> Release-pinned source for Podman v6.0.2: [docs/source/markdown/podman-machine-init.1.md.in](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-machine-init.1.md.in)
+> Release-pinned source for Podman v6.1.0: [docs/source/markdown/podman-machine-init.1.md.in](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-machine-init.1.md.in)
 
 # podman-machine-init
 
@@ -44,7 +44,7 @@ be updated.  After updating, you must stop and start your machine with `podman m
 it to take effect.
 
 The above mechanism is only used to update patch (Z) versions of podman. For updates to new major and minor
-version (X.Y) use the **[podman machine os apply](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-machine-os-apply.1.md)** command, see the docs there for
+version (X.Y) use the **[podman machine os apply](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-machine-os-apply.1.md)** command, see the docs there for
 more information.
 
 Note: Updating as described above can result in version mismatches between Podman on the host and Podman in the
@@ -308,7 +308,7 @@ $ podman machine init --provider applehv
 
 ## SEE ALSO
 
-**[podman(1)](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman.1.md)**, **[podman-machine(1)](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-machine.1.md)**, **containers.conf(5)**
+**[podman(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman.1.md)**, **[podman-machine(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-machine.1.md)**, **containers.conf(5)**
 
 ## HISTORY
 

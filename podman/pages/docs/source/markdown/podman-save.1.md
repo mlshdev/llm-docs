@@ -1,10 +1,10 @@
-> Release-pinned source for Podman v6.0.2: [docs/source/markdown/podman-save.1.md.in](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-save.1.md.in)
+> Release-pinned source for Podman v6.1.0: [docs/source/markdown/podman-save.1.md.in](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-save.1.md.in)
 
 # podman-save
 
 ## NAME
 
-podman-save - Save image(s) to an archive
+podman-save - Save image(s) to an archive or directory
 
 ## SYNOPSIS
 
@@ -20,6 +20,8 @@ file using the **output** flag. The **quiet** flag suppresses the output when se
 **podman save** saves parent layers of the image(s) and the image(s) can be loaded using **podman load**.
 To export the containers, use the **podman export**.
 Note: `:` is a restricted character and cannot be part of the file name.
+
+**podman save** operates on *images*: the resulting archive (OCI or docker-archive) preserves the image's layers, history and tags, and is restored as the same image with **podman load**. This is different from **podman export**, which flattens a *container's* filesystem into a single-layer tarball with no image history. To capture a container's filesystem instead, see **podman-export(1)**.
 
 ## OPTIONS
 
@@ -39,6 +41,8 @@ An image format to produce, one of:
 | **oci-archive**    | A tar archive using the OCI Image Format                                     |
 | **oci-dir**        | A directory using the OCI Image Format                                       |
 | **docker-dir**     | **dir** transport (see **containers-transports(5)**) with v2s2 manifest type |
+
+Note: **oci-dir** and **docker-dir** cannot be loaded with **podman load** on Podman remote clients (including macOS and Windows, excluding WSL2)
 
 #### **--help**, **-h**
 
@@ -96,7 +100,7 @@ Storing signatures
 
 ## SEE ALSO
 
-**[podman(1)](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman.1.md)**, **[podman-load(1)](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-load.1.md)**, **[containers.conf(5)](https://github.com/containers/container-libs/blob/main/common/docs/containers.conf.5.md)**, **[containers-transports(5)](https://github.com/containers/image/blob/main/docs/containers-transports.5.md)**
+**[podman(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman.1.md)**, **[podman-load(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-load.1.md)**, **[containers.conf(5)](https://github.com/containers/container-libs/blob/main/common/docs/containers.conf.5.md)**, **[containers-transports(5)](https://github.com/containers/image/blob/main/docs/containers-transports.5.md)**
 
 ## HISTORY
 

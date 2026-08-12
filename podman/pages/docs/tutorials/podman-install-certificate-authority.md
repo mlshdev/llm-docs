@@ -1,6 +1,6 @@
-> Release-pinned source for Podman v6.0.2: [docs/tutorials/podman-install-certificate-authority.md](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/tutorials/podman-install-certificate-authority.md)
+> Release-pinned source for Podman v6.1.0: [docs/tutorials/podman-install-certificate-authority.md](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/tutorials/podman-install-certificate-authority.md)
 
-![PODMAN logo](https://raw.githubusercontent.com/podman-container-tools/podman/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/logo/podman-logo-source.svg)
+![PODMAN logo](https://raw.githubusercontent.com/podman-container-tools/podman/cade97a52ebdf9dbf9e81de8009015776837a074/logo/podman-logo-source.svg)
 
 # Install Certificate Authority
 

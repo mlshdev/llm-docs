@@ -1,4 +1,4 @@
-> Release-pinned source for Podman v6.0.2: [docs/source/markdown/podman-volume-prune.1.md](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-volume-prune.1.md)
+> Release-pinned source for Podman v6.1.0: [docs/source/markdown/podman-volume-prune.1.md](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-volume-prune.1.md)
 
 # podman-volume-prune
 
@@ -24,6 +24,8 @@ removal unless **--force** is used.
 #### **--all**, **-a**
 
 Remove all unused volumes (anonymous and named). Without this option, only anonymous unused volumes are removed.
+
+**--all** can be combined with **--filter**: **--all** widens the set of candidate volumes to all unused ones, and the filters then restrict which of those are removed. For example, **--all --filter label!=keep** removes every unused volume that does not have the *keep* label.
 
 #### **--dry-run**
 
@@ -83,6 +85,12 @@ Prune all unused volumes (anonymous and named).
 $ podman volume prune --all --force
 ```
 
+Prune all unused volumes except those with a specific label (combine **--all** with a filter).
+
+```
+$ podman volume prune --all --force --filter label!=keep
+```
+
 Prune all unused volumes using the filter (equivalent to **--all**).
 
 ```
@@ -121,7 +129,7 @@ $ podman volume prune --all --dry-run
 
 ## SEE ALSO
 
-**[podman(1)](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman.1.md)**, **[podman-volume(1)](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-volume.1.md)**
+**[podman(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman.1.md)**, **[podman-volume(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-volume.1.md)**
 
 ## HISTORY
 

@@ -1,4 +1,4 @@
-> Release-pinned source for Podman v6.0.2: [docs/source/markdown/podman-compose.1.md.in](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-compose.1.md.in)
+> Release-pinned source for Podman v6.1.0: [docs/source/markdown/podman-compose.1.md.in](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-compose.1.md.in)
 
 # podman-compose
 
@@ -16,9 +16,9 @@ podman-compose - Run Compose workloads via an external compose provider
 
 The default compose providers are `docker-compose` and `podman-compose`.  If installed, `docker-compose` takes precedence since it is the original implementation of the Compose specification and is widely used on the supported platforms (i.e., Linux, Mac OS, Windows).
 
-If you want to change the default behavior or have a custom installation path for your provider of choice, please change the `compose_providers` field in `containers.conf(5)` to `compose_providers = ["/path/to/provider"]`. You may also set the `PODMAN_COMPOSE_PROVIDER` environment variable.
+If you want to change the default behavior or have a custom installation path for your provider of choice, please change the `compose_providers` field in the `[engine]` table of `containers.conf(5)` to `compose_providers = ["/path/to/provider"]`. You may also set the `PODMAN_COMPOSE_PROVIDER` environment variable.
 
-By default, `podman compose` will emit a warning saying that it executes an external command. This warning can be disabled by setting `compose_warning_logs` to false in `containers.conf(5)` or setting the `PODMAN_COMPOSE_WARNING_LOGS` environment variable to false. See the man page for `containers.conf(5)` for more information.
+By default, `podman compose` will emit a warning saying that it executes an external command. This warning can be disabled by setting `compose_warning_logs` to false in the `[engine]` table of `containers.conf(5)` or setting the `PODMAN_COMPOSE_WARNING_LOGS` environment variable to false. See the man page for `containers.conf(5)` for more information.
 
 ## OPTIONS
 
@@ -26,4 +26,4 @@ To see supported options of the installed compose provider, please run `podman c
 
 ## SEE ALSO
 
-**[podman(1)](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman.1.md)**, **[containers.conf(5)](https://github.com/containers/container-libs/blob/main/common/docs/containers.conf.5.md)**
+**[podman(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman.1.md)**, **[containers.conf(5)](https://github.com/containers/container-libs/blob/main/common/docs/containers.conf.5.md)**

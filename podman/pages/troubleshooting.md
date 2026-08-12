@@ -1,4 +1,4 @@
-> Release-pinned source for Podman v6.0.2: [troubleshooting.md](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/troubleshooting.md)
+> Release-pinned source for Podman v6.1.0: [troubleshooting.md](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/troubleshooting.md)
 
 ![PODMAN logo](https://raw.githubusercontent.com/containers/common/main/logos/podman-logo-full-vert.png)
 
@@ -389,7 +389,7 @@ If you do mount in the host's `/var/lib/containers/storage`, however, you must a
 Not doing this will cause Podman in the container to detect that temporary files have been cleared, leading it to assume a system restart has taken place.
 This can cause Podman to reset container states and lose track of running containers.
 
-For running containers on the host from inside a container, we also recommend the [Podman remote client](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/tutorials/remote_client.md), which only requires a single socket to be mounted into the container.
+For running containers on the host from inside a container, we also recommend the [Podman remote client](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/tutorials/remote_client.md), which only requires a single socket to be mounted into the container.
 
 ### 14) Rootless 'podman build' fails EPERM on NFS:
 
@@ -1820,7 +1820,7 @@ If you want to also allow access from the internet, use `-p 8080:8080` instead o
 
 Alternative 2
 
-Use [socket activation](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/tutorials/socket_activation.md#socket-activation-of-containers).
+Use [socket activation](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/tutorials/socket_activation.md#socket-activation-of-containers).
 This alternative is only possible when the software in the container supports socket activation.
 
 Alternative 3

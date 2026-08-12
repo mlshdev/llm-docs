@@ -1,4 +1,4 @@
-> Release-pinned source for Podman v6.0.2: [docs/source/markdown/podman-quadlet-basic-usage.7.md](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-quadlet-basic-usage.7.md)
+> Release-pinned source for Podman v6.1.0: [docs/source/markdown/podman-quadlet-basic-usage.7.md](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-quadlet-basic-usage.7.md)
 
 # podman-quadlet-basic-usage
 
@@ -63,7 +63,7 @@ sudo systemctl start hello.service
 ```
 
 Note quadlet services cannot be enabled as they are a generated systemd unit,
-see [podman-systemd.unit(5)](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-systemd.unit.5.md#enabling-unit-files) for more information.
+see [podman-systemd.unit(5)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-systemd.unit.5.md#enabling-unit-files) for more information.
 
 ## Expected Output:
 
@@ -227,9 +227,9 @@ systemd-analyze --user --generators=true verify foo.service
 
 # SEE ALSO
 
-[podman-systemd.unit(5)](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-systemd.unit.5.md),
-[podman-container.unit(5)](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-container.unit.5.md.in),
-[podman-volume.unit(5)](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-volume.unit.5.md.in),
+[podman-systemd.unit(5)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-systemd.unit.5.md),
+[podman-container.unit(5)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-container.unit.5.md.in),
+[podman-volume.unit(5)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-volume.unit.5.md.in),
 [systemd.unit(5)](https://www.freedesktop.org/software/systemd/man/systemd.unit.html)
 
 # AUTHORS

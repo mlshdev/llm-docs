@@ -1,4 +1,4 @@
-> Release-pinned source for Podman v6.0.2: [docs/tutorials/image_signing.md](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/tutorials/image_signing.md)
+> Release-pinned source for Podman v6.1.0: [docs/tutorials/image_signing.md](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/tutorials/image_signing.md)
 
 # How to sign and distribute container images using Podman
 

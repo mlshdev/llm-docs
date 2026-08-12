@@ -1,4 +1,4 @@
-> Release-pinned source for Podman v6.0.2: [docs/cncf/self-assessment.md](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/cncf/self-assessment.md)
+> Release-pinned source for Podman v6.1.0: [docs/cncf/self-assessment.md](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/cncf/self-assessment.md)
 
 # Podman Self-assessment
 
@@ -21,13 +21,13 @@
 
 ## Metadata
 
-|||| | -- | -- | | Assessment Stage | Incomplete | | Software | <https://github.com/containers/podman> | | Security Provider | No | | Languages | Go | | SBOM | [https://github.com/containers/podman/blob/main/go.mod](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/go.mod) |
+|||| | -- | -- | | Assessment Stage | Incomplete | | Software | <https://github.com/containers/podman> | | Security Provider | No | | Languages | Go | | SBOM | [https://github.com/containers/podman/blob/main/go.mod](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/go.mod) |
 
 ### Security links
 
 | Doc           | url                                                                                                                                                                      |
 | :------------ | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Security file | [https://github.com/containers/podman/blob/main/SECURITY.md](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/SECURITY.md) |
+| Security file | [https://github.com/containers/podman/blob/main/SECURITY.md](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/SECURITY.md) |
 
 ## Overview
 
@@ -195,7 +195,7 @@ This document provides the CNCF TAG-Security with an initial understanding of Po
   - GitHub Discussions for community questions
   - Security issues via the security mailing list
   - Mailing lists for formal discussions
-  - Clear contribution guidelines documented in [CONTRIBUTING.md](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/CONTRIBUTING.md)
+  - Clear contribution guidelines documented in [CONTRIBUTING.md](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/CONTRIBUTING.md)
 
 - **Outbound**:
 
@@ -218,7 +218,7 @@ Podman is a critical component of the cloud-native ecosystem:
 
 ### Responsible Disclosures Process
 
-- **Reporting**: Security vulnerabilities should be reported by email as documented in the [SECURITY.md](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/SECURITY.md) file.
+- **Reporting**: Security vulnerabilities should be reported by email as documented in the [SECURITY.md](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/SECURITY.md) file.
 
 - **Response Time**: The team commits to responding to vulnerability reports within 48 hours. All medium and higher severity exploitable vulnerabilities are prioritized as a matter of general practice.
 
@@ -265,7 +265,7 @@ Podman is a critical component of the cloud-native ecosystem:
 
 ### Case Studies
 
-- List of companies and organizations using / shipping Podman [https://github.com/containers/podman/blob/main/ADOPTERS.md](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/ADOPTERS.md)
+- List of companies and organizations using / shipping Podman [https://github.com/containers/podman/blob/main/ADOPTERS.md](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/ADOPTERS.md)
 
 ### Related Projects / Vendors
 

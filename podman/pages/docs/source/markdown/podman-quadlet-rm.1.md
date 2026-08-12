@@ -1,4 +1,4 @@
-> Release-pinned source for Podman v6.0.2: [docs/source/markdown/podman-quadlet-rm.1.md](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-quadlet-rm.1.md)
+> Release-pinned source for Podman v6.1.0: [docs/source/markdown/podman-quadlet-rm.1.md.in](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-quadlet-rm.1.md.in)
 
 # podman-quadlet-rm
 
@@ -15,6 +15,8 @@ podman-quadlet-rm - Removes an installed quadlet
 Remove one or more installed Quadlets from the current user. Following command also takes application name
 as input and removes all the Quadlets which belongs to that specific application.
 
+When the argument is uninstantiated template quadlet, this command removes the template quadlet file (e.g. `templateName@.container`) and the generated systemd template unit (e.g. `templateName@.service`). If there are running instances of that systemd template, the command fails if **--force** option is not set, and tries to stop the instances if **--force** option is set.
+
 Note: If a quadlet is part of an application, removing that specific quadlet will remove the entire application.
 When a quadlet is installed from a directory, all files installed from that directory—including both quadlet and non-quadlet files—are considered part
 of a single application.
@@ -27,7 +29,7 @@ Remove all Quadlets for the current user.
 
 #### **--force**, **-f**
 
-Remove running Quadlets.
+Remove running Quadlets (in case of uninstantiated template quadlets, stop its instances).
 
 #### **--ignore**, **-i**
 
@@ -39,7 +41,7 @@ Required when removing applications (default false).
 
 #### **--reload-systemd**
 
-Reload systemd after removing Quadlets (default true).
+Reload systemd after the operation completes (default true).
 In order to disable it users need to manually set the value
 of this flag to `false`.
 
@@ -56,4 +58,4 @@ data.volume
 
 ## SEE ALSO
 
-**[podman(1)](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman.1.md)**, **[podman-quadlet(1)](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-quadlet.1.md)**, **[podman-systemd.unit(5)](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-systemd.unit.5.md)**
+**[podman(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman.1.md)**, **[podman-quadlet(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-quadlet.1.md)**, **[podman-systemd.unit(5)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-systemd.unit.5.md)**

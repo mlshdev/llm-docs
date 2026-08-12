@@ -3,11 +3,11 @@
   "project": "podman",
   "title": "Podman",
   "repository": "podman-container-tools/podman",
-  "tag": "v6.0.2",
-  "releaseId": 357755080,
-  "releasePublishedAt": "2026-07-22T03:02:34Z",
-  "sourceCommit": "b28edb9ad70ce4317dc762ee9ce0a6d081d154e9",
-  "documentCount": 229,
+  "tag": "v6.1.0",
+  "releaseId": 369501266,
+  "releasePublishedAt": "2026-08-12T20:12:23Z",
+  "sourceCommit": "cade97a52ebdf9dbf9e81de8009015776837a074",
+  "documentCount": 231,
   "notes": [
     "Podman man-page templates are expanded by a non-executing implementation of the tagged repository's documented preprocessing rules.",
     "Generated aliases, duplicate rootless/troubleshooting pages, translations, assets, and vendored code are omitted."

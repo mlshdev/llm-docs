@@ -1,4 +1,4 @@
-> Release-pinned source for Podman v6.0.2: [docs/source/markdown/podman-export.1.md](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-export.1.md)
+> Release-pinned source for Podman v6.1.0: [docs/source/markdown/podman-export.1.md](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-export.1.md)
 
 # podman-export
 
@@ -20,6 +20,8 @@ redirected to a file using the `--output` flag.
 The image of the container exported by **podman export** can be imported by **podman import**.
 To export image(s) with parent layers, use **podman save**.
 Note: `:` is a restricted character and cannot be part of the file name.
+
+**podman export** operates on a *container's* filesystem: it flattens the filesystem into a single-layer tarball with no image layers, history or tags. This is different from **podman save**, which archives an *image* and preserves its layers, history and tags. To archive an image instead, see **podman-save(1)**.
 
 **podman \[GLOBAL OPTIONS]**
 
@@ -53,7 +55,7 @@ $ podman export 883504668ec465463bc0fe7e63d53154ac3b696ea8d7b233748918664ea90e57
 
 ## SEE ALSO
 
-**[podman(1)](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman.1.md)**, **[podman-import(1)](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-import.1.md)**
+**[podman(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman.1.md)**, **[podman-import(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-import.1.md)**
 
 ## HISTORY
 

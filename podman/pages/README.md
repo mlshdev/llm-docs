@@ -1,4 +1,4 @@
-> Release-pinned source for Podman v6.0.2: [README.md](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/README.md)
+> Release-pinned source for Podman v6.1.0: [README.md](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/README.md)
 
 ![PODMAN logo](https://raw.githubusercontent.com/containers/common/main/logos/podman-logo-full-vert.png)
 
@@ -20,10 +20,12 @@ Podman is based on libpod, a library for container lifecycle management that is 
 
 Podman releases a new major or minor release 4 times a year, during the second week of February, May, August, and November. Patch releases are more frequent and may occur at any time to get bugfixes out to users. All releases are PGP signed. Public keys of members of the team approved to make releases are located [here](https://github.com/containers/release-keys/tree/main/podman).
 
+Only the most recent release receives upstream support. Exceptions are sometimes made after a major Podman release, in recognition of the fact that not all users and distributions will be able to quickly migrate to a breaking change release. After the release of Podman 6.0, the Podman maintainers have decided to extend upstream support of the v5.8 series of releases until the 2nd week of June in 2027, one year after the release of Podman 6.0. This support will only include CVE fixes and critical bugfixes.
+
 - Continuous Integration:
   - [![Build Status](https://github.com/containers/podman/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/containers/podman/actions/workflows/ci.yml?query=branch%3Amain)
   - [GoDoc: ![GoDoc](https://godoc.org/github.com/containers/podman/libpod?status.svg)](https://godoc.org/github.com/containers/podman/libpod)
-  - [Downloads](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/DOWNLOADS.md)
+  - [Downloads](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/DOWNLOADS.md)
 
 ## Overview and scope
 
@@ -43,7 +45,7 @@ At a high level, the scope of Podman and libpod is the following:
 
 ## Roadmap
 
-The future of Podman feature development can be found in its **[roadmap](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/ROADMAP.md)**.
+The future of Podman feature development can be found in its **[roadmap](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/ROADMAP.md)**.
 
 ## Communications
 
@@ -62,6 +64,18 @@ tracking system.
 There is also a [mailing list](https://lists.podman.io/archives/) at `lists.podman.io`.
 You can subscribe by sending a message to `podman-join@lists.podman.io` with the subject `subscribe`.
 
+### Community Meetings
+
+All Podman meetings are open to everyone, free to attend, and hosted via Zoom through the CNCF/Linux Foundation.
+The full calendar is available on the [Podman Container Tools LFX Meetings page](https://zoom-lfx.platform.linuxfoundation.org/meetings/podman-container-tools?view=month).
+Registering for a meeting sends you an invite for that meeting and all subsequent recurring instances.
+
+| Meeting                                                                                                                                                                                                          | Schedule                                                                                                                         | Format                                                 |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
+| [Podman Community Meeting](https://zoom-lfx.platform.linuxfoundation.org/meeting/97486138230?password=3144ae43-0fd5-457e-a495-bb4e0202e9c2) and its [agenda](https://hackmd.io/fc1zraYdS0-klJ2KJcfC7w?both)      | First **Tuesday of even-numbered months** (Feb, Apr, Jun, Aug, Oct, Dec) at **11:00 a.m. Eastern** (UTC-4 summer / UTC-5 winter) | \~1 hour — demos, announcements, and community updates |
+| [Podman Monday Office Hours](https://zoom-lfx.platform.linuxfoundation.org/meeting/92776077694?password=deea5903-07a5-4e4d-9ad9-a6f52319fabe) and its [agenda](https://hackmd.io/@TomSweeneyRedHat/H1qIC9nkMe)   | Every **Monday at 10:00 a.m. Eastern** (UTC-4 summer / UTC-5 winter)                                                             | 30 min — technical discussions, open topics            |
+| [Podman Thursday Office Hours](https://zoom-lfx.platform.linuxfoundation.org/meeting/96031375483?password=97015335-907e-4f54-9eff-b3068d7052c9) and its [agenda](https://hackmd.io/@TomSweeneyRedHat/H1qIC9nkMe) | Every **Thursday at 11:00 a.m. Eastern** (UTC-4 summer / UTC-5 winter)                                                           | 30 min — technical discussions, open topics            |
+
 ## Rootless
 
 Podman can be easily run as a normal user, without requiring a setuid binary.
@@ -70,10 +84,10 @@ Rootless Podman runs locked-down containers with no privileges that the user run
 Some of these restrictions can be lifted (via `--privileged`, for example), but rootless containers will never have more privileges than the user that launched them.
 If you run Podman as your user and mount in `/etc/passwd` from the host, you still won't be able to change it, since your user doesn't have permission to do so.
 
-Almost all normal Podman functionality is available, though there are some [shortcomings](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/rootless.md).
+Almost all normal Podman functionality is available, though there are some [shortcomings](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/rootless.md).
 Any recent Podman release should be able to run rootless without any additional configuration, though your operating system may require some additional configuration detailed in the [install guide](https://podman.io/getting-started/installation).
 
-A little configuration by an administrator is required before rootless Podman can be used, the necessary setup is documented [here](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/tutorials/rootless_tutorial.md).
+A little configuration by an administrator is required before rootless Podman can be used, the necessary setup is documented [here](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/tutorials/rootless_tutorial.md).
 
 ## Podman Desktop
 
@@ -105,7 +119,7 @@ Podman uses OCI projects and best of breed libraries for different aspects:
 
 For blogs, release announcements and more, please checkout the [podman.io](https://podman.io) website!
 
-**[Installation notes](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/install.md)**
+**[Installation notes](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/install.md)**
 Information on how to install Podman in your environment.
 
 **[OCI Hooks Support](https://github.com/containers/container-libs/blob/main/common/pkg/hooks/README.md)**
@@ -121,26 +135,26 @@ showing the commands in use.
 **[Podman Container Images](https://github.com/containers/image_build/blob/main/podman/README.md)**
 Information on the Podman Container Images found on [quay.io](https://quay.io/podman/stable).
 
-**[Podman Troubleshooting Guide](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/troubleshooting.md)**
+**[Podman Troubleshooting Guide](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/troubleshooting.md)**
 A list of common issues and solutions for Podman.
 
-**[Podman Usage Transfer](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/transfer.md)**
+**[Podman Usage Transfer](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/transfer.md)**
 Useful information for ops and dev transfer as it relates to infrastructure that utilizes Podman.  This page
 includes tables showing Docker commands and their Podman equivalent commands.
 
 **Tutorials**
 Tutorials on using Podman.
 
-**[Remote Client](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/tutorials/remote_client.md)**
+**[Remote Client](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/tutorials/remote_client.md)**
 A brief how-to on using the Podman remote client.
 
-**[Basic Setup and Use of Podman in a Rootless environment](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/tutorials/rootless_tutorial.md)**
+**[Basic Setup and Use of Podman in a Rootless environment](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/tutorials/rootless_tutorial.md)**
 A tutorial showing the setup and configuration necessary to run Rootless Podman.
 
-**[Release Notes](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/RELEASE_NOTES.md)**
+**[Release Notes](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/RELEASE_NOTES.md)**
 Release notes for recent Podman versions.
 
-**[Contributing](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/CONTRIBUTING.md)**
+**[Contributing](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/CONTRIBUTING.md)**
 Information about contributing to this project.
 
 [spec-hooks]: https://github.com/opencontainers/runtime-spec/blob/v1.0.2/config.md#posix-platform-hooks

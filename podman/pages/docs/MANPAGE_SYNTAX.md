@@ -1,4 +1,4 @@
-> Release-pinned source for Podman v6.0.2: [docs/MANPAGE_SYNTAX.md](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/MANPAGE_SYNTAX.md)
+> Release-pinned source for Podman v6.1.0: [docs/MANPAGE_SYNTAX.md](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/MANPAGE_SYNTAX.md)
 
 # podman-command
 
@@ -39,7 +39,7 @@ Many manpages include the OPTIONS **--all**, **-a** and/or **--latest**, **-l**.
 Example for the first sentence: **podman command** is an example command.
 
 Commands or files that are quoted from other podman manpages or podman repositories have to be linked to those. Non-podman commands are not to be linked.\
-Example sentence: Use **[podman-run](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-run.1.md.in)** or **[containers.conf(5)](https://github.com/containers/container-libs/blob/main/common/docs/containers.conf.5.md)** for the problem.
+Example sentence: Use **[podman-run](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-run.1.md.in)** or **[containers.conf(5)](https://github.com/containers/container-libs/blob/main/common/docs/containers.conf.5.md)** for the problem.
 
 It should also be specified if the command can only be run as root. In addition, it should be described when a command, OPTION, or other content cannot be executed with the remote client or in combination with other commands, OPTIONS, or content. In this case, the following sentence is put at the end of a command, OPTION, or content:\
 *IMPORTANT: This command/OPTION/content is not available with the command/OPTION/content/on the remote Podman client.*\
@@ -54,14 +54,14 @@ There should be **no** new line after H2-headers (`##`).
 All flags are referred to as OPTIONS. The term flags should not be used. All OPTIONS are listed in this section. OPTIONS that appear in descriptions of other OPTIONS and sections retain their appearance, for example: **--exit**.
 
 OPTIONS that are quoted from other podman manpages or podman repositories have to be linked to those.\
-Example sentence: Use **[podman-generate-systemd --new](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-generate-systemd.1.md#--new)** for the problem.
+Example sentence: Use **[podman-generate-systemd --new](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-generate-systemd.1.md#--new)** for the problem.
 
 Each OPTION should be explained to the fullest extent below the OPTION itself. Each OPTION is behind an H4-header (`####`). If the OPTION has a default argument, it has to be explained in the description of the OPTION. If the OPTION is also not available with a command/OPTION/content/ on the remote Podman client, the sentence about the default argument should the second to last sentence. The sentence about the default argument should be in a new line as well as the *IMPORTANT* sentence.
 
 All OPTIONS are to be sorted in alphabetical order.
 
 Tables should be used when there is a different definition for multiple arguments, and these have to be explained. This is shown with the OPTION **--test**.\
-Lists should be used when arguments are used that do not need a definition for each argument and a single description explains them. An example is shown with **[podman-commit --change](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-commit.1.md#--change--cinstruction)**
+Lists should be used when arguments are used that do not need a definition for each argument and a single description explains them. An example is shown with **[podman-commit --change](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-commit.1.md#--change--cinstruction)**
 
 #### **--version**, **-v**
 
@@ -80,7 +80,7 @@ The default value is shown as **active**.
 
 #### **--status**=**good** | *better* | *best*
 
-This is an example of three arguments following an OPTION. If the number of arguments is greater than three, the arguments are **not** listed after the equal sign. The arguments must be shown in a table like in **--test**=***test***. This form should also be used if the understanding of the content is in danger of becoming incomprehensible. An example for this is **[podman-container-prune --filters](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-container-prune.1.md#--filterfilters)**.\
+This is an example of three arguments following an OPTION. If the number of arguments is greater than three, the arguments are **not** listed after the equal sign. The arguments must be shown in a table like in **--test**=***test***. This form should also be used if the understanding of the content is in danger of becoming incomprehensible. An example for this is **[podman-container-prune --filters](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-container-prune.1.md#--filterfilters)**.\
 The default value is shown as **good**.
 
 #### **--test**=**test**
@@ -144,7 +144,7 @@ Description of the EXAMPLE two
 All commands, including commands with OPTIONS, and config-files mentioned in the manpage have to be listed here. Podman commands, including commands with OPTIONS, and config-files have to be linked. If a command is mentioned several times with different OPTIONS it just have to be linked once. All other commands, including commands with OPTIONS, and config-files just have to be mentioned. If a command is mentioned several times with different OPTIONS it just has to be linked once.
 
 Example:
-**[podman(1)](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman.1.md)**, **[podman-run(1)](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-run.1.md.in)**, **[podman-create(1)](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/source/markdown/podman-create.1.md.in)**
+**[podman(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman.1.md)**, **[podman-run(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-run.1.md.in)**, **[podman-create(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-create.1.md.in)**
 
 ## HISTORY
 

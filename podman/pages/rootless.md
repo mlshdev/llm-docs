@@ -1,4 +1,4 @@
-> Release-pinned source for Podman v6.0.2: [rootless.md](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/rootless.md)
+> Release-pinned source for Podman v6.1.0: [rootless.md](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/rootless.md)
 
 # Shortcomings of Rootless Podman
 

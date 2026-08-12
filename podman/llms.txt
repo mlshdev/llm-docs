@@ -1,8 +1,8 @@
-# Podman v6.0.2
+# Podman v6.1.0
 
-> Documentation generated from the latest stable release of [podman-container-tools/podman](https://github.com/podman-container-tools/podman) and pinned to immutable source commit `b28edb9ad70ce4317dc762ee9ce0a6d081d154e9`.
+> Documentation generated from the latest stable release of [podman-container-tools/podman](https://github.com/podman-container-tools/podman) and pinned to immutable source commit `cade97a52ebdf9dbf9e81de8009015776837a074`.
 
-- [Full documentation](llms-full.txt): Complete normalized corpus for Podman v6.0.2.
+- [Full documentation](llms-full.txt): Complete normalized corpus for Podman v6.1.0.
 - [Provenance manifest](manifest.json): Release, commit, document count, and generation notes.
 - Podman man-page templates are expanded by a non-executing implementation of the tagged repository's documented preprocessing rules.
 - Generated aliases, duplicate rootless/troubleshooting pages, translations, assets, and vendored code are omitted.
@@ -132,6 +132,7 @@
 - [podman-machine-os-upgrade](pages/docs/source/markdown/podman-machine-os-upgrade.1.md): Source `docs/source/markdown/podman-machine-os-upgrade.1.md`.
 - [podman-machine-os](pages/docs/source/markdown/podman-machine-os.1.md): Source `docs/source/markdown/podman-machine-os.1.md`.
 - [podman-machine-reset](pages/docs/source/markdown/podman-machine-reset.1.md): Source `docs/source/markdown/podman-machine-reset.1.md`.
+- [podman-machine-restart](pages/docs/source/markdown/podman-machine-restart.1.md): Source `docs/source/markdown/podman-machine-restart.1.md`.
 - [podman-machine-rm](pages/docs/source/markdown/podman-machine-rm.1.md): Source `docs/source/markdown/podman-machine-rm.1.md`.
 - [podman-machine-set](pages/docs/source/markdown/podman-machine-set.1.md): Source `docs/source/markdown/podman-machine-set.1.md.in`.
 - [podman-machine-ssh](pages/docs/source/markdown/podman-machine-ssh.1.md): Source `docs/source/markdown/podman-machine-ssh.1.md`.
@@ -184,10 +185,10 @@
 - [podman-pull](pages/docs/source/markdown/podman-pull.1.md): Source `docs/source/markdown/podman-pull.1.md.in`.
 - [podman-push](pages/docs/source/markdown/podman-push.1.md): Source `docs/source/markdown/podman-push.1.md.in`.
 - [podman-quadlet-basic-usage](pages/docs/source/markdown/podman-quadlet-basic-usage.7.md): Source `docs/source/markdown/podman-quadlet-basic-usage.7.md`.
-- [podman-quadlet-install](pages/docs/source/markdown/podman-quadlet-install.1.md): Source `docs/source/markdown/podman-quadlet-install.1.md`.
+- [podman-quadlet-install](pages/docs/source/markdown/podman-quadlet-install.1.md): Source `docs/source/markdown/podman-quadlet-install.1.md.in`.
 - [podman-quadlet-list](pages/docs/source/markdown/podman-quadlet-list.1.md): Source `docs/source/markdown/podman-quadlet-list.1.md.in`.
 - [podman-quadlet-print](pages/docs/source/markdown/podman-quadlet-print.1.md): Source `docs/source/markdown/podman-quadlet-print.1.md`.
-- [podman-quadlet-rm](pages/docs/source/markdown/podman-quadlet-rm.1.md): Source `docs/source/markdown/podman-quadlet-rm.1.md`.
+- [podman-quadlet-rm](pages/docs/source/markdown/podman-quadlet-rm.1.md): Source `docs/source/markdown/podman-quadlet-rm.1.md.in`.
 - [podman-quadlet](pages/docs/source/markdown/podman-quadlet.1.md): Source `docs/source/markdown/podman-quadlet.1.md`.
 - [podman-remote](pages/docs/source/markdown/podman-remote.1.md): Source `docs/source/markdown/podman-remote.1.md`.
 - [podman-rename](pages/docs/source/markdown/podman-rename.1.md): Source `docs/source/markdown/podman-rename.1.md`.
@@ -239,6 +240,7 @@
 - [podman-volume-mount](pages/docs/source/markdown/podman-volume-mount.1.md): Source `docs/source/markdown/podman-volume-mount.1.md`.
 - [podman-volume-prune](pages/docs/source/markdown/podman-volume-prune.1.md): Source `docs/source/markdown/podman-volume-prune.1.md`.
 - [podman-volume-reload](pages/docs/source/markdown/podman-volume-reload.1.md): Source `docs/source/markdown/podman-volume-reload.1.md`.
+- [podman-volume-rename](pages/docs/source/markdown/podman-volume-rename.1.md): Source `docs/source/markdown/podman-volume-rename.1.md`.
 - [podman-volume-rm](pages/docs/source/markdown/podman-volume-rm.1.md): Source `docs/source/markdown/podman-volume-rm.1.md`.
 - [podman-volume-unmount](pages/docs/source/markdown/podman-volume-unmount.1.md): Source `docs/source/markdown/podman-volume-unmount.1.md`.
 - [podman-volume](pages/docs/source/markdown/podman-volume.1.md): Source `docs/source/markdown/podman-volume.1.md`.

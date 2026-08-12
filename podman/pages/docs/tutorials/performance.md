@@ -1,4 +1,4 @@
-> Release-pinned source for Podman v6.0.2: [docs/tutorials/performance.md](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/tutorials/performance.md)
+> Release-pinned source for Podman v6.1.0: [docs/tutorials/performance.md](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/tutorials/performance.md)
 
 # Podman performance guide
 
@@ -161,7 +161,7 @@ You can avoid using *pasta* in the following ways:
     Using a service on demand, can free up compute resources.
   - Start the service explicitly (`systemctl --user enable foobar.service`). If the service is already
     running when the first client connects, there will be no delay due to container startup.
-    The [socket activation tutorial](https://github.com/podman-container-tools/podman/blob/b28edb9ad70ce4317dc762ee9ce0a6d081d154e9/docs/tutorials/socket_activation.md)
+    The [socket activation tutorial](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/tutorials/socket_activation.md)
     provides more information about socket activation support in Podman.
 
 - Set up the network manually as root. Create a bridge and virtual ethernet pair (VETH). Note: compared to other methods,
@@ -185,9 +185,9 @@ $ podman info -f '{{.Host.RootlessNetworkCmd}}'
 pasta
 ```
 
-### Lazy pulling of container images
+### Partial pulling of container images
 
-Podman supports lazy pulling for the following container image formats:
+Podman supports partial pulling for the following container image formats:
 
 - **zstd:chunked**
 
@@ -195,11 +195,13 @@ Podman supports lazy pulling for the following container image formats:
 
 **zstd:chunked** has better performance than **eStargz**.
 
+Partial pulling downloads only the layer contents that are missing locally, but the image is still fully pulled before its containers run. Lazy pulling, where the image is mounted before it is fully downloaded, is out of scope for Podman itself and requires an additional snapshotter such as the [stargz-snapshotter](https://github.com/containerd/stargz-snapshotter) configured as an additional layer store.
+
 See the article [*Pull container images faster with partial pulls*](https://www.redhat.com/sysadmin/faster-container-image-pulls) by Giuseppe Scrivano and Dan Walsh.
 
 ### Choosing a host file system
 
-Lazy pulling of container images can run more efficiently when the file system has reflink support. The file systems XFS and BTRFS have reflink support.
+Partial pulling of container images can run more efficiently when the file system has reflink support. The file systems XFS and BTRFS have reflink support.
 
 ### Option --log-driver
 
