@@ -1,8 +1,12 @@
-> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/dns/internal-dns-servers.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/manage/dns/internal-dns-servers.mdx)
+> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/manage/dns/internal-dns-servers.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/manage/dns/internal-dns-servers.mdx)
 
 # Internal DNS Servers
 
 When your network has on-premise DNS infrastructure — Active Directory, BIND, Unbound, or other internal DNS servers — you may need to configure NetBird to use them. This page covers when a nameserver configuration is needed and when it isn't.
+
+> **Note**
+>
+> If you don't run internal DNS servers and just want friendly names for private resources, NetBird can host the records itself. See [Custom Zones](https://docs.netbird.io/manage/dns/custom-zones) and the [DNS Aliases for Routed Networks](https://docs.netbird.io/manage/dns/dns-aliases-for-routed-networks) guide.
 
 ## When You Don't Need a Nameserver
 
@@ -44,16 +48,16 @@ To resolve internal domains through NetBird, create a **match domain** Nameserve
 1. Go to **DNS** → **Nameservers** → **Add Nameserver**
 2. Choose **Custom DNS**
 
-![Add nameserver](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/dns/netbird-nameserver-add-button.png)
+![Add nameserver](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/dns/netbird-nameserver-add-button.png)
 
 3. Add the IP addresses of your internal DNS servers (e.g., `192.168.0.32`)
 4. Select the **Distribution Groups** — the peer groups that should use this nameserver
 
-![Custom DNS provider](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/dns/netbird-nameserver-custom.png)
+![Custom DNS provider](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/dns/netbird-nameserver-custom.png)
 
 5. Under **Domains**, add a **Match Domain** and enter your internal domains (e.g., `corp.local`, `company.internal`)
 
-![Add match domain](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/dns/netbird-nameserver-add-domain.png)
+![Add match domain](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/dns/netbird-nameserver-add-domain.png)
 
 6. Save the nameserver
 
@@ -93,11 +97,17 @@ For details, see [Manage Network Access](https://docs.netbird.io/manage/access-c
 >
 > Each peer should have exactly **one** primary nameserver. If you don't configure a primary, peers use their original DNS settings for non-matched queries.
 
+A primary nameserver does more than catch unmatched queries. On macOS, a match-domain-only configuration registers a *scoped* resolver through system APIs and leaves the nameservers in `/etc/resolv.conf` untouched. Applications that use the system resolver follow the scoped entry, but tools that read `resolv.conf` directly (`dig`, `host`, and some language runtimes) keep querying your LAN or public nameservers and get `NXDOMAIN` for internal names. Adding a primary group puts NetBird's resolver into `resolv.conf`, so both kinds of tools query the same server. If your users report that browsers resolve internal names but `dig` does not, see [dig and host fail, but browsers and curl work](https://docs.netbird.io/manage/dns/troubleshooting#issue-5-dig-and-host-fail-but-browsers-and-curl-work-mac-os).
+
 ### Search Domains
 
 Toggle **Mark match domains as search domains** to enable domain suffix searching. When enabled, typing `server` expands to `server.company.internal`. Only applies to match domain nameservers.
 
-### Example: Split-Horizon DNS
+> **Note**
+>
+> **Don't convert a match-domain group to primary by emptying its domains.** Removing the match domains also removes the search domains, so short names like `server` stop expanding. Domain-joined Windows machines hide the regression because Active Directory supplies its own suffix, so it surfaces as "short names broke for some users." To add a primary, create a **second** nameserver group with the same servers and leave the existing match-domain group in place.
+
+### Split-Horizon DNS
 
 A common setup with two nameservers:
 
@@ -110,6 +120,28 @@ Result:
 - `google.com` → Cloudflare
 - `app.company.internal` → Internal DNS (10.0.0.1)
 - `server` → Expanded to `server.company.internal` → Internal DNS
+
+### Route All Queries to Internal DNS
+
+If you are migrating from a VPN that pushed your internal DNS servers for everything (a common OpenVPN setup), the equivalent is the same two groups as in the split-horizon example, but both pointing at your **internal servers**:
+
+> **Note**
+>
+> This setup requires internal DNS servers that resolve public domains too, by recursing or forwarding upstream. Active Directory DNS servers do this by default. If your servers are authoritative-only for the internal zone, making them primary cuts off public resolution; use the split-horizon setup above instead.
+
+**Primary (internal)**: Custom DNS with your internal DNS server IPs (e.g., 10.0.0.1, 10.0.0.2). Assign to your target group. Leave match domains empty.
+
+**Match domain (internal)**: Same servers. Add match domain `company.internal`. Enable search domains.
+
+![Two nameserver groups pointing at the same internal DNS servers: one primary with no match domains, one with match domain company.internal and search domains enabled](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/dns/nameservers-route-all-internal.png)
+
+Result:
+
+- All queries, public and internal, go to your internal DNS
+- `server` still expands to `server.company.internal`
+- Tools that read `/etc/resolv.conf` directly and tools that use the system resolver query the same server
+
+Two groups look redundant when they hold the same servers, but they do different jobs: the primary receives every query, while the match-domain group provides the search-domain expansion. A VPN "pushing DNS servers" maps to the **primary** group, not to a match-domain group.
 
 ### DNS Failover and Overlapping Domains
 

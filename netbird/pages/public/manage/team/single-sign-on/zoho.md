@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/team/single-sign-on/zoho.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/manage/team/single-sign-on/zoho.mdx)
+> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/manage/team/single-sign-on/zoho.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/manage/team/single-sign-on/zoho.mdx)
 
 # Zoho on NetBird Cloud
 
@@ -17,7 +17,7 @@ Log in to [Zoho Directory](https://directory.zoho.com/) and open the **Admin Pan
 
 Enter `NetBird` as the application name and an optional description.
 
-![zoho-create-custom-app](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/team/single-sign-on/zoho-idp/create-custom-app.png)
+![zoho-create-custom-app](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/team/single-sign-on/zoho-idp/create-custom-app.png)
 
 ## Step 2: Configure the OIDC Application
 
@@ -31,7 +31,7 @@ Under **Relying Party Details**, enter the NetBird endpoints:
 - **Sign-out URL**: `https://app.netbird.io`
 - **Redirect URL**: `https://login.netbird.io/login/callback`
 
-![zoho-configure-oidc-app](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/team/single-sign-on/zoho-idp/configure-oidc-app.png)
+![zoho-configure-oidc-app](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/team/single-sign-on/zoho-idp/configure-oidc-app.png)
 
 Click **Done**, then **Create**.
 
@@ -44,13 +44,13 @@ Open the newly created application and select the **Single Sign-on** tab. Copy a
 
 Under **Optional Endpoints**, copy the **Discovery Endpoint** as well. NetBird uses this single URL to automatically discover the Authorization, Token, and User Info endpoints for your Zoho data center.
 
-![zoho-client-credentials](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/team/single-sign-on/zoho-idp/client-credentials.png)
+![zoho-client-credentials](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/team/single-sign-on/zoho-idp/client-credentials.png)
 
 ## Step 4: Assign Users
 
 Assign access to the NetBird application so users can sign in to NetBird with Zoho. You can assign individual users with **Add User**, or assign entire groups with **Add Group**.
 
-![zoho-assign-users](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/team/single-sign-on/zoho-idp/assign-users.png)
+![zoho-assign-users](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/team/single-sign-on/zoho-idp/assign-users.png)
 
 ## Step 5: Share Configuration with NetBird
 

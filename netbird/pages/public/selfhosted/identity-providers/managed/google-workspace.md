@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/identity-providers/managed/google-workspace.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/selfhosted/identity-providers/managed/google-workspace.mdx)
+> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/selfhosted/identity-providers/managed/google-workspace.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/selfhosted/identity-providers/managed/google-workspace.mdx)
 
 # Google Workspace SSO with NetBird Self-Hosted
 
@@ -20,7 +20,7 @@ Add Google as an external IdP directly in the NetBird Management Dashboard. This
 3. Navigate to **APIs & Services** → **Credentials**
 4. Click **Create Credentials** → **OAuth client ID**
 
-![OAuth client ID](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/1_0auth-client-id-google.png)
+![OAuth client ID](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/1_0auth-client-id-google.png)
 
 5. If prompted, configure the OAuth consent screen first:
    - Choose **Internal** (for Workspace) or **External** (for any Google account)
@@ -51,7 +51,7 @@ Add Google as an external IdP directly in the NetBird Management Dashboard. This
 
 5. **Copy the Redirect URL** that NetBird displays (but don't click **Add Provider** yet)
 
-![Copy redirect URL](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/2_copy-redirect-google.png)
+![Copy redirect URL](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/2_copy-redirect-google.png)
 
 ### Step 3: Complete Google OAuth Client Setup
 
@@ -59,7 +59,7 @@ Add Google as an external IdP directly in the NetBird Management Dashboard. This
 2. Under **Authorized redirect URIs**, click **Add URI**
 3. Paste the redirect URL you copied from NetBird
 
-![Paste URI](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/3_paste-uri-google.png)
+![Paste URI](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/3_paste-uri-google.png)
 
 4. Click **Create**
 
@@ -69,14 +69,14 @@ Add Google as an external IdP directly in the NetBird Management Dashboard. This
 
 5. Note the **Client ID** and **Client Secret** — you'll need these for Step 4
 
-![OAuth client created](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/4_0auth-client-created-google.png)
+![OAuth client created](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/4_0auth-client-created-google.png)
 
 ### Step 4: Complete NetBird Setup
 
 1. Return to the NetBird tab
 2. Fill in the **Client ID** and **Client Secret** from Step 3
 
-![NetBird complete configuration](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/5_netbird-complete-google.png)
+![NetBird complete configuration](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/5_netbird-complete-google.png)
 
 3. Click **Add Provider**
 

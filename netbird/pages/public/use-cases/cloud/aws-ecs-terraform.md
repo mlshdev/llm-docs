@@ -1,10 +1,10 @@
-> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/use-cases/cloud/aws-ecs-terraform.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/use-cases/cloud/aws-ecs-terraform.mdx)
+> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/use-cases/cloud/aws-ecs-terraform.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/use-cases/cloud/aws-ecs-terraform.mdx)
 
 # Examples
 
 ## NetBird Client on AWS ECS (Terraform)
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/use-cases/examples/wiretrustee-on-aws-ecs.png)
+![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/use-cases/examples/wiretrustee-on-aws-ecs.png)
 
 A common way to run containers in the AWS cloud is to use Elastic Container Service (ECS).
 ECS is a fully managed container orchestration service that makes it easy to deploy, manage, and scale containerized applications.

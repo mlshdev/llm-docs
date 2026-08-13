@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/peers/browser-client/architecture.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/manage/peers/browser-client/architecture.mdx)
+> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/manage/peers/browser-client/architecture.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/manage/peers/browser-client/architecture.mdx)
 
 # Browser Client Technical Architecture
 
@@ -64,7 +64,7 @@ The WebAssembly NetBird Client will register as a temporary peer with the manage
 Once the connection is closed, the temporary peer will be automatically removed from the management server. This happens after 10 minutes of inactivity.
 For the WebAssembly NetBird Client all peers will be named as `{browser}-browser-client` (e.g. `safari-17-browser-client`).
 
-![temporary-peers-filter](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/browser-client/temporary-peers-filter.png)
+![temporary-peers-filter](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/peers/browser-client/temporary-peers-filter.png)
 
 #### Temporary Policy
 
@@ -72,7 +72,7 @@ To allow the registered WebAssembly NetBird Client to connect to the target peer
 The policy will be created P2P with no groups required. This way the client will only connect to one other peer. Once either of the peers (source or destination) is removed, the temporary policy will be automatically removed from the management server.
 The policies for the WebAssembly NetBird Client will be named as `Temporary access policy for peer {browser-client-name}` (e.g. `Temporary access policy for peer safari-17-browser-client`).
 
-![temporary-policies-filter](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/browser-client/temporary-policies-filter.png)
+![temporary-policies-filter](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/peers/browser-client/temporary-policies-filter.png)
 
 ## Connection Flow
 

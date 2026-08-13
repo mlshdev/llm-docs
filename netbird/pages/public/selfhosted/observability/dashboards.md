@@ -1,20 +1,25 @@
-> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/observability/dashboards.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/selfhosted/observability/dashboards.mdx)
+> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/selfhosted/observability/dashboards.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/selfhosted/observability/dashboards.mdx)
 
 # Grafana dashboards
 
-NetBird ships ready-to-use Grafana dashboards for the Management, Signal, and Relay services. They are maintained in the `netbirdio/netbird` repository under [`infrastructure_files/observability/grafana/dashboards`](https://github.com/netbirdio/netbird/tree/main/infrastructure_files/observability/grafana/dashboards) and import directly into Grafana.
+NetBird ships ready-to-use Grafana dashboards for the Management, Signal, and Relay services, plus an extended Management dashboard for [Enterprise Commercial License](https://docs.netbird.io/selfhosted/enterprise/getting-started) deployments. They are maintained in the `netbirdio/netbird` repository under [`infrastructure_files/observability/grafana/dashboards`](https://github.com/netbirdio/netbird/tree/main/infrastructure_files/observability/grafana/dashboards) and import directly into Grafana.
 
 ## Available dashboards
 
-| Service    | Dashboard JSON                                                                                                                            |
-| ---------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| Management | [`management.json`](https://github.com/netbirdio/netbird/blob/main/infrastructure_files/observability/grafana/dashboards/management.json) |
-| Signal     | [`signal.json`](https://github.com/netbirdio/netbird/blob/main/infrastructure_files/observability/grafana/dashboards/signal.json)         |
-| Relay      | [`relay.json`](https://github.com/netbirdio/netbird/blob/main/infrastructure_files/observability/grafana/dashboards/relay.json)           |
+| Service                 | Dashboard JSON                                                                                                                                                  |
+| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Management              | [`management.json`](https://github.com/netbirdio/netbird/blob/main/infrastructure_files/observability/grafana/dashboards/management.json)                       |
+| Management (Enterprise) | [`management-enterprise.json`](https://github.com/netbirdio/netbird/blob/main/infrastructure_files/observability/grafana/dashboards/management-enterprise.json) |
+| Signal                  | [`signal.json`](https://github.com/netbirdio/netbird/blob/main/infrastructure_files/observability/grafana/dashboards/signal.json)                               |
+| Relay                   | [`relay.json`](https://github.com/netbirdio/netbird/blob/main/infrastructure_files/observability/grafana/dashboards/relay.json)                                 |
 
 ### Management
 
 Covers peer-update fan-out, store latency, gRPC `Sync` / `Login` / `GetServerKey` rates and latencies, HTTP API request rates and latencies by endpoint and method, IdP request rates, network-map object counts, and update-channel queue length and operation durations.
+
+### Management (Enterprise)
+
+An extended Management dashboard for [Enterprise Commercial License](https://docs.netbird.io/selfhosted/enterprise/getting-started) deployments, adding NATS, per-account latency debugging, network map, and browser client panels. It has its own prerequisites and variables — see the [Enterprise Grafana Dashboard](https://docs.netbird.io/selfhosted/enterprise/grafana-dashboard) page.
 
 ### Signal
 
@@ -32,7 +37,7 @@ Covers connected peers (total / active / idle), peer authentication latency, pee
 
 ## Dashboard variables
 
-The dashboards expose these template variables:
+The Management, Signal, and Relay dashboards expose these template variables:
 
 | Variable      | Purpose                                                        |
 | ------------- | -------------------------------------------------------------- |
@@ -42,7 +47,7 @@ The dashboards expose these template variables:
 | `job`         | Selects a specific NetBird instance when multiple are running. |
 | `host`        | Filters metrics by host.                                       |
 
-Your deployment may use only a subset of these variables; unused ones can be left at the default `All`.
+Your deployment may use only a subset of these variables; unused ones can be left at the default `All`. The Enterprise dashboard uses a different variable set — see [its variables table](https://docs.netbird.io/selfhosted/enterprise/grafana-dashboard#dashboard-variables).
 
 > **Note**
 >

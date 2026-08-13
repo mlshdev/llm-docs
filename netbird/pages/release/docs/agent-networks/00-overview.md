@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.2: [docs/agent-networks/00-overview.md](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/00-overview.md)
+> Release-pinned source for NetBird v0.77.0: [docs/agent-networks/00-overview.md](https://github.com/netbirdio/netbird/blob/c5503fdc7f93ae6844a39caecf2970b43618c9b2/docs/agent-networks/00-overview.md)
 
 # Agent Networks — overview
 
@@ -25,11 +25,11 @@ Observability** page with four tabs.
 
 | # | Doc                                                                                                                                                                                         | Why                                                                    |
 | - | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
-| 1 | [01-end-to-end-flows.md](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/01-end-to-end-flows.md)                                     | Get the three big diagrams in your head first.                         |
-| 2 | [modules/10-shared-api.md](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/modules/10-shared-api.md)                                 | Wire contracts — every other module either produces or consumes these. |
-| 3 | [modules/21-management-agentnetwork.md](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/modules/21-management-agentnetwork.md)       | The largest module; everything the proxy executes originates here.     |
-| 4 | [modules/30-proxy-middleware-framework.md](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/modules/30-proxy-middleware-framework.md) | The generic plugin system on the proxy side.                           |
-| 5 | [modules/31-proxy-middleware-builtin.md](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/modules/31-proxy-middleware-builtin.md)     | The 8 LLM middlewares that ride on the framework.                      |
+| 1 | [01-end-to-end-flows.md](https://github.com/netbirdio/netbird/blob/c5503fdc7f93ae6844a39caecf2970b43618c9b2/docs/agent-networks/01-end-to-end-flows.md)                                     | Get the three big diagrams in your head first.                         |
+| 2 | [modules/10-shared-api.md](https://github.com/netbirdio/netbird/blob/c5503fdc7f93ae6844a39caecf2970b43618c9b2/docs/agent-networks/modules/10-shared-api.md)                                 | Wire contracts — every other module either produces or consumes these. |
+| 3 | [modules/21-management-agentnetwork.md](https://github.com/netbirdio/netbird/blob/c5503fdc7f93ae6844a39caecf2970b43618c9b2/docs/agent-networks/modules/21-management-agentnetwork.md)       | The largest module; everything the proxy executes originates here.     |
+| 4 | [modules/30-proxy-middleware-framework.md](https://github.com/netbirdio/netbird/blob/c5503fdc7f93ae6844a39caecf2970b43618c9b2/docs/agent-networks/modules/30-proxy-middleware-framework.md) | The generic plugin system on the proxy side.                           |
+| 5 | [modules/31-proxy-middleware-builtin.md](https://github.com/netbirdio/netbird/blob/c5503fdc7f93ae6844a39caecf2970b43618c9b2/docs/agent-networks/modules/31-proxy-middleware-builtin.md)     | The 8 LLM middlewares that ride on the framework.                      |
 | 6 | Everything else in any order.                                                                                                                                                               |                                                                        |
 
 ## Module map
@@ -39,16 +39,16 @@ Observability** page with four tabs.
 
 | #  | Module                                                                                                                                                                                                     | Risk     | BC impact                      |
 | -- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- | ------------------------------ |
-| 10 | [shared/api](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/modules/10-shared-api.md) — proto + OpenAPI                                            | Low      | Additive only                  |
-| 20 | [management/store](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/modules/20-management-store.md) — SQL persistence                                | Medium   | Auto-migrate (additive)        |
-| 21 | [management/agentnetwork](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/modules/21-management-agentnetwork.md) — domain layer + synthesizer       | **High** | Additive                       |
-| 22 | [management/handlers + wiring](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/modules/22-management-handlers-wiring.md) — HTTP API + gRPC delivery | Medium   | Additive                       |
-| 30 | [proxy/middleware-framework](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/modules/30-proxy-middleware-framework.md) — generic plugin system      | High     | Additive                       |
-| 31 | [proxy/middleware-builtin](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/modules/31-proxy-middleware-builtin.md) — 8 LLM middlewares              | High     | Additive                       |
-| 32 | [proxy/llm-parsers](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/modules/32-proxy-llm-parsers.md) — SDK adapters + pricing                       | Medium   | Additive                       |
-| 33 | [proxy/runtime](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/modules/33-proxy-runtime.md) — translate + serve + access-log                       | High     | Additive (touches hot path)    |
-| 40 | [dashboard](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/modules/40-dashboard.md) — UI for everything above                                      | Medium   | Sidebar reshape                |
-| 50 | [path-routed-providers](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/modules/50-path-routed-providers.md) — Vertex AI + Bedrock                  | Medium   | Additive (new catalog entries) |
+| 10 | [shared/api](https://github.com/netbirdio/netbird/blob/c5503fdc7f93ae6844a39caecf2970b43618c9b2/docs/agent-networks/modules/10-shared-api.md) — proto + OpenAPI                                            | Low      | Additive only                  |
+| 20 | [management/store](https://github.com/netbirdio/netbird/blob/c5503fdc7f93ae6844a39caecf2970b43618c9b2/docs/agent-networks/modules/20-management-store.md) — SQL persistence                                | Medium   | Auto-migrate (additive)        |
+| 21 | [management/agentnetwork](https://github.com/netbirdio/netbird/blob/c5503fdc7f93ae6844a39caecf2970b43618c9b2/docs/agent-networks/modules/21-management-agentnetwork.md) — domain layer + synthesizer       | **High** | Additive                       |
+| 22 | [management/handlers + wiring](https://github.com/netbirdio/netbird/blob/c5503fdc7f93ae6844a39caecf2970b43618c9b2/docs/agent-networks/modules/22-management-handlers-wiring.md) — HTTP API + gRPC delivery | Medium   | Additive                       |
+| 30 | [proxy/middleware-framework](https://github.com/netbirdio/netbird/blob/c5503fdc7f93ae6844a39caecf2970b43618c9b2/docs/agent-networks/modules/30-proxy-middleware-framework.md) — generic plugin system      | High     | Additive                       |
+| 31 | [proxy/middleware-builtin](https://github.com/netbirdio/netbird/blob/c5503fdc7f93ae6844a39caecf2970b43618c9b2/docs/agent-networks/modules/31-proxy-middleware-builtin.md) — 8 LLM middlewares              | High     | Additive                       |
+| 32 | [proxy/llm-parsers](https://github.com/netbirdio/netbird/blob/c5503fdc7f93ae6844a39caecf2970b43618c9b2/docs/agent-networks/modules/32-proxy-llm-parsers.md) — SDK adapters + pricing                       | Medium   | Additive                       |
+| 33 | [proxy/runtime](https://github.com/netbirdio/netbird/blob/c5503fdc7f93ae6844a39caecf2970b43618c9b2/docs/agent-networks/modules/33-proxy-runtime.md) — translate + serve + access-log                       | High     | Additive (touches hot path)    |
+| 40 | [dashboard](https://github.com/netbirdio/netbird/blob/c5503fdc7f93ae6844a39caecf2970b43618c9b2/docs/agent-networks/modules/40-dashboard.md) — UI for everything above                                      | Medium   | Sidebar reshape                |
+| 50 | [path-routed-providers](https://github.com/netbirdio/netbird/blob/c5503fdc7f93ae6844a39caecf2970b43618c9b2/docs/agent-networks/modules/50-path-routed-providers.md) — Vertex AI + Bedrock                  | Medium   | Additive (new catalog entries) |
 
 The largest and highest-risk module is `management/agentnetwork`: it is
 the single writer of the middleware chain the proxy executes.
@@ -61,39 +61,39 @@ documented in the linked module guide.
 1. **Capture-pointer semantics** (`*bool` for `capture_prompt` and
    `capture_completion`): nil = legacy emit, false = suppress, true =
    emit. nil-vs-false must be handled at every JSON hop. See
-   [21-management-agentnetwork.md](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/modules/21-management-agentnetwork.md)
-   and [31-proxy-middleware-builtin.md](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/modules/31-proxy-middleware-builtin.md).
+   [21-management-agentnetwork.md](https://github.com/netbirdio/netbird/blob/c5503fdc7f93ae6844a39caecf2970b43618c9b2/docs/agent-networks/modules/21-management-agentnetwork.md)
+   and [31-proxy-middleware-builtin.md](https://github.com/netbirdio/netbird/blob/c5503fdc7f93ae6844a39caecf2970b43618c9b2/docs/agent-networks/modules/31-proxy-middleware-builtin.md).
 2. **`ProxyMapping.Private` preservation** on per-proxy live updates.
    Failure mode: `auth` skips `ValidateTunnelPeer` →
    `CapturedData.UserGroups` empty → `llm_router` denies. See
-   [33-proxy-runtime.md](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/modules/33-proxy-runtime.md).
+   [33-proxy-runtime.md](https://github.com/netbirdio/netbird/blob/c5503fdc7f93ae6844a39caecf2970b43618c9b2/docs/agent-networks/modules/33-proxy-runtime.md).
 3. **respInput carrying `UserEmail`/`UserGroups`/`UserGroupNames` onto
    the response leg** in `reverseproxy.go`. Load-bearing wire that lets
    `llm_limit_record` ship non-empty `group_ids` on `RecordLLMUsage`. See
-   [33-proxy-runtime.md](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/modules/33-proxy-runtime.md).
+   [33-proxy-runtime.md](https://github.com/netbirdio/netbird/blob/c5503fdc7f93ae6844a39caecf2970b43618c9b2/docs/agent-networks/modules/33-proxy-runtime.md).
 4. **Min-wins all-must-pass budget rule semantics**. Every matching
    rule's remaining quota must be > 0 for the request to proceed; one
    exhausted rule blocks the whole call. Documented in
-   [21-management-agentnetwork.md](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/modules/21-management-agentnetwork.md)
+   [21-management-agentnetwork.md](https://github.com/netbirdio/netbird/blob/c5503fdc7f93ae6844a39caecf2970b43618c9b2/docs/agent-networks/modules/21-management-agentnetwork.md)
    and the `llm_limit_check` middleware in
-   [31-proxy-middleware-builtin.md](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/modules/31-proxy-middleware-builtin.md).
+   [31-proxy-middleware-builtin.md](https://github.com/netbirdio/netbird/blob/c5503fdc7f93ae6844a39caecf2970b43618c9b2/docs/agent-networks/modules/31-proxy-middleware-builtin.md).
 5. **body-tap memory bounds**: per-direction 1 MiB cap, shared 256 MiB
    budget, `LimitReader(r.Body, limit+1)` for truncation detection with
    `replayReadCloser` fallback so upstream still sees the full body.
    `cloneInputFor` deep-copies the body up to 16 times per chain — a
    perf hot-spot. See
-   [30-proxy-middleware-framework.md](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/modules/30-proxy-middleware-framework.md).
+   [30-proxy-middleware-framework.md](https://github.com/netbirdio/netbird/blob/c5503fdc7f93ae6844a39caecf2970b43618c9b2/docs/agent-networks/modules/30-proxy-middleware-framework.md).
 6. **UpstreamRewrite.AuthHeader bypasses the header denylist**
    deliberately. The runtime consumer only unpacks it via the
    trusted upstream-build path. See
-   [30-proxy-middleware-framework.md](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/modules/30-proxy-middleware-framework.md).
+   [30-proxy-middleware-framework.md](https://github.com/netbirdio/netbird/blob/c5503fdc7f93ae6844a39caecf2970b43618c9b2/docs/agent-networks/modules/30-proxy-middleware-framework.md).
 7. **`disable_access_log` default-false semantics**: the synth target
    sets it true, all other targets leave it false. See
-   [10-shared-api.md](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/modules/10-shared-api.md).
+   [10-shared-api.md](https://github.com/netbirdio/netbird/blob/c5503fdc7f93ae6844a39caecf2970b43618c9b2/docs/agent-networks/modules/10-shared-api.md).
 8. **String-typed `decision` / `deny_code`** on
    `CheckLLMPolicyLimitsResponse` — would benefit from enum pinning
    before external consumers integrate. See
-   [10-shared-api.md](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/modules/10-shared-api.md).
+   [10-shared-api.md](https://github.com/netbirdio/netbird/blob/c5503fdc7f93ae6844a39caecf2970b43618c9b2/docs/agent-networks/modules/10-shared-api.md).
 
 ## Explicit non-goals
 

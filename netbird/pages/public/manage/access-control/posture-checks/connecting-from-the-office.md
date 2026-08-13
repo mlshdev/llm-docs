@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/access-control/posture-checks/connecting-from-the-office.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/manage/access-control/posture-checks/connecting-from-the-office.mdx)
+> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/manage/access-control/posture-checks/connecting-from-the-office.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/manage/access-control/posture-checks/connecting-from-the-office.mdx)
 
 # Connecting from the office
 
@@ -17,7 +17,7 @@ To create a Posture Check, navigate to the `Access Control -> Posture Checks` se
 
 Select `Peer Network Range`.
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/access-control/posture-checks/connecting-from-the-office/posture-check-new-block-network-range.png)
+![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/posture-checks/connecting-from-the-office/posture-check-new-block-network-range.png)
 
 Select the `Block` action and click on `Add Network Range` to input your office subbnet `192.168.1.0/24`.
 
@@ -25,7 +25,7 @@ Select the `Block` action and click on `Add Network Range` to input your office 
 >
 > Note that if you have multiple locations that you want to see excluded, you can add multiple network ranges.
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/access-control/posture-checks/connecting-from-the-office/posture-check-block-network-range.png)
+![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/posture-checks/connecting-from-the-office/posture-check-block-network-range.png)
 
 Click `Save`, then click `Continue` and fill out `Name of the Posture Check` with "Exclude Office subnet”.
 
@@ -45,13 +45,13 @@ Choose `UDP` for the protocol and type `1`on Ports. Click `Continue`.
 >
 > Note that the protocol and port are arbitrary and can be changed according to your needs. An usual choice is to allow ICMP traffic for troubleshooting purposes.
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/access-control/posture-checks/connecting-from-the-office/policy-office-subnet-with-posturecheck.png)
+![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/posture-checks/connecting-from-the-office/policy-office-subnet-with-posturecheck.png)
 
 In this step, we'll click `Browse Checks` and select the posture check we created earlier, `Exclude Office subnet`.
 
 Click `Add Posture Checks` and then click `Continue`.
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/access-control/posture-checks/connecting-from-the-office/policy-with-network-posturecheck-added.png)
+![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/posture-checks/connecting-from-the-office/policy-with-network-posturecheck-added.png)
 
 Give your policy the name "Allow users to route-nodes" and click on `Add Policy`.
 
@@ -66,11 +66,11 @@ which is a member of the group `route-nodes`, this way, the policy we just creat
 
 To get started navigate to the `Network Routing` → `Routes` menu on the NetBird dashboard and click on **Add Route**. Fill out the fields as shown in the image below, and click `Continue`:
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/access-control/posture-checks/connecting-from-the-office/create-route-with-posturecheck.png)
+![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/posture-checks/connecting-from-the-office/create-route-with-posturecheck.png)
 
 Next assign `route-users` do `Distribution Groups`.
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/access-control/posture-checks/connecting-from-the-office/distribute-to-groups-posturechecks.png)
+![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/posture-checks/connecting-from-the-office/distribute-to-groups-posturechecks.png)
 
 Click `Continue` and assign the name "Office network access" to `Network Identifier`, click `Continue` again and in the final step, finish this process by clicking `Add Route`.
 
@@ -82,19 +82,19 @@ Now that we have created the Posture Check, the Policy, and the Network Route, w
 
 Our local connection shows that we are connected to local office WiFi and and we are part of that subnet.
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/access-control/posture-checks/connecting-from-the-office/wifi-inside-office-subnet.png)
+![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/posture-checks/connecting-from-the-office/wifi-inside-office-subnet.png)
 
 When we are connected from inside the office, we can observe that the NetBird route is not available and that the subnet `192.168.1` is using local network interface `en0` to route traffic.
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/access-control/posture-checks/connecting-from-the-office/netbird-routes-list-local.png)
+![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/posture-checks/connecting-from-the-office/netbird-routes-list-local.png)
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/access-control/posture-checks/connecting-from-the-office/netstat-routes-grep-local.png)
+![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/posture-checks/connecting-from-the-office/netstat-routes-grep-local.png)
 
 #### When connected outside the office, we can observe:
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/access-control/posture-checks/connecting-from-the-office/netbird-routes-list-external.png)
+![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/posture-checks/connecting-from-the-office/netbird-routes-list-external.png)
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/access-control/posture-checks/connecting-from-the-office/netstat-routes-grep-external.png)
+![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/posture-checks/connecting-from-the-office/netstat-routes-grep-external.png)
 
 Notice that subnet `192.168.1.0/24` is routed through our Wireguard interface (`utun100`).
 

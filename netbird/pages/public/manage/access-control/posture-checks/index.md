@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/access-control/posture-checks/index.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/manage/access-control/posture-checks/index.mdx)
+> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/manage/access-control/posture-checks/index.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/manage/access-control/posture-checks/index.mdx)
 
 # Understanding NetBird Posture Checks
 
@@ -20,11 +20,11 @@ Or follow the guide with other examples below:
 
 Log in to your NetBird dashboard and navigate to `Access Control` > `Posture Checks` in the left menu. Click `Create Posture Check` or edit an existing one.
 
-![NetBird Posture Checks](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/access-control/posture-checks/posture-checks-01.png)
+![NetBird Posture Checks](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/posture-checks/posture-checks-01.png)
 
 A pop-up window will open with two tabs: `Checks` and `Name & Description`.
 
-![Create Posture Check](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/access-control/posture-checks/posture-checks-02.png)
+![Create Posture Check](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/posture-checks/posture-checks-02.png)
 
 From here, you can manage access with posture checks based on several aspects:
 
@@ -32,13 +32,13 @@ From here, you can manage access with posture checks based on several aspects:
 
 Restrict access to peers with specific NetBird client versions, thus ensuring that all devices connecting to the network use up-to-date, secure client software.
 
-![NetBird Client Version Posture Check](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/access-control/posture-checks/posture-checks-03.png)
+![NetBird Client Version Posture Check](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/posture-checks/posture-checks-03.png)
 
 ### Country and Region
 
 Limit network access based on geographical location, helping comply with data regulations or restrict access from high-risk areas. Note that you have two tabs available for this: `Allow` (green) and `Block` (red), making it easy to set up your preferred access rules..
 
-![Country and Region Posture Check](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/access-control/posture-checks/posture-checks-04.png)
+![Country and Region Posture Check](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/posture-checks/posture-checks-04.png)
 
 > **Note**
 >
@@ -48,7 +48,7 @@ Limit network access based on geographical location, helping comply with data re
 
 This posture check lets you precisely control network access by specifying which IP ranges can connect to your network. You can create policies allowing only connections from approved locations, such as office networks or trusted remote work setups. Additionally, you can enhance security by blocking high-risk IP ranges working in tandem with geo-based posture checks. This granular control helps create a more secure network environment by limiting access to known, trusted sources while preventing connections from potentially risky or unauthorized IP addresses.
 
-![Peer Network Range Posture Check](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/access-control/posture-checks/posture-checks-05.png)
+![Peer Network Range Posture Check](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/posture-checks/posture-checks-05.png)
 
 The check evaluates a peer against two sources of address information:
 
@@ -71,7 +71,7 @@ A configured range matches when it contains any of these addresses, so the same 
 
 Restrict access based on the connecting device's OS, ensuring only approved and potentially more secure operating systems can connect.
 
-![Operating System Posture Check](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/access-control/posture-checks/posture-checks-06.png)
+![Operating System Posture Check](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/posture-checks/posture-checks-06.png)
 
 > **Note**
 >
@@ -96,17 +96,17 @@ Below are some examples of OS versions for each operating system:
 
 Furthermore, this process-based posture check allows you to create specific policies for different user groups or network segments based on their unique security needs. Working in conjunction with other posture checks in NetBird, this setting offers a comprehensive and user-friendly approach to network security.
 
-![Process Posture Check](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/access-control/posture-checks/posture-checks-07.png)
+![Process Posture Check](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/posture-checks/posture-checks-07.png)
 
 ## Name & Description
 
 After enabling the desired posture check, go to the `Name & Description` tab. Here, enter a descriptive name for your newly created posture check and save it.
 
-![Name your Posture Check](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/access-control/posture-checks/posture-checks-08.png)
+![Name your Posture Check](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/posture-checks/posture-checks-08.png)
 
 You'll notice a gray dot to the left of the posture check name, indicating it's inactive. To activate the posture check, you need to link it to an access control policy.
 
-![New Posture Check](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/access-control/posture-checks/posture-checks-09.png)
+![New Posture Check](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/posture-checks/posture-checks-09.png)
 
 ## Applying Posture Checks to Access Control Policies
 
@@ -118,15 +118,15 @@ To apply a posture check:
 
 Note that you can add multiple posture checks to a single policy as needed for comprehensive security.
 
-![Add Posture Check to Access Control Policy](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/access-control/posture-checks/posture-checks-10.png)
+![Add Posture Check to Access Control Policy](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/posture-checks/posture-checks-10.png)
 
 After adding the posture check, it will appear in the `POSTURE CHECKS` column. For easy management, you can click on it to edit the access control policy, allowing you to add or remove posture checks as needed.
 
-![Access Control Policies Dashboard](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/access-control/posture-checks/posture-checks-11.png)
+![Access Control Policies Dashboard](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/posture-checks/posture-checks-11.png)
 
 If you revisit the `Posture Checks` dashboard, you'll notice a green dot next to your recently configured posture check. This color shift indicates that the posture check is now active and integrated into your network security framework, actively contributing to your system's protection.
 
-![Posture Checks Dashboard](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/access-control/posture-checks/posture-checks-12.png)
+![Posture Checks Dashboard](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/posture-checks/posture-checks-12.png)
 
 Following these steps, you can effectively implement and manage NetBird's Posture Checks, significantly enhancing your network's security posture.
 

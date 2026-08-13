@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/identity-providers/local.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/selfhosted/identity-providers/local.mdx)
+> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/selfhosted/identity-providers/local.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/selfhosted/identity-providers/local.mdx)
 
 # Local User Management
 
@@ -114,7 +114,7 @@ openssl rand -base64 32
 
 You can invite users via a secure invite link, allowing them to set their own password.
 
-![Invite User](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/local/invite-user.png)
+![Invite User](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/local/invite-user.png)
 
 1. Navigate to **Team** → **Users**
 2. Click **Add User**
@@ -133,7 +133,7 @@ After creation, a modal displays:
 - The **expiration date** of the invite
 - **Copy & Close** button to copy the link
 
-![Invite Link](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/local/invite-link.png)
+![Invite Link](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/local/invite-link.png)
 
 The invited user can then:
 
@@ -141,7 +141,7 @@ The invited user can then:
 2. Set their own password
 3. Log in to NetBird with their new credentials
 
-![Accept User Invite](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/local/accept-invite.png)
+![Accept User Invite](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/local/accept-invite.png)
 
 #### Managing Pending Invites
 
@@ -223,7 +223,7 @@ https://netbird.example.com/invite?token=abc123-token-xyz
 
 The Change Password feature allows local users on self-hosted NetBird deployments to update their account password directly from the dashboard.
 
-![Change Password](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/local/change-password-modal.png)
+![Change Password](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/local/change-password-modal.png)
 
 This feature is available when:
 
@@ -245,7 +245,7 @@ How to Use:
 5. Confirm your new password
 6. Click "Change Password" or press Enter
 
-![Change Password](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/local/change-password-menu.png)
+![Change Password](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/local/change-password-menu.png)
 
 Password Requirements
 

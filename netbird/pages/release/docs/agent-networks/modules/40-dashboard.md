@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.2: [docs/agent-networks/modules/40-dashboard.md](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/modules/40-dashboard.md)
+> Release-pinned source for NetBird v0.77.0: [docs/agent-networks/modules/40-dashboard.md](https://github.com/netbirdio/netbird/blob/c5503fdc7f93ae6844a39caecf2970b43618c9b2/docs/agent-networks/modules/40-dashboard.md)
 
 # dashboard — UI for agent-networks
 
@@ -223,8 +223,8 @@ Every list view reaches management through SWR over `/api/agent-network/*`. The 
 
 ## Cross-references
 
-- Upstream API contracts: [shared/api](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/modules/10-shared-api.md)
-- Backend persistence: [management/store](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/modules/20-management-store.md)
-- Backend handler wiring: [management/handlers + wiring](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/modules/22-management-handlers-wiring.md)
-- End-to-end flow narrative: [../01-end-to-end-flows.md](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/01-end-to-end-flows.md)
-- Top-level overview: [../00-overview.md](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/00-overview.md)
+- Upstream API contracts: [shared/api](https://github.com/netbirdio/netbird/blob/c5503fdc7f93ae6844a39caecf2970b43618c9b2/docs/agent-networks/modules/10-shared-api.md)
+- Backend persistence: [management/store](https://github.com/netbirdio/netbird/blob/c5503fdc7f93ae6844a39caecf2970b43618c9b2/docs/agent-networks/modules/20-management-store.md)
+- Backend handler wiring: [management/handlers + wiring](https://github.com/netbirdio/netbird/blob/c5503fdc7f93ae6844a39caecf2970b43618c9b2/docs/agent-networks/modules/22-management-handlers-wiring.md)
+- End-to-end flow narrative: [../01-end-to-end-flows.md](https://github.com/netbirdio/netbird/blob/c5503fdc7f93ae6844a39caecf2970b43618c9b2/docs/agent-networks/01-end-to-end-flows.md)
+- Top-level overview: [../00-overview.md](https://github.com/netbirdio/netbird/blob/c5503fdc7f93ae6844a39caecf2970b43618c9b2/docs/agent-networks/00-overview.md)

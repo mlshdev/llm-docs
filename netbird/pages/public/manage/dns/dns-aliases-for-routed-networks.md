@@ -1,11 +1,15 @@
-> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/dns/dns-aliases-for-routed-networks.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/manage/dns/dns-aliases-for-routed-networks.mdx)
+> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/manage/dns/dns-aliases-for-routed-networks.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/manage/dns/dns-aliases-for-routed-networks.mdx)
 
 # DNS Aliases for Routed Networks
 
-This guide explains how to use Custom DNS Zones with NetBird's Networks to provide easy-to-remember DNS names for resources in private
+This guide explains how to use [Custom DNS Zones](https://docs.netbird.io/manage/dns/custom-zones) with NetBird's Networks to provide easy-to-remember DNS names for resources in private
 networks.
 
 Custom DNS Zones work seamlessly with NetBird's [Networks](https://docs.netbird.io/manage/networks) feature to provide friendly DNS names for resources behind routing peers. This eliminates the need to remember IP addresses when accessing private network resources, creating a professional enterprise-like experience.
+
+> **Note**
+>
+> In this setup, NetBird hosts the DNS records itself. If you already run internal DNS servers (Active Directory, BIND, Unbound), point NetBird at them instead: see [Internal DNS Servers](https://docs.netbird.io/manage/dns/internal-dns-servers).
 
 ## How It Works
 
@@ -66,11 +70,13 @@ First, create a Custom DNS Zone to manage the DNS records for your private servi
 2. Click **Add Zone**.
 3. Configure the zone:
    - **Domain**: `netbird.internal`.
-   - **Distribution Groups**: Select the groups that should have access to this DNS zone (e.g., `dev`, `internal-services`).
-   - **Enable Search Domain**: Keep this enabled to allow using short names (e.g., `postgres` instead of `postgres.netbird.internal`).
+   - **Distribution Groups**: Select the groups that should have access to this DNS zone (e.g., `dev`, `internal-services`). Include the **routing peer's group** as well: with [Routing Peer DNS Resolution](https://docs.netbird.io/manage/networks/how-routing-peers-work#routing-peer-dns-resolution) enabled (the default), clients forward queries for routed domains to the routing peer, which can only answer from zones it receives.
+   - **Enable Search Domain**: Turn this on (it is off by default) to allow using short names (e.g., `postgres` instead of `postgres.netbird.internal`).
 4. Click **Add Zone**.
 
-![Delete DNS Zone](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/dns/dns-aliases/zone-config.png)
+For the full reference on zone settings, record types, and limitations, see [Custom Zones](https://docs.netbird.io/manage/dns/custom-zones).
+
+![Custom DNS Zone configuration](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/dns/dns-aliases/zone-config.png)
 
 ### Step 2: Add DNS Records
 
@@ -91,7 +97,7 @@ Next, add DNS records for each of your services.
    - **Type**: `A`
    - **Value**: `192.168.0.78`
 
-![DNS Records Created](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/dns/dns-aliases/records-created.png)
+![DNS Records Created](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/dns/dns-aliases/records-created.png)
 
 ### Step 3: Configure Network Routing
 
@@ -106,11 +112,11 @@ To enable access to your private resources, you need to set up a network with ro
    - **Description**: `Provides access to internal service resources`
 4. Click **Add Network**.
 
-![Create Network](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/dns/dns-aliases/create-network.png)
+![Create Network](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/dns/dns-aliases/create-network.png)
 
 #### Add Network Resources
 
-Add a wildcard resource that will match all services in your DNS zone.
+Add a domain resource for each service in your DNS zone.
 
 1. Click **Add Resource** and configure:
    - **Name**: `Internal Wiki`
@@ -118,7 +124,7 @@ Add a wildcard resource that will match all services in your DNS zone.
    - **Groups**: Assign to a resource group (e.g., `internal-services`)
 2. Click **Add Resource**.
 
-![Add Network Resource](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/dns/dns-aliases/add-resource.png)
+![Add Network Resource](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/dns/dns-aliases/add-resource.png)
 
 > **Note**
 >
@@ -136,7 +142,7 @@ Create a policy to allow your developers to access these resources.
    - **Ports**: `All`
 2. Click **Continue** twice, then click **Add Policy**.
 
-![Create Access Control Policy](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/dns/dns-aliases/create-policy.png)
+![Create Access Control Policy](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/dns/dns-aliases/create-policy.png)
 
 #### Add a Routing Peer
 
@@ -145,13 +151,13 @@ Next, add a routing peer that has access to your private network.
 1. Click **Add Routing Peer** and select the peer that is running in your data center or VPC.
 2. Click **Continue** and then **Add Routing Peer** to confirm.
 
-![Add Routing Peer](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/dns/dns-aliases/add-routing-peer.png)
+![Add Routing Peer](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/dns/dns-aliases/add-routing-peer.png)
 
 After completing the wizard, your network routing is configured, and the DNS names you created will now work seamlessly with the routes.
 
 You can view your fully configured network in the Networks dashboard:
 
-![Fully Configured Network](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/dns/dns-aliases/network-overview.png)
+![Fully Configured Network](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/dns/dns-aliases/network-overview.png)
 
 ### Step 4: Verify the Setup
 

@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/settings/ipv6.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/manage/settings/ipv6.mdx)
+> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/manage/settings/ipv6.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/manage/settings/ipv6.mdx)
 
 # IPv6 Overlay Addressing
 
@@ -14,7 +14,7 @@ New accounts have IPv6 enabled by default for the **All** group, so every peer r
 
 Navigate to **Settings > Network** and select which groups should have IPv6 enabled. Only peers that belong to at least one selected group will receive an IPv6 address.
 
-![IPv6 network settings in the dashboard](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/settings/ipv6/ipv6-network-settings.png)
+![IPv6 network settings in the dashboard](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/settings/ipv6/ipv6-network-settings.png)
 
 When a peer belongs to an IPv6-enabled group, it receives an overlay address from the account's IPv6 range. Peers that do not belong to any IPv6-enabled group only receive an IPv4 address.
 
@@ -38,7 +38,7 @@ The flag is also available in the desktop UI under **Settings > Disable IPv6**, 
 
 Each peer receives at most one IPv4 and one IPv6 overlay address. Management assigns the IPv6 address when the peer first connects with a client that supports IPv6 and belongs to an IPv6-enabled group.
 
-![Peer detail page showing both IPv4 and IPv6 overlay addresses](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/settings/ipv6/ipv6-peer-page.png)
+![Peer detail page showing both IPv4 and IPv6 overlay addresses](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/settings/ipv6/ipv6-peer-page.png)
 
 ### DNS
 
@@ -81,7 +81,7 @@ $ netbird status --ipv6
 fd00:1234:5678::1f/64
 ```
 
-![NetBird client status showing IPv6 address and exit-node usage](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/settings/ipv6/ipv6-status-client-exit-node.png)
+![NetBird client status showing IPv6 address and exit-node usage](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/settings/ipv6/ipv6-status-client-exit-node.png)
 
 ## API
 

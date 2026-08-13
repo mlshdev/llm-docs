@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/dns/troubleshooting.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/manage/dns/troubleshooting.mdx)
+> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/manage/dns/troubleshooting.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/manage/dns/troubleshooting.mdx)
 
 # DNS Troubleshooting
 
@@ -40,18 +40,32 @@ dig @10.0.0.53 app.internal.company.com
 # Replace 10.0.0.53 with your actual nameserver IP
 
 # 6. Can you resolve match domains through the system resolver?
+# Use the tools below, not dig/host/nslookup: those test a DIFFERENT path
+# (see Issue 5) and can report NXDOMAIN while the system resolver works.
 # Linux:
 resolvectl query app.internal.company.com
 # macOS:
 dscacheutil -q host -a name app.internal.company.com
-# Windows/Cross-platform:
-nslookup app.internal.company.com
+# Windows:
+Resolve-DnsName app.internal.company.com
 
 # 7. Confirm public domains still resolve (verifies split DNS is working)
 nslookup google.com
 ```
 
 If any of these fail, continue to the relevant section below.
+
+### First: Confirm the Peer Is in Managed Mode
+
+Before anything else, confirm NetBird is managing DNS on this peer at all. If any group the peer belongs to is listed under **DNS** > **DNS Settings** (Disable DNS Management), the peer runs in [unmanaged mode](https://docs.netbird.io/manage/dns/dns-settings#unmanaged-mode): NetBird never wires its resolver into the operating system, so nameservers and [Custom Zone](https://docs.netbird.io/manage/dns/custom-zones) records are silently ignored, even when their distribution groups include the peer. This is easy to miss: nothing on the Nameservers or Zones screens indicates that a peer is unmanaged, and the result is exactly the symptoms this page covers.
+
+1. In the dashboard, open **DNS** > **DNS Settings** and check whether any of the peer's groups is listed. Remove it (or move the peer out of that group) if DNS should be managed.
+2. On the peer, run `netbird status -d`. If the **Nameservers** section is empty even though nameservers are configured for the peer's groups, the peer is in unmanaged mode.
+3. Also check the peer wasn't started with `netbird up --disable-dns`. In that case `netbird status -d` still lists the nameservers as Available, but the system's active DNS configuration (step 3 of the checklist above) won't show NetBird's resolver. The flag persists across reconnects; clear it with `netbird up --disable-dns=false`.
+
+> **Note**
+>
+> A peer in unmanaged mode also makes the isolation test below misleading: disabling DNS management on a peer where it was never applied changes nothing, so "problem persists" would wrongly suggest the issue is unrelated to NetBird DNS.
 
 > **Note**
 >
@@ -398,7 +412,64 @@ cat /etc/resolv.conf
 
 **Fix**: Limit to 3-4 most important search domains.
 
-### Issue 5: DNS Works on NetBird Network, Fails Outside
+### Issue 5: dig and host Fail, but Browsers and curl Work (macOS)
+
+**Symptoms**:
+
+- Browsers, `curl`, and most applications resolve internal names fine
+- `dig` and `host` return `NXDOMAIN` for the same names, short and fully qualified
+- Typically on macOS with a match-domain nameserver and no primary; hits CLI tooling and IDEs hardest
+
+**Diagnosis**:
+
+macOS resolves names through two separate paths, and they can disagree:
+
+- **The system resolver** (`getaddrinfo`, via mDNSResponder): used by browsers, `curl`, and most applications. It follows *scoped* resolvers, the per-domain entries that `scutil --dns` lists (flagged `Supplemental` in its output).
+- **`/etc/resolv.conf` readers**: `dig`, `host`, and some language runtimes read this file directly and query the nameservers in it themselves.
+
+A match-domain nameserver registers a scoped resolver, and the `resolv.conf` format cannot express "use this server, but only for this domain". So `resolv.conf` keeps your LAN or public nameservers, and `dig` asks those, receives an authoritative `NXDOMAIN` for the internal zone, and reports it confidently. Resolution did not fail; it succeeded against the wrong server.
+
+Search domains sharpen the trap: they *do* merge into `resolv.conf`, so `host myserver` expands the short name to `myserver.company.internal` and then still asks the wrong nameserver.
+
+Confirm the split:
+
+```bash
+# System resolver path — works:
+dscacheutil -q host -a name app.company.internal
+
+# resolv.conf path — NXDOMAIN:
+dig app.company.internal
+
+# The scoped resolver dig cannot see:
+scutil --dns | grep -B1 -A4 company.internal
+
+# Query NetBird's resolver directly — works, showing the query succeeds
+# through NetBird's resolver (replace 100.x.255.254 with the nameserver
+# from the scutil --dns resolver block whose domain is your internal zone):
+dig @100.x.255.254 app.company.internal
+```
+
+If `dscacheutil` and `dig @100.x.255.254` resolve while plain `dig` does not, the client is working as configured: `dig` is just reading `resolv.conf`.
+
+Language runtimes split the same way (verified on macOS), which is how this reaches developers:
+
+| Reads `resolv.conf` (misses scoped resolvers)                                      | Uses the system resolver (works) |
+| ---------------------------------------------------------------------------------- | -------------------------------- |
+| Go's pure-Go resolver (`GODEBUG=netdns=go`, the default in `CGO_ENABLED=0` builds) | Go's cgo resolver                |
+| Python `dnspython`                                                                 | Python `socket.getaddrinfo`      |
+| Node.js `dns.resolve4()` and friends (c-ares)                                      | Node.js `dns.lookup()`           |
+
+Windows has the same two-path split under different names: NetBird steers match domains with an NRPT rule, which `Resolve-DnsName` honors but `nslookup` bypasses (it queries the adapter's nameservers directly). This is why the diagnostics on this page prescribe `dscacheutil` on macOS and `Resolve-DnsName` on Windows.
+
+**Solution**:
+
+Add a **primary** nameserver group (leave Match Domains empty) pointing at the same internal DNS servers, alongside the existing match-domain group. The primary puts NetBird's resolver into `/etc/resolv.conf`, so both paths query the same server. The internal servers must resolve public domains too (by recursing or forwarding upstream, which Active Directory DNS servers do by default); if they are authoritative-only for the internal zone, point the primary group at a resolver that handles public domains instead.
+
+Keep the match-domain group with search domains enabled; do not convert it by emptying its domains, which silently drops the search suffix (see [Search Domains](https://docs.netbird.io/manage/dns/internal-dns-servers#search-domains)).
+
+**Verify**: `dig app.company.internal` and `host myserver` both resolve, and `cat /etc/resolv.conf` shows `nameserver 100.x.255.254` plus your search domain.
+
+### Issue 6: DNS Works on NetBird Network, Fails Outside
 
 **Symptoms**:
 
@@ -455,7 +526,7 @@ sudo systemctl disable netbird
 curl -sSL https://pkgs.netbird.io/install.sh | sh
 ```
 
-### Issue 6: DNS Rebinding Protection
+### Issue 7: DNS Rebinding Protection
 
 **Symptoms**:
 
@@ -489,7 +560,7 @@ config domain
 
 ***
 
-### Issue 7: Active Directory Login or DFS Fails (but a file share by IP works)
+### Issue 8: Active Directory Login or DFS Fails (but a file share by IP works)
 
 **Symptoms**:
 
@@ -512,7 +583,7 @@ A domain resource only resolves `A`/`AAAA` records. Active Directory also depend
 
 ***
 
-### Issue 8: Windows NRPT rule is written but never takes effect (lingering GPO)
+### Issue 9: Windows NRPT rule is written but never takes effect (lingering GPO)
 
 **Symptoms**:
 
@@ -962,4 +1033,4 @@ Avoid future DNS issues:
 - **[DNS Overview](https://docs.netbird.io/manage/dns)** - Understand DNS architecture
 - **[Internal DNS Servers](https://docs.netbird.io/manage/dns/internal-dns-servers)** - Nameserver configuration and internal DNS
 - **[DNS Settings](https://docs.netbird.io/manage/dns/dns-settings)** - Management modes
-- **[API Reference](https://docs.netbird.io/ipa/resources/dns)** - Automate DNS
+- **[API Reference](https://docs.netbird.io/api/resources/dns)** - Automate DNS

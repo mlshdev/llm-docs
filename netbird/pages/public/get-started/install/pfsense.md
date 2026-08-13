@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/get-started/install/pfsense.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/get-started/install/pfsense.mdx)
+> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/get-started/install/pfsense.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/get-started/install/pfsense.mdx)
 
 # pfSense Installation
 
@@ -71,7 +71,7 @@ Fill out the authentication form with the following values and click `Save`:
 - **Management URL**: Default is `https://app.netbird.io:443`. If self-hosting, enter your custom management server URL.
 - **Setup Key**: Paste the setup key from your NetBird account. .
 
-![authentication](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/get-started/pfSense/authentication.png)
+![authentication](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/get-started/pfSense/authentication.png)
 
 ### Verify Connection Status
 
@@ -80,14 +80,14 @@ Access it via `Status` > `NetBird` in the pfSense menu.
 
 Use this section for diagnostics and troubleshooting common connection or setup issues.
 
-![connection status](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/get-started/pfSense/status.png)
+![connection status](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/get-started/pfSense/status.png)
 
 ### Assign NetBird interface
 
 After authentication, a new interface named `wt0(wt0)` will be available but unassigned. To assign it go to
 `Interfaces` > `Assignments`. Under `Available network ports`, select the NetBird interface `wt0(wt0)` and click `Add`.
 
-![NewInterface](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/get-started/pfSense/new_interface.png)
+![NewInterface](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/get-started/pfSense/new_interface.png)
 
 ### Enable the NetBird interface
 
@@ -97,7 +97,7 @@ the following options and click `Save`, then `Apply changes` to activate the int
 - **Enable**: `✓ Enable Interface`
 - **Description**: `NetBird`
 
-![enableInterface](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/get-started/pfSense/enable_interface.png)
+![enableInterface](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/get-started/pfSense/enable_interface.png)
 
 ### Configure Firewall Rules for the NetBird interface
 
@@ -117,7 +117,7 @@ Create rules to control traffic coming from your NetBird network into pfSense an
    - **Description**: `Allow all on NetBird (managed by NetBird)`
 3. Click `Save`, then `Apply Changes`
 
-![firewallRules](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/get-started/pfSense/firewall_rules.png)
+![firewallRules](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/get-started/pfSense/firewall_rules.png)
 
 ### Config for Troubleshooting Relayed Connections
 

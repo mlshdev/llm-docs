@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/integrations/mdm-deployment/macos-cli-pkg-deployment.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/manage/integrations/mdm-deployment/macos-cli-pkg-deployment.mdx)
+> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/manage/peers/mdm-deployment/macos-cli-pkg-deployment.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/manage/peers/mdm-deployment/macos-cli-pkg-deployment.mdx)
 
 # Building a CLI-Only .pkg for macOS MDM Deployment
 
@@ -212,10 +212,10 @@ xcrun stapler staple netbird-cli-${VERSION}.pkg
 
 Upload the `.pkg` to your MDM solution and create a deployment policy. The exact steps vary by platform:
 
-- **Jamf Pro**: Upload the package under `Settings > Computer Management > Packages`, then create a policy with appropriate triggers (enrollment, recurring check-in). See [Deploying NetBird with Jamf Pro](https://docs.netbird.io/manage/integrations/mdm-deployment/jamf-pro-netbird-integration) for detailed instructions.
-- **Kandji**: Create a Custom App library item with the `Installer Package` option. See [Deploying NetBird with Kandji](https://docs.netbird.io/manage/integrations/mdm-deployment/kandji-netbird-integration) for detailed instructions.
+- **Jamf Pro**: Upload the package under `Settings > Computer Management > Packages`, then create a policy with appropriate triggers (enrollment, recurring check-in). See [Deploying NetBird with Jamf Pro](https://docs.netbird.io/manage/peers/mdm-deployment/jamf-pro-netbird-integration) for detailed instructions.
+- **Kandji**: Create a Custom App library item with the `Installer Package` option. See [Deploying NetBird with Kandji](https://docs.netbird.io/manage/peers/mdm-deployment/kandji-netbird-integration) for detailed instructions.
 - **Munki**: Import the `.pkg` into your Munki repository using `munkiimport` and assign it to the appropriate manifest.
-- **Microsoft Intune**: Upload as a macOS LOB app. See [Deploying NetBird with Intune](https://docs.netbird.io/manage/integrations/mdm-deployment/intune-netbird-integration) for detailed instructions.
+- **Microsoft Intune**: Upload as a macOS LOB app. See [Deploying NetBird with Intune](https://docs.netbird.io/manage/peers/mdm-deployment/intune-netbird-integration) for detailed instructions.
 
 ## Managing updates
 

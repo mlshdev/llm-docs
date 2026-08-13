@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/agent-network/quickstart.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/agent-network/quickstart.mdx)
+> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/agent-network/quickstart.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/agent-network/quickstart.mdx)
 
 # NetBird Agent Network Quickstart
 
@@ -50,7 +50,7 @@ and protected by a peer-to-peer encrypted WireGuard tunnel.
 2. Click **Add Peer** and download the NetBird client app for your device.
 3. Run the client app, click "Connect", and log in with your NetBird account when prompted
 
-![agent network connect](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/agent-network/quickstart/agent-network-connect-device.png)
+![agent network connect](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/agent-network/quickstart/agent-network-connect-device.png)
 
 You should now see your device in the peers list in the NetBird dashboard.
 
@@ -74,11 +74,11 @@ The key never lives on the client.
 
 See [Providers](https://docs.netbird.io/agent-network/providers) for more details.
 
-![agent network add provider](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/agent-network/quickstart/agent-network-add-provider.png)
+![agent network add provider](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/agent-network/quickstart/agent-network-add-provider.png)
 
 You should now see a newly-generated endpoint above the **Providers** table.
 
-![agent network endpoint](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/agent-network/quickstart/agent-network-endpoint.png)
+![agent network endpoint](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/agent-network/quickstart/agent-network-endpoint.png)
 
 ## Configure Your Agent
 
@@ -92,7 +92,7 @@ injects the upstream provider key server-side.
 3. Copy the snippet and apply it. Claude Code reads `~/.claude/settings.json` and Codex
    reads `~/.codex/config.toml`.
 
-![NetBird Configure Your Agent modal showing Claude Code configuration](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/agent-network/integrations/agent-network-configure-agent-claude-code.png)
+![NetBird Configure Your Agent modal showing Claude Code configuration](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/agent-network/integrations/agent-network-configure-agent-claude-code.png)
 
 ## Create a Policy
 
@@ -108,7 +108,7 @@ and budget limits and guardrails.
 5. *(Optional)* Set **token / budget limits** and attach **guardrails**.
 6. Save the policy.
 
-![agent network add policy](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/agent-network/quickstart/agent-network-add-policy.png)
+![agent network add policy](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/agent-network/quickstart/agent-network-add-policy.png)
 
 With the policy in place, the agent you configured above can now reach the provider.
 Run it as usual, or send a quick test request, using a model your provider allows:
@@ -125,4 +125,4 @@ curl https://<your-endpoint>/v1/messages \
 Open **Usage & Logs** to confirm the request was
 recorded with the caller identity, model, tokens, and cost.
 
-![agent network usage & logs](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/agent-network/quickstart/agent-network-usage-and-logs.png)
+![agent network usage & logs](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/agent-network/quickstart/agent-network-usage-and-logs.png)

@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/use-cases/remote-access/exit-nodes.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/use-cases/remote-access/exit-nodes.mdx)
+> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/use-cases/remote-access/exit-nodes.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/use-cases/remote-access/exit-nodes.mdx)
 
 # Configuring Exit Nodes for Internet Traffic
 
@@ -59,23 +59,23 @@ Clients running v0.55.0 or later auto-apply these routes unless the user has exp
 
 Navigate to the NetBird dashboard and open **Peers** (exit nodes are typically unattended machines like a VPS, router, or always-on host).
 
-![Dashboard peers view](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/network-routes/use-cases/exit-nodes/netbird-peers.png)
+![Dashboard peers view](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/network-routes/use-cases/exit-nodes/netbird-peers.png)
 
 ### 2. Select the Routing Peer
 
 Choose the peer that will serve as your exit node.
 
-![Routing peer selection](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/network-routes/use-cases/exit-nodes/netbird-peers-routing-peer.png)
+![Routing peer selection](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/network-routes/use-cases/exit-nodes/netbird-peers-routing-peer.png)
 
 ### 3. Configure the Exit Node
 
 Click **Add Exit Node**. In the dialog, assign one or more distribution groups to specify which peers should use this exit node.
 
-![Add exit node dialog](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/network-routes/use-cases/exit-nodes/netbird-peers-add-exit-node.png)
+![Add exit node dialog](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/network-routes/use-cases/exit-nodes/netbird-peers-add-exit-node.png)
 
 To make the exit node available without automatic activation, disable **Auto Apply**. Users can then enable it manually.
 
-![Auto Apply option](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/network-routes/use-cases/exit-nodes/exit-node-auto-apply.png)
+![Auto Apply option](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/network-routes/use-cases/exit-nodes/exit-node-auto-apply.png)
 
 Click **Add Exit Node** to complete the configuration. Masquerading is enabled by default.
 
@@ -83,7 +83,7 @@ Click **Add Exit Node** to complete the configuration. Masquerading is enabled b
 
 Check the peer view to confirm the routing peer is marked as an exit node.
 
-![Exit node confirmation](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/network-routes/use-cases/exit-nodes/netbird-peers-routing-peer-exit-node.png)
+![Exit node confirmation](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/network-routes/use-cases/exit-nodes/netbird-peers-routing-peer-exit-node.png)
 
 ### 5. Configure DNS
 

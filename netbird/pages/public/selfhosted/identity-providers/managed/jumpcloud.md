@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/identity-providers/managed/jumpcloud.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/selfhosted/identity-providers/managed/jumpcloud.mdx)
+> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/selfhosted/identity-providers/managed/jumpcloud.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/selfhosted/identity-providers/managed/jumpcloud.mdx)
 
 # JumpCloud SSO with NetBird Self-Hosted
 
@@ -18,16 +18,16 @@ Add JumpCloud as an external IdP directly in the NetBird Management Dashboard. T
 1. Navigate to [JumpCloud Admin Portal](https://console.jumpcloud.com/)
 2. Click **SSO Applications** under **USER AUTHENTICATION**
 
-![SSO Applications](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/managed/jumpcloud/1_sso-applications.png)
+![SSO Applications](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/jumpcloud/1_sso-applications.png)
 
 3. Click **Add New Application** → **Custom Application**
 
-![Custom Applications](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/managed/jumpcloud/2_custom-applications.png)
+![Custom Applications](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/jumpcloud/2_custom-applications.png)
 
 4. Confirm **Custom application** and click **Next**
 5. Select **Manage Single Sign-On (SSO)** and check **Configure SSO with OIDC**
 
-![SSO with OIDC](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/managed/jumpcloud/3_SSO-with-OIDC.png)
+![SSO with OIDC](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/jumpcloud/3_SSO-with-OIDC.png)
 
 6. Click **Next**
 7. Enter **Display Label**: `NetBird`
@@ -69,7 +69,7 @@ Add JumpCloud as an external IdP directly in the NetBird Management Dashboard. T
 
 5. **Copy the Redirect URL** that NetBird displays (but don't click **Add Provider** yet)
 
-![Copy redirect URL](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/managed/jumpcloud/4_copy-redirect.png)
+![Copy redirect URL](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/jumpcloud/4_copy-redirect.png)
 
 ### Step 3: Complete JumpCloud Application Setup
 
@@ -79,19 +79,19 @@ Add JumpCloud as an external IdP directly in the NetBird Management Dashboard. T
    - *(Optional)* In the **Post Logout Redirect URIs** field, add `https://<your-netbird-domain>/oauth2/logout/callback` (using the same domain as the redirect URL) so logout redirects back to NetBird cleanly
 4. Click **Save** (if you made any changes)
 
-![Configure JumpCloud SSO](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/managed/jumpcloud/5_config-jumpcloud-sso.png)
+![Configure JumpCloud SSO](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/jumpcloud/5_config-jumpcloud-sso.png)
 
 5. Click **Activate**
 6. Note the **Client ID** and **Client Secret** — you'll need these for Step 4
 
-![Client IDs](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/managed/jumpcloud/6_client-ids.png)
+![Client IDs](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/jumpcloud/6_client-ids.png)
 
 ### Step 4: Complete NetBird Setup
 
 1. Return to the NetBird tab
 2. Fill in the **Client ID** and **Client Secret** from Step 3
 
-![JumpCloud configuration](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/managed/jumpcloud/7_jumpcloud-config.png)
+![JumpCloud configuration](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/jumpcloud/7_jumpcloud-config.png)
 
 3. Click **Add Provider**
 
@@ -116,7 +116,7 @@ To sync JumpCloud groups with NetBird, you need to enable the group attribute in
 6. In **Groups Attribute Name**, enter: `groups`
 7. Click **Save**
 
-![Add groups claim](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/managed/jumpcloud/jwt_add-groups-claim.png)
+![Add groups claim](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/jumpcloud/jwt_add-groups-claim.png)
 
 #### Step 2: Assign User Groups to the Application
 

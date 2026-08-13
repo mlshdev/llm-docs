@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/integrations/mdm-deployment/windows-gpo-deployment.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/manage/integrations/mdm-deployment/windows-gpo-deployment.mdx)
+> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/manage/peers/mdm-deployment/windows-gpo-deployment.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/manage/peers/mdm-deployment/windows-gpo-deployment.mdx)
 
 # Deploying NetBird with Group Policy (GPO)
 
@@ -136,7 +136,7 @@ The install script's own log is at `%ProgramData%\NetBird\netbird-deploy.log`, a
 
 ## When not to use GPO
 
-Group Policy only reaches domain-joined Windows machines. For Windows devices managed by Intune, use [Deploy with Intune](https://docs.netbird.io/manage/integrations/mdm-deployment/intune-netbird-integration) with the same ADMX or an OMA-URI profile. For macOS fleets, see [Jamf Pro](https://docs.netbird.io/manage/integrations/mdm-deployment/jamf-pro-netbird-integration) or [Kandji](https://docs.netbird.io/manage/integrations/mdm-deployment/kandji-netbird-integration). The registry values themselves are tool-agnostic, so anything that can write `HKLM\Software\Policies\NetBird` (SCCM, an RMM, a provisioning image) gives you the same enforcement without GPO.
+Group Policy only reaches domain-joined Windows machines. For Windows devices managed by Intune, use [Deploy with Intune](https://docs.netbird.io/manage/peers/mdm-deployment/intune-netbird-integration) with the same ADMX or an OMA-URI profile. For macOS fleets, see [Jamf Pro](https://docs.netbird.io/manage/peers/mdm-deployment/jamf-pro-netbird-integration) or [Kandji](https://docs.netbird.io/manage/peers/mdm-deployment/kandji-netbird-integration). The registry values themselves are tool-agnostic, so anything that can write `HKLM\Software\Policies\NetBird` (SCCM, an RMM, a provisioning image) gives you the same enforcement without GPO.
 
 ## Recap
 

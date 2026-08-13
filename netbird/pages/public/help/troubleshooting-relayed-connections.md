@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/help/troubleshooting-relayed-connections.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/help/troubleshooting-relayed-connections.mdx)
+> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/help/troubleshooting-relayed-connections.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/help/troubleshooting-relayed-connections.mdx)
 
 # Troubleshooting relayed connections
 
@@ -117,7 +117,7 @@ Some networks are known to defeat hole punching, no matter how clean the firewal
 - **Cloud NAT gateways** (AWS NAT Gateway, GCP Cloud NAT): symmetric by design for instances without a public IP.
 - **Enterprise firewalls in strict mode**: Cisco ASA, Palo Alto, Fortinet and similar devices often default to symmetric NAT, sometimes labeled "strict NAT" in their settings.
 
-If **both** peers sit on networks like these, hole punching can't succeed and no amount of firewall tuning will change that. The relay is the expected outcome, and you can stop here (see [when relay is the right answer](#when-relay-is-the-right-answer)). If only one side does, or you're not sure, keep going: one predictable side is usually enough for P2P.
+If **both** peers sit on networks like these, hole punching can't succeed, and for mobile or cloud NAT no firewall tuning will change that. The relay is the expected outcome, and you can stop here (see [when relay is the right answer](#when-relay-is-the-right-answer)). An enterprise firewall you control is the exception: its NAT mode is often tunable, see [Corporate firewalls](https://docs.netbird.io/about-netbird/ports-and-firewalls#corporate-firewalls). If only one side is affected, or you're not sure, keep going: one predictable side is usually enough for P2P.
 
 > **Note**
 >
@@ -136,7 +136,7 @@ Both must succeed. If they don't, fix outbound TCP/443 to these endpoints first,
 
 ### Step 3: Is STUN reachable?
 
-Hole punching starts with STUN, and STUN runs over UDP. The best evidence is already in `netbird status -d`. The `Relays:` section near the bottom reports reachability of every STUN, TURN, and relay endpoint:
+Hole punching starts with STUN, and STUN runs over UDP. The best evidence is already in `netbird status -d`. The `Relays:` section near the bottom reports reachability of every STUN and relay endpoint:
 
 ```
 Relays:
@@ -145,7 +145,7 @@ Relays:
   [rels://us-nyc-2.relay.netbird.io:443] is Available
 ```
 
-Any `Unavailable` entry for a `stun:` or `turn:` endpoint means outbound UDP is being dropped on the path, typically by the site's egress firewall. Ask whoever runs it to allow outbound UDP on ports 80, 443, 3478, and 5555 to `stun.netbird.io` and `turn.netbird.io`; the exact list and example rules are in [Ports & Firewalls](https://docs.netbird.io/about-netbird/ports-and-firewalls#outgoing-ports).
+Any `Unavailable` entry means the reported transport to that endpoint is being dropped on the path, typically by the site's egress firewall. Ask whoever runs it to allow the matching outbound traffic: UDP ports 80, 443, 3478, and 5555 to `stun.netbird.io`, and UDP ports 80 and 443 plus TCP ports 443 to 65535 to `turn.netbird.io`. The exact list and example rules are in [Ports & Firewalls](https://docs.netbird.io/about-netbird/ports-and-firewalls#outgoing-ports). If the site runs a named enterprise firewall or SASE product (Palo Alto, Fortinet, Zscaler, and so on), [Corporate firewalls](https://docs.netbird.io/about-netbird/ports-and-firewalls#corporate-firewalls) lists what to allow per vendor.
 
 > **Warning**
 >
@@ -167,7 +167,7 @@ A connection has two ends, and **both** must pass steps 2–4 for hole punching 
 
 ### Step 6: Conclude, or escalate
 
-If every check passes on both peers and the connection is still relayed, you've proven by elimination that a symmetric NAT is in the path. Accept the relay. It's the [designed behavior for exactly this case](#when-relay-is-the-right-answer), and it costs latency, not security.
+If every check passes on both peers and the connection is still relayed, the most likely remaining cause is a symmetric NAT in the path. A firewall that permits outbound UDP only to the NetBird service endpoints, and not to the peers' own discovered addresses, produces the same result and is worth considering. Either way, check whether it is a corporate firewall you control: many enterprise firewalls randomize the source port per destination, or scope outbound UDP too tightly, and both are tunable. [Corporate firewalls](https://docs.netbird.io/about-netbird/ports-and-firewalls#corporate-firewalls) has the per-vendor settings. If the NAT is outside your control (mobile, cloud, or someone else's network), accept the relay. It's the [designed behavior for exactly this case](#when-relay-is-the-right-answer), and it costs latency, not security.
 
 If instead something looks wrong but you can't place it, collect evidence and escalate:
 
@@ -214,7 +214,7 @@ Some teams even prefer relayed connections in locked-down networks, because the 
 
 To keep a whole fleet on direct connections rather than fixing peers one at a time:
 
-- **Allow outbound UDP to STUN/TURN** (`stun.netbird.io`, `turn.netbird.io`, ports 80, 443, 3478, 5555) at every site's egress firewall.
+- **Allow outbound UDP to the STUN and relay endpoints** (`stun.netbird.io`, `turn.netbird.io`, ports 80, 443, 3478, 5555) at every site's egress firewall.
 - **Wildcard `*.relay.netbird.io` on TCP/443** so the relay fallback survives rotation of the geo-distributed relay pool.
 - **Watch the `Relays:` section** of `netbird status -d` during rollout, fix `Unavailable` entries before users report slowness.
 - **Bake the `wt0` allowance into host-firewall baselines** (UFW/firewalld/Windows images), so host firewalls never silently block decrypted traffic.

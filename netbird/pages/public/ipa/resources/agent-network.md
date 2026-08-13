@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/ipa/resources/agent-network.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/ipa/resources/agent-network.mdx)
+> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/ipa/resources/agent-network.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/ipa/resources/agent-network.mdx)
 
 ## List Agent Network access logs   (GET /api/agent-network/access-logs)
 
@@ -1198,7 +1198,7 @@ echo $response;
 
 ## Retrieve Agent Network settings   (GET /api/agent-network/settings)
 
-Returns the per-account Agent Network gateway settings (cluster, subdomain, endpoint). Before the account is bootstrapped — on first provider create (`bootstrap_cluster`) or via PUT with `cluster` — the response carries the default values with empty cluster, subdomain and endpoint.
+Returns the per-account Agent Network gateway settings (endpoint, proxy address, collection toggles). Before the account is bootstrapped via POST, the response carries the default values with an empty endpoint and proxy address.
 
 **GET /api/agent-network/settings Request**
 
@@ -1355,9 +1355,9 @@ echo $response;
 
 ```json
 {
-  "cluster": "eu.proxy.netbird.io",
-  "subdomain": "violet",
-  "endpoint": "violet.eu.proxy.netbird.io",
+  "endpoint": "brave-otter.eu.proxy.netbird.io",
+  "proxy_address": "eu.proxy.netbird.io",
+  "dedicated": false,
   "enable_log_collection": false,
   "enable_prompt_collection": false,
   "redact_pii": false,
@@ -1371,9 +1371,286 @@ echo $response;
 
 ```json
 {
-  "cluster": "string",
-  "subdomain": "string",
   "endpoint": "string",
+  "proxy_address": "string",
+  "dedicated": "boolean",
+  "enable_log_collection": "boolean",
+  "enable_prompt_collection": "boolean",
+  "redact_pii": "boolean",
+  "access_log_retention_days": "integer",
+  "created_at": "string",
+  "updated_at": "string"
+}
+```
+
+***
+
+## Bootstrap Agent Network settings   (POST /api/agent-network/settings)
+
+Creates the per-account Agent Network settings row and allocates the account's endpoint. Exactly one of `proxy_address` (labeled endpoint under that cluster; the server allocates the label) and `endpoint` (self-addressed dedicated endpoint, claimed verbatim) must be provided. The endpoint and proxy address are immutable once assigned. Returns 409 when the account already has a settings row.
+
+### Request-Body Parameters
+
+**proxy\_address (type: string; optional)**
+
+Cluster address to allocate a labeled endpoint beneath. Mutually exclusive with `endpoint`.
+
+**endpoint (type: string; optional)**
+
+Hostname to claim as the account's self-addressed (dedicated) endpoint. Mutually exclusive with `proxy_address`. Rejected when another account already holds it.
+
+**enable\_log\_collection (type: boolean; optional)**
+
+Whether per-request access-log entries are collected for this account's agent-network traffic. Defaults to true.
+
+**enable\_prompt\_collection (type: boolean; optional)**
+
+Master switch for request/response prompt capture. Defaults to false.
+
+**redact\_pii (type: boolean; optional)**
+
+Whether captured prompts have PII redacted. Defaults to false.
+
+**access\_log\_retention\_days (type: integer; optional)**
+
+Days to retain full access-log rows; older rows are swept. 0 or less means keep indefinitely. Defaults to 30.
+
+**POST /api/agent-network/settings Request**
+
+**cURL**
+
+```bash
+curl -X POST https://api.netbird.io/api/agent-network/settings \
+-H 'Accept: application/json' \
+-H 'Content-Type: application/json' \
+-H 'Authorization: Token <TOKEN>' \
+--data-raw '{
+  "proxy_address": "eu.proxy.netbird.io",
+  "endpoint": "brave-otter.gateway.example.com",
+  "enable_log_collection": true,
+  "enable_prompt_collection": false,
+  "redact_pii": false,
+  "access_log_retention_days": 30
+}'
+```
+
+```js
+const axios = require('axios');
+let data = JSON.stringify({
+  "proxy_address": "eu.proxy.netbird.io",
+  "endpoint": "brave-otter.gateway.example.com",
+  "enable_log_collection": true,
+  "enable_prompt_collection": false,
+  "redact_pii": false,
+  "access_log_retention_days": 30
+});
+let config = {
+  method: 'post',
+  maxBodyLength: Infinity,
+  url: '/api/agent-network/settings',
+  headers: {     
+    'Accept': 'application/json',    
+    'Content-Type': 'application/json',
+    'Authorization': 'Token <TOKEN>'
+  },  
+  data : data
+};
+
+axios(config)
+.then((response) => {
+  console.log(JSON.stringify(response.data));
+})
+.catch((error) => {
+  console.log(error);
+});
+```
+
+```python
+import requests
+import json
+
+url = "https://api.netbird.io/api/agent-network/settings"
+payload = json.dumps({
+  "proxy_address": "eu.proxy.netbird.io",
+  "endpoint": "brave-otter.gateway.example.com",
+  "enable_log_collection": true,
+  "enable_prompt_collection": false,
+  "redact_pii": false,
+  "access_log_retention_days": 30
+})
+headers = {   
+  'Content-Type': 'application/json',  
+  'Accept': 'application/json',
+  'Authorization': 'Token <TOKEN>'
+}
+
+response = requests.request("POST", url, headers=headers, data=payload)
+
+print(response.text)
+```
+
+```go
+package main
+
+import (
+  "fmt"
+  "strings"
+  "net/http"
+  "io/ioutil"
+)
+
+func main() {
+
+  url := "https://api.netbird.io/api/agent-network/settings"
+  method := "POST"
+  
+  payload := strings.NewReader(`{
+  "proxy_address": "eu.proxy.netbird.io",
+  "endpoint": "brave-otter.gateway.example.com",
+  "enable_log_collection": true,
+  "enable_prompt_collection": false,
+  "redact_pii": false,
+  "access_log_retention_days": 30
+}`)
+  client := &http.Client {
+  }
+  req, err := http.NewRequest(method, url, payload)
+
+  if err != nil {
+    fmt.Println(err)
+    return
+  }
+  
+  
+  req.Header.Add("Content-Type", "application/json")  
+  req.Header.Add("Accept", "application/json")
+  req.Header.Add("Authorization", "Token <TOKEN>")
+
+  res, err := client.Do(req)
+  if err != nil {
+    fmt.Println(err)
+    return
+  }
+  defer res.Body.Close()
+
+  body, err := ioutil.ReadAll(res.Body)
+  if err != nil {
+    fmt.Println(err)
+    return
+  }
+  fmt.Println(string(body))
+}
+```
+
+```ruby
+require "uri"
+require "json"
+require "net/http"
+
+url = URI("https://api.netbird.io/api/agent-network/settings")
+
+https = Net::HTTP.new(url.host, url.port)
+https.use_ssl = true
+
+request = Net::HTTP::Post.new(url)
+request["Content-Type"] = "application/json"
+request["Accept"] = "application/json"
+request["Authorization"] = "Token <TOKEN>"
+
+request.body = JSON.dump({
+  "proxy_address": "eu.proxy.netbird.io",
+  "endpoint": "brave-otter.gateway.example.com",
+  "enable_log_collection": true,
+  "enable_prompt_collection": false,
+  "redact_pii": false,
+  "access_log_retention_days": 30
+})
+response = https.request(request)
+puts response.read_body
+```
+
+```java
+OkHttpClient client = new OkHttpClient().newBuilder()
+  .build();
+MediaType mediaType = MediaType.parse("application/json");
+RequestBody body = RequestBody.create(mediaType, '{
+  "proxy_address": "eu.proxy.netbird.io",
+  "endpoint": "brave-otter.gateway.example.com",
+  "enable_log_collection": true,
+  "enable_prompt_collection": false,
+  "redact_pii": false,
+  "access_log_retention_days": 30
+}');
+Request request = new Request.Builder()
+  .url("https://api.netbird.io/api/agent-network/settings")
+  .method("POST", body)  
+  .addHeader("Content-Type", "application/json")  
+  .addHeader("Accept", "application/json")
+  .addHeader("Authorization: Token <TOKEN>")
+  .build();
+Response response = client.newCall(request).execute();
+```
+
+```php
+<?php
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => 'https://api.netbird.io/api/agent-network/settings',
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => '',
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 0,
+  CURLOPT_FOLLOWLOCATION => true,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => 'POST',  
+  CURLOPT_POSTFIELDS => '{
+  "proxy_address": "eu.proxy.netbird.io",
+  "endpoint": "brave-otter.gateway.example.com",
+  "enable_log_collection": true,
+  "enable_prompt_collection": false,
+  "redact_pii": false,
+  "access_log_retention_days": 30
+}',
+  CURLOPT_HTTPHEADER => array(    
+    'Content-Type: application/json',    
+    'Accept: application/json',
+    'Authorization: Token <TOKEN>'
+  ),
+));
+
+$response = curl_exec($curl);
+
+curl_close($curl);
+echo $response;
+```
+
+**Response**
+
+**Example**
+
+```json
+{
+  "endpoint": "brave-otter.eu.proxy.netbird.io",
+  "proxy_address": "eu.proxy.netbird.io",
+  "dedicated": false,
+  "enable_log_collection": false,
+  "enable_prompt_collection": false,
+  "redact_pii": false,
+  "access_log_retention_days": 30,
+  "created_at": "2026-04-26T10:30:00Z",
+  "updated_at": "2026-04-26T10:30:00Z"
+}
+```
+
+**Schema**
+
+```json
+{
+  "endpoint": "string",
+  "proxy_address": "string",
+  "dedicated": "boolean",
   "enable_log_collection": "boolean",
   "enable_prompt_collection": "boolean",
   "redact_pii": "boolean",
@@ -1387,13 +1664,17 @@ echo $response;
 
 ## Update Agent Network settings   (PUT /api/agent-network/settings)
 
-Updates the account-level Agent Network settings; the request replaces every mutable field (collection toggles and retention). When the account has no settings row yet, providing `cluster` bootstraps it (assigning the subdomain that forms the agent endpoint); without `cluster` the request returns 404. Sending a `cluster` different from the assigned one is rejected (the cluster is immutable once assigned). The subdomain is always server-assigned and immutable.
+Updates the account-level Agent Network settings; the request carries every field, replacing the mutable ones (collection toggles and retention). Returns 404 when the account has no settings row yet — bootstrap it with POST first. The endpoint and proxy address are assigned at bootstrap and immutable; the request must carry them unchanged, and a request carrying different values is rejected.
 
 ### Request-Body Parameters
 
-**cluster (type: string; optional)**
+**endpoint (type: string; required)**
 
-Address of the NetBird proxy cluster fronting this account's agent-network endpoint. When the account has no settings row yet, providing it bootstraps the row (assigning the subdomain that forms the agent endpoint). The cluster is immutable once assigned — later updates must omit it or send the assigned value; any other value is rejected.
+The account's gateway endpoint hostname. Immutable — must match the assigned value; a different value is rejected.
+
+**proxy\_address (type: string; required)**
+
+Declared cluster address of the proxy serving this account's gateway. Immutable — must match the assigned value; a different value is rejected.
 
 **enable\_log\_collection (type: boolean; required)**
 
@@ -1407,7 +1688,7 @@ Master switch for request/response prompt capture.
 
 Whether captured prompts have PII redacted.
 
-**access\_log\_retention\_days (type: integer; optional)**
+**access\_log\_retention\_days (type: integer; required)**
 
 Days to retain full access-log rows; older rows are swept. 0 or less means keep indefinitely.
 
@@ -1421,7 +1702,8 @@ curl -X PUT https://api.netbird.io/api/agent-network/settings \
 -H 'Content-Type: application/json' \
 -H 'Authorization: Token <TOKEN>' \
 --data-raw '{
-  "cluster": "eu.proxy.netbird.io",
+  "endpoint": "brave-otter.eu.proxy.netbird.io",
+  "proxy_address": "eu.proxy.netbird.io",
   "enable_log_collection": true,
   "enable_prompt_collection": true,
   "redact_pii": true,
@@ -1432,7 +1714,8 @@ curl -X PUT https://api.netbird.io/api/agent-network/settings \
 ```js
 const axios = require('axios');
 let data = JSON.stringify({
-  "cluster": "eu.proxy.netbird.io",
+  "endpoint": "brave-otter.eu.proxy.netbird.io",
+  "proxy_address": "eu.proxy.netbird.io",
   "enable_log_collection": true,
   "enable_prompt_collection": true,
   "redact_pii": true,
@@ -1465,7 +1748,8 @@ import json
 
 url = "https://api.netbird.io/api/agent-network/settings"
 payload = json.dumps({
-  "cluster": "eu.proxy.netbird.io",
+  "endpoint": "brave-otter.eu.proxy.netbird.io",
+  "proxy_address": "eu.proxy.netbird.io",
   "enable_log_collection": true,
   "enable_prompt_collection": true,
   "redact_pii": true,
@@ -1498,7 +1782,8 @@ func main() {
   method := "PUT"
   
   payload := strings.NewReader(`{
-  "cluster": "eu.proxy.netbird.io",
+  "endpoint": "brave-otter.eu.proxy.netbird.io",
+  "proxy_address": "eu.proxy.netbird.io",
   "enable_log_collection": true,
   "enable_prompt_collection": true,
   "redact_pii": true,
@@ -1550,7 +1835,8 @@ request["Accept"] = "application/json"
 request["Authorization"] = "Token <TOKEN>"
 
 request.body = JSON.dump({
-  "cluster": "eu.proxy.netbird.io",
+  "endpoint": "brave-otter.eu.proxy.netbird.io",
+  "proxy_address": "eu.proxy.netbird.io",
   "enable_log_collection": true,
   "enable_prompt_collection": true,
   "redact_pii": true,
@@ -1565,7 +1851,8 @@ OkHttpClient client = new OkHttpClient().newBuilder()
   .build();
 MediaType mediaType = MediaType.parse("application/json");
 RequestBody body = RequestBody.create(mediaType, '{
-  "cluster": "eu.proxy.netbird.io",
+  "endpoint": "brave-otter.eu.proxy.netbird.io",
+  "proxy_address": "eu.proxy.netbird.io",
   "enable_log_collection": true,
   "enable_prompt_collection": true,
   "redact_pii": true,
@@ -1596,7 +1883,8 @@ curl_setopt_array($curl, array(
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
   CURLOPT_CUSTOMREQUEST => 'PUT',  
   CURLOPT_POSTFIELDS => '{
-  "cluster": "eu.proxy.netbird.io",
+  "endpoint": "brave-otter.eu.proxy.netbird.io",
+  "proxy_address": "eu.proxy.netbird.io",
   "enable_log_collection": true,
   "enable_prompt_collection": true,
   "redact_pii": true,
@@ -1621,9 +1909,9 @@ echo $response;
 
 ```json
 {
-  "cluster": "eu.proxy.netbird.io",
-  "subdomain": "violet",
-  "endpoint": "violet.eu.proxy.netbird.io",
+  "endpoint": "brave-otter.eu.proxy.netbird.io",
+  "proxy_address": "eu.proxy.netbird.io",
+  "dedicated": false,
   "enable_log_collection": false,
   "enable_prompt_collection": false,
   "redact_pii": false,
@@ -1637,9 +1925,9 @@ echo $response;
 
 ```json
 {
-  "cluster": "string",
-  "subdomain": "string",
   "endpoint": "string",
+  "proxy_address": "string",
+  "dedicated": "boolean",
   "enable_log_collection": "boolean",
   "enable_prompt_collection": "boolean",
   "redact_pii": "boolean",
@@ -1647,6 +1935,154 @@ echo $response;
   "created_at": "string",
   "updated_at": "string"
 }
+```
+
+***
+
+## Delete Agent Network settings   (DELETE /api/agent-network/settings)
+
+Deletes the account's Agent Network settings row, releasing the endpoint. Guarded — the delete is refused with 412 while any Agent Network provider exists for the account or while a proxy is actively serving the endpoint. Bootstrapping again after a delete allocates a new endpoint; the released hostname is not reserved.
+
+**DELETE /api/agent-network/settings Request**
+
+**cURL**
+
+```bash
+curl -X DELETE https://api.netbird.io/api/agent-network/settings \
+-H 'Authorization: Token <TOKEN>' 
+```
+
+```js
+const axios = require('axios');
+
+let config = {
+  method: 'delete',
+  maxBodyLength: Infinity,
+  url: '/api/agent-network/settings',
+  headers: {         
+    'Authorization': 'Token <TOKEN>'
+  }  
+};
+
+axios(config)
+.then((response) => {
+  console.log(JSON.stringify(response.data));
+})
+.catch((error) => {
+  console.log(error);
+});
+```
+
+```python
+import requests
+import json
+
+url = "https://api.netbird.io/api/agent-network/settings"
+
+headers = {     
+  'Authorization': 'Token <TOKEN>'
+}
+
+response = requests.request("DELETE", url, headers=headers)
+
+print(response.text)
+```
+
+```go
+package main
+
+import (
+  "fmt"
+  "strings"
+  "net/http"
+  "io/ioutil"
+)
+
+func main() {
+
+  url := "https://api.netbird.io/api/agent-network/settings"
+  method := "DELETE"
+  
+  client := &http.Client {
+  }
+  req, err := http.NewRequest(method, url, nil)
+
+  if err != nil {
+    fmt.Println(err)
+    return
+  }
+  
+    
+  req.Header.Add("Authorization", "Token <TOKEN>")
+
+  res, err := client.Do(req)
+  if err != nil {
+    fmt.Println(err)
+    return
+  }
+  defer res.Body.Close()
+
+  body, err := ioutil.ReadAll(res.Body)
+  if err != nil {
+    fmt.Println(err)
+    return
+  }
+  fmt.Println(string(body))
+}
+```
+
+```ruby
+require "uri"
+require "json"
+require "net/http"
+
+url = URI("https://api.netbird.io/api/agent-network/settings")
+
+https = Net::HTTP.new(url.host, url.port)
+https.use_ssl = true
+
+request = Net::HTTP::Delete.new(url)
+request["Authorization"] = "Token <TOKEN>"
+
+response = https.request(request)
+puts response.read_body
+```
+
+```java
+OkHttpClient client = new OkHttpClient().newBuilder()
+  .build();
+
+Request request = new Request.Builder()
+  .url("https://api.netbird.io/api/agent-network/settings")
+  .method("DELETE")    
+  .addHeader("Authorization: Token <TOKEN>")
+  .build();
+Response response = client.newCall(request).execute();
+```
+
+```php
+<?php
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => 'https://api.netbird.io/api/agent-network/settings',
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => '',
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 0,
+  CURLOPT_FOLLOWLOCATION => true,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => 'DELETE',  
+  CURLOPT_HTTPHEADER => array(        
+    'Authorization: Token <TOKEN>'
+  ),
+));
+
+$response = curl_exec($curl);
+
+curl_close($curl);
+echo $response;
 ```
 
 ***
@@ -3661,10 +4097,6 @@ Display name for the provider.
 
 Full upstream URL (with scheme) that NetBird forwards traffic to.
 
-**bootstrap\_cluster (type: string; optional)**
-
-Proxy cluster used to bootstrap the per-account agent-network endpoint when the first provider is created. Ignored on subsequent creates and on updates because the cluster is pinned on the account-level Settings row.
-
 **api\_key (type: string; optional)**
 
 Upstream provider API key. Sealed at rest on the management server and never returned in responses. Required on create; optional on update (omit to keep the existing key).
@@ -3734,7 +4166,6 @@ curl -X POST https://api.netbird.io/api/agent-network/providers \
   "provider_id": "openai_api",
   "name": "OpenAI API",
   "upstream_url": "https://api.openai.com",
-  "bootstrap_cluster": "eu.proxy.netbird.io",
   "api_key": "sk-...",
   "models": [
     {
@@ -3763,7 +4194,6 @@ let data = JSON.stringify({
   "provider_id": "openai_api",
   "name": "OpenAI API",
   "upstream_url": "https://api.openai.com",
-  "bootstrap_cluster": "eu.proxy.netbird.io",
   "api_key": "sk-...",
   "models": [
     {
@@ -3814,7 +4244,6 @@ payload = json.dumps({
   "provider_id": "openai_api",
   "name": "OpenAI API",
   "upstream_url": "https://api.openai.com",
-  "bootstrap_cluster": "eu.proxy.netbird.io",
   "api_key": "sk-...",
   "models": [
     {
@@ -3865,7 +4294,6 @@ func main() {
   "provider_id": "openai_api",
   "name": "OpenAI API",
   "upstream_url": "https://api.openai.com",
-  "bootstrap_cluster": "eu.proxy.netbird.io",
   "api_key": "sk-...",
   "models": [
     {
@@ -3935,7 +4363,6 @@ request.body = JSON.dump({
   "provider_id": "openai_api",
   "name": "OpenAI API",
   "upstream_url": "https://api.openai.com",
-  "bootstrap_cluster": "eu.proxy.netbird.io",
   "api_key": "sk-...",
   "models": [
     {
@@ -3968,7 +4395,6 @@ RequestBody body = RequestBody.create(mediaType, '{
   "provider_id": "openai_api",
   "name": "OpenAI API",
   "upstream_url": "https://api.openai.com",
-  "bootstrap_cluster": "eu.proxy.netbird.io",
   "api_key": "sk-...",
   "models": [
     {
@@ -4017,7 +4443,6 @@ curl_setopt_array($curl, array(
   "provider_id": "openai_api",
   "name": "OpenAI API",
   "upstream_url": "https://api.openai.com",
-  "bootstrap_cluster": "eu.proxy.netbird.io",
   "api_key": "sk-...",
   "models": [
     {
@@ -4376,10 +4801,6 @@ Display name for the provider.
 
 Full upstream URL (with scheme) that NetBird forwards traffic to.
 
-**bootstrap\_cluster (type: string; optional)**
-
-Proxy cluster used to bootstrap the per-account agent-network endpoint when the first provider is created. Ignored on subsequent creates and on updates because the cluster is pinned on the account-level Settings row.
-
 **api\_key (type: string; optional)**
 
 Upstream provider API key. Sealed at rest on the management server and never returned in responses. Required on create; optional on update (omit to keep the existing key).
@@ -4449,7 +4870,6 @@ curl -X PUT https://api.netbird.io/api/agent-network/providers/{providerId} \
   "provider_id": "openai_api",
   "name": "OpenAI API",
   "upstream_url": "https://api.openai.com",
-  "bootstrap_cluster": "eu.proxy.netbird.io",
   "api_key": "sk-...",
   "models": [
     {
@@ -4478,7 +4898,6 @@ let data = JSON.stringify({
   "provider_id": "openai_api",
   "name": "OpenAI API",
   "upstream_url": "https://api.openai.com",
-  "bootstrap_cluster": "eu.proxy.netbird.io",
   "api_key": "sk-...",
   "models": [
     {
@@ -4529,7 +4948,6 @@ payload = json.dumps({
   "provider_id": "openai_api",
   "name": "OpenAI API",
   "upstream_url": "https://api.openai.com",
-  "bootstrap_cluster": "eu.proxy.netbird.io",
   "api_key": "sk-...",
   "models": [
     {
@@ -4580,7 +4998,6 @@ func main() {
   "provider_id": "openai_api",
   "name": "OpenAI API",
   "upstream_url": "https://api.openai.com",
-  "bootstrap_cluster": "eu.proxy.netbird.io",
   "api_key": "sk-...",
   "models": [
     {
@@ -4650,7 +5067,6 @@ request.body = JSON.dump({
   "provider_id": "openai_api",
   "name": "OpenAI API",
   "upstream_url": "https://api.openai.com",
-  "bootstrap_cluster": "eu.proxy.netbird.io",
   "api_key": "sk-...",
   "models": [
     {
@@ -4683,7 +5099,6 @@ RequestBody body = RequestBody.create(mediaType, '{
   "provider_id": "openai_api",
   "name": "OpenAI API",
   "upstream_url": "https://api.openai.com",
-  "bootstrap_cluster": "eu.proxy.netbird.io",
   "api_key": "sk-...",
   "models": [
     {
@@ -4732,7 +5147,6 @@ curl_setopt_array($curl, array(
   "provider_id": "openai_api",
   "name": "OpenAI API",
   "upstream_url": "https://api.openai.com",
-  "bootstrap_cluster": "eu.proxy.netbird.io",
   "api_key": "sk-...",
   "models": [
     {

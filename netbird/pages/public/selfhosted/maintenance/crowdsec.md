@@ -1,8 +1,8 @@
-> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/maintenance/crowdsec.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/selfhosted/maintenance/crowdsec.mdx)
+> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/selfhosted/maintenance/crowdsec.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/selfhosted/maintenance/crowdsec.mdx)
 
 # CrowdSec IP Reputation
 
-![CrowdSec IP Reputation Overview](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/maintenance/crowdsec-overview.png)
+![CrowdSec IP Reputation Overview](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/maintenance/crowdsec-overview.png)
 
 [CrowdSec](https://www.crowdsec.net) is an open-source security engine that combines local detection with a crowdsourced threat feed. Agents installed across the CrowdSec community share decisions about malicious IPs, and that shared intelligence is redistributed as blocklists that any CrowdSec instance can consume. NetBird Proxy integrates with CrowdSec to check every incoming client IP against a local decision cache and block connections from flagged addresses before they reach your services. For background on the wider CrowdSec platform, see the [CrowdSec documentation](https://docs.crowdsec.net).
 
@@ -48,7 +48,7 @@ CrowdSec decisions include several remediation types (ban, captcha, throttle). T
 
 Observe-mode verdicts are recorded in the NetBird proxy access logs, not in the CrowdSec Console. When a service is in observe mode and CrowdSec flags an IP, the connection is allowed but the verdict is attached to the log entry as metadata, while the `deny_reason` field stays empty. In the dashboard's reverse proxy event log, these entries render with an observe-mode badge on the reason cell and show the decision type (ban, captcha, throttle, unavailable) so you can audit what would have been blocked before switching the service to enforce. The CrowdSec Console shows the aggregate view of community decisions and scenarios but does not know which of your proxy requests the bouncer was consulted on.
 
-![CrowdSec observe-mode badge in proxy event logs](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/maintenance/crowdsec-observe-badge.png)
+![CrowdSec observe-mode badge in proxy event logs](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/maintenance/crowdsec-observe-badge.png)
 
 Access restrictions are evaluated in a fixed order: CIDR, then country, then CrowdSec. A denial at any earlier layer short-circuits the rest, and CrowdSec can never relax a CIDR or country decision. See the [restriction evaluation order](https://docs.netbird.io/manage/reverse-proxy/authentication#restriction-evaluation-order) reference for the full precedence table and worked examples.
 

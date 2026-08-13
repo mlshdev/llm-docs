@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/integrations/mdm-deployment/kandji-netbird-integration.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/manage/integrations/mdm-deployment/kandji-netbird-integration.mdx)
+> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/manage/peers/mdm-deployment/kandji-netbird-integration.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/manage/peers/mdm-deployment/kandji-netbird-integration.mdx)
 
 # Deploying NetBird with Kandji MDM
 
@@ -30,11 +30,11 @@ For instance, let's suppose you want to create a policy that allows the `Support
 - Set the source group to `Support` and the destination group to `Servers`.
 - Choose the appropriate protocol and port settings (e.g., TCP 22).
 
-\[Image unavailable: Creating a new access policy for the Support team]
+![Creating a new access policy for the Support team](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/peers/mdm-deployment/kandji-netbird-integration/netbird-kandji-01.png)
 
 Give the policy a descriptive name (e.g., Support team remote access) and click `Save` to create the policy.
 
-\[Image unavailable: Support team access policy]
+![Support team access policy](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/peers/mdm-deployment/kandji-netbird-integration/netbird-kandji-02.png)
 
 Now that you've configured NetBird, let's shift the focus to Kandji MDM integration and set up the automated deployment of NetBird on support team devices.
 
@@ -42,13 +42,13 @@ Now that you've configured NetBird, let's shift the focus to Kandji MDM integrat
 
 Navigate to `Library` and click `Add new`. Then, find and select `Custom Apps` and click `Add & Configure` to deploy a new [Custom App](https://www.support.kandji.io/support/solutions/articles/72000559807-deploying-custom-apps).
 
-\[Image unavailable: Creating a new Custom App in Kandji]
+![Creating a new Custom App in Kandji](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/peers/mdm-deployment/kandji-netbird-integration/netbird-kandji-04.png)
 
 Give the Custom App a descriptive name (e.g., NetBird\_vX.XX\_Support\_Team, where X.XX is the current version of NetBird being deployed). Scroll down to **Install Details**, where you'll see different options.
 
 Select `Installer Package` to install NetBird using the official macOS package. Using a package ensures you're installing the exact same version on all devices. This example uses the Apple Silicon package that you can download [here](https://pkgs.netbird.io/macos/arm64). Drag the file to the `Installer Package` field box to upload it to Kandji MDM.
 
-\[Image unavailable: Creating a new Custom App in Kandji]
+![Creating a new Custom App in Kandji](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/peers/mdm-deployment/kandji-netbird-integration/netbird-kandji-05.png)
 
 Next, click on `Add Preinstall Script` and paste the following code:
 
@@ -142,41 +142,41 @@ For instance, you can [create tags](https://www.support.kandji.io/support/soluti
 
 To create a tag in Kandji MDM, go to `DEVICES`, click on the hamburger menu at the top right, and select `Manage tags`:
 
-\[Image unavailable: Manage Tags in Kandji]
+![Manage Tags in Kandji](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/peers/mdm-deployment/kandji-netbird-integration/netbird-kandji-06.png)
 
 A new pop-up window will appear; click `+ Add tag`, enter a name for the tag (e.g., `Support`), and click `Save`.
 
-\[Image unavailable: Creating a new Tag]
+![Creating a new Tag](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/peers/mdm-deployment/kandji-netbird-integration/netbird-kandji-07.png)
 
 Navigate to the `BLUEPRINTS` section in Kandji and click the `New Blueprint` dropdown. Select `New Assignment Map` from the options. In the new window, you'll be presented with preconfigured templates or the option to start a new Blueprint from scratch. For this custom NetBird deployment, choose to start a new Blueprint from scratch.
 
-\[Image unavailable: Creating a new Blueprint]
+![Creating a new Blueprint](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/peers/mdm-deployment/kandji-netbird-integration/netbird-kandji-08.png)
 
 Give the Blueprint a descriptive name (e.g., NetBird\_Apple\_Silicon) and click `Create Blueprint`. This action will open Kandji's visual Blueprint builder, where you'll configure the deployment logic for NetBird.
 
 Click `Edit assignments` to start editing the Blueprint.
 
-\[Image unavailable: Blank Blueprint]
+![Blank Blueprint](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/peers/mdm-deployment/kandji-netbird-integration/netbird-kandji-09.png)
 
 You'll see a list of apps from the library on the left, including the recently created NetBird custom app. To implement the deployment logic, hover over the `+` sign and click it to add a new conditional block. This block will determine which devices receive the NetBird installation based on specific criteria.
 
-\[Image unavailable: Add new Block to the Blueprint]
+![Add new Block to the Blueprint](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/peers/mdm-deployment/kandji-netbird-integration/netbird-kandji-10.png)
 
 Next, click the pencil icon to edit the rules.
 
-\[Image unavailable: Add Logic to the Blueprint]
+![Add Logic to the Blueprint](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/peers/mdm-deployment/kandji-netbird-integration/netbird-kandji-11.png)
 
 In the **Assignment Rules** window, configure the conditions for NetBird installation. Use the `Support` tag to trigger the deployment, ensuring NetBird is installed only on devices assigned to the support team. Press `Confirm` to continue.
 
-\[Image unavailable: Using Tags to target the support team]
+![Using Tags to target the support team](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/peers/mdm-deployment/kandji-netbird-integration/netbird-kandji-12.png)
 
 Back to the visual Blueprint builder, locate the NetBird custom app and drag it into the newly created conditional block. This action associates the NetBird installation with the specified deployment criteria for the support team.
 
-\[Image unavailable: Add NetBird custom app to Blueprint logic]
+![Add NetBird custom app to Blueprint logic](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/peers/mdm-deployment/kandji-netbird-integration/netbird-kandji-13.png)
 
 Click `Save` to update the Blueprint with the new logic. This action also assigns the Blueprint to the NetBird custom app, finalizing the deployment pipeline configuration.
 
-\[Image unavailable: Finished Blueprint]
+![Finished Blueprint](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/peers/mdm-deployment/kandji-netbird-integration/netbird-kandji-14.png)
 
 ## Testing and Verifying the Automated Provisioning Pipeline
 
@@ -184,10 +184,10 @@ Kandji checks devices every 15 minutes by default, so any device tagged with `Su
 
 To verify the deployment pipeline, navigate to `DEVICES` in Kandji, select an enrolled device, and click `Edit device details` > `Edit tags`. Assign the `Support` tag to trigger the NetBird installation.
 
-\[Image unavailable: Verifying Blueprint logic]
+![Verifying Blueprint logic](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/peers/mdm-deployment/kandji-netbird-integration/netbird-kandji-15.png)
 
 You can also confirm the process in NetBird. Log in to a NetBird account with administrative privileges, navigate to `Peers`, and look for the new device.
 
-\[Image unavailable: Verifying peer in NetBird]
+![Verifying peer in NetBird](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/peers/mdm-deployment/kandji-netbird-integration/netbird-kandji-16.png)
 
 In this tutorial, you've learned how to integrate NetBird's VPN solution with Kandji MDM for Apple devices. By configuring NetBird Access Policies, creating Kandji MDM Blueprints, and setting up an automated deployment pipeline, you've established a robust system for managing network access across your organization.

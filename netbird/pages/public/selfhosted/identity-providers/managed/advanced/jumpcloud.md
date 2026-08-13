@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/identity-providers/managed/advanced/jumpcloud.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/selfhosted/identity-providers/managed/advanced/jumpcloud.mdx)
+> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/selfhosted/identity-providers/managed/advanced/jumpcloud.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/selfhosted/identity-providers/managed/advanced/jumpcloud.mdx)
 
 # JumpCloud SSO with NetBird Self-Hosted (Legacy)
 
@@ -29,25 +29,25 @@ For most deployments, the [embedded IdP](https://docs.netbird.io/selfhosted/iden
 2. Click **SSO Applications** under **USER AUTHENTICATION**
 3. Click **Add New Application** → **Custom Application**
 
-![New SSO app](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/managed/jumpcloud/advanced/jumpcloud-new-sso-app.png)
+![New SSO app](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/jumpcloud/advanced/jumpcloud-new-sso-app.png)
 
 4. Confirm **Custom application** selected and click **Next**
 
-![Confirm selection](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/managed/jumpcloud/advanced/jumpcloud-new-sso-app-confirm-selection.png)
+![Confirm selection](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/jumpcloud/advanced/jumpcloud-new-sso-app-confirm-selection.png)
 
 5. Select **Manage Single Sign-On (SSO)** and check **Configure SSO with OIDC**
 6. Click **Next**
 
-![SSO features](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/managed/jumpcloud/advanced/jumpcloud-new-sso-app-features.png)
+![SSO features](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/jumpcloud/advanced/jumpcloud-new-sso-app-features.png)
 
 7. Enter **Display Label**: `NetBird`
 8. Click **Next**
 
-![General info](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/managed/jumpcloud/advanced/jumpcloud-new-sso-app-general-info.png)
+![General info](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/jumpcloud/advanced/jumpcloud-new-sso-app-general-info.png)
 
 9. Review and click **Configure Application**
 
-![Confirmation](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/managed/jumpcloud/advanced/jumpcloud-new-sso-app-confirmation.png)
+![Confirmation](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/jumpcloud/advanced/jumpcloud-new-sso-app-confirmation.png)
 
 10. On the **SSO** tab, configure:
     - **Redirect URIs**:
@@ -57,20 +57,20 @@ For most deployments, the [embedded IdP](https://docs.netbird.io/selfhosted/iden
     - **Client Authentication Type**: `Public (None PKCE)`
     - **Login URL**: `https://<domain>`
 
-![SSO configuration](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/managed/jumpcloud/advanced/jumpcloud-sso-configuration.png)
+![SSO configuration](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/jumpcloud/advanced/jumpcloud-sso-configuration.png)
 
 11. Under **Attribute Mapping (optional)**:
     - **Standard Scopes**: `Email`, `Profile`
 
-![Attribute configuration](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/managed/jumpcloud/advanced/jumpcloud-sso-atributes-configuration.png)
+![Attribute configuration](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/jumpcloud/advanced/jumpcloud-sso-atributes-configuration.png)
 
 12. Click **User Groups** tab and select groups that can access the application
 
-![User groups](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/managed/jumpcloud/advanced/jumpcloud-user-groups.png)
+![User groups](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/jumpcloud/advanced/jumpcloud-user-groups.png)
 
 13. Click **Activate**
 
-![OIDC app](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/managed/jumpcloud/advanced/jumpcloud-oidc-app.png)
+![OIDC app](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/jumpcloud/advanced/jumpcloud-oidc-app.png)
 
 14. Note the **Client ID**
 
@@ -91,7 +91,7 @@ The NetBird management system requires an API token to get user information from
    - **Role**: `Read Only`
 4. Click **Save**
 
-![Add admin user](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/managed/jumpcloud/advanced/jumpcloud-add-admin-user.png)
+![Add admin user](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/jumpcloud/advanced/jumpcloud-add-admin-user.png)
 
 > **Note**
 >
@@ -104,12 +104,12 @@ The NetBird management system requires an API token to get user information from
 1. Log in to [Admin Portal](https://console.jumpcloud.com/) with the integration user
 2. Click the account initials (top-right) → **My API Key**
 
-![Profile](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/managed/jumpcloud/advanced/jumpcloud-profile.png)
+![Profile](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/jumpcloud/advanced/jumpcloud-profile.png)
 
 3. If no key exists, click **Generate New API Key**
 4. Copy the API token
 
-![API key generation](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/managed/jumpcloud/advanced/jumpcloud-api-key-generation.png)
+![API key generation](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/jumpcloud/advanced/jumpcloud-api-key-generation.png)
 
 ### Step 4: Configure NetBird
 

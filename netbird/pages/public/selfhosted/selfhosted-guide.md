@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/selfhosted-guide.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/selfhosted/selfhosted-guide.mdx)
+> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/selfhosted/selfhosted-guide.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/selfhosted/selfhosted-guide.mdx)
 
 # Advanced guide
 
@@ -70,7 +70,7 @@ Since version 0.29, NetBird uses a consolidated port architecture where Manageme
 
 > **Note**
 >
-> The default setup script configures a Caddy reverse proxy that consolidates all services behind ports 80 and 443. If you're running NetBird behind your own reverse proxy, see the [advanced configuration](#advanced-running-netbird-behind-an-existing-reverse-proxy) section.
+> The default setup script configures a Traefik reverse proxy that consolidates all services behind ports 80 and 443. If you're running NetBird behind your own reverse proxy, see the [advanced configuration](#advanced-running-netbird-behind-an-existing-reverse-proxy) section.
 
 > **Note**
 >

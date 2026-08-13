@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/identity-providers/advanced/authentik.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/selfhosted/identity-providers/advanced/authentik.mdx)
+> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/selfhosted/identity-providers/advanced/authentik.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/selfhosted/identity-providers/advanced/authentik.mdx)
 
 # Authentik SSO with NetBird Self-Hosted (Advanced)
 
@@ -34,7 +34,7 @@ For most deployments, the [embedded IdP](https://docs.netbird.io/selfhosted/iden
 3. Click **Create** to create a new provider
 4. Select **OAuth2/OpenID Provider** and click **Next**
 
-![Select provider type](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/authentik/authentik-new-provider-type.png)
+![Select provider type](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/self-hosted/authentik/authentik-new-provider-type.png)
 
 5. Fill in the form with the following values:
    - **Name**: `NetBird`
@@ -48,7 +48,7 @@ For most deployments, the [embedded IdP](https://docs.netbird.io/selfhosted/iden
      - Subject mode: `Based on the User's ID`
    - **Signing Key**: Select any cert present, e.g., `authentik Self-signed Certificate`
 
-![Provider configuration](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/authentik/authentik-new-provider-config.png)
+![Provider configuration](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/self-hosted/authentik/authentik-new-provider-config.png)
 
 6. Click **Finish**
 7. Note the **Client ID** for later use
@@ -63,7 +63,7 @@ For most deployments, the [embedded IdP](https://docs.netbird.io/selfhosted/iden
    - **Provider**: Select the `NetBird` provider you created
 4. Click **Create**
 
-![Create application](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/authentik/authentik-new-application.png)
+![Create application](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/self-hosted/authentik/authentik-new-application.png)
 
 ### Step 3: Create Service Account
 
@@ -75,7 +75,7 @@ For most deployments, the [embedded IdP](https://docs.netbird.io/selfhosted/iden
    - **Create Group**: Disable
 5. Click **Create**
 
-![Create service account](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/authentik/authentik-new-service-account.png)
+![Create service account](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/self-hosted/authentik/authentik-new-service-account.png)
 
 6. Note the service account username
 7. Create an app password: Go to **Directory** → **Tokens and App passwords**
@@ -90,7 +90,7 @@ For most deployments, the [embedded IdP](https://docs.netbird.io/selfhosted/iden
 4. Select **Netbird** and click **Add**
 5. Disable **Hide service-accounts** and verify the user is added
 
-![Add user to group](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/authentik/authentik-add-user-group.png)
+![Add user to group](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/self-hosted/authentik/authentik-add-user-group.png)
 
 ### Step 5: Create Device Code Flow
 
@@ -102,14 +102,14 @@ For most deployments, the [embedded IdP](https://docs.netbird.io/selfhosted/iden
    - **Authentication**: `Require authentication`
 3. Click **Create**
 
-![Create device flow](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/authentik/authentik-new-device-flow.png)
+![Create device flow](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/self-hosted/authentik/authentik-new-device-flow.png)
 
 4. Click **System** on the left menu, then click **Brands**
 5. Click edit on **authentik-default**
 6. Under **Default flows**, set **Device code flow** to `default-device-code-flow`
 7. Click **Update**
 
-![Configure brand device flow](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/authentik/authentik-brand-device-flow.png)
+![Configure brand device flow](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/self-hosted/authentik/authentik-brand-device-flow.png)
 
 ### Step 6: Configure NetBird
 

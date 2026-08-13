@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/troubleshooting/certificates.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/selfhosted/troubleshooting/certificates.mdx)
+> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/selfhosted/troubleshooting/certificates.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/selfhosted/troubleshooting/certificates.mdx)
 
 # Certificate issues
 
@@ -10,9 +10,11 @@ TLS and certificate problems on a self-hosted deployment. For other areas, start
 
 **Likely causes and fixes** (most common first):
 
-1. **Port 80 is not reachable from the internet.** The ACME HTTP challenge (how Let's Encrypt validates your domain) needs inbound TCP/80. Confirm your firewall and cloud security groups allow it.
+1. **Port 443 is not reachable from the internet.** The bundled Traefik proxy validates with the TLS-ALPN-01 challenge, which runs over inbound TCP/443. Confirm your firewall and cloud security groups allow it. Port 80 only serves the HTTP→HTTPS redirect and is not used for validation, so opening it does not fix issuance.
 2. **The domain no longer points at this host.** Verify the `A`/`AAAA` record resolves to the server's public IP.
-3. **A renewal error in the proxy.** Check the certificate manager's logs: `docker compose logs caddy`. If needed, force a reload: `docker exec -it netbird-caddy caddy reload`.
+3. **A renewal error in the proxy.** Check the proxy's logs: `docker compose logs traefik`. Traefik reloads its configuration on its own, so there is no reload command; if you need to force a retry, restart the container with `docker compose restart traefik`.
+
+Deployments created before NetBird switched to Traefik may still run Caddy, which can also use the HTTP-01 challenge on port 80. On those, keep inbound TCP/80 open and check `docker compose logs caddy` instead.
 
 **Confirm**: `curl -vI https://YOUR_DOMAIN 2>&1 | grep -E "issuer|expire"` shows a current Let's Encrypt certificate.
 

@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/client/mdm-integration.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/client/mdm-integration.mdx)
+> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/client/mdm-integration.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/client/mdm-integration.mdx)
 
 # MDM Integration
 
@@ -121,6 +121,8 @@ Choose one of the delivery channels below. All four converge on the
 same registry key.
 
 ### Group Policy (on-prem AD / local gpedit)
+
+For a full end-to-end walkthrough — domain Central Store, GPO creation, silent MSI install, and troubleshooting — see [Deploying NetBird with Group Policy (GPO)](https://docs.netbird.io/manage/peers/mdm-deployment/windows-gpo-deployment). The steps below cover the minimal local setup.
 
 1. Copy the ADMX/ADML files into the system Policy Definitions store:
    - Place `netbird.admx` in `C:\Windows\PolicyDefinitions\`.

@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/peers/add-machines-to-your-network.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/manage/peers/add-machines-to-your-network.mdx)
+> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/manage/peers/add-machines-to-your-network.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/manage/peers/add-machines-to-your-network.mdx)
 
 # Add peers to your NetBird network
 
@@ -22,15 +22,15 @@ To add a new peer to your network follow these steps:
 1. Sign-in to your NetBird account at <https://app.netbird.io/> and go to `Peers`.
 2. Hit `Add Peer` button
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/add-machines-to-your-network/add-new-peer-empty.png)
+![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/peers/add-machines-to-your-network/add-new-peer-empty.png)
 
 3. Follow the instructions
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/add-machines-to-your-network/add-new-peer-popup.png)
+![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/peers/add-machines-to-your-network/add-new-peer-popup.png)
 
 4. Refresh the Peers view, and it will display new machines
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/peers/add-machines-to-your-network/peer-list.png)
+![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/peers/add-machines-to-your-network/peer-list.png)
 
 ## What's next?
 

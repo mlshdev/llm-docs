@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/get-started/install/macos.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/get-started/install/macos.mdx)
+> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/get-started/install/macos.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/get-started/install/macos.mdx)
 
 # MacOS Installation
 
@@ -64,7 +64,7 @@ If you need only the CLI client without the desktop UI — for example, on headl
 
 > **Warning**
 >
-> The macOS binary tarballs from GitHub releases are **not Apple code-signed or notarized**. Only the official `.pkg` installer from [pkgs.netbird.io](https://pkgs.netbird.io) contains signed binaries. The unsigned binary will trigger Gatekeeper warnings and may be blocked by MDM policies. For managed fleet deployments, see [Building a CLI-Only .pkg for MDM Deployment](https://docs.netbird.io/manage/integrations/mdm-deployment/macos-cli-pkg-deployment) which includes steps for signing the binary with your own Developer ID.
+> The macOS binary tarballs from GitHub releases are **not Apple code-signed or notarized**. Only the official `.pkg` installer from [pkgs.netbird.io](https://pkgs.netbird.io) contains signed binaries. The unsigned binary will trigger Gatekeeper warnings and may be blocked by MDM policies. For managed fleet deployments, see [Building a CLI-Only .pkg for MDM Deployment](https://docs.netbird.io/manage/peers/mdm-deployment/macos-cli-pkg-deployment) which includes steps for signing the binary with your own Developer ID.
 
 The install script supports a binary-only mode that downloads the tarball, extracts the `netbird` binary to `/usr/local/bin/`, and registers the launchd daemon:
 
@@ -118,7 +118,7 @@ This creates a launchd daemon at `/Library/LaunchDaemons/netbird.plist` that run
 
 > **Warning**
 >
-> Automatic updates via the NetBird dashboard do **not** work for binary-only installs. The auto-updater requires the official `.pkg` installer (it checks for the `io.netbird.client` package receipt). For binary installs, you must update manually or push updates through your MDM solution. See [Building a CLI-Only .pkg for MDM Deployment](https://docs.netbird.io/manage/integrations/mdm-deployment/macos-cli-pkg-deployment) for a managed approach.
+> Automatic updates via the NetBird dashboard do **not** work for binary-only installs. The auto-updater requires the official `.pkg` installer (it checks for the `io.netbird.client` package receipt). For binary installs, you must update manually or push updates through your MDM solution. See [Building a CLI-Only .pkg for MDM Deployment](https://docs.netbird.io/manage/peers/mdm-deployment/macos-cli-pkg-deployment) for a managed approach.
 
 ## Running NetBird with SSO Login
 
@@ -136,7 +136,7 @@ netbird up
 
 > It will open your browser, and you will be prompt for email and password. Follow the instructions.
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/get-started/netbird-sso-login-cmd.gif)
+![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/get-started/netbird-sso-login-cmd.gif)
 
 Check connection status:
 

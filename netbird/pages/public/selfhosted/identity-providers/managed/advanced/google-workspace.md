@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/identity-providers/managed/advanced/google-workspace.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/selfhosted/identity-providers/managed/advanced/google-workspace.mdx)
+> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/selfhosted/identity-providers/managed/advanced/google-workspace.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/selfhosted/identity-providers/managed/advanced/google-workspace.mdx)
 
 # Google Workspace SSO with NetBird Self-Hosted (Legacy)
 
@@ -40,7 +40,7 @@ For most deployments, the [embedded IdP](https://docs.netbird.io/selfhosted/iden
 1. Navigate to [OAuth consent](https://console.cloud.google.com/apis/credentials/consent)
 2. Select **Internal** User Type and click **Create**
 
-![Consent screen type](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/advanced/google-consent-screen-type.png)
+![Consent screen type](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/advanced/google-consent-screen-type.png)
 
 3. Fill in the form:
    - **App name**: `Netbird`
@@ -52,12 +52,12 @@ For most deployments, the [embedded IdP](https://docs.netbird.io/selfhosted/iden
 6. Select `/auth/userinfo.email`, `/auth/userinfo.profile`, and `openid`
 7. Click **UPDATE**
 
-![Consent screen scopes](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/advanced/google-consent-screen-scopes.png)
+![Consent screen scopes](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/advanced/google-consent-screen-scopes.png)
 
 8. Click **SAVE AND CONTINUE**
 9. Review the summary and click **BACK TO DASHBOARD**
 
-![Consent screen summary](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/advanced/google-consent-screen-summary.png)
+![Consent screen summary](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/advanced/google-consent-screen-summary.png)
 
 ### Step 2: Create OAuth 2.0 Credentials
 
@@ -73,11 +73,11 @@ For most deployments, the [embedded IdP](https://docs.netbird.io/selfhosted/iden
      - `http://localhost:53000`
 4. Click **CREATE**
 
-![OAuth client](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/advanced/google-oauth-client.png)
+![OAuth client](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/advanced/google-oauth-client.png)
 
 5. Note **Client ID** and **Client Secret**
 
-![OAuth client created](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/advanced/google-oauth-client-created.png)
+![OAuth client created](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/advanced/google-oauth-client-created.png)
 
 ### Step 3: Create Service Account
 
@@ -89,14 +89,14 @@ For most deployments, the [embedded IdP](https://docs.netbird.io/selfhosted/iden
 4. Note the service account email address
 5. Click **DONE**
 
-![Create service account](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/advanced/google-service-account-create.png)
+![Create service account](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/advanced/google-service-account-create.png)
 
 ### Step 4: Create Service Account Keys
 
 1. Navigate to [API Credentials](https://console.cloud.google.com/apis/credentials)
 2. Under **Service Accounts**, click **netbird** to edit
 
-![Edit service account](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/advanced/google-edit-service-account.png)
+![Edit service account](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/advanced/google-edit-service-account.png)
 
 3. Click the **Keys** tab
 4. Click **Add key** → **Create new key**
@@ -118,22 +118,22 @@ For most deployments, the [embedded IdP](https://docs.netbird.io/selfhosted/iden
    - **Description**: `User Management ReadOnly`
 5. Click **CONTINUE**
 
-![New role info](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/advanced/google-new-role-info.png)
+![New role info](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/advanced/google-new-role-info.png)
 
 6. Scroll to **Admin API privileges** and add:
    - **Users**: `Read`
 7. Click **CONTINUE**
 
-![Privileges review](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/advanced/google-privileges-review.png)
+![Privileges review](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/advanced/google-privileges-review.png)
 
 8. Click **CREATE ROLE**
 9. Click **Assign service accounts**
 10. Add the service account email address
 11. Click **ADD** then **ASSIGN ROLE**
 
-![Assign role](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/advanced/google-assign-role.png)
+![Assign role](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/advanced/google-assign-role.png)
 
-![Service account privileges](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/advanced/google-service-account-privileges.png)
+![Service account privileges](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/advanced/google-service-account-privileges.png)
 
 12. Navigate to [Account Settings](https://admin.google.com/ac/accountsettings/profile) and note the **Customer ID**
 

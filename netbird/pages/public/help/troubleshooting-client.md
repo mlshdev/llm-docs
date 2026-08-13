@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/help/troubleshooting-client.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/help/troubleshooting-client.mdx)
+> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/help/troubleshooting-client.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/help/troubleshooting-client.mdx)
 
 # Troubleshooting client issues
 
@@ -265,7 +265,7 @@ Upload file key:
 
 The desktop app can create and optionally upload a debug bundle without using the CLI. Open **Settings → Troubleshoot**.
 
-![Troubleshoot settings in the NetBird desktop app](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/help/troubleshooting-client/ui-settings.png)
+![Troubleshoot settings in the NetBird desktop app](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/help/troubleshooting-client/ui-settings.png)
 
 Choose the data and capture behavior that fits the issue:
 
@@ -277,7 +277,7 @@ Choose the data and capture behavior that fits the issue:
 - **Capture packets** adds a packet capture while collecting new logs. Packet captures are excluded from anonymized bundles because they contain raw packets.
 - **Capture duration** accepts 1–30 minutes.
 
-![Debug bundle capture options in the NetBird desktop app](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/help/troubleshooting-client/ui-bundle-wizard.png)
+![Debug bundle capture options in the NetBird desktop app](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/help/troubleshooting-client/ui-bundle-wizard.png)
 
 Click **Create debug bundle**. You can cancel while logs are being collected. When the operation finishes:
 
@@ -286,7 +286,7 @@ Click **Create debug bundle**. You can cancel while logs are being collected. Wh
 
 In both cases, the ZIP is stored locally in the platform's temporary directory listed above.
 
-![Completed debug bundle uploaded with a key in the NetBird desktop app](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/help/troubleshooting-client/ui-bundle-success.png)
+![Completed debug bundle uploaded with a key in the NetBird desktop app](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/help/troubleshooting-client/ui-bundle-success.png)
 
 If you kept the bundle local, attach the ZIP through the support channel you are using.
 

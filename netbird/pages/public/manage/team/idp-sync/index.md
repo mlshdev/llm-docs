@@ -1,8 +1,8 @@
-> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/team/idp-sync/index.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/manage/team/idp-sync/index.mdx)
+> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/manage/team/idp-sync/index.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/manage/team/idp-sync/index.mdx)
 
 # Provision Users and Groups From Your Identity Provider
 
-![supported-identity-providers](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/team/idp-sync/supported-identity-providers.png)
+![supported-identity-providers](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/team/idp-sync/supported-identity-providers.png)
 
 Managing private network access in a business environment is a critical yet often cumbersome task.
 As companies grow and evolve, the manual process of granting access for new employees and revoking it for
@@ -62,4 +62,4 @@ SCIM is a standardized protocol that works with most modern identity providers, 
 
 If your provider is not listed above, contact us at <support@netbird.io> for assistance with your specific IdP setup.
 
-![generic-scim](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/team/idp-sync/generic-scim.png)
+![generic-scim](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/team/idp-sync/generic-scim.png)

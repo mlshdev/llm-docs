@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/dns/index.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/manage/dns/index.mdx)
+> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/manage/dns/index.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/manage/dns/index.mdx)
 
 # DNS in NetBird
 
@@ -26,7 +26,7 @@ NetBird gives you centralized control over DNS resolution for all peers in your 
 
 ### Architecture Overview
 
-![NetBird DNS Diagram](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/dns/netbird-dns-diagram.png)
+![NetBird DNS Diagram](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/dns/netbird-dns-diagram.png)
 
 #### NetBird's DHCP Role
 
@@ -99,7 +99,7 @@ If you don't configure any nameservers in NetBird, the behavior varies by platfo
 NetBird configures the operating system to use its DNS resolver:
 
 - **Linux**: Always sets up DNS via `/etc/resolv.conf` or `resolvconf`. Original nameservers preserved as upstream.
-- **macOS**: Uses system APIs (does **not** modify `/etc/resolv.conf` directly)
+- **macOS**: Uses system APIs. Match-domain nameservers become scoped resolvers (visible in `scutil --dns`, not in `/etc/resolv.conf`); a primary nameserver makes macOS regenerate `/etc/resolv.conf` with NetBird's resolver in it
 - **Windows**: Sets the network adapter's DNS server to the local NetBird resolver
 - **Android/iOS**: Uses VPN DNS configuration
 
@@ -141,4 +141,4 @@ You can disable DNS management for specific groups in [DNS Settings](https://doc
 - **[Custom Zones](https://docs.netbird.io/manage/dns/custom-zones)** - Create private DNS records distributed to peers
 - **[Extra DNS Labels](https://docs.netbird.io/manage/dns/extra-dns-labels)** - Assign additional DNS names to peers for service discovery and load balancing
 - **[Troubleshooting](https://docs.netbird.io/manage/dns/troubleshooting)** - Diagnose DNS issues
-- **[API Reference](https://docs.netbird.io/ipa/resources/dns)** - Automate DNS configuration
+- **[API Reference](https://docs.netbird.io/api/resources/dns)** - Automate DNS configuration

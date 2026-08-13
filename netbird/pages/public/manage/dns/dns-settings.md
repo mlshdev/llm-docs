@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/dns/dns-settings.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/manage/dns/dns-settings.mdx)
+> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/manage/dns/dns-settings.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/manage/dns/dns-settings.mdx)
 
 # DNS Settings
 
@@ -14,7 +14,7 @@ NetBird configures the system's DNS settings. All DNS queries route through NetB
 
 ### Unmanaged Mode
 
-NetBird does not modify system DNS settings. The peer uses its pre-existing DNS configuration and all configured nameservers are ignored.
+NetBird does not modify system DNS settings. The peer uses its pre-existing DNS configuration, and all configured nameservers and [Custom Zone](https://docs.netbird.io/manage/dns/custom-zones) records are ignored, including zones distributed to a group this peer belongs to.
 
 Use unmanaged mode when a peer has conflicting VPN or DNS requirements, corporate policy requires specific DNS settings, or you're troubleshooting DNS issues.
 
@@ -36,7 +36,7 @@ netbird up --disable-dns=false
 
 > **Note**
 >
-> The `--disable-dns` flag takes precedence over server-side DNS settings. Even if the management server configures nameservers for this peer's group, the peer will ignore them when this flag is set.
+> The `--disable-dns` flag takes precedence over server-side DNS settings. Even if the management server configures nameservers or Custom Zone records for this peer's group, the peer will ignore them when this flag is set. The flag persists across reconnects: a later plain `netbird up` keeps DNS management disabled until you run `netbird up --disable-dns=false`.
 
 ## Configuring DNS Settings
 
@@ -46,7 +46,7 @@ netbird up --disable-dns=false
 2. Click the groups selection box and select existing groups, or type a new group name and press enter to create one inline
 3. Click **Save Changes**
 
-![DNS settings](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/dns/netbird-dns-settings.png)
+![DNS settings](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/dns/netbird-dns-settings.png)
 
 > **Note**
 >
@@ -85,7 +85,7 @@ curl -X PUT https://api.netbird.io/api/dns/settings \
   }'
 ```
 
-See the full [API Reference](https://docs.netbird.io/ipa/resources/dns) for more details.
+See the full [API Reference](https://docs.netbird.io/api/resources/dns) for more details.
 
 ***
 

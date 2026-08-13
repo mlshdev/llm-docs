@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/team/single-sign-on/jumpcloud.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/manage/team/single-sign-on/jumpcloud.mdx)
+> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/manage/team/single-sign-on/jumpcloud.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/manage/team/single-sign-on/jumpcloud.mdx)
 
 # JumpCloud on NetBird Cloud
 
@@ -10,13 +10,13 @@ You can use JumpCloud as your Identity Provider with NetBird, but it will requir
 
 3. Enable Manage Single Sign-On (SSO), select Configure SSO with OIDC and click Next
 
-![jumpcloud](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/team/single-sign-on/jumpcloud-idp/jumpcloud-sso.png)
+![jumpcloud](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/team/single-sign-on/jumpcloud-idp/jumpcloud-sso.png)
 
 4. Add NetBird as Display Label and click Next. Optionally, you can enter a Description, adjust the User Portal Image and choose to hide or Show in User Portal.
 
 5. Review the application setting and click Configure Application to proceed
 
-![jumpcloud-idp](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/team/single-sign-on/jumpcloud-idp/jumpcloud-sso-config.png)
+![jumpcloud-idp](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/team/single-sign-on/jumpcloud-idp/jumpcloud-sso-config.png)
 
 6. On the New Application screen, go to the SSO tab and under Endpoint Configuration set the following values:
 

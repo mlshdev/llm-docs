@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.2: [docs/agent-networks/01-end-to-end-flows.md](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/01-end-to-end-flows.md)
+> Release-pinned source for NetBird v0.77.0: [docs/agent-networks/01-end-to-end-flows.md](https://github.com/netbirdio/netbird/blob/c5503fdc7f93ae6844a39caecf2970b43618c9b2/docs/agent-networks/01-end-to-end-flows.md)
 
 # End-to-end flows
 
@@ -55,16 +55,16 @@ sequenceDiagram
 
 - The `network_map.Controller` synthesises on every push, not on a
   timer. A single config change costs O(connected peers × policies ×
-  providers) per push. See [`modules/22-management-handlers-wiring.md`](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/modules/22-management-handlers-wiring.md).
+  providers) per push. See [`modules/22-management-handlers-wiring.md`](https://github.com/netbirdio/netbird/blob/c5503fdc7f93ae6844a39caecf2970b43618c9b2/docs/agent-networks/modules/22-management-handlers-wiring.md).
 - `SynthesizeServices` is the single source of truth for the wire
   format the proxy executes. Anything the proxy does that the
   synthesiser didn't request is a bug. See
-  [`modules/21-management-agentnetwork.md`](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/modules/21-management-agentnetwork.md).
+  [`modules/21-management-agentnetwork.md`](https://github.com/netbirdio/netbird/blob/c5503fdc7f93ae6844a39caecf2970b43618c9b2/docs/agent-networks/modules/21-management-agentnetwork.md).
 - The translate step (step 13) is the only place that knows the
   middleware-ID strings on the proxy side. It must reject unknown IDs;
   silently dropping middlewares would create a security gap (e.g.
   missing `llm_limit_check` ⇒ unbounded spend). See
-  [`modules/33-proxy-runtime.md`](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/modules/33-proxy-runtime.md).
+  [`modules/33-proxy-runtime.md`](https://github.com/netbirdio/netbird/blob/c5503fdc7f93ae6844a39caecf2970b43618c9b2/docs/agent-networks/modules/33-proxy-runtime.md).
 
 ***
 
@@ -132,11 +132,11 @@ sequenceDiagram
   a denied request never hits upstream, and `llm_limit_record` must
   pair with `llm_limit_check` so a successful check is always recorded
   (or the rate-limit semantics break). See
-  [`modules/31-proxy-middleware-builtin.md`](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/modules/31-proxy-middleware-builtin.md).
+  [`modules/31-proxy-middleware-builtin.md`](https://github.com/netbirdio/netbird/blob/c5503fdc7f93ae6844a39caecf2970b43618c9b2/docs/agent-networks/modules/31-proxy-middleware-builtin.md).
 - `llm_guardrail` is also where PII redaction happens
   (`redact_pii = settings.RedactPii`). Phones, emails, credit cards,
   PII names — see `redact.go` for the full set. See
-  [`modules/31-proxy-middleware-builtin.md`](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/modules/31-proxy-middleware-builtin.md).
+  [`modules/31-proxy-middleware-builtin.md`](https://github.com/netbirdio/netbird/blob/c5503fdc7f93ae6844a39caecf2970b43618c9b2/docs/agent-networks/modules/31-proxy-middleware-builtin.md).
 - The model allowlist is enforced in TWO places. `CheckLLMPolicyLimits`
   is authoritative: it resolves the policy that governs this
   (provider, caller-groups) and denies (`deny_code = llm_policy.model_blocked`)
@@ -154,12 +154,12 @@ sequenceDiagram
   fail-open trade-off; a future flag may switch it to fail-closed.
 - SSE streaming requires special handling on the response side; the
   parser must handle partial chunks without buffering the whole
-  stream. See [`modules/32-proxy-llm-parsers.md`](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/modules/32-proxy-llm-parsers.md).
+  stream. See [`modules/32-proxy-llm-parsers.md`](https://github.com/netbirdio/netbird/blob/c5503fdc7f93ae6844a39caecf2970b43618c9b2/docs/agent-networks/modules/32-proxy-llm-parsers.md).
 - Access-log emission is gated on `settings.EnableLogCollection`. With
   it OFF, neither the deny nor the allow leg writes an entry — the
   chain still runs (budget rules are still enforced) but no audit trail
   is kept. See
-  [`modules/33-proxy-runtime.md`](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/modules/33-proxy-runtime.md).
+  [`modules/33-proxy-runtime.md`](https://github.com/netbirdio/netbird/blob/c5503fdc7f93ae6844a39caecf2970b43618c9b2/docs/agent-networks/modules/33-proxy-runtime.md).
 
 ***
 
@@ -212,7 +212,7 @@ flowchart LR
   every rule that matches the caller is evaluated; if ANY rule has
   zero remaining quota the request is denied. This is the most
   surprising semantic for operators — see the invariants section of
-  [`modules/21-management-agentnetwork.md`](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/modules/21-management-agentnetwork.md).
+  [`modules/21-management-agentnetwork.md`](https://github.com/netbirdio/netbird/blob/c5503fdc7f93ae6844a39caecf2970b43618c9b2/docs/agent-networks/modules/21-management-agentnetwork.md).
 - The proxy never makes its own budget decisions. It always asks
   management via `CheckLLMPolicyLimits` and reports back via
   `RecordLLMUsage`. This keeps account-wide accounting in one place
@@ -220,15 +220,15 @@ flowchart LR
 - `RecordLLMUsage` must carry `group_ids` and `user_id` so the
   decrement hits the right rule(s). The wire that carries those
   fields onto the response leg is `respInput` in `reverseproxy.go`. See
-  [`modules/33-proxy-runtime.md`](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/modules/33-proxy-runtime.md).
+  [`modules/33-proxy-runtime.md`](https://github.com/netbirdio/netbird/blob/c5503fdc7f93ae6844a39caecf2970b43618c9b2/docs/agent-networks/modules/33-proxy-runtime.md).
 - The dashboard's Budget Dashboard tab polls
   `/api/agent-network/consumption` — not gRPC, not WebSocket. Poll
   interval lives in `AgentConsumptionPanel.tsx`. See
-  [`modules/40-dashboard.md`](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/modules/40-dashboard.md).
+  [`modules/40-dashboard.md`](https://github.com/netbirdio/netbird/blob/c5503fdc7f93ae6844a39caecf2970b43618c9b2/docs/agent-networks/modules/40-dashboard.md).
 
 ***
 
 ## Cross-references
 
 - Per-module guides: `modules/`
-- Overview + module map: [`00-overview.md`](https://github.com/netbirdio/netbird/blob/2ce632360241d850eaef4fe4dd680d88ec19dddc/docs/agent-networks/00-overview.md)
+- Overview + module map: [`00-overview.md`](https://github.com/netbirdio/netbird/blob/c5503fdc7f93ae6844a39caecf2970b43618c9b2/docs/agent-networks/00-overview.md)

@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/team/single-sign-on/duo-security.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/manage/team/single-sign-on/duo-security.mdx)
+> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/manage/team/single-sign-on/duo-security.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/manage/team/single-sign-on/duo-security.mdx)
 
 # Duo Security on NetBird Cloud
 
@@ -19,7 +19,7 @@ Before you start using Duo Single Sign-On, make sure to meet all the requirement
 
 Log in to the [Duo Admin Panel](https://admin.duosecurity.com/). Navigate to **Applications** in the left sidebar, then click **Applications**. Click **+ Add Application** which will open the Application Catalog. Search for **Generic OIDC**, then click **+ Add** next to it.
 
-![duo-select-application](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/team/single-sign-on/duo-idp/duo-select-application.png)
+![duo-select-application](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/team/single-sign-on/duo-idp/duo-select-application.png)
 
 ## Step 2: Configure Basic Settings
 
@@ -29,7 +29,7 @@ Configure the Basic Configuration section with the following settings:
 - **Application Type**: Generic OIDC Relying Party - Single Sign-On
 - **User access**: `Enable for all users` (if applicable to all users) or `Enable only for permitted groups` (for fine-grained access control)
 
-![duo-basic-configuration](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/team/single-sign-on/duo-idp/duo-basic-configuration.png)
+![duo-basic-configuration](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/team/single-sign-on/duo-idp/duo-basic-configuration.png)
 
 ## Step 3: Configure Relying Party Settings
 
@@ -38,7 +38,7 @@ Configure the Relying Party section with the following settings:
 - **Grant Type**: Authorization Code, Refresh Tokens
 - **Sign-In Redirect URLs**: `https://login.netbird.io/login/callback`
 
-![duo-relying-party](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/team/single-sign-on/duo-idp/duo-relying-party.png)
+![duo-relying-party](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/team/single-sign-on/duo-idp/duo-relying-party.png)
 
 ## Step 4: Configure OIDC Response
 
@@ -46,7 +46,7 @@ Configure the OIDC Response section with the following scopes:
 
 - **Scopes**: openid, profile, email
 
-![duo-oidc-response](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/team/single-sign-on/duo-idp/duo-oidc-response.png)
+![duo-oidc-response](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/team/single-sign-on/duo-idp/duo-oidc-response.png)
 
 Click **Save** to complete the application configuration.
 

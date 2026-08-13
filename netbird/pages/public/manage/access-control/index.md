@@ -1,10 +1,10 @@
-> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/access-control/index.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/manage/access-control/index.mdx)
+> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/manage/access-control/index.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/manage/access-control/index.mdx)
 
 # Understanding Groups and Access Policies
 
 NetBird's access control system is built on Zero Trust security principles, ensuring that no device or user has access to network resources by default. Instead, access must be explicitly granted through carefully designed policies. This guide will help you understand how NetBird's policy system works, clarify the important distinction between user groups and peer groups, and provide step-by-step instructions for implementing secure access control in your network.
 
-![NetBird Policy Update](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/access-control/update-policy.png)
+![NetBird Policy Update](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/update-policy.png)
 
 > **Note**
 >
@@ -28,7 +28,7 @@ Zero trust networking operates on the principle of "never trust, always verify."
 
 When you first create a NetBird account, a **Default policy** is automatically created that allows all peers to communicate with each other using any protocol. This policy exists because early NetBird users were confused and frustrated when their devices couldn't communicate—NetBird's deny-by-default security model meant nothing worked without policies defined, and users thought the platform was broken.
 
-![NetBird ALL to ALL](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/access-control/all-all-policy.png)
+![NetBird ALL to ALL](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/all-all-policy.png)
 
 The Default policy, which uses the special `All` group as both source and destination, solves this onboarding friction by letting new users immediately see NetBird working while they learn the platform.
 
@@ -50,7 +50,7 @@ The distinction is based on **how groups are used and assigned**, not on any tec
 
 **User groups** are groups that are assigned to user accounts and automatically inherited by any device that user logs into. These are designed for client-side devices used by human users—laptops, workstations, mobile devices, and tablets.
 
-![NetBird User Groups](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/access-control/user-groups.png)
+![NetBird User Groups](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/user-groups.png)
 
 **How user groups work:**
 
@@ -78,7 +78,7 @@ When a user signs into NetBird on a device (such as a Windows computer using the
 
 **Peer groups** are groups that are assigned directly to infrastructure resources—servers, databases, network appliances, backup systems, and other non-user devices. These resources don't have users logging into them, so groups are assigned either through setup keys or manual assignment.
 
-![NetBird Peer Groups](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/access-control/peer-groups.png)
+![NetBird Peer Groups](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/peer-groups.png)
 
 **How peer groups work:**
 
@@ -211,7 +211,7 @@ In rare cases, such as callback mechanisms or notification systems, you might ne
 
 Understanding policy directionality is essential for implementing Zero Trust access control. How policies behave depends on whether you're connecting to **peers** (devices running NetBird) or **network resources** (internal systems accessed through routing peers).
 
-![NetBird Policy Direction](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/access-control/policy-direction.gif)
+![NetBird Policy Direction](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/policy-direction.gif)
 
 ### Policies Between Peers
 
@@ -311,7 +311,7 @@ This replicates Linux firewall connection state handling in userspace.
 
 As mentioned above, policies define how your network behaves as a mesh network, but **only when you create the policies**. Without policies, peers cannot communicate even if they're in the same group.
 
-![NetBird Mesh Policy](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/access-control/mesh-policy.png)
+![NetBird Mesh Policy](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/mesh-policy.png)
 
 There is a Default policy, which configures a default mesh connection between all peers of your network using the `All` group. With custom policies, you can define smaller, more controlled mesh networks by grouping peers and adding these groups to Source and Destination lists.
 

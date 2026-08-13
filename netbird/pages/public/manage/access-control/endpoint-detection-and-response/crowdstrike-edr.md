@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/access-control/endpoint-detection-and-response/crowdstrike-edr.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/manage/access-control/endpoint-detection-and-response/crowdstrike-edr.mdx)
+> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/manage/access-control/endpoint-detection-and-response/crowdstrike-edr.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/manage/access-control/endpoint-detection-and-response/crowdstrike-edr.mdx)
 
 # Restrict Network Access with CrowdStrike Falcon®
 
@@ -41,20 +41,20 @@ Before you start creating and configuring a CrowdStrike integration, ensure that
 - Navigate to the [Integrations » EDR](https://app.netbird.io/integrations?tab=edr) tab in the NetBird dashboard
 - Click `Connect CrowdStrike` to start the configuration wizard
 
-![event-streaming-integration](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/access-control/endpoint-detection-and-response/crowdstrike-edr/crowdstrike-integration.png)
+![event-streaming-integration](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/endpoint-detection-and-response/crowdstrike-edr/crowdstrike-integration.png)
 
 - First, select the region of your CrowdStrike account
 
-![crowdstrike-region](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/access-control/endpoint-detection-and-response/crowdstrike-edr/crowdstrike-region.png)
+![crowdstrike-region](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/endpoint-detection-and-response/crowdstrike-edr/crowdstrike-region.png)
 
 - Then enter the client ID and secret key you created in Step 1 and click `Continue`
 
-![crowdstrike-credentials](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/access-control/endpoint-detection-and-response/crowdstrike-edr/crowdstrike-credentials.png)
+![crowdstrike-credentials](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/endpoint-detection-and-response/crowdstrike-edr/crowdstrike-credentials.png)
 
 - Select groups you want to apply the integration to
 - If you would like to apply a ZTA threshold, then enable the [Zero Trust Assessment Score](https://www.crowdstrike.com/blog/tech-center/securing-private-applications-with-crowdstrike-zero-trust-assessment-and-aws-verified-access/) and set the desired limit, and click `Connect`.
 
-![crowdstrike-groups-zta](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/access-control/endpoint-detection-and-response/crowdstrike-edr/crowdstrike-groups-zta.png)
+![crowdstrike-groups-zta](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/endpoint-detection-and-response/crowdstrike-edr/crowdstrike-groups-zta.png)
 
 > **Note**
 >
@@ -67,7 +67,7 @@ Before you start creating and configuring a CrowdStrike integration, ensure that
 - Peers that have the CrowdStrike agent installed will be granted access to the network. Peers without the agent will appear
   with a `Approval required` mark in the peers list and won't be able to access the network until the agent is installed.
 
-![edr-approval-required](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/access-control/endpoint-detection-and-response/crowdstrike-edr/edr-approval-required.png)
+![edr-approval-required](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/endpoint-detection-and-response/crowdstrike-edr/edr-approval-required.png)
 
 - Optional. You can experiment and see how the integration works by hiding hosts in the CrowdStrike Host management console:
   - Navigate to the [Host management](https://falcon.crowdstrike.com/host-management/hosts) page in the CrowdStrike console

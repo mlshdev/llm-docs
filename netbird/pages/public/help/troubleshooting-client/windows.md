@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/help/troubleshooting-client/windows.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/help/troubleshooting-client/windows.mdx)
+> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/help/troubleshooting-client/windows.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/help/troubleshooting-client/windows.mdx)
 
 # NetBird client on Windows
 
@@ -95,7 +95,7 @@ Windows Firewall or endpoint security software can block NetBird traffic before 
 
 DNS on Windows has a few platform-specific failure modes worth checking separately:
 
-- **Match-domain names don't resolve, even though the NRPT (Name Resolution Policy Table) rule was written.** A lingering Group Policy `DnsPolicyConfig` container can stop NetBird's rule from taking effect on an off-domain machine. See [DNS Troubleshooting: Issue 8 (lingering GPO)](https://docs.netbird.io/manage/dns/troubleshooting#issue-8-windows-nrpt-rule-is-written-but-never-takes-effect-lingering-gpo).
+- **Match-domain names don't resolve, even though the NRPT (Name Resolution Policy Table) rule was written.** A lingering Group Policy `DnsPolicyConfig` container can stop NetBird's rule from taking effect on an off-domain machine. See [DNS Troubleshooting: Issue 9 (lingering GPO)](https://docs.netbird.io/manage/dns/troubleshooting#issue-9-windows-nrpt-rule-is-written-but-never-takes-effect-lingering-gpo).
 - **Active Directory login, mapped drives, or DFS fail** while a file share by IP works. This is usually a DC-locator (`SRV` record) problem. See [Domain Controllers as routing peers](https://docs.netbird.io/manage/dns/internal-dns-servers#domain-controllers-as-routing-peers).
 - **NetBird won't start on a Domain Controller** and the peer shows disconnected. The Windows DNS Server service can claim WireGuard's UDP port 51820 before NetBird does, so the tunnel never comes up. See [WireGuard port conflict on Domain Controllers](https://docs.netbird.io/manage/dns/internal-dns-servers#wire-guard-port-conflict-on-domain-controllers).
 

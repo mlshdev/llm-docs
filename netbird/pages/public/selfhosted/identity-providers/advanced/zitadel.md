@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/selfhosted/identity-providers/advanced/zitadel.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/selfhosted/identity-providers/advanced/zitadel.mdx)
+> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/selfhosted/identity-providers/advanced/zitadel.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/selfhosted/identity-providers/advanced/zitadel.mdx)
 
 # Zitadel SSO with NetBird Self-Hosted (Advanced)
 
@@ -38,7 +38,7 @@ For most deployments, the [embedded IdP](https://docs.netbird.io/selfhosted/iden
 3. Fill in:
    - **Name**: `NETBIRD`
 
-![New project](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/zitadel/zitadel-new-project.png)
+![New project](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/self-hosted/zitadel/zitadel-new-project.png)
 
 4. Click **Projects** and select **NETBIRD** project
 5. Click **New** in **Applications** section
@@ -46,12 +46,12 @@ For most deployments, the [embedded IdP](https://docs.netbird.io/selfhosted/iden
    - **Name**: `netbird`
    - **Type of Application**: `User Agent`
 
-![New application](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/zitadel/zitadel-new-application.png)
+![New application](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/self-hosted/zitadel/zitadel-new-application.png)
 
 7. Click **Continue** and set:
    - **Authentication Method**: `PKCE`
 
-![Application auth](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/zitadel/zitadel-new-application-auth.png)
+![Application auth](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/self-hosted/zitadel/zitadel-new-application-auth.png)
 
 8. Click **Continue** and configure:
    - **Redirect URIs**:
@@ -60,13 +60,13 @@ For most deployments, the [embedded IdP](https://docs.netbird.io/selfhosted/iden
      - `http://localhost:53000`
    - **Post Logout URIs**: `https://<domain>/`
 
-![Application URIs](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/zitadel/zitadel-new-application-uri.png)
+![Application URIs](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/self-hosted/zitadel/zitadel-new-application-uri.png)
 
 9. Click **Create** and then **Close**
 10. Under **Grant Types**, select `Authorization Code`, `Device Code`, and `Refresh Token`
 11. Click **Save**
 
-![Application overview](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/zitadel/zitadel-new-application-overview.png)
+![Application overview](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/self-hosted/zitadel/zitadel-new-application-overview.png)
 
 12. Copy **Client ID** for later use
 
@@ -79,7 +79,7 @@ For most deployments, the [embedded IdP](https://docs.netbird.io/selfhosted/iden
    - Check **Add user roles to the access token**
 4. Click **Save**
 
-![Token settings](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/zitadel/zitadel-token-settings.png)
+![Token settings](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/self-hosted/zitadel/zitadel-token-settings.png)
 
 ### Step 3: Configure Redirect Settings (Development Only)
 
@@ -91,7 +91,7 @@ For most deployments, the [embedded IdP](https://docs.netbird.io/selfhosted/iden
 2. Toggle **Development Mode**
 3. Click **Save**
 
-![Redirect settings](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/zitadel/zitadel-redirect-settings.png)
+![Redirect settings](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/self-hosted/zitadel/zitadel-redirect-settings.png)
 
 ### Step 4: Create Service User
 
@@ -105,13 +105,13 @@ For most deployments, the [embedded IdP](https://docs.netbird.io/selfhosted/iden
    - **Access Token Type**: `JWT`
 5. Click **Create**
 
-![Create service user](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/zitadel/zitadel-create-user.png)
+![Create service user](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/self-hosted/zitadel/zitadel-create-user.png)
 
 6. Click **Actions** in the top right corner
 7. Click **Generate Client Secret**
 8. Copy **ClientSecret** for later use
 
-![Service user secret](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/zitadel/zitadel-service-user-secret.png)
+![Service user secret](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/self-hosted/zitadel/zitadel-service-user-secret.png)
 
 ### Step 5: Grant User Manager Role
 
@@ -121,7 +121,7 @@ For most deployments, the [embedded IdP](https://docs.netbird.io/selfhosted/iden
 4. Check **Org User Manager** checkbox
 5. Click **Add**
 
-![Service account role](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/selfhosted/identity-providers/self-hosted/zitadel/zitadel-service-account-role.png)
+![Service account role](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/self-hosted/zitadel/zitadel-service-account-role.png)
 
 ### Step 6: Configure NetBird
 

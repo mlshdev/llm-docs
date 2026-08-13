@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/reverse-proxy/service-configuration.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/manage/reverse-proxy/service-configuration.mdx)
+> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/manage/reverse-proxy/service-configuration.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/manage/reverse-proxy/service-configuration.mdx)
 
 # Backend Service Configuration
 
@@ -57,7 +57,7 @@ In the Jellyfin admin dashboard:
 2. In the **Known Proxies** field, enter `100.64.0.0/10`.
 3. Click **Save**.
 
-![Jellyfin Networking settings showing 100.64.0.0/10 in the Known Proxies field](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/reverse-proxy/service-configuration/jellyfin-known-proxies.png)
+![Jellyfin Networking settings showing 100.64.0.0/10 in the Known Proxies field](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/reverse-proxy/service-configuration/jellyfin-known-proxies.png)
 
 This tells Jellyfin to trust forwarded headers from any NetBird IP, allowing it to see the real client IP. Additionally, Jellyfin supports adding a 'Base URL' this can be used in conjunction with setting a location while [configuring your service](https://docs.netbird.io/manage/reverse-proxy#step-2-configure-service-details) on the NetBird Reverse Proxy service.
 
@@ -74,7 +74,7 @@ http:
 
 If you are running the [NetBird add-on](https://github.com/netbirdio/addon-netbird) (which runs as a Docker container on the same host), also add the Docker bridge range. Click the button below to get this add-on.
 
-[![Add NetBird add-on repository](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/reverse-proxy/service-configuration/ha_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fglemsom%2Fhassio-netbird)
+[![Add NetBird add-on repository](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/reverse-proxy/service-configuration/ha_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fglemsom%2Fhassio-netbird)
 
 ```yaml
 http:

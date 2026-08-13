@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/manage/team/add-users-to-your-network.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/manage/team/add-users-to-your-network.mdx)
+> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/manage/team/add-users-to-your-network.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/manage/team/add-users-to-your-network.mdx)
 
 # Add users to your network
 
@@ -41,7 +41,7 @@ A window will appear, allowing you to specify the name and email address of the 
 The invited users will receive an email invitation that they have to confirm.
 After logging in to the system, they will join your network automatically.
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/team/user-invites.png)
+![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/team/user-invites.png)
 
 > **Note**
 >
@@ -54,7 +54,7 @@ NetBird's IdP-Sync automates user access management by integrating with your IdP
 provisioning users and groups. You can enable this feature from the `Users` tab by clicking the `Identity Provider Sync`
 button.
 
-![idp-sync-reference](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/manage/team/idp-sync-reference.png)
+![idp-sync-reference](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/team/idp-sync-reference.png)
 
 See the [Provision Users and Groups From Your Identity Provider](https://docs.netbird.io/manage/team/idp-sync) section for more details.
 

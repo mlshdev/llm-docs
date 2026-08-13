@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.76.2: [netbirdio/docs@447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e:src/pages/agent-network/integrations/claude-code.mdx](https://github.com/netbirdio/docs/blob/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/src/pages/agent-network/integrations/claude-code.mdx)
+> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/agent-network/integrations/claude-code.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/agent-network/integrations/claude-code.mdx)
 
 # Keyless Access to Claude Code
 
@@ -31,7 +31,7 @@ your endpoint.
 2. Select **Anthropic** and paste your Anthropic API key.
 3. Save the provider. The key is now held server-side, the next step authorizes who can use it.
 
-![connect Anthropic provider in NetBird Agent Network](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/agent-network/integrations/agent-network-connect-anthropic.png)
+![connect Anthropic provider in NetBird Agent Network](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/agent-network/integrations/agent-network-connect-anthropic.png)
 
 See [Providers](https://docs.netbird.io/agent-network/providers) for details.
 
@@ -48,7 +48,7 @@ provider before anyone can route Claude Code through it.
    so Claude Code usage stays within budget, and [guardrails](https://docs.netbird.io/agent-network/policies/guardrails)
    such as a model allowlist.
 
-![create a NetBird Agent Network policy authorizing Claude Code](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/agent-network/integrations/agent-network-create-policy.png)
+![create a NetBird Agent Network policy authorizing Claude Code](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/agent-network/integrations/agent-network-create-policy.png)
 
 See [Policies](https://docs.netbird.io/agent-network/policies) for details.
 
@@ -58,7 +58,7 @@ Next to your agent network endpoint in the NetBird dashboard, click **Agent Conf
 modal shows tabs for Claude Code, Codex, OpenAI SDK, and cURL. Pick **Claude Code** and copy
 the pre-filled configuration.
 
-![NetBird Configure Your Agent modal showing Claude Code settings.json configuration](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/agent-network/integrations/agent-network-configure-agent-claude-code.png)
+![NetBird Configure Your Agent modal showing Claude Code settings.json configuration](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/agent-network/integrations/agent-network-configure-agent-claude-code.png)
 
 Add the following to `~/.claude/settings.json`. The `apiKeyHelper` returns a dummy value so
 Claude Code doesn't prompt for a key. NetBird supplies the real one.
@@ -87,7 +87,7 @@ your identity, checked against your policies and limits, and recorded in
 [Usage & Logs](https://docs.netbird.io/agent-network/usage-and-logs), broken down per developer and aggregated
 per IdP group.
 
-![NetBird Agent Network access logs showing per-request Claude Code identity, group, model, cost, and status](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/agent-network/usage-and-logs/agent-network-access-logs.png)
+![NetBird Agent Network access logs showing per-request Claude Code identity, group, model, cost, and status](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/agent-network/usage-and-logs/agent-network-access-logs.png)
 
 ## Use Claude on Vertex AI
 
@@ -190,4 +190,4 @@ keeping the default upstream URL `https://api.moonshot.ai`. Then add the followi
 In the **Configure Your Agent** modal, pick **Kimi (Moonshot AI)** on the **Claude Code** tab
 to copy this configuration with your endpoint filled in:
 
-![NetBird Configure Your Agent modal showing the Claude Code settings.json configuration for Kimi (Moonshot AI)](https://raw.githubusercontent.com/netbirdio/docs/447d7ea30ab7e3e09ad7b03dc362bc6598e8dd6e/public/docs-static/img/agent-network/integrations/agent-network-configure-agent-claude-code-kimi.png)
+![NetBird Configure Your Agent modal showing the Claude Code settings.json configuration for Kimi (Moonshot AI)](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/agent-network/integrations/agent-network-configure-agent-claude-code-kimi.png)
