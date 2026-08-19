@@ -1,10 +1,10 @@
-> Release-pinned source for Traefik Proxy v3.7.10: [docs/content/reference/install-configuration/api-dashboard.md](https://github.com/traefik/traefik/blob/2a2349356c01b1b1f7ecddb0c17b30c97f5241e7/docs/content/reference/install-configuration/api-dashboard.md)
+> Release-pinned source for Traefik Proxy v3.7.11: [docs/content/reference/install-configuration/api-dashboard.md](https://github.com/traefik/traefik/blob/faa1eb590646aed94e561e24a59be0c47353ae95/docs/content/reference/install-configuration/api-dashboard.md)
 
 Traefik exposes a number of information through API endpoints, such as the configuration of your routers, services, middlewares, etc.
 
 The dashboard, which is the central place that displays the current active routes handled by Traefik, fetches the data from this API.
 
-![Dashboard - Providers](https://raw.githubusercontent.com/traefik/traefik/2a2349356c01b1b1f7ecddb0c17b30c97f5241e7/docs/content/assets/img/webui-dashboard.png)
+![Dashboard - Providers](https://raw.githubusercontent.com/traefik/traefik/faa1eb590646aed94e561e24a59be0c47353ae95/docs/content/assets/img/webui-dashboard.png)
 *The dashboard in action*
 
 ## Security
@@ -234,7 +234,7 @@ The dashboard is available by default on the path  `/dashboard/`.
 
 > **Note**
 >
-> - The trailing slash `/` in `/dashboard/` is mandatory. This limitation can be mitigated using the the [RedirectRegex Middleware](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/middlewares/redirectregex).
+> - The trailing slash `/` in `/dashboard/` is mandatory. This limitation can be mitigated using the [RedirectRegex Middleware](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/middlewares/redirectregex).
 >   \- There is also a redirect from the path `/` to `/dashboard/`, but you should not rely on this behavior, as it is subject to change and may complicate routing rules.
 
 As mentioned above in the [Security](#security) section, it is important to secure access to both the dashboard and the API.

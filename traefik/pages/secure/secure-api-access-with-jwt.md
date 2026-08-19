@@ -1,4 +1,4 @@
-> Release-pinned source for Traefik Proxy v3.7.10: [docs/content/secure/secure-api-access-with-jwt.md](https://github.com/traefik/traefik/blob/2a2349356c01b1b1f7ecddb0c17b30c97f5241e7/docs/content/secure/secure-api-access-with-jwt.md)
+> Release-pinned source for Traefik Proxy v3.7.11: [docs/content/secure/secure-api-access-with-jwt.md](https://github.com/traefik/traefik/blob/faa1eb590646aed94e561e24a59be0c47353ae95/docs/content/secure/secure-api-access-with-jwt.md)
 
 # Secure API Access with JWT
 

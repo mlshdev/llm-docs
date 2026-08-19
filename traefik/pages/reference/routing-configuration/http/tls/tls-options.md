@@ -1,4 +1,4 @@
-> Release-pinned source for Traefik Proxy v3.7.10: [docs/content/reference/routing-configuration/http/tls/tls-options.md](https://github.com/traefik/traefik/blob/2a2349356c01b1b1f7ecddb0c17b30c97f5241e7/docs/content/reference/routing-configuration/http/tls/tls-options.md)
+> Release-pinned source for Traefik Proxy v3.7.11: [docs/content/reference/routing-configuration/http/tls/tls-options.md](https://github.com/traefik/traefik/blob/faa1eb590646aed94e561e24a59be0c47353ae95/docs/content/reference/routing-configuration/http/tls/tls-options.md)
 
 The TLS options allow one to configure some parameters of the TLS connection.
 
@@ -11,6 +11,114 @@ The TLS options allow one to configure some parameters of the TLS connection.
 > `traefik.http.routers.myrouter.tls.options=myoptions@file`
 > **Providers**
 > TLS options are not supported by label or tag-based providers. However, you can define them when using a [KV provider](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/other-providers/kv).
+> **TLSOption in Kubernetes**
+> With the [TLSOption resource](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/crd/tls/tlsoption), the option named `default` applies to every router
+> that does not reference a TLSOption explicitly, whatever the namespace it is defined in.
+> The [`defaultTLSResourcesNamespace`](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/kubernetes/kubernetes-crd#defaulttlsresourcesnamespace) provider option
+> restricts the namespace this cluster-wide default can be defined in.
+
+### Server Name Association
+
+The TLS options are configured on a router, but they are applied during the TLS handshake,
+that is to say before the routing occurs, when the server name (SNI) is the only information available.
+A TLS options reference is therefore always mapped to the host names found in the `Host` part of the router rule,
+and neither to the router nor to its rule.
+There could also be several `Host` parts in a rule, in which case the TLS options reference is mapped to as many host names.
+
+In the case of domain fronting, if the TLS options associated with the Host header and the SNI are different,
+Traefik responds with a `421 Misdirected Request` status code.
+
+### Conflicting TLS Options
+
+Since a TLS options reference is mapped to a host name, a conflict occurs when a configuration introduces a situation
+where the same host name, on the same entry point, is matched with two different TLS options references,
+such as in the example below:
+
+**Structured (YAML)**
+
+```yaml
+# Dynamic configuration
+
+http:
+  routers:
+    routerfoo:
+      rule: "Host(`example.com`) && Path(`/foo`)"
+      tls:
+        options: foo
+
+    routerbar:
+      rule: "Host(`example.com`) && Path(`/bar`)"
+      tls:
+        options: bar
+```
+
+**Structured (TOML)**
+
+```toml
+# Dynamic configuration
+
+[http.routers]
+  [http.routers.routerfoo]
+    rule = "Host(`example.com`) && Path(`/foo`)"
+    [http.routers.routerfoo.tls]
+      options = "foo"
+
+  [http.routers.routerbar]
+    rule = "Host(`example.com`) && Path(`/bar`)"
+    [http.routers.routerbar.tls]
+      options = "bar"
+```
+
+If that happens, both mappings are discarded, and the host name (`example.com` in this example)
+gets associated with the `default` TLS options instead.
+
+The conflict detection is not limited to a single provider:
+routers coming from different providers, for example a router defined with a container label
+and another one defined with the file provider, conflict with each other as soon as they serve
+the same host name on the same entry point.
+
+> **Default TLS Options**
+> The `default` TLS options are the fallback of the conflict resolution,
+> and should therefore not be less secure than the options they can replace.
+> A router relying on a mutual TLS authentication (`clientAuth`), for example,
+> no longer enforces it if a conflict on its host name falls back to `default`
+> TLS options that do not require it.
+>
+> The surest way to avoid this is to have all the routers serving the same host name,
+> on the same entry point, reference the same TLS options.
+
+#### Strict TLS Options
+
+The [`core.strictTLSOptions`](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/configuration-options#opt-core-stricttlsoptions)
+install configuration option disables the fallback to the `default` TLS options.
+When it is enabled, the routers involved in the conflict are marked in error and are not built at all,
+and the host name is no longer mapped to any TLS options.
+
+> **Disabled routers**
+> Enabling `strictTLSOptions` fails closed: a conflict disables all the routers serving the conflicting host name
+> on the concerned entry point, until the conflict is resolved.
+> **File (YAML)**
+
+```yaml
+## Install configuration
+core:
+  strictTLSOptions: true
+```
+
+**File (TOML)**
+
+```toml
+## Install configuration
+[core]
+  strictTLSOptions = true
+```
+
+**CLI**
+
+```bash
+## Install configuration
+--core.strictTLSOptions=true
+```
 
 ### Minimum TLS Version
 

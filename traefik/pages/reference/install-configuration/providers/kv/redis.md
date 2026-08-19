@@ -1,6 +1,11 @@
-> Release-pinned source for Traefik Proxy v3.7.10: [docs/content/reference/install-configuration/providers/kv/redis.md](https://github.com/traefik/traefik/blob/2a2349356c01b1b1f7ecddb0c17b30c97f5241e7/docs/content/reference/install-configuration/providers/kv/redis.md)
+> Release-pinned source for Traefik Proxy v3.7.11: [docs/content/reference/install-configuration/providers/kv/redis.md](https://github.com/traefik/traefik/blob/faa1eb590646aed94e561e24a59be0c47353ae95/docs/content/reference/install-configuration/providers/kv/redis.md)
 
 # Traefik & Redis
+
+> **Routing configuration updates**
+> Updates to the routing configuration require Redis [keyspace notifications](https://redis.io/docs/latest/develop/use/keyspace-notifications/) to be enabled.
+> Cloud-managed Redis services (e.g., GCP Memorystore, AWS ElastiCache) may disable this by default due to CPU performance concerns.
+> For more information, see the [Redis documentation](https://redis.io/docs/latest/develop/use/keyspace-notifications/) or your cloud provider's documentation for configuration steps.
 
 ## Configuration Example
 

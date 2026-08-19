@@ -1,4 +1,4 @@
-> Release-pinned source for Traefik Proxy v3.7.10: [docs/content/reference/routing-configuration/http/middlewares/ipallowlist.md](https://github.com/traefik/traefik/blob/2a2349356c01b1b1f7ecddb0c17b30c97f5241e7/docs/content/reference/routing-configuration/http/middlewares/ipallowlist.md)
+> Release-pinned source for Traefik Proxy v3.7.11: [docs/content/reference/routing-configuration/http/middlewares/ipallowlist.md](https://github.com/traefik/traefik/blob/faa1eb590646aed94e561e24a59be0c47353ae95/docs/content/reference/routing-configuration/http/middlewares/ipallowlist.md)
 
 `ipAllowList` accepts / refuses requests based on the client IP.
 
@@ -8,6 +8,7 @@
 
 ```yaml
 # Accepts request from defined IP
+# and rejects other requests with a 404 rather than a 403
 http:
   middlewares:
     test-ipallowlist:
@@ -15,32 +16,39 @@ http:
         sourceRange:
           - "127.0.0.1/32"
           - "192.168.1.7"
+        rejectStatusCode: 404
 ```
 
 **Structured (TOML)**
 
 ```toml
 # Accepts request from defined IP
+# and rejects other requests with a 404 rather than a 403
 [http.middlewares]
   [http.middlewares.test-ipallowlist.ipAllowList]
     sourceRange = ["127.0.0.1/32", "192.168.1.7"]
+    rejectStatusCode = 404
 ```
 
 **Labels**
 
 ```yaml
 # Accepts request from defined IP
+# and rejects other requests with a 404 rather than a 403
 labels:
   - "traefik.http.middlewares.test-ipallowlist.ipallowlist.sourcerange=127.0.0.1/32, 192.168.1.7"
+  - "traefik.http.middlewares.test-ipallowlist.ipallowlist.rejectstatuscode=404"
 ```
 
 **Tags**
 
 ```json
 // Accepts request from defined IP
+// and rejects other requests with a 404 rather than a 403
 {
   "Tags" : [
-    "traefik.http.middlewares.test-ipallowlist.ipallowlist.sourcerange=127.0.0.1/32, 192.168.1.7"
+    "traefik.http.middlewares.test-ipallowlist.ipallowlist.sourcerange=127.0.0.1/32, 192.168.1.7",
+    "traefik.http.middlewares.test-ipallowlist.ipallowlist.rejectstatuscode=404"
   ]
 }
 ```
@@ -57,6 +65,7 @@ spec:
     sourceRange:
       - 127.0.0.1/32
       - 192.168.1.7
+    rejectStatusCode: 404
 ```
 
 ## Configuration Options

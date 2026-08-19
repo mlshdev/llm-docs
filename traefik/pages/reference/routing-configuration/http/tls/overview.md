@@ -1,4 +1,4 @@
-> Release-pinned source for Traefik Proxy v3.7.10: [docs/content/reference/routing-configuration/http/tls/overview.md](https://github.com/traefik/traefik/blob/2a2349356c01b1b1f7ecddb0c17b30c97f5241e7/docs/content/reference/routing-configuration/http/tls/overview.md)
+> Release-pinned source for Traefik Proxy v3.7.11: [docs/content/reference/routing-configuration/http/tls/overview.md](https://github.com/traefik/traefik/blob/faa1eb590646aed94e561e24a59be0c47353ae95/docs/content/reference/routing-configuration/http/tls/overview.md)
 
 ## General
 
@@ -9,6 +9,38 @@ By default, an HTTP router with a TLS field will terminate the TLS connections,
 meaning that it will send decrypted data to the services.
 The TLS configuration provides several options for fine-tuning the TLS behavior,
 including automatic certificate generation, custom TLS options, and explicit domain specification.
+
+> **Router TLS replaces entrypoint TLS**
+> Entrypoint `http.tls` settings apply only when a router does **not** define its own `tls` section.
+> Defining a router `tls` section — even empty, or with any field such as `certResolver`, `options`, or `domains` —
+> means Traefik does **not** merge that configuration with the entrypoint defaults for that router. The router TLS
+> configuration replaces the entrypoint TLS configuration entirely.
+>
+> For example, with entrypoint TLS options configured:
+>
+> ```yaml
+> entryPoints:
+>   websecure:
+>     address: :443
+>     http:
+>       tls:
+>         options: modern-tls@file
+> ```
+>
+> and a router that only sets a certificate resolver:
+>
+> ```yaml
+> http:
+>   routers:
+>     sample:
+>       rule: Host(`example.com`)
+>       service: sample
+>       tls:
+>         certResolver: letsencrypt
+> ```
+>
+> the entrypoint `options` (`modern-tls@file`) are **not** applied to `sample`.
+> To keep both, set them together on the entrypoint, or set both `options` and `certResolver` on the router.
 
 ## Configuration Example
 

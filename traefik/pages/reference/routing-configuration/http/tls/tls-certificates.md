@@ -1,4 +1,4 @@
-> Release-pinned source for Traefik Proxy v3.7.10: [docs/content/reference/routing-configuration/http/tls/tls-certificates.md](https://github.com/traefik/traefik/blob/2a2349356c01b1b1f7ecddb0c17b30c97f5241e7/docs/content/reference/routing-configuration/http/tls/tls-certificates.md)
+> Release-pinned source for Traefik Proxy v3.7.11: [docs/content/reference/routing-configuration/http/tls/tls-certificates.md](https://github.com/traefik/traefik/blob/faa1eb590646aed94e561e24a59be0c47353ae95/docs/content/reference/routing-configuration/http/tls/tls-certificates.md)
 
 > **Info**
 > When a router has to handle HTTPS traffic, it should be specified with a `tls` field of the router definition.
@@ -62,6 +62,11 @@ In Traefik, certificates are grouped together in certificates stores.
 > **Restriction**
 > Any store definition other than the default one (named `default`) will be ignored,
 > and there is therefore only one globally available TLS store.
+> **TLSStore in Kubernetes**
+> With the [TLSStore resource](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/crd/tls/tlsstore), the store named `default` applies to every entry point,
+> whatever the namespace it is defined in.
+> The [`defaultTLSResourcesNamespace`](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/kubernetes/kubernetes-crd#defaulttlsresourcesnamespace) provider option
+> restricts the namespace this cluster-wide store can be defined in.
 > In the `tls.certificates` section, a list of stores can then be specified to indicate where the certificates should be stored:
 
 **Structured (YAML)**

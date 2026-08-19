@@ -1,4 +1,4 @@
-> Release-pinned source for Traefik Proxy v3.7.10: [docs/content/reference/routing-configuration/kubernetes/crd/tls/tlsoption.md](https://github.com/traefik/traefik/blob/2a2349356c01b1b1f7ecddb0c17b30c97f5241e7/docs/content/reference/routing-configuration/kubernetes/crd/tls/tlsoption.md)
+> Release-pinned source for Traefik Proxy v3.7.11: [docs/content/reference/routing-configuration/kubernetes/crd/tls/tlsoption.md](https://github.com/traefik/traefik/blob/faa1eb590646aed94e561e24a59be0c47353ae95/docs/content/reference/routing-configuration/kubernetes/crd/tls/tlsoption.md)
 
 The TLS options allow you to configure some parameters of the TLS connection in Traefik.
 
@@ -16,6 +16,11 @@ Before creating `TLSOption` objects or referencing TLS options in the [`IngressR
 > To explicitly use a different `TLSOption` (and using the Kubernetes Ingress resources)
 > you'll have to add an annotation to the Ingress in the following form:
 > `traefik.ingress.kubernetes.io/router.tls.options: <resource-namespace>-<resource-name>@kubernetescrd`
+>
+> This `default` TLSOption carries the TLS enforcement policy (client authentication, TLS versions, cipher suites, SNI strictness)
+> of every router that does not reference a TLSOption explicitly.
+> The [`defaultTLSResourcesNamespace`](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/kubernetes/kubernetes-crd#defaulttlsresourcesnamespace) provider option
+> restricts the namespace this cluster-wide default can be defined in.
 
 ## Configuration Example
 

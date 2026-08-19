@@ -1,8 +1,8 @@
-> Release-pinned source for Traefik Proxy v3.7.10: [docs/content/reference/routing-configuration/kubernetes/crd/http/ingressroute.md](https://github.com/traefik/traefik/blob/2a2349356c01b1b1f7ecddb0c17b30c97f5241e7/docs/content/reference/routing-configuration/kubernetes/crd/http/ingressroute.md)
+> Release-pinned source for Traefik Proxy v3.7.11: [docs/content/reference/routing-configuration/kubernetes/crd/http/ingressroute.md](https://github.com/traefik/traefik/blob/faa1eb590646aed94e561e24a59be0c47353ae95/docs/content/reference/routing-configuration/kubernetes/crd/http/ingressroute.md)
 
 `IngressRoute` is the CRD implementation of a [Traefik HTTP router](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/routing/rules-and-priority).
 
-Before creating `IngressRoute` objects, you need to apply the Traefik Kubernetes CRDs such as [Definitions](https://raw.githubusercontent.com/traefik/traefik/2a2349356c01b1b1f7ecddb0c17b30c97f5241e7/docs/content/reference/dynamic-configuration/kubernetes-crd-definition-v1.yml) and [RBAC](https://raw.githubusercontent.com/traefik/traefik/2a2349356c01b1b1f7ecddb0c17b30c97f5241e7/docs/content/reference/dynamic-configuration/kubernetes-crd-rbac.yml) to your Kubernetes cluster.
+Before creating `IngressRoute` objects, you need to apply the Traefik Kubernetes CRDs such as [Definitions](https://raw.githubusercontent.com/traefik/traefik/faa1eb590646aed94e561e24a59be0c47353ae95/docs/content/reference/dynamic-configuration/kubernetes-crd-definition-v1.yml) and [RBAC](https://raw.githubusercontent.com/traefik/traefik/faa1eb590646aed94e561e24a59be0c47353ae95/docs/content/reference/dynamic-configuration/kubernetes-crd-rbac.yml) to your Kubernetes cluster.
 
 This registers the `IngressRoute` kind and other Traefik-specific resources.
 
@@ -179,6 +179,10 @@ Since a TLS options reference is mapped to a host name, if a configuration intro
 a situation where the same host name (from a `Host` rule) gets matched with two
 TLS options references, a conflict occurs, such as in the example below.
 
+The conflict detection is not scoped to a namespace: an `IngressRoute` defined in any
+namespace, and even a router coming from another provider, conflicts with this one as
+soon as it serves the same host name on the same entry point.
+
 > **Example**
 > **IngressRoute01**
 >
@@ -224,6 +228,13 @@ TLS options references, a conflict occurs, such as in the example below.
 If that happens, both mappings are discarded, and the host name
 (`example.net` in the example) for these routers gets associated with
 the default TLS options instead.
+
+> **Default TLS Options**
+> The `default` TLS options are the fallback of the conflict resolution, and should
+> therefore not be less secure than the options they can replace.
+>
+> See [Conflicting TLS Options](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/tls/tls-options#conflicting-tls-options)
+> for more information.
 
 ### Multi-Layer Routing with IngressRoutes
 
