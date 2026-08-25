@@ -58,6 +58,7 @@ const structuredComponents = new Set([
   "TroubleshootingStart",
   "SupportBanner",
   "StillStuck",
+  "PathFlow",
 ]);
 
 export function convertMdx(source: string, sourcePath: string): ConvertedMdx {
