@@ -1,8 +1,8 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/client/desktop-app.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/client/desktop-app.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/client/desktop-app.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/client/desktop-app.mdx)
 
 # NetBird Desktop App
 
-Starting with NetBird v0.75.0, the desktop app uses a [Wails](https://wails.io/) webview with a React frontend. The management server and wire protocol are unchanged, but the UI and agent need to be updated together. If their versions do not match, the app displays an update notification.
+Starting with NetBird v0.75.0, the desktop app uses a [Wails](https://wails.io/) webview with a React frontend. The management server and wire protocol are unchanged, but the UI and the daemon need to be updated together. If their versions do not match, the app displays an update notification.
 
 ## First Launch
 
@@ -14,15 +14,15 @@ Click **Connect** in the main window or tray menu. NetBird opens your browser to
 
 The main window opens in a compact **Default** view that shows the essentials: the active profile, connection status, hostname, overlay IP, and current exit node.
 
-![NetBird desktop app default view](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/client/desktop-app/default-view.png)
+![NetBird desktop app default view](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/client/desktop-app/default-view.png)
 
 Switch to the **Advanced** view and the window expands with a peers and resources browser on the right. The **Peers** tab lists the peers in your network.
 
-![Advanced view showing the Peers tab](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/client/desktop-app/peers-view.png)
+![Advanced view showing the Peers tab](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/client/desktop-app/peers-view.png)
 
 The **Resources** tab lists the network resources available to you. You can search resources, show only active or overlapping entries, toggle individual resources, or enable and disable all resources at once.
 
-![Advanced view showing the Resources tab](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/client/desktop-app/resources-view.png)
+![Advanced view showing the Resources tab](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/client/desktop-app/resources-view.png)
 
 ## Peer Details
 
@@ -30,7 +30,7 @@ Clicking a peer opens a detail panel with the information you would otherwise lo
 
 ## A Reactive UI
 
-Changes made by the NetBird agent or the CLI are reflected in the app immediately. Connect or disconnect from the CLI and the toggle flips on its own. Switch profiles and the window catches up. There is no need to refresh or relaunch the app.
+Changes made by the NetBird daemon or the CLI are reflected in the app immediately. Connect or disconnect from the CLI and the toggle flips on its own. Switch profiles and the window catches up. There is no need to refresh or relaunch the app.
 
 ## System Tray
 
@@ -40,9 +40,9 @@ A colored status dot sits next to the tray icon so you can read the state of you
 - **Yellow** when you need to log in.
 - **Grey** when disconnected.
 
-![NetBird system tray status indicator](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/client/desktop-app/tray-status.png)
+![NetBird system tray status indicator](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/client/desktop-app/tray-status.png)
 
-The tray menu also provides profile switching, session-renewal access, exit-node selection, Settings, Help & Support, and **Quit NetBird**. Closing the main window only hides it while the daemon and network connection continue running. Choosing **Quit NetBird** disconnects the daemon before the desktop app exits.
+The tray menu also provides profile switching, session-renewal access, exit-node selection, Settings, Help & Support, and **Quit NetBird**. Closing the main window only hides it while the daemon and network connection continue running. Choosing **Quit NetBird** disconnects the daemon before the desktop app exits, unless **Stay Connected After Quitting** is enabled in **Settings → General** (requires client v0.76.2 or later). That setting is off by default; with it enabled, the connection keeps running after quitting and only stops when you disconnect it yourself.
 
 ## Exit Nodes
 
@@ -52,7 +52,7 @@ The compact view shows the active exit node. Open the exit-node selector in the 
 
 The settings page uses a tabbed layout that groups options by what they control. The tabs you see depend on your role and on any [MDM policy](#mdm-driven-ui) in effect. The full set is:
 
-- **General** for everyday toggles: Connect on Startup, Launch NetBird UI at Login, notifications, and display language.
+- **General** for everyday toggles: Connect on Startup, Launch NetBird UI at Login, Stay Connected After Quitting, notifications, and display language.
 - **Network** for connectivity, DNS, routes, and IPv6 settings.
 - **Security** for inbound traffic, LAN access, and quantum-resistant encryption settings.
 - **Profiles** for managing the accounts the app knows about. See [Profiles](https://docs.netbird.io/client/profiles).
@@ -62,7 +62,7 @@ The settings page uses a tabbed layout that groups options by what they control.
 - **Troubleshoot** for [capturing a debug bundle](#capturing-a-debug-bundle).
 - **About** for version information, useful links, and updating the app.
 
-![Settings page with the General tab and Display Language picker](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/client/desktop-app/settings-language.png)
+![Settings page with the General tab and Display Language picker](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/client/desktop-app/settings-language.png)
 
 > **Note**
 >
@@ -96,7 +96,7 @@ If you roll out NetBird through MDM, the app reads the policy in effect on the d
 
 When a session is about to expire, the app shows a dialog with a countdown and two clear actions: renew or log out. An operating system notification fires ahead of time, and the session deadline remains visible across reconnects.
 
-![Session expiry dialog with a countdown and renew or logout actions](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/client/desktop-app/session-expiration.png)
+![Session expiry dialog with a countdown and renew or logout actions](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/client/desktop-app/session-expiration.png)
 
 The renewal flow follows one rule: re-authenticating never closes an active connection. **Renew session** runs the browser sign-in flow while your existing connection stays up. Your tunnels, SSH sessions, and remote desktop sessions keep running through the renewal. Only the underlying session ticket changes.
 
@@ -110,4 +110,4 @@ Translations are a continuing community effort. If your language is missing or a
 
 The **Troubleshoot** tab can capture a debug bundle that collects daemon and UI logs in one step. You can collect new trace logs for 1–30 minutes, cycle the connection, include a packet capture and system information, anonymize sensitive data, and either upload the result to NetBird or keep it locally. See [Troubleshooting the client](https://docs.netbird.io/help/troubleshooting-client#debug-bundle-uploads-with-gui) for the complete flow.
 
-![Completed debug bundle saved locally in the NetBird desktop app](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/help/troubleshooting-client/ui-bundle-local-success.png)
+![Completed debug bundle saved locally in the NetBird desktop app](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/help/troubleshooting-client/ui-bundle-local-success.png)

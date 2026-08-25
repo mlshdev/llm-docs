@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/get-started/install/mikrotik.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/get-started/install/mikrotik.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/get-started/install/mikrotik.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/get-started/install/mikrotik.mdx)
 
 # NetBird client on MikroTik router
 
@@ -112,10 +112,10 @@ This assumes that our USB drive is mounted as `/usb1`:
 ### Prepare the NetBird container
 
 ```shell
-/container/mounts/add name=netbird_etc src=disk1/etc dst=/etc/netbird
+/container/mounts/add name=netbird_varlib src=disk1/varlib dst=/var/lib/netbird
 ```
 
-Note that we placed `/etc/netbird` on router's built-in flash. This is because we don't want someone stealing the USB drive
+Note that we placed `/var/lib/netbird` on router's built-in flash. This is because we don't want someone stealing the USB drive
 and getting access to router's private keys. This file doesn't really change all that often so it's ok to put it there.
 
 ```shell
@@ -141,7 +141,7 @@ add key=NB_ADMIN_URL name=netbird value=YOUR_NETBIRD_ADMIN_URL
 Create the container and trigger image pull from DockerHub:
 
 ```shell
-/container/add remote-image=netbirdio/netbird interface=netbird root-dir=/usb1/netbird_filesystem mounts=netbird_etc envlist=netbird dns=10.71.71.1 hostname=netbird logging=yes                                                                 │
+/container/add remote-image=netbirdio/netbird interface=netbird root-dir=/usb1/netbird_filesystem mounts=netbird_varlib envlist=netbird dns=10.71.71.1 hostname=netbird logging=yes                                                                 │
 ```
 
 Note that we had to set container's hostname to something other than router's identity because RouterOS doesn't allow hostname conflicts.\

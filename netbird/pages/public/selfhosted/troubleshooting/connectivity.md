@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/selfhosted/troubleshooting/connectivity.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/selfhosted/troubleshooting/connectivity.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/selfhosted/troubleshooting/connectivity.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/selfhosted/troubleshooting/connectivity.mdx)
 
 # Connectivity issues
 
@@ -10,13 +10,13 @@ When peers can't establish a direct connection, they fall back to the TURN (rela
 
 To test it, open the [Trickle ICE test tool](https://webrtc.github.io/samples/src/content/peerconnection/trickle-ice). In the **ICE servers** box, remove the default server and add your TURN server. Replace netbird.DOMAIN.com and PASSWORD with your STUN/TURN details from your configuration (`config.yaml` for the combined setup, or the `TURNConfig` section in `management.json` for older multi-container setups), then click Add server.
 
-![The Trickle ICE test tool with a NetBird STUN/TURN server added to the ICE servers list](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/troubleshooting/turn.png)
+![The Trickle ICE test tool with a NetBird STUN/TURN server added to the ICE servers list](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/troubleshooting/turn.png)
 
 *Add your STUN/TURN server in the ICE servers box, then click Add server.*
 
 Gather candidates and read the result:
 
-![Trickle ICE test output listing host, srflx, and relay candidate types](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/troubleshooting/turn-test-out.png)
+![Trickle ICE test output listing host, srflx, and relay candidate types](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/troubleshooting/turn-test-out.png)
 
 *A working TURN server returns `srflx` and `relay` candidates.*
 

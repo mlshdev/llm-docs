@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/get-started/cli.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/get-started/cli.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/get-started/cli.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/get-started/cli.mdx)
 
 # NetBird Agent command line interface (CLI)
 
@@ -614,7 +614,7 @@ netbird ssh -R 8080:localhost:3000 user@100.119.230.104
     --enable-ssh-remote-port-forwarding
   ```
 
-![netbird ssh dashboard](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/peers/ssh/ssh-dashboard.png)
+![netbird ssh dashboard](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/peers/ssh/ssh-dashboard.png)
 
 ### expose
 
@@ -815,6 +815,7 @@ sudo netbird service install --config /opt/netbird/config.json
 #### Service-specific flags
 
 ```shell
+      --disable-networks          Disables network selection.
       --disable-profiles          Disables profiles feature.
       --disable-update-settings   Disables update settings feature.
       --service-env strings       Sets extra environment variables for the service. You can specify a comma-separated list of KEY=VALUE pairs. E.g. --service-env NB_LOG_LEVEL=debug,CUSTOM_VAR=value
@@ -822,6 +823,7 @@ sudo netbird service install --config /opt/netbird/config.json
 
 These flags are intended for managed or shared machines where non-admin users should not be able to alter the client configuration through the CLI or UI:
 
+- `--disable-networks` prevents users from listing, selecting, or deselecting networks (including exit nodes) via CLI or UI. The flag is persisted in the service's `service.json` state file; there is no `NB_DISABLE_NETWORKS` environment-variable equivalent.
 - `--disable-profiles` prevents users from adding, removing, or switching profiles. The client stays locked to the profile that was active at install time. Any attempt to switch profiles via CLI or UI is rejected.
 - `--disable-update-settings` prevents users from changing daemon settings (management URL, log level, DNS resolver address, etc.) via CLI or UI. The configuration can only be changed by an administrator who reinstalls the service or uses `service reconfigure`.
 

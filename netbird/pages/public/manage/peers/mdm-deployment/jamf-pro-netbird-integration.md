@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/manage/peers/mdm-deployment/jamf-pro-netbird-integration.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/manage/peers/mdm-deployment/jamf-pro-netbird-integration.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/peers/mdm-deployment/jamf-pro-netbird-integration.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/peers/mdm-deployment/jamf-pro-netbird-integration.mdx)
 
 # Deploying NetBird's with Jamf Pro
 
@@ -40,11 +40,11 @@ For this tutorial, we'll create a policy that allows the `Support` team to acces
 - Set the source group to `Support` and the destination group to `Servers`.
 - Configure the appropriate protocol and port settings (e.g., TCP 22 for SSH access).
 
-![Access control policy for the support team](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/peers/mdm-deployment/jamf-pro-netbird-integration/netbird-jamf-01.png)
+![Access control policy for the support team](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/peers/mdm-deployment/jamf-pro-netbird-integration/netbird-jamf-01.png)
 
 Give the policy a descriptive name (e.g., "Support team remote access") and click `Save` to create the policy.
 
-![Access control policies list](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/peers/mdm-deployment/jamf-pro-netbird-integration/netbird-jamf-02.png)
+![Access control policies list](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/peers/mdm-deployment/jamf-pro-netbird-integration/netbird-jamf-02.png)
 
 With this policy in place, any device assigned to the `Support` group will gain access to the `Servers` group as defined in the Access Control Policy.
 
@@ -72,7 +72,7 @@ In the `Options` tab:
 
 Click `Save` to finish. If you see the message "Availability pending", click `Refresh` to update the package status.
 
-![Uploading NetBird package](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/peers/mdm-deployment/jamf-pro-netbird-integration/netbird-jamf-03.png)
+![Uploading NetBird package](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/peers/mdm-deployment/jamf-pro-netbird-integration/netbird-jamf-03.png)
 
 ### Creating a Policy for NetBird
 
@@ -90,30 +90,30 @@ In the **Trigger** options, check the following boxes:
 
 These trigger selections ensure NetBird is installed promptly and remains current on all managed devices. Leave the remaining options as default.
 
-![Jamf Pro policies, general section](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/peers/mdm-deployment/jamf-pro-netbird-integration/netbird-jamf-04.png)
+![Jamf Pro policies, general section](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/peers/mdm-deployment/jamf-pro-netbird-integration/netbird-jamf-04.png)
 
 In the `Packages` section, click `Configure` and add the corresponding NetBird package:
 
-![Jamf Pro policies, packages section](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/peers/mdm-deployment/jamf-pro-netbird-integration/netbird-jamf-05.png)
+![Jamf Pro policies, packages section](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/peers/mdm-deployment/jamf-pro-netbird-integration/netbird-jamf-05.png)
 
 Accept the default values for **Distribution Point** and **Action**
 
-![Jamf Pro policies, packages section](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/peers/mdm-deployment/jamf-pro-netbird-integration/netbird-jamf-06.png)
+![Jamf Pro policies, packages section](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/peers/mdm-deployment/jamf-pro-netbird-integration/netbird-jamf-06.png)
 
 In the `Scope` tab, specify the target computers (all computers, specific computers or groups, etc.). For simplicity in this example, use `All Computers`.
 
-![Jamf Pro policies, target computers](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/peers/mdm-deployment/jamf-pro-netbird-integration/netbird-jamf-07.png)
+![Jamf Pro policies, target computers](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/peers/mdm-deployment/jamf-pro-netbird-integration/netbird-jamf-07.png)
 
 Optionally, in the `User Interaction` tab:
 
 - Enter messages to display before and after the policy runs.
 - This can help inform users about the installation process.
 
-![Jamf Pro policies, user interaction](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/peers/mdm-deployment/jamf-pro-netbird-integration/netbird-jamf-08.png)
+![Jamf Pro policies, user interaction](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/peers/mdm-deployment/jamf-pro-netbird-integration/netbird-jamf-08.png)
 
 Click `Save` to finish.
 
-![NetBird policy](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/peers/mdm-deployment/jamf-pro-netbird-integration/netbird-jamf-09.png)
+![NetBird policy](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/peers/mdm-deployment/jamf-pro-netbird-integration/netbird-jamf-09.png)
 
 This configuration ensures NetBird is installed as soon as any machine enrolls, maintaining security across your device fleet.
 
@@ -140,7 +140,7 @@ After setting up NetBird deployment policy in Jamf Pro, it's crucial to verify t
 - In the device details, go to the `Management` tab and locate the `Policies` section.
 - Look for the NetBird policy in the list of applied policies.
 
-![Jamf Pro, confirming NetBird is installed](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/peers/mdm-deployment/jamf-pro-netbird-integration/netbird-jamf-10.png)
+![Jamf Pro, confirming NetBird is installed](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/peers/mdm-deployment/jamf-pro-netbird-integration/netbird-jamf-10.png)
 
 If you see the NetBird policy listed, that would indicate that NetBird has been successfully installed on the device.
 

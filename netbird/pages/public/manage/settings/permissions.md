@@ -1,0 +1,55 @@
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/settings/permissions.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/settings/permissions.mdx)
+
+# Permissions
+
+The `Permissions` tab in your account settings controls how much of the dashboard non-administrative users can see. It currently holds a single setting, `Restrict dashboard for regular users`.
+
+To find it, log in to your NetBird dashboard and navigate to `Settings` > `Permissions`.
+
+![Restrict dashboard for regular users setting in the Permissions tab](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/settings/permissions-restrict-dashboard.png)
+
+## Restrict dashboard for regular users
+
+When this setting is enabled, affected users get a reduced dashboard and cannot view any peers, including the peers they own themselves.
+
+> **Note**
+>
+> This setting is **enabled by default** on new accounts. If you want regular users to be able to see their own peers, you need to turn it off explicitly.
+
+### Who it applies to
+
+The restriction applies to users with the following roles:
+
+- `User` (regular users)
+- `Billing Admin`
+
+Users with the `Owner`, `Admin`, `Network Admin`, or `Auditor` [role](https://docs.netbird.io/manage/team/user-roles) are never affected, and neither are service users acting through an access token.
+
+> **Note**
+>
+> Despite the name, the setting also applies to billing admins. Since a `Billing Admin`'s dashboard access is limited to billing pages regardless, in practice the setting mainly affects users with the `User` role.
+
+### What changes when it is enabled
+
+Affected users keep their network access. The restriction is about visibility in the dashboard, not connectivity. Their peers stay connected and policies continue to apply as normal.
+
+In the dashboard, those users see the following:
+
+- The `Peers` page shows a blocked view instead of the peers table
+- Peer and group detail pages are not reachable and redirect back
+- Group and country data is not loaded
+- Parts of the navigation and account menu are hidden
+
+Through the API, peer listing endpoints return an empty list for those users rather than an error.
+
+### What changes when it is disabled
+
+Turning the setting off does not give regular users visibility of the whole network. They see only the peers they own, which is the standard behavior for the `User` role. Administrators continue to see all peers in the account either way.
+
+## Changing the setting
+
+1. Go to `Settings` > `Permissions`.
+2. Toggle `Restrict dashboard for regular users` on or off.
+3. Click `Save Changes`.
+
+You need permission to update account settings to change this, which in practice means an owner or administrator. Roles with read-only settings access, such as `Network Admin` and `Auditor`, can open the tab but the toggle is disabled for them.

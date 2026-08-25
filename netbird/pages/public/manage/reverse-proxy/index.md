@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/manage/reverse-proxy/index.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/manage/reverse-proxy/index.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/reverse-proxy/index.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/reverse-proxy/index.mdx)
 
 # Reverse Proxy
 
@@ -20,7 +20,7 @@ NetBird Reverse Proxy lets you expose internal services running on peers or behi
 
 When you create a reverse proxy service, NetBird provisions a public domain with an automatic TLS certificate. Incoming traffic to that domain is received at the NetBird proxy cluster, then forwarded through an encrypted NetBird tunnel to the target peer or network resource running your application. The target service only needs to be reachable within your NetBird network: it does not need a public IP address or open ports.
 
-![Reverse proxy traffic flow diagram showing User to Proxy Service (TLS) through WireGuard tunnel to either a NetBird Peer directly or via a Routing Peer to a Network Resource](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/reverse-proxy/reverse-proxy-diagram.png)
+![Reverse proxy traffic flow diagram showing User to Proxy Service (TLS) through WireGuard tunnel to either a NetBird Peer directly or via a Routing Peer to a Network Resource](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/reverse-proxy/reverse-proxy-diagram.png)
 
 NetBird supports two categories of service:
 
@@ -66,7 +66,7 @@ A target defines where proxied traffic is sent within your NetBird network. Ever
 
 | Type              | Description                                                                                                                                                 | How to select                                                                                                                |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| **Peer**          | A machine running the NetBird agent directly                                                                                                                | Select from the peer list                                                                                                    |
+| **Peer**          | A machine running the NetBird client directly                                                                                                               | Select from the peer list                                                                                                    |
 | **Host**          | A network resource identified by an IP address                                                                                                              | Select from your network resources                                                                                           |
 | **Domain**        | A network resource identified by a domain name                                                                                                              | Select from your network resources                                                                                           |
 | **Subnet**        | A network resource within a CIDR range                                                                                                                      | Select from your network resources, then specify an IP within the range                                                      |
@@ -245,12 +245,12 @@ In the **Details** tab:
 4. For L4 services, set the **listen port** that the proxy will accept connections on. Some clusters auto-assign ports; others allow you to specify one manually.
 5. Click **Add Target** to define where traffic should be sent.
 
-![Add Service modal showing the Details tab](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/reverse-proxy/reverse-proxy-add-service-details.png)
+![Add Service modal showing the Details tab](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/reverse-proxy/reverse-proxy-add-service-details.png)
 
 6. In the target configuration, select the **type** (Peer, Host, Domain, Subnet, or Proxy Cluster), then choose the specific peer, resource, or cluster.
 7. For HTTP services, set the **protocol** (HTTP or HTTPS) and **port** for the target. Optionally, enter a **path** for path-based routing. For L4 services, set the target **host/IP** and **port**. For **Proxy Cluster** targets, the host field accepts any hostname or IP the cluster's embedded proxy can resolve from its own host stack — see [Private services](https://docs.netbird.io/manage/reverse-proxy/bring-your-own-proxy#private-services-net-bird-only-access) for details.
 
-![Add Target configuration modal showing the unified Peer / Resource / Proxy Cluster picker](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/reverse-proxy/reverse-proxy-add-target.png)
+![Add Target configuration modal showing the unified Peer / Resource / Proxy Cluster picker](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/reverse-proxy/reverse-proxy-add-target.png)
 
 You can add multiple targets. HTTP services support path-based routing across targets.
 
@@ -258,7 +258,7 @@ You can add multiple targets. HTTP services support path-based routing across ta
 
 Switch to the **Authentication** tab to configure how users are authenticated before reaching your service. This tab is only available for HTTP services.
 
-![Add Service modal showing the Authentication tab](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/reverse-proxy/reverse-proxy-add-service-auth.png)
+![Add Service modal showing the Authentication tab](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/reverse-proxy/reverse-proxy-add-service-auth.png)
 
 - Enable **NetBird-Only Access** to make the service reachable only from peers in the selected NetBird groups (private service). Only appears when the selected base domain is on a cluster that advertises the `Private` capability. Picking this method hides the operator auth options below — the two modes are mutually exclusive.
 - Enable **SSO** to require users to authenticate through your identity provider. Optionally restrict access to specific groups.
@@ -291,11 +291,11 @@ Access restrictions are evaluated before authentication: if a connection is bloc
 
 Switch to the **Settings** tab to adjust advanced proxy behavior. The available settings depend on the service mode.
 
-![Add Service modal showing the Settings tab](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/reverse-proxy/reverse-proxy-add-service-settings.png)
+![Add Service modal showing the Settings tab](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/reverse-proxy/reverse-proxy-add-service-settings.png)
 
 The per-service options differ between HTTP and L4 (TCP/UDP/TLS) services and apply at different points along the request path:
 
-![Diagram showing per-service options: HTTP services (Pass Host Header, Rewrite Redirects) and L4 services (PROXY Protocol v2, Session Idle Timeout) and where each applies between the user, proxy service, and backend](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/reverse-proxy/reverse-proxy-service-options-diagram.png)
+![Diagram showing per-service options: HTTP services (Pass Host Header, Rewrite Redirects) and L4 services (PROXY Protocol v2, Session Idle Timeout) and where each applies between the user, proxy service, and backend](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/reverse-proxy/reverse-proxy-service-options-diagram.png)
 
 **HTTP services:**
 

@@ -1,12 +1,12 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/manage/networks/how-routing-peers-work.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/manage/networks/how-routing-peers-work.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/networks/how-routing-peers-work.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/networks/how-routing-peers-work.mdx)
 
 # How Routing Peers Work
 
-A routing peer is a NetBird agent that bridges your overlay network to private networks and resources that do not run the agent. This page covers what routing peers are, how traffic flows through them, the requirements they impose on the host, how high availability and access control behave, and how to harden them.
+A routing peer is a NetBird peer whose client bridges your overlay network to private networks and resources that do not run the client. This page covers what routing peers are, how traffic flows through them, the requirements they impose on the host, how high availability and access control behave, and how to harden them.
 
 ## What is a routing peer
 
-A routing peer is a NetBird peer installed inside a private network that forwards traffic between the NetBird overlay and resources that cannot or should not run the agent themselves. It is the bridge between your Zero Trust mesh and the LANs, VPCs, datacenter networks, or individual hosts you need to reach.
+A routing peer is a NetBird peer installed inside a private network that forwards traffic between the NetBird overlay and resources that cannot or should not run the client themselves. It is the bridge between your Zero Trust mesh and the LANs, VPCs, datacenter networks, or individual hosts you need to reach.
 
 A single peer can serve multiple roles at once. The same machine can be a client peer, a routing peer for one or more networks, and an exit node simultaneously.
 
@@ -14,10 +14,10 @@ Because routing peers are typically headless servers, register them with [setup 
 
 ## When to use a routing peer
 
-- **Site or LAN access.** NetBird peers need to reach resources on a remote subnet, office network, datacenter, or cloud VPC without installing the agent on every host.
+- **Site or LAN access.** NetBird peers need to reach resources on a remote subnet, office network, datacenter, or cloud VPC without installing the client on every host.
 - **Domain-based access.** Traffic must be routed by FQDN or wildcard domain to services whose IPs change.
 - **Exit node.** All internet-bound traffic from a group of peers must egress through a controlled location.
-- **Kubernetes.** Pods or services need to be reachable from NetBird peers without putting an agent on every node.
+- **Kubernetes.** Pods or services need to be reachable from NetBird peers without putting the client on every node.
 
 ## Networks vs Network Routes
 
@@ -37,7 +37,7 @@ NetBird offers two ways to configure routing peers. Both are actively maintained
 
 ## Mental model: how traffic flows
 
-![Routing peer bridging NetBird overlay to a private network](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/networks/netbird-network-routes.png)
+![Routing peer bridging NetBird overlay to a private network](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/networks/netbird-network-routes.png)
 
 The walkthrough below describes the **Linux kernel-mode** path, where forwarding and firewalling happen in the kernel via `nftables` / `iptables`. On other platforms, NetBird performs the same logical steps in a userspace filter, but the implementation differs.
 
@@ -51,11 +51,11 @@ The walkthrough below describes the **Linux kernel-mode** path, where forwarding
 
 ### Operating system
 
-Linux, Windows, macOS, FreeBSD, Android, tvOS, and Docker peers can act as routing peers. Linux is the most common production choice because the agent runs in kernel space and integrates with native kernel firewalls (`nftables` / `iptables`). On other platforms the forwarding path runs in userspace.
+Linux, Windows, macOS, FreeBSD, Android, tvOS, and Docker peers can act as routing peers. Linux is the most common production choice because it uses the kernel WireGuard data path by default and integrates with native kernel firewalls (`nftables` / `iptables`). On other platforms the forwarding path runs in userspace.
 
 ### IP forwarding
 
-The agent enables IP forwarding automatically on Linux. If the agent cannot modify sysctl on its own, set it yourself on the host and persist it:
+The client enables IP forwarding automatically on Linux. If the client cannot modify sysctl on its own, set it yourself on the host and persist it:
 
 ```bash
 # Runtime
@@ -166,7 +166,7 @@ For the full setup — the file-server scenario, the commands, the Active Direct
 
 ### Directionality is forced for routed traffic
 
-Policies whose destination is a network resource are always unidirectional from source to destination. The resource has no agent and cannot initiate connections back through the overlay. The bidirectional toggle is disabled in the UI for these policies.
+Policies whose destination is a network resource are always unidirectional from source to destination. The resource has no client and cannot initiate connections back through the overlay. The bidirectional toggle is disabled in the UI for these policies.
 
 ### Network Routes default-allow caveat
 

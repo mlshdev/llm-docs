@@ -1,11 +1,11 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/manage/peers/add-machines-to-your-network.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/manage/peers/add-machines-to-your-network.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/peers/add-machines-to-your-network.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/peers/add-machines-to-your-network.mdx)
 
 # Add peers to your NetBird network
 
 Whether you have a network for personal use or manage your company's corporate network, you'd probably want to add machines
 (or peers in NetBird's terms) to your network.
 
-NetBird peer is a machine that runs the [NetBird agent](https://docs.netbird.io/about-netbird/how-netbird-works#client-application)
+NetBird peer is a machine that runs the [NetBird client](https://docs.netbird.io/about-netbird/how-netbird-works#client-application)
 and is connected to the network. NetBird peer can be a virtual machine running in the cloud like AWS or Google Cloud,
 an Android or iOS device, a personal laptop, a single-board computer like Raspberry Pi, a docker container, or even a router.
 
@@ -22,15 +22,15 @@ To add a new peer to your network follow these steps:
 1. Sign-in to your NetBird account at <https://app.netbird.io/> and go to `Peers`.
 2. Hit `Add Peer` button
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/peers/add-machines-to-your-network/add-new-peer-empty.png)
+![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/peers/add-machines-to-your-network/add-new-peer-empty.png)
 
 3. Follow the instructions
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/peers/add-machines-to-your-network/add-new-peer-popup.png)
+![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/peers/add-machines-to-your-network/add-new-peer-popup.png)
 
 4. Refresh the Peers view, and it will display new machines
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/peers/add-machines-to-your-network/peer-list.png)
+![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/peers/add-machines-to-your-network/peer-list.png)
 
 ## What's next?
 

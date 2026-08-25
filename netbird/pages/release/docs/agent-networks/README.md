@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.77.0: [docs/agent-networks/README.md](https://github.com/netbirdio/netbird/blob/c5503fdc7f93ae6844a39caecf2970b43618c9b2/docs/agent-networks/README.md)
+> Release-pinned source for NetBird v0.77.1: [docs/agent-networks/README.md](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/docs/agent-networks/README.md)
 
 # Agent Networks — architecture documentation
 
@@ -10,10 +10,10 @@ every LLM request.
 
 ## What to read first
 
-1. **[00-overview.md](https://github.com/netbirdio/netbird/blob/c5503fdc7f93ae6844a39caecf2970b43618c9b2/docs/agent-networks/00-overview.md)** — the single entry point. Feature
+1. **[00-overview.md](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/docs/agent-networks/00-overview.md)** — the single entry point. Feature
    scope, the module map, and the cross-cutting topics worth keeping in
    mind, with links to every per-module guide.
-2. **[01-end-to-end-flows.md](https://github.com/netbirdio/netbird/blob/c5503fdc7f93ae6844a39caecf2970b43618c9b2/docs/agent-networks/01-end-to-end-flows.md)** — three
+2. **[01-end-to-end-flows.md](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/docs/agent-networks/01-end-to-end-flows.md)** — three
    high-level mermaid diagrams: config-to-runtime synth/delivery,
    per-request lifecycle through the LLM chain, and the budget-rule
    feedback loop.
@@ -64,5 +64,5 @@ scan:
 - **Cross-references** — upstream/downstream module links + the
   end-to-end flow + the overview.
 
-See [00-overview.md](https://github.com/netbirdio/netbird/blob/c5503fdc7f93ae6844a39caecf2970b43618c9b2/docs/agent-networks/00-overview.md) for the module map and the
+See [00-overview.md](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/docs/agent-networks/00-overview.md) for the module map and the
 cross-cutting topics.

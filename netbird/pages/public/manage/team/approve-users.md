@@ -1,8 +1,9 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/manage/team/approve-users.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/manage/team/approve-users.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/team/approve-users.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/team/approve-users.mdx)
 
 # Approve users
 
 The user approval feature enhances security by requiring manual administrator approval before a user can join your NetBird organization via domain matching.
+New NetBird Cloud accounts have user approval enabled by default.
 
 ## Require user approval
 
@@ -11,13 +12,13 @@ Navigate to the Dashboard's `Settings` page and the `Authentication` tab and ena
 - **Enabled**: Require manual approval for new users joining via domain matching. Users will be blocked until approved. Learn how to approve or reject users in the section [below](#approve-or-reject-user).
 - **Disabled**: Manual approval for new users is not required. Users joining via domain matching will be automatically added to the organization.
 
-![netbird-authentication-settings-approval](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/team/approve-users/netbird-authentication-settings-approval.png)
+![netbird-authentication-settings-approval](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/approve-users/netbird-authentication-settings-approval.png)
 
 ## Approve or reject user
 
 To approve a user, navigate to the [Users Page](https://app.netbird.io/team/users) and click the `Approve` or `Reject` button on the right side of the users table.
 
-![netbird-user-approval](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/team/approve-users/netbird-user-approval.png)
+![netbird-user-approval](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/approve-users/netbird-user-approval.png)
 
 ## Get started
 

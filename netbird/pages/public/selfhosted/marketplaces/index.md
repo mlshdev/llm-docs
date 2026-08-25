@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/selfhosted/marketplaces/index.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/selfhosted/marketplaces/index.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/selfhosted/marketplaces/index.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/selfhosted/marketplaces/index.mdx)
 
 # VPS Marketplaces
 
@@ -6,7 +6,7 @@ Deploy a self-hosted NetBird control plane from your VPS provider's marketplace.
 
 > **Note**
 >
-> Marketplace deployments install the self-hosted NetBird management server. For installing the NetBird agent on an existing VPS, see the [Install guides](https://docs.netbird.io/get-started/install).
+> Marketplace deployments install the self-hosted NetBird management server. For installing the NetBird client on an existing VPS, see the [Install guides](https://docs.netbird.io/get-started/install).
 
 ### Tiles
 

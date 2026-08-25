@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/agent-network/clusters.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/agent-network/clusters.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/agent-network/clusters.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/agent-network/clusters.mdx)
 
 # Clusters
 
@@ -23,11 +23,11 @@ upstreams, and keep the endpoint available if one goes down.
 Go to **Agent Network → Configuration → Clusters** to see every cluster serving your account, along
 with the number of connected proxies, online status, and the capabilities each proxy reports.
 
-![Agent Network clusters list under Configuration](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/agent-network/clusters/agent-network-clusters-list.png)
+![Agent Network clusters list under Configuration](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/agent-network/clusters/agent-network-clusters-list.png)
 
 Use **Setup Self-Hosted Cluster** to register a new one. Enter a domain for the cluster and pick a
 **Deployment Method**: run it yourself with Docker, or use one of the **1-click deployments** for
 popular cloud providers to stand up a proxy in a few clicks. The wizard then walks you through the
 DNS records to add and starting the proxy.
 
-![Setup Cluster wizard with domain and deployment method](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/agent-network/clusters/agent-network-setup-cluster.png)
+![Setup Cluster wizard with domain and deployment method](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/agent-network/clusters/agent-network-setup-cluster.png)

@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/selfhosted/selfhosted-quickstart.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/selfhosted/selfhosted-quickstart.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/selfhosted/selfhosted-quickstart.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/selfhosted/selfhosted-quickstart.mdx)
 
 # Self-Hosting Quickstart Guide (5 min)
 
@@ -104,7 +104,7 @@ See an example `config.yaml` file in the [NetBird GitHub repository](https://git
 
 The script deploys NetBird **without any users**. Once complete, you'll need to create your first user:
 
-![NetBird setup page](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/quickstart/setup.png)
+![NetBird setup page](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/quickstart/setup.png)
 
 1. Open your browser and navigate to `https://netbird.example.com`
 2. You'll be redirected to the setup page (`/setup`)

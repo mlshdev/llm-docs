@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/manage/team/idp-sync/embedded/jumpcloud-sync.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/manage/team/idp-sync/embedded/jumpcloud-sync.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/team/idp-sync/embedded/jumpcloud-sync.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/team/idp-sync/embedded/jumpcloud-sync.mdx)
 
 # Provision Users and Groups From JumpCloud (Embedded IdP)
 
@@ -30,11 +30,11 @@ To enable SCIM synchronization in NetBird, navigate to `Integrations > Identity 
 
 Select your **JumpCloud** identity provider connector for this integration and click **Continue** to proceed.
 
-![select-identity-provider](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/team/idp-sync/jumpcloud-sync/select-idp.png)
+![select-identity-provider](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/idp-sync/jumpcloud-sync/select-idp.png)
 
 This will open a pop-up window featuring a user-friendly wizard to guide you through the configuration process.
 
-![NetBird Jumpcloud Getting Started](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/team/idp-sync/jumpcloud-sync/jumpcloud-scim-getting-started.png)
+![NetBird Jumpcloud Getting Started](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/idp-sync/jumpcloud-sync/jumpcloud-scim-getting-started.png)
 
 Click `Get Started` to launch the configuration wizard. You will be guided through several configuration options:
 
@@ -42,7 +42,7 @@ Click `Get Started` to launch the configuration wizard. You will be guided throu
 
 By default, all groups assigned to the NetBird application in JumpCloud will be synchronized. If you want to synchronize only assigned groups that start with a specific prefix, you can specify them in the filter. Keep in mind that the prefix matching is case-sensitive.
 
-![NetBird Jumpcloud Group Filter](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/team/idp-sync/jumpcloud-sync/jumpcloud-scim-group-filter.png)
+![NetBird Jumpcloud Group Filter](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/idp-sync/jumpcloud-sync/jumpcloud-scim-group-filter.png)
 
 Click `Continue` to proceed to the next step.
 
@@ -50,7 +50,7 @@ Click `Continue` to proceed to the next step.
 
 By default, all users from the groups assigned to the NetBird application will be synchronized. If you want to further filter and synchronize only users from specific assigned groups, you can specify those group names in the filter. The group name matching is case-sensitive.
 
-![NetBird Jumpcloud User Group Filter](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/team/idp-sync/jumpcloud-sync/jumpcloud-scim-user-group-filter.png)
+![NetBird Jumpcloud User Group Filter](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/idp-sync/jumpcloud-sync/jumpcloud-scim-user-group-filter.png)
 
 Click `Continue` to generate your SCIM credentials.
 
@@ -58,11 +58,11 @@ Click `Continue` to generate your SCIM credentials.
 
 NetBird will generate the SCIM credentials required to configure JumpCloud. Make note of both the **Base URL** and **Token Key** as you will need them in the next section to complete the JumpCloud configuration.
 
-![NetBird Jumpcloud SCIM Credentials](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/team/idp-sync/jumpcloud-sync/jumpcloud-scim-credentials.png)
+![NetBird Jumpcloud SCIM Credentials](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/idp-sync/jumpcloud-sync/jumpcloud-scim-credentials.png)
 
 Click `Finish Setup` to complete the NetBird SCIM configuration.
 
-![NetBird Jumpcloud SCIM Enabled](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/team/idp-sync/jumpcloud-sync/jumpcloud-scim-enabled.png)
+![NetBird Jumpcloud SCIM Enabled](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/idp-sync/jumpcloud-sync/jumpcloud-scim-enabled.png)
 
 You can now proceed to configure the SCIM application in JumpCloud using the credentials generated above.
 
@@ -79,13 +79,13 @@ In the **Configuration Settings** section, enter the following SCIM Service Prov
 - **Token Key**: Paste the Bearer token you copied from NetBird
 - **Test User Email**: Provide a new, unused email address for testing (e.g., `test@yourdomain.com`)
 
-![JumpCloud SCIM Configuration](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/team/idp-sync/jumpcloud-sync/jumpcloud-scim-config.png)
+![JumpCloud SCIM Configuration](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/idp-sync/jumpcloud-sync/jumpcloud-scim-config.png)
 
 - Click `Test Connection` to verify the SCIM connection
 
 If the connection is successful, you'll see a success message. Click `Activate` to enable SCIM provisioning.
 
-![JumpCloud SCIM Test Success](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/team/idp-sync/jumpcloud-sync/jumpcloud-scim-activated.png)
+![JumpCloud SCIM Test Success](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/idp-sync/jumpcloud-sync/jumpcloud-scim-activated.png)
 
 ## Assigning Groups for SCIM Synchronization
 
@@ -98,7 +98,7 @@ In your [JumpCloud admin console](https://console.jumpcloud.com/):
 - Select the groups whose members you want to synchronize to NetBird
 - Click `Save` to apply the changes
 
-![JumpCloud Assign Groups](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/team/idp-sync/jumpcloud-sync/jumpcloud-assign-groups.png)
+![JumpCloud Assign Groups](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/idp-sync/jumpcloud-sync/jumpcloud-assign-groups.png)
 
 Once saved, JumpCloud will automatically synchronize the selected groups and their user memberships to NetBird.
 
@@ -107,7 +107,7 @@ Once saved, JumpCloud will automatically synchronize the selected groups and the
 After assigning groups in JumpCloud, the synchronization will begin automatically. You can verify that users and groups
 have been successfully synchronized by navigating to `Team > Users` in your NetBird dashboard.
 
-![NetBird Verify Users](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/team/idp-sync/jumpcloud-sync/netbird-verify-users.png)
+![NetBird Verify Users](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/idp-sync/jumpcloud-sync/netbird-verify-users.png)
 
 > **Note**
 >

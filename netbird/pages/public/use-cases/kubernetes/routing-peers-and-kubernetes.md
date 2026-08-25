@@ -1,8 +1,8 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/use-cases/kubernetes/routing-peers-and-kubernetes.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/use-cases/kubernetes/routing-peers-and-kubernetes.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/use-cases/kubernetes/routing-peers-and-kubernetes.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/use-cases/kubernetes/routing-peers-and-kubernetes.mdx)
 
 # Deploy routing peers to a Kubernetes cluster
 
-This guide provides instructions on how to use NetBird agent within a Kubernetes cluster to establish secure, peer-to-peer
+This guide provides instructions on how to use the NetBird client within a Kubernetes cluster to establish secure, peer-to-peer
 networking between your Kubernetes pods and external services or other clusters.
 
 > **Note**
@@ -35,7 +35,7 @@ suit your needs.
 
 See the screenshot below for reference:
 
-![k8s-create-setup-key](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/use-cases/routing-peers-and-kubernetes/k8s-create-setup-key.png)
+![k8s-create-setup-key](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/use-cases/routing-peers-and-kubernetes/k8s-create-setup-key.png)
 
 With your setup key created, note it down for the next steps.
 
@@ -50,11 +50,11 @@ Set the distribution group to `hetzner-servers`. This group is used to distribut
 
 See the screenshot below for reference:
 
-![k8s-add-network-route](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/use-cases/routing-peers-and-kubernetes/k8s-add-network-route.png)
+![k8s-add-network-route](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/use-cases/routing-peers-and-kubernetes/k8s-add-network-route.png)
 
 Click on Name & Description to give your route a name and description. Then click on `Add Route` to save your changes.
 
-![k8s-name-network-route](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/use-cases/routing-peers-and-kubernetes/k8s-name-network-route.png)
+![k8s-name-network-route](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/use-cases/routing-peers-and-kubernetes/k8s-name-network-route.png)
 
 ### Step 3: Create an access control policy
 
@@ -63,17 +63,17 @@ Navigate to Access Control Policies in the NetBird management dashboard and clic
 Set the source group to `hetzner-servers` and the destination group to `kubernetes-routers`. This configuration allows
 the Hetzner servers to access the kubernetes pods.
 
-![k8s-add-access-control-policy](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/use-cases/routing-peers-and-kubernetes/k8s-add-access-control-policy.png)
+![k8s-add-access-control-policy](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/use-cases/routing-peers-and-kubernetes/k8s-add-access-control-policy.png)
 
 Click on Name & Description to give your policy a name and description. Then click on `Add Policy` to save your changes.
 
-![k8s-name-access-control-policy](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/use-cases/routing-peers-and-kubernetes/k8s-name-access-control-policy.png)
+![k8s-name-access-control-policy](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/use-cases/routing-peers-and-kubernetes/k8s-name-access-control-policy.png)
 
 ### Step 4: Deploy the NetBird agent
 
-You can deploy the NetBird agent using a daemon set or a deployment. Below is an example of a deployment configuration with 1 replica.
+You can deploy the NetBird client using a daemon set or a deployment. Below is an example of a deployment configuration with 1 replica.
 
-The example below enrolls the agent with a setup key. To also pre-populate the client config so it starts fully configured, see [Bootstrap peers via config file](https://docs.netbird.io/manage/peers/bootstrap-via-config-file).
+The example below enrolls the client with a setup key. To also pre-populate the client config so it starts fully configured, see [Bootstrap peers via config file](https://docs.netbird.io/manage/peers/bootstrap-via-config-file).
 
 ```yaml
 ---
@@ -188,15 +188,15 @@ kubectl apply -f deployment.yml
 
 ### Step 6: Verify the deployment
 
-After deploying the NetBird agent, you can verify that the agent is running by checking the logs of the pods.
+After deploying the NetBird client, you can verify that the client is running by checking the logs of the pods.
 
 ```shell
 kubectl logs -l app=netbird
 ```
 
-You can also verify that the agent is connected to the NetBird management dashboard by checking the dashboard.
+You can also verify that the client is connected to the NetBird management dashboard by checking the dashboard.
 
-![k8s-netbird-agent-connected](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/use-cases/routing-peers-and-kubernetes/k8s-netbird-agent-connected.png)
+![NetBird client pod shown as connected in the dashboard](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/use-cases/routing-peers-and-kubernetes/k8s-netbird-agent-connected.png)
 
 ## Conclusion
 

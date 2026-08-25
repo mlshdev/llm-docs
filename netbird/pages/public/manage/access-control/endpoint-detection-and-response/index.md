@@ -1,8 +1,8 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/manage/access-control/endpoint-detection-and-response/index.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/manage/access-control/endpoint-detection-and-response/index.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/access-control/endpoint-detection-and-response/index.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/access-control/endpoint-detection-and-response/index.mdx)
 
 # Integrate NetBird with MDM & EDR Platforms
 
-![Endpoint Detection and Response](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/endpoint-detection-and-response/edr-integrations.png)
+![Endpoint Detection and Response](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/access-control/endpoint-detection-and-response/edr-integrations.png)
 
 ## What is EDR and MDM?
 

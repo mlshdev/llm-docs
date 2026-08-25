@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/ipa/resources/edr-fleetdm-integrations.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/ipa/resources/edr-fleetdm-integrations.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/ipa/resources/edr-fleetdm-integrations.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/ipa/resources/edr-fleetdm-integrations.mdx)
 
 ## Create EDR FleetDM Integration   (POST /api/integrations/edr/fleetdm)
 
@@ -28,7 +28,7 @@ Indicates whether the integration is enabled
 
 **match\_attributes (type: object; required)**
 
-**Attribute conditions to match when approving FleetDM hosts. Most attributes work with FleetDM's free/open-source version. Premium-only attributes are marked accordingly**
+**Attribute conditions to match when approving FleetDM hosts. Most attributes work with FleetDM's free/open source version. Premium-only attributes are marked accordingly**
 
 **disk\_encryption\_enabled (type: boolean; optional)**
 
@@ -914,7 +914,7 @@ Indicates whether the integration is enabled
 
 **match\_attributes (type: object; required)**
 
-**Attribute conditions to match when approving FleetDM hosts. Most attributes work with FleetDM's free/open-source version. Premium-only attributes are marked accordingly**
+**Attribute conditions to match when approving FleetDM hosts. Most attributes work with FleetDM's free/open source version. Premium-only attributes are marked accordingly**
 
 **disk\_encryption\_enabled (type: boolean; optional)**
 

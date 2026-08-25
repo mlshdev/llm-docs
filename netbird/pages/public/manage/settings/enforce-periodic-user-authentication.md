@@ -1,9 +1,9 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/manage/settings/enforce-periodic-user-authentication.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/manage/settings/enforce-periodic-user-authentication.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/settings/enforce-periodic-user-authentication.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/settings/enforce-periodic-user-authentication.mdx)
 
-# Enforce periodic user authentication
+# Peer Session Expiration
 
-To ensure a high level of security, NetBird offers a peer login expiration feature that requires users to periodically reauthenticate their devices.
-Every new network has this feature enabled, and the expiration period is set to 24 hours by default. You can disable this feature and configure the expiration period in the account settings in the web UI <https://app.netbird.io/settings>.
+To ensure a high level of security, NetBird offers a peer session expiration feature (shown as **Peer Session Expiration** in the dashboard) that requires users to periodically reauthenticate their devices.
+Every new account has this feature enabled, and the expiration period is set to 24 hours by default. You can disable this feature and configure the expiration period in the account settings in the web UI <https://app.netbird.io/settings>.
 
 > **Note**
 >
@@ -11,29 +11,45 @@ Every new network has this feature enabled, and the expiration period is set to 
 
 Expired peers will appear in the peers' view with the status `Login required`.
 
-![peer-needs-login.png](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/team/peer-needs-login.png)
+![peer-needs-login.png](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/peer-needs-login.png)
 
 ## Configure and disable expiration
 
 The expiration period can be set to anything between one hour and 180 days.
-Go to the Web UI `Settings` tab and set the desired period in the Authentication section.
-You can also disable the expiration for the whole network in the same section.
+Go to the Web UI `Settings` page, open the `Authentication` tab, enable the `Peer Session Expiration` toggle, and set the desired period in the `Session Expiration` field below it (in hours or days).
+You can also disable the expiration for the whole account in the same section.
 
-![peer-login-expiration](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/team/peer-login-expiration.png)
+![peer-login-expiration](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/peer-login-expiration.png)
 
 > **Note**
 >
 > Enabling peer expiration or changing the expiration period will cause some peers added with the SSO login to disconnect,
 > and re-authentication will be required.
 
+## Require login after disconnect
+
+In addition to the periodic expiration, you can require re-authentication when a peer loses its connection to the management service.
+Enable the `Require login after disconnect` toggle under `Peer Session Expiration` in the `Authentication` tab.
+When enabled, peers added with SSO login that stay disconnected from management for 10 minutes will require re-authentication before reconnecting.
+This is useful for tightly controlled environments where a device that goes offline, such as a laptop that is shut down or leaves the network, should prove the user's identity again before rejoining.
+
+This option is only available while `Peer Session Expiration` is enabled, and it can also be toggled individually per peer in the peer's detail view.
+
+## Session expiration warnings
+
+Starting with NetBird client v0.75, the desktop client warns users before their session expires instead of silently disconnecting them.
+A system notification appears 10 minutes before expiration, letting the user extend the session by re-authenticating right away.
+If the user hasn't acted on it, a final warning dialog opens 2 minutes before the session expires.
+This gives users a chance to re-authenticate without interrupting their work or losing connectivity.
+
 ## Disable expiration individually per peer
 
 Sometimes, you might want to disable peer expiration for some peers.
-With NetBird you can disable login expiration per peer without disabling expiration globally.
-In `Peers` click on the peer you want to disable expiration for and use the Login Expiration switch. (Session expiration only applies to peers with a user behind them; peers enrolled with a setup key are already exempt.)
-Peers with `Expiration disabled` will be marked with a corresponding label in the Peers table.
+With NetBird you can disable session expiration per peer without disabling expiration globally.
+In `Peers` click on the peer you want to disable expiration for and use the `Session Expiration` toggle. (Session expiration only applies to peers with a user behind them; peers enrolled with a setup key are already exempt.)
+Peers with disabled expiration are marked with a timer icon in the Peers table, and hovering over it shows a note that expiration is disabled for this peer.
 
-![peer-login-expiration](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/team/individual-peer-login-expiration.png)
+![peer-login-expiration](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/individual-peer-login-expiration.png)
 
 ## Get started
 

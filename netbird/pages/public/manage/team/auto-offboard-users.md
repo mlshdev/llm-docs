@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/manage/team/auto-offboard-users.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/manage/team/auto-offboard-users.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/team/auto-offboard-users.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/team/auto-offboard-users.mdx)
 
 # Automatically Offboard Team Members from NetBird
 
@@ -14,39 +14,39 @@ is deleted from your Identity Provider.
 In this tutorial, we will focus on `user_01`, `user_02`, and `user_03`. From NetBird's `Users` dashboard, you can see
 that `user_01` is part of the `IT Administrators` group, while `user_02` and `user_03` belong to the `Staging` group.
 
-![NetBird Users](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/team/auto-offboard-users/GT3eAeU.png)
+![NetBird Users](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/auto-offboard-users/GT3eAeU.png)
 
 To get started, access your Identity Provider (IdP) dashboard. For this example, we'll use [Microsoft Entra ID (Azure AD)](https://docs.netbird.io/manage/team/idp-sync/microsoft-entra-id-sync).
 
 Next, locate the user you want to offboard in your IdP's user management section. Let’s say you want to revoke access to
 `user_01`, in that case, you will need to select it and click the `Delete` button as shown below.
 
-![IdP Delete User](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/team/auto-offboard-users/TJWLvXL.png)
+![IdP Delete User](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/auto-offboard-users/TJWLvXL.png)
 
 After deletion, click the `Refresh` button to confirm that the user is no longer active.
 
-![IdP Confirm Deletion](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/team/auto-offboard-users/LJ6QHRV.png)
+![IdP Confirm Deletion](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/auto-offboard-users/LJ6QHRV.png)
 
 Wait for the NetBird integration to complete its next synchronization cycle, which usually takes 300 seconds. Alternatively, go to the `Integrations` screen in the NetBird admin console and click the corresponding integration button to manually trigger the synchronization.
 
-![NetBird Integrations Force Sync](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/team/auto-offboard-users/ogiiUeT.png)
+![NetBird Integrations Force Sync](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/auto-offboard-users/ogiiUeT.png)
 
 Now, go to NetBird's `Users` dashboard to verify that the user is no longer listed.
 
-![NetBird Users Verification](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/team/auto-offboard-users/MQ2yh6B.png)
+![NetBird Users Verification](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/auto-offboard-users/MQ2yh6B.png)
 
 ## Revoking Group Access
 
 Imagine a scenario where you have an access policy that grants all members of the `Staging` group access to resources in the `Servers` group.
 
-![NetBird Access Control](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/team/auto-offboard-users/sATMbbP.png)
+![NetBird Access Control](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/auto-offboard-users/sATMbbP.png)
 
 Let's say the current project is finished, and you no longer want members of the `Staging` group to have access to the
 `Servers` group. One way to do this is to remove the `Staging` group from your IdP.
 
-![IdP Delete Group](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/team/auto-offboard-users/TOZjFKC.png)
+![IdP Delete Group](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/auto-offboard-users/TOZjFKC.png)
 
 Once the changes synchronize in NetBird, users and their group memberships will be updated; therefore,
 [network access associated with that group](https://docs.netbird.io/manage/access-control/manage-network-access) will automatically be revoked.
 
-![NetBird No Group](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/team/auto-offboard-users/NKabmN6.png)
+![NetBird No Group](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/auto-offboard-users/NKabmN6.png)

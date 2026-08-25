@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/manage/activity/event-streaming/wazuh.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/manage/activity/event-streaming/wazuh.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/activity/event-streaming/wazuh.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/activity/event-streaming/wazuh.mdx)
 
 # Stream Activity Events to Wazuh
 
@@ -23,7 +23,7 @@ In **<https://app.netbird.io>**:
 3. Leave **Headers** and **Body Template** at their defaults.
 4. **Save Changes**.
 
-![NetBird Generic HTTP integration configuration](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/activity/event-streaming/wazuh/netbird-generic-http-config.png)
+![NetBird Generic HTTP integration configuration](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/activity/event-streaming/wazuh/netbird-generic-http-config.png)
 
 > **Note**
 >

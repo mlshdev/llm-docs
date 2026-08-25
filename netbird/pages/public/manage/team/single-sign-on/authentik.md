@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/manage/team/single-sign-on/authentik.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/manage/team/single-sign-on/authentik.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/team/single-sign-on/authentik.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/team/single-sign-on/authentik.mdx)
 
 # Authentik on NetBird Cloud
 
@@ -12,41 +12,41 @@ You can use Authentik as your Identity Provider with NetBird, but it will requir
 1. You need to create a new Application and Provider.
    - Browse to the Applications Administration menu, click on Application, and then click on Create with Provider:
 
-![create-with-provider](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/team/single-sign-on/authentik-idp/1-create-with-provider.png)
+![create-with-provider](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/single-sign-on/authentik-idp/1-create-with-provider.png)
 
 - Name the Application and select a suitable explicit user flow. In the example below, we used NetBird:
 
-![new-application](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/team/single-sign-on/authentik-idp/2-new-application.png)
+![new-application](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/single-sign-on/authentik-idp/2-new-application.png)
 
 - Click Next and select the OAuth2/OpenID Provider Type:
 
-![new-application](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/team/single-sign-on/authentik-idp/3-new-application-type.png)
+![new-application](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/single-sign-on/authentik-idp/3-new-application-type.png)
 
 - Click Next and select an explicit user authorization flow, then take note of the Client ID and Client Secret:
 
-![new-application](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/team/single-sign-on/authentik-idp/4-new-application-client-id.png)
+![new-application](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/single-sign-on/authentik-idp/4-new-application-client-id.png)
 
 - Add the following redirect URL and select a signing key: \\
 
   URL: `https://login.netbird.io/login/callback`
 
-![new-application](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/team/single-sign-on/authentik-idp/5-new-application-sign.png)
+![new-application](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/single-sign-on/authentik-idp/5-new-application-sign.png)
 
 - Click on Advanced protocol settings and ensure that the email, opened, and profile scopes are selected and that Based on the User’s Hash ID is selected for Subject mode:
 
-![new-application](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/team/single-sign-on/authentik-idp/6-new-application-scopes.png)
+![new-application](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/single-sign-on/authentik-idp/6-new-application-scopes.png)
 
 - Click Next on the following two screens and Submit to create the provider and application:
 
-![new-application](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/team/single-sign-on/authentik-idp/7-new-application-submit.png)
+![new-application](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/single-sign-on/authentik-idp/7-new-application-submit.png)
 
 - You should see an application listed as follow:
 
-![list-applications](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/team/single-sign-on/authentik-idp/8-list-applications.png)
+![list-applications](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/single-sign-on/authentik-idp/8-list-applications.png)
 
 2. We need to copy the OpenID Configuration URL for the new provider. You can do that by navigating to Providers in the left menu and then selecting the newly created provider. There you should see a windows similar to the following:
 
-![list-providers](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/team/single-sign-on/authentik-idp/9-list-providers.png)
+![list-providers](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/single-sign-on/authentik-idp/9-list-providers.png)
 
 - Copy the OpenID Configuration URL.
 

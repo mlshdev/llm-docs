@@ -5,7 +5,7 @@
 ## Projects
 
 - [Traefik Proxy v3.7.11](traefik/llms.txt): [full corpus](traefik/llms-full.txt), [manifest](traefik/manifest.json)
-- [NetBird v0.77.0](netbird/llms.txt): [full corpus](netbird/llms-full.txt), [manifest](netbird/manifest.json)
+- [NetBird v0.77.1](netbird/llms.txt): [full corpus](netbird/llms-full.txt), [manifest](netbird/manifest.json)
 - [Podman v6.1.0](podman/llms.txt): [full corpus](podman/llms-full.txt), [manifest](podman/manifest.json)
 
 ## Update policy

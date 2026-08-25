@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/selfhosted/identity-providers/managed/advanced/microsoft-entra-id.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/selfhosted/identity-providers/managed/advanced/microsoft-entra-id.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/selfhosted/identity-providers/managed/advanced/microsoft-entra-id.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/selfhosted/identity-providers/managed/advanced/microsoft-entra-id.mdx)
 
 # Microsoft and Entra ID SSO with NetBird Self-Hosted (Legacy)
 
@@ -38,18 +38,18 @@ For most deployments, the [embedded IdP](https://docs.netbird.io/selfhosted/iden
 4. Click **Register**
 5. After registration, note the **Application (client) ID** from the Overview page (you'll need this in Step 3)
 
-![New application](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/microsoft-entra-id/azure/azure-new-application.png)
+![New application](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/identity-providers/managed/microsoft-entra-id/azure/azure-new-application.png)
 
 ### Step 2: Configure Platform Settings
 
 1. Click **Authentication** on the left menu
 2. Under **Single-page application**, add another URI: `https://<yournetbirddomain.com>/auth`
 
-![SPA URI setup](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/microsoft-entra-id/azure/azure-spa-uri-setup.png)
+![SPA URI setup](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/identity-providers/managed/microsoft-entra-id/azure/azure-spa-uri-setup.png)
 
 3. Scroll down and configure options as shown:
 
-![Flows setup](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/microsoft-entra-id/azure/azure-flows-setup.png)
+![Flows setup](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/identity-providers/managed/microsoft-entra-id/azure/azure-flows-setup.png)
 
 4. Click **Add a Platform** → **Mobile and desktop applications**
 5. Add custom redirect URI: `http://localhost:53000`
@@ -64,13 +64,13 @@ For most deployments, the [embedded IdP](https://docs.netbird.io/selfhosted/iden
    - **Scope name**: `api`
 5. Click **Add scope**
 
-![Add scope](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/microsoft-entra-id/azure/azure-add-scope.png)
+![Add scope](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/identity-providers/managed/microsoft-entra-id/azure/azure-add-scope.png)
 
 6. Under **Authorized client applications**, click **+ Add a client application**
 7. Enter your **Client ID** (the Application (client) ID you noted when creating the app registration in Step 1)
 8. Click **Add application**
 
-![Add application scope](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/microsoft-entra-id/azure/azure-add-application-scope.png)
+![Add application scope](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/identity-providers/managed/microsoft-entra-id/azure/azure-add-application-scope.png)
 
 ### Step 4: Add API Permissions
 
@@ -78,18 +78,18 @@ For most deployments, the [embedded IdP](https://docs.netbird.io/selfhosted/iden
 2. Click **Add a permission**
 3. Select **My APIs** tab → **Netbird** → check `api` permission → **Add permissions**
 
-![NetBird API permissions](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/microsoft-entra-id/azure/azure-netbird-api-permisssions.png)
+![NetBird API permissions](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/identity-providers/managed/microsoft-entra-id/azure/azure-netbird-api-permisssions.png)
 
 4. Click **Add a permission** again
 5. Select **Microsoft Graph** → **Application permissions**
 6. Search for `User.Read` and select `User.Read.All`
 7. Click **Add permissions**
 
-![OpenID permissions](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/microsoft-entra-id/azure/azure-openid-permissions.png)
+![OpenID permissions](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/identity-providers/managed/microsoft-entra-id/azure/azure-openid-permissions.png)
 
 8. Click **Grant admin consent for Default Directory** → **Yes**
 
-![Grant admin consent](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/microsoft-entra-id/azure/azure-grant-admin-conset.png)
+![Grant admin consent](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/identity-providers/managed/microsoft-entra-id/azure/azure-grant-admin-conset.png)
 
 ### Step 5: Update Token Version
 
@@ -106,7 +106,7 @@ For most deployments, the [embedded IdP](https://docs.netbird.io/selfhosted/iden
 4. Click **Add**
 5. Copy the **Value** immediately
 
-![Client secret](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/microsoft-entra-id/azure/azure-client-secret.png)
+![Client secret](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/identity-providers/managed/microsoft-entra-id/azure/azure-client-secret.png)
 
 6. Click **Overview** and note:
    - **Application (client) ID**

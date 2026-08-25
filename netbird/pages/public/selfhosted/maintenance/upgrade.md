@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/selfhosted/maintenance/upgrade.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/selfhosted/maintenance/upgrade.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/selfhosted/maintenance/upgrade.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/selfhosted/maintenance/upgrade.mdx)
 
 # Upgrade Your Self-Hosted NetBird Installation
 
@@ -6,7 +6,7 @@
 
 The NetBird Dashboard displays an update indicator at the bottom of the left navigation menu when a new version is available:
 
-![update-available](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/maintenance/update-available.png)
+![update-available](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/maintenance/update-available.png)
 
 You can also check the current version programmatically via the API (requires authentication):
 
@@ -60,6 +60,18 @@ To upgrade NetBird to the latest version:
    ```bash
    docker compose up -d --force-recreate netbird-server dashboard proxy
    ```
+
+> **Note**
+>
+> Keep the Management and proxy versions in sync. Starting with v0.76.1, if the [Reverse Proxy](https://docs.netbird.io/manage/reverse-proxy) component runs a newer version than Management, Agent Network LLM cost metering is silently disabled (the proxy skips cost computation and only logs a warning). Upgrade Management before or together with the proxy.
+>
+> Because the `netbirdio/reverse-proxy:latest` image tag does not tell you what is actually running, check the resolved proxy version with:
+>
+> ```bash
+> docker compose exec proxy /go/bin/netbird-proxy --version
+> ```
+>
+> Compare it with the `management_current_version` field returned by `GET /api/instance/version` before upgrading.
 
 > **Note**
 >

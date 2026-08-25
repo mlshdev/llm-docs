@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/manage/access-control/endpoint-detection-and-response/sentinelone-edr.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/manage/access-control/endpoint-detection-and-response/sentinelone-edr.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/access-control/endpoint-detection-and-response/sentinelone-edr.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/access-control/endpoint-detection-and-response/sentinelone-edr.mdx)
 
 # Restrict Network Access with SentinelOne Singularity™
 
@@ -51,20 +51,20 @@ Before you start creating and configuring a SentinelOne integration, ensure that
 - Navigate to the [Integrations » EDR](https://app.netbird.io/integrations?tab=edr) tab in the NetBird dashboard
 - Click **Connect SentinelOne** to start the configuration wizard
 
-![SentinelOne integration getting started](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/endpoint-detection-and-response/sentinelone/getting-started.png)
+![SentinelOne integration getting started](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/access-control/endpoint-detection-and-response/sentinelone/getting-started.png)
 
 - Click the **Get Started** button to initiate the integration process
 - Enter your SentinelOne console URL (e.g., `https://your-tenant.sentinelone.net`) and click **Continue**
 
-![SentinelOne console configuration](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/endpoint-detection-and-response/sentinelone/console-config.png)
+![SentinelOne console configuration](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/access-control/endpoint-detection-and-response/sentinelone/console-config.png)
 
 - Enter the API token you created in the previous step and click **Continue** to verify the connection
 
-![SentinelOne service user configuration](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/endpoint-detection-and-response/sentinelone/service-user.png)
+![SentinelOne service user configuration](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/access-control/endpoint-detection-and-response/sentinelone/service-user.png)
 
 - Select the **groups** you want to apply the integration to and click **Connect**
 
-![SentinelOne group configuration](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/endpoint-detection-and-response/sentinelone/group-config.png)
+![SentinelOne group configuration](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/access-control/endpoint-detection-and-response/sentinelone/group-config.png)
 
 > **Note**
 >
@@ -80,11 +80,11 @@ Before you start creating and configuring a SentinelOne integration, ensure that
   - **Active Status**: Requires the SentinelOne agent to be active and reporting. The agent must be in operational state (not disabled, corrupted, or experiencing errors).
   - **Latest Agent Version**: Requires the SentinelOne agent to be running the most current version.
 
-![edr-integrations](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/endpoint-detection-and-response/sentinelone/compliance-config.png)
+![edr-integrations](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/access-control/endpoint-detection-and-response/sentinelone/compliance-config.png)
 
 - Configure the **SentinelOne Sync Window** (default is 24 hours). This setting determines which devices NetBird will consider for network access based on their recent activity in SentinelOne. Only devices that have been active and reporting to SentinelOne within this time window will be synchronized. These devices must then also meet the configured compliance criteria to gain network access.
 
-![edr-integrations](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/endpoint-detection-and-response/sentinelone/sync-config.png)
+![edr-integrations](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/access-control/endpoint-detection-and-response/sentinelone/sync-config.png)
 
 - Click **Connect** to complete the integration setup
 
@@ -92,7 +92,7 @@ Before you start creating and configuring a SentinelOne integration, ensure that
   Peers without the SentinelOne agent or those that don't meet the compliance requirements will appear with an `Approval required` mark in the peers list and won't be able to access
   the network until they have the agent installed and satisfy all the specified security requirements.
 
-![edr-approval-required](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/endpoint-detection-and-response/sentinelone/edr-approval-required.png)
+![edr-approval-required](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/access-control/endpoint-detection-and-response/sentinelone/edr-approval-required.png)
 
 > **Note**
 >

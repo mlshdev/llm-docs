@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/client/block-inbound-connections.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/client/block-inbound-connections.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/client/block-inbound-connections.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/client/block-inbound-connections.mdx)
 
 # Block Inbound Connections
 
@@ -23,6 +23,10 @@ When Block Inbound Connections is enabled, the client will not add any inbound f
 - **Peer connections**: Other peers cannot initiate connections to this machine.
 - **Routed network traffic**: If this peer acts as a routing peer, inbound traffic to its routed networks is also blocked.
 - **SSH access**: NetBird SSH connections to this peer are blocked.
+
+> **Note**
+>
+> [`netbird expose`](https://docs.netbird.io/manage/reverse-proxy/expose-from-cli) requires inbound connections, so the command fails while this setting is enabled.
 
 > **Note**
 >

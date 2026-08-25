@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/selfhosted/maintenance/scaling/migrate-sqlite-to-postgresql.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/selfhosted/maintenance/scaling/migrate-sqlite-to-postgresql.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/selfhosted/maintenance/scaling/migrate-sqlite-to-postgresql.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/selfhosted/maintenance/scaling/migrate-sqlite-to-postgresql.mdx)
 
 # Migrate from SQLite to PostgreSQL
 
@@ -45,10 +45,12 @@ The migration uses [pgloader](https://github.com/dimitri/pgloader) to transfer d
 
 ```bash
 # Debian/Ubuntu
-sudo apt-get install pgloader
+sudo apt-get install pgloader sqlite3 postgresql-client
 
 # macOS
-brew install pgloader
+brew install pgloader sqlite3 libpq
+# Export libpq to the PATH to allow using its command-line tools.
+export PATH="$(brew --prefix libpq)/bin:$PATH"
 ```
 
 ## Create the Migration File
@@ -75,6 +77,8 @@ CAST
      column accounts.settings_lazy_connection_enabled             to boolean,
      column accounts.settings_peer_expose_enabled                 to boolean,
      column accounts.settings_auto_update_always                  to boolean,
+     column accounts.settings_metrics_push_enabled                to boolean,
+     column accounts.settings_agent_network_only                  to boolean,
      column accounts.settings_local_mfa_enabled                   to boolean
 ;
 ```

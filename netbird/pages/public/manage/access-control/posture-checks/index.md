@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/manage/access-control/posture-checks/index.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/manage/access-control/posture-checks/index.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/access-control/posture-checks/index.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/access-control/posture-checks/index.mdx)
 
 # Understanding NetBird Posture Checks
 
@@ -6,25 +6,23 @@ Posture Checks is a security feature that enhances network protection by impleme
 
 In this regard, NetBird posture checks verify various aspects of a connecting device, offering granular control over network access. These checks include **verifying the NetBird client version**, allowing you to restrict access to peers with specific versions of the client software. Additionally, you can implement **geographical restrictions** based on country or region, giving you control over where connections can originate from.
 
+[YouTube video nk7XM8oi-4Y](https://www.youtube.com/watch?v=nk7XM8oi-4Y)
+
 The feature also allows for network-level restrictions by enabling you to **allow or block specific peer network ranges**. Furthermore, you can set constraints based on the operating system of the connecting device, **ensuring that only approved OS versions can gain access**. For an even more detailed level of control, Posture Checks can examine the running processes on a peer device, **allowing or denying access based on the presence of specific applications or services**.
 
 By using these diverse checking capabilities, NetBird empowers you to create a robust and finely-tuned security posture for your network, significantly reducing the risk of unauthorized access and potential security breaches.
 
 ## Setting Up Posture Checks
 
-Setting up posture checks in NetBird is straightforward, you can follow the example in the video below:
-
-[YouTube video -KlJUBuZrpo](https://www.youtube.com/watch?v=-KlJUBuZrpo)
-
-Or follow the guide with other examples below:
+Setting up posture checks in NetBird is straightforward. Follow the guide and examples below:
 
 Log in to your NetBird dashboard and navigate to `Access Control` > `Posture Checks` in the left menu. Click `Create Posture Check` or edit an existing one.
 
-![NetBird Posture Checks](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/posture-checks/posture-checks-01.png)
+![NetBird Posture Checks](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/access-control/posture-checks/posture-checks-01.png)
 
 A pop-up window will open with two tabs: `Checks` and `Name & Description`.
 
-![Create Posture Check](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/posture-checks/posture-checks-02.png)
+![Create Posture Check](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/access-control/posture-checks/posture-checks-02.png)
 
 From here, you can manage access with posture checks based on several aspects:
 
@@ -32,13 +30,13 @@ From here, you can manage access with posture checks based on several aspects:
 
 Restrict access to peers with specific NetBird client versions, thus ensuring that all devices connecting to the network use up-to-date, secure client software.
 
-![NetBird Client Version Posture Check](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/posture-checks/posture-checks-03.png)
+![NetBird Client Version Posture Check](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/access-control/posture-checks/posture-checks-03.png)
 
 ### Country and Region
 
-Limit network access based on geographical location, helping comply with data regulations or restrict access from high-risk areas. Note that you have two tabs available for this: `Allow` (green) and `Block` (red), making it easy to set up your preferred access rules..
+Limit network access based on geographical location, helping comply with data regulations or restrict access from high-risk areas. Note that you have two tabs available for this: `Allow` (green) and `Block` (red), making it easy to set up your preferred access rules.
 
-![Country and Region Posture Check](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/posture-checks/posture-checks-04.png)
+![Country and Region Posture Check](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/access-control/posture-checks/posture-checks-04.png)
 
 > **Note**
 >
@@ -48,14 +46,14 @@ Limit network access based on geographical location, helping comply with data re
 
 This posture check lets you precisely control network access by specifying which IP ranges can connect to your network. You can create policies allowing only connections from approved locations, such as office networks or trusted remote work setups. Additionally, you can enhance security by blocking high-risk IP ranges working in tandem with geo-based posture checks. This granular control helps create a more secure network environment by limiting access to known, trusted sources while preventing connections from potentially risky or unauthorized IP addresses.
 
-![Peer Network Range Posture Check](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/posture-checks/posture-checks-05.png)
+![Peer Network Range Posture Check](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/access-control/posture-checks/posture-checks-05.png)
 
 The check evaluates a peer against two sources of address information:
 
 - **The peer's local network interfaces** — the IP addresses configured on the device's NICs (e.g. the office LAN `192.168.1.0/24` the device is plugged into).
 - **The peer's public connection IP** — the source IP the NetBird management server observes when the peer connects (i.e. the egress / NAT'd IP).
 
-A configured range matches when it contains any of these addresses, so the same check covers both private subnets and public CIDRs. Both IPv4 and IPv6 are supported. A few examples:
+A configured range matches when it fully contains one of these, so the same check covers both private subnets and public CIDRs. Note that a local interface contributes its whole subnet (e.g. a `/24`), not a single address, so a configured range must be no more specific than that subnet to match it. A `/32` rule will not match a NIC sitting in a `/24`, though it does match the connection IP, which is compared as a single host. Both IPv4 and IPv6 are supported. A few examples:
 
 - Block a single office public IPv4: `203.0.113.10/32`
 - Allow a public ISP/office block: `1.0.0.0/24` or `3.0.0.0/23`
@@ -71,7 +69,7 @@ A configured range matches when it contains any of these addresses, so the same 
 
 Restrict access based on the connecting device's OS, ensuring only approved and potentially more secure operating systems can connect.
 
-![Operating System Posture Check](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/posture-checks/posture-checks-06.png)
+![Operating System Posture Check](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/access-control/posture-checks/posture-checks-06.png)
 
 > **Note**
 >
@@ -96,75 +94,79 @@ Below are some examples of OS versions for each operating system:
 
 Furthermore, this process-based posture check allows you to create specific policies for different user groups or network segments based on their unique security needs. Working in conjunction with other posture checks in NetBird, this setting offers a comprehensive and user-friendly approach to network security.
 
-![Process Posture Check](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/posture-checks/posture-checks-07.png)
+![Process Posture Check](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/access-control/posture-checks/posture-checks-07.png)
 
 ## Name & Description
 
 After enabling the desired posture check, go to the `Name & Description` tab. Here, enter a descriptive name for your newly created posture check and save it.
 
-![Name your Posture Check](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/posture-checks/posture-checks-08.png)
+![Name your Posture Check](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/access-control/posture-checks/posture-checks-08.png)
 
 You'll notice a gray dot to the left of the posture check name, indicating it's inactive. To activate the posture check, you need to link it to an access control policy.
 
-![New Posture Check](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/posture-checks/posture-checks-09.png)
+![New Posture Check](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/access-control/posture-checks/posture-checks-09.png)
 
 ## Applying Posture Checks to Access Control Policies
 
 To apply a posture check:
 
-- [Create or edit an access control policy](https://docs.netbird.io/access-control).
+- [Create or edit an access control policy](https://docs.netbird.io/manage/access-control).
 - Find the `Posture Checks` tab within the policy settings.
 - Choose `Browse Checks` to select an existing check or `New Posture Check` to create one.
 
 Note that you can add multiple posture checks to a single policy as needed for comprehensive security.
 
-![Add Posture Check to Access Control Policy](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/posture-checks/posture-checks-10.png)
+![Add Posture Check to Access Control Policy](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/access-control/posture-checks/posture-checks-10.png)
 
 After adding the posture check, it will appear in the `POSTURE CHECKS` column. For easy management, you can click on it to edit the access control policy, allowing you to add or remove posture checks as needed.
 
-![Access Control Policies Dashboard](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/posture-checks/posture-checks-11.png)
+![Access Control Policies Dashboard](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/access-control/posture-checks/posture-checks-11.png)
 
 If you revisit the `Posture Checks` dashboard, you'll notice a green dot next to your recently configured posture check. This color shift indicates that the posture check is now active and integrated into your network security framework, actively contributing to your system's protection.
 
-![Posture Checks Dashboard](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/posture-checks/posture-checks-12.png)
+![Posture Checks Dashboard](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/access-control/posture-checks/posture-checks-12.png)
 
 Following these steps, you can effectively implement and manage NetBird's Posture Checks, significantly enhancing your network's security posture.
 
 ## When Posture Checks Are Evaluated
 
-NetBird evaluates posture checks when a peer connects or logs in. The check result is computed at connection time and is not re-evaluated continuously for the duration of an active session.
+NetBird evaluates posture checks when a peer connects or logs in. Checks are also re-evaluated during an active session whenever a peer reports changed system metadata. The management server replays each check against the peer's previous and current metadata, and when a check's verdict flips, it recomputes the network map and distributes the update to the affected peers.
 
-When you add or change a posture check on a policy, the updated configuration is distributed to connected peers immediately. A peer that is already connected is evaluated against the new check on its next connection. There is no periodic redistribution interval; distribution is driven by configuration changes, not a timer. For more on how changes reach peers, see [How Policy Changes Are Distributed](https://docs.netbird.io/manage/access-control#how-policy-changes-are-distributed).
+When you add or change a posture check on a policy, the updated configuration is distributed to connected peers immediately. A peer that is already connected is evaluated against the new check on its next connection. There is no periodic redistribution interval; distribution is driven by configuration changes and peer metadata changes, not a timer. For more on how changes reach peers, see [How Policy Changes Are Distributed](https://docs.netbird.io/manage/access-control#how-policy-changes-are-distributed).
 
 > **Note**
 >
-> Because evaluation happens at connection time, a peer that passes a posture check and later changes state during a long-lived session (for example an operating system downgrade or a required process being stopped) is not re-evaluated until it reconnects. If you require enforcement to react to a peer changing state mid-session, account for this connection-time evaluation model in your design.
+> Mid-session re-evaluation requires a NetBird management server running [0.74.0](https://github.com/netbirdio/netbird/releases) or newer, and is driven by the peer reporting a metadata change rather than by a continuous poll. A peer that passes a posture check and later changes state during a long-lived session (for example an operating system downgrade or a required process stopping) is re-evaluated on its next metadata sync. On management servers older than 0.74.0, that state change is not picked up until the peer reconnects.
 
 ## Known Limitations
 
-### Peer Network Range Check on Mobile Platforms
+### Peer Network Range Check on Android
 
-iOS and Android do not allow applications to enumerate the device's local network interfaces, so ranges intended to match a peer's **local NIC IPs** (e.g. an office LAN like `192.168.1.0/24`) cannot be evaluated on those platforms.
+The Android client does not report the device's local network interfaces to the management server, so ranges intended to match a peer's **local NIC IPs** (e.g. an office LAN like `192.168.1.0/24`) cannot be evaluated on that platform.
 
-Ranges that target the **public connection IP** still work on mobile, because the management server observes that source IP itself — it does not depend on anything the client reports. So public CIDRs (e.g. `203.0.113.10/32`, `1.0.0.0/24`) and public-IP-based deny/allow rules behave the same on mobile as on desktop.
+Ranges that target the **public connection IP** still work on Android, because the management server observes that source IP itself and does not depend on anything the client reports. So public CIDRs (e.g. `203.0.113.10/32`, `1.0.0.0/24`) and public-IP-based deny/allow rules behave the same on Android as on desktop.
 
-**Affected platforms:**
-
-- iOS
-- Android
+> **Note**
+>
+> iOS was affected by this limitation in earlier releases. Local network ranges are reported and evaluated correctly on iOS from NetBird client [0.69.0](https://github.com/netbirdio/netbird/releases) onward.
 
 **Impact:**
 
-If a policy's Peer Network Range posture check relies on local NIC ranges, the check cannot match on mobile clients and routes gated by that policy may become unavailable on those devices — even when the device is outside the blocked local range.
+A local NIC range never matches on Android, so the outcome depends on the check's action:
+
+- An **Allow** check built on local NIC ranges is never satisfied by an Android peer. Those peers fail the check, and routes gated by that policy become unavailable to them.
+- A **Deny** check built on local NIC ranges is never triggered by an Android peer, so those peers always pass it. The block silently does not apply on those devices.
+
+Checks built on the public connection IP are unaffected and behave on Android exactly as they do on desktop.
 
 **Recommendation:**
 
-If your deployment includes iOS or Android clients and you need to gate on local network membership, consider one of the following:
+If your deployment includes Android clients and you need to gate on local network membership, consider one of the following:
 
-- Create separate policies for mobile clients that do not include local-NIC-based Peer Network Range posture checks
-- Use alternative posture checks (such as Geo Location) that are supported on mobile platforms
+- Create separate policies for Android clients that do not include local-NIC-based Peer Network Range posture checks
+- Use alternative posture checks (such as Geo Location) that are supported on every platform
 - Use Peer Network Range checks based on the **public connection IP**, which work on every platform
-- Apply local-NIC-based Peer Network Range posture checks only to policies targeting desktop platforms (Windows, macOS, Linux)
+- Apply local-NIC-based Peer Network Range posture checks only to policies targeting platforms that report them (Windows, macOS, Linux, and iOS 0.69.0+)
 
 ## Get started with NetBird
 

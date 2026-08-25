@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/manage/settings/ipv6.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/manage/settings/ipv6.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/settings/ipv6.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/settings/ipv6.mdx)
 
 # IPv6 Overlay Addressing
 
@@ -12,13 +12,13 @@ NetBird supports dual-stack overlay networking, where each peer can receive both
 
 New accounts have IPv6 enabled by default for the **All** group, so every peer receives an IPv6 address out of the box. Existing accounts can enable it from the dashboard.
 
-Navigate to **Settings > Network** and select which groups should have IPv6 enabled. Only peers that belong to at least one selected group will receive an IPv6 address.
+Navigate to **Settings > Networks** and select which groups should have IPv6 enabled. Only peers that belong to at least one selected group will receive an IPv6 address.
 
-![IPv6 network settings in the dashboard](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/settings/ipv6/ipv6-network-settings.png)
+![IPv6 network settings in the dashboard](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/settings/ipv6/ipv6-network-settings.png)
 
 When a peer belongs to an IPv6-enabled group, it receives an overlay address from the account's IPv6 range. Peers that do not belong to any IPv6-enabled group only receive an IPv4 address.
 
-The IPv6 network range is configured alongside your IPv4 range. Valid prefix lengths are `/48` through `/120`, and the default `/64` prefix provides enough addresses for most deployments.
+The IPv6 network range is configured alongside your IPv4 range. The dashboard accepts prefix lengths from `/48` through `/112`, while the API accepts up to `/120`. The default `/64` prefix provides enough addresses for most deployments. Changing the range re-allocates the IPv6 addresses of all affected peers.
 
 ## Disabling IPv6 on a Client
 
@@ -36,9 +36,9 @@ The flag is also available in the desktop UI under **Settings > Disable IPv6**, 
 
 ### Address Assignment
 
-Each peer receives at most one IPv4 and one IPv6 overlay address. Management assigns the IPv6 address when the peer first connects with a client that supports IPv6 and belongs to an IPv6-enabled group.
+Each peer receives at most one IPv4 and one IPv6 overlay address. Management allocates the IPv6 address based on group membership: when you save the setting for peers that are already registered, or at registration time for new peers. The address only becomes active on peers whose client advertises IPv6 support.
 
-![Peer detail page showing both IPv4 and IPv6 overlay addresses](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/settings/ipv6/ipv6-peer-page.png)
+![Peer detail page showing both IPv4 and IPv6 overlay addresses](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/settings/ipv6/ipv6-peer-page.png)
 
 ### DNS
 
@@ -81,7 +81,7 @@ $ netbird status --ipv6
 fd00:1234:5678::1f/64
 ```
 
-![NetBird client status showing IPv6 address and exit-node usage](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/settings/ipv6/ipv6-status-client-exit-node.png)
+![NetBird client status showing IPv6 address and exit-node usage](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/settings/ipv6/ipv6-status-client-exit-node.png)
 
 ## API
 
@@ -98,7 +98,7 @@ The following API fields relate to IPv6:
 
 ### Peers report no IPv6 address after enabling the setting
 
-Peers only get an IPv6 address if they belong to at least one group listed in **IPv6 Enabled Groups** and if the client version supports the IPv6 overlay capability (v0.71.0+). Older agents don't advertise the capability and management skips IPv6 assignment for them.
+Peers only get an IPv6 address if they belong to at least one group listed in **IPv6 Enabled Groups** and if the client version supports the IPv6 overlay capability (v0.71.0+). Older clients don't advertise the capability, so management leaves them out of IPv6 distribution: they don't get the address on their interface, and other peers don't receive AAAA records or IPv6 firewall rules for them.
 
 ### Routing peer has an IPv6 address but traffic doesn't reach the backend
 

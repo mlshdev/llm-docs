@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/help/troubleshooting-client.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/help/troubleshooting-client.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/help/troubleshooting-client.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/help/troubleshooting-client.mdx)
 
 # Troubleshooting client issues
 
@@ -32,52 +32,58 @@ This will output the following information:
 ```shell
 Peers detail:
  server-a.netbird.cloud:
-  NetBird IP: 100.75.232.118/32
+  NetBird IP: 100.75.232.118
   Public key: kndklnsakldvnsld+XeRF4CLr/lcNF+DSdkd/t0nZHDqmE=
   Status: Connected
   -- detail --
   Connection type: P2P
-  Direct: true
   ICE candidate (Local/Remote): host/host
   ICE candidate endpoints (Local/Remote): 10.128.0.35:51820/10.128.0.54:51820
+  Relay server address: rels://us-nyc-2.relay.netbird.io:443
   Last connection update: 20 seconds ago
-  Last Wireguard handshake: 19 seconds ago
+  Last WireGuard handshake: 19 seconds ago
   Transfer status (received/sent) 6.1 KiB/20.6 KiB
   Quantum resistance: false
-  Routes: 10.0.0.0/24
+  Networks: 0.0.0.0/0, 10.0.0.0/24
   Latency: 37.503682ms
 
  server-b.netbird.cloud:
-  NetBird IP: 100.75.226.48/32
+  NetBird IP: 100.75.226.48
   Public key: Mi6jtrK5Tokndklnsakldvnsld+XeRF4CLr/lcNF+DSdkd=
   Status: Connected
   -- detail --
   Connection type: Relayed
-  Direct: false
-  ICE candidate (Local/Remote): relay/host
-  ICE candidate endpoints (Local/Remote): 108.54.10.33:60434/10.128.0.12:51820
+  ICE candidate (Local/Remote): -/-
+  ICE candidate endpoints (Local/Remote): -/-
+  Relay server address: rels://us-nyc-2.relay.netbird.io:443
   Last connection update: 20 seconds ago
-  Last Wireguard handshake: 18 seconds ago
+  Last WireGuard handshake: 18 seconds ago
   Transfer status (received/sent) 6.1 KiB/20.6 KiB
   Quantum resistance: false
-  Routes: -
-  Latency: 37.503682ms
+  Networks: -
+  Latency: 89.503682ms
 
-OS: darwin/amd64
-Daemon version: 0.27.4
-CLI version: 0.27.4
+OS: linux/amd64
+Daemon version: 0.76.3
+CLI version: 0.76.3
+Profile: default
 Management: Connected to https://api.netbird.io:443
 Signal: Connected to https://signal.netbird.io:443
 Relays:
-  [stun:turn.netbird.io:5555] is Available
+  [stun:stun.netbird.io:443] is Available
+  [stun:stun.netbird.io:5555] is Available
   [turns:turn.netbird.io:443?transport=tcp] is Available
+  [rels://us-nyc-2.relay.netbird.io:443] is Available
 Nameservers:
   [8.8.8.8:53, 8.8.4.4:53] for [.] is Available
-FQDN: maycons-mbp-2.netbird.cloud
+FQDN: my-workstation.netbird.cloud
 NetBird IP: 100.75.143.239/16
 Interface type: Kernel
+Wireguard port: 51820
 Quantum resistance: false
-Routes: -
+Lazy connection: false
+SSH Server: Disabled
+Networks: -
 Peers count: 2/2 Connected
 ```
 
@@ -85,20 +91,35 @@ As you can see, the output shows the peers connected, the NetBird IP address, th
 the connection type. The status will also report if there is an issue connecting to the relay servers,
 the management server, or the signal server.
 
-As for Peers, the status will show the following information:
+As for peers, the status reports the following fields:
 
-- `Connection type`: P2P, Relayed, where relayed connections indicate a limitation in the network that prevents a direct
-  connection between the peers. To diagnose and fix a relayed connection, see
-  [Troubleshooting relayed connections](https://docs.netbird.io/help/troubleshooting-relayed-connections).
-- `Direct`: true/false, where true indicates a direct connection between the peers without a local proxy. This case is
-  common when the local peer is allocating the relay connection.
-- `ICE candidate (Local/Remote)`: relay/host, where relay indicates that the local peer is using a relay connection and
-  host indicates that the remote peer is using a direct connection.
-- `Last Wireguard handshake`: Indicating the last time the Wireguard handshake was performed. Usually, this is performed
-  every 2 minutes, and if you don't see an update here or if the value is empty, that indicates that the connection
-  wasn't possible yet.
-- `Transfer status (received/sent)`: Indicating the amount of data received and sent by the peer. This is useful to
-  check if the connection is being used.
+### Connection type
+
+`P2P` or `Relayed`. A relayed connection indicates a network limitation that prevents a direct connection between the peers. To diagnose and fix a relayed connection, see [Troubleshooting relayed connections](https://docs.netbird.io/help/troubleshooting-relayed-connections).
+
+### ICE candidate (Local/Remote)
+
+The candidate pair ICE selected for the tunnel: the local peer's candidate type, then the remote peer's. `host/host` means both sides connect over local interface addresses; `srflx` on either side means that address was discovered via STUN. On a relayed connection the field reads `-/-` on both peers, because ICE never selected a pair; that is expected, not an extra fault. The full breakdown, including the causes behind `-/-`, is in [Troubleshooting relayed connections](https://docs.netbird.io/help/troubleshooting-relayed-connections#reading-the-ice-candidates).
+
+### Relay server address
+
+The NetBird relay (`rels://…`) available to this peer connection. It appears for P2P connections too; it carries traffic only when `Connection type` is `Relayed`.
+
+### Networks
+
+The ranges this peer routes for this device: network resources such as an office subnet (`10.0.0.0/24`) and, when the peer is the device's exit node, the default route (`0.0.0.0/0`). `-` means the peer routes nothing for this device.
+
+### Last WireGuard handshake
+
+The last time the WireGuard handshake completed, usually refreshed every 2 minutes on an active connection. An empty value means no handshake has completed yet. An old timestamp means the peer connected before but the handshake is stale, so check whether it is still current.
+
+### Quantum resistance
+
+`true` or `false`, whether post-quantum key exchange ([Rosenpass](https://docs.netbird.io/client/post-quantum-cryptography)) is active on the connection. A peer with Quantum Resistance enabled only connects to peers that also have it enabled, so a mismatch, where the other side has it off, runs an older client, or is on mobile (unsupported), can keep a peer from connecting or showing up at all. If a peer is missing or stuck, match the setting on both sides, enable [permissive mode](https://docs.netbird.io/client/post-quantum-cryptography#enable-permissive-mode) so non-Rosenpass peers can still connect, or turn it off.
+
+### Transfer status (received/sent)
+
+The amount of data received and sent by the peer, useful to check whether the connection is being used.
 
 See more details about the status command [here](https://docs.netbird.io/get-started/cli#status).
 
@@ -195,7 +216,7 @@ The archive collects the most useful diagnostics into one file, and every bundle
 | `service_params.json`                                   | Service-install parameters when available; sensitive environment values are masked |
 | `metrics.txt`                                           | Buffered client metrics when available; peer identifiers are anonymized            |
 
-With `--anonymize`, IP addresses, domains, and interface names are replaced consistently across every file, so the bundle stays readable while sensitive values are masked. Private keys and SSH keys are never included, and the packet capture (`capture.pcap`) is left out of anonymized bundles because it holds raw decrypted packets.
+With `--anonymize`, public IP addresses, domains, and MAC addresses are replaced consistently across every file, so the bundle stays readable while sensitive values are masked; private, CGNAT, and link-local IP ranges are kept, and interface names are not anonymized. Adding `--anonymize-level strict` (which implies `--anonymize`) also masks those internal IP ranges, peer names, and WireGuard public keys. Private keys and SSH keys are never included, and the packet capture (`capture.pcap`) is left out of anonymized bundles because it holds raw decrypted packets.
 
 ### Debug for a specific time
 
@@ -265,7 +286,7 @@ Upload file key:
 
 The desktop app can create and optionally upload a debug bundle without using the CLI. Open **Settings → Troubleshoot**.
 
-![Troubleshoot settings in the NetBird desktop app](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/help/troubleshooting-client/ui-settings.png)
+![Troubleshoot settings in the NetBird desktop app](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/help/troubleshooting-client/ui-settings.png)
 
 Choose the data and capture behavior that fits the issue:
 
@@ -277,7 +298,7 @@ Choose the data and capture behavior that fits the issue:
 - **Capture packets** adds a packet capture while collecting new logs. Packet captures are excluded from anonymized bundles because they contain raw packets.
 - **Capture duration** accepts 1–30 minutes.
 
-![Debug bundle capture options in the NetBird desktop app](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/help/troubleshooting-client/ui-bundle-wizard.png)
+![Debug bundle capture options in the NetBird desktop app](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/help/troubleshooting-client/ui-bundle-wizard.png)
 
 Click **Create debug bundle**. You can cancel while logs are being collected. When the operation finishes:
 
@@ -286,7 +307,7 @@ Click **Create debug bundle**. You can cancel while logs are being collected. Wh
 
 In both cases, the ZIP is stored locally in the platform's temporary directory listed above.
 
-![Completed debug bundle uploaded with a key in the NetBird desktop app](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/help/troubleshooting-client/ui-bundle-success.png)
+![Completed debug bundle uploaded with a key in the NetBird desktop app](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/help/troubleshooting-client/ui-bundle-success.png)
 
 If you kept the bundle local, attach the ZIP through the support channel you are using.
 

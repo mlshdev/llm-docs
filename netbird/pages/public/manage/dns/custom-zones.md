@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/manage/dns/custom-zones.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/manage/dns/custom-zones.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/dns/custom-zones.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/dns/custom-zones.mdx)
 
 # Custom Zones
 
@@ -12,7 +12,7 @@ This provides complete control over internal DNS without running separate infras
 
 To create a new Custom DNS Zone, navigate to **DNS** > **Zones** in the NetBird Dashboard and click **Add Zone**. Configure the zone settings as described below:
 
-![Add Custom Zone](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/dns/zones/add-zone.png)
+![Add Custom Zone](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/dns/zones/add-zone.png)
 
 **Domain**
 
@@ -48,7 +48,7 @@ Controls whether the zone is active and distributed to peers.
 
 Click **Add Zone** to create the zone
 
-![Zone Created Successfully](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/dns/zones/zone-created.png)
+![Zone Created Successfully](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/dns/zones/zone-created.png)
 
 ### Adding Records to a Zone
 
@@ -70,17 +70,17 @@ The target for this DNS record. For A records, this is an IPv4 address. For CNAM
 
 How long (in seconds) DNS resolvers should cache this record before checking for updates. Lower values mean faster propagation of changes but more DNS queries. Default is 300 seconds (5 minutes).
 
-![Add DNS Record](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/dns/zones/add-record.png)
+![Add DNS Record](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/dns/zones/add-record.png)
 
 Click **Add Record** to create the DNS record.
 
-![DNS Record Created Successfully](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/dns/zones/record-created.png)
+![DNS Record Created Successfully](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/dns/zones/record-created.png)
 
 ### Updating a Zone
 
 To update zone settings such as distribution groups or search domain configuration, click the three dots next to the zone, select **Edit**, make the necessary changes, and click **Save Changes** to apply them.
 
-![Update DNS Zone](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/dns/zones/update-zone.png)
+![Update DNS Zone](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/dns/zones/update-zone.png)
 
 ### Deleting a Zone
 
@@ -90,7 +90,7 @@ To delete a zone, click the three dots next to the zone, select **Delete**, and 
 >
 > Deleting a zone will also remove all existing records within that zone. If only a single record needs to be removed, delete the individual record instead of the entire zone.
 
-![Delete DNS Zone](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/dns/zones/delete-zone.png)
+![Delete DNS Zone](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/dns/zones/delete-zone.png)
 
 ## Behavior
 

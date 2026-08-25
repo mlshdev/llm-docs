@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/manage/team/single-sign-on/index.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/manage/team/single-sign-on/index.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/team/single-sign-on/index.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/team/single-sign-on/index.mdx)
 
 # Authenticate to NetBird with Single Sign On (SSO)
 
@@ -20,7 +20,7 @@ though some additional configuration is required to complete the integration.
 If you're using Google Workspace, Microsoft Entra ID, or a supported social login, you can simply sign in with no extra
 setup—just click the appropriate button on the [login page](https://app.netbird.io/):
 
-![netbird-login](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/team/single-sign-on/netbird-login.png)
+![netbird-login](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/single-sign-on/netbird-login.png)
 
 ## Okta
 
@@ -97,3 +97,9 @@ to integrate with NetBird. Below are the steps to set up different OIDC-complian
 [Zoho Directory](https://www.zoho.com/directory/) is a cloud-based identity and access management platform that provides single sign-on, multi-factor authentication, and user lifecycle management. It supports OpenID Connect, OAuth 2.0, and SAML, and lets you register NetBird as a custom OIDC application.
 
 [Setup Zoho](https://docs.netbird.io/manage/team/single-sign-on/zoho)
+
+### IIJ ID
+
+[IIJ ID](https://www.iij.ad.jp/biz/iid/) is a cloud-based identity and access management platform (IDaaS) from Internet Initiative Japan that provides single sign-on, multi-factor authentication, and user lifecycle management. It supports OpenID Connect, SAML, and SCIM, and lets you register NetBird as a custom OIDC application.
+
+[Setup IIJ ID](https://docs.netbird.io/manage/team/single-sign-on/iij-id)

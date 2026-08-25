@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/ipa/resources/policies.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/ipa/resources/policies.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/ipa/resources/policies.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/ipa/resources/policies.mdx)
 
 ## List all Policies   (GET /api/policies)
 
@@ -175,9 +175,6 @@ echo $response;
         "action": "accept",
         "bidirectional": true,
         "protocol": "tcp",
-        "ports": [
-          "80"
-        ],
         "port_ranges": [
           {
             "start": 80,
@@ -347,11 +344,11 @@ Policy rule type of the traffic
 
 **ports (type: string\[]; optional)**
 
-Policy rule affected ports
+Policy rule affected ports. Mutually exclusive with `port_ranges`. A rule accepts either individual ports or port ranges, not both.
 
 **port\_ranges (type: object\[]; optional)**
 
-**Policy rule affected ports ranges list**
+**Policy rule affected ports ranges list. Mutually exclusive with `ports`. To mix individual ports with ranges in one rule, express each single port as a range with identical start and end values (for example, start 443, end 443).**
 
 **start (type: integer; required)**
 
@@ -425,9 +422,6 @@ curl -X POST https://api.netbird.io/api/policies \
       "action": "accept",
       "bidirectional": true,
       "protocol": "tcp",
-      "ports": [
-        "80"
-      ],
       "port_ranges": [
         {
           "start": 80,
@@ -478,9 +472,6 @@ let data = JSON.stringify({
       "action": "accept",
       "bidirectional": true,
       "protocol": "tcp",
-      "ports": [
-        "80"
-      ],
       "port_ranges": [
         {
           "start": 80,
@@ -553,9 +544,6 @@ payload = json.dumps({
       "action": "accept",
       "bidirectional": true,
       "protocol": "tcp",
-      "ports": [
-        "80"
-      ],
       "port_ranges": [
         {
           "start": 80,
@@ -628,9 +616,6 @@ func main() {
       "action": "accept",
       "bidirectional": true,
       "protocol": "tcp",
-      "ports": [
-        "80"
-      ],
       "port_ranges": [
         {
           "start": 80,
@@ -722,9 +707,6 @@ request.body = JSON.dump({
       "action": "accept",
       "bidirectional": true,
       "protocol": "tcp",
-      "ports": [
-        "80"
-      ],
       "port_ranges": [
         {
           "start": 80,
@@ -779,9 +761,6 @@ RequestBody body = RequestBody.create(mediaType, '{
       "action": "accept",
       "bidirectional": true,
       "protocol": "tcp",
-      "ports": [
-        "80"
-      ],
       "port_ranges": [
         {
           "start": 80,
@@ -852,9 +831,6 @@ curl_setopt_array($curl, array(
       "action": "accept",
       "bidirectional": true,
       "protocol": "tcp",
-      "ports": [
-        "80"
-      ],
       "port_ranges": [
         {
           "start": 80,
@@ -920,9 +896,6 @@ echo $response;
       "action": "accept",
       "bidirectional": true,
       "protocol": "tcp",
-      "ports": [
-        "80"
-      ],
       "port_ranges": [
         {
           "start": 80,
@@ -1217,9 +1190,6 @@ echo $response;
       "action": "accept",
       "bidirectional": true,
       "protocol": "tcp",
-      "ports": [
-        "80"
-      ],
       "port_ranges": [
         {
           "start": 80,
@@ -1392,11 +1362,11 @@ Policy rule type of the traffic
 
 **ports (type: string\[]; optional)**
 
-Policy rule affected ports
+Policy rule affected ports. Mutually exclusive with `port_ranges`. A rule accepts either individual ports or port ranges, not both.
 
 **port\_ranges (type: object\[]; optional)**
 
-**Policy rule affected ports ranges list**
+**Policy rule affected ports ranges list. Mutually exclusive with `ports`. To mix individual ports with ranges in one rule, express each single port as a range with identical start and end values (for example, start 443, end 443).**
 
 **start (type: integer; required)**
 
@@ -1470,9 +1440,6 @@ curl -X PUT https://api.netbird.io/api/policies/{policyId} \
       "action": "accept",
       "bidirectional": true,
       "protocol": "tcp",
-      "ports": [
-        "80"
-      ],
       "port_ranges": [
         {
           "start": 80,
@@ -1523,9 +1490,6 @@ let data = JSON.stringify({
       "action": "accept",
       "bidirectional": true,
       "protocol": "tcp",
-      "ports": [
-        "80"
-      ],
       "port_ranges": [
         {
           "start": 80,
@@ -1598,9 +1562,6 @@ payload = json.dumps({
       "action": "accept",
       "bidirectional": true,
       "protocol": "tcp",
-      "ports": [
-        "80"
-      ],
       "port_ranges": [
         {
           "start": 80,
@@ -1673,9 +1634,6 @@ func main() {
       "action": "accept",
       "bidirectional": true,
       "protocol": "tcp",
-      "ports": [
-        "80"
-      ],
       "port_ranges": [
         {
           "start": 80,
@@ -1767,9 +1725,6 @@ request.body = JSON.dump({
       "action": "accept",
       "bidirectional": true,
       "protocol": "tcp",
-      "ports": [
-        "80"
-      ],
       "port_ranges": [
         {
           "start": 80,
@@ -1824,9 +1779,6 @@ RequestBody body = RequestBody.create(mediaType, '{
       "action": "accept",
       "bidirectional": true,
       "protocol": "tcp",
-      "ports": [
-        "80"
-      ],
       "port_ranges": [
         {
           "start": 80,
@@ -1897,9 +1849,6 @@ curl_setopt_array($curl, array(
       "action": "accept",
       "bidirectional": true,
       "protocol": "tcp",
-      "ports": [
-        "80"
-      ],
       "port_ranges": [
         {
           "start": 80,
@@ -1965,9 +1914,6 @@ echo $response;
       "action": "accept",
       "bidirectional": true,
       "protocol": "tcp",
-      "ports": [
-        "80"
-      ],
       "port_ranges": [
         {
           "start": 80,

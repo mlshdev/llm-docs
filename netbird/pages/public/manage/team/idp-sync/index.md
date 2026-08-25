@@ -1,8 +1,8 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/manage/team/idp-sync/index.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/manage/team/idp-sync/index.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/team/idp-sync/index.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/team/idp-sync/index.mdx)
 
 # Provision Users and Groups From Your Identity Provider
 
-![supported-identity-providers](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/team/idp-sync/supported-identity-providers.png)
+![supported-identity-providers](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/idp-sync/supported-identity-providers.png)
 
 Managing private network access in a business environment is a critical yet often cumbersome task.
 As companies grow and evolve, the manual process of granting access for new employees and revoking it for
@@ -55,6 +55,10 @@ Provision users and groups from JumpCloud. See [JumpCloud setup](https://docs.ne
 
 Provision users and groups from Keycloak. See [Keycloak setup](https://docs.netbird.io/manage/team/idp-sync/keycloak-sync).
 
+### IIJ ID
+
+Provision users and groups from IIJ ID over SCIM. See [IIJ ID setup](https://docs.netbird.io/manage/team/idp-sync/iij-id-sync).
+
 ## Generic SCIM
 
 NetBird provides a way to sync users and groups from any identity provider that supports the SCIM (System for Cross-domain Identity Management) protocol.
@@ -62,4 +66,4 @@ SCIM is a standardized protocol that works with most modern identity providers, 
 
 If your provider is not listed above, contact us at <support@netbird.io> for assistance with your specific IdP setup.
 
-![generic-scim](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/team/idp-sync/generic-scim.png)
+![generic-scim](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/idp-sync/generic-scim.png)

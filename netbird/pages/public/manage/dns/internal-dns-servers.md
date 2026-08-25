@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/manage/dns/internal-dns-servers.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/manage/dns/internal-dns-servers.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/dns/internal-dns-servers.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/dns/internal-dns-servers.mdx)
 
 # Internal DNS Servers
 
@@ -48,16 +48,16 @@ To resolve internal domains through NetBird, create a **match domain** Nameserve
 1. Go to **DNS** → **Nameservers** → **Add Nameserver**
 2. Choose **Custom DNS**
 
-![Add nameserver](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/dns/netbird-nameserver-add-button.png)
+![Add nameserver](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/dns/netbird-nameserver-add-button.png)
 
 3. Add the IP addresses of your internal DNS servers (e.g., `192.168.0.32`)
 4. Select the **Distribution Groups** — the peer groups that should use this nameserver
 
-![Custom DNS provider](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/dns/netbird-nameserver-custom.png)
+![Custom DNS provider](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/dns/netbird-nameserver-custom.png)
 
 5. Under **Domains**, add a **Match Domain** and enter your internal domains (e.g., `corp.local`, `company.internal`)
 
-![Add match domain](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/dns/netbird-nameserver-add-domain.png)
+![Add match domain](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/dns/netbird-nameserver-add-domain.png)
 
 6. Save the nameserver
 
@@ -133,7 +133,7 @@ If you are migrating from a VPN that pushed your internal DNS servers for everyt
 
 **Match domain (internal)**: Same servers. Add match domain `company.internal`. Enable search domains.
 
-![Two nameserver groups pointing at the same internal DNS servers: one primary with no match domains, one with match domain company.internal and search domains enabled](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/dns/nameservers-route-all-internal.png)
+![Two nameserver groups pointing at the same internal DNS servers: one primary with no match domains, one with match domain company.internal and search domains enabled](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/dns/nameservers-route-all-internal.png)
 
 Result:
 

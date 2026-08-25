@@ -1,14 +1,14 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/manage/settings/notifications.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/manage/settings/notifications.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/settings/notifications.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/settings/notifications.mdx)
 
 # Notifications
 
-NetBird can notify you when important events occur in your account, such as peers waiting for approval, routing peer disconnections, or new users joining. You can configure it under `Settings` > `Notifications` in the NetBird dashboard.
+NetBird can notify you when important events occur in your account, such as peers waiting for approval, routing peer disconnections, or new users joining. You can configure it under `Settings` > `Notifications` in the NetBird dashboard. Notifications are currently in beta. Users who can view account settings, such as administrators and owners, can see the configuration, and only users with permission to update settings can change it.
 
 > **Note**
 >
-> This feature is currently only available in the cloud version of NetBird.
+> This feature is available in the cloud version of NetBird and in self-hosted deployments with an [enterprise license](https://docs.netbird.io/selfhosted/enterprise). The open-source self-hosted version does not include notifications.
 
-![Notifications overview showing Email, Webhook, and Slack channels](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/settings/notifications/netbird-settings-notifications-overview.png)
+![Notifications overview showing Email, Webhook, and Slack channels](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/settings/notifications/netbird-settings-notifications-overview.png)
 
 NetBird supports three notification channels:
 
@@ -18,7 +18,7 @@ NetBird supports three notification channels:
 | `Webhook` | Send notifications as HTTP POST requests to a custom endpoint |
 | `Slack`   | Send notifications to a Slack channel via an Incoming Webhook |
 
-Each channel can be independently enabled or disabled and configured with its own set of event types.
+Each channel can be independently enabled or disabled and configured with its own set of event types. New channels start disabled with all event types selected.
 
 ## Supported Events
 
@@ -30,7 +30,7 @@ All notification channels support the following events:
 | **Peer**        | `Peer Added`                | A new peer is added to the network                 |
 | **Peer**        | `Routing Peer Disconnected` | A routing peer loses its connection                |
 | **Peer**        | `Routing Peer Deleted`      | A routing peer is deleted from the network         |
-| **User**        | `Pending Approval`          | A user is waiting for approval to join the network |
+| **User**        | `User Pending Approval`     | A user is waiting for approval to join the network |
 | **User**        | `User Joined`               | A new user joins the account                       |
 | **User**        | `Service User Created`      | A new service user is created                      |
 | **Integration** | `IdP Sync Token Expired`    | The IdP sync token has expired and needs renewal   |
@@ -46,10 +46,10 @@ The email channel lets you send notifications to one or more email recipients.
 
 1. Navigate to `Settings` > `Notifications` and click on the `Email` channel.
 2. Use the `Enable Email Channel` toggle to enable or disable all email notifications.
-3. Under `Email Addresses`, enter the email address you want to receive notifications and click `Add`. You can add multiple recipients.
+3. Under `Email Addresses`, enter the email address you want to receive notifications and click `Add`. You can add multiple recipients. When you open the email channel for the first time, your own email address is added as a recipient automatically.
 4. Toggle individual events on or off under the `Peer Notifications`, `User Notifications`, and `Integration Notifications` sections.
 
-![Email notification channel configuration with recipients and event toggles](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/settings/notifications/netbird-notifications-email-channel.png)
+![Email notification channel configuration with recipients and event toggles](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/settings/notifications/netbird-notifications-email-channel.png)
 
 To remove a recipient, click the `x` button next to their email address.
 
@@ -62,15 +62,15 @@ The webhook channel sends notification events as HTTP `POST` requests to a URL y
 1. Navigate to `Settings` > `Notifications` and click on the `Webhook` channel.
 2. Click the `Connect` button to open the webhook configuration modal.
 
-![Webhook channel page with Connect button](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/settings/notifications/netbird-notifications-webhook-channel.png)
+![Webhook channel page with Connect button](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/settings/notifications/netbird-notifications-webhook-channel.png)
 
-3. In the `General` tab, enter the full HTTP(S) URL of your endpoint. Notification events will be sent as `POST` requests to this URL. Optionally, select an `Authentication` method for the endpoint.
+3. In the `General` tab, enter the full HTTP(S) URL of your endpoint. Notification events will be sent as `POST` requests to this URL. Optionally, select an `Authentication` method for the endpoint: `No Authentication`, `Basic Auth`, `Bearer Token`, or `Custom Authentication`. When using an authentication method, we strongly recommend an HTTPS endpoint, since the credentials are sent with every request.
 
-![Connect Webhook modal showing the General tab with endpoint URL and authentication options](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/settings/notifications/netbird-notifications-webhook-create-general-tab.png)
+![Connect Webhook modal showing the General tab with endpoint URL and authentication options](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/settings/notifications/netbird-notifications-webhook-create-general-tab.png)
 
 4. Click `Continue` to move to the `Headers` tab. Optionally add any custom HTTP headers your endpoint requires.
 
-![Connect Webhook modal showing the Headers tab for adding custom HTTP headers](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/settings/notifications/netbird-notifications-webook-headers-tab.png)
+![Connect Webhook modal showing the Headers tab for adding custom HTTP headers](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/settings/notifications/netbird-notifications-webook-headers-tab.png)
 
 5. Click `Connect` to save the webhook.
 
@@ -78,11 +78,11 @@ Once connected, you can toggle individual events on or off, just like with the e
 
 ### Edit or Delete a Webhook
 
-To update the webhook URL, authentication, or headers, click `Edit` on the webhook channel page. \\
+To update the webhook URL, authentication, or headers, open the menu next to the connected webhook and select `Edit`. \\
 
-To remove the webhook entirely, click `Delete`.
+To remove the webhook entirely, select `Delete` and confirm.
 
-![Webhook channel page showing Edit and Delete options for a connected webhook](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/settings/notifications/netbird-notifications-webhook-edit-delete.png)
+![Webhook channel page showing Edit and Delete options for a connected webhook](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/settings/notifications/netbird-notifications-webhook-edit-delete.png)
 
 ## Slack Notifications
 
@@ -92,31 +92,31 @@ The Slack channel lets you receive NetBird notification events directly in a Sla
 
 1. Navigate to `Settings` > `Notifications` and click on the `Slack` channel.
 
-![Slack notification channel page with Connect button](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/settings/notifications/netbird-notifications-slack-channel.png)
+![Slack notification channel page with Connect button](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/settings/notifications/netbird-notifications-slack-channel.png)
 
 2. Click the `Connect` button to open the Slack configuration modal. In the first step, you will create a Slack App:
    - Open [Slack App Management](https://api.slack.com/apps?new_app=1), click `Create an app`, and choose `From scratch`.
 
-![Connect NetBird with Slack - Step 1: Create a Slack App](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/settings/notifications/netbird-notifications-slack-create-app.png)
+![Connect NetBird with Slack - Step 1: Create a Slack App](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/settings/notifications/netbird-notifications-slack-create-app.png)
 
 - Set the app name to `NetBird Notifications`, select your workspace, and click `Create App`.
 
-![Slack app creation - naming and workspace selection](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/settings/notifications/netbird-notifications-slack-name-workspace.png)
+![Slack app creation - naming and workspace selection](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/settings/notifications/netbird-notifications-slack-name-workspace.png)
 
 3. Click `Continue` to move to the second step. Here you will configure the Incoming Webhook:
    - In the Slack app settings, go to `Incoming Webhooks` and toggle `Activate Incoming Webhooks` to `On`.
 
-![Slack Incoming Webhooks settings page](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/settings/notifications/netbird-notifications-slack-incoming-webhooks.png)
+![Slack Incoming Webhooks settings page](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/settings/notifications/netbird-notifications-slack-incoming-webhooks.png)
 
 - Click `Add New Webhook to Workspace`, select the channel where you want to receive notifications, \
   &#x20;and confirm with `Allow`.
 - Copy the generated `Webhook URL`.
 
-![Copying the Slack webhook URL](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/settings/notifications/netbird-notifications-slack-webhook-url-copy.png)
+![Copying the Slack webhook URL](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/settings/notifications/netbird-notifications-slack-webhook-url-copy.png)
 
 - Paste the Webhook URL into the input field in the NetBird modal.
 
-![Connect NetBird with Slack - Step 2: Enter Webhook URL](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/settings/notifications/netbird-notifications-slack-webhook-url.png)
+![Connect NetBird with Slack - Step 2: Enter Webhook URL](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/settings/notifications/netbird-notifications-slack-webhook-url.png)
 
 4. Click `Connect` to save the configuration.
 
@@ -126,7 +126,7 @@ Once connected, you can toggle individual events on or off, just like with the e
 
 To disconnect Slack, click the dropdown menu on the Slack channel page and select `Disconnect`. You will no longer receive notifications in your Slack channel.
 
-![Slack channel disconnect option in the dropdown menu](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/settings/notifications/netbird-notifications-slack-disconnect.png)
+![Slack channel disconnect option in the dropdown menu](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/settings/notifications/netbird-notifications-slack-disconnect.png)
 
 ## Get Started
 

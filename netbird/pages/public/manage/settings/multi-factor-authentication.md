@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/manage/settings/multi-factor-authentication.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/manage/settings/multi-factor-authentication.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/settings/multi-factor-authentication.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/settings/multi-factor-authentication.mdx)
 
 # Multi-Factor Authentication (MFA)
 
@@ -14,7 +14,7 @@ NetBird MFA is primarily for users with **email / password login**. It is availa
 > **Note**
 >
 > This feature is only available in the cloud version of NetBird. \
-> Self-Hosted users can use their own Identity Provider for MFA.
+> Self-Hosted users can use their own Identity Provider for MFA, or enable [MFA for local users](https://docs.netbird.io/selfhosted/identity-providers/enable-local-mfa) when using the embedded identity provider.
 
 ## Enabling and Disabling MFA
 
@@ -22,11 +22,15 @@ Navigate to the Dashboard's `Settings` page and the `Authentication` tab and ena
 
 After enabling, you can `Logout` and log back in to see the MFA prompt.
 
+> **Note**
+>
+> Accounts that use NetBird's embedded identity provider for local users see an additional `Enable Local MFA` toggle (currently in beta) in the same tab. This enforces a TOTP challenge for all local (email/password) users. See [Enable MFA for local users](https://docs.netbird.io/selfhosted/identity-providers/enable-local-mfa).
+
 - When disabling MFA, the current active MFA devices of all users will not be removed and will be reused when MFA is enabled again. To remove MFA devices from users, check the [Reset MFA](#reset-mfa) section below.
 - If a user is not part of the account and MFA is enabled, the first-time `Sign Up` will not require MFA. \
   &#x20;Only subsequent logins will require MFA.
 
-![MFA Settings](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/settings/mfa/mfa-settings.png)
+![MFA Settings](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/settings/mfa/mfa-settings.png)
 
 ### Remember Browser for MFA
 
@@ -42,9 +46,9 @@ You can check individual user MFA status by going to the `Users` page of the Das
 Click on a specific user to see their MFA status.
 
 - `Active` - MFA is enabled and user **has completed** the MFA setup.
-- `Not enrolled` - MFA is enabled but user **has not completed** the MFA setup yet.
+- `Not Enrolled` - MFA is enabled but user **has not completed** the MFA setup yet.
 
-![MFA Status](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/settings/mfa/mfa-not-enrolled.png)
+![MFA Status](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/settings/mfa/mfa-not-enrolled.png)
 
 ## Reset MFA
 
@@ -57,7 +61,7 @@ This will reset MFA for the user, and they will need to set it up again during t
 > Currently NetBird does not provide recovery codes for MFA. Make sure to have multiple administrators configured to prevent lockout situations.
 > If all `Owners` or `Admins` lose access to the Dashboard, you should contact <support@netbird.io> for assistance.
 
-![MFA Reset](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/settings/mfa/mfa-reset-mfa.png)
+![MFA Reset](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/settings/mfa/mfa-reset-mfa.png)
 
 ## Get started
 

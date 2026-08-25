@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/agent-network/integrations/litellm.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/agent-network/integrations/litellm.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/agent-network/integrations/litellm.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/agent-network/integrations/litellm.mdx)
 
 # LiteLLM
 
@@ -19,7 +19,7 @@ same network as the proxy so the proxy can reach it directly (for example
 3. Paste a LiteLLM **virtual key** as the API key. NetBird stores it server-side.
 4. Save the provider. The key is now held server-side, the next step authorizes who can use it.
 
-![connect a self-hosted LiteLLM Proxy provider in NetBird Agent Network](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/agent-network/integrations/agent-network-connect-litellm.png)
+![connect a self-hosted LiteLLM Proxy provider in NetBird Agent Network](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/agent-network/integrations/agent-network-connect-litellm.png)
 
 ## Create a Policy
 
@@ -34,7 +34,7 @@ before anyone can route through it.
    and [guardrails](https://docs.netbird.io/agent-network/policies/guardrails) such as a model allowlist. These are
    enforced by NetBird before the request reaches LiteLLM, on top of LiteLLM's own budgets.
 
-![create a NetBird Agent Network policy authorizing LiteLLM](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/agent-network/integrations/agent-network-create-policy-litellm.png)
+![create a NetBird Agent Network policy authorizing LiteLLM](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/agent-network/integrations/agent-network-create-policy-litellm.png)
 
 See [Policies](https://docs.netbird.io/agent-network/policies) for details.
 
@@ -51,7 +51,7 @@ The proxy strips any client-supplied value first, so an app can't spoof its iden
 forwarding identity to LiteLLM, turn off
 [Forward identity metadata](https://docs.netbird.io/agent-network/providers#identity-metadata) on the provider.
 
-![LiteLLM identity mappings: x-litellm-end-user-id to user email and metadata.tags to groups](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/agent-network/integrations/agent-network-litellm-mappings.png)
+![LiteLLM identity mappings: x-litellm-end-user-id to user email and metadata.tags to groups](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/agent-network/integrations/agent-network-litellm-mappings.png)
 
 > **Note**
 >
@@ -66,12 +66,12 @@ LiteLLM's own usage views as tags. In the LiteLLM UI, go to **Usage** and select
 example, the `Engineering` group injected by NetBird appears here with its own
 **Tag Spend Overview**.
 
-![LiteLLM Tag Usage view showing spend for the Engineering group injected by NetBird](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/agent-network/integrations/agent-network-litellm-tag-usage.png)
+![LiteLLM Tag Usage view showing spend for the Engineering group injected by NetBird](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/agent-network/integrations/agent-network-litellm-tag-usage.png)
 
 You can see every group forwarded from NetBird under **Experimental → Tag Management**, where
 each NetBird IdP group is listed as a tag passed dynamically in the request.
 
-![LiteLLM Tag Management listing the groups passed from NetBird, including Engineering](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/agent-network/integrations/agent-network-litellm-tag-management.png)
+![LiteLLM Tag Management listing the groups passed from NetBird, including Engineering](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/agent-network/integrations/agent-network-litellm-tag-management.png)
 
 ## Result
 
@@ -81,4 +81,4 @@ by the same NetBird identity. Every call is recorded in
 [Usage & Logs](https://docs.netbird.io/agent-network/usage-and-logs), where each LiteLLM request shows the caller's
 identity, auth group, model, tokens, cost, and status.
 
-![NetBird Access Logs showing LiteLLM Proxy requests with the Engineering auth group](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/agent-network/integrations/agent-network-litellm-access-logs.png)
+![NetBird Access Logs showing LiteLLM Proxy requests with the Engineering auth group](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/agent-network/integrations/agent-network-litellm-access-logs.png)

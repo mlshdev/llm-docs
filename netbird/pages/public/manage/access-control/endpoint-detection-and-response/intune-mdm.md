@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/manage/access-control/endpoint-detection-and-response/intune-mdm.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/manage/access-control/endpoint-detection-and-response/intune-mdm.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/access-control/endpoint-detection-and-response/intune-mdm.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/access-control/endpoint-detection-and-response/intune-mdm.mdx)
 
 # Allow Only Intune-Managed Devices to Access Your Network
 
@@ -21,7 +21,7 @@ In this guide, you'll learn how to integrate NetBird with Microsoft Intune and c
 - Navigate to the [Integrations » EDR](https://app.netbird.io/integrations?tab=edr) tab in the NetBird dashboard
 - Click `Connect Intune` to start the configuration wizard
 
-![NetBird Get Started Intune MDM](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/endpoint-detection-and-response/intune-mdm/getting-started.png)
+![NetBird Get Started Intune MDM](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/access-control/endpoint-detection-and-response/intune-mdm/getting-started.png)
 
 ## Prerequisites
 
@@ -39,7 +39,7 @@ To check your permissions:
 - Expand the `Manage` tab and click on `Roles and administrators` in the left menu.
 - Look for your username and verify if you're assigned any of the above roles.
 
-![Intune Roles](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/endpoint-detection-and-response/intune-mdm/roles.png)
+![Intune Roles](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/access-control/endpoint-detection-and-response/intune-mdm/roles.png)
 
 If you don't have the required permissions, contact your Azure AD administrator to grant you the appropriate role before proceeding with the NetBird integration.
 
@@ -52,21 +52,21 @@ A new wizard screen will appear, offering step-by-step instructions for creating
 - Name
 - Account Type
 
-![NetBird Create Application](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/endpoint-detection-and-response/intune-mdm/create-app.png)
+![NetBird Create Application](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/access-control/endpoint-detection-and-response/intune-mdm/create-app.png)
 
 For convenience, click on [Azure Active Directory](https://portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/~/Overview) (step 1). That will open the Azure dashboard. Navigate to `App registrations` in the left menu and then click `+New registration` as indicated below:
 
-![Intune App Registration](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/endpoint-detection-and-response/intune-mdm/app-registration.png)
+![Intune App Registration](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/access-control/endpoint-detection-and-response/intune-mdm/app-registration.png)
 
 Fill in the required information:
 
-![Intune Register an App](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/endpoint-detection-and-response/intune-mdm/register-app.png)
+![Intune Register an App](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/access-control/endpoint-detection-and-response/intune-mdm/register-app.png)
 
 After entering all required information, click the `Register` button at the bottom of the form to finalize the application registration process.
 
 Upon successful registration, you'll be redirected to a confirmation screen similar to the following:
 
-![Intune App Registered](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/endpoint-detection-and-response/intune-mdm/netbird-app-azure.png)
+![Intune App Registered](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/access-control/endpoint-detection-and-response/intune-mdm/netbird-app-azure.png)
 
 Copy and securely store the generated `Application (client) ID` and `Directory (tenant) ID` as you will need them shortly.
 
@@ -74,23 +74,23 @@ Copy and securely store the generated `Application (client) ID` and `Directory (
 
 On the NetBird dashboard click the `Continue →` button. A new wizard screen will appear, this time, offering step-by-step instructions for setting up API permissions.
 
-![NetBird Add API Permissions](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/endpoint-detection-and-response/intune-mdm/api-permissions.png)
+![NetBird Add API Permissions](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/access-control/endpoint-detection-and-response/intune-mdm/api-permissions.png)
 
 Back to Azure, in the `App registrations` screen, click on `Manage` in the left menu to expand it and then click on `API permissions`:
 
-![Intune API Permissions](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/endpoint-detection-and-response/intune-mdm/api-permissions-menu.png)
+![Intune API Permissions](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/access-control/endpoint-detection-and-response/intune-mdm/api-permissions-menu.png)
 
 Look for the `+ Add a permission` button, located near the top of the permissions list and click on it.
 
-![Intune API Permissions Screen](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/endpoint-detection-and-response/intune-mdm/api-permissions-screen.png)
+![Intune API Permissions Screen](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/access-control/endpoint-detection-and-response/intune-mdm/api-permissions-screen.png)
 
 A new pop-up window will appear, asking you to select an API. Click on `Microsoft Graph`.
 
-![Intune Microsoft Graph](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/endpoint-detection-and-response/intune-mdm/request-api-permissions.png)
+![Intune Microsoft Graph](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/access-control/endpoint-detection-and-response/intune-mdm/request-api-permissions.png)
 
 On the next screen, click on the `Application permissions` button, which will let you select the appropriate permissions for NetBird to function correctly with your Microsoft Intune environment.
 
-![Intune Request API Permissions](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/endpoint-detection-and-response/intune-mdm/application-permissions-graph.png)
+![Intune Request API Permissions](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/access-control/endpoint-detection-and-response/intune-mdm/application-permissions-graph.png)
 
 To assign user permissions:
 
@@ -98,13 +98,13 @@ To assign user permissions:
 - In the search results, click on the `DeviceManagementManagedDevices` tab to expand it and view the available permissions.
 - Click on the checkbox to select and enable the `DeviceManagementManagedDevices.Read.All` permission.
 
-![Intune UserReadAll](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/endpoint-detection-and-response/intune-mdm/device-permissions.png)
+![Intune UserReadAll](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/access-control/endpoint-detection-and-response/intune-mdm/device-permissions.png)
 
 The `DeviceManagementManagedDevices.Read.All` permission allows NetBird to read the properties of all devices managed by Microsoft Intune in your organization.
 
 Once done, click the `Add permissions` button. You will see a few warnings:
 
-![Intune API Permissions Warnings](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/endpoint-detection-and-response/intune-mdm/grant-permissions.png)
+![Intune API Permissions Warnings](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/access-control/endpoint-detection-and-response/intune-mdm/grant-permissions.png)
 
 Locate the `Grant admin consent for [Your Organization Name]` button (you’ll find it next to `+Add a permission` button). Click on it to grant the required permissions.
 
@@ -112,21 +112,21 @@ A confirmation dialog will appear, asking you to verify this action. Review the 
 
 Once finished, the status of the permissions should change to `Granted for [Your Organization Name]`. Verify that all selected permissions now show a green checkmark, indicating they've been successfully granted:
 
-![Intune API Permissions Granted](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/endpoint-detection-and-response/intune-mdm/granted-permissions.png)
+![Intune API Permissions Granted](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/access-control/endpoint-detection-and-response/intune-mdm/granted-permissions.png)
 
 ## Create a Client Secret for Secure NetBird-Intune Authentication
 
 Back to the NetBird dashboard, click the `Continue →` button. A new wizard screen will appear, showing instructions for generating a client secret in Entra ID.
 
-![NetBird Generate Client Secret](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/endpoint-detection-and-response/intune-mdm/client-secret.png)
+![NetBird Generate Client Secret](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/access-control/endpoint-detection-and-response/intune-mdm/client-secret.png)
 
 On Azure, click on the `Certificates & secrets` button in the left menu to open the management page. Click on `+New client secret` as shown below. Choose an expiration time that suits your security needs and click the `Add` button.
 
-![EntraID Add a Client Secret](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/endpoint-detection-and-response/intune-mdm/add-client-secret.png)
+![EntraID Add a Client Secret](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/access-control/endpoint-detection-and-response/intune-mdm/add-client-secret.png)
 
 A new client secret will be generated and displayed on the screen. Copy and securely store the `Value` field immediately, as you will needed in the next step.
 
-![EntraID Client Secret Value](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/endpoint-detection-and-response/intune-mdm/certs-secrets.png)
+![EntraID Client Secret Value](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/access-control/endpoint-detection-and-response/intune-mdm/certs-secrets.png)
 
 ## Enter Application ID and Directory ID in NetBird
 
@@ -134,13 +134,13 @@ Paste the secret `Value` from the previous step into NetBird and click the `Cont
 
 Paste the values and click the `Continue →` button.
 
-![NetBird Application ID and Directory](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/endpoint-detection-and-response/intune-mdm/client-id.png)
+![NetBird Application ID and Directory](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/access-control/endpoint-detection-and-response/intune-mdm/client-id.png)
 
 ## Choose Groups to require Intune Agent
 
 At this stage, specify one or more NetBird groups to which the check should apply. The check will require the peer to have a running Intune agent installed.
 
-![Intune Groups](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/endpoint-detection-and-response/intune-mdm/groups.png)
+![Intune Groups](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/access-control/endpoint-detection-and-response/intune-mdm/groups.png)
 
 > **Note**
 >
@@ -153,7 +153,7 @@ At this stage, specify one or more NetBird groups to which the check should appl
 Peers that have the Intune agent installed and are compliant will be granted access to the network. Peers without the agent will appear
 with a `Approval required` mark in the peers list and won't be able to access the network until the agent is installed.
 
-![edr-approval-required](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/access-control/endpoint-detection-and-response/intune-mdm/edr-approval-required.png)
+![edr-approval-required](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/access-control/endpoint-detection-and-response/intune-mdm/edr-approval-required.png)
 
 ## Important Notes
 

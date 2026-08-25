@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/use-cases/cloud/netbird-on-faas.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/use-cases/cloud/netbird-on-faas.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/use-cases/cloud/netbird-on-faas.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/use-cases/cloud/netbird-on-faas.mdx)
 
 # Running NetBird on serverless environments (FaaS)
 
@@ -33,7 +33,7 @@ netbird up -F
 
 ### Docker
 
-Some container environments can be restricted as well. For example, Docker containers are not allowed to create new VPN interfaces by default. For that reason, you can run a NetBird agent in a standard mode to enable the netstack mode:
+Some container environments can be restricted as well. For example, Docker containers are not allowed to create new VPN interfaces by default. For that reason, you can run a NetBird client in a standard mode to enable the netstack mode:
 
 ```bash
 docker run --rm --name PEER_NAME --hostname PEER_NAME -d \
@@ -46,13 +46,16 @@ This is useful when you want to configure a simple routing peer without adding p
 >
 > The SOCKS5 proxy binds to `127.0.0.1` by default, so it is reachable only from
 > within the same container. If your application runs in a **separate** container
-> and connects to the agent's proxy over the Docker network, set
-> `NB_SOCKS5_LISTENER_ADDRESS=0.0.0.0` on the agent so the proxy accepts those
+> and connects to the client's proxy over the Docker network, set
+> `NB_SOCKS5_LISTENER_ADDRESS=0.0.0.0` on the client so the proxy accepts those
 > connections. The proxy is unauthenticated, so only do this on trusted networks.
+> In that setup, point the application at the NetBird client container's service
+> name or IP; `127.0.0.1` only reaches the proxy when the application runs in the
+> same container as the client.
 
 ## How to use the SOCKS5 proxy?
 
-Once you have the agent running in netstack mode, you need to configure your application to use the SOCKS5 proxy. The following is an example of a python 3 application:
+Once you have the client running in netstack mode, you need to configure your application to use the SOCKS5 proxy. The following is an example of a python 3 application:
 
 ```python
 import socks

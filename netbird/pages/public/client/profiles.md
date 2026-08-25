@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/client/profiles.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/client/profiles.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/client/profiles.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/client/profiles.mdx)
 
 # Switching Between NetBird Accounts with Profiles
 
@@ -8,7 +8,7 @@ Only one profile is active at a time, and switching takes just a click.
 This feature also allows you to switch between self-hosted and cloud-hosted NetBird accounts seamlessly without needing
 to juggle multiple config files.
 
-![Profile selector in the NetBird desktop app](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/client/profiles/profiles.png)
+![Profile selector in the NetBird desktop app](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/client/profiles/profiles.png)
 
 ## NetBird Profiles GUI Quickstart
 
@@ -28,7 +28,7 @@ Open **Settings → Profiles** to:
 - **Delete** any inactive profile. Active and default profiles cannot be removed.
 - Recognize profiles by their assigned Work, Home, Default, or other type icon.
 
-![Profiles settings in the NetBird desktop app](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/client/profiles/profiles-edit.png)
+![Profiles settings in the NetBird desktop app](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/client/profiles/profiles-edit.png)
 
 ## What Is a Profile?
 

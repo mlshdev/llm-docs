@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/manage/activity/event-streaming/generic-http.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/manage/activity/event-streaming/generic-http.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/activity/event-streaming/generic-http.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/activity/event-streaming/generic-http.mdx)
 
 # Stream Network Activity to a Generic HTTP Endpoint
 
@@ -24,7 +24,7 @@ Before you start, ensure you have an HTTP/S endpoint that is publicly accessible
 
 This tab is for the essential endpoint details.
 
-![Generic HTTP General Configuration](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/activity/event-streaming/generic-http/general-config.png)
+![Generic HTTP General Configuration](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/activity/event-streaming/generic-http/general-config.png)
 
 - **Endpoint URL**: Enter the full HTTPS or HTTP URL where NetBird should send the events. This field is mandatory.
 - **Authentication**: Select the authentication method required by your endpoint.
@@ -41,13 +41,13 @@ This tab is for the essential endpoint details.
 
 You can add custom HTTP headers to every outgoing request in the **Headers** tab. This is useful for passing static tokens, setting a custom `Content-Type`, or other API requirements. By default, the `Content-Type` is `application/json`.
 
-![Generic HTTP Headers Configuration](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/activity/event-streaming/generic-http/headers-config.png)
+![Generic HTTP Headers Configuration](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/activity/event-streaming/generic-http/headers-config.png)
 
 ### Custom Body Template (Optional)
 
 The **Body Template** tab gives you powerful control over the structure of the JSON payload sent to your endpoint.
 
-![Generic HTTP Body Template Configuration](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/activity/event-streaming/generic-http/body-template-config.png)
+![Generic HTTP Body Template Configuration](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/activity/event-streaming/generic-http/body-template-config.png)
 
 If this option is disabled, NetBird sends a default JSON object for each event. When enabled, you can define your own payload structure using Go's `text/template` templating engine.
 
@@ -71,7 +71,7 @@ You can use the following variables from the `StreamEvent` object in your templa
 
 This tab allows you to delete the integration. This action is irreversible and will immediately stop events from being sent to your endpoint.
 
-![Generic HTTP Danger Zone](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/activity/event-streaming/generic-http/danger-zone.png)
+![Generic HTTP Danger Zone](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/activity/event-streaming/generic-http/danger-zone.png)
 
 After configuring all settings, click **Save Changes**.
 

@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/use-cases/remote-access/access-home-devices.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/use-cases/remote-access/access-home-devices.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/use-cases/remote-access/access-home-devices.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/use-cases/remote-access/access-home-devices.mdx)
 
 # Access Home Devices (VPN-to-Site)
 
@@ -37,7 +37,7 @@ If you haven't already, install NetBird on your laptop and connect:
 1. In **Peers** → **User Devices**, select your laptop peer
 2. Under **Assigned Groups**, add a new group: "Home Users"
 
-![Add user group](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/networks/use-cases/access-home-devices/add-user-group.png)
+![Add user group](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/networks/use-cases/access-home-devices/add-user-group.png)
 
 ## Step 3: Find Your Home Subnet
 
@@ -61,7 +61,7 @@ Look for your local subnet, typically something like `192.168.1.0/24` or `192.16
 2. Click **Add Network**
 3. Name it "Home LAN" and click **Save**
 
-![Add network](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/networks/use-cases/access-home-devices/add-network-home-lan.png)
+![Add network](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/networks/use-cases/access-home-devices/add-network-home-lan.png)
 
 ## Step 5: Add Your Home Subnet as a Resource
 
@@ -71,7 +71,7 @@ Look for your local subnet, typically something like `192.168.1.0/24` or `192.16
 4. Expand **Additional Options** and under **Resource Groups**, create a group called `home-lan`
 5. Click **Continue** to proceed to the **Access Control** tab
 
-![Add resource](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/networks/use-cases/access-home-devices/add-resource-home-network.png)
+![Add resource](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/networks/use-cases/access-home-devices/add-resource-home-network.png)
 
 > **Note**
 >
@@ -86,7 +86,7 @@ Look for your local subnet, typically something like `192.168.1.0/24` or `192.16
 5. Name it "Home LAN Access" and click **Add Policy**
 6. Click **Add Resource** to save the resource with its policy
 
-![Add policy](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/networks/use-cases/access-home-devices/add-policy-home-lan.png)
+![Add policy](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/networks/use-cases/access-home-devices/add-policy-home-lan.png)
 
 ## Step 7: Set Up the Routing Peer
 
@@ -115,11 +115,11 @@ sudo netbird up --setup-key YOUR_SETUP_KEY
 
 4. In the Networks view, click **Add Routing Peer** on your Home LAN network
 
-![Add routing peer button](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/networks/use-cases/access-home-devices/add-routing-peer.png)
+![Add routing peer button](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/networks/use-cases/access-home-devices/add-routing-peer.png)
 
 5. Select your new peer and click **Add Routing Peer**
 
-![Add routing peer](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/networks/use-cases/access-home-devices/add-routing-peer-home-network.png)
+![Add routing peer](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/networks/use-cases/access-home-devices/add-routing-peer-home-network.png)
 
 ## Step 8: Test the Connection
 

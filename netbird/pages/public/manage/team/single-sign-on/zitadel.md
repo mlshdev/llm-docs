@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/manage/team/single-sign-on/zitadel.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/manage/team/single-sign-on/zitadel.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/team/single-sign-on/zitadel.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/team/single-sign-on/zitadel.mdx)
 
 # Zitadel on NetBird Cloud
 
@@ -17,11 +17,11 @@ You can use Zitadel as your Identity Provider with NetBird, but it will require 
 
 Log in to your Zitadel console at `https://<your-instance>.zitadel.cloud`. Navigate to **Projects** and click **+ Create New Project**. Enter `NetBird` as the project name and click **Continue**.
 
-![zitadel-create-project](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/team/single-sign-on/zitadel-idp/create-project.png)
+![zitadel-create-project](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/single-sign-on/zitadel-idp/create-project.png)
 
 You should see the project dashboard once the project is created.
 
-![zitadel-project-created](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/team/single-sign-on/zitadel-idp/project-created.png)
+![zitadel-project-created](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/single-sign-on/zitadel-idp/project-created.png)
 
 ## Step 2: Create a New Application
 
@@ -30,7 +30,7 @@ Inside your project, click **+ New** to create a new application. Configure the 
 - **Name**: `NetBird`
 - **Type**: `Web`
 
-![zitadel-create-application](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/team/single-sign-on/zitadel-idp/create-application.png)
+![zitadel-create-application](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/single-sign-on/zitadel-idp/create-application.png)
 
 Click **Continue**.
 
@@ -38,7 +38,7 @@ Click **Continue**.
 
 Select **Code** as the authentication method. This enables the Authorization Code flow with a client secret.
 
-![zitadel-authentication-method](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/team/single-sign-on/zitadel-idp/authentication-method.png)
+![zitadel-authentication-method](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/single-sign-on/zitadel-idp/authentication-method.png)
 
 Click **Continue**.
 
@@ -49,17 +49,17 @@ Set the following redirect settings:
 - **Redirect URIs**: `https://login.netbird.io/login/callback`
 - **Post Logout URIs**: `https://app.netbird.io`
 
-![zitadel-redirect-uris](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/team/single-sign-on/zitadel-idp/redirect-uris.png)
+![zitadel-redirect-uris](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/single-sign-on/zitadel-idp/redirect-uris.png)
 
 Click **Continue** to proceed to the review stage. Verify your application settings and click **Create**.
 
-![zitadel-review-application](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/team/single-sign-on/zitadel-idp/review-application.png)
+![zitadel-review-application](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/single-sign-on/zitadel-idp/review-application.png)
 
 ## Step 5: Copy the Client Credentials
 
 After creation, Zitadel displays the **Client ID** and **Client Secret**. Copy and store these securely — the Client Secret is only shown once.
 
-![zitadel-client-credentials](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/team/single-sign-on/zitadel-idp/client-credentials.png)
+![zitadel-client-credentials](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/single-sign-on/zitadel-idp/client-credentials.png)
 
 ## Step 6: Share Configuration with NetBird
 

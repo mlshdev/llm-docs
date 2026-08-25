@@ -1,11 +1,11 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/agent-network/usage-and-logs/usage-overview.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/agent-network/usage-and-logs/usage-overview.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/agent-network/usage-and-logs/usage-overview.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/agent-network/usage-and-logs/usage-overview.mdx)
 
 # Usage Overview
 
 The Usage tab shows account consumption over time as a per-day chart with a
 Tokens / Cost switch, plus a breakdown table.
 
-![agent network usage overview chart and table](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/agent-network/usage-and-logs/agent-network-usage-overview.png)
+![agent network usage overview chart and table](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/agent-network/usage-and-logs/agent-network-usage-overview.png)
 
 ## Filters
 

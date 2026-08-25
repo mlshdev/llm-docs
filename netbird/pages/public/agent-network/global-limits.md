@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/agent-network/global-limits.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/agent-network/global-limits.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/agent-network/global-limits.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/agent-network/global-limits.mdx)
 
 # Global Limits
 
@@ -8,7 +8,7 @@ limits. They are **limit-only** rules: unlike a policy, a global limit never sel
 provider or authorizes traffic, and it isn't tied to one. It caps a caller's total
 consumption no matter which provider or gateway the request is routed to.
 
-![agent network global limits list](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/agent-network/global-limits/agent-network-global-limits-list.png)
+![agent network global limits list](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/agent-network/global-limits/agent-network-global-limits-list.png)
 
 A global limit acts as an **always-on ceiling**. It is evaluated before any policy,
 on every request, and every applicable rule must pass. Because rules can only tighten a
@@ -62,4 +62,4 @@ Go to **Agent Network → Configuration → Global Limits** and add a rule with 
 and/or budget caps and an optional target. Leave the target empty to apply it account-wide,
 or pick groups or users to scope it.
 
-![create global limit modal with token and budget caps](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/agent-network/global-limits/agent-network-create-global-limit.png)
+![create global limit modal with token and budget caps](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/agent-network/global-limits/agent-network-create-global-limit.png)

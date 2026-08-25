@@ -1,8 +1,8 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/manage/settings/delete-account.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/manage/settings/delete-account.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/settings/delete-account.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/settings/delete-account.mdx)
 
 # Delete your NetBird account
 
-To delete your NetBird organization account, you must be a user with the [owner role](https://docs.netbird.io/manage/team/user-roles#owner). You can ask the owner to delete the organization account if you are not the account owner.
+To delete your NetBird organization account, you must be a user with the [owner role](https://docs.netbird.io/manage/team/user-roles#owner). The `Danger zone` tab is only visible to the account owner, so you can ask the owner to delete the organization account if you are not the account owner. If your account is managed by an MSP (Managed Service Provider) parent account, the `Danger zone` tab is not available.
 
 ## Delete your account
 
@@ -10,13 +10,13 @@ To delete your NetBird organization account, you must be a user with the [owner 
 >
 > Before proceeding to delete your Netbird account, please be aware that this action is irreversible. Once your account is deleted, you will permanently lose access to all associated data, including your peers, users, groups, policies, and routes.
 
-Go to the `Settings` tab, then click on `Danger Zone`. Review the message and click on the `Delete Account` button.
+Go to the `Settings` tab, then click on `Danger zone`. Review the message and click on the `Delete Account` button.
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/settings/account-settings-danger-zone.png)
+![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/settings/account-settings-danger-zone.png)
 
 To confirm, click on the `Delete` button.
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/settings/account-settings-delete-account-confirm.png)
+![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/settings/account-settings-delete-account-confirm.png)
 
 After you delete your account, your session will end, and you will be redirected to the login page.
 

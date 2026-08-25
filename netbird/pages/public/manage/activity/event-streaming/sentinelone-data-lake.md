@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/manage/activity/event-streaming/sentinelone-data-lake.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/manage/activity/event-streaming/sentinelone-data-lake.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/activity/event-streaming/sentinelone-data-lake.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/activity/event-streaming/sentinelone-data-lake.mdx)
 
 # Stream Network Activity to SentinelOne Singularity Data Lake
 
@@ -25,7 +25,7 @@ Before you start creating and configuring a SentinelOne Singularity Data Lake ev
 - A new API key will be created with access to write logs to Data Lake
 - Click **Copy to Clipboard** and store this token securely. You will need this token when configuring the integration in NetBird.
 
-![API Key Generation](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/activity/event-streaming/sentinelone-data-lake/api-key-generation.png)
+![API Key Generation](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/activity/event-streaming/sentinelone-data-lake/api-key-generation.png)
 
 ## Get the HEC Ingestion URL
 
@@ -39,7 +39,7 @@ to find and copy the HTTP Event Collector base URL from the documentation page. 
 - Configure the endpoint URL by entering the full HEC endpoint URL: `https://ingest.<region>.sentinelone.net/services/collector/event`
 - Select **Bearer Token** for authentication and provide the API token you created earlier
 
-![General Settings Configuration](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/activity/event-streaming/sentinelone-data-lake/general-settings.png)
+![General Settings Configuration](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/activity/event-streaming/sentinelone-data-lake/general-settings.png)
 
 - Enable the custom body template and use the following template optimized for SentinelOne Singularity Data Lake:
 
@@ -57,7 +57,7 @@ to find and copy the HTTP Event Collector base URL from the documentation page. 
 }
 ```
 
-![Custom Template Configuration](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/activity/event-streaming/sentinelone-data-lake/custom-template.png)
+![Custom Template Configuration](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/activity/event-streaming/sentinelone-data-lake/custom-template.png)
 
 ## Verify the Integration
 
@@ -67,6 +67,6 @@ After configuring the SentinelOne Singularity Data Lake integration in NetBird, 
 - Select to search **All Data** and filter for recent events with source **netbird**
 - Verify the test events appear with the expected structure
 
-![Verify Integration](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/activity/event-streaming/sentinelone-data-lake/verify-integration.png)
+![Verify Integration](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/activity/event-streaming/sentinelone-data-lake/verify-integration.png)
 
 The integration is now set up and ready to stream network activity events to SentinelOne Singularity Data Lake.

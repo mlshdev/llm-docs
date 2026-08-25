@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/about-netbird/how-netbird-works.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/about-netbird/how-netbird-works.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/about-netbird/how-netbird-works.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/about-netbird/how-netbird-works.mdx)
 
 # How NetBird Works
 
@@ -8,7 +8,7 @@ connections, tunneling, authentication, and network management (IPs, keys, ACLs,
 It uses open-source technologies like [WireGuard®](https://www.wireguard.com/), [Pion ICE (WebRTC)](https://github.com/pion/ice), [Coturn](https://github.com/coturn/coturn),
 and [software](https://github.com/netbirdio/netbird) developed by NetBird to make secure private networks deployment and management simple.
 
-NetBird relies on four components - **Client** application (or agent), **Management**, **Signal** and **Relay** services.
+NetBird relies on four components - **Client** application, **Management**, **Signal** and **Relay** services.
 
 The combination of these elements ensures that direct point-to-point connections are established and only authenticated
 users (or machines) have access to the resources for which they are authorized.
@@ -16,12 +16,12 @@ users (or machines) have access to the resources for which they are authorized.
 A **Peer** is a machine or any device that is connected to the network.
 It can be a Linux server running in the cloud or on-premises, a personal laptop, mobile phone, or even a Raspberry Pi.
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/about-netbird/high-level-dia.png)
+![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/about-netbird/high-level-dia.png)
 
 With NetBird clients installed and authorized on the Management service, machines form a mesh network connecting
 to each other directly via an encrypted point-to-point WireGuard tunnel.
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/about-netbird/mesh.png)
+![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/about-netbird/mesh.png)
 
 While it is possible to create a full mesh network, it might be not a desirable outcome.
 In this case, [groups and access controls](https://docs.netbird.io/manage/access-control/manage-network-access) can be utilized to limit the access to certain machines.
@@ -50,11 +50,11 @@ The Management Service's responsibilities include:
 
 The Management service runs in the cloud NetBird-managed. It can also be self-hosted.
 
-![management-dia](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/about-netbird/management.png)
+![management-dia](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/about-netbird/management.png)
 
 ## Client Application
 
-The NetBird Client application (or agent) is a software that is installed on the machines within a NetBird network.
+The NetBird client is software installed on the machines within a NetBird network.
 It is an entry point to your private network that makes it possible for machines to communicate with each other.
 Once installed and registered, a machine becomes a peer within the network.
 
@@ -90,7 +90,7 @@ Signal's sole responsibility is:
   peers need to find each other and exchange the most suitable connection candidates.
   This is done through Signal. After a connection has been established, Signal steps out.
 
-![signal-dia](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/about-netbird/signal.png)
+![signal-dia](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/about-netbird/signal.png)
 
 > **Note**
 >
@@ -105,7 +105,7 @@ The Relay service is a [TURN server](https://webrtc.org/getting-started/turn-ser
 In fact, we use an open-source implementation called [Coturn](https://github.com/coturn/coturn).
 The purpose of the Relay service is to gracefully implement a "Plan B" by relaying traffic between peers when a direct point-to-point connection is not possible. However, starting with v0.29.0, a new WebSocket-based relay has been introduced with the intent of replacing the previous TURN relay (Coturn). [More info](https://netbird.io/knowledge-hub/september-newsletter).
 
-![relay-dia](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/about-netbird/relay.png)
+![relay-dia](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/about-netbird/relay.png)
 
 > **Note**
 >

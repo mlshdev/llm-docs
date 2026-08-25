@@ -1,9 +1,9 @@
-> Release-pinned source for NetBird v0.77.0: [docs/agent-networks/modules/33-proxy-runtime.md](https://github.com/netbirdio/netbird/blob/c5503fdc7f93ae6844a39caecf2970b43618c9b2/docs/agent-networks/modules/33-proxy-runtime.md)
+> Release-pinned source for NetBird v0.77.1: [docs/agent-networks/modules/33-proxy-runtime.md](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/docs/agent-networks/modules/33-proxy-runtime.md)
 
 # proxy/runtime — translate + serve + log
 
 > **Risk level:** High — every config push from management is translated here, and the chain runs on every HTTP request to a synth target.
-> **Backward-compat impact:** Additive at the wire (`PathTargetOptions.middlewares`, `agent_network`, `disable_access_log`, capture caps) and on the proxy `Server` struct (`MiddlewareDataDir`, `MiddlewareCaptureBudgetBytes`). Non-agent-network targets stay on the no-middleware fast path.
+> **Backward-compat impact:** Additive at the wire (`PathTargetOptions.middlewares`, `agent_network`, `disable_access_log`, capture caps) and on the proxy `Server` struct (`MiddlewareCaptureBudgetBytes`). Non-agent-network targets stay on the no-middleware fast path. Middleware config is entirely wire-delivered — no proxy-side data dir is involved, including for LLM pricing, which management ships inside `cost_meter`'s config.
 
 ## Module boundary
 
@@ -116,8 +116,7 @@ At **request time** the access-log middleware stamps `CapturedData`; the auth ch
 
 ## Public contracts touched
 
-- `proxy.Server.MiddlewareDataDir` (string) — base dir for file-backed middleware config (server.go:238-241).
-- `proxy.Server.MiddlewareCaptureBudgetBytes` (int64) — process-wide capture cap; defaults to 256 MiB (server.go:248-250).
+- `proxy.Server.MiddlewareCaptureBudgetBytes` (int64) — process-wide capture cap; defaults to 256 MiB (server.go:249-253). There is no `MiddlewareDataDir`: no built-in middleware reads config from disk, so `builtin.FactoryContext` carries only the proxy-lifetime context, meter, logger, and management client.
 - `proxy/internal/proxy.WithMiddlewareManager(*middleware.Manager) Option` — new option on `NewReverseProxy`; nil keeps the fast path (reverseproxy.go:48-56).
 - `proxy/internal/proxy.PathTarget` adds `Middlewares`, `CaptureConfig`, `AgentNetwork`, `DisableAccessLog` (servicemapping.go:27-51), all zero-default.
 - `proxy/internal/proxy.CapturedData` adds `agentNetwork`, `suppressAccessLog`, `userGroupNames` behind `sync.RWMutex`; slices deep-copied (context.go:47-66, 183-258).
@@ -198,6 +197,6 @@ The integration test runs in a few seconds with no external infrastructure — e
 
 ## Cross-references
 
-- Upstream: [shared/api](https://github.com/netbirdio/netbird/blob/c5503fdc7f93ae6844a39caecf2970b43618c9b2/docs/agent-networks/modules/10-shared-api.md), [proxy/middleware-framework](https://github.com/netbirdio/netbird/blob/c5503fdc7f93ae6844a39caecf2970b43618c9b2/docs/agent-networks/modules/30-proxy-middleware-framework.md), [proxy/middleware-builtin](https://github.com/netbirdio/netbird/blob/c5503fdc7f93ae6844a39caecf2970b43618c9b2/docs/agent-networks/modules/31-proxy-middleware-builtin.md), [proxy/llm-parsers](https://github.com/netbirdio/netbird/blob/c5503fdc7f93ae6844a39caecf2970b43618c9b2/docs/agent-networks/modules/32-proxy-llm-parsers.md)
-- End-to-end flow: [../01-end-to-end-flows.md](https://github.com/netbirdio/netbird/blob/c5503fdc7f93ae6844a39caecf2970b43618c9b2/docs/agent-networks/01-end-to-end-flows.md)
-- Top-level: [../00-overview.md](https://github.com/netbirdio/netbird/blob/c5503fdc7f93ae6844a39caecf2970b43618c9b2/docs/agent-networks/00-overview.md)
+- Upstream: [shared/api](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/docs/agent-networks/modules/10-shared-api.md), [proxy/middleware-framework](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/docs/agent-networks/modules/30-proxy-middleware-framework.md), [proxy/middleware-builtin](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/docs/agent-networks/modules/31-proxy-middleware-builtin.md), [proxy/llm-parsers](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/docs/agent-networks/modules/32-proxy-llm-parsers.md)
+- End-to-end flow: [../01-end-to-end-flows.md](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/docs/agent-networks/01-end-to-end-flows.md)
+- Top-level: [../00-overview.md](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/docs/agent-networks/00-overview.md)

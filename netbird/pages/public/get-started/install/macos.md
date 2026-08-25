@@ -1,8 +1,8 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/get-started/install/macos.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/get-started/install/macos.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/get-started/install/macos.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/get-started/install/macos.mdx)
 
 # MacOS Installation
 
-The NetBird client (agent) allows a peer to join a pre-existing NetBird deployment. If a NetBird deployment is not yet available, there are both managed and [self-hosted](https://docs.netbird.io/selfhosted/selfhosted-quickstart) options available.
+The NetBird client allows a peer to join a pre-existing NetBird deployment. If a NetBird deployment is not yet available, there are both managed and [self-hosted](https://docs.netbird.io/selfhosted/selfhosted-quickstart) options available.
 
 ## Install with one command
 
@@ -136,7 +136,7 @@ netbird up
 
 > It will open your browser, and you will be prompt for email and password. Follow the instructions.
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/get-started/netbird-sso-login-cmd.gif)
+![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/get-started/netbird-sso-login-cmd.gif)
 
 Check connection status:
 

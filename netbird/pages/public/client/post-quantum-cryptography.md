@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/client/post-quantum-cryptography.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/client/post-quantum-cryptography.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/client/post-quantum-cryptography.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/client/post-quantum-cryptography.mdx)
 
 # Enable Quantum-Resistance
 
@@ -15,7 +15,7 @@ The software is [open-source](https://github.com/rosenpass/rosenpass) and design
 It ensures future-proof security against quantum threats by continuously generating and rotating WireGuard pre-shared keys every two minutes.
 Rosenpass can also be used as a generic key-exchange mechanism for other protocols.
 
-Starting [v0.25.4](https://github.com/netbirdio/netbird/releases), the NetBird agent runs an embedded Rosenpass server
+Starting [v0.25.4](https://github.com/netbirdio/netbird/releases), the NetBird client runs an embedded Rosenpass server
 that automatically rotates and applies WireGuard pre-shared keys to every point-to-point connection.
 
 > **Note**
@@ -48,7 +48,7 @@ Rosenpass respects a provided pre-shared key and uses it for its initial key gen
 netbird up --enable-rosenpass --preshared-key <preshared-key>
 ```
 
-This configuration is persistent and preserved by the agent during restarts.
+This configuration is persistent and preserved by the client during restarts.
 
 > **Note**
 >

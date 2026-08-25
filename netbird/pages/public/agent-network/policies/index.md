@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/agent-network/policies/index.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/agent-network/policies/index.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/agent-network/policies/index.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/agent-network/policies/index.mdx)
 
 # Policies
 
@@ -6,7 +6,7 @@ Policies connect users and agents (source groups) to AI providers, controlling
 which identities can reach which providers and models, with optional limits and
 guardrails.
 
-![agent network llm policy](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/agent-network/policies/agent-network-create-policy.png)
+![agent network llm policy](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/agent-network/policies/agent-network-create-policy.png)
 
 > **Note**
 >
@@ -48,7 +48,7 @@ curl -vk https://sailcloth.netbird.ai/v1/chat/completions \
   }' | jq
 ```
 
-![agent network log](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/agent-network/policies/agent-network-access-log.png)
+![agent network log](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/agent-network/policies/agent-network-access-log.png)
 
 ## More
 

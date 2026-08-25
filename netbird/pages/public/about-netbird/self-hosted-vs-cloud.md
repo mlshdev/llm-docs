@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/about-netbird/self-hosted-vs-cloud.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/about-netbird/self-hosted-vs-cloud.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/about-netbird/self-hosted-vs-cloud.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/about-netbird/self-hosted-vs-cloud.mdx)
 
 # Self-hosted vs. Cloud-hosted NetBird
 
@@ -42,7 +42,7 @@ e.g., control network access.
 When running the self-hosted version, you are responsible for installing and maintaining all the components as well as backing up
 and securing the data. With local user management built into the Management service, this burden is significantly reduced—you no longer need to maintain separate identity provider infrastructure.
 
-The cloud-hosted NetBird only requires you to install the client software (NetBird agent) on your machines and log them in to the network.
+The cloud-hosted NetBird only requires you to install the NetBird client on your machines and log them in to the network.
 The cloud-hosted version is more suitable for organizations that want a hassle-free solution that is easy to set up and maintain.
 
 ## Features
@@ -67,7 +67,7 @@ some additional features that are targeted at business customers and help with n
 NetBird uses relay servers to establish connections between machines when a direct point-to-point connections isn't possible.
 
 When using the cloud-hosted version, you benefit from the geo-distributed relay server clusters that are located in multiple regions
-around the world ensuring that your machines can always establish a connection. The NetBird agents pick the closest relay server.
+around the world ensuring that your machines can always establish a connection. The NetBird clients pick the closest relay server.
 
 When using the self-hosted version, you need to set up your own relay servers. This a complex task and requires additional
 maintenance effort.

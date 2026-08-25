@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/manage/networks/masquerade.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/manage/networks/masquerade.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/networks/masquerade.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/networks/masquerade.mdx)
 
 # Masquerade
 
@@ -175,7 +175,7 @@ The return route points at one peer, so it has to follow whichever routing peer 
 Two steps:
 
 1. **Give the routing peers different metrics**, so the active peer is the same one for every client. With equal metrics each client picks its own by latency, and then no single next hop is correct for all of them. See [High availability](https://docs.netbird.io/manage/networks/how-routing-peers-work#high-availability).
-2. **Make the route's next hop follow the active peer.** Either a shared virtual IP across the peers (VRRP, using `keepalived` on Linux, which needs them on the same subnet), or a router that moves the route when a health check fails. The mechanism lives outside NetBird. Whichever you choose, make its health check reach a destination through the tunnel rather than testing the peer itself: a routing peer whose agent is running and whose WireGuard interface is present can still be unable to forward, and neither NetBird nor an interface check notices.
+2. **Make the route's next hop follow the active peer.** Either a shared virtual IP across the peers (VRRP, using `keepalived` on Linux, which needs them on the same subnet), or a router that moves the route when a health check fails. The mechanism lives outside NetBird. Whichever you choose, make its health check reach a destination through the tunnel rather than testing the peer itself: a routing peer whose daemon is running and whose WireGuard interface is present can still be unable to forward, and neither NetBird nor an interface check notices.
 
 > **Warning**
 >

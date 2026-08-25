@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/selfhosted/identity-providers/managed/duo.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/selfhosted/identity-providers/managed/duo.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/selfhosted/identity-providers/managed/duo.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/selfhosted/identity-providers/managed/duo.mdx)
 
 # Duo SSO with NetBird Self-Hosted
 
@@ -19,12 +19,12 @@ Add Duo as an external IdP directly in the NetBird Management Dashboard. This is
 1. Log in to the [Duo Admin Panel](https://admin.duosecurity.com/)
 2. Navigate to **Applications** → **Application Catalog**
 
-![Application Catalog](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/duo/1_application-catalog.png)
+![Application Catalog](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/identity-providers/managed/duo/1_application-catalog.png)
 
 3. Search for **Generic OIDC Relying Party** (look for the "SSO" label)
 4. Click the **+ Add** button
 
-![Generic OIDC Relying Party](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/duo/2_generic-oidc.png)
+![Generic OIDC Relying Party](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/identity-providers/managed/duo/2_generic-oidc.png)
 
 5. Give the application a name such as `NetBird SSO`
 6. Under **User access**, grant access to users in selected Duo groups or to all users
@@ -33,7 +33,7 @@ Add Duo as an external IdP directly in the NetBird Management Dashboard. This is
    - **Client Secret**
    - **Issuer**
 
-![Duo Metadata](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/duo/3_metadata.png)
+![Duo Metadata](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/identity-providers/managed/duo/3_metadata.png)
 
 8. Keep this tab open and proceed to Step 2
 
@@ -58,7 +58,7 @@ Add Duo as an external IdP directly in the NetBird Management Dashboard. This is
 
 5. **Copy the Redirect URL** that NetBird displays (but don't click **Add Provider** yet)
 
-![Copy redirect URL](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/duo/4_copy-redirect.png)
+![Copy redirect URL](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/identity-providers/managed/duo/4_copy-redirect.png)
 
 ### Step 3: Complete Duo Application Setup
 
@@ -66,7 +66,7 @@ Add Duo as an external IdP directly in the NetBird Management Dashboard. This is
 2. Scroll down to the **Relying Party** section
 3. Under **Sign-In Redirect URLs**, enter the redirect URL you copied from NetBird (e.g., `https://netbird.example.com/oauth2/callback`)
 
-![Configure Redirect URLs](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/duo/5_redirect-urls.png)
+![Configure Redirect URLs](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/identity-providers/managed/duo/5_redirect-urls.png)
 
 > **Note**
 >
@@ -77,7 +77,7 @@ Add Duo as an external IdP directly in the NetBird Management Dashboard. This is
    - **profile** (check the box)
    - **email** (check the box)
 
-![Configure Scopes](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/duo/6_scopes.png)
+![Configure Scopes](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/identity-providers/managed/duo/6_scopes.png)
 
 5. Scroll down and click **Save**
 
@@ -86,7 +86,7 @@ Add Duo as an external IdP directly in the NetBird Management Dashboard. This is
 1. Return to the NetBird tab
 2. Fill in the **Client ID** and **Client Secret** from Duo's Metadata section
 
-![Duo configuration in NetBird](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/duo/7_netbird-config.png)
+![Duo configuration in NetBird](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/identity-providers/managed/duo/7_netbird-config.png)
 
 3. Click **Add Provider**
 

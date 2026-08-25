@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/manage/for-partners/distributor-portal.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/manage/for-partners/distributor-portal.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/for-partners/distributor-portal.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/for-partners/distributor-portal.mdx)
 
 # NetBird Distributor Portal for Distributors
 
@@ -18,7 +18,7 @@ Distributor account
     └── Tenants (the customer's end customers)
 ```
 
-![distributor customers overview](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/for-partners/distributor-portal/distributor-customers-overview.png)
+![distributor customers overview](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/for-partners/distributor-portal/distributor-customers-overview.png)
 
 The Distributor Portal is focused on **commercial enablement** — onboarding customers, assigning plans, and
 consolidating billing. Day-to-day network operations inside each customer account are performed by the customer
@@ -50,7 +50,7 @@ new customer accounts, assign plans, and manage existing customers.
 
 In the 'Customers' section of your dashboard, click the **Add Customer** button to create a new customer account.
 
-![add new customer modal](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/for-partners/distributor-portal/add-new-customer-modal.png)
+![add new customer modal](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/for-partners/distributor-portal/add-new-customer-modal.png)
 
 Provide the following details:
 
@@ -68,7 +68,7 @@ so your customer can immediately start adding tenants once they sign in.
 Right after the customer account is created, the plan selection modal opens automatically so you can pick a
 NetBird plan for them.
 
-![select customer plan](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/for-partners/distributor-portal/select-customer-plan.png)
+![select customer plan](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/for-partners/distributor-portal/select-customer-plan.png)
 
 You can:
 
@@ -98,11 +98,11 @@ If a NetBird account already exists for the customer's domain, the customer is a
 as a **Pending invitation** rather than an active customer. The plan and tenants columns stay empty and the
 Edit button remains disabled until the customer responds.
 
-![customer pending invitation](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/for-partners/distributor-portal/customer-pending-invitation.png)
+![customer pending invitation](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/for-partners/distributor-portal/customer-pending-invitation.png)
 
 When the account owner next logs in to their NetBird dashboard, they will see this dialog:
 
-![distributor access request grant or deny](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/for-partners/distributor-portal/distributor-grant-or-deny-access.png)
+![distributor access request grant or deny](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/for-partners/distributor-portal/distributor-grant-or-deny-access.png)
 
 From there the account owner can:
 
@@ -133,7 +133,7 @@ different plan. The customer's domain is read-only after creation.
 To remove a customer from your distributor organization, open the row's overflow menu (`⋮`) and choose
 **Unlink**.
 
-![unlink customer from distributor](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/for-partners/distributor-portal/unlink-customer.png)
+![unlink customer from distributor](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/for-partners/distributor-portal/unlink-customer.png)
 
 > **Warning**
 >
@@ -159,9 +159,9 @@ once per cycle for the total across every active customer.
 
 To view and export your invoices, click **Invoices** on the Customers page or open **Settings → Invoices**.
 
-![distributor invoices overview](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/for-partners/distributor-portal/distributor-invoices-overview.png)
+![distributor invoices overview](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/for-partners/distributor-portal/distributor-invoices-overview.png)
 
 Each row in the table represents an invoice. Use the row's overflow menu (`⋮`) to download the invoice as a
 PDF or export the customer breakdown as a CSV.
 
-![download distributor invoice as PDF or CSV](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/for-partners/distributor-portal/distributor-download-invoice.png)
+![download distributor invoice as PDF or CSV](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/for-partners/distributor-portal/distributor-download-invoice.png)

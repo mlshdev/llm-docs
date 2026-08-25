@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/manage/networks/index.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/manage/networks/index.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/networks/index.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/networks/index.mdx)
 
 # Networks
 
@@ -16,7 +16,7 @@ The common case is **VPN-to-Site**: your laptop reaches into a remote network an
 
 If you remember one thing, remember this: **a NetBird Network is a map of part of your infrastructure, drawn onto your overlay network.** The **resources** are the destinations, the **access policies** are the gatekeepers that decide who may pass, and the **routing peers** are the roads that carry traffic to each destination.
 
-![A NetBird client reaching resources on a private network through a routing peer](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/networks/netbird-network-routes.png)
+![A NetBird client reaching resources on a private network through a routing peer](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/networks/netbird-network-routes.png)
 
 *Left to right: a peer in a source group clears an access policy, reaches the routing peer, and connects to a resource behind it.*
 
@@ -41,7 +41,7 @@ For Zero Trust least privilege, **prefer single-host `/32` resources over broad 
 
 Resources can be collected into a **resource group**. When an access policy's destination is a group, it applies to every resource in that group. That is how one policy can cover several apps at once.
 
-![A Network's resource list showing addresses, resource groups, and policies](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/networks/resource-list.png)
+![A Network's resource list showing addresses, resource groups, and policies](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/networks/resource-list.png)
 
 #### Domain resources
 
@@ -111,21 +111,21 @@ A remote engineer in the `Development` group needs to reach two apps in the Berl
 1. **Install the routing peer.** On a host inside the office network, install the NetBird client and register it with a [setup key](https://docs.netbird.io/manage/peers/register-machines-using-setup-keys).
 2. **Create the Network.** Go to **Networks**, add a Network named `Berlin Office`.
 
-![Creating the Berlin Office Network in the dashboard](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/networks/add-network.png)
+![Creating the Berlin Office Network in the dashboard](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/networks/add-network.png)
 
 3. **Add the wiki as a `/32` resource.** Add a resource named `Internal Wiki` with the address `10.10.0.5/32`, and assign it to an `Internal Apps` resource group. The Add Resource modal has two tabs: **Resource** (name, address, groups) and **Access Control** (policies).
 
-![Adding the Internal Wiki resource (10.10.0.5/32) to the Internal Apps group](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/networks/add-resource.png)
+![Adding the Internal Wiki resource (10.10.0.5/32) to the Internal Apps group](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/networks/add-resource.png)
 
 4. **Write the policy.** Create one access policy with source `Development` and destination `Internal Apps`, allowing TCP on port 443.
 
-![An access policy allowing the Development group to reach the Internal Apps group on TCP 443](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/networks/add-policy.png)
+![An access policy allowing the Development group to reach the Internal Apps group on TCP 443](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/networks/add-policy.png)
 
 5. **Add the dashboard as a domain resource.** Add `grafana.berlin.internal` and assign it to the same `Internal Apps` group, so it's covered by the policy you just created. Because it's an internal-only name, the routing peer must be able to resolve it. See [Internal DNS](https://docs.netbird.io/manage/dns/internal-dns-servers#domain-resources-and-routing-peer-dns).
 
 6. **Add the routing peer.** Assign the office host to the `Berlin Office` Network as its routing peer.
 
-![Adding the office host as a routing peer for the Berlin Office Network](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/networks/add-routing-peer.png)
+![Adding the office host as a routing peer for the Berlin Office Network](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/networks/add-routing-peer.png)
 
 7. **Verify.** On the engineer's laptop, confirm the Network is active and reach the apps:
 

@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/selfhosted/identity-providers/managed/okta.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/selfhosted/identity-providers/managed/okta.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/selfhosted/identity-providers/managed/okta.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/selfhosted/identity-providers/managed/okta.mdx)
 
 # Okta SSO with NetBird Self-Hosted
 
@@ -19,13 +19,13 @@ Add Okta as an external IdP directly in the NetBird Management Dashboard. This i
 2. Click **Applications** → **Applications**
 3. Click **Create App Integration**
 
-![Create app integration](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/okta/1_create-app-integration-okta.png)
+![Create app integration](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/identity-providers/managed/okta/1_create-app-integration-okta.png)
 
 4. Select:
    - **Sign-in method**: `OIDC - OpenID Connect`
    - **Application type**: `Web Application`
 
-![OIDC Web Application](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/okta/2_oidc-web-app-okta.png)
+![OIDC Web Application](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/identity-providers/managed/okta/2_oidc-web-app-okta.png)
 
 5. Click **Next**
 6. Fill in:
@@ -37,7 +37,7 @@ Add Okta as an external IdP directly in the NetBird Management Dashboard. This i
    - **Limit access to selected groups** (for production)
    - **Skip group assignment for now** (assign later)
 
-![Assignments](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/okta/3_assignments-okta.png)
+![Assignments](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/identity-providers/managed/okta/3_assignments-okta.png)
 
 8. **Don't click Save yet** — keep this tab open and proceed to Step 2
 
@@ -58,7 +58,7 @@ Add Okta as an external IdP directly in the NetBird Management Dashboard. This i
 
 5. **Copy the Redirect URL** that NetBird displays (but don't click **Add Provider** yet)
 
-![Copy redirect URL](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/okta/4_redirect-url-okta.png)
+![Copy redirect URL](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/identity-providers/managed/okta/4_redirect-url-okta.png)
 
 ### Step 3: Complete Okta Application Setup
 
@@ -66,19 +66,19 @@ Add Okta as an external IdP directly in the NetBird Management Dashboard. This i
 2. In the **Sign-in redirect URIs** field, paste the redirect URL you copied from NetBird
    - *(Optional)* In the **Sign-out redirect URIs** field, add `https://netbird.example.com/oauth2/logout/callback` (replace `netbird.example.com` with your NetBird dashboard domain) so logout redirects back to NetBird cleanly
 
-![Sign-in redirect URIs](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/okta/5_sign-in-uri-okta.png)
+![Sign-in redirect URIs](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/identity-providers/managed/okta/5_sign-in-uri-okta.png)
 
 3. Click **Save**
 4. Note the **Client ID** and **Client Secret** — you'll need these for Step 4
 
-![Client ID](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/okta/6_client-id-okta.png)
+![Client ID](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/identity-providers/managed/okta/6_client-id-okta.png)
 
 ### Step 4: Complete NetBird Setup
 
 1. Return to the NetBird tab
 2. Fill in the **Client ID** and **Client Secret** from Step 3
 
-![Complete configuration](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/okta/7_complte-config-okta.png)
+![Complete configuration](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/identity-providers/managed/okta/7_complte-config-okta.png)
 
 3. Click **Add Provider**
 
@@ -107,7 +107,7 @@ This method works with Okta's org authorization server and is the simplest appro
    - **Filter**: Select **Matches regex** and enter `.*` (to include all groups)
 7. Click **Save**
 
-![Groups claim configuration](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/okta/8_add-groups-claim.png)
+![Groups claim configuration](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/identity-providers/managed/okta/8_add-groups-claim.png)
 
 #### Method 2: Custom Authorization Server
 
@@ -124,7 +124,7 @@ If you're using a custom authorization server (required for access token claims)
    - **Filter**: Select **Matches regex** and enter `.*`
 6. Click **Create**
 
-![Custom authorization server groups claim configuration](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/okta/9_add-groups-claim-api.png)
+![Custom authorization server groups claim configuration](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/identity-providers/managed/okta/9_add-groups-claim-api.png)
 
 > **Note**
 >

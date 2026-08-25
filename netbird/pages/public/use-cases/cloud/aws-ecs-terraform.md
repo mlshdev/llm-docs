@@ -1,10 +1,10 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/use-cases/cloud/aws-ecs-terraform.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/use-cases/cloud/aws-ecs-terraform.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/use-cases/cloud/aws-ecs-terraform.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/use-cases/cloud/aws-ecs-terraform.mdx)
 
 # Examples
 
 ## NetBird Client on AWS ECS (Terraform)
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/use-cases/examples/wiretrustee-on-aws-ecs.png)
+![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/use-cases/examples/wiretrustee-on-aws-ecs.png)
 
 A common way to run containers in the AWS cloud is to use Elastic Container Service (ECS).
 ECS is a fully managed container orchestration service that makes it easy to deploy, manage, and scale containerized applications.
@@ -132,4 +132,4 @@ docker run --rm --name PEER_NAME --hostname PEER_NAME --cap-add=NET_ADMIN --cap-
 
 That is it! Enjoy using NetBird.
 
-If you would like to learn how to run NetBird Client as an ECS agent on AWS, please refer to [this guide](#netbird-client-on-aws-ecs-terraform).
+If you would like to learn how to run the NetBird client on AWS ECS, please refer to [this guide](#netbird-client-on-aws-ecs-terraform).

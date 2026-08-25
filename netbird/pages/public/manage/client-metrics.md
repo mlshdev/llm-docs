@@ -1,17 +1,19 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/manage/client-metrics.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/manage/client-metrics.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/client-metrics.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/client-metrics.mdx)
 
 # Client Metrics
 
 Client metrics allow you to collect performance data from your NetBird clients, such as connection timing,
 sync duration, and login latency. This data helps identify connectivity issues and optimize your deployment.
 
-When enabled, clients periodically push metrics to a collection server.
+Metrics push is disabled by default. When enabled, clients periodically push metrics to a collection server.
+Clients always collect these metrics locally and include them in [debug bundles](https://docs.netbird.io/help/troubleshooting-client#debug-bundle)
+regardless of this setting. The setting only controls whether the metrics are pushed.
 
 ## What is collected
 
-- **Connection stages** — Time taken for each stage of a peer connection: signaling, connection establishment, and WireGuard handshake.
-- **Sync duration** — How long it takes to process management server sync messages.
-- **Login duration** — How long the login to the management server takes, including success or failure status.
+- **Connection stages**: Time taken for each stage of a peer connection, covering signaling, connection establishment, and WireGuard handshake.
+- **Sync duration**: How long it takes to process management server sync messages, including individual processing phases.
+- **Login duration**: How long the login to the management server takes, including success or failure status.
 
 Each metric includes metadata such as the client version, operating system, architecture, and deployment type (cloud or self-hosted). Peer identifiers are hashed before transmission.
 
@@ -24,7 +26,14 @@ Each metric includes metadata such as the client version, operating system, arch
 1. Navigate to **Settings** > **Metrics**.
 2. Toggle **Share performance metrics** to enable or disable metrics push for all peers in your account.
 
-When enabled, all connected clients will start pushing metrics on their next sync with the management server.
+Changing the toggle requires the **Owner** or **Admin** role. For other roles the toggle is disabled.
+Connected clients apply the change within seconds through a management update; offline clients pick it up on their
+next login. Enabling or disabling the setting is recorded in the account activity log.
+
+> **Note**
+>
+> Controlling metrics push from the dashboard requires client version `0.74.0` or later. Older clients ignore the
+> account setting and only push metrics when `NB_METRICS_PUSH_ENABLED=true` is set (supported since version `0.67.0`).
 
 ## Environment variable override
 
@@ -39,4 +48,7 @@ The `NB_METRICS_PUSH_ENABLED` environment variable on the client takes precedenc
 > **Note**
 >
 > When `NB_METRICS_PUSH_ENABLED` is explicitly set on the client, changes to the dashboard toggle will have no effect on that client.
-> Setting it to `false` is an explicit opt-out from metrics collection for that client.
+> Setting it to `false` is an explicit opt-out from metrics push for that client.
+
+You can additionally set `NB_METRICS_INTERVAL` to a duration value (e.g., `30m`, `1h`) to override how often metrics
+are pushed.

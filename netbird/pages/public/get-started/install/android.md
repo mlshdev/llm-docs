@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/get-started/install/android.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/get-started/install/android.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/get-started/install/android.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/get-started/install/android.mdx)
 
 # Install NetBird on an Android
 
@@ -8,7 +8,7 @@ The Android supports mobile devices, tablets and [Android TV](https://docs.netbi
 
 NetBird has an official Android application that you can download at Google Play Store:
 
-[![playstore](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/get-started/android/google-play-badge.png)](https://play.google.com/store/apps/details?id=io.netbird.client)
+[![playstore](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/get-started/android/google-play-badge.png)](https://play.google.com/store/apps/details?id=io.netbird.client)
 
 APK releases are also available to install directly on your Android device via the [NetBird Android GitHub repository](https://github.com/netbirdio/android-client/releases).
 
@@ -18,11 +18,11 @@ APK releases are also available to install directly on your Android device via t
 
 Upon first launch, NetBird will inform you that it's using the default managemet server.
 
-![firstinstall](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/get-started/android/first-install-dialog.png)
+![firstinstall](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/get-started/android/first-install-dialog.png)
 
 Select 'Continue' to ackownledge and you'll be greeted with the app's main screen.
 
-![mainscreen](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/get-started/android/main-screen.png)
+![mainscreen](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/get-started/android/main-screen.png)
 
 ### Management Server Configuration
 
@@ -32,17 +32,17 @@ Select 'Continue' to ackownledge and you'll be greeted with the app's main scree
 
 Select the hamburger menu on the top left of the main screen and navigate to the 'Change Server' menu.
 
-![changeserver](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/get-started/android/change-server-menu-item.png)
+![changeserver](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/get-started/android/change-server-menu-item.png)
 
 Changing servers erases the device's current NetBird config, so you'll need to confirm the action before proceeding:
 
-![confirmeraseconfig](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/get-started/android/confirm-erase-config.png)
+![confirmeraseconfig](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/get-started/android/confirm-erase-config.png)
 
 Enter your management server endpoint. For cloud users, this is `https://api.netbird.io:443`. For self-hosted users, it's usually `https://your_management_server_url:443`, but you can refer to the `exposedAddress` field in your `config.yaml` (or `management.json` for older multi-container setups) if you're unsure.
 
 If enrolling the device with a setup key, select '+ Add this device with a setup key' and enter your setup key. Select 'change' to apply your new management server config, and if successful you'll see the following:
 
-![serverchanged](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/get-started/android/server-changed.png)
+![serverchanged](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/get-started/android/server-changed.png)
 
 You're now ready to connect to your Netbird network!
 
@@ -50,7 +50,7 @@ You're now ready to connect to your Netbird network!
 
 Select the NetBird logo button to connect. The app will request permission to create a VPN connection:
 
-![vpnconnectionrequest](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/get-started/android/vpn-connection-request.png)
+![vpnconnectionrequest](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/get-started/android/vpn-connection-request.png)
 
 Select 'OK'. If you didn't enter a setup key in the 'Change Server' menu, then you'll need to authenticate with your SSO provider. NetBird will open a browser window where you'll be instructed to sign in to your SSO provider.
 

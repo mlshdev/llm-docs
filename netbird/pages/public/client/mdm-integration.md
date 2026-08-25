@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/client/mdm-integration.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/client/mdm-integration.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/client/mdm-integration.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/client/mdm-integration.mdx)
 
 # MDM Integration
 
@@ -6,7 +6,7 @@ NetBird's client honors policies pushed by your Mobile Device Management
 (MDM) channel, so an administrator can enforce configuration across a
 fleet of devices instead of touching each machine. On every supported
 platform the daemon reads from the **OS-native managed-configuration
-store** that your MDM already writes to. No agent of ours sits between
+store** that your MDM already writes to. No extra NetBird software sits between
 you and the MDM provider; whatever you can push to that store (manually,
 via Group Policy, via a Configuration Profile, via your MDM console)
 becomes effective NetBird policy.
@@ -91,6 +91,12 @@ PascalCase variant in the Group Policy Editor — both are recognized.
 - `disableUpdateSettings` keeps the Settings view in the GUI visible
   (so users can inspect current values) but rejects every attempt to
   save changes. Use it for read-only fleets.
+- `disableNetworks` combined with an exit node that has Auto Apply
+  enabled pins a device to that exit node: the exit node applies
+  automatically and the daemon rejects every attempt to deselect it.
+  See [Enforcing the Exit Node on Managed Devices](https://docs.netbird.io/use-cases/remote-access/exit-nodes#enforcing-the-exit-node-on-managed-devices)
+  for the full recipe, including why the policy must be deployed
+  before users touch the exit node switch.
 - `splitTunnelMode` and `splitTunnelApps` are wired into Android's
   `VpnService.Builder.addAllowedApplication()` flow; on Windows and
   macOS the daemon parses the keys but ignores them. They are safe to

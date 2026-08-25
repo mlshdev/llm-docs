@@ -1,8 +1,8 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/get-started/install/opnsense.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/get-started/install/opnsense.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/get-started/install/opnsense.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/get-started/install/opnsense.mdx)
 
 # OPNsense Installation
 
-The NetBird client (agent) allows a peer to join a pre-existing NetBird deployment. If a NetBird deployment is not yet available,
+The NetBird client allows a peer to join a pre-existing NetBird deployment. If a NetBird deployment is not yet available,
 there are both managed and [self-hosted](https://docs.netbird.io/selfhosted/selfhosted-quickstart) options available.
 
 [YouTube video AK0Ct-ULFKg](https://www.youtube.com/watch?v=AK0Ct-ULFKg\&t=669s)
@@ -44,7 +44,7 @@ Fill out the authentication form with the following values and click `Save`:
 - **Management URL**: Default is `https://api.netbird.io:443`. If self-hosting, enter your custom management server URL.
 - **Setup Key**: Paste the setup key from your NetBird account.
 
-![authentication](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/get-started/opnsense/authentication.png)
+![authentication](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/get-started/opnsense/authentication.png)
 
 ### Verify Connection Status
 
@@ -53,7 +53,7 @@ Access it via `VPN` > `NetBird` > `Status` in the OPNsense menu.
 
 Use this section for diagnostics and troubleshooting common connection or setup issues.
 
-![connection status](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/get-started/opnsense/status.png)
+![connection status](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/get-started/opnsense/status.png)
 
 ### Assign NetBird interface
 
@@ -63,11 +63,11 @@ After installation, a new interface named `wt0` will be available but unassigned
 - **Device**: `wt0`
 - **Description**: `NetBird`
 
-![interfaceAssignment](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/get-started/opnsense/interface_assignment.png)
+![interfaceAssignment](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/get-started/opnsense/interface_assignment.png)
 
 Click `Add` to assign the interface.
 
-![interfaceAssignment](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/get-started/opnsense/new_interface.png)
+![interfaceAssignment](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/get-started/opnsense/new_interface.png)
 
 ### Enable the NetBird interface
 
@@ -77,7 +77,7 @@ the following options and click `Save`, then `Apply changes` to activate the int
 - **Enable**: `✓ Enable Interface`
 - **Lock**: `✓ Prevent interface removal`
 
-![enableInterface](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/get-started/opnsense/enable_interface.png)
+![enableInterface](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/get-started/opnsense/enable_interface.png)
 
 > **Note**
 >
@@ -103,7 +103,7 @@ This ensures traffic flows freely, while NetBird’s own policies (ACLs) govern 
 4. Click `Save`, then `Apply changes`.
 5. Ensure this rule is at the top of the `NetBird` rules list so it isn’t shadowed by other rules.
 
-![firewallRules](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/get-started/opnsense/firewall_rules.png)
+![firewallRules](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/get-started/opnsense/firewall_rules.png)
 
 ### Config for Troubleshooting Relayed Connections
 

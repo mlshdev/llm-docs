@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/manage/settings/plans-and-billing.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/manage/settings/plans-and-billing.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/settings/plans-and-billing.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/settings/plans-and-billing.mdx)
 
 # Plans and billing
 
@@ -13,7 +13,7 @@ NetBird offers diverse plans to accommodate various networking needs, ensuring s
 
 - **Business Plan:** At **€12 per user per month**, the Business Plan offers enhanced network security with a Zero Trust approach. It supports unlimited users and includes features like device approvals and integrations (MDM and EDR) for comprehensive control, device posture checks and activity events streaming, making it an excellent choice for organizations seeking advanced security solutions.
 
-![pricing-overview](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/settings/pricing-overview.png)
+![pricing-overview](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/settings/pricing-overview.png)
 
 Details can be found on our [pricing page](https://netbird.io/pricing).
 
@@ -32,7 +32,7 @@ If the next month only 70 connect, you pay for 70 users.
 
 Refer to our pricing calculator on the [pricing page](https://netbird.io/pricing#calculator) to estimate your monthly costs based on your expected usage.
 
-![pricing-calculator](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/settings/plans-and-billing/calculator.png)
+![pricing-calculator](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/settings/plans-and-billing/calculator.png)
 
 ## Machine-based Usage
 
@@ -59,19 +59,25 @@ automatically adjust the machine costs as detailed in the following sections.
 
 To start or change your current plan, navigate to `Settings` > `Plans & Billing` and choose the plan you wish to upgrade or downgrade to.
 
-![chose-plan](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/settings/plans-and-billing/chose-plan.png)
+> **Note**
+>
+> The `Plans & Billing` tab is available on NetBird Cloud only and is shown to users with billing permissions, such as the account `Owner`, `Admin`s, and `Billing Admin`s. See [user roles](https://docs.netbird.io/manage/team/user-roles) for details.
+
+If your account is eligible for a free trial, the `Plans & Billing` tab also shows a `Start 14-Day Free Trial` button that temporarily unlocks NetBird's full set of features and integrations. After the trial ends, you return to your previous plan unless you choose to upgrade. Only the account `Owner` or an `Admin` can start a free trial: `Billing Admin`s can see the `Plans & Billing` tab, but the trial button is disabled for them.
+
+![chose-plan](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/settings/plans-and-billing/chose-plan.png)
 
 **Payment Information**
 
 Next, you'll be directed to enter your payment information. Available payment options currently include credit cards, Google Pay, and Link.
 
-![payment-information](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/settings/payment-information.png)
+![payment-information](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/settings/payment-information.png)
 
 **Confirmation and Billing Cycle**
 
 After successfully submitting your payment information, the updated version of your plan will be reflected in your account.
 
-![plans-billing-overview](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/manage/settings/plans-and-billing/plans-billing-overview.png)
+![plans-billing-overview](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/settings/plans-and-billing/plans-billing-overview.png)
 
 > **Note**
 >
@@ -79,11 +85,35 @@ After successfully submitting your payment information, the updated version of y
 
 ## Changing a Subscription
 
-Based on your current plan, you have the flexibility to upgrade or downgrade at any time as your needs change.
+Based on your current plan, you have the flexibility to upgrade or downgrade as your needs change. After changing your plan, you need to wait 48 hours from the last update before you can change it again.
 
 > **Note**
 >
 > Your subscription cycle starts on the first day of your original subscription. If you adjust your plan during the billing cycle, and since billing occurs at the end of the subscription month, you will be charged for the plan you are on at the end of the billing cycle.
+
+## Updating Billing Information and Payment Method
+
+> **Note**
+>
+> This is a NetBird Cloud feature. Self-hosted deployments are not billed through the Stripe billing portal.
+
+To update your payment method or billing details, navigate to `Settings` > `Plans & Billing` and click `Manage Plan`.
+
+![manage-plan](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/settings/plans-and-billing/manage-plan.png)
+
+You will be redirected to the Stripe billing portal, where you can:
+
+- Add or replace a payment method, and set which one is used by default.
+- Click `Update information` to edit your company name, billing address, billing email, and tax information (such as your VAT ID).
+- Review your invoice history and download past invoices.
+
+> **Note**
+>
+> Changes to your billing details apply to invoices issued after the update. Existing invoices are not modified retroactively.
+
+## Viewing Invoices
+
+In addition to the Stripe billing portal, you can view your invoices directly in the NetBird dashboard. Navigate to `Settings` > `Invoices` to see your paid invoices and download them as PDF or CSV files. Invoices are created at the end of each billing period; PDF downloads redirect through Stripe, while CSV files download directly from the dashboard. For MSPs and distributors, the `Type` column distinguishes invoices for your own account from those for your tenants or customers. The `Invoices` tab is not shown for accounts managed by an MSP.
 
 ## Deleting an Account
 

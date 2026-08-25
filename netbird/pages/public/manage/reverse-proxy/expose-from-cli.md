@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/manage/reverse-proxy/expose-from-cli.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/manage/reverse-proxy/expose-from-cli.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/reverse-proxy/expose-from-cli.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/reverse-proxy/expose-from-cli.mdx)
 
 # Expose from CLI
 
@@ -13,6 +13,10 @@ Before using `netbird expose`, make sure:
 - The NetBird client is connected — run `netbird up` first.
 - The **Peer Expose** feature is enabled by your account administrator (see [Enable peer expose](#enable-peer-expose) below).
 - If peer group restrictions are configured, your peer must be in one of the allowed groups.
+
+> **Note**
+>
+> `netbird expose` requires inbound connections: if [Block Inbound Connections](https://docs.netbird.io/client/block-inbound-connections) is enabled on the peer, the command fails until you disable that setting.
 
 ## Enable peer expose
 

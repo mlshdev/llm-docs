@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/selfhosted/identity-providers/managed/auth0.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/selfhosted/identity-providers/managed/auth0.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/selfhosted/identity-providers/managed/auth0.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/selfhosted/identity-providers/managed/auth0.mdx)
 
 # Auth0 SSO with NetBird Self-Hosted
 
@@ -19,13 +19,13 @@ Add Auth0 as an external IdP directly in the NetBird Management Dashboard. This 
 2. Go to **Applications** → **Applications**
 3. Click **Create Application**
 
-![Create application](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/auth0/1_create-app-auth0.png)
+![Create application](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/identity-providers/managed/auth0/1_create-app-auth0.png)
 
 4. Fill in:
    - **Name**: `NetBird`
    - **Application type**: `Regular Web Application`
 
-![Create web application](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/auth0/2_create-web-app-auth0.png)
+![Create web application](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/identity-providers/managed/auth0/2_create-web-app-auth0.png)
 
 5. Click Create
 
@@ -54,11 +54,11 @@ Add Auth0 as an external IdP directly in the NetBird Management Dashboard. This 
    - *(Optional)* Under **Allowed Logout URLs**, add `https://netbird.example.com/oauth2/logout/callback` (replace `netbird.example.com` with your NetBird dashboard domain) so logout redirects back to NetBird cleanly
 4. Click **Save Changes**
 
-![Add and save callback URL](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/auth0/3_add-save-callback-url-auth0.png)
+![Add and save callback URL](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/identity-providers/managed/auth0/3_add-save-callback-url-auth0.png)
 
 5. Note the **Client ID**, **Client Secret**, and **Domain** (e.g., `your-tenant.auth0.com`) at the top of the setting tab — you'll need these for Step 4
 
-![Copy client secret and IDs](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/auth0/4_copy-client-secret-ids-auth0.png)
+![Copy client secret and IDs](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/identity-providers/managed/auth0/4_copy-client-secret-ids-auth0.png)
 
 ### Step 4: Complete NetBird Setup
 
@@ -66,7 +66,7 @@ Add Auth0 as an external IdP directly in the NetBird Management Dashboard. This 
 2. Fill in the **Client ID** and **Client Secret** from Step 3
 3. Update the **Issuer** field with your Auth0 domain if needed (e.g., `https://your-tenant.auth0.com/`)
 
-![NetBird IdP configuration](https://raw.githubusercontent.com/netbirdio/docs/abb8d4607fd4a1260c80bcdad1493e92941e1837/public/docs-static/img/selfhosted/identity-providers/managed/auth0/5_netbird-idp-config-auth0.png)
+![NetBird IdP configuration](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/identity-providers/managed/auth0/5_netbird-idp-config-auth0.png)
 
 4. Click **Add Provider**
 

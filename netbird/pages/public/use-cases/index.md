@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.77.0: [netbirdio/docs@abb8d4607fd4a1260c80bcdad1493e92941e1837:src/pages/use-cases/index.mdx](https://github.com/netbirdio/docs/blob/abb8d4607fd4a1260c80bcdad1493e92941e1837/src/pages/use-cases/index.mdx)
+> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/use-cases/index.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/use-cases/index.mdx)
 
 # Use Cases
 
@@ -8,16 +8,17 @@ You know what you want to achieve; this page finds the guide that gets you there
 
 ### Connect to remote networks and devices
 
-| I want to...                                            | Guide                                                                                                                    |
-| ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| Understand which remote access scenario I need          | [Remote Access overview](https://docs.netbird.io/use-cases/remote-access)                                                |
-| Connect two networks (offices, homes, or clouds)        | [Site-to-Site with Networks](https://docs.netbird.io/use-cases/remote-access/site-to-site)                               |
-| Let clientless devices reach my NetBird peers           | [Site-to-VPN](https://docs.netbird.io/use-cases/remote-access/site-to-vpn)                                               |
-| Connect cloud workloads to on-premise services          | [Cloud to On-Premise](https://docs.netbird.io/use-cases/remote-access/cloud-to-on-premise)                               |
-| Reach my NAS and home devices from anywhere             | [Access Home Devices](https://docs.netbird.io/use-cases/remote-access/access-home-devices)                               |
-| Access services running on the routing peer itself      | [Reach Services on the Routing Peer](https://docs.netbird.io/use-cases/remote-access/reach-services-on-the-routing-peer) |
-| Route all my internet traffic through one peer          | [Exit Nodes](https://docs.netbird.io/use-cases/remote-access/exit-nodes)                                                 |
-| Reach Active Directory and Windows file shares remotely | [Active Directory & Windows File Shares](https://docs.netbird.io/use-cases/remote-access/active-directory)               |
+| I want to...                                             | Guide                                                                                                                    |
+| -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| Understand which remote access scenario I need           | [Remote Access overview](https://docs.netbird.io/use-cases/remote-access)                                                |
+| Connect two networks (offices, homes, or clouds)         | [Site-to-Site with Networks](https://docs.netbird.io/use-cases/remote-access/site-to-site)                               |
+| Let clientless devices reach my NetBird peers            | [Site-to-VPN](https://docs.netbird.io/use-cases/remote-access/site-to-vpn)                                               |
+| Connect cloud workloads to on-premise services           | [Cloud to On-Premise](https://docs.netbird.io/use-cases/remote-access/cloud-to-on-premise)                               |
+| Reach my NAS and home devices from anywhere              | [Access Home Devices](https://docs.netbird.io/use-cases/remote-access/access-home-devices)                               |
+| Access services running on the routing peer itself       | [Reach Services on the Routing Peer](https://docs.netbird.io/use-cases/remote-access/reach-services-on-the-routing-peer) |
+| Route all my internet traffic through one peer           | [Exit Nodes](https://docs.netbird.io/use-cases/remote-access/exit-nodes)                                                 |
+| Reach Active Directory and Windows file shares remotely  | [Active Directory & Windows File Shares](https://docs.netbird.io/use-cases/remote-access/active-directory)               |
+| Give third parties RDP access without installing NetBird | [Clientless RDP for Third Parties](https://docs.netbird.io/use-cases/remote-access/clientless-rdp)                       |
 
 ### Deploy NetBird in the cloud
 
