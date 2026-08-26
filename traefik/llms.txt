@@ -1,8 +1,8 @@
-# Traefik Proxy v3.7.11
+# Traefik Proxy v3.7.12
 
-> Documentation generated from the latest stable release of [traefik/traefik](https://github.com/traefik/traefik) and pinned to immutable source commit `faa1eb590646aed94e561e24a59be0c47353ae95`.
+> Documentation generated from the latest stable release of [traefik/traefik](https://github.com/traefik/traefik) and pinned to immutable source commit `e8f398ee30ca5643158ea9094b701b8eae9849e5`.
 
-- [Full documentation](llms-full.txt): Complete normalized corpus for Traefik Proxy v3.7.11.
+- [Full documentation](llms-full.txt): Complete normalized corpus for Traefik Proxy v3.7.12.
 - [Provenance manifest](manifest.json): Release, commit, document count, and generation notes.
 - Pages follow docs/mkdocs.yml navigation order from the immutable release tag.
 - MkDocs include fragments are expanded; repeated commercial callouts and non-text assets are omitted.
@@ -176,7 +176,7 @@
 - [Request Path](pages/security/request-path.md): Source `docs/content/security/request-path.md`.
 - [Content-Length](pages/security/content-length.md): Source `docs/content/security/content-length.md`.
 - [HTTP/2 Header Memory](pages/security/http2-header-memory.md): Source `docs/content/security/http2-header-memory.md`.
-- [Headers with Underscores](pages/security/header-underscores.md): Source `docs/content/security/header-underscores.md`.
+- [Headers with Aliasing Names](pages/security/header-aliases.md): Source `docs/content/security/header-aliases.md`.
 - [Traefik in Multi-Tenant Kubernetes Clusters](pages/security/multi-tenant-kubernetes.md): Source `docs/content/security/multi-tenant-kubernetes.md`.
 - [Releases](pages/deprecation/releases.md): Source `docs/content/deprecation/releases.md`.
 - [Feature Deprecation Notices](pages/deprecation/features.md): Source `docs/content/deprecation/features.md`.
@@ -187,6 +187,7 @@
 - [Traefik Submitting Issues Documentation](pages/contributing/submitting-issues.md): Source `docs/content/contributing/submitting-issues.md`.
 - [Traefik Pull Requests Documentation](pages/contributing/submitting-pull-requests.md): Source `docs/content/contributing/submitting-pull-requests.md`.
 - [Traefik Security Documentation](pages/contributing/submitting-security-issues.md): Source `docs/content/contributing/submitting-security-issues.md`.
+- [Traefik Security Decisions](pages/contributing/security-decisions.md): Source `docs/content/contributing/security-decisions.md`.
 - [Traefik Building & Testing Documentation](pages/contributing/building-testing.md): Source `docs/content/contributing/building-testing.md`.
 - [Traefik Contribution Documentation](pages/contributing/documentation.md): Source `docs/content/contributing/documentation.md`.
 - [Traefik Data Collection Documentation](pages/contributing/data-collection.md): Source `docs/content/contributing/data-collection.md`.

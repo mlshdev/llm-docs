@@ -1,4 +1,4 @@
-> Release-pinned source for Traefik Proxy v3.7.11: [docs/content/deprecation/releases.md](https://github.com/traefik/traefik/blob/faa1eb590646aed94e561e24a59be0c47353ae95/docs/content/deprecation/releases.md)
+> Release-pinned source for Traefik Proxy v3.7.12: [docs/content/deprecation/releases.md](https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/deprecation/releases.md)
 
 # Releases
 
@@ -9,14 +9,14 @@ Below is a non-exhaustive list of versions and their maintenance status:
 | Version | Release Date | Active Support     | Security Support   |
 | ------- | ------------ | ------------------ | ------------------ |
 | 3.7     | May 05, 2026 | Yes                | Yes                |
-| 3.6     | Nov 07, 2025 | Ended May 07, 2026 | Ends Aug 16, 2026  |
+| 3.6     | Nov 07, 2025 | Ended May 07, 2026 | Ended Aug 16, 2026 |
 | 3.5     | Jul 23, 2025 | Ended Nov 07, 2025 | No                 |
 | 3.4     | May 05, 2025 | Ended Jul 23, 2025 | No                 |
 | 3.3     | Jan 06, 2025 | Ended May 05, 2025 | No                 |
 | 3.2     | Oct 28, 2024 | Ended Jan 06, 2025 | No                 |
 | 3.1     | Jul 15, 2024 | Ended Oct 28, 2024 | No                 |
 | 3.0     | Apr 29, 2024 | Ended Jul 15, 2024 | No                 |
-| 2.11    | Feb 12, 2024 | Ended Apr 29, 2025 | Ended Feb 01, 2026 |
+| 2.11    | Feb 12, 2024 | Ended Apr 29, 2025 | Ends Sept 07, 2026 |
 
 > **Active Support / Security Support**
 >

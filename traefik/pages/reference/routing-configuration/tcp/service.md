@@ -1,4 +1,4 @@
-> Release-pinned source for Traefik Proxy v3.7.11: [docs/content/reference/routing-configuration/tcp/service.md](https://github.com/traefik/traefik/blob/faa1eb590646aed94e561e24a59be0c47353ae95/docs/content/reference/routing-configuration/tcp/service.md)
+> Release-pinned source for Traefik Proxy v3.7.12: [docs/content/reference/routing-configuration/tcp/service.md](https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/tcp/service.md)
 
 ## General
 
@@ -111,6 +111,9 @@ This strategy is only available to load balance between [services](https://doc.t
 
 > **Supported Providers**
 > This strategy can be defined currently with the [File provider](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/others/file).
+> **Weights**
+> A weight must be a non-negative integer, and a `0` weight takes the child service out of the rotation.
+> A weighted service declaring a negative weight is disabled, and the routers referencing it are not created.
 > **Structured (YAML)**
 
 ```yaml

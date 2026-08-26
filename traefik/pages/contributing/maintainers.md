@@ -1,4 +1,4 @@
-> Release-pinned source for Traefik Proxy v3.7.11: [docs/content/contributing/maintainers.md](https://github.com/traefik/traefik/blob/faa1eb590646aed94e561e24a59be0c47353ae95/docs/content/contributing/maintainers.md)
+> Release-pinned source for Traefik Proxy v3.7.12: [docs/content/contributing/maintainers.md](https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/contributing/maintainers.md)
 
 # Maintainers
 
@@ -10,8 +10,6 @@
 - Nicolas Mengin [@nmengin](https://github.com/nmengin)
 - Michaël Matur [@mmatur](https://github.com/mmatur)
 - Gérald Croës [@geraldcroes](https://github.com/geraldcroes)
-- Jean-Baptiste Doumenjou [@jbdoumenjou](https://github.com/jbdoumenjou)
-- Mathieu Lonjaret [@mpl](https://github.com/mpl)
 - Romain Tribotté [@rtribotte](https://github.com/rtribotte)
 - Kevin Pollet [@kevinpollet](https://github.com/kevinpollet)
 - Harold Ozouf [@jspdown](https://github.com/jspdown)
@@ -35,6 +33,8 @@ People who have had an incredibly positive impact on the project, and are now fo
 - Timo Reimann [@timoreimann](https://github.com/timoreimann)
 - Marco Jantke [@mjantke](https://github.com/mjeri)
 - Ludovic Fernandez [@ldez](https://github.com/ldez)
+- Jean-Baptiste Doumenjou [@jbdoumenjou](https://github.com/jbdoumenjou)
+- Mathieu Lonjaret [@mpl](https://github.com/mpl)
 
 ## Maintainer's Guidelines
 

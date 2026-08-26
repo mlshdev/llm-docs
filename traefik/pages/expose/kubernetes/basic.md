@@ -1,4 +1,4 @@
-> Release-pinned source for Traefik Proxy v3.7.11: [docs/content/expose/kubernetes/basic.md](https://github.com/traefik/traefik/blob/faa1eb590646aed94e561e24a59be0c47353ae95/docs/content/expose/kubernetes/basic.md)
+> Release-pinned source for Traefik Proxy v3.7.12: [docs/content/expose/kubernetes/basic.md](https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/expose/kubernetes/basic.md)
 
 # Exposing Services with Traefik on Kubernetes - Basic
 
@@ -128,7 +128,7 @@ curl -H "Host: whoami.docker.localhost" http://localhost/
 ```
 
 > **Info**
-> Make sure to remove the `ports.web.redirections` block from the `values.yaml` file if you followed the Kubernetes Setup Guide to install Traefik otherwise you will be redirected to the HTTPS entrypoint:
+> Make sure to remove the `ports.web.http.redirections` block from the `values.yaml` file if you followed the Kubernetes Setup Guide to install Traefik otherwise you will be redirected to the HTTPS entrypoint:
 >
 > ```yaml
 > redirections:

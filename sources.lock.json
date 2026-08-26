@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "projects": {
     "traefik": {
-      "tag": "v3.7.11",
-      "releaseId": 372846236,
-      "releasePublishedAt": "2026-08-19T06:44:44Z",
-      "sourceCommit": "faa1eb590646aed94e561e24a59be0c47353ae95"
+      "tag": "v3.7.12",
+      "releaseId": 377175367,
+      "releasePublishedAt": "2026-08-26T13:42:21Z",
+      "sourceCommit": "e8f398ee30ca5643158ea9094b701b8eae9849e5"
     },
     "netbird": {
       "tag": "v0.77.1",

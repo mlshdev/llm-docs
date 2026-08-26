@@ -1,4 +1,4 @@
-> Release-pinned source for Traefik Proxy v3.7.11: [docs/content/reference/routing-configuration/http/middlewares/errorpages.md](https://github.com/traefik/traefik/blob/faa1eb590646aed94e561e24a59be0c47353ae95/docs/content/reference/routing-configuration/http/middlewares/errorpages.md)
+> Release-pinned source for Traefik Proxy v3.7.12: [docs/content/reference/routing-configuration/http/middlewares/errorpages.md](https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/http/middlewares/errorpages.md)
 
 The `errors` middleware returns a custom page in lieu of the default, according to configured ranges of HTTP Status codes.
 
@@ -116,6 +116,25 @@ the [`passHostHeader`](https://doc.traefik.io/traefik/v3.7/reference/routing-con
 
 > **Kubernetes**
 > When specifying a service in Kubernetes (e.g., in an IngressRoute), you need to reference the `name`, `namespace`, and `port` of your Kubernetes Service resource. For example, `my-service.my-namespace@kubernetescrd` (or `my-service.my-namespace@kubernetescrd:80`) ensures that requests go to the correct service and port.
+> **ServersTransport (Kubernetes)**
+> To customize how Traefik connects to the error page service (for example, to configure TLS to the backend), set a [`serversTransport`](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/crd/http/serverstransport) on the middleware's `service`.
+> The `traefik.ingress.kubernetes.io/service.serverstransport` annotation on the Kubernetes Service is not applied here: it only affects a Service used as an Ingress backend, not one referenced by a middleware.
+>
+> ```yaml
+> apiVersion: traefik.io/v1alpha1
+> kind: Middleware
+> metadata:
+>   name: test-errors
+> spec:
+>   errors:
+>     status:
+>       - "500"
+>       - "501"
+>     service:
+>       name: error-handler-service
+>       port: 80
+>       serversTransport: mytransport
+> ```
 
 ### statusRewrites
 

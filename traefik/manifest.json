@@ -3,11 +3,11 @@
   "project": "traefik",
   "title": "Traefik Proxy",
   "repository": "traefik/traefik",
-  "tag": "v3.7.11",
-  "releaseId": 372846236,
-  "releasePublishedAt": "2026-08-19T06:44:44Z",
-  "sourceCommit": "faa1eb590646aed94e561e24a59be0c47353ae95",
-  "documentCount": 160,
+  "tag": "v3.7.12",
+  "releaseId": 377175367,
+  "releasePublishedAt": "2026-08-26T13:42:21Z",
+  "sourceCommit": "e8f398ee30ca5643158ea9094b701b8eae9849e5",
+  "documentCount": 161,
   "notes": [
     "Pages follow docs/mkdocs.yml navigation order from the immutable release tag.",
     "MkDocs include fragments are expanded; repeated commercial callouts and non-text assets are omitted."

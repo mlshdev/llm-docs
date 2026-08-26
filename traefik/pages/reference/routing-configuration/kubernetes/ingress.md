@@ -1,4 +1,4 @@
-> Release-pinned source for Traefik Proxy v3.7.11: [docs/content/reference/routing-configuration/kubernetes/ingress.md](https://github.com/traefik/traefik/blob/faa1eb590646aed94e561e24a59be0c47353ae95/docs/content/reference/routing-configuration/kubernetes/ingress.md)
+> Release-pinned source for Traefik Proxy v3.7.12: [docs/content/reference/routing-configuration/kubernetes/ingress.md](https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/kubernetes/ingress.md)
 
 # Traefik & Kubernetes with Ingress
 
@@ -84,6 +84,10 @@ spec:
 | <a id="opt-traefik-ingress-kubernetes-ioservice-sticky-cookie-maxage"></a>`traefik.ingress.kubernetes.io/service.sticky.cookie.maxage`     | Sets the Max-Age attribute (in seconds) on the sticky session cookie.<br/>See [sticky sessions](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/crd/http/traefikservice#stickiness-on-multiple-levels) for more information.                                                                                                                                                                                                                                       | `42`          |
 | <a id="opt-traefik-ingress-kubernetes-ioservice-sticky-cookie-path"></a>`traefik.ingress.kubernetes.io/service.sticky.cookie.path`         | Sets the Path attribute on the sticky session cookie, defining the path that must exist in the requested URL.<br/>See [sticky sessions](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/crd/http/traefikservice#stickiness-on-multiple-levels) for more information.                                                                                                                                                                                               | `/foobar`     |
 
+> **Service annotations and middlewares**
+> These `service` annotations configure a Kubernetes Service only when it is used as a backend of the Ingress.
+> They are not applied to a Service that is referenced by a middleware, such as the [ErrorPages](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/middlewares/errorpages) middleware: the middleware's service is configured from the middleware definition, which does not read annotations set on Kubernetes Services.
+> To set the `serversTransport` in that case, declare it in the middleware definition instead.
 > **`traefik.ingress.kubernetes.io/service.middlewares`**
 > See [service middlewares](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/load-balancing/service#middlewares) for more information.
 >
