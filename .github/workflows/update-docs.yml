@@ -98,9 +98,10 @@ jobs:
     permissions:
       contents: write
     steps:
-      - name: Check out latest main without persisted credentials
+      - name: Check out main without persisted credentials
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
+          ref: "main"
           fetch-depth: 0
           persist-credentials: false
       - name: Download generated documentation
@@ -114,22 +115,39 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
-          rm -rf traefik netbird podman
-          cp _generated/sources.lock.json sources.lock.json
-          cp _generated/llms.txt llms.txt
-          cp _generated/llms-full.txt llms-full.txt
-          cp -R _generated/traefik traefik
-          cp -R _generated/netbird netbird
-          cp -R _generated/podman podman
-          git add -- sources.lock.json llms.txt llms-full.txt traefik netbird podman
-          if git diff --cached --quiet; then
-            exit 0
-          fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "docs: update stable release snapshots"
           gh auth setup-git
-          git push
+
+          # _generated is untracked, so it survives the reset that re-bases each attempt
+          # on whatever main currently points at.
+          for attempt in 1 2 3; do
+            git fetch --quiet origin main
+            git reset --quiet --hard FETCH_HEAD
+
+            rm -rf traefik netbird podman
+            cp _generated/sources.lock.json sources.lock.json
+            cp _generated/llms.txt llms.txt
+            cp _generated/llms-full.txt llms-full.txt
+            cp -R _generated/traefik traefik
+            cp -R _generated/netbird netbird
+            cp -R _generated/podman podman
+
+            git add -- sources.lock.json llms.txt llms-full.txt traefik netbird podman
+            if git diff --cached --quiet; then
+              echo "main already carries these snapshots; nothing to commit."
+              exit 0
+            fi
+
+            git commit -m "docs: update stable release snapshots"
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "Push rejected on attempt ${attempt}; re-applying onto the new main."
+          done
+
+          echo "::error::Could not push generated documentation after 3 attempts."
+          exit 1
 
   deploy:
     if: >-
