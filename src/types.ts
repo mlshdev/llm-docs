@@ -28,9 +28,16 @@ export interface LockedSource {
   readonly docsCommit?: string;
 }
 
+// A lock may omit a project that was added to the configuration but not yet
+// resolved against its upstream releases, which is the state `update` starts
+// from. Everything that reads pins requires the complete form.
 export interface SourcesLock {
   readonly schemaVersion: 1;
-  readonly projects: Record<ProjectId, LockedSource>;
+  readonly projects: Readonly<Partial<Record<ProjectId, LockedSource>>>;
+}
+
+export interface CompleteSourcesLock extends SourcesLock {
+  readonly projects: Readonly<Record<ProjectId, LockedSource>>;
 }
 
 export interface Document {

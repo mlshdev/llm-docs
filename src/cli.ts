@@ -10,7 +10,7 @@ import {
 } from "./output.ts";
 import { buildProject } from "./projects/index.ts";
 import { projectIds } from "./types.ts";
-import type { ProjectId, SourcesLock } from "./types.ts";
+import type { CompleteSourcesLock, ProjectId, SourcesLock } from "./types.ts";
 
 const command = process.argv[2];
 
@@ -82,12 +82,18 @@ async function site(): Promise<void> {
   console.log("GitHub Pages artifact prepared in _site");
 }
 
-async function requireLock(): Promise<SourcesLock> {
+async function requireLock(): Promise<CompleteSourcesLock> {
   const lock = await loadLock();
   if (!lock) {
     throw new Error("sources.lock.json is missing; run bun run update first");
   }
-  return lock;
+  const missing = projectIds.filter((id) => !lock.projects[id]);
+  if (missing.length > 0) {
+    throw new Error(
+      `sources.lock.json has no pin for ${missing.join(", ")}; run bun run update first`,
+    );
+  }
+  return lock as CompleteSourcesLock;
 }
 
 function changedProjects(

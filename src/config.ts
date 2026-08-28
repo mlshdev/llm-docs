@@ -1,7 +1,12 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { projectIds } from "./types.ts";
-import type { ProjectId, SourcesConfig, SourcesLock } from "./types.ts";
+import type {
+  LockedSource,
+  ProjectId,
+  SourcesConfig,
+  SourcesLock,
+} from "./types.ts";
 
 export const rootDirectory = path.resolve(import.meta.dir, "..");
 export const lockPath = path.join(rootDirectory, "sources.lock.json");
@@ -58,7 +63,7 @@ function isSourcesConfig(value: unknown): value is SourcesConfig {
   return ids.size === projectIds.length;
 }
 
-function isSourcesLock(value: unknown): value is SourcesLock {
+export function isSourcesLock(value: unknown): value is SourcesLock {
   if (
     !isRecord(value) ||
     value.schemaVersion !== 1 ||
@@ -66,18 +71,20 @@ function isSourcesLock(value: unknown): value is SourcesLock {
   ) {
     return false;
   }
-  const projects = value.projects;
-  return projectIds.every((id) => {
-    const source = projects[id];
-    return (
-      isRecord(source) &&
-      typeof source.tag === "string" &&
-      typeof source.releaseId === "number" &&
-      typeof source.releasePublishedAt === "string" &&
-      isCommitSha(source.sourceCommit) &&
-      (source.docsCommit === undefined || isCommitSha(source.docsCommit))
-    );
-  });
+  return Object.entries(value.projects).every(
+    ([id, source]) => isProjectId(id) && isLockedSource(source),
+  );
+}
+
+function isLockedSource(value: unknown): value is LockedSource {
+  return (
+    isRecord(value) &&
+    typeof value.tag === "string" &&
+    typeof value.releaseId === "number" &&
+    typeof value.releasePublishedAt === "string" &&
+    isCommitSha(value.sourceCommit) &&
+    (value.docsCommit === undefined || isCommitSha(value.docsCommit))
+  );
 }
 
 function isCommitSha(value: unknown): value is string {

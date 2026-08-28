@@ -5,10 +5,12 @@ import { exists, listFiles, writeUtf8 } from "./files.ts";
 import { normalizeSpacing } from "./markdown.ts";
 import { projectIds } from "./types.ts";
 import type {
+  CompleteSourcesLock,
   Document,
+  LockedSource,
   ProjectBuild,
+  ProjectId,
   SourceProject,
-  SourcesLock,
 } from "./types.ts";
 
 interface ProjectManifest {
@@ -76,7 +78,7 @@ export async function writeProject(build: ProjectBuild): Promise<void> {
 
 export async function writeRootIndexes(
   projects: readonly SourceProject[],
-  lock: SourcesLock,
+  lock: CompleteSourcesLock,
 ): Promise<void> {
   const summary = [
     "# Release-pinned LLM documentation",
@@ -151,7 +153,7 @@ export async function buildSite(
 
 export async function verifyOutputs(
   projects: readonly SourceProject[],
-  lock: SourcesLock,
+  lock: CompleteSourcesLock,
 ): Promise<void> {
   for (const project of projects) {
     const directory = path.join(rootDirectory, project.id);
@@ -386,11 +388,13 @@ async function assertNoSymlinks(directory: string): Promise<void> {
   }
 }
 
-export function orderedLock(projects: SourcesLock["projects"]): SourcesLock {
+export function orderedLock(
+  projects: Readonly<Record<ProjectId, LockedSource>>,
+): CompleteSourcesLock {
   return {
     schemaVersion: 1,
     projects: Object.fromEntries(
       projectIds.map((id) => [id, projects[id]]),
-    ) as SourcesLock["projects"],
+    ) as Record<ProjectId, LockedSource>,
   };
 }
