@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "project": "victoriametrics",
+  "title": "VictoriaMetrics",
+  "repository": "VictoriaMetrics/VictoriaMetrics",
+  "tag": "v1.150.0",
+  "releaseId": 370663729,
+  "releasePublishedAt": "2026-08-17T09:53:36Z",
+  "sourceCommit": "413f95d65f08d2c3fb03e227b1f3ba42884ca796",
+  "documentCount": 115,
+  "notes": [
+    "Pages follow the Hugo `menu.docs` navigation declared in docs/ at the immutable release tag.",
+    "Fragments pulled in by `{{% content %}}` are inlined into the page that renders them and are not published separately.",
+    "Hugo shortcodes are expanded to plain Markdown; presentation-only attribute lists are dropped."
+  ]
+}

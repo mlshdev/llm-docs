@@ -31,4 +31,4 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
         run: bun run build
       - name: Verify deterministic generated output
-        run: git diff --exit-code -- sources.lock.json llms.txt llms-full.txt traefik netbird podman
+        run: git diff --exit-code -- sources.lock.json llms.txt llms-full.txt traefik netbird podman victoriametrics

@@ -19,6 +19,12 @@
       "title": "Podman",
       "repository": "podman-container-tools/podman",
       "homepage": "https://docs.podman.io/"
+    },
+    {
+      "id": "victoriametrics",
+      "title": "VictoriaMetrics",
+      "repository": "VictoriaMetrics/VictoriaMetrics",
+      "homepage": "https://docs.victoriametrics.com/"
     }
   ]
 }

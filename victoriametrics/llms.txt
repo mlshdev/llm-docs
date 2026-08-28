@@ -1,0 +1,148 @@
+# VictoriaMetrics v1.150.0
+
+> Documentation generated from the latest stable release of [VictoriaMetrics/VictoriaMetrics](https://github.com/VictoriaMetrics/VictoriaMetrics) and pinned to immutable source commit `413f95d65f08d2c3fb03e227b1f3ba42884ca796`.
+
+- [Full documentation](llms-full.txt): Complete normalized corpus for VictoriaMetrics v1.150.0.
+- [Provenance manifest](manifest.json): Release, commit, document count, and generation notes.
+- Pages follow the Hugo `menu.docs` navigation declared in docs/ at the immutable release tag.
+- Fragments pulled in by `{{% content %}}` are inlined into the page that renders them and are not published separately.
+- Hugo shortcodes are expanded to plain Markdown; presentation-only attribute lists are dropped.
+
+## VictoriaMetrics
+
+- [VictoriaMetrics](pages/victoriametrics/index.md): Source `docs/victoriametrics/_index.md`.
+- [Quick start](pages/victoriametrics/Quick-Start.md): Source `docs/victoriametrics/Quick-Start.md`.
+- [Single-node version](pages/victoriametrics/Single-server-VictoriaMetrics.md): Source `docs/victoriametrics/Single-server-VictoriaMetrics.md`.
+- [Cluster version](pages/victoriametrics/Cluster-VictoriaMetrics.md): Source `docs/victoriametrics/Cluster-VictoriaMetrics.md`.
+- [vmagent](pages/victoriametrics/vmagent.md): Source `docs/victoriametrics/vmagent.md`.
+- [vmalert](pages/victoriametrics/vmalert.md): Source `docs/victoriametrics/vmalert.md`.
+- [vmauth](pages/victoriametrics/vmauth.md): Source `docs/victoriametrics/vmauth.md`.
+- [vmbackup](pages/victoriametrics/vmbackup.md): Source `docs/victoriametrics/vmbackup.md`.
+- [vmrestore](pages/victoriametrics/vmrestore.md): Source `docs/victoriametrics/vmrestore.md`.
+- [vmctl](pages/victoriametrics/vmctl/index.md): Source `docs/victoriametrics/vmctl/_index.md`.
+- [Prometheus](pages/victoriametrics/vmctl/prometheus.md): Source `docs/victoriametrics/vmctl/prometheus.md`.
+- [InfluxDB](pages/victoriametrics/vmctl/influxdb.md): Source `docs/victoriametrics/vmctl/influxdb.md`.
+- [OpenTSDB](pages/victoriametrics/vmctl/opentsdb.md): Source `docs/victoriametrics/vmctl/opentsdb.md`.
+- [Remote Read](pages/victoriametrics/vmctl/remoteread.md): Source `docs/victoriametrics/vmctl/remoteread.md`.
+- [Thanos](pages/victoriametrics/vmctl/thanos.md): Source `docs/victoriametrics/vmctl/thanos.md`.
+- [Cortex](pages/victoriametrics/vmctl/cortex.md): Source `docs/victoriametrics/vmctl/cortex.md`.
+- [Promscale](pages/victoriametrics/vmctl/promscale.md): Source `docs/victoriametrics/vmctl/promscale.md`.
+- [Mimir](pages/victoriametrics/vmctl/mimir.md): Source `docs/victoriametrics/vmctl/mimir.md`.
+- [VictoriaMetrics](pages/victoriametrics/vmctl/victoriametrics.md): Source `docs/victoriametrics/vmctl/victoriametrics.md`.
+- [vmgateway](pages/victoriametrics/vmgateway.md): Source `docs/victoriametrics/vmgateway.md`.
+- [vmbackupmanager](pages/victoriametrics/vmbackupmanager.md): Source `docs/victoriametrics/vmbackupmanager.md`.
+- [vmalert-tool](pages/victoriametrics/vmalert-tool.md): Source `docs/victoriametrics/vmalert-tool.md`.
+- [Integrations](pages/victoriametrics/integrations/index.md): Source `docs/victoriametrics/integrations/_index.md`.
+- [Grafana](pages/victoriametrics/integrations/grafana/index.md): Source `docs/victoriametrics/integrations/grafana/_index.md`.
+- [Prometheus](pages/victoriametrics/integrations/prometheus.md): Source `docs/victoriametrics/integrations/prometheus.md`.
+- [Graphite](pages/victoriametrics/integrations/graphite.md): Source `docs/victoriametrics/integrations/graphite.md`.
+- [Datadog](pages/victoriametrics/integrations/datadog.md): Source `docs/victoriametrics/integrations/datadog.md`.
+- [InfluxDB](pages/victoriametrics/integrations/influxdb.md): Source `docs/victoriametrics/integrations/influxdb.md`.
+- [OpenTSDB](pages/victoriametrics/integrations/opentsdb.md): Source `docs/victoriametrics/integrations/opentsdb.md`.
+- [NewRelic](pages/victoriametrics/integrations/newrelic.md): Source `docs/victoriametrics/integrations/newrelic.md`.
+- [Google PubSub](pages/victoriametrics/integrations/pubsub.md): Source `docs/victoriametrics/integrations/pubsub.md`.
+- [Kafka](pages/victoriametrics/integrations/kafka.md): Source `docs/victoriametrics/integrations/kafka.md`.
+- [OpenShift](pages/victoriametrics/integrations/OpenShift.md): Source `docs/victoriametrics/integrations/OpenShift.md`.
+- [Zabbix Connector](pages/victoriametrics/integrations/zabbixconnector.md): Source `docs/victoriametrics/integrations/zabbixconnector.md`.
+- [Perses](pages/victoriametrics/integrations/perses.md): Source `docs/victoriametrics/integrations/perses.md`.
+- [Bindplane](pages/victoriametrics/integrations/bindplane.md): Source `docs/victoriametrics/integrations/bindplane.md`.
+- [OpenTelemetry](pages/victoriametrics/integrations/opentelemetry.md): Source `docs/victoriametrics/integrations/opentelemetry.md`.
+- [Data Ingestion](pages/victoriametrics/data-ingestion/index.md): Source `docs/victoriametrics/data-ingestion/_index.md`.
+- [vmagent](pages/victoriametrics/data-ingestion/vmagent.md): Source `docs/victoriametrics/data-ingestion/vmagent.md`.
+- [Grafana Alloy](pages/victoriametrics/data-ingestion/Alloy.md): Source `docs/victoriametrics/data-ingestion/Alloy.md`.
+- [Vector](pages/victoriametrics/data-ingestion/Vector.md): Source `docs/victoriametrics/data-ingestion/Vector.md`.
+- [Telegraf](pages/victoriametrics/data-ingestion/Telegraf.md): Source `docs/victoriametrics/data-ingestion/Telegraf.md`.
+- [Proxmox](pages/victoriametrics/data-ingestion/Proxmox.md): Source `docs/victoriametrics/data-ingestion/Proxmox.md`.
+- [OpenTelemetry Collector](pages/victoriametrics/data-ingestion/OpenTelemetry-Collector.md): Source `docs/victoriametrics/data-ingestion/OpenTelemetry-Collector.md`.
+- [Best practices](pages/victoriametrics/BestPractices.md): Source `docs/victoriametrics/BestPractices.md`.
+- [MetricsQL](pages/victoriametrics/MetricsQL.md): Source `docs/victoriametrics/MetricsQL.md`.
+- [FAQ](pages/victoriametrics/FAQ.md): Source `docs/victoriametrics/FAQ.md`.
+- [Case studies and talks](pages/victoriametrics/CaseStudies.md): Source `docs/victoriametrics/CaseStudies.md`.
+- [Articles](pages/victoriametrics/Articles.md): Source `docs/victoriametrics/Articles.md`.
+- [API examples](pages/victoriametrics/url-examples.md): Source `docs/victoriametrics/url-examples.md`.
+- [Key concepts](pages/victoriametrics/keyConcepts/index.md): Source `docs/victoriametrics/keyConcepts/_index.md`.
+- [Troubleshooting](pages/victoriametrics/Troubleshooting.md): Source `docs/victoriametrics/Troubleshooting.md`.
+- [Prometheus service discovery](pages/victoriametrics/sd_configs.md): Source `docs/victoriametrics/sd_configs.md`.
+- [Scrape config examples](pages/victoriametrics/scrape_config_examples.md): Source `docs/victoriametrics/scrape_config_examples.md`.
+- [Relabeling cookbook](pages/victoriametrics/relabeling.md): Source `docs/victoriametrics/relabeling.md`.
+- [Streaming aggregation](pages/victoriametrics/stream-aggregation/index.md): Source `docs/victoriametrics/stream-aggregation/_index.md`.
+- [Configuration](pages/victoriametrics/stream-aggregation/configuration.md): Source `docs/victoriametrics/stream-aggregation/configuration.md`.
+- [Enterprise](pages/victoriametrics/enterprise.md): Source `docs/victoriametrics/enterprise.md`.
+- [Cluster Per Tenant Statistic](pages/victoriametrics/PerTenantStatistic.md): Source `docs/victoriametrics/PerTenantStatistic.md`.
+- [Query execution stats](pages/victoriametrics/query-stats.md): Source `docs/victoriametrics/query-stats.md`.
+- [CHANGELOG](pages/victoriametrics/changelog/index.md): Source `docs/victoriametrics/changelog/_index.md`.
+- [Year 2026](pages/victoriametrics/changelog/CHANGELOG_2026.md): Source `docs/victoriametrics/changelog/CHANGELOG_2026.md`.
+- [Year 2025](pages/victoriametrics/changelog/CHANGELOG_2025.md): Source `docs/victoriametrics/changelog/CHANGELOG_2025.md`.
+- [Year 2024](pages/victoriametrics/changelog/CHANGELOG_2024.md): Source `docs/victoriametrics/changelog/CHANGELOG_2024.md`.
+- [Year 2023](pages/victoriametrics/changelog/CHANGELOG_2023.md): Source `docs/victoriametrics/changelog/CHANGELOG_2023.md`.
+- [Year 2022](pages/victoriametrics/changelog/CHANGELOG_2022.md): Source `docs/victoriametrics/changelog/CHANGELOG_2022.md`.
+- [Year 2021](pages/victoriametrics/changelog/CHANGELOG_2021.md): Source `docs/victoriametrics/changelog/CHANGELOG_2021.md`.
+- [Year 2020](pages/victoriametrics/changelog/CHANGELOG_2020.md): Source `docs/victoriametrics/changelog/CHANGELOG_2020.md`.
+- [Long-term support releases](pages/victoriametrics/LTS-releases.md): Source `docs/victoriametrics/LTS-releases.md`.
+- [Release process guidance](pages/victoriametrics/Release-Guide.md): Source `docs/victoriametrics/Release-Guide.md`.
+- [MetricsQL old page](pages/victoriametrics/ExtendedPromQL.md): Source `docs/victoriametrics/ExtendedPromQL.md`.
+- [Grafana datasource](pages/victoriametrics/victoriametrics-datasource.md): Source `docs/victoriametrics/victoriametrics-datasource.md`.
+
+## Guides
+
+- [Guides](pages/guides/index.md): Source `docs/guides/_index.md`.
+- [Kubernetes monitoring via VictoriaMetrics Single](pages/guides/k8s-monitoring-via-vm-single/index.md): Source `docs/guides/k8s-monitoring-via-vm-single/_index.md`.
+- [Kubernetes monitoring with VictoriaMetrics Cluster](pages/guides/k8s-monitoring-via-vm-cluster/index.md): Source `docs/guides/k8s-monitoring-via-vm-cluster/_index.md`.
+- [Getting started with VM Operator](pages/guides/getting-started-with-vm-operator/index.md): Source `docs/guides/getting-started-with-vm-operator/_index.md`.
+- [Connecting VictoriaMetrics components to cloud storage](pages/guides/connecting-vm-components-to-cloud-storage/index.md): Source `docs/guides/connecting-vm-components-to-cloud-storage/_index.md`.
+- [How to use OpenTelemetry with VictoriaMetrics and VictoriaLogs](pages/guides/getting-started-with-opentelemetry/index.md): Source `docs/guides/getting-started-with-opentelemetry/_index.md`.
+- [Setup vmagent - Multi-Tenant remote write & OIDC](pages/guides/vmagent-openid-configuration/index.md): Source `docs/guides/vmagent-openid-configuration/_index.md`.
+- [Setup vmauth - Multi-Tenant Access with Grafana & OIDC](pages/guides/grafana-vmauth-openid-configuration/index.md): Source `docs/guides/grafana-vmauth-openid-configuration/_index.md`.
+- [How to delete or replace metrics in VictoriaMetrics](pages/guides/guide-delete-or-replace-metrics/index.md): Source `docs/guides/guide-delete-or-replace-metrics/_index.md`.
+- [Migrate from InfluxDB to VictoriaMetrics](pages/guides/migrate-from-influx/index.md): Source `docs/guides/migrate-from-influx/_index.md`.
+- [HA monitoring setup in Kubernetes via VictoriaMetrics Cluster](pages/guides/k8s-ha-monitoring-via-vm-cluster/index.md): Source `docs/guides/k8s-ha-monitoring-via-vm-cluster/_index.md`.
+- [Understand Your Setup Size](pages/guides/understand-your-setup-size/index.md): Source `docs/guides/understand-your-setup-size/_index.md`.
+- [Multi Retention Setup within VictoriaMetrics Cluster](pages/guides/guide-vmcluster-multiple-retention-setup/index.md): Source `docs/guides/guide-vmcluster-multiple-retention-setup/_index.md`.
+- [VictoriaMetrics Multi-Regional Setup: Dedicated Monitoring](pages/guides/multi-regional-setup-dedicated-regions/index.md): Source `docs/guides/multi-regional-setup-dedicated-regions/_index.md`.
+- [Collecting OpenShift logs with Victoria Logs](pages/guides/collecting-openshift-logs-with-victoria-logs/index.md): Source `docs/guides/collecting-openshift-logs-with-victoria-logs/_index.md`.
+- [Headlamp Kubernetes UI and VictoriaMetrics](pages/guides/k8s-ui-headlamp/index.md): Source `docs/guides/k8s-ui-headlamp/_index.md`.
+- [VictoriaMetrics topologies](pages/guides/vm-architectures/index.md): Source `docs/guides/vm-architectures/_index.md`.
+- [Datasource-Managed Alerts with vmalert and Grafana](pages/guides/vmalert-datasource-managed-alerts-grafana/index.md): Source `docs/guides/vmalert-datasource-managed-alerts-grafana/_index.md`.
+- [Setup vmgateway - Multi-Tenant Access with Grafana & OIDC](pages/guides/grafana-vmgateway-openid-configuration/index.md): Source `docs/guides/grafana-vmgateway-openid-configuration/_index.md`.
+
+## Anomaly Detection
+
+- [Anomaly Detection](pages/anomaly-detection/index.md): Source `docs/anomaly-detection/_index.md`.
+- [Quick Start](pages/anomaly-detection/QuickStart.md): Source `docs/anomaly-detection/QuickStart.md`.
+- [Presets](pages/anomaly-detection/Presets.md): Source `docs/anomaly-detection/Presets.md`.
+- [UI](pages/anomaly-detection/UI.md): Source `docs/anomaly-detection/UI.md`.
+- [Components](pages/anomaly-detection/components/index.md): Source `docs/anomaly-detection/components/_index.md`.
+- [Models](pages/anomaly-detection/components/models.md): Source `docs/anomaly-detection/components/models.md`.
+- [Reader](pages/anomaly-detection/components/reader.md): Source `docs/anomaly-detection/components/reader.md`.
+- [Scheduler](pages/anomaly-detection/components/scheduler.md): Source `docs/anomaly-detection/components/scheduler.md`.
+- [Writer](pages/anomaly-detection/components/writer.md): Source `docs/anomaly-detection/components/writer.md`.
+- [Monitoring](pages/anomaly-detection/components/monitoring.md): Source `docs/anomaly-detection/components/monitoring.md`.
+- [Settings](pages/anomaly-detection/components/settings.md): Source `docs/anomaly-detection/components/settings.md`.
+- [Server](pages/anomaly-detection/components/server.md): Source `docs/anomaly-detection/components/server.md`.
+- [Guides](pages/anomaly-detection/guides/index.md): Source `docs/anomaly-detection/guides/_index.md`.
+- [Anomaly Detection and Alerting Setup](pages/anomaly-detection/guides/guide-vmanomaly-vmalert/index.md): Source `docs/anomaly-detection/guides/guide-vmanomaly-vmalert/_index.md`.
+- [Scaling vmanomaly](pages/anomaly-detection/Scaling-vmanomaly.md): Source `docs/anomaly-detection/Scaling-vmanomaly.md`.
+- [Self-monitoring](pages/anomaly-detection/Self-monitoring.md): Source `docs/anomaly-detection/Self-monitoring.md`.
+- [Migration](pages/anomaly-detection/Migration.md): Source `docs/anomaly-detection/Migration.md`.
+- [FAQ](pages/anomaly-detection/FAQ.md): Source `docs/anomaly-detection/FAQ.md`.
+- [CHANGELOG](pages/anomaly-detection/CHANGELOG.md): Source `docs/anomaly-detection/CHANGELOG.md`.
+
+## OpenTelemetry
+
+- [OpenTelemetry](pages/opentelemetry/index.md): Source `docs/opentelemetry/_index.md`.
+
+## AI tools
+
+- [AI tools](pages/ai-tools/index.md): Source `docs/ai-tools/_index.md`.
+
+## Playgrounds
+
+- [Playgrounds](pages/playgrounds/index.md): Source `docs/playgrounds/_index.md`.
+
+## Contributing
+
+- [Contributing](pages/victoriametrics/CONTRIBUTING.md): Source `docs/victoriametrics/CONTRIBUTING.md`.
+
+## Development Goals
+
+- [Development Goals](pages/victoriametrics/goals.md): Source `docs/victoriametrics/goals.md`.

@@ -19,6 +19,12 @@
       "releaseId": 369501266,
       "releasePublishedAt": "2026-08-12T20:12:23Z",
       "sourceCommit": "cade97a52ebdf9dbf9e81de8009015776837a074"
+    },
+    "victoriametrics": {
+      "tag": "v1.150.0",
+      "releaseId": 370663729,
+      "releasePublishedAt": "2026-08-17T09:53:36Z",
+      "sourceCommit": "413f95d65f08d2c3fb03e227b1f3ba42884ca796"
     }
   }
 }

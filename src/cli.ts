@@ -9,6 +9,7 @@ import {
   writeRootIndexes,
 } from "./output.ts";
 import { buildProject } from "./projects/index.ts";
+import { projectIds } from "./types.ts";
 import type { ProjectId, SourcesLock } from "./types.ts";
 
 const command = process.argv[2];
@@ -94,9 +95,9 @@ function changedProjects(
   next: SourcesLock,
 ): ProjectId[] {
   if (!current) {
-    return ["traefik", "netbird", "podman"];
+    return [...projectIds];
   }
-  return (["traefik", "netbird", "podman"] as const).filter(
+  return projectIds.filter(
     (id) =>
       JSON.stringify(current.projects[id]) !==
       JSON.stringify(next.projects[id]),

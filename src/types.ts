@@ -1,4 +1,9 @@
-export const projectIds = ["traefik", "netbird", "podman"] as const;
+export const projectIds = [
+  "traefik",
+  "netbird",
+  "podman",
+  "victoriametrics",
+] as const;
 
 export type ProjectId = (typeof projectIds)[number];
 

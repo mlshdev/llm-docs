@@ -235,6 +235,7 @@ function validateDocument(
       /<\/?(?:Note|Warning|Success|Property|Properties|CodeGroup|Tiles|Button|YouTube|Badge|Guides|Resources)\b|\{\{\s*(?:title|tag|className|anchor)\s*:/,
     podman:
       /@@(?:option|include)|<<(?:subcommand|fullsubcommand|pod|container| if )/,
+    victoriametrics: /\{\{[<%]\s*\/?\s*[a-zA-Z_]|^\{(?:width|class|style)="/m,
   };
   if (unresolved[projectId].test(document.body)) {
     throw new Error(

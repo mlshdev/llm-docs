@@ -7,6 +7,7 @@
 - [Traefik Proxy v3.7.12](traefik/llms.txt): [full corpus](traefik/llms-full.txt), [manifest](traefik/manifest.json)
 - [NetBird v0.77.1](netbird/llms.txt): [full corpus](netbird/llms-full.txt), [manifest](netbird/manifest.json)
 - [Podman v6.1.0](podman/llms.txt): [full corpus](podman/llms-full.txt), [manifest](podman/manifest.json)
+- [VictoriaMetrics v1.150.0](victoriametrics/llms.txt): [full corpus](victoriametrics/llms-full.txt), [manifest](victoriametrics/manifest.json)
 
 ## Update policy
 

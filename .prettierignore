@@ -4,6 +4,7 @@ _site/
 traefik/
 netbird/
 podman/
+victoriametrics/
 llms.txt
 llms-full.txt
 bun.lock

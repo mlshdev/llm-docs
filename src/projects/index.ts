@@ -1,6 +1,7 @@
 import { buildNetbird } from "./netbird.ts";
 import { buildPodman } from "./podman.ts";
 import { buildTraefik } from "./traefik.ts";
+import { buildVictoriametrics } from "./victoriametrics.ts";
 import type { LockedSource, ProjectBuild, SourceProject } from "../types.ts";
 
 export function buildProject(
@@ -14,5 +15,7 @@ export function buildProject(
       return buildNetbird(project, lock);
     case "podman":
       return buildPodman(project, lock);
+    case "victoriametrics":
+      return buildVictoriametrics(project, lock);
   }
 }

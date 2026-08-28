@@ -7,6 +7,7 @@ This repository converts documentation from stable upstream releases into determ
 - [Traefik Proxy](https://github.com/traefik/traefik)
 - [NetBird](https://github.com/netbirdio/netbird)
 - [Podman](https://github.com/podman-container-tools/podman)
+- [VictoriaMetrics](https://github.com/VictoriaMetrics/VictoriaMetrics)
 
 ## Release policy
 
@@ -39,6 +40,12 @@ podman/
   manifest.json
   LICENSE.upstream
   pages/
+victoriametrics/
+  llms.txt
+  llms-full.txt
+  manifest.json
+  LICENSE.upstream
+  pages/
 ```
 
 ## Source-specific conversion
@@ -46,6 +53,7 @@ podman/
 - Traefik follows `docs/mkdocs.yml` navigation from the release tag and expands MkDocs include fragments.
 - NetBird converts MDX through a fail-closed AST transform with explicit handling for its documentation components. It includes public docs from the release-matched docs commit and technical architecture Markdown from the product tag.
 - Podman templates are expanded by a non-executing TypeScript implementation of the tagged repository's preprocessing rules before collecting command/man-page Markdown, tutorials, bindings, and operational documentation.
+- VictoriaMetrics follows the Hugo `menu.docs` navigation declared in `docs/`, inlines the fragments that pages pull in with `{{% content %}}`, and expands the remaining shortcodes (`available_from`, `deprecated_from`, `collapse`, `section`) into plain Markdown.
 
 ## Local commands
 

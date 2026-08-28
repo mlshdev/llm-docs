@@ -1,6 +1,7 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
-import type { SourcesConfig, SourcesLock } from "./types.ts";
+import { projectIds } from "./types.ts";
+import type { ProjectId, SourcesConfig, SourcesLock } from "./types.ts";
 
 export const rootDirectory = path.resolve(import.meta.dir, "..");
 export const lockPath = path.join(rootDirectory, "sources.lock.json");
@@ -54,7 +55,7 @@ function isSourcesConfig(value: unknown): value is SourcesConfig {
     }
     ids.add(project.id);
   }
-  return ids.size === 3;
+  return ids.size === projectIds.length;
 }
 
 function isSourcesLock(value: unknown): value is SourcesLock {
@@ -66,7 +67,7 @@ function isSourcesLock(value: unknown): value is SourcesLock {
     return false;
   }
   const projects = value.projects;
-  return ["traefik", "netbird", "podman"].every((id) => {
+  return projectIds.every((id) => {
     const source = projects[id];
     return (
       isRecord(source) &&
@@ -83,10 +84,8 @@ function isCommitSha(value: unknown): value is string {
   return typeof value === "string" && /^[0-9a-f]{40}$/.test(value);
 }
 
-function isProjectId(
-  value: unknown,
-): value is "traefik" | "netbird" | "podman" {
-  return value === "traefik" || value === "netbird" || value === "podman";
+function isProjectId(value: unknown): value is ProjectId {
+  return projectIds.some((id) => id === value);
 }
 
 export function isRecord(value: unknown): value is Record<string, unknown> {
