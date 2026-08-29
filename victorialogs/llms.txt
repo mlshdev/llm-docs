@@ -1,0 +1,50 @@
+# VictoriaLogs v1.52.0
+
+> Documentation generated from the latest stable release of [VictoriaMetrics/VictoriaLogs](https://github.com/VictoriaMetrics/VictoriaLogs) and pinned to immutable source commit `46a54c976fa3d404396050e8a5ee6c5b0320efc5`.
+
+- [Full documentation](llms-full.txt): Complete normalized corpus for VictoriaLogs v1.52.0.
+- [Provenance manifest](manifest.json): Release, commit, document count, and generation notes.
+- Pages follow the Hugo `menu.docs` navigation declared in docs/ at the immutable release tag.
+- Fragments pulled in by `{{% content %}}` are inlined into the page that renders them and are not published separately.
+- Hugo shortcodes are expanded to plain Markdown; presentation-only attribute lists are dropped.
+
+## VictoriaLogs
+
+- [VictoriaLogs](pages/victorialogs/index.md): Source `docs/victorialogs/_index.md`.
+- [Quick Start](pages/victorialogs/QuickStart.md): Source `docs/victorialogs/QuickStart.md`.
+- [Key Concepts](pages/victorialogs/keyConcepts.md): Source `docs/victorialogs/keyConcepts.md`.
+- [VictoriaLogs Cluster](pages/victorialogs/cluster.md): Source `docs/victorialogs/cluster.md`.
+- [vlagent](pages/victorialogs/vlagent.md): Source `docs/victorialogs/vlagent.md`.
+- [Data Ingestion](pages/victorialogs/data-ingestion/index.md): Source `docs/victorialogs/data-ingestion/_index.md`.
+- [Filebeat Setup](pages/victorialogs/data-ingestion/Filebeat.md): Source `docs/victorialogs/data-ingestion/Filebeat.md`.
+- [Fluentbit Setup](pages/victorialogs/data-ingestion/Fluentbit.md): Source `docs/victorialogs/data-ingestion/Fluentbit.md`.
+- [Fluentd Setup](pages/victorialogs/data-ingestion/Fluentd.md): Source `docs/victorialogs/data-ingestion/Fluentd.md`.
+- [Logstash Setup](pages/victorialogs/data-ingestion/Logstash.md): Source `docs/victorialogs/data-ingestion/Logstash.md`.
+- [OpenTelemetry Setup](pages/victorialogs/data-ingestion/opentelemetry.md): Source `docs/victorialogs/data-ingestion/opentelemetry.md`.
+- [Promtail Setup](pages/victorialogs/data-ingestion/Promtail.md): Source `docs/victorialogs/data-ingestion/Promtail.md`.
+- [DataDog Agent Setup](pages/victorialogs/data-ingestion/DataDogAgent.md): Source `docs/victorialogs/data-ingestion/DataDogAgent.md`.
+- [Telegraf Setup](pages/victorialogs/data-ingestion/Telegraf.md): Source `docs/victorialogs/data-ingestion/Telegraf.md`.
+- [Journald Setup](pages/victorialogs/data-ingestion/Journald.md): Source `docs/victorialogs/data-ingestion/Journald.md`.
+- [Syslog Setup](pages/victorialogs/data-ingestion/syslog.md): Source `docs/victorialogs/data-ingestion/syslog.md`.
+- [OpenShift](pages/victorialogs/data-ingestion/openshift.md): Source `docs/victorialogs/data-ingestion/openshift.md`.
+- [Splunk Setup](pages/victorialogs/data-ingestion/Splunk.md): Source `docs/victorialogs/data-ingestion/Splunk.md`.
+- [Vector Setup](pages/victorialogs/data-ingestion/Vector.md): Source `docs/victorialogs/data-ingestion/Vector.md`.
+- [Querying](pages/victorialogs/querying/index.md): Source `docs/victorialogs/querying/_index.md`.
+- [vlogscli](pages/victorialogs/querying/vlogscli.md): Source `docs/victorialogs/querying/vlogscli.md`.
+- [LogsQL](pages/victorialogs/logsql.md): Source `docs/victorialogs/logsql.md`.
+- [Alerting with Logs](pages/victorialogs/vmalert.md): Source `docs/victorialogs/vmalert.md`.
+- [Security and Load Balancing](pages/victorialogs/security-and-lb.md): Source `docs/victorialogs/security-and-lb.md`.
+- [FAQ](pages/victorialogs/FAQ.md): Source `docs/victorialogs/FAQ.md`.
+- [Integrations](pages/victorialogs/integrations/index.md): Source `docs/victorialogs/integrations/_index.md`.
+- [Perses](pages/victorialogs/integrations/perses.md): Source `docs/victorialogs/integrations/perses.md`.
+- [Bindplane](pages/victorialogs/integrations/bindplane.md): Source `docs/victorialogs/integrations/bindplane.md`.
+- [Metrics of VictoriaLogs](pages/victorialogs/metrics.md): Source `docs/victorialogs/metrics.md`.
+- [Metrics of vlagent](pages/victorialogs/vlagent-metrics.md): Source `docs/victorialogs/vlagent-metrics.md`.
+- [LogsQL Examples](pages/victorialogs/logsql-examples.md): Source `docs/victorialogs/logsql-examples.md`.
+- [How To Convert Loki Queries to VictoriaLogs Queries](pages/victorialogs/logql-to-logsql.md): Source `docs/victorialogs/logql-to-logsql.md`.
+- [SQL to LogsQL Tutorial](pages/victorialogs/sql-to-logsql.md): Source `docs/victorialogs/sql-to-logsql.md`.
+- [Articles](pages/victorialogs/Articles.md): Source `docs/victorialogs/Articles.md`.
+- [Release Process Guidance for VictoriaLogs](pages/victorialogs/Release-Guide.md): Source `docs/victorialogs/Release-Guide.md`.
+- [CHANGELOG](pages/victorialogs/CHANGELOG.md): Source `docs/victorialogs/CHANGELOG.md`.
+- [Roadmap](pages/victorialogs/Roadmap.md): Source `docs/victorialogs/Roadmap.md`.
+- [Grafana Datasource](pages/victorialogs/victorialogs-datasource.md): Source `docs/victorialogs/victorialogs-datasource.md`.

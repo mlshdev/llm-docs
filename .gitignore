@@ -4,8 +4,8 @@ _generated/
 .serena/
 .claude/
 .DS_Store
-session-*.md
-resume.txt
+/session-*.md
+/resume.txt
 *.tmp
 .env
 .env.*

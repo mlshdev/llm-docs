@@ -34,7 +34,9 @@ export function parseFrontmatter(source: string): FrontmatterResult {
   if (!match) {
     return { attributes: {}, body: normalized };
   }
-  const parsed: unknown = parseYaml(match[1] ?? "");
+  // Hugo's YAML decoder accepts duplicate frontmatter keys and keeps the last
+  // value; upstream pages rely on that, so strict parsing would reject them.
+  const parsed: unknown = parseYaml(match[1] ?? "", { uniqueKeys: false });
   return {
     attributes: isRecord(parsed) ? parsed : {},
     body: normalized.slice(match[0].length),

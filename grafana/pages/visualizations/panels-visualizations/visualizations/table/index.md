@@ -1,0 +1,637 @@
+> Release-pinned source for Grafana v13.2.0: [docs/sources/visualizations/panels-visualizations/visualizations/table/index.md](https://github.com/grafana/grafana/blob/f681b1359f6a0b8ecb9f2c49a88ac72b75bde73b/docs/sources/visualizations/panels-visualizations/visualizations/table/index.md)
+
+# Table
+
+Tables are a highly flexible visualization designed to display data in columns and rows.
+The table visualization can take multiple datasets and provide the option to switch between them.
+With this versatility, it's the preferred visualization for viewing multiple data types, aiding in your data analysis needs.
+
+![Basic table visualization](https://grafana.com/media/docs/grafana/panels-visualizations/screenshot-basic-table-v11.3.png)
+
+You can use a table visualization to show datasets such as:
+
+- Common database queries like logs, traces, metrics
+- Financial reports
+- Customer lists
+- Product catalogs
+
+Any information you might want to put in a spreadsheet can often be best visualized in a table.
+
+Tables also provide different styles to visualize data inside the table cells, such as colored text and cell backgrounds, gauges, sparklines, data links, JSON code, and images.
+
+> **Note**
+>
+> Annotations and alerts are not currently supported for tables.
+
+## Configure a table visualization
+
+The following video provides a visual walkthrough of the options you can set in a table visualization.
+If you want to see a configuration in action, check out the video:
+
+[Watch the video on YouTube](https://www.youtube.com/watch?v=PCY7O8EJeJY)
+
+[Table Visualizations in Grafana in Grafana Play](https://play.grafana.org/d/OhR1ID6Mk/)
+
+## Supported data formats
+
+The table visualization supports any data that has a column-row structure.
+
+> **Note**
+>
+> If you’re using a cell type such as sparkline or JSON, the data requirements may differ in a way that’s specific to that type. For more info refer to [Cell type](#cell-type).
+
+### Example
+
+This example shows a basic dataset in which there's data for every table cell:
+
+```csv
+Column1, Column2, Column3
+value1 , value2 , value3
+value4 , value5 , value6
+value7 , value8 , value9
+```
+
+If a cell is missing or the table column-row structure is not complete, as in the following example, the table visualization won’t display any of the data:
+
+```csv
+Column1, Column2, Column3
+value1 , value2 , value3
+gap1   , gap2
+value4 , value5 , value6
+```
+
+If you need to hide columns, you can do so using [data transformations](https://grafana.com/docs/grafana/v13.2/panels-visualizations/query-transform-data/transform-data/), [field overrides](#field-overrides), or by [building a query](https://grafana.com/docs/grafana/v13.2/panels-visualizations/query-transform-data/) that returns only the needed columns.
+
+## Column filtering
+
+You can temporarily change how column data is displayed using column filtering.
+For example, you can show or hide specific values.
+
+### Turn on column filtering
+
+To turn on column filtering, follow these steps:
+
+1. In Grafana, navigate to the dashboard with the table with the columns that you want to filter.
+2. Hover over any part of the panel to which you want to add the link to display the actions menu on the top right corner.
+3. Click the menu and select **Edit**.
+4. In the panel editor pane, expand the **Table** options section.
+5. Toggle on the [**Column filter** switch](#table-options).
+
+A filter icon (funnel) appears next to each column title.
+
+![Column filtering turned on](https://grafana.com/static/img/docs/tables/column-filter-with-icon.png)
+
+### Filter column values
+
+To filter column values, follow these steps:
+
+1. Click the filter icon (funnel) next to a column title.
+
+   Grafana displays the filter options for that column.
+
+![Filter column values](https://grafana.com/media/docs/grafana/panels-visualizations/filter-column-values_12.2.png)
+
+1. Click the checkbox next to the values that you want to display or click **Select all**.
+
+2. Enter text in the search field at the top to show those values in the display so that you can select them rather than scroll to find them.
+
+3. Choose from several operators to display column values:
+   - **Contains** - Matches a regex pattern (operator by default).
+   - **Expression** - Evaluates a boolean expression. The character `$` represents the column value in the expression (for example, "$ >= 10 && $ <= 12").
+   - The typical comparison operators: `=`, `!=`, `<`, `<=`, `>`, `>=`.
+
+4. Click the checkbox above the **Ok** and **Cancel** buttons to add or remove all displayed values to and from the filter.
+
+### Clear column filters
+
+Columns with filters applied have a blue filter displayed next to the title.
+
+![Filtered column](https://grafana.com/static/img/docs/tables/filtered-column.png)
+
+To remove the filter, click the blue filter icon and then click **Clear filter**.
+
+### Apply filters from the table
+
+In tables, you can apply filters directly from the visualization with one click.
+
+To display the filter icons, hover your cursor over the cell that has the value for which you want to filter:
+
+![Table with filter icon displayed on a cell](https://grafana.com/media/docs/grafana/panels-visualizations/screenshot-table-adhoc-filter-v12.2.png)
+
+For more information about applying filters this way, refer to [Cross-filtering](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/filter-group-by/#dashboard-drilldown-with-filters).
+
+## Sort columns
+
+Click a column title to change the sort order from default to descending to ascending.
+Each time you click, the sort order changes to the next option in the cycle.
+You can sort multiple columns by holding the `Cmd` or `Ctrl` key
+and clicking the column name.
+
+![Sort descending](https://grafana.com/static/img/docs/tables/sort-descending.png)
+
+## Dataset selector
+
+If the data queried contains multiple datasets, a table displays a drop-down list at the bottom, so you can select the dataset you want to visualize.
+This option is only available when you're editing the panel.
+
+![Table visualization with multiple datasets](https://grafana.com/media/docs/grafana/panels-visualizations/screenshot-table-multi-dataset-v11.3.png)
+
+## Nested tables
+
+A table can display sub-tables inside expandable rows. You can add these nested tables using the [Group to nested tables transformation](https://grafana.com/docs/grafana/v13.2/panels-visualizations/query-transform-data/transform-data/#group-to-nested-tables), which groups rows by one or more fields, and can summarize nested row data by applying calculations.
+
+![Table with all rows collapsed](https://grafana.com/media/docs/grafana/panels-visualizations/screenshot-nested-table-collapsed-v13.1.png)
+
+Click the expand icon on a row to toggle the visibility of its nested table:
+
+![Table with two rows expanded showing nested sub-tables](https://grafana.com/media/docs/grafana/panels-visualizations/screenshot-nested-table-expanded-v13.1.png)
+
+To sort nested and top-level rows in nested tables, click a column title to change the sort order from default to descending to ascending.
+Each time you click, the sort order changes to the next option in the cycle.
+You can sort multiple columns by holding the `Cmd` or `Ctrl` key and clicking the column name.
+
+![Sort descending](https://grafana.com/static/img/docs/tables/sort-descending.png)
+
+To control the display of fields inside a nested table—for example, to apply thresholds, units, or a different cell type—use [field overrides](#field-overrides) with the **Target fields** option set to **Nested**.
+For more information, refer to [Apply overrides to nested table fields](#apply-overrides-to-nested-table-fields).
+
+## Configuration options
+
+### Panel options
+
+In the **Panel options** section of the panel editor pane, set basic options like panel title and description, as well as panel links. To learn more, refer to [Configure panel options](https://grafana.com/docs/grafana/v13.2/panels-visualizations/configure-panel-options/).
+
+### Table options
+
+| Option               | Description                                                                                                                                                                                                                                                                 |
+| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Show table header    | Show or hide column names imported from your data source.                                                                                                                                                                                                                   |
+| Frozen columns       | Freeze columns starting from the left side of the table. Enter a value to set how many columns are frozen.                                                                                                                                                                  |
+| Cell height          | Set the height of the cell. Choose from **Small**, **Medium**, or **Large**.                                                                                                                                                                                                |
+| Max row height       | Define the maximum height for a row in the table. This can be useful when **Wrap text** is enabled for one or more columns.                                                                                                                                                 |
+| Enable pagination    | Toggle the switch to control how many table rows are visible at once. When switched on, the page size automatically adjusts to the height of the table. This option doesn't affect queries.                                                                                 |
+| Minimum column width | Define the lower limit of the column width, in pixels. By default, the minimum width of the table column is 150 pixels. For small-screen devices, such as mobile phones or tablets, reduce the value to `50` to allow table-based panels to render correctly in dashboards. |
+| Column width         | Define a column width, in pixels, rather than allowing the width to be set automatically. By default, Grafana calculates the column width based on the table size and the minimum column width.                                                                             |
+| Column alignment     | Set how Grafana should align cell contents. Choose from: **Auto** (default), **Left**, **Center**, or **Right**.                                                                                                                                                            |
+| Column filter        | Temporarily change how column data is displayed. For example, show or hide specific values. For more information, refer to [Column filtering](#column-filtering).                                                                                                           |
+| Wrap text            | Enables text wrapping for cell content.                                                                                                                                                                                                                                     |
+| Wrap header text     | Enables text wrapping for column headers.                                                                                                                                                                                                                                   |
+
+### Table footer options
+
+The table footer displays the results of calculations (and reducer functions) on fields.
+The footer is only displayed after you select an option in the **Calculation** drop-down list:
+
+![The footer calculation selector, open](https://grafana.com/media/docs/grafana/panels-visualizations/screenshot-table-footer-selector-v12.2.png)
+
+There are several calculations you can choose from including minimum, maximum, first, last, and total.
+For the full list of options, refer to [Calculations](https://grafana.com/docs/grafana/v13.2/panels-visualizations/query-transform-data/calculation-types/).
+
+In the table footer:
+
+- You can apply multiple calculations at once.
+- The calculations and reducer functions apply to all fields in the table, by default. To control which fields have a calculation or function applied, add the table footer in an override instead.
+- If you enable a mathematical function for a non-numeric field, nothing for that function is displayed for that field.
+
+In the following image, multiple calculations—**Mean**, **Max**, and **Last**—have been applied:
+
+![Table with footer displaying mean, max, and last](https://grafana.com/media/docs/grafana/panels-visualizations/screenshot-tablefooter-v12.2.png)
+
+You can also see in the previous image that the mathematical functions, **Mean** and **Max**, haven't been applied to the text field in the table.
+Only the **Last** function has been applied to that field.
+
+> **Note**
+>
+> Calculations applied to cell types like **Markdown + HTML** might have unexpected results.
+
+### Cell options
+
+Cell options allow you to control how data is displayed in a table.
+The options are differ based on the cell type that you select and are outlined within the descriptions of each cell type.
+The following table provides short descriptions for each cell type and links to a longer description and the cell type options.
+
+#### Cell type
+
+By default, Grafana automatically chooses display settings.
+You can override these settings by choosing one of the following cell types to control the default display for all fields.
+Additional configuration is available for some cell types.
+
+If you want to apply a cell type to only some fields instead of all fields, you can do so using the **Cell options > Cell type** field override.
+
+| Cell type                                 | Description                                                                                                                                                |
+| ----------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Auto](#auto)                             | A basic text and number cell.                                                                                                                              |
+| [Colored text](#colored-text)             | If thresholds, value mappings, or color schemes are set, then the cell text is displayed in the appropriate color.                                         |
+| [Colored background](#colored-background) | If thresholds, value mappings, or color schemes are set, then the cell background is displayed in the appropriate color.                                   |
+| [Data links](#data-links)                 | The cell text reflects the titles of the configured data links.                                                                                            |
+| [Gauge](#gauge)                           | Values are displayed as a horizontal bar gauge. You can set the [Gauge display mode](#gauge-display-mode) and the [Value display](#value-display) options. |
+| [Sparkline](#sparkline)                   | Shows values rendered as a sparkline.                                                                                                                      |
+| [JSON View](#json-view)                   | Shows values formatted as code.                                                                                                                            |
+| [Pill](#pill)                             | Displays each item in a comma-separated string in a colored block.                                                                                         |
+| [Markdown + HTML](#markdown-html)         | Displays rich markdown or HTML content.                                                                                                                    |
+| [Image](#image)                           | Displays an image when the value is a URL or a base64 encoded image.                                                                                       |
+| [Actions](#actions)                       | The cell displays a button that triggers a basic, unauthenticated API call when clicked.                                                                   |
+
+#### Auto
+
+This is a basic text and number cell.
+
+It has the following cell options:
+
+| Option             | Description                                                                                                                                                                                                                                                                                                                                                                                                 |
+| ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Cell value inspect | <p>Enables value inspection from table cells. When the switch is toggled on, clicking the inspect icon in a cell opens the **Inspect value** drawer which contains two tabs: **Plain text** and **Code editor**.</p><p>Grafana attempts to automatically detect the type of data in the cell and opens the drawer with the associated tab showing. However, you can switch back and forth between tabs.</p> |
+| Tooltip from field | Toggle on the **Tooltip from field** switch to use the values from another field (or column) in a tooltip. For more information, refer to [Tooltip from field](#tooltip-from-field).                                                                                                                                                                                                                        |
+| Styling from field | Toggle on the **Styling from field** switch to apply the styling from another field (or column). The referenced field must contain CSS properties formatted in JSON object syntax (for example, `{"name":"John"}`). For more information, refer to the [Styling from field](#styling-from-field).                                                                                                           |
+
+#### Colored text
+
+If thresholds, value mappings, or color schemes are set, the cell text is displayed in the appropriate color.
+
+![Table with colored text cell type](https://grafana.com/media/docs/grafana/panels-visualizations/screenshot-table-colored-text-v11.3-2.png)
+
+The colored text cell type has the following options:
+
+| Option             | Description                                                                                                                                                                                                                                                                                                                                                                                                 |
+| ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Cell value inspect | <p>Enables value inspection from table cells. When the switch is toggled on, clicking the inspect icon in a cell opens the **Inspect value** drawer which contains two tabs: **Plain text** and **Code editor**.</p><p>Grafana attempts to automatically detect the type of data in the cell and opens the drawer with the associated tab showing. However, you can switch back and forth between tabs.</p> |
+| Tooltip from field | Toggle on the **Tooltip from field** switch to use the values from another field (or column) in a tooltip. For more information, refer to [Tooltip from field](#tooltip-from-field).                                                                                                                                                                                                                        |
+| Styling from field | Toggle on the **Styling from field** switch to apply the styling from another field (or column). The referenced field must contain CSS properties formatted in JSON object syntax (for example, `{"name":"John"}`). For more information, refer to the [Styling from field](#styling-from-field).                                                                                                           |
+
+#### Colored background
+
+If thresholds, value mappings, or color schemes are set, the cell background is displayed in the appropriate color.
+
+![Table with colored background cell type](https://grafana.com/media/docs/grafana/panels-visualizations/screenshot-table-colored-bkgrnd-v11.3-2.png)
+
+You can also set background cell color by row:
+
+![Table with background cell color applied to row](https://grafana.com/media/docs/grafana/panels-visualizations/screenshot-table-colored-row-v11.3.png)
+
+The colored background cell type has the following options:
+
+| Option                  | Description                                                                                                                                                                                                                                                                                                                                                                                                 |
+| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Background display mode | Choose between **Basic** and **Gradient**.                                                                                                                                                                                                                                                                                                                                                                  |
+| Apply to entire row     | Toggle the switch on to apply the background color that's configured for the cell to the whole row. When more than one field has this option enabled (for example, when it's set through the panel-level cell type or through overrides that target multiple fields), the row uses the color from the first (leftmost) matching column.                                                                     |
+| Cell value inspect      | <p>Enables value inspection from table cells. When the switch is toggled on, clicking the inspect icon in a cell opens the **Inspect value** drawer which contains two tabs: **Plain text** and **Code editor**.</p><p>Grafana attempts to automatically detect the type of data in the cell and opens the drawer with the associated tab showing. However, you can switch back and forth between tabs.</p> |
+| Tooltip from field      | Toggle on the **Tooltip from field** switch to use the values from another field (or column) in a tooltip. For more information, refer to the [Tooltip from field](#tooltip-from-field).                                                                                                                                                                                                                    |
+| Styling from field      | Toggle on the **Styling from field** switch to apply the styling from another field (or column). The referenced field must contain CSS properties formatted in JSON object syntax (for example, `{"name":"John"}`). For more information, refer to the [Styling from field](#styling-from-field).                                                                                                           |
+
+#### Data links
+
+If you've configured data links, when the cell type is **Auto**, the cell text becomes clickable.
+If you change the cell type to **Data links**, the cell text reflects the titles of the configured data links. To control the application of data link text more granularly, use a **Cell option > Cell type > Data links** field override.
+
+#### Gauge
+
+With this cell type, cells can be displayed as a graphical gauge, with several different presentation types.
+
+The gauge cell type has the following options:
+
+| Option             | Description                                                                                                                                                                                                                                                                                       |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Gauge display mode | Controls the type of gauge used. For more information, refer to the [Gauge display mode](#gauge-display-mode).                                                                                                                                                                                    |
+| Value display      | Controls how the value is displayed. For more information, refer to the [Value display](#value-display).                                                                                                                                                                                          |
+| Tooltip from field | Toggle on the **Tooltip from field** switch to use the values from another field (or column) in a tooltip. For more information, refer to [Tooltip from field](#tooltip-from-field).                                                                                                              |
+| Styling from field | Toggle on the **Styling from field** switch to apply the styling from another field (or column). The referenced field must contain CSS properties formatted in JSON object syntax (for example, `{"name":"John"}`). For more information, refer to the [Styling from field](#styling-from-field). |
+
+> **Note**
+>
+> The maximum and minimum values of the gauges are configured automatically from the smallest and largest values in your whole dataset.
+> If you don't want the max/min values to be pulled from the whole dataset, you can configure them for each column using [field overrides](#field-overrides).
+
+##### Gauge display mode
+
+You can set three gauge display modes.
+
+| Option | Description                                                                 |
+| ------ | --------------------------------------------------------------------------- |
+| Basic  | Shows a simple gauge with the threshold levels defining the color of gauge. |
+
+![Table cell with basic gauge mode](https://grafana.com/media/docs/grafana/panels-visualizations/screenshot-gauge-mode-basic-v11.3.png)
+
+|
+\| Gradient | The threshold levels define a gradient.
+
+![Table cell with gradient gauge mode](https://grafana.com/media/docs/grafana/panels-visualizations/screenshot-gauge-mode-gradient-v11.3.png)
+
+|
+\| Retro LCD | The gauge is split up in small cells that are lit or unlit.
+
+![Table cell with retro LCD gauge mode](https://grafana.com/media/docs/grafana/panels-visualizations/screenshot-gauge-mode-retro-v11.3.png)
+
+|
+
+##### Value display
+
+Labels displayed alongside of the gauges can be set to be colored by value, match the theme text color, or be hidden.
+
+| Option      | Description                  |
+| ----------- | ---------------------------- |
+| Value color | Labels are colored by value. |
+
+![Table with labels in value color](https://grafana.com/media/docs/grafana/panels-visualizations/screenshot-labels-value-color-v11.3.png)
+
+|
+\| Text color | Labels match the theme text color.
+
+![Table with labels in theme color](https://grafana.com/media/docs/grafana/panels-visualizations/screenshot-labels-text-color-v11.3.png)
+
+|
+\| Hidden | Labels are hidden.
+
+![Table with labels hidden](https://grafana.com/media/docs/grafana/panels-visualizations/screenshot-labels-hidden-v11.3.png)
+
+|
+
+#### Sparkline
+
+This cell type shows values rendered as a sparkline.
+To show sparklines on data with multiple time series, use the [Time series to table transformation](https://grafana.com/docs/grafana/v13.2/panels-visualizations/query-transform-data/transform-data/#time-series-to-table-transform) to process it into a format the table can show.
+
+You can color sparklines using thresholds by setting the field's color scheme to **From thresholds (by value)** in the [standard color scheme options](https://grafana.com/docs/grafana/v13.2/panels-visualizations/configure-standard-options/#color-scheme), using an override, and setting **Gradient mode** to **Scheme**. When thresholds are defined, the sparkline automatically reflects threshold levels along the line.
+
+![Table using sparkline cell type](https://grafana.com/media/docs/grafana/panels-visualizations/screenshot-table-as-sparkline-v11.3.png)
+
+The sparkline cell type options are described in the following table.
+For more detailed information about all of the sparkline styling options (except **Hide value**), refer to the [time series graph styles documentation](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/time-series/#graph-styles-options).
+
+| Option              | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Hide value          | Toggle the switch on or off to display or hide the cell value on the sparkline.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| Style               | Choose whether to display your time-series data as **Lines**, **Bars**, or **Points**. You can use overrides to combine multiple styles in the same graph.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| Line interpolation  | How the graph interpolates the series line. Choose from:<ul><li>**Linear** - Points are joined by straight lines.</li><li>**Smooth** - Points are joined by curved lines that smooths transitions between points.</li><li>**Step before** - The line is displayed as steps between points. Points are rendered at the end of the step.</li><li>**Step after** - The line is displayed as steps between points. Points are rendered at the beginning of the step.</li></ul>                                                                                                                                                                                                                                                                                                                                                                                    |
+| Line width          | The thickness of the series lines or the outline for bars using the **Line width** slider.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| Fill opacity        | The series area fill color using the **Fill opacity** slider.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| Gradient mode       | Gradient mode controls the gradient fill, which is based on the series color. Gradient appearance is influenced by the **Fill opacity** setting. To change the color, use the standard color scheme field option. For more information, refer to [Color scheme](https://grafana.com/docs/grafana/v13.2/panels-visualizations/configure-standard-options/#color-scheme). Choose from:<ul><li>**None** - No gradient fill. This is the default setting.</li><li>**Opacity** - An opacity gradient where the opacity of the fill increases as y-axis values increase.</li><li>**Hue** - A subtle gradient that's based on the hue of the series color.</li><li>**Scheme** - The sparkline line color automatically reflects the configured threshold levels when the color scheme is set to **From thresholds (by value)** and thresholds are defined.</li></ul> |
+| Line style          | Choose from:<ul><li>**Solid**</li><li>**Dash** - Select the length and gap for the line dashes. Default dash spacing is 10, 10.</li><li>**Dots** - Select the gap for the dot spacing. Default dot spacing is 0, 10.</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| Connect null values | How null values, which are gaps in the data, appear on the graph. Null values can be connected to form a continuous line or set to a threshold above which gaps in the data are no longer connected. Choose from:<ul><li>**Never** - Time series data points with gaps in the data are never connected.</li><li>**Always** - Time series data points with gaps in the data are always connected.</li><li>**Threshold** - Specify a threshold above which gaps in the data are no longer connected. This can be useful when the connected gaps in the data are of a known size or within a known range, and gaps outside this range should no longer be connected.</li></ul>                                                                                                                                                                                   |
+| Show points         | Whether to show data points to lines or bars. Choose from: <ul><li>**Auto** - Grafana determines a point's visibility based on the density of the data. If the density is low, then points appear.</li><li>**Always** - Show the points regardless of how dense the dataset is.</li><li>**Never** - Don't show points.</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| Point size          | Set the size of the points, from 1 to 40 pixels in diameter.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| Bar alignment       | Set the position of the bar relative to a data point.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| Tooltip from field  | Toggle on the **Tooltip from field** switch to use the values from another field (or column) in a tooltip. For more information, refer to [Tooltip from field](#tooltip-from-field).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| Styling from field  | Toggle on the **Styling from field** switch to apply the styling from another field (or column). The referenced field must contain CSS properties formatted in JSON object syntax (for example, `{"name":"John"}`). For more information, refer to the [Styling from field](#styling-from-field).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+
+#### JSON View
+
+This cell type shows values formatted as code.
+If a value is an object, the JSON object will appear on hover.
+
+![JSON view](https://grafana.com/static/img/docs/tables/json-view.png)
+
+It has the following cell options:
+
+| Option             | Description                                                                                                                                                                                                                                                                                                                                                                                                 |
+| ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Cell value inspect | <p>Enables value inspection from table cells. When the switch is toggled on, clicking the inspect icon in a cell opens the **Inspect value** drawer which contains two tabs: **Plain text** and **Code editor**.</p><p>Grafana attempts to automatically detect the type of data in the cell and opens the drawer with the associated tab showing. However, you can switch back and forth between tabs.</p> |
+| Tooltip from field | Toggle on the **Tooltip from field** switch to use the values from another field (or column) in a tooltip. For more information, refer to [Tooltip from field](#tooltip-from-field).                                                                                                                                                                                                                        |
+| Styling from field | Toggle on the **Styling from field** switch to apply the styling from another field (or column). The referenced field must contain CSS properties formatted in JSON object syntax (for example, `{"name":"John"}`). For more information, refer to the [Styling from field](#styling-from-field).                                                                                                           |
+
+#### Pill
+
+The **Pill** cell type displays each item in a comma-separated string in a colored block.
+
+![Table using the pill cell type](https://grafana.com/media/docs/grafana/panels-visualizations/screenshot-table-pill-cells-v12.2.png)
+
+The colors applied to each piece of text are maintained throughout the table.
+For example, if the word "test" is first displayed in a red pill, it will always be displayed in a red pill.
+
+The following data formats are supported for the pill cell type:
+
+- Comma-separated values (`cows,chickens,goats`)
+- JSON arrays of uniform (`(["cows","chickens","goats"])`) or mixed (`[1,2,3,"foo",42,"bar"]`) types
+
+Toggle on the **Tooltip from field** switch to use the values from another field (or column) in a tooltip.
+For more information, refer to [Tooltip from field](#tooltip-from-field).
+
+#### Markdown + HTML
+
+The **Markdown + HTML** cell type displays rich Markdown or HTML content, rendered using the
+[GitHub-Flavored Markdown](https://github.github.com/gfm/) spec. This is useful if you need to display
+customized, pre-formatted information alongside tabular data, such as formatted strings,
+lists of links, or other dynamic cases.
+
+For this cell type, you can toggle the **Dynamic height** switch, which allows the cell to resize
+dynamically based on the cell content. If you use dynamic height, we strongly recommend that you
+also toggle on **Pagination** to avoid performance issues in larger tables, since enabling
+Dynamic height disables table virtualization.
+
+By default, the HTML rendered is sanitized, and un-sanitized HTML can only be rendered
+in these cells if the [`disable_sanitize_html`](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#disable_sanitize_html) option is set to true for your Grafana instance.
+
+Toggle on the **Tooltip from field** switch to use the values from another field (or column) in a tooltip.
+For more information, refer to [Tooltip from field](#tooltip-from-field).
+
+![Table using the pill cell type](https://grafana.com/media/docs/grafana/panels-visualizations/screenshot-table-markdown-v12.2.png)
+
+#### Image
+
+If you have a field value that is an image URL or a base64 encoded image, this cell type displays it as an image.
+
+![Table with image cell type](https://grafana.com/media/docs/grafana/panels-visualizations/screenshot-table-cell-image-v11.3.png)
+
+It has the following options:
+
+| Option             | Description                                                                                                                                                                          |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Alt text           | Set the alternative text of an image. The text will be available for screen readers and in cases when images can't be loaded.                                                        |
+| Title text         | Set the text that's displayed when the image is hovered over with a cursor.                                                                                                          |
+| Tooltip from field | Toggle on the **Tooltip from field** switch to use the values from another field (or column) in a tooltip. For more information, refer to [Tooltip from field](#tooltip-from-field). |
+
+#### Actions
+
+Actions add a button to a cell that triggers a basic, unauthenticated API call when clicked. Configure actions from **Data links and actions** or with field overrides.
+
+| Option             | Description                                                                                                                                                                          |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Endpoint           | Enter the endpoint URL.                                                                                                                                                              |
+| Method             | Choose from **GET**, **POST**, and **PUT**.                                                                                                                                          |
+| Content-Type       | Select an option in the drop-down list. Choose from: JSON, Text, JavaScript, HTML, XML, and x-www-form-urlencoded.                                                                   |
+| Query parameters   | Enter as many **Key**, **Value** pairs as you need.                                                                                                                                  |
+| Header parameters  | Enter as many **Key**, **Value** pairs as you need.                                                                                                                                  |
+| Payload            | Enter the body of the API call.                                                                                                                                                      |
+| Tooltip from field | Toggle on the **Tooltip from field** switch to use the values from another field (or column) in a tooltip. For more information, refer to [Tooltip from field](#tooltip-from-field). |
+
+#### Tooltip from field
+
+Toggle on the **Tooltip from field** switch to use the values from another field (or column) in a tooltip.
+
+When you toggle the switch on, you can select from a drop-down list any of the fields in the table to be used as the source of the tooltip content.
+All table fields are included in the drop-down list, whether visible or hidden.
+
+When a tooltip from a field has been added to a cell, a chip is displayed in the top-right or top-left corner of the cell:
+
+![Tooltip chip](https://grafana.com/media/docs/grafana/panels-visualizations/screenshot-tooltip-chip-1-v12.2.png)
+
+Hover your mouse over the chip to display the tooltip.
+
+When you toggle on the switch, the **Tooltip placement** option, which controls where the tooltip box opens upon hover, is also displayed.
+Select one of the following options: **Auto**, **Top**, **Right**, **Bottom**, and **Left**.
+
+The content of the tooltip is determined by the values of the source field and can't be directly edited.
+However, you can affect the display of the value using overrides like value mappings, as shown in the [Example: Tooltip from field with value mappings](#example-tooltip-from-field-with-value-mappings) section.
+
+While you can turn on this option under **Cell options** and have it applied to all cells in the table, it's typically used as an override on a sub-set of cells instead.
+This is demonstrated in the example in the following section.
+
+##### Example: Tooltip from field using overrides
+
+The following table has five visible fields (columns) as well as a hidden field called "Info":
+
+![Table that includes a hidden column](https://grafana.com/media/docs/grafana/panels-visualizations/screenshot-tooltip-table-1-v12.2.png)
+
+- The "Info" field is hidden using the **Table > Hide in table** override property.
+- The following overrides have been applied to the "Short text" field:
+  - The values from the "Info" field are used as tooltip text for the "Short text" cells using the **Cell options > Tooltip from field** override property.
+  - The **Cell options > Tooltip placement** override property is set to control the placement of the tooltip.
+
+![Override to use the Info field values as tooltips for the Short text column](https://grafana.com/media/docs/grafana/panels-visualizations/screenshot-tooltip-override-2-v12.2.png)
+
+Now, when you hover the cursor over the chip in the "Short text" column, the corresponding values from the "Info" column appear in the tooltip:
+
+![Info field value in the tooltip of the Short text cell upon hover](https://grafana.com/media/docs/grafana/panels-visualizations/screenshot-tooltip-on-hover-v12.2.png)
+
+##### Example: Tooltip from field with value mappings
+
+While the content of the tooltip is determined by the values of the source field and can't be directly edited, you can use field overrides on the source field to manipulate the display of that value.
+
+For example, if the "Info" column is being used as the source field for the tooltip values, you could set up a value mapping.
+In this case, the value "up" is mapped to the word "Good":
+
+![Info field value up being mapped to the value Good in an override](https://grafana.com/media/docs/grafana/panels-visualizations/screenshot-tooltip-value-map-v12.2.png)
+
+Now, when you hover the cursor over the chip in the "Short text" cell, the mapped value appears in the tooltip:
+
+![Info field mapped to a new value in the tooltip of the Short text cell upon hover](https://grafana.com/media/docs/grafana/panels-visualizations/screenshot-tooltip-on-hover-2-v12.2.png)
+
+You can use all field overrides to affect the display of the tooltip.
+For example, the **Table > Column width** or **Cell options > Cell type** overrides can change the cell width or visual display of the data.
+
+#### Styling from field
+
+Toggle on the **Styling from field** switch to apply the styling from another field (or column).
+The referenced field must contain [CSS properties](https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleProperties) formatted in JSON object syntax. For example:
+
+```JSON
+{"marginLeft":12, "text-decoration": "underline"}
+```
+
+While you can turn on this option under **Cell options** and have it applied to all cells in the table, it's typically used as an override on a sub-set of cells instead.
+This is demonstrated in the following example.
+
+The following table has six visible fields (columns) as well as a hidden field called "Style":
+
+![Configuration of a table including the styling from field option](https://grafana.com/media/docs/grafana/panels-visualizations/screenshot-style-from-field-config-v12.3.png)
+
+- The "Style" field has JSON objects with CSS properties. (Note that they are formatted for use in CSV format in this example.)
+- The "Style" field is hidden using the **Table > Hide in table** override property.
+- The "Info" field is using the **Cell options > Styling from field** override property with the "Style" field as the source.
+
+The following image shows the "Info" field with the styling from the "Style" field applied:
+
+![Info field with styling from Style field applied](https://grafana.com/media/docs/grafana/panels-visualizations/screenshot-style-from-field-v12.3.png)
+
+### Standard options
+
+**Standard options** in the panel editor pane let you change how field data is displayed in your visualizations. When you set a standard option, the change is applied to all fields or series. For more granular control over the display of fields, refer to [Configure overrides](https://grafana.com/docs/grafana/v13.2/panels-visualizations/configure-overrides/).
+
+| Option        | Description                                                                                                                                       |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Unit          | Choose which unit a field should use.                                                                                                             |
+| Min/Max       | Set the minimum and maximum values used in percentage threshold calculations or leave these field empty for them to be calculated automatically.  |
+| Field min/max | Enable **Field min/max** to have Grafana calculate the min or max of each field individually, based on the minimum or maximum value of the field. |
+| Decimals      | Specify the number of decimals Grafana includes in the rendered value.                                                                            |
+| Display name  | Set the display title of all fields. You can use variables in the field title.                                                                    |
+| Color scheme  | Set single or multiple colors for your entire visualization.                                                                                      |
+| No value      | Enter what Grafana should display if the field value is empty or null. The default value is a hyphen (-).                                         |
+
+To learn more, refer to [Configure standard options](https://grafana.com/docs/grafana/v13.2/panels-visualizations/configure-standard-options/).
+
+### Data links and actions
+
+*Data links* allow you to link to other panels, dashboards, and external resources and *actions* let you trigger basic, unauthenticated, API calls.
+In both cases, you can carry out these tasks while maintaining the context of the source panel.
+
+For each data link, set the following options:
+
+- **Title**
+- **URL**
+- **Open in new tab**
+
+Data links for this visualization don't include the **One click** switch, however, if there's only one data link configured, that data link has single-click functionality.
+If multiple data links are configured, then clicking the visualization opens a menu that displays all the data links.
+
+For each action, define the following API call settings:
+
+| Option               | Description                                                                                                                                                                                                                                 |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Title                | A human-readable label for the action that's displayed in the UI.                                                                                                                                                                           |
+| Confirmation message | A descriptive prompt to confirm or cancel the action.                                                                                                                                                                                       |
+| Connection           | Specify how the action's HTTP request is sent. Choose from: **Direct from browser** or routed through a configured data source.                                                                                                             |
+| Method               | Select from **POST**, **PUT**, or **GET**.                                                                                                                                                                                                  |
+| URL                  | The request URL.</p><p>To add a variable, click in the **URL** field and enter `$` or press Ctrl+Space or Cmd+Space to see a list of available variables.                                                                                   |
+| Variables            | **Key** and **Name** pairs with a type selection. Click the **+** icon to add as many variables as you need. To add a variable to the request, prefix the key with `$`. You can set the values for the variables when performing an action. |
+| Query parameters     | **Key** and **Value** pairs. Click the **+** icon to add as many key/value pairs as you need.                                                                                                                                               |
+| Headers              | Comprised of **Key** and **Value** pairs and a **Content-Type**.</p><p>Click the **+** icon to add as many key/value pairs as you need.                                                                                                     |
+| Content-Type         | Select from the following: **application/json**, **text/plain**, **application/XML**, and **application/x-www-form-urlencoded**.                                                                                                            |
+| Body                 | The body of the request.                                                                                                                                                                                                                    |
+
+To learn more, refer to [Configure data links and actions](https://grafana.com/docs/grafana/v13.2/panels-visualizations/configure-data-links/).
+
+### Value mappings
+
+Value mapping is a technique you can use to change how data appears in a visualization.
+
+For each value mapping, set the following options:
+
+- **Condition** - Choose what's mapped to the display text and (optionally) color:
+  - **Value** - Specific values
+  - **Range** - Numerical ranges
+  - **Regex** - Regular expressions
+  - **Special** - Special values like `Null`, `NaN` (not a number), or boolean values like `true` and `false`
+- **Display text**
+- **Color** (Optional)
+- **Icon** (Canvas only)
+
+To learn more, refer to [Configure value mappings](https://grafana.com/docs/grafana/v13.2/panels-visualizations/configure-value-mappings/).
+
+### Thresholds
+
+A threshold is a value or limit you set for a metric that’s reflected visually when it’s met or exceeded. Thresholds are one way you can conditionally style and color your visualizations based on query results.
+
+For each threshold, set the following options:
+
+| Option          | Description                                  |
+| --------------- | -------------------------------------------- |
+| Value           | Set the value for each threshold.            |
+| Thresholds mode | Choose from **Absolute** and **Percentage**. |
+
+To learn more, refer to [Configure thresholds](https://grafana.com/docs/grafana/v13.2/panels-visualizations/configure-thresholds/).
+
+### Field overrides
+
+Overrides allow you to customize visualization settings for specific fields or series. When you add an override rule, it targets a particular set of fields and lets you define multiple options for how that field is displayed.
+
+Choose from the following override options:
+
+| Option                         | Description                                                                                                   |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------- |
+| Fields with name               | Select a field from the list of all available fields.                                                         |
+| Field with name matching regex | Specify fields to override with a regular expression.                                                         |
+| Fields with type               | Select fields by type, such as string, numeric, or time.                                                      |
+| Fields returned by query       | Select all fields returned by a specific query, such as A, B, or C.                                           |
+| Fields with values             | Select all fields returned by your defined reducer condition, such as **Min**, **Max**, **Count**, **Total**. |
+
+To learn more, refer to [Configure field overrides](https://grafana.com/docs/grafana/v13.2/panels-visualizations/configure-overrides/).
+
+#### Apply overrides to nested table fields
+
+By default, field overrides apply only to columns in the parent table.
+To target columns inside a nested table, set the **Target fields** option on the override to **Nested**:
+
+![Field override configuration with the Target fields selector showing Series and Nested options](https://grafana.com/media/docs/grafana/panels-visualizations/screenshot-table-override-nested-scope-v13.x.png)
+
+All standard override properties—including thresholds, value mappings, units, data links, and cell type—apply the same way to nested fields.
+
+![Nested table with a threshold override applied to a column inside an expanded sub-table](https://grafana.com/media/docs/grafana/panels-visualizations/screenshot-nested-table-w-overrides-v13.1.png)

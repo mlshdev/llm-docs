@@ -1,0 +1,157 @@
+> Release-pinned source for Grafana v13.2.0: [docs/sources/datasources/mysql/alerting/index.md](https://github.com/grafana/grafana/blob/f681b1359f6a0b8ecb9f2c49a88ac72b75bde73b/docs/sources/datasources/mysql/alerting/index.md)
+
+# MySQL alerting
+
+You can use Grafana Alerting with MySQL to create alerts based on your MySQL data. This allows you to monitor metrics, detect anomalies, and receive notifications when specific conditions are met.
+
+For general information about Grafana Alerting, refer to [Grafana Alerting](https://grafana.com/docs/grafana/v13.2/alerting/).
+
+## Before you begin
+
+Before creating alerts with MySQL, ensure you have:
+
+- A MySQL data source configured in Grafana.
+- Appropriate permissions to create alert rules.
+- Understanding of the metrics you want to monitor.
+
+## Supported query types
+
+MySQL alerting works with **time series queries** that return numeric data over time. Table formatted queries are not supported in alert rule conditions.
+
+To create a valid alert query:
+
+- Include a `time` column that returns a SQL datetime or UNIX epoch timestamp
+- Return numeric values for the metrics you want to alert on
+- Sort results by the time column
+
+For more information on writing time series queries, refer to [MySQL query editor](https://grafana.com/docs/grafana/v13.2/datasources/mysql/query-editor/).
+
+### Query format requirements
+
+| Query format | Alerting support | Notes                                    |
+| ------------ | ---------------- | ---------------------------------------- |
+| Time series  | Yes              | Required for alerting                    |
+| Table        | No               | Convert to time series format for alerts |
+
+## Create an alert rule
+
+To create an alert rule using MySQL:
+
+1. Navigate to **Alerting** > **Alert rules**.
+2. Click **New alert rule**.
+3. Enter a name for the alert rule.
+4. Select your **MySQL** data source.
+5. Build your query using the query editor:
+   - Set the **Format** to **Time series**
+   - Include a time column using the `$__time()` or `$__timeGroup()` macro
+   - Add numeric columns for the values to monitor
+   - Use `$__timeFilter()` to filter data by the dashboard time range
+6. Configure the alert condition (for example, when the average is above a threshold).
+7. Set the evaluation interval and pending period.
+8. Configure notifications and labels.
+9. Click **Save rule**.
+
+For detailed instructions, refer to [Create a Grafana-managed alert rule](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/create-grafana-managed-rule/).
+
+## Example alert queries
+
+The following examples show common alerting scenarios with MySQL.
+
+### Alert on high error count
+
+Monitor the number of errors over time:
+
+```sql
+SELECT
+  $__timeGroup(created_at, '1m') AS time,
+  COUNT(*) AS error_count
+FROM error_logs
+WHERE $__timeFilter(created_at)
+  AND level = 'error'
+GROUP BY time
+ORDER BY time
+```
+
+**Condition:** When error\_count is above 100.
+
+### Alert on average response time
+
+Monitor API response times:
+
+```sql
+SELECT
+  $__timeGroup(request_time, '5m') AS time,
+  AVG(response_time_ms) AS avg_response_time
+FROM api_requests
+WHERE $__timeFilter(request_time)
+GROUP BY time
+ORDER BY time
+```
+
+**Condition:** When avg\_response\_time is above 500 (milliseconds).
+
+### Alert on low order volume
+
+Detect drops in order activity:
+
+```sql
+SELECT
+  $__timeGroup(order_date, '1h') AS time,
+  COUNT(*) AS order_count
+FROM orders
+WHERE $__timeFilter(order_date)
+GROUP BY time
+ORDER BY time
+```
+
+**Condition:** When order\_count is below 10.
+
+### Alert on disk usage percentage
+
+Monitor database storage metrics:
+
+```sql
+SELECT
+  $__timeGroup(recorded_at, '5m') AS time,
+  AVG(disk_used_percent) AS disk_usage
+FROM system_metrics
+WHERE $__timeFilter(recorded_at)
+  AND metric_type = 'disk'
+GROUP BY time
+ORDER BY time
+```
+
+**Condition:** When disk\_usage is above 85.
+
+## Limitations
+
+When using MySQL with Grafana Alerting, be aware of the following limitations:
+
+### Template variables not supported
+
+Alert queries cannot contain template variables. Grafana evaluates alert rules on the backend without dashboard context, so variables like `$hostname` or `$environment` won't be resolved.
+
+If your dashboard query uses template variables, create a separate query for alerting with hard coded values.
+
+### Table format not supported
+
+Queries using the **Table** format cannot be used for alerting. Set the query format to **Time series** and ensure your query returns a time column.
+
+### Query timeout
+
+Complex queries with large datasets may timeout during alert evaluation. Optimize queries for alerting by:
+
+- Adding appropriate `WHERE` clauses to limit data
+- Using indexes on time and filter columns
+- Reducing the time range evaluated
+
+## Best practices
+
+Follow these best practices when creating MySQL alerts:
+
+- **Use time series format:** Always set the query format to Time series for alert queries.
+- **Include time filters:** Use the `$__timeFilter()` macro to limit data to the evaluation window.
+- **Optimize queries:** Add indexes on columns used in `WHERE` clauses and `GROUP BY`.
+- **Test queries first:** Verify your query returns expected results in Explore before creating an alert.
+- **Set realistic thresholds:** Base alert thresholds on historical data patterns.
+- **Use meaningful names:** Give alert rules descriptive names that indicate what they monitor.

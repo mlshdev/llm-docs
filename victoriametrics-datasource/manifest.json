@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "project": "victoriametrics-datasource",
+  "title": "VictoriaMetrics datasource for Grafana",
+  "repository": "VictoriaMetrics/victoriametrics-datasource",
+  "tag": "v0.25.2",
+  "releaseId": 349514008,
+  "releasePublishedAt": "2026-07-06T11:39:52Z",
+  "sourceCommit": "302cac37e958cf3d40413f04ebed199536649e34",
+  "documentCount": 3,
+  "notes": [
+    "Pages are the plugin catalog documentation, the repository guide, and the changelog at the immutable release tag.",
+    "Links and screenshots that upstream pins to a branch are rewritten to the released commit."
+  ]
+}

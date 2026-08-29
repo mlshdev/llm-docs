@@ -1,4 +1,4 @@
-import type { Expression, Program, Property } from "estree";
+import type { Expression, ImportDeclaration, Program, Property } from "estree";
 import type { Root } from "mdast";
 import remarkGfm from "remark-gfm";
 import remarkMdx from "remark-mdx";
@@ -36,9 +36,32 @@ export interface ConvertedMdx {
   readonly description?: string;
 }
 
+// `omitted` marks an import that renders no prose, such as an icon, so the page
+// that uses it converts without the binding being mistaken for a component.
+export interface MdxImport {
+  readonly kind: "mdx" | "text" | "omitted";
+  readonly sourcePath: string;
+  readonly source: string;
+}
+
+export interface MdxOptions {
+  // Resolves an import to repository content so partials and sample files are
+  // inlined into the page that renders them.
+  readonly resolveImport?: (
+    specifier: string,
+    sourcePath: string,
+  ) => MdxImport | undefined;
+}
+
 interface TransformContext {
   readonly sourcePath: string;
   readonly constants: Map<string, StaticValue>;
+  readonly partials: Map<string, MdxImport>;
+  // Names bound to JavaScript this converter cannot evaluate: page-local
+  // components and element-valued bindings that only exist while rendering.
+  readonly computed: Set<string>;
+  readonly options: MdxOptions;
+  readonly stack: ReadonlySet<string>;
 }
 
 const parser = unified()
@@ -51,7 +74,37 @@ const writer = unified().use(remarkGfm).use(remarkStringify, {
   listItemIndent: "one",
 });
 const blockedKeys = new Set(["__proto__", "constructor", "prototype"]);
-const transparentComponents = new Set(["Row", "Col", "Properties"]);
+const transparentComponents = new Set([
+  "Row",
+  "Col",
+  "Properties",
+  "Cards",
+  "Column",
+  "FrameworkSelector",
+  "Tabs",
+]);
+
+// Views a site renders from data or JavaScript rather than from page prose.
+const omittedComponents = new Set([
+  "B2B",
+  "BenchmarkChart",
+  "DocCardList",
+  "Frameworks",
+  "PermissionTable",
+  "PiiTable",
+]);
+
+const calloutTitles = new Map([
+  ["caution", "Caution"],
+  ["danger", "Danger"],
+  ["error", "Error"],
+  ["info", "Note"],
+  ["note", "Note"],
+  ["success", "Success"],
+  ["tip", "Tip"],
+  ["warn", "Warning"],
+  ["warning", "Warning"],
+]);
 const structuredComponents = new Set([
   "Tiles",
   "TroubleshootingTiles",
@@ -61,11 +114,16 @@ const structuredComponents = new Set([
   "PathFlow",
 ]);
 
-export function convertMdx(source: string, sourcePath: string): ConvertedMdx {
+export function convertMdx(
+  source: string,
+  sourcePath: string,
+  options: MdxOptions = {},
+): ConvertedMdx {
   const frontmatter = parseFrontmatter(source);
-  const parsed = parser.parse(frontmatter.body) as unknown as AstNode;
-  const context: TransformContext = { sourcePath, constants: new Map() };
-  const children = rewriteChildren(parsed.children ?? [], context, "flow");
+  const context = createContext(sourcePath, options, new Set([sourcePath]));
+  const children = groupListItems(
+    rewriteChildren(parseBody(frontmatter.body), context, "flow"),
+  );
   assertPlainMarkdown(children, sourcePath);
   const root: Root = { type: "root", children: children as Root["children"] };
   const body = normalizeSpacing(writer.stringify(root));
@@ -82,6 +140,27 @@ export function convertMdx(source: string, sourcePath: string): ConvertedMdx {
   };
 }
 
+function createContext(
+  sourcePath: string,
+  options: MdxOptions,
+  stack: ReadonlySet<string>,
+): TransformContext {
+  return {
+    sourcePath,
+    constants: new Map<string, StaticValue>([
+      ["props", Object.create(null) as StaticObject],
+    ]),
+    partials: new Map(),
+    computed: new Set(),
+    options,
+    stack,
+  };
+}
+
+function parseBody(body: string): readonly AstNode[] {
+  return (parser.parse(body) as unknown as AstNode).children ?? [];
+}
+
 function rewriteChildren(
   children: readonly AstNode[],
   context: TransformContext,
@@ -93,7 +172,7 @@ function rewriteChildren(
       child.type === "mdxFlowExpression" ||
       child.type === "mdxTextExpression"
     ) {
-      const value = evaluateExpressionNode(child, context.constants);
+      const value = evaluateExpressionNode(child, context);
       if (isStaticObject(value)) {
         if (mode === "phrasing") {
           const tag = staticString(value.tag);
@@ -130,13 +209,44 @@ function rewriteChildren(
   return result;
 }
 
+// Card and step components each render one entry of a list their wrapper draws,
+// so consecutive entries are collected back into a single Markdown list.
+function groupListItems(nodes: readonly AstNode[]): AstNode[] {
+  if (!nodes.some((node) => node.type === "listItem")) {
+    return [...nodes];
+  }
+  const result: AstNode[] = [];
+  let items: AstNode[] = [];
+  const flush = (): void => {
+    if (items.length > 0) {
+      result.push({
+        type: "list",
+        ordered: false,
+        spread: false,
+        children: items,
+      });
+      items = [];
+    }
+  };
+  for (const node of nodes) {
+    if (node.type === "listItem") {
+      items.push(node);
+      continue;
+    }
+    flush();
+    result.push(node);
+  }
+  flush();
+  return result;
+}
+
 function rewriteNode(
   node: AstNode,
   context: TransformContext,
   mode: "flow" | "phrasing",
 ): AstNode[] {
   if (node.type === "mdxjsEsm") {
-    collectConstants(node, context);
+    collectEsm(node, context);
     return [];
   }
   if (node.type === "yaml") {
@@ -172,12 +282,26 @@ function rewriteJsx(
   mode: "flow" | "phrasing",
 ): AstNode[] {
   const name = node.name;
-  const children = rewriteChildren(
-    node.children ?? [],
-    context,
-    node.type === "mdxJsxTextElement" || isInlineElement(name)
-      ? "phrasing"
-      : "flow",
+  if (name === "table") {
+    return tableNodes(node, context);
+  }
+  if (typeof name === "string") {
+    const partial = context.partials.get(name);
+    if (partial) {
+      return inlinePartial(partial, node, context);
+    }
+    if (context.computed.has(name) || omittedComponents.has(name)) {
+      return [];
+    }
+  }
+  const children = groupListItems(
+    rewriteChildren(
+      node.children ?? [],
+      context,
+      node.type === "mdxJsxTextElement" || isInlineElement(name)
+        ? "phrasing"
+        : "flow",
+    ),
   );
   if (name === null || name === undefined) {
     if ((node.attributes?.length ?? 0) > 0) {
@@ -188,6 +312,147 @@ function rewriteJsx(
   const props = staticProps(node.attributes ?? [], context);
   if (transparentComponents.has(name)) {
     return children;
+  }
+  if (name === "Callout" || name === "Admonition") {
+    const type = staticString(props.type) ?? "info";
+    const heading = calloutTitles.get(type);
+    if (!heading) {
+      throw new Error(
+        `Unsupported callout type ${type} in ${context.sourcePath}`,
+      );
+    }
+    return [blockquoteWith(staticString(props.title) ?? heading, children)];
+  }
+  if (name === "PreventLockout") {
+    return [
+      blockquoteWith("Warning: prevent settings misconfiguration lockouts", [
+        paragraph([
+          text(
+            "Login policy misconfiguration can lock you out of the instance. Create a service account personal access token with the IAM_OWNER role to revert login changes through the API, and always designate a second instance administrator.",
+          ),
+        ]),
+      ]),
+    ];
+  }
+  if (name === "TerminologyUpdate") {
+    const term = requiredString(
+      props.newTerm,
+      "TerminologyUpdate.newTerm",
+      context.sourcePath,
+    );
+    const previous = Array.isArray(props.oldTerms)
+      ? props.oldTerms.map(String)
+      : [];
+    return [
+      blockquoteWith("Terminology update", [
+        paragraph([
+          text(
+            `The term ${term} replaces ${previous.join(", ")}; they all refer to the same functionality.`,
+          ),
+        ]),
+      ]),
+    ];
+  }
+  if (name === "Tab") {
+    const label = staticString(props.value) ?? staticString(props.label);
+    return label
+      ? [paragraph([{ type: "strong", children: [text(label)] }]), ...children]
+      : children;
+  }
+  if (name === "Card") {
+    const title = staticString(props.title);
+    const href = staticString(props.href);
+    const label: AstNode[] = title
+      ? href
+        ? [{ type: "link", url: href, children: [text(title)] }]
+        : [{ type: "strong", children: [text(title)] }]
+      : href
+        ? [{ type: "link", url: href, children: [text(href)] }]
+        : [];
+    return [
+      {
+        type: "listItem",
+        spread: false,
+        children: [
+          ...(label.length > 0 ? [paragraph(label)] : []),
+          ...children,
+        ],
+      },
+    ];
+  }
+  if (name === "Step") {
+    return [{ type: "listItem", spread: true, children }];
+  }
+  if (name === "Steps") {
+    return children.map((child) =>
+      child.type === "list" ? { ...child, ordered: true } : child,
+    );
+  }
+  if (name === "GithubCodeBlock") {
+    const url = requiredString(
+      props.url,
+      "GithubCodeBlock.url",
+      context.sourcePath,
+    );
+    return [
+      paragraph([
+        { type: "link", url, children: [text("Code example on GitHub")] },
+      ]),
+    ];
+  }
+  if (name === "DynamicCodeBlock") {
+    const code = staticString(props.code);
+    if (code === undefined) {
+      return [];
+    }
+    return [
+      { type: "code", lang: staticString(props.lang) ?? null, value: code },
+    ];
+  }
+  if (name === "ApiCard") {
+    const heading = [staticString(props.title), staticString(props.type)]
+      .filter((value): value is string => Boolean(value))
+      .join(" - ");
+    return heading
+      ? [
+          paragraph([{ type: "strong", children: [text(heading)] }]),
+          ...children,
+        ]
+      : children;
+  }
+  if (name === "ThemedImage") {
+    const sources = props.sources;
+    const source = isStaticObject(sources)
+      ? (staticString(sources.light) ?? staticString(sources.dark))
+      : undefined;
+    if (!source) {
+      throw new Error(
+        `ThemedImage without a static source in ${context.sourcePath}`,
+      );
+    }
+    return phrasingForMode(
+      [
+        {
+          type: "image",
+          url: source,
+          alt: staticString(props.alt) ?? "",
+        },
+      ],
+      mode,
+    );
+  }
+  if (name === "ResponsivePlayer" || name === "iframe") {
+    const url = staticString(props.url) ?? staticString(props.src);
+    if (!url) {
+      throw new Error(
+        `Embedded player without a static source in ${context.sourcePath}`,
+      );
+    }
+    return [
+      paragraph([
+        { type: "link", url, children: [text("Open the embedded media")] },
+      ]),
+    ];
   }
   if (name === "Note" || name === "Warning" || name === "Success") {
     return [
@@ -458,10 +723,182 @@ function staticLinkList(
   ];
 }
 
-function collectConstants(node: AstNode, context: TransformContext): void {
+function blockquoteWith(
+  heading: string,
+  children: readonly AstNode[],
+): AstNode {
+  return {
+    type: "blockquote",
+    children: [
+      paragraph([{ type: "strong", children: [text(heading)] }]),
+      ...children,
+    ],
+  };
+}
+
+function inlinePartial(
+  partial: MdxImport,
+  node: AstNode,
+  context: TransformContext,
+): AstNode[] {
+  if (partial.kind !== "mdx") {
+    throw new Error(
+      `Imported file ${partial.sourcePath} is rendered as a component in ${context.sourcePath}`,
+    );
+  }
+  if (context.stack.has(partial.sourcePath)) {
+    throw new Error(
+      `Partial ${partial.sourcePath} includes itself from ${context.sourcePath}`,
+    );
+  }
+  const nested = createContext(
+    partial.sourcePath,
+    context.options,
+    new Set([...context.stack, partial.sourcePath]),
+  );
+  nested.constants.set("props", staticProps(node.attributes ?? [], context));
+  return groupListItems(
+    rewriteChildren(
+      parseBody(parseFrontmatter(partial.source).body),
+      nested,
+      "flow",
+    ),
+  );
+}
+
+interface TableCell {
+  readonly node: AstNode;
+  readonly header: boolean;
+}
+
+function tableNodes(node: AstNode, context: TransformContext): AstNode[] {
+  const rows = tableRows(node);
+  const cellNodes = (cell: TableCell, mode: "flow" | "phrasing"): AstNode[] =>
+    rewriteChildren(cell.node.children ?? [], context, mode);
+  if (!rows.some((row) => row.some((cell) => cell.header))) {
+    // Without header cells the table only positions content on the page, so its
+    // cells are kept as the blocks they contain.
+    return rows.flatMap((row) =>
+      row.flatMap((cell) => cellNodes(cell, "flow")),
+    );
+  }
+  const width = Math.max(...rows.map((row) => row.length));
+  return [
+    {
+      type: "table",
+      align: Array.from({ length: width }, () => null),
+      children: rows.map((row) => ({
+        type: "tableRow",
+        children: Array.from({ length: width }, (_, index) => {
+          const cell = row[index];
+          return {
+            type: "tableCell",
+            children: cell ? flattenPhrasing(cellNodes(cell, "phrasing")) : [],
+          };
+        }),
+      })),
+    },
+  ];
+}
+
+function tableRows(node: AstNode): TableCell[][] {
+  const rows: TableCell[][] = [];
+  // Rows and cells are nested in section elements, and MDX wraps inline-only
+  // cells in a paragraph, so both are collected by descending until the next
+  // table starts.
+  const collect = (current: AstNode, cells: TableCell[]): void => {
+    for (const child of current.children ?? []) {
+      if (child.name === "td" || child.name === "th") {
+        cells.push({ node: child, header: child.name === "th" });
+        continue;
+      }
+      if (child.name !== "table") {
+        collect(child, cells);
+      }
+    }
+  };
+  const visit = (current: AstNode): void => {
+    for (const child of current.children ?? []) {
+      if (child.name === "tr") {
+        const cells: TableCell[] = [];
+        collect(child, cells);
+        rows.push(cells);
+        continue;
+      }
+      if (child.name !== "table") {
+        visit(child);
+      }
+    }
+  };
+  visit(node);
+  return rows;
+}
+
+const phrasingTypes = new Set([
+  "break",
+  "delete",
+  "emphasis",
+  "image",
+  "inlineCode",
+  "link",
+  "strong",
+  "text",
+]);
+
+// Table cells hold a single line of Markdown, so nested blocks collapse into
+// the phrasing content they carry.
+function flattenPhrasing(nodes: readonly AstNode[]): AstNode[] {
+  const result: AstNode[] = [];
+  for (const node of nodes) {
+    if (node.type === "break") {
+      result.push(text(" "));
+      continue;
+    }
+    if (typeof node.value === "string" && phrasingTypes.has(node.type)) {
+      result.push({ ...node, value: node.value.replace(/\s+/g, " ") });
+      continue;
+    }
+    if (phrasingTypes.has(node.type)) {
+      result.push({
+        ...node,
+        ...(node.children ? { children: flattenPhrasing(node.children) } : {}),
+      });
+      continue;
+    }
+    const inner =
+      node.type === "code"
+        ? [{ type: "inlineCode", value: node.value ?? "" }]
+        : flattenPhrasing(node.children ?? []);
+    if (inner.length === 0) {
+      continue;
+    }
+    if (result.length > 0) {
+      result.push(text(" "));
+    }
+    result.push(...inner);
+  }
+  return result;
+}
+
+function collectEsm(node: AstNode, context: TransformContext): void {
   const program = estreeProgram(node);
   for (const statement of program.body) {
+    if (statement.type === "ImportDeclaration") {
+      collectImport(statement, context);
+      continue;
+    }
+    if (statement.type === "ExportDefaultDeclaration") {
+      context.computed.add("default");
+      continue;
+    }
     if (statement.type !== "ExportNamedDeclaration" || !statement.declaration) {
+      continue;
+    }
+    if (statement.declaration.type === "FunctionDeclaration") {
+      const name = statement.declaration.id?.name;
+      if (name) {
+        context.computed.add(name);
+      }
       continue;
     }
     if (
@@ -474,12 +911,80 @@ function collectConstants(node: AstNode, context: TransformContext): void {
       if (declaration.id.type !== "Identifier" || !declaration.init) {
         continue;
       }
-      context.constants.set(
-        declaration.id.name,
-        evaluateStatic(declaration.init, context.constants),
-      );
+      const value = staticOrComputed(declaration.init, context);
+      if (value === computed) {
+        context.computed.add(declaration.id.name);
+      } else {
+        context.constants.set(declaration.id.name, value);
+      }
     }
   }
+}
+
+function collectImport(
+  statement: ImportDeclaration,
+  context: TransformContext,
+): void {
+  const specifier = statement.source.value;
+  if (typeof specifier !== "string") {
+    throw new Error(`Dynamic MDX import in ${context.sourcePath}`);
+  }
+  for (const binding of statement.specifiers) {
+    if (binding.type === "ImportNamespaceSpecifier") {
+      context.computed.add(binding.local.name);
+      continue;
+    }
+    const resolved = context.options.resolveImport?.(
+      specifier,
+      context.sourcePath,
+    );
+    if (!resolved) {
+      continue;
+    }
+    if (resolved.kind === "mdx") {
+      context.partials.set(binding.local.name, resolved);
+    } else if (resolved.kind === "text") {
+      context.constants.set(binding.local.name, resolved.source);
+    } else {
+      context.computed.add(binding.local.name);
+    }
+  }
+}
+
+// Bindings that only exist while React renders: functions, elements, and
+// anything built from them. Pages that show them keep their prose either way.
+const computed = Symbol("computed");
+
+function staticOrComputed(
+  node: Expression,
+  context: TransformContext,
+): StaticValue | typeof computed {
+  if (
+    node.type === "ArrowFunctionExpression" ||
+    node.type === "FunctionExpression" ||
+    node.type === "ClassExpression" ||
+    node.type.startsWith("JSX")
+  ) {
+    return computed;
+  }
+  const root = rootIdentifier(node);
+  if (root !== undefined && context.computed.has(root)) {
+    return computed;
+  }
+  return evaluateStatic(node, context.constants);
+}
+
+function rootIdentifier(node: Expression): string | undefined {
+  if (node.type === "Identifier") {
+    return node.name;
+  }
+  if (node.type === "MemberExpression" && node.object.type !== "Super") {
+    return rootIdentifier(node.object);
+  }
+  if (node.type === "CallExpression" && node.callee.type !== "Super") {
+    return rootIdentifier(node.callee);
+  }
+  return undefined;
 }
 
 function staticProps(
@@ -527,7 +1032,7 @@ function staticProps(
       } else {
         result[attribute.name] = evaluateExpressionNode(
           value as AstNode,
-          context.constants,
+          context,
         );
       }
     } else {
@@ -541,14 +1046,18 @@ function staticProps(
 
 function evaluateExpressionNode(
   node: AstNode,
-  constants: ReadonlyMap<string, StaticValue>,
+  context: TransformContext,
 ): StaticValue {
   const program = estreeProgram(node);
+  if (program.body.length === 0) {
+    return null;
+  }
   const statement = program.body[0];
   if (program.body.length !== 1 || statement?.type !== "ExpressionStatement") {
     throw new Error("Expected one parsed MDX expression");
   }
-  return evaluateStatic(statement.expression, constants);
+  const value = staticOrComputed(statement.expression, context);
+  return value === computed ? null : value;
 }
 
 function evaluateStatic(
@@ -576,11 +1085,57 @@ function evaluateStatic(
       throw new Error("Unsupported literal");
     }
     case "Identifier": {
+      if (node.name === "undefined") {
+        return null;
+      }
       if (!constants.has(node.name)) {
         throw new Error(`Unknown static identifier: ${node.name}`);
       }
       return constants.get(node.name) ?? null;
     }
+    case "MemberExpression": {
+      if (
+        node.computed ||
+        node.object.type === "Super" ||
+        node.property.type !== "Identifier"
+      ) {
+        throw new Error("Only static property access is supported");
+      }
+      const object = evaluateStatic(node.object, constants, depth + 1);
+      if (!isStaticObject(object)) {
+        throw new Error("Property access on a non-object");
+      }
+      return object[node.property.name] ?? null;
+    }
+    case "BinaryExpression": {
+      if (node.left.type === "PrivateIdentifier") {
+        throw new Error("Private fields are unsupported");
+      }
+      const left = evaluateStatic(node.left, constants, depth + 1);
+      const right = evaluateStatic(node.right, constants, depth + 1);
+      switch (node.operator) {
+        case "+":
+          return typeof left === "string" || typeof right === "string"
+            ? `${formatStatic(left)}${formatStatic(right)}`
+            : Number(left) + Number(right);
+        case "===":
+        case "==":
+          return left === right;
+        case "!==":
+        case "!=":
+          return left !== right;
+        default:
+          throw new Error(`Unsupported operator: ${node.operator}`);
+      }
+    }
+    case "ConditionalExpression":
+      return evaluateStatic(
+        evaluateStatic(node.test, constants, depth + 1)
+          ? node.consequent
+          : node.alternate,
+        constants,
+        depth + 1,
+      );
     case "ArrayExpression":
       return node.elements.map((element) => {
         if (element === null || element.type === "SpreadElement") {
@@ -814,7 +1369,7 @@ function requiredString(
   return result;
 }
 
-function isStaticObject(value: StaticValue): value is StaticObject {
+function isStaticObject(value: StaticValue | undefined): value is StaticObject {
   return typeof value === "object" && value !== null && !Array.isArray(value);
 }
 

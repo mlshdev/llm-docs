@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "project": "victorialogs",
+  "title": "VictoriaLogs",
+  "repository": "VictoriaMetrics/VictoriaLogs",
+  "tag": "v1.52.0",
+  "releaseId": 354834060,
+  "releasePublishedAt": "2026-07-16T02:38:16Z",
+  "sourceCommit": "46a54c976fa3d404396050e8a5ee6c5b0320efc5",
+  "documentCount": 38,
+  "notes": [
+    "Pages follow the Hugo `menu.docs` navigation declared in docs/ at the immutable release tag.",
+    "Fragments pulled in by `{{% content %}}` are inlined into the page that renders them and are not published separately.",
+    "Hugo shortcodes are expanded to plain Markdown; presentation-only attribute lists are dropped."
+  ]
+}

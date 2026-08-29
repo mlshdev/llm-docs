@@ -5,6 +5,12 @@ traefik/
 netbird/
 podman/
 victoriametrics/
+victorialogs/
+victoriametrics-datasource/
+victorialogs-datasource/
+vmestimator/
+grafana/
+zitadel/
 llms.txt
 llms-full.txt
 bun.lock

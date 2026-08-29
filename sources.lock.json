@@ -20,11 +20,47 @@
       "releasePublishedAt": "2026-08-12T20:12:23Z",
       "sourceCommit": "cade97a52ebdf9dbf9e81de8009015776837a074"
     },
+    "grafana": {
+      "tag": "v13.2.0",
+      "releaseId": 372341438,
+      "releasePublishedAt": "2026-08-18T12:48:13Z",
+      "sourceCommit": "f681b1359f6a0b8ecb9f2c49a88ac72b75bde73b"
+    },
     "victoriametrics": {
       "tag": "v1.150.0",
       "releaseId": 370663729,
       "releasePublishedAt": "2026-08-17T09:53:36Z",
       "sourceCommit": "413f95d65f08d2c3fb03e227b1f3ba42884ca796"
+    },
+    "victorialogs": {
+      "tag": "v1.52.0",
+      "releaseId": 354834060,
+      "releasePublishedAt": "2026-07-16T02:38:16Z",
+      "sourceCommit": "46a54c976fa3d404396050e8a5ee6c5b0320efc5"
+    },
+    "victoriametrics-datasource": {
+      "tag": "v0.25.2",
+      "releaseId": 349514008,
+      "releasePublishedAt": "2026-07-06T11:39:52Z",
+      "sourceCommit": "302cac37e958cf3d40413f04ebed199536649e34"
+    },
+    "victorialogs-datasource": {
+      "tag": "v0.31.0",
+      "releaseId": 365574116,
+      "releasePublishedAt": "2026-08-05T14:07:58Z",
+      "sourceCommit": "bb1f6d7b0ec2bdf943c2d8c27f2cb17004b147e8"
+    },
+    "vmestimator": {
+      "tag": "v0.1.15",
+      "releaseId": 371754975,
+      "releasePublishedAt": "2026-08-17T12:56:37Z",
+      "sourceCommit": "e10898e3c321067feeb951ef3eb5581a1b80f124"
+    },
+    "zitadel": {
+      "tag": "v4.17.1",
+      "releaseId": 370394679,
+      "releasePublishedAt": "2026-08-14T06:41:55Z",
+      "sourceCommit": "a9311b8c702531832575351a663e98a2242778e5"
     }
   }
 }

@@ -2,7 +2,13 @@ export const projectIds = [
   "traefik",
   "netbird",
   "podman",
+  "grafana",
   "victoriametrics",
+  "victorialogs",
+  "victoriametrics-datasource",
+  "victorialogs-datasource",
+  "vmestimator",
+  "zitadel",
 ] as const;
 
 export type ProjectId = (typeof projectIds)[number];

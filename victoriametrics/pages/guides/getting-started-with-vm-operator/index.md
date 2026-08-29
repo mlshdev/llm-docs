@@ -85,8 +85,6 @@ vmoperator-victoria-metrics-operator-67cff44cd6-s47n6   1/1     Running   0     
 
 First, create a YAML file to configure the deployment of VictoriaMetrics cluster version:
 
-<p id="example-cluster-config"></p>
-
 ```sh
 cat << EOF > vmcluster-config.yml
 apiVersion: operator.victoriametrics.com/v1beta1
@@ -133,8 +131,6 @@ vmcluster.operator.victoriametrics.com/example-vmcluster-persistent created
 ```
 
 Pods may take some time to become ready. To check that the pods are started, run the following command:
-
-<p id="example-cluster-config"></p>
 
 ```sh
 kubectl get pods -l managed-by=vm-operator

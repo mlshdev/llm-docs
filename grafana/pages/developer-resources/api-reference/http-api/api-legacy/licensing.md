@@ -1,0 +1,254 @@
+> Release-pinned source for Grafana v13.2.0: [docs/sources/developer-resources/api-reference/http-api/api-legacy/licensing.md](https://github.com/grafana/grafana/blob/f681b1359f6a0b8ecb9f2c49a88ac72b75bde73b/docs/sources/developer-resources/api-reference/http-api/api-legacy/licensing.md)
+
+# Enterprise License API
+
+> **Note**
+>
+> Starting in Grafana 13, `/api` endpoints are being deprecated in favor of the `/apis` route. Note that while Grafana is working on migrating existing APIs, currently there may not be an exact match to the legacy API you're using.
+>
+> **This change doesn't disrupt or break your current setup**. Legacy APIs are not being disabled and remain fully accessible and operative, but `/api` routes will no longer be updated.
+>
+> To learn more refer to the [new API structure in Grafana](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/apis/).
+
+Licensing is only available in Grafana Enterprise. Read more about [Grafana Enterprise](https://grafana.com/docs/grafana/latest/introduction/grafana-enterprise/).
+
+> **Caution**
+>
+> You can't authenticate to the Licensing HTTP API with service account tokens.
+> Service accounts are limited to an organization and an organization role.
+> They can't be granted [Grafana server administrator permissions](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/#grafana-server-administrators).
+>
+> To use these API endpoints you have to use Basic authentication and the Grafana user must have the Grafana server administrator permission.
+>
+> The `admin` user that Grafana is provisioned with by default has permissions to use these API endpoints.
+
+> If you are running Grafana Enterprise, for some endpoints you'll need to have specific permissions. Refer to [Role-based access control permissions](https://grafana.com/docs/grafana/latest/administration/roles-and-permissions/access-control/custom-role-actions-scopes/) for more information.
+
+## Check license availability
+
+> **Note:** Available in Grafana Enterprise v7.4+.
+
+`GET /api/licensing/check`
+
+Checks if a valid license is available.
+
+**Required permissions**
+
+See note in the [introduction](#enterprise-license-api) for an explanation.
+
+| Action         | Scope |
+| -------------- | ----- |
+| licensing:read | n/a   |
+
+### Examples
+
+**Example request:**
+
+```http
+GET /api/licensing/check
+Accept: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+```
+
+**Example response:**
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 4
+
+true
+```
+
+Status codes:
+
+- **200** - OK
+
+## Add license
+
+> **Note**
+>
+> Available in Grafana Enterprise v7.4+.
+
+`POST /api/licensing/token`
+
+Applies a license to a Grafana instance.
+
+**Required permissions**
+
+See note in the [introduction](#enterprise-license-api) for an explanation.
+
+| Action          | Scope |
+| --------------- | ----- |
+| licensing:write | n/a   |
+
+### Examples
+
+**Example request:**
+
+```http
+POST /licensing/token
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+
+{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0aGlzIjoiaXMiLCJub3QiOiJhIiwidmFsaWQiOiJsaWNlbnNlIn0.bxDzxIoJlYMwiEYKYT_l2s42z0Y30tY-6KKoyz9RuLE"}
+```
+
+**Example response:**
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 357
+
+{
+"status":0,
+"jti":"",
+"iss":"",
+"sub":"",
+"iat":0,
+"exp":0,
+"nbf":0,
+"lexp":0,
+"lid":"",
+"limit_by":"",
+"included_users":0,
+"lic_exp_warn_days":0,
+"tok_exp_warn_days":0,
+"update_days":0,
+"prod":null,
+"company":"",
+"account":"",
+"slug":"",
+"usage_billing":false,
+"max_concurrent_user_sessions":0,
+"details_url":"",
+"trial":false,
+"trial_exp":0,
+"anonymousRatio":0
+}
+
+```
+
+The response is a JSON blob with specific values intentionally not shown. The
+available fields may change at any time without any prior notice. Refer to [Check license availability](#check-license-availability) for information on using the API to check the status of your license.
+
+Status Codes:
+
+- **200** - OK
+- **400** - Bad request
+- **500** - Internal server error (refer to server logs for more details)
+
+## Manually force license refresh
+
+> **Note**
+>
+> Available in Grafana Enterprise v7.4+.
+
+`POST /api/licensing/token/renew`
+
+Manually ask license issuer for a new token.
+
+**Required permissions**
+
+See note in the [introduction](#enterprise-license-api) for an explanation.
+
+| Action          | Scope |
+| --------------- | ----- |
+| licensing:write | n/a   |
+
+### Examples
+
+**Example request:**
+
+```http
+POST /api/licensing/token/renew
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+
+{}
+```
+
+**Example response:**
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 357
+
+{
+  "jti":"2",
+  "iss":"https://grafana.com",
+  "sub":"https://play.grafana.org/"
+  "lid":"1",
+  "included_users":15,
+  "lic_exp_warn_days":30,
+  "tok_exp_warn_days":2,
+  "update_days":1,
+  "prod":["grafana-enterprise"],
+  "company":"Grafana Labs"
+}
+```
+
+The response is a JSON blob available for debugging purposes. The
+available fields may change at any time without any prior notice.
+
+Status Codes:
+
+- **200** - OK
+- **401** - Unauthorized
+- **403** - Access denied
+
+## Remove license from database
+
+> **Note**
+>
+> Available in Grafana Enterprise v7.4+.
+
+`DELETE /api/licensing/token`
+
+Removes the license stored in the Grafana database.
+
+**Required permissions**
+
+See note in the [introduction](#enterprise-license-api) for an explanation.
+
+| Action           | Scope |
+| ---------------- | ----- |
+| licensing:delete | n/a   |
+
+### Examples
+
+**Example request:**
+
+```http
+DELETE /api/licensing/token
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+
+{"instance": "http://play.grafana.org/"}
+```
+
+JSON Body schema:
+
+- **instance** – Root URL for the instance for which the license should be deleted. Required.
+
+**Example response:**
+
+```http
+HTTP/1.1 202 Accepted
+Content-Type: application/json
+Content-Length: 2
+
+{}
+```
+
+Status codes:
+
+- **202** - Accepted, license removed or did not exist.
+- **401** - Unauthorized
+- **403** - Access denied
+- **422** - Unprocessable entity, incorrect instance name provided.

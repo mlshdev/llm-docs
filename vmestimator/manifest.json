@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "project": "vmestimator",
+  "title": "vmestimator",
+  "repository": "VictoriaMetrics/vmestimator",
+  "tag": "v0.1.15",
+  "releaseId": 371754975,
+  "releasePublishedAt": "2026-08-17T12:56:37Z",
+  "sourceCommit": "e10898e3c321067feeb951ef3eb5581a1b80f124",
+  "documentCount": 1,
+  "notes": [
+    "Pages follow the Hugo `menu.docs` navigation declared in docs/ at the immutable release tag.",
+    "Fragments pulled in by `{{% content %}}` are inlined into the page that renders them and are not published separately.",
+    "Hugo shortcodes are expanded to plain Markdown; presentation-only attribute lists are dropped."
+  ]
+}

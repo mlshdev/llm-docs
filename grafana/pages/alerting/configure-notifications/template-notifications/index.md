@@ -1,0 +1,96 @@
+> Release-pinned source for Grafana v13.2.0: [docs/sources/alerting/configure-notifications/template-notifications/_index.md](https://github.com/grafana/grafana/blob/f681b1359f6a0b8ecb9f2c49a88ac72b75bde73b/docs/sources/alerting/configure-notifications/template-notifications/_index.md)
+
+# Template notifications
+
+You can use notification templates to change the title, message, and format of notifications.
+
+Grafana provides a **default template** for notification titles (`default.title`) and one default template for notification messages (`default.message`). Both templates display common alert details.
+
+You can also create a notification template to customize the content and format of your notification messages. For example:
+
+- Personalize the subject of an email or the title of a message.
+- Modify text within notifications, like selecting or omitting certain labels, annotations, and links.
+- Format text with bold and italic styles, and add or remove line breaks.
+
+However, there are limitations. You cannot:
+
+- Modify Visual Appearance: Add HTML or CSS to email notifications for visual changes. Alter the design of notifications in messaging services like Slack or Microsoft Teams, such as adding custom blocks or adaptive cards.
+- Manage Media and Data: Customize the data structure or format passed to the templates, like adding new JSON fields or sending XML data for webhooks. Modify HTTP headers in webhooks beyond those defined in the configuration, or adjust the number, size, or placement of images.
+
+Here's an [example](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/template-notifications/examples/) that displays the summary and description annotations for each alert in the notification:
+
+```go
+{{ define "custom.alerts" -}}
+{{ len .Alerts }} alert(s)
+{{ range .Alerts -}}
+  {{ template "alert.summary_and_description" . -}}
+{{ end -}}
+{{ end -}}
+{{ define "alert.summary_and_description" }}
+  Summary: {{.Annotations.summary}}
+  Status: {{ .Status }}
+  Description: {{.Annotations.description}}
+{{ end -}}
+```
+
+The notification message would look like this:
+
+```
+2 alert(s)
+
+  Summary: The database server db1 has exceeded 75% of available disk space.
+  Status: firing
+  Description: This alert fires when a database server is at risk of running out of disk space. You should take measures to increase the maximum available disk space as soon as possible to avoid possible corruption.
+
+  Summary: The web server web1 has been responding to 5% of HTTP requests with 5xx errors for the last 5 minutes.
+  Status: resolved
+  Description: This alert fires when a web server responds with more 5xx errors than is expected. This could be an issue with the web server or a backend service.
+```
+
+> **Note**
+>
+> Avoid adding extra information about alert instances in notification templates, as this information will only be visible in the notification message.
+>
+> Instead, you should [use annotations or labels](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/templates/) to add information directly to the alert, ensuring it's also visible in the alert state and alert history within Grafana. You can then print the new alert annotation or label in notification templates.
+
+#### Select a notification template for a contact point
+
+Notification templates are not tied to specific contact point integrations, such as email or Slack, and the same template can be shared across multiple contact points.
+
+The notification template is assigned to the contact point to determine the notification message sent to contact point integrations.
+
+![](https://grafana.com/media/docs/alerting/how-notification-templates-works.png)
+
+*A flow of the alert notification process, from querying the alert rule to sending the alert notification message.*
+
+By default, Grafana provides default templates, such as `{{define "default.title"}}` and `{{define "default.message"}}`, to format notification messages.
+
+## Grafana Cloud AI-generated templates
+
+Grafana Cloud users can use built-in AI tool to generate templates in the appropriate [alerting template language](https://grafana.com/docs/grafana-cloud/alerting-and-irm/alerting/configure-notifications/template-notifications/language/) for you.
+
+To use AI to create your template, follow these steps:
+
+1. Go to **Alerting -> Contact points**.
+
+2. Click the Notification Templates tab then, click the **+ New notification template** button.
+
+3. Name your template.
+
+4. In the Template group section, click the **Generate with AI** button.
+
+5. Supply the AI tool with a prompt or select from one of the example prompts and edit that if necessary.
+
+6. Click **Save**.
+
+## More information
+
+For further details on how to write notification templates, refer to:
+
+- [Select, create, and preview a notification template](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/template-notifications/manage-notification-templates/)
+- [Notification template reference](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/template-notifications/reference/)
+- [Notification template examples](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/template-notifications/examples/)
+
+> **Tip**
+>
+> For a practical example of templating, refer to our [Getting Started with Templating tutorial](https://grafana.com/tutorials/alerting-get-started-pt4/).

@@ -7,7 +7,13 @@ This repository converts documentation from stable upstream releases into determ
 - [Traefik Proxy](https://github.com/traefik/traefik)
 - [NetBird](https://github.com/netbirdio/netbird)
 - [Podman](https://github.com/podman-container-tools/podman)
+- [Grafana](https://github.com/grafana/grafana)
 - [VictoriaMetrics](https://github.com/VictoriaMetrics/VictoriaMetrics)
+- [VictoriaLogs](https://github.com/VictoriaMetrics/VictoriaLogs)
+- [VictoriaMetrics datasource for Grafana](https://github.com/VictoriaMetrics/victoriametrics-datasource)
+- [VictoriaLogs datasource for Grafana](https://github.com/VictoriaMetrics/victorialogs-datasource)
+- [vmestimator](https://github.com/VictoriaMetrics/vmestimator)
+- [ZITADEL](https://github.com/zitadel/zitadel)
 
 ## Release policy
 
@@ -16,31 +22,14 @@ This repository converts documentation from stable upstream releases into determ
 - Release source is downloaded from immutable tags and recorded with the resolved commit SHA in `sources.lock.json`.
 - NetBird public documentation is maintained in the separate, untagged `netbirdio/docs` repository. A NetBird update is accepted only after that repository contains the exact `Update API pages with <tag>` commit. Until then, the previous complete product/docs pair remains published.
 - Generated files are committed so GitHub, raw-content clients, and local tools all expose the same corpus. The same files are published through GitHub Pages.
+- Example credentials that upstream documentation writes in the real token format are replaced with a named placeholder, because secret scanning rejects the push otherwise. Affected projects record the substitutions in `manifest.json`.
 
 ## Output layout
 
 ```text
 llms.txt
 llms-full.txt
-traefik/
-  llms.txt
-  llms-full.txt
-  manifest.json
-  LICENSE.upstream
-  pages/
-netbird/
-  llms.txt
-  llms-full.txt
-  manifest.json
-  LICENSE.upstream
-  pages/
-podman/
-  llms.txt
-  llms-full.txt
-  manifest.json
-  LICENSE.upstream
-  pages/
-victoriametrics/
+<project>/
   llms.txt
   llms-full.txt
   manifest.json
@@ -48,12 +37,17 @@ victoriametrics/
   pages/
 ```
 
+Project directories are named after the identifiers in `config/sources.json`: `traefik`, `netbird`, `podman`, `grafana`, `victoriametrics`, `victorialogs`, `victoriametrics-datasource`, `victorialogs-datasource`, `vmestimator`, and `zitadel`.
+
 ## Source-specific conversion
 
 - Traefik follows `docs/mkdocs.yml` navigation from the release tag and expands MkDocs include fragments.
 - NetBird converts MDX through a fail-closed AST transform with explicit handling for its documentation components. It includes public docs from the release-matched docs commit and technical architecture Markdown from the product tag.
 - Podman templates are expanded by a non-executing TypeScript implementation of the tagged repository's preprocessing rules before collecting command/man-page Markdown, tutorials, bindings, and operational documentation.
-- VictoriaMetrics follows the Hugo `menu.docs` navigation declared in `docs/`, inlines the fragments that pages pull in with `{{% content %}}`, and expands the remaining shortcodes (`available_from`, `deprecated_from`, `collapse`, `section`) into plain Markdown.
+- Grafana walks the Hugo documentation tree under `docs/sources`, resolves `relref`, `ref:`, and shared-snippet references against the pages it publishes, expands the shortcodes the manual uses, and rewrites version placeholders to the release being generated.
+- VictoriaMetrics, VictoriaLogs, and vmestimator follow the Hugo `menu.docs` navigation declared in `docs/`, inline the fragments that pages pull in with `{{% content %}}`, and expand the remaining shortcodes (`available_from`, `deprecated_from`, `collapse`, `section`) into plain Markdown.
+- The VictoriaMetrics and VictoriaLogs Grafana datasources publish their documentation as repository Markdown; their pages keep the release README and `docs/` guides with Hugo front matter and site-relative links resolved.
+- ZITADEL converts the Fumadocs MDX tree under `apps/docs/content` with the same fail-closed AST transform, inlining imported partials and sample files, turning documentation components into Markdown, and resolving cross-references to `https://zitadel.com/docs`.
 
 ## Local commands
 

@@ -1,0 +1,360 @@
+# ZITADEL v4.17.1
+
+> Documentation generated from the latest stable release of [zitadel/zitadel](https://github.com/zitadel/zitadel) and pinned to immutable source commit `a9311b8c702531832575351a663e98a2242778e5`.
+
+- [Full documentation](llms-full.txt): Complete normalized corpus for ZITADEL v4.17.1.
+- [Provenance manifest](manifest.json): Release, commit, document count, and generation notes.
+- Pages come from the Fumadocs content tree in apps/docs/content; underscore-prefixed partials are inlined into the pages that import them.
+- Interactive elements the site renders from JavaScript - framework pickers, benchmark charts, permission and PII tables, and React partials such as the quick start console walkthroughs - are omitted because they carry no static prose.
+- Cross-references keep their published form on https://zitadel.com/docs; images and imported sample files point at the pinned commit on GitHub.
+
+## API reference
+
+- [Code examples](pages/apis/actions/code-examples.md): Source `apps/docs/content/apis/actions/code-examples.mdx`.
+- [Complement Token Flow](pages/apis/actions/complement-token.md): Source `apps/docs/content/apis/actions/complement-token.mdx`.
+- [Complement SAMLResponse](pages/apis/actions/customize-samlresponse.md): Source `apps/docs/content/apis/actions/customize-samlresponse.mdx`.
+- [External Authentication Flow](pages/apis/actions/external-authentication.md): Source `apps/docs/content/apis/actions/external-authentication.mdx`.
+- [Internal Authentication Flow](pages/apis/actions/internal-authentication.md): Source `apps/docs/content/apis/actions/internal-authentication.mdx`.
+- [Modules](pages/apis/actions/modules.md): Source `apps/docs/content/apis/actions/modules.mdx`.
+- [Objects](pages/apis/actions/objects.md): Source `apps/docs/content/apis/actions/objects.mdx`.
+- [Core Resources](pages/apis/apis.md): Source `apps/docs/content/apis/apis/index.mdx`.
+- [zitadel/assets](pages/apis/assets/assets.md): Source `apps/docs/content/apis/assets/assets.mdx`.
+- [Benchmarks](pages/apis/benchmarks.md): Source `apps/docs/content/apis/benchmarks/index.mdx`.
+- [machine jwt profile grant benchmark of zitadel v2.65.0](pages/apis/benchmarks/v2.65.0/machine_jwt_profile_grant.md): Source `apps/docs/content/apis/benchmarks/v2.65.0/machine_jwt_profile_grant/index.mdx`.
+- [machine jwt profile grant benchmark of zitadel v2.66.0](pages/apis/benchmarks/v2.66.0/machine_jwt_profile_grant.md): Source `apps/docs/content/apis/benchmarks/v2.66.0/machine_jwt_profile_grant/index.mdx`.
+- [machine jwt profile grant benchmark of zitadel v2.70.0](pages/apis/benchmarks/v2.70.0/machine_jwt_profile_grant.md): Source `apps/docs/content/apis/benchmarks/v2.70.0/machine_jwt_profile_grant/index.mdx`.
+- [oidc session benchmark of Zitadel v2.70.0](pages/apis/benchmarks/v2.70.0/oidc_session.md): Source `apps/docs/content/apis/benchmarks/v2.70.0/oidc_session/index.mdx`.
+- [create session benchmark of zitadel v4](pages/apis/benchmarks/v4/add_session.md): Source `apps/docs/content/apis/benchmarks/v4/add_session/index.mdx`.
+- [human password login benchmark of zitadel v4](pages/apis/benchmarks/v4/human_password_login.md): Source `apps/docs/content/apis/benchmarks/v4/human_password_login/index.mdx`.
+- [introspection benchmark of zitadel v4](pages/apis/benchmarks/v4/introspect.md): Source `apps/docs/content/apis/benchmarks/v4/introspect/index.mdx`.
+- [machine client credentials login benchmark of zitadel v4](pages/apis/benchmarks/v4/machine_client_credentials_login.md): Source `apps/docs/content/apis/benchmarks/v4/machine_client_credentials_login/index.mdx`.
+- [machine jwt profile grant benchmark of zitadel v4](pages/apis/benchmarks/v4/machine_jwt_profile_grant.md): Source `apps/docs/content/apis/benchmarks/v4/machine_jwt_profile_grant/index.mdx`.
+- [machine pat login benchmark of zitadel v4](pages/apis/benchmarks/v4/machine_pat_login.md): Source `apps/docs/content/apis/benchmarks/v4/machine_pat_login/index.mdx`.
+- [manipulate user benchmark of zitadel v4](pages/apis/benchmarks/v4/manipulate_user.md): Source `apps/docs/content/apis/benchmarks/v4/manipulate_user/index.mdx`.
+- [oidc session benchmark of zitadel v4](pages/apis/benchmarks/v4/oidc_session.md): Source `apps/docs/content/apis/benchmarks/v4/oidc_session/index.mdx`.
+- [otp session benchmark of zitadel v4](pages/apis/benchmarks/v4/otp_session.md): Source `apps/docs/content/apis/benchmarks/v4/otp_session/index.mdx`.
+- [session with password benchmark of zitadel v4](pages/apis/benchmarks/v4/password_session.md): Source `apps/docs/content/apis/benchmarks/v4/password_session/index.mdx`.
+- [user info benchmark of zitadel v4](pages/apis/benchmarks/v4/user_info.md): Source `apps/docs/content/apis/benchmarks/v4/user_info/index.mdx`.
+- [ZITADEL API Reference Overview](pages/apis/introduction.md): Source `apps/docs/content/apis/introduction.mdx`.
+- [Migrate from v1 APIs to v2 APIs](pages/apis/migration_v1_to_v2.md): Source `apps/docs/content/apis/migration_v1_to_v2.mdx`.
+- [ZITADEL Ready and Health Endpoints](pages/apis/observability/health.md): Source `apps/docs/content/apis/observability/health.mdx`.
+- [ZITADEL Metrics](pages/apis/observability/metrics.md): Source `apps/docs/content/apis/observability/metrics.mdx`.
+- [Authentication Methods in ZITADEL](pages/apis/openidoauth/authn-methods.md): Source `apps/docs/content/apis/openidoauth/authn-methods.mdx`.
+- [ZITADEL OIDC Authentication Request Playground](pages/apis/openidoauth/authrequest.md): Source `apps/docs/content/apis/openidoauth/authrequest.mdx`.
+- [Claims in ZITADEL](pages/apis/openidoauth/claims.md): Source `apps/docs/content/apis/openidoauth/claims.mdx`.
+- [OpenID Connect Endpoints in ZITADEL](pages/apis/openidoauth/endpoints.md): Source `apps/docs/content/apis/openidoauth/endpoints.mdx`.
+- [Grant Types in ZITADEL](pages/apis/openidoauth/grant-types.md): Source `apps/docs/content/apis/openidoauth/grant-types.mdx`.
+- [Scopes in ZITADEL](pages/apis/openidoauth/scopes.md): Source `apps/docs/content/apis/openidoauth/scopes.mdx`.
+- [SAML Endpoints in ZITADEL](pages/apis/saml/endpoints.md): Source `apps/docs/content/apis/saml/endpoints.mdx`.
+- [SCIM v2.0 (Preview)](pages/apis/scim2.md): Source `apps/docs/content/apis/scim2.mdx`.
+- [GRPC Status Codes in ZITADEL](pages/apis/statuscodes.md): Source `apps/docs/content/apis/statuscodes.mdx`.
+- [APIs V2 (Generally Available)](pages/apis/v2.md): Source `apps/docs/content/apis/v2.mdx`.
+
+## Concepts
+
+- [How ZITADEL Processes and Stores Secrets](pages/concepts/architecture/secrets.md): Source `apps/docs/content/concepts/architecture/secrets.mdx`.
+- [Zitadel's Software Architecture](pages/concepts/architecture/software.md): Source `apps/docs/content/concepts/architecture/software.mdx`.
+- [Zitadel's Deployment Architecture](pages/concepts/architecture/solution.md): Source `apps/docs/content/concepts/architecture/solution.mdx`.
+- [ZITADEL Database Structure](pages/concepts/eventstore/implementation.md): Source `apps/docs/content/concepts/eventstore/implementation.mdx`.
+- [ZITADEL Event Store](pages/concepts/eventstore/overview.md): Source `apps/docs/content/concepts/eventstore/overview.mdx`.
+- [Account linking](pages/concepts/features/account-linking.md): Source `apps/docs/content/concepts/features/account-linking.mdx`.
+- [ZITADEL Actions](pages/concepts/features/actions.md): Source `apps/docs/content/concepts/features/actions.mdx`.
+- [ZITADEL Actions v2](pages/concepts/features/actions_v2.md): Source `apps/docs/content/concepts/features/actions_v2.mdx`.
+- [ZITADEL's In-built Audit Trail](pages/concepts/features/audit-trail.md): Source `apps/docs/content/concepts/features/audit-trail.mdx`.
+- [Custom Domain](pages/concepts/features/custom-domain.md): Source `apps/docs/content/concepts/features/custom-domain.mdx`.
+- [External User Role Assignments](pages/concepts/features/external-user-grant.md): Source `apps/docs/content/concepts/features/external-user-grant.mdx`.
+- [Identity Brokering](pages/concepts/features/identity-brokering.md): Source `apps/docs/content/concepts/features/identity-brokering.mdx`.
+- [Features](pages/concepts/features.md): Source `apps/docs/content/concepts/features/index.mdx`.
+- [Passkeys & Passwordless Authentication in ZITADEL](pages/concepts/features/passkeys.md): Source `apps/docs/content/concepts/features/passkeys.mdx`.
+- [Self Service in ZITADEL](pages/concepts/features/selfservice.md): Source `apps/docs/content/concepts/features/selfservice.mdx`.
+- [Key Concepts](pages/concepts.md): Source `apps/docs/content/concepts/index.mdx`.
+- [Knowledge](pages/concepts/knowledge.md): Source `apps/docs/content/concepts/knowledge/index.mdx`.
+- [Opaque Tokens in Zitadel](pages/concepts/knowledge/opaque-tokens.md): Source `apps/docs/content/concepts/knowledge/opaque-tokens.mdx`.
+- [Principles](pages/concepts/principles.md): Source `apps/docs/content/concepts/principles.mdx`.
+- [Administrators](pages/concepts/structure/administrators.md): Source `apps/docs/content/concepts/structure/administrators.mdx`.
+- [ZITADEL's Granted Projects](pages/concepts/structure/granted_projects.md): Source `apps/docs/content/concepts/structure/granted_projects.mdx`.
+- [Structure](pages/concepts/structure.md): Source `apps/docs/content/concepts/structure/index.mdx`.
+- [Instances](pages/concepts/structure/instance.md): Source `apps/docs/content/concepts/structure/instance.mdx`.
+- [ZITADEL Settings and Policies](pages/concepts/structure/policies.md): Source `apps/docs/content/concepts/structure/policies.mdx`.
+
+## Examples
+
+- [OAuth 2.0 Proxy](pages/examples/identity-proxy/oauth2-proxy.md): Source `apps/docs/content/examples/identity-proxy/oauth2-proxy.mdx`.
+- [APIs / Backend Quickstart Guides](pages/examples/introduction/backend.md): Source `apps/docs/content/examples/introduction/backend/index.mdx`.
+- [Frontend (SPA) Quickstart Guides](pages/examples/introduction/frontend.md): Source `apps/docs/content/examples/introduction/frontend/index.mdx`.
+- [Full-Stack / SSR Quickstart Guides](pages/examples/introduction/fullstack.md): Source `apps/docs/content/examples/introduction/fullstack/index.mdx`.
+- [Example Applications](pages/examples/introduction.md): Source `apps/docs/content/examples/introduction/index.mdx`.
+- [Mobile & Native Quickstart Guides](pages/examples/introduction/mobile.md): Source `apps/docs/content/examples/introduction/mobile/index.mdx`.
+- [Web App (Server-Side) Quickstart Guides](pages/examples/introduction/webapp.md): Source `apps/docs/content/examples/introduction/webapp/index.mdx`.
+- [ZITADEL with Flutter](pages/examples/login/flutter.md): Source `apps/docs/content/examples/login/flutter.mdx`.
+- [Go Web Application Login with ZITADEL](pages/examples/login/go.md): Source `apps/docs/content/examples/login/go.mdx`.
+- [Next.js Multi-tenant B2B Application with ZITADEL](pages/examples/login/nextjs-b2b.md): Source `apps/docs/content/examples/login/nextjs-b2b.mdx`.
+- [Secure Go API Application with ZITADEL](pages/examples/secure-api/go.md): Source `apps/docs/content/examples/secure-api/go.mdx`.
+- [Secure Java Spring Boot API Application with ZITADEL](pages/examples/secure-api/java-spring.md): Source `apps/docs/content/examples/secure-api/java-spring.mdx`.
+- [Secure Nest.js API Application with ZITADEL](pages/examples/secure-api/nodejs-nestjs.md): Source `apps/docs/content/examples/secure-api/nodejs-nestjs.mdx`.
+- [Secure Pylon API Application with ZITADEL](pages/examples/secure-api/pylon.md): Source `apps/docs/content/examples/secure-api/pylon.mdx`.
+- [Secure Django (Python) API Application with ZITADEL](pages/examples/secure-api/python-django.md): Source `apps/docs/content/examples/secure-api/python-django.mdx`.
+- [Secure Flask (Python) API Application with ZITADEL](pages/examples/secure-api/python-flask.md): Source `apps/docs/content/examples/secure-api/python-flask.mdx`.
+
+## Guides
+
+- [Migrate from Actions V1 to V2](pages/guides/integrate/actions/migrate-from-v1.md): Source `apps/docs/content/guides/integrate/actions/migrate-from-v1.mdx`.
+- [Test Actions Event](pages/guides/integrate/actions/testing-event.md): Source `apps/docs/content/guides/integrate/actions/testing-event.mdx`.
+- [Test Actions Function Manipulation](pages/guides/integrate/actions/testing-function-manipulation.md): Source `apps/docs/content/guides/integrate/actions/testing-function-manipulation.mdx`.
+- [Test Actions Function](pages/guides/integrate/actions/testing-function.md): Source `apps/docs/content/guides/integrate/actions/testing-function.mdx`.
+- [Test Actions Request Manipulation](pages/guides/integrate/actions/testing-request-manipulation.md): Source `apps/docs/content/guides/integrate/actions/testing-request-manipulation.mdx`.
+- [Verify Payload Integrity](pages/guides/integrate/actions/testing-request-signature.md): Source `apps/docs/content/guides/integrate/actions/testing-request-signature.mdx`.
+- [Test Actions Request](pages/guides/integrate/actions/testing-request.md): Source `apps/docs/content/guides/integrate/actions/testing-request.mdx`.
+- [Test Actions Response Manipulation](pages/guides/integrate/actions/testing-response-manipulation.md): Source `apps/docs/content/guides/integrate/actions/testing-response-manipulation.mdx`.
+- [Test Actions Response](pages/guides/integrate/actions/testing-response.md): Source `apps/docs/content/guides/integrate/actions/testing-response.mdx`.
+- [Using Actions](pages/guides/integrate/actions/usage.md): Source `apps/docs/content/guides/integrate/actions/usage.mdx`.
+- [Testing Actions V2 with Webhook.site](pages/guides/integrate/actions/webhook-site-setup.md): Source `apps/docs/content/guides/integrate/actions/webhook-site-setup.mdx`.
+- [Embed Authenticated MongoDB Charts Using ZITADEL](pages/guides/integrate/authenticated-mongodb-charts.md): Source `apps/docs/content/guides/integrate/authenticated-mongodb-charts.mdx`.
+- [OIDC Back-Channel Logout](pages/guides/integrate/back-channel-logout.md): Source `apps/docs/content/guides/integrate/back-channel-logout.mdx`.
+- [OAuth 2.0 Dynamic Client Registration](pages/guides/integrate/dynamic-client-registration.md): Source `apps/docs/content/guides/integrate/dynamic-client-registration.mdx`.
+- [Streaming audit logs to external systems (SIEM/SOC)](pages/guides/integrate/external-audit-log.md): Source `apps/docs/content/guides/integrate/external-audit-log.mdx`.
+- [Profile Pre-filling from External IdP](pages/guides/integrate/identity-providers/additional-information.md): Source `apps/docs/content/guides/integrate/identity-providers/additional-information.mdx`.
+- [Set up Apple as an Identity Provider in ZITADEL](pages/guides/integrate/identity-providers/apple.md): Source `apps/docs/content/guides/integrate/identity-providers/apple.mdx`.
+- [Set up Entra ID as an Identity Provider in ZITADEL](pages/guides/integrate/identity-providers/azure-ad-oidc.md): Source `apps/docs/content/guides/integrate/identity-providers/azure-ad-oidc.mdx`.
+- [Set up Entra ID as a SAML Service Provider in ZITADEL](pages/guides/integrate/identity-providers/azure-ad-saml.md): Source `apps/docs/content/guides/integrate/identity-providers/azure-ad-saml.mdx`.
+- [Configure a Generic OIDC Identity Provider in ZITADEL](pages/guides/integrate/identity-providers/generic-oidc.md): Source `apps/docs/content/guides/integrate/identity-providers/generic-oidc.mdx`.
+- [Configure GitHub as an Identity Provider in ZITADEL](pages/guides/integrate/identity-providers/github.md): Source `apps/docs/content/guides/integrate/identity-providers/github.mdx`.
+- [Configure GitLab as an Identity Provider in ZITADEL](pages/guides/integrate/identity-providers/gitlab.md): Source `apps/docs/content/guides/integrate/identity-providers/gitlab.mdx`.
+- [Configure Google as an Identity Provider in ZITADEL](pages/guides/integrate/identity-providers/google.md): Source `apps/docs/content/guides/integrate/identity-providers/google.mdx`.
+- [Let Users Login with Preferred Identity Provider](pages/guides/integrate/identity-providers/introduction.md): Source `apps/docs/content/guides/integrate/identity-providers/introduction.mdx`.
+- [JWT IdP](pages/guides/integrate/identity-providers/jwt_idp.md): Source `apps/docs/content/guides/integrate/identity-providers/jwt_idp.mdx`.
+- [Configure Keycloak as an Identity Provider in ZITADEL](pages/guides/integrate/identity-providers/keycloak.md): Source `apps/docs/content/guides/integrate/identity-providers/keycloak.mdx`.
+- [Configure LDAP as an Identity Provider in ZITADEL](pages/guides/integrate/identity-providers/ldap.md): Source `apps/docs/content/guides/integrate/identity-providers/ldap.mdx`.
+- [LinkedIn OAuth Identity Provider in ZITADEL](pages/guides/integrate/identity-providers/linkedin_oauth.md): Source `apps/docs/content/guides/integrate/identity-providers/linkedin_oauth.mdx`.
+- [Migrate from Generic to Specific Identity Provider](pages/guides/integrate/identity-providers/migrate.md): Source `apps/docs/content/guides/integrate/identity-providers/migrate.mdx`.
+- [Set up MockSAML as an Identity Provider in ZITADEL](pages/guides/integrate/identity-providers/mocksaml.md): Source `apps/docs/content/guides/integrate/identity-providers/mocksaml.mdx`.
+- [Set up OKTA as an OIDC Identity Provider in ZITADEL](pages/guides/integrate/identity-providers/okta-oidc.md): Source `apps/docs/content/guides/integrate/identity-providers/okta-oidc.mdx`.
+- [Set up OKTA as a SAML Identity Provider in ZITADEL](pages/guides/integrate/identity-providers/okta_saml.md): Source `apps/docs/content/guides/integrate/identity-providers/okta_saml.mdx`.
+- [Set up OneLogin as a SAML Identity Provider in ZITADEL](pages/guides/integrate/identity-providers/onelogin-saml.md): Source `apps/docs/content/guides/integrate/identity-providers/onelogin-saml.mdx`.
+- [OpenLDAP Identity Provider Setup in ZITADEL](pages/guides/integrate/identity-providers/openldap.md): Source `apps/docs/content/guides/integrate/identity-providers/openldap.mdx`.
+- [PingFederate SAML Identity Provider in ZITADEL](pages/guides/integrate/identity-providers/pingfederate-saml.md): Source `apps/docs/content/guides/integrate/identity-providers/pingfederate-saml.mdx`.
+- [Integrate](pages/guides/integrate.md): Source `apps/docs/content/guides/integrate/index.mdx`.
+- [Hosted Login UI: Authenticate Your Users](pages/guides/integrate/login/hosted-login.md): Source `apps/docs/content/guides/integrate/login/hosted-login.mdx`.
+- [Login users with ZITADEL](pages/guides/integrate/login.md): Source `apps/docs/content/guides/integrate/login/index.mdx`.
+- [User Authentication Options with ZITADEL](pages/guides/integrate/login/login-users.md): Source `apps/docs/content/guides/integrate/login/login-users.mdx`.
+- [Authentication Methods](pages/guides/integrate/login/oidc/authmethods.md): Source `apps/docs/content/guides/integrate/login/oidc/authmethods.mdx`.
+- [Integrating Your Application with ZITADEL using RFC 8628 OAuth 2.0 Device Authorization Flow](pages/guides/integrate/login/oidc/device-authorization.md): Source `apps/docs/content/guides/integrate/login/oidc/device-authorization.mdx`.
+- [Authenticate users with OpenID Connect (OIDC)](pages/guides/integrate/login/oidc.md): Source `apps/docs/content/guides/integrate/login/oidc/index.mdx`.
+- [OpenID Connect (OIDC) Authentication: Authorization Code Flow & PKCE guide](pages/guides/integrate/login/oidc/login-users.md): Source `apps/docs/content/guides/integrate/login/oidc/login-users.mdx`.
+- [Log Out Users from an Application with ZITADEL](pages/guides/integrate/login/oidc/logout.md): Source `apps/docs/content/guides/integrate/login/oidc/logout.mdx`.
+- [Native app links for passkeys](pages/guides/integrate/login/oidc/native-app-links.md): Source `apps/docs/content/guides/integrate/login/oidc/native-app-links.mdx`.
+- [Recommended authorization flows with OpenID Connect (OIDC) and OAuth 2.x](pages/guides/integrate/login/oidc/oauth-recommended-flows.md): Source `apps/docs/content/guides/integrate/login/oidc/oauth-recommended-flows.mdx`.
+- [OpenID Connect and OAuth2 web keys](pages/guides/integrate/login/oidc/webkeys.md): Source `apps/docs/content/guides/integrate/login/oidc/webkeys.mdx`.
+- [Authenticate users with SAML](pages/guides/integrate/login/saml.md): Source `apps/docs/content/guides/integrate/login/saml.mdx`.
+- [Device Authorization Grant in Custom Login UI](pages/guides/integrate/login-ui/device-auth.md): Source `apps/docs/content/guides/integrate/login-ui/device-auth.mdx`.
+- [Handle External Logins in a Custom Login UI](pages/guides/integrate/login-ui/external-login.md): Source `apps/docs/content/guides/integrate/login-ui/external-login.mdx`.
+- [Build your own Login UI](pages/guides/integrate/login-ui.md): Source `apps/docs/content/guides/integrate/login-ui/index.mdx`.
+- [Login App](pages/guides/integrate/login-ui/login-app.md): Source `apps/docs/content/guides/integrate/login-ui/login-app.mdx`.
+- [Logging Out via a Custom Login UI](pages/guides/integrate/login-ui/logout.md): Source `apps/docs/content/guides/integrate/login-ui/logout.mdx`.
+- [Multi-Factor Authentication (MFA) in a Custom Login UI](pages/guides/integrate/login-ui/mfa.md): Source `apps/docs/content/guides/integrate/login-ui/mfa.mdx`.
+- [OpenID Connect (OIDC) in Custom Login UI](pages/guides/integrate/login-ui/oidc-standard.md): Source `apps/docs/content/guides/integrate/login-ui/oidc-standard.mdx`.
+- [Using Passkeys in a Custom Login UI](pages/guides/integrate/login-ui/passkey.md): Source `apps/docs/content/guides/integrate/login-ui/passkey.mdx`.
+- [Password Reset/Change in a Custom Login UI](pages/guides/integrate/login-ui/password-reset.md): Source `apps/docs/content/guides/integrate/login-ui/password-reset.mdx`.
+- [Support for the SAML Standard in a Custom Login UI](pages/guides/integrate/login-ui/saml-standard.md): Source `apps/docs/content/guides/integrate/login-ui/saml-standard.mdx`.
+- [Select Account in a Custom Login UI](pages/guides/integrate/login-ui/select-account.md): Source `apps/docs/content/guides/integrate/login-ui/select-account.mdx`.
+- [How to Handle Session Validation](pages/guides/integrate/login-ui/session-validation.md): Source `apps/docs/content/guides/integrate/login-ui/session-validation.mdx`.
+- [Username & Password Login in Custom Login UI](pages/guides/integrate/login-ui/username-password.md): Source `apps/docs/content/guides/integrate/login-ui/username-password.mdx`.
+- [Onboard B2B customers using organizations](pages/guides/integrate/onboarding/b2b.md): Source `apps/docs/content/guides/integrate/onboarding/b2b.mdx`.
+- [Onboard Users](pages/guides/integrate/onboarding/end-users.md): Source `apps/docs/content/guides/integrate/onboarding/end-users.mdx`.
+- [Onboard Customers and Users](pages/guides/integrate/onboarding.md): Source `apps/docs/content/guides/integrate/onboarding/index.mdx`.
+- [Retrieve User Roles in ZITADEL](pages/guides/integrate/retrieve-user-roles.md): Source `apps/docs/content/guides/integrate/retrieve-user-roles.mdx`.
+- [SCIM Provisioning from Okta](pages/guides/integrate/scim-okta-guide.md): Source `apps/docs/content/guides/integrate/scim-okta-guide.mdx`.
+- [Authenticate service accounts and client applications](pages/guides/integrate/service-accounts/authenticate-service-accounts.md): Source `apps/docs/content/guides/integrate/service-accounts/authenticate-service-accounts.mdx`.
+- [OAuth Client Credentials for Service Accounts](pages/guides/integrate/service-accounts/client-credentials.md): Source `apps/docs/content/guides/integrate/service-accounts/client-credentials.mdx`.
+- [Personal Access Token Auth for Service Accounts](pages/guides/integrate/service-accounts/personal-access-token.md): Source `apps/docs/content/guides/integrate/service-accounts/personal-access-token.mdx`.
+- [Private Key JWT Auth for Service Accounts](pages/guides/integrate/service-accounts/private-key-jwt.md): Source `apps/docs/content/guides/integrate/service-accounts/private-key-jwt.mdx`.
+- [Log in with ZITADEL on Atlassian through SAML 2.0](pages/guides/integrate/services/atlassian-saml.md): Source `apps/docs/content/guides/integrate/services/atlassian-saml.mdx`.
+- [Log in with ZITADEL on Auth0 through OIDC](pages/guides/integrate/services/auth0-oidc.md): Source `apps/docs/content/guides/integrate/services/auth0-oidc.mdx`.
+- [Log in with ZITADEL on Auth0 through SAML 2.0](pages/guides/integrate/services/auth0-saml.md): Source `apps/docs/content/guides/integrate/services/auth0-saml.mdx`.
+- [Log in with ZITADEL on AWS through SAML 2.0](pages/guides/integrate/services/aws-saml.md): Source `apps/docs/content/guides/integrate/services/aws-saml.mdx`.
+- [Cloudflare Zero Trust OIDC with ZITADEL](pages/guides/integrate/services/cloudflare-oidc.md): Source `apps/docs/content/guides/integrate/services/cloudflare-oidc.mdx`.
+- [Log in with ZITADEL on Gitlab through SAML 2.0](pages/guides/integrate/services/gitlab-saml.md): Source `apps/docs/content/guides/integrate/services/gitlab-saml.mdx`.
+- [Log in with ZITADEL on Gitlab OmniAuth Provider](pages/guides/integrate/services/gitlab-self-hosted.md): Source `apps/docs/content/guides/integrate/services/gitlab-self-hosted.mdx`.
+- [ZITADEL on Google Cloud Workforce Identity](pages/guides/integrate/services/google-cloud.md): Source `apps/docs/content/guides/integrate/services/google-cloud.mdx`.
+- [Google Workspace SSO with ZITADEL](pages/guides/integrate/services/google-workspace.md): Source `apps/docs/content/guides/integrate/services/google-workspace.mdx`.
+- [Integrate ZITADEL with your Favorite Services](pages/guides/integrate/services.md): Source `apps/docs/content/guides/integrate/services/index.mdx`.
+- [Log in with ZITADEL on Ping Identity through SAML 2.0](pages/guides/integrate/services/pingidentity-saml.md): Source `apps/docs/content/guides/integrate/services/pingidentity-saml.mdx`.
+- [OAuth 2.0 Token Exchange (RFC 8693): Impersonation & Delegation](pages/guides/integrate/token-exchange.md): Source `apps/docs/content/guides/integrate/token-exchange.mdx`.
+- [Basic Authentication in ZITADEL](pages/guides/integrate/token-introspection/basic-auth.md): Source `apps/docs/content/guides/integrate/token-introspection/basic-auth.mdx`.
+- [Token introspection](pages/guides/integrate/token-introspection.md): Source `apps/docs/content/guides/integrate/token-introspection/index.mdx`.
+- [Private Key JWT](pages/guides/integrate/token-introspection/private-key-jwt.md): Source `apps/docs/content/guides/integrate/token-introspection/private-key-jwt.mdx`.
+- [Apache 2.0](pages/guides/integrate/tools/apache2.md): Source `apps/docs/content/guides/integrate/tools/apache2.mdx`.
+- [Access ZITADEL APIs](pages/guides/integrate/zitadel-apis/access-zitadel-apis.md): Source `apps/docs/content/guides/integrate/zitadel-apis/access-zitadel-apis.mdx`.
+- [Access ZITADEL System API](pages/guides/integrate/zitadel-apis/access-zitadel-system-api.md): Source `apps/docs/content/guides/integrate/zitadel-apis/access-zitadel-system-api.mdx`.
+- [Get Events from ZITADEL](pages/guides/integrate/zitadel-apis/event-api.md): Source `apps/docs/content/guides/integrate/zitadel-apis/event-api.mdx`.
+- [Integrate ZITADEL APIs into a .NET Application](pages/guides/integrate/zitadel-apis/example-zitadel-api-with-dot-net.md): Source `apps/docs/content/guides/integrate/zitadel-apis/example-zitadel-api-with-dot-net.mdx`.
+- [Integrate ZITADEL APIs into a Go Application](pages/guides/integrate/zitadel-apis/example-zitadel-api-with-go.md): Source `apps/docs/content/guides/integrate/zitadel-apis/example-zitadel-api-with-go.mdx`.
+- [ZITADEL Cloud Egress IP Addresses](pages/guides/manage/cloud/egress.md): Source `apps/docs/content/guides/manage/cloud/egress.mdx`.
+- [Overview](pages/guides/manage/cloud/overview.md): Source `apps/docs/content/guides/manage/cloud/overview/index.mdx`.
+- [ZITADEL Support](pages/guides/manage/cloud/support.md): Source `apps/docs/content/guides/manage/cloud/support.mdx`.
+- [Actions](pages/guides/manage/console/actions-overview.md): Source `apps/docs/content/guides/manage/console/actions-overview.mdx`.
+- [ZITADEL Administrators](pages/guides/manage/console/administrators.md): Source `apps/docs/content/guides/manage/console/administrators.mdx`.
+- [Applications](pages/guides/manage/console/applications-overview.md): Source `apps/docs/content/guides/manage/console/applications-overview.mdx`.
+- [Management Console](pages/guides/manage/console/console-overview.md): Source `apps/docs/content/guides/manage/console/console-overview.mdx`.
+- [ZITADEL Default Settings](pages/guides/manage/console/default-settings.md): Source `apps/docs/content/guides/manage/console/default-settings.mdx`.
+- [Organizations](pages/guides/manage/console/organizations-overview.md): Source `apps/docs/content/guides/manage/console/organizations-overview.mdx`.
+- [ZITADEL Projects: Manage Apps, Services & Roles](pages/guides/manage/console/projects-overview.md): Source `apps/docs/content/guides/manage/console/projects-overview.mdx`.
+- [ZITADEL Roles and Role Assignments](pages/guides/manage/console/roles.md): Source `apps/docs/content/guides/manage/console/roles.mdx`.
+- [Users](pages/guides/manage/console/users-overview.md): Source `apps/docs/content/guides/manage/console/users-overview.mdx`.
+- [Behavior Customization](pages/guides/manage/customize/behavior.md): Source `apps/docs/content/guides/manage/customize/behavior.mdx`.
+- [Brand Customization](pages/guides/manage/customize/branding.md): Source `apps/docs/content/guides/manage/customize/branding.mdx`.
+- [SMS, SMTP and HTTP Provider for Notifications](pages/guides/manage/customize/notification-providers.md): Source `apps/docs/content/guides/manage/customize/notification-providers.mdx`.
+- [Feature Restrictions](pages/guides/manage/customize/restrictions.md): Source `apps/docs/content/guides/manage/customize/restrictions.mdx`.
+- [Customized Texts](pages/guides/manage/customize/texts.md): Source `apps/docs/content/guides/manage/customize/texts.mdx`.
+- [User Metadata](pages/guides/manage/customize/user-metadata.md): Source `apps/docs/content/guides/manage/customize/user-metadata.mdx`.
+- [ZITADEL Cloud Production Checklist](pages/guides/manage/production-checklist.md): Source `apps/docs/content/guides/manage/production-checklist.mdx`.
+- [ZITADEL Terraform Provider](pages/guides/manage/terraform-provider.md): Source `apps/docs/content/guides/manage/terraform-provider.mdx`.
+- [Register and Create User](pages/guides/manage/user/reg-create-user.md): Source `apps/docs/content/guides/manage/user/reg-create-user.mdx`.
+- [SCIM v2.0](pages/guides/manage/user/scim2.md): Source `apps/docs/content/guides/manage/user/scim2.mdx`.
+- [User Self-Deletion](pages/guides/manage/user/self-deletion.md): Source `apps/docs/content/guides/manage/user/self-deletion.mdx`.
+- [Migrate to ZITADEL](pages/guides/migrate/introduction.md): Source `apps/docs/content/guides/migrate/introduction.mdx`.
+- [Migrate from Auth0 to ZITADEL with Password Hashes](pages/guides/migrate/sources/auth0.md): Source `apps/docs/content/guides/migrate/sources/auth0.mdx`.
+- [Migrate from Firebase to ZITADEL](pages/guides/migrate/sources/firebase.md): Source `apps/docs/content/guides/migrate/sources/firebase.mdx`.
+- [Migrate from Keycloak](pages/guides/migrate/sources/keycloak.md): Source `apps/docs/content/guides/migrate/sources/keycloak.mdx`.
+- [Migrate from ZITADEL](pages/guides/migrate/sources/zitadel.md): Source `apps/docs/content/guides/migrate/sources/zitadel.mdx`.
+- [Migrate Users](pages/guides/migrate/users.md): Source `apps/docs/content/guides/migrate/users.mdx`.
+- [B2B Multi-Tenant Authentication with ZITADEL](pages/guides/solution-scenarios/b2b.md): Source `apps/docs/content/guides/solution-scenarios/b2b.mdx`.
+- [ZITADEL for B2C Scenarios](pages/guides/solution-scenarios/b2c.md): Source `apps/docs/content/guides/solution-scenarios/b2c.mdx`.
+- [Set up ZITADEL for your Scenario](pages/guides/solution-scenarios/configurations.md): Source `apps/docs/content/guides/solution-scenarios/configurations.mdx`.
+- [Domain Discovery in ZITADEL](pages/guides/solution-scenarios/domain-discovery.md): Source `apps/docs/content/guides/solution-scenarios/domain-discovery.mdx`.
+- [Frontend and Back-end API Communication in ZITADEL](pages/guides/solution-scenarios/frontend-calling-backend-API.md): Source `apps/docs/content/guides/solution-scenarios/frontend-calling-backend-API.mdx`.
+- [Guest users authentication](pages/guides/solution-scenarios/guest-auth.md): Source `apps/docs/content/guides/solution-scenarios/guest-auth.mdx`.
+- [Solution Scenarios](pages/guides/solution-scenarios.md): Source `apps/docs/content/guides/solution-scenarios/index.mdx`.
+- [Use Cases](pages/guides/solution-scenarios/introduction.md): Source `apps/docs/content/guides/solution-scenarios/introduction/index.mdx`.
+- [Prevent users from accessing ZITADEL Management Console](pages/guides/solution-scenarios/restrict-console.md): Source `apps/docs/content/guides/solution-scenarios/restrict-console.mdx`.
+- [SaaS Authentication and Authorization with ZITADEL](pages/guides/solution-scenarios/saas.md): Source `apps/docs/content/guides/solution-scenarios/saas.mdx`.
+- [The ZITADEL Quick Start Guide](pages/guides/start/quickstart.md): Source `apps/docs/content/guides/start/quickstart.mdx`.
+
+## Overview
+
+- [ZITADEL Documentation](pages/index.md): Source `apps/docs/content/index.mdx`.
+
+## Legal
+
+- [Annex for ZITADEL Enterprise and Support Services](pages/legal/annex-support-services.md): Source `apps/docs/content/legal/annex-support-services.mdx`.
+- [Data Processing Agreement](pages/legal/data-processing-agreement.md): Source `apps/docs/content/legal/data-processing-agreement.mdx`.
+- [Legal Agreements](pages/legal.md): Source `apps/docs/content/legal/index.mdx`.
+- [Acceptable Use Policy](pages/legal/policies/acceptable-use-policy.md): Source `apps/docs/content/legal/policies/acceptable-use-policy.mdx`.
+- [ZITADEL Account Lockout Policy](pages/legal/policies/account-lockout-policy.md): Source `apps/docs/content/legal/policies/account-lockout-policy.mdx`.
+- [Use of brands and trademarks](pages/legal/policies/brand-trademark-policy.md): Source `apps/docs/content/legal/policies/brand-trademark-policy.mdx`.
+- [Feature Development Policy](pages/legal/policies/feature-development-policy.md): Source `apps/docs/content/legal/policies/feature-development-policy.mdx`.
+- [Policies](pages/legal/policies.md): Source `apps/docs/content/legal/policies/index.mdx`.
+- [Privacy Policy](pages/legal/policies/privacy-policy.md): Source `apps/docs/content/legal/policies/privacy-policy.mdx`.
+- [Rate Limit Policy](pages/legal/policies/rate-limit-policy.md): Source `apps/docs/content/legal/policies/rate-limit-policy.mdx`.
+- [Vulnerability Disclosure Policy](pages/legal/policies/vulnerability-disclosure-policy.md): Source `apps/docs/content/legal/policies/vulnerability-disclosure-policy.mdx`.
+- [ZITADEL Cloud & Enterprise Service Description](pages/legal/service-description/cloud-service-description.md): Source `apps/docs/content/legal/service-description/cloud-service-description.mdx`.
+- [Service description](pages/legal/service-description.md): Source `apps/docs/content/legal/service-description/index.mdx`.
+- [Service level description for ZITADEL Cloud](pages/legal/service-description/service-level-description.md): Source `apps/docs/content/legal/service-description/service-level-description.mdx`.
+- [Support service description for ZITADEL](pages/legal/service-description/support-services.md): Source `apps/docs/content/legal/service-description/support-services.mdx`.
+- [Third party sub-processors for ZITADEL](pages/legal/subprocessors.md): Source `apps/docs/content/legal/subprocessors.mdx`.
+- [Terms of Service Agreement](pages/legal/terms-of-service.md): Source `apps/docs/content/legal/terms-of-service.mdx`.
+
+## Product
+
+- [Zitadel Roadmap](pages/product/roadmap.md): Source `apps/docs/content/product/roadmap.mdx`.
+
+## SDK examples
+
+- [Angular](pages/sdk-examples/angular.md): Source `apps/docs/content/sdk-examples/angular.mdx`.
+- [Astro](pages/sdk-examples/astro.md): Source `apps/docs/content/sdk-examples/astro.mdx`.
+- [Java Client](pages/sdk-examples/client-libraries/java.md): Source `apps/docs/content/sdk-examples/client-libraries/java.mdx`.
+- [Node.js Client](pages/sdk-examples/client-libraries/node.md): Source `apps/docs/content/sdk-examples/client-libraries/node.mdx`.
+- [PHP Client](pages/sdk-examples/client-libraries/php.md): Source `apps/docs/content/sdk-examples/client-libraries/php.mdx`.
+- [Python Client](pages/sdk-examples/client-libraries/python.md): Source `apps/docs/content/sdk-examples/client-libraries/python.mdx`.
+- [Ruby Client](pages/sdk-examples/client-libraries/ruby.md): Source `apps/docs/content/sdk-examples/client-libraries/ruby.mdx`.
+- [Django](pages/sdk-examples/django.md): Source `apps/docs/content/sdk-examples/django.mdx`.
+- [ASP.NET Core](pages/sdk-examples/dotnet.md): Source `apps/docs/content/sdk-examples/dotnet.mdx`.
+- [Express.js](pages/sdk-examples/expressjs.md): Source `apps/docs/content/sdk-examples/expressjs.mdx`.
+- [FastAPI](pages/sdk-examples/fastapi.md): Source `apps/docs/content/sdk-examples/fastapi.mdx`.
+- [Fastify](pages/sdk-examples/fastify.md): Source `apps/docs/content/sdk-examples/fastify.mdx`.
+- [Flask](pages/sdk-examples/flask.md): Source `apps/docs/content/sdk-examples/flask.mdx`.
+- [Go](pages/sdk-examples/go.md): Source `apps/docs/content/sdk-examples/go.mdx`.
+- [Hono](pages/sdk-examples/hono.md): Source `apps/docs/content/sdk-examples/hono.mdx`.
+- [Examples and SDKs for ZITADEL](pages/sdk-examples/introduction.md): Source `apps/docs/content/sdk-examples/introduction.mdx`.
+- [Java Spring Boot](pages/sdk-examples/java.md): Source `apps/docs/content/sdk-examples/java.mdx`.
+- [Laravel](pages/sdk-examples/laravel.md): Source `apps/docs/content/sdk-examples/laravel.mdx`.
+- [NestJS](pages/sdk-examples/nestjs.md): Source `apps/docs/content/sdk-examples/nestjs.mdx`.
+- [Next.js](pages/sdk-examples/nextjs.md): Source `apps/docs/content/sdk-examples/nextjs.mdx`.
+- [Nuxt.js](pages/sdk-examples/nuxtjs.md): Source `apps/docs/content/sdk-examples/nuxtjs.mdx`.
+- [Integrating ZITADEL with Standard OIDC & OAuth2 Libraries](pages/sdk-examples/oidc-libraries.md): Source `apps/docs/content/sdk-examples/oidc-libraries.mdx`.
+- [Qwik](pages/sdk-examples/qwik.md): Source `apps/docs/content/sdk-examples/qwik.mdx`.
+- [React](pages/sdk-examples/react.md): Source `apps/docs/content/sdk-examples/react.mdx`.
+- [SolidStart](pages/sdk-examples/solidstart.md): Source `apps/docs/content/sdk-examples/solidstart.mdx`.
+- [Spring Boot](pages/sdk-examples/spring.md): Source `apps/docs/content/sdk-examples/spring.mdx`.
+- [SvelteKit](pages/sdk-examples/sveltekit.md): Source `apps/docs/content/sdk-examples/sveltekit.mdx`.
+- [Symfony](pages/sdk-examples/symfony.md): Source `apps/docs/content/sdk-examples/symfony.mdx`.
+- [Vue.js](pages/sdk-examples/vue.md): Source `apps/docs/content/sdk-examples/vue.mdx`.
+
+## Self-hosting
+
+- [Set up ZITADEL with Docker Compose](pages/self-hosting/deploy/compose.md): Source `apps/docs/content/self-hosting/deploy/compose.mdx`.
+- [Developing ZITADEL with Dev Containers](pages/self-hosting/deploy/devcontainer.md): Source `apps/docs/content/self-hosting/deploy/devcontainer.mdx`.
+- [Caching](pages/self-hosting/deploy/kubernetes/caching.md): Source `apps/docs/content/self-hosting/deploy/kubernetes/caching.mdx`.
+- [Configuration](pages/self-hosting/deploy/kubernetes/configuration.md): Source `apps/docs/content/self-hosting/deploy/kubernetes/configuration.mdx`.
+- [Database](pages/self-hosting/deploy/kubernetes/database.md): Source `apps/docs/content/self-hosting/deploy/kubernetes/database.mdx`.
+- [Deploy ZITADEL on Kubernetes](pages/self-hosting/deploy/kubernetes.md): Source `apps/docs/content/self-hosting/deploy/kubernetes/index.mdx`.
+- [Ingress](pages/self-hosting/deploy/kubernetes/ingress.md): Source `apps/docs/content/self-hosting/deploy/kubernetes/ingress.mdx`.
+- [Observability](pages/self-hosting/deploy/kubernetes/observability.md): Source `apps/docs/content/self-hosting/deploy/kubernetes/observability.mdx`.
+- [Operations](pages/self-hosting/deploy/kubernetes/operations.md): Source `apps/docs/content/self-hosting/deploy/kubernetes/operations.mdx`.
+- [Uninstalling](pages/self-hosting/deploy/kubernetes/uninstalling.md): Source `apps/docs/content/self-hosting/deploy/kubernetes/uninstalling.mdx`.
+- [Install Zitadel on Linux](pages/self-hosting/deploy/linux.md): Source `apps/docs/content/self-hosting/deploy/linux.mdx`.
+- [Install ZITADEL on MacOS](pages/self-hosting/deploy/macos.md): Source `apps/docs/content/self-hosting/deploy/macos.mdx`.
+- [Deploy ZITADEL](pages/self-hosting/deploy/overview.md): Source `apps/docs/content/self-hosting/deploy/overview.mdx`.
+- [Troubleshoot ZITADEL](pages/self-hosting/deploy/troubleshooting/troubleshooting.md): Source `apps/docs/content/self-hosting/deploy/troubleshooting/troubleshooting.mdx`.
+- [Adopt Login V2 on an existing installation](pages/self-hosting/manage/adopt-login-v2.md): Source `apps/docs/content/self-hosting/manage/adopt-login-v2.mdx`.
+- [Caches](pages/self-hosting/manage/cache.md): Source `apps/docs/content/self-hosting/manage/cache.mdx`.
+- [Mirror data from cockroach to postgres](pages/self-hosting/manage/cli/mirror.md): Source `apps/docs/content/self-hosting/manage/cli/mirror.mdx`.
+- [ZITADEL Command Line Interface](pages/self-hosting/manage/cli/overview.md): Source `apps/docs/content/self-hosting/manage/cli/overview.mdx`.
+- [Self-Hosted ZITADEL Configuration: Runtime Settings & Environment Variables](pages/self-hosting/manage/configure/configure.md): Source `apps/docs/content/self-hosting/manage/configure/configure.mdx`.
+- [Configure ZITADEL](pages/self-hosting/manage/configure.md): Source `apps/docs/content/self-hosting/manage/configure/index.mdx`.
+- [External ZITADEL Access](pages/self-hosting/manage/custom-domain.md): Source `apps/docs/content/self-hosting/manage/custom-domain.mdx`.
+- [Database](pages/self-hosting/manage/database.md): Source `apps/docs/content/self-hosting/manage/database/index.mdx`.
+- [HTTP/2 Support in ZITADEL](pages/self-hosting/manage/http2.md): Source `apps/docs/content/self-hosting/manage/http2.mdx`.
+- [Connect your Self-Hosted Login UI to Zitadel](pages/self-hosting/manage/login-client.md): Source `apps/docs/content/self-hosting/manage/login-client.mdx`.
+- [Metrics](pages/self-hosting/manage/metrics/overview.md): Source `apps/docs/content/self-hosting/manage/metrics/overview.mdx`.
+- [Prometheus](pages/self-hosting/manage/metrics/prometheus.md): Source `apps/docs/content/self-hosting/manage/metrics/prometheus.mdx`.
+- [ZITADEL Production Setup](pages/self-hosting/manage/production.md): Source `apps/docs/content/self-hosting/manage/production.mdx`.
+- [ZITADEL Production Checklist](pages/self-hosting/manage/productionchecklist.md): Source `apps/docs/content/self-hosting/manage/productionchecklist.mdx`.
+- [ZITADEL Requirements](pages/self-hosting/manage/requirements.md): Source `apps/docs/content/self-hosting/manage/requirements.mdx`.
+- [Configure Zitadel with Caddy](pages/self-hosting/manage/reverseproxy/caddy.md): Source `apps/docs/content/self-hosting/manage/reverseproxy/caddy/index.mdx`.
+- [Configure Zitadel with Cloudflare](pages/self-hosting/manage/reverseproxy/cloudflare.md): Source `apps/docs/content/self-hosting/manage/reverseproxy/cloudflare/index.mdx`.
+- [Configure Zitadel with Cloudflare Tunnel](pages/self-hosting/manage/reverseproxy/cloudflare_tunnel.md): Source `apps/docs/content/self-hosting/manage/reverseproxy/cloudflare_tunnel/index.mdx`.
+- [Configure Zitadel with Apache httpd](pages/self-hosting/manage/reverseproxy/httpd.md): Source `apps/docs/content/self-hosting/manage/reverseproxy/httpd/index.mdx`.
+- [Configure Zitadel with NGINX](pages/self-hosting/manage/reverseproxy/nginx.md): Source `apps/docs/content/self-hosting/manage/reverseproxy/nginx/index.mdx`.
+- [Reverse Proxy Configuration](pages/self-hosting/manage/reverseproxy/reverse_proxy.md): Source `apps/docs/content/self-hosting/manage/reverseproxy/reverse_proxy.mdx`.
+- [Configure Zitadel with Traefik](pages/self-hosting/manage/reverseproxy/traefik.md): Source `apps/docs/content/self-hosting/manage/reverseproxy/traefik/index.mdx`.
+- [Front Zitadel Cloud with a CDN, WAF or Reverse Proxy](pages/self-hosting/manage/reverseproxy/zitadel_cloud.md): Source `apps/docs/content/self-hosting/manage/reverseproxy/zitadel_cloud/index.mdx`.
+- [Service Ping](pages/self-hosting/manage/service_ping.md): Source `apps/docs/content/self-hosting/manage/service_ping.mdx`.
+- [TLS Modes](pages/self-hosting/manage/tls_modes.md): Source `apps/docs/content/self-hosting/manage/tls_modes.mdx`.
+- [ZITADEL Performance Tuning](pages/self-hosting/manage/tuning.md): Source `apps/docs/content/self-hosting/manage/tuning.mdx`.
+- [Update and Scale ZITADEL](pages/self-hosting/manage/updating_scaling.md): Source `apps/docs/content/self-hosting/manage/updating_scaling.mdx`.
+- [Upgrade from ZITADEL v3 to v4](pages/self-hosting/manage/upgrade-v3-to-v4.md): Source `apps/docs/content/self-hosting/manage/upgrade-v3-to-v4.mdx`.
+- [Usage Control](pages/self-hosting/manage/usage_control.md): Source `apps/docs/content/self-hosting/manage/usage_control.mdx`.
+
+## Support
+
+- [Technical Advisory 10000](pages/support/advisory/a10000.md): Source `apps/docs/content/support/advisory/a10000.mdx`.
+- [Technical Advisory 10001](pages/support/advisory/a10001.md): Source `apps/docs/content/support/advisory/a10001.mdx`.
+- [Technical Advisory 10002](pages/support/advisory/a10002.md): Source `apps/docs/content/support/advisory/a10002.mdx`.
+- [Technical Advisory 10003](pages/support/advisory/a10003.md): Source `apps/docs/content/support/advisory/a10003.mdx`.
+- [Technical Advisory 10004](pages/support/advisory/a10004.md): Source `apps/docs/content/support/advisory/a10004.mdx`.
+- [Technical Advisory 10005](pages/support/advisory/a10005.md): Source `apps/docs/content/support/advisory/a10005.mdx`.
+- [Technical Advisory 10006](pages/support/advisory/a10006.md): Source `apps/docs/content/support/advisory/a10006.mdx`.
+- [Technical Advisory 10007](pages/support/advisory/a10007.md): Source `apps/docs/content/support/advisory/a10007.mdx`.
+- [Technical Advisory 10008](pages/support/advisory/a10008.md): Source `apps/docs/content/support/advisory/a10008.mdx`.
+- [Technical Advisory 10009](pages/support/advisory/a10009.md): Source `apps/docs/content/support/advisory/a10009.mdx`.
+- [Technical Advisory 10010](pages/support/advisory/a10010.md): Source `apps/docs/content/support/advisory/a10010.mdx`.
+- [Technical Advisory 10011](pages/support/advisory/a10011.md): Source `apps/docs/content/support/advisory/a10011.mdx`.
+- [Technical Advisory 10012](pages/support/advisory/a10012.md): Source `apps/docs/content/support/advisory/a10012.mdx`.
+- [Technical Advisory 10013](pages/support/advisory/a10013.md): Source `apps/docs/content/support/advisory/a10013.mdx`.
+- [Technical Advisory 10014](pages/support/advisory/a10014.md): Source `apps/docs/content/support/advisory/a10014.mdx`.
+- [Technical Advisory 10015](pages/support/advisory/a10015.md): Source `apps/docs/content/support/advisory/a10015.mdx`.
+- [Technical Advisory 10016](pages/support/advisory/a10016.md): Source `apps/docs/content/support/advisory/a10016.mdx`.
+- [Technical Advisory 10017](pages/support/advisory/a10017.md): Source `apps/docs/content/support/advisory/a10017.mdx`.
+- [ZITADEL Technical Advisories](pages/support/technical_advisory.md): Source `apps/docs/content/support/technical_advisory.mdx`.
+- [Troubleshoot ZITADEL](pages/support/troubleshooting.md): Source `apps/docs/content/support/troubleshooting.mdx`.

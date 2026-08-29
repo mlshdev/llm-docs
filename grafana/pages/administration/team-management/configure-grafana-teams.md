@@ -1,0 +1,107 @@
+> Release-pinned source for Grafana v13.2.0: [docs/sources/administration/team-management/configure-grafana-teams.md](https://github.com/grafana/grafana/blob/f681b1359f6a0b8ecb9f2c49a88ac72b75bde73b/docs/sources/administration/team-management/configure-grafana-teams.md)
+
+# Configure Grafana Teams
+
+This topic describes how to set up and configure Grafana Teams.
+
+For a tutorial on working with Teams, refer to [Create users and teams](https://grafana.com/tutorials/create-users-and-teams/).
+
+## Before you begin
+
+Before you begin creating and working with Grafana Teams:
+
+- Ensure that you have either the `Organization Administrator` role or `team administrator` permissions.
+  Refer to [Organization roles](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/#organization-roles) and [RBAC permissions, actions, and scopes](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/custom-role-actions-scopes/#rbac-permissions-actions-and-scopes) for a list of Grafana roles and role-based access control actions.
+- Decide which users belong to which teams and what permissions team members receive.
+- Configure the default basic role for users to join Grafana. This role applies to users where no role is set by the identity provider (IDP).
+  - The `None` basic role can't view any resources by default. Recommended for `isolated` teams.
+  - the `Viewer` role can view all resources by default. Recommended for `collaborative` teams.
+- Ensure team sync is turned on if you plan to manage team members through team sync.
+  Refer to [Configure Team Sync](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-team-sync/) for a list of providers and instructions on how to turn on team sync for each provider.
+
+> **Note**
+>
+> [Grafana Organizations](https://grafana.com/docs/grafana/v13.2/administration/organization-management/) do not exist in Grafana Cloud.
+> Grafana Cloud uses the term *organization* to refer to accounts in grafana.com, or GCOM.
+> In Grafana Enterprise and OSS, Teams belong to Grafana Organizations.
+> Refer to [About organizations](https://grafana.com/docs/grafana/v13.2/administration/organization-management/#about-organizations) for more information.
+
+## Create a Grafana Team
+
+A team is a group of users within a Grafana instance that have common permissions needs. Teams help make user-permission management more efficient. A user can belong to multiple Teams.
+Grafana Teams includes common access to the following:
+
+- dashboards
+- data sources
+- folders
+- alerts
+- reports
+- cloud access policies
+- annotations
+- playlists
+
+To create a Team, complete the following steps:
+
+1. Sign in to Grafana as an `org administrator` or `team administrator`.
+2. Click the arrow next to **Administration** in the left-side menu, click **Users and access**, and select **Teams**.
+3. Click **New Team**.
+4. Fill in each field and click **Create**.
+5. Click **Save**. You can now add a Team member.
+
+The **New team** page also includes a **Auto-create a team folder** option. Select **Auto-create a team folder** if you want Grafana to create a folder owned by that team during setup. For more information, refer to [Manage team folders](https://grafana.com/docs/grafana/v13.2/administration/team-management/team-folders/).
+
+## Add a Team member
+
+**Note**
+
+> In Grafana Enterprise or Grafana Cloud with RBAC enforcement enabled, adding or viewing team members requires the `org.users:read` permission, which is typically granted only to `Organization Administrators`.
+>
+> In Grafana OSS (or unlicensed), `team administrators` can search for and add any user in the organization without requiring additional permission.
+
+Add a member to a new Team or add a team member to an existing Team when you want to provide access to team dashboards and folders to another user.
+
+To add a team member, complete the following steps:
+
+1. Sign in to Grafana as an `org administrator` or `team administrator`.
+2. Click the arrow next to **Administration** in the left-side menu, click **Users and access**, and select **Teams**.
+3. Click the name of the Team to which you want to add members, and click **+ Add member**.
+4. Search for and select a user.
+5. Choose whether to add the user as a Team **Member** or **Admin**.
+6. Click **Save**.
+
+## Grant or change Team member permissions
+
+Complete this task when you want to add or modify team member permissions.
+
+To grant team member permissions:
+
+1. Sign in to Grafana as an `org administrator` or `team administrator`.
+2. Click the arrow next to **Administration** in the left-side menu, click **Users and access**, and select **Teams**.
+3. Click the pencil next to the name of the Team for which you want to add or modify team member permissions.
+4. In the team member list, locate the user that you want to change. You can use the search field to filter the list if necessary.
+5. Under the **Permission** column, select the new permission level.
+
+## Add roles to a Grafana Team
+
+You can add or delete roles from a specified team.
+
+To add a role, complete the following steps:
+
+1. Sign in to Grafana as an `org administrator` or `team administrator`.
+2. Click the arrow next to **Administration** in the left-side menu, click **Users and access**, and select **Teams**.
+3. Select the Team and click under the **Role** column.
+   Select from a list of current fixed or plugin roles or clear all roles and start over.
+   As you hover over each role a list of permissions appears to the right.
+   You can clear any permission for additional fine-grained control.
+4. Click **Update** to add the new role or roles.
+
+To delete a role, remove the check next to the role name and click **Update**.
+
+## Delete a team
+
+Delete a team when you no longer need it. This action permanently deletes the team and removes all team permissions from dashboards and folders. This task requires that you have `Organization Administrator` permissions.
+
+1. Sign in to Grafana as an `org administrator` or `team administrator`.
+2. Click the arrow next to **Administration** in the left-side menu, click **Users and access**, and select **Teams**.
+3. Click the **red X** on the right side of the name of the team.
+4. Click **Delete**.

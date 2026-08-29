@@ -50190,8 +50190,6 @@ vmoperator-victoria-metrics-operator-67cff44cd6-s47n6   1/1     Running   0     
 
 First, create a YAML file to configure the deployment of VictoriaMetrics cluster version:
 
-<p id="example-cluster-config"></p>
-
 ```sh
 cat << EOF > vmcluster-config.yml
 apiVersion: operator.victoriametrics.com/v1beta1
@@ -50238,8 +50236,6 @@ vmcluster.operator.victoriametrics.com/example-vmcluster-persistent created
 ```
 
 Pods may take some time to become ready. To check that the pods are started, run the following command:
-
-<p id="example-cluster-config"></p>
 
 ```sh
 kubectl get pods -l managed-by=vm-operator
@@ -57071,7 +57067,6 @@ Once the desired UI state is set up (query, time range, model configuration, etc
 
 ![vmanomaly-ui-state-sharing-url](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/vmanomaly-ui-state-sharing-url.webp)
 
-<p></p>
 <p>Example URL content:</p>
 
 ```shellhelp

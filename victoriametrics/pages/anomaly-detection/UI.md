@@ -401,7 +401,6 @@ Once the desired UI state is set up (query, time range, model configuration, etc
 
 ![vmanomaly-ui-state-sharing-url](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/vmanomaly-ui-state-sharing-url.webp)
 
-<p></p>
 <p>Example URL content:</p>
 
 ```shellhelp

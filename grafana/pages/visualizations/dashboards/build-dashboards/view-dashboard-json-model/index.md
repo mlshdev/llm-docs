@@ -1,0 +1,344 @@
+> Release-pinned source for Grafana v13.2.0: [docs/sources/visualizations/dashboards/build-dashboards/view-dashboard-json-model/index.md](https://github.com/grafana/grafana/blob/f681b1359f6a0b8ecb9f2c49a88ac72b75bde73b/docs/sources/visualizations/dashboards/build-dashboards/view-dashboard-json-model/index.md)
+
+# Dashboard JSON model
+
+Grafana dashboards are represented as JSON objects that store metadata, panels, variables, and settings.
+
+## Different dashboard schema models
+
+There are currently three dashboard JSON schema models:
+
+- [V2 Resource](#v2-resource-model): The current schema, supporting new features such as advanced layouts and conditional rendering. It models all dashboard elements as Kubernetes kinds, following Kubernetes conventions for declaring dashboard components.
+- [V1 Resource](#v1-resource-model): The Classic dashboard schema formatted as a Kubernetes-style resource. Its `spec` property contains the Classic model of the schema. It was the default format for API communication between Grafana v12.2.0 and v13.0.0 and has been used for exporting, importing, and sharing dashboards.
+- [Classic](#classic-model): A non-Kubernetes resource that was the default before Grafana v12.2.0. It's been widely used for exporting, importing, and sharing dashboards in the Grafana dashboards collection at [grafana.com/dashboards](https://grafana.com/grafana/dashboards/). Dashboards created using this model can be exported using either this model or V2.
+
+> **Note**
+>
+> [Observability as Code](https://grafana.com/docs/grafana/latest/as-code/observability-as-code/) works with both versions of the JSON model, but it's fully compatible with version 2.
+
+## Access and update the JSON model {#view-json}
+
+To access the JSON representation of a dashboard:
+
+1. Navigate to the dashboard.
+2. Click **Edit** in the top-right corner.
+3. In the toolbar, click the **Dashboard options** icon.
+4. In the sidebar, click **Settings**.
+5. Go to the **JSON Model** tab.
+6. When you've finished updating the JSON, click **Save changes** at the bottom of the tab.
+7. Click **Back** and **Exit edit**.
+
+## V2 Resource model
+
+For the detailed V2 Resource model schema, refer to the [Swagger documentation](https://play.grafana.org/swagger?api=dashboard.grafana.app-v2beta1).
+You can also reach the Swagger schema documentation from your Grafana Cloud instance at: <https://grafana.com/launch/swagger>.
+
+## V1 Resource model
+
+The V1 Resource schema model formats the [Classic JSON model](#classic-model) schema as a Kubernetes-style resource.
+The `spec` property of the schema contains the Classic-style model of the schema.
+
+For the detailed V1 Resource model schema, refer to the [Swagger documentation](https://play.grafana.org/swagger?api=dashboard.grafana.app-v1).
+You can also reach the Swagger schema documentation from your Grafana Cloud instance at: <https://grafana.com/launch/swagger>.
+
+The following code snippet shows the fields included in the V1 Resource model:
+
+```json
+{
+  "apiVersion": "dashboard.grafana.app/v1",
+  "kind": "Dashboard",
+  "metadata": {
+    "name": "isnt5ss",
+    "namespace": "stacks-521104",
+    "uid": "92674c0e-0360-4bb4-99ab-fb150581376d",
+    "resourceVersion": "1764705030717045",
+    "generation": 1,
+    "creationTimestamp": "2025-12-02T19:50:30Z",
+    "labels": {
+      "grafana.app/deprecatedInternalID": "1329"
+    },
+    "annotations": {
+      "grafana.app/createdBy": "user:u000000002",
+      "grafana.app/folder": "",
+      "grafana.app/saved-from-ui": "Grafana Cloud (instant)"
+    }
+  },
+  "spec": {
+    "annotations": {
+      "list": [
+        {
+          "builtIn": 1,
+          "datasource": {
+            "type": "grafana",
+            "uid": "-- Grafana --"
+          },
+          "enable": true,
+          "hide": true,
+          "iconColor": "rgba(0, 211, 255, 1)",
+          "name": "Annotations & Alerts",
+          "type": "dashboard"
+        }
+      ]
+    },
+    "editable": true,
+    "fiscalYearStartMonth": 0,
+    "graphTooltip": 0,
+    "id": 1329,
+    "links": [],
+    "panels": [],
+    "preload": false,
+    "schemaVersion": 42,
+    "tags": [],
+    "templating": {
+      "list": []
+    },
+    "time": {
+      "from": "now-6h",
+      "to": "now"
+    },
+    "timepicker": {},
+    "timezone": "Africa/Abidjan",
+    "title": "Graphite suggestions",
+    "uid": "isnt5ss",
+    "version": 1,
+    "weekStart": ""
+  },
+  "status": {}
+}
+```
+
+## Classic model
+
+When you create a new dashboard in self-managed Grafana, a new dashboard JSON object was initialized with the following fields:
+
+> **Note**
+>
+> In the following JSON, id is shown as null which is the default value assigned to it until a dashboard is saved.
+> After a dashboard is saved, an integer value is assigned to the `id` field.
+
+```json
+{
+  "id": null,
+  "uid": "cLV5GDCkz",
+  "title": "New dashboard",
+  "tags": [],
+  "timezone": "browser",
+  "editable": true,
+  "graphTooltip": 1,
+  "panels": [],
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {
+    "refresh_intervals": []
+  },
+  "templating": {
+    "list": []
+  },
+  "annotations": {
+    "list": []
+  },
+  "refresh": "5s",
+  "schemaVersion": 17,
+  "version": 0,
+  "links": []
+}
+```
+
+Each field in the dashboard JSON is explained below with its usage:
+
+| Name              | Usage                                                                                                                                                    |
+| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **id**            | unique numeric identifier for the dashboard. (generated by the db)                                                                                       |
+| **uid**           | unique dashboard identifier that can be generated by anyone. string (8-40)                                                                               |
+| **title**         | current title of dashboard                                                                                                                               |
+| **tags**          | tags associated with dashboard, an array of strings                                                                                                      |
+| **style**         | theme of dashboard, i.e. `dark` or `light`                                                                                                               |
+| **timezone**      | timezone of dashboard, i.e. `utc` or `browser`                                                                                                           |
+| **editable**      | whether a dashboard is editable or not                                                                                                                   |
+| **graphTooltip**  | 0 for no shared crosshair or tooltip (default), 1 for shared crosshair, 2 for shared crosshair AND shared tooltip                                        |
+| **time**          | time range for dashboard, i.e. last 6 hours, last 7 days, etc                                                                                            |
+| **timepicker**    | timepicker metadata, see [timepicker section](#timepicker) for details                                                                                   |
+| **templating**    | templating metadata, see [templating section](#templating) for details                                                                                   |
+| **annotations**   | annotations metadata, see [annotations](https://grafana.com/docs/grafana/v13.2/dashboards/build-dashboards/annotate-visualizations/) for how to add them |
+| **refresh**       | auto-refresh interval                                                                                                                                    |
+| **schemaVersion** | version of the JSON schema (integer), incremented each time a Grafana update brings changes to said schema                                               |
+| **version**       | version of the dashboard (integer), incremented each time the dashboard is updated                                                                       |
+| **panels**        | panels array, see below for detail.                                                                                                                      |
+
+### Panels
+
+Panels are the building blocks of a dashboard. It consists of data source queries, type of graphs, aliases, etc. Panel JSON consists of an array of JSON objects, each representing a different panel. Most of the fields are common for all panels but some fields depend on the panel type. Following is an example of panel JSON of a text panel.
+
+```json
+"panels": [
+  {
+    "type": "text",
+    "title": "Panel Title",
+    "gridPos": {
+      "x": 0,
+      "y": 0,
+      "w": 12,
+      "h": 9
+    },
+    "id": 4,
+    "mode": "markdown",
+    "content": "# title"
+  }
+```
+
+### Panel size and position
+
+The gridPos property describes the panel size and position in grid coordinates.
+
+- `w` 1-24 (the width of the dashboard is divided into 24 columns)
+- `h` In grid height units, each represents 30 pixels.
+- `x` The x position, in same unit as `w`.
+- `y` The y position, in same unit as `h`.
+
+The grid has a negative gravity that moves panels up if there is empty space above a panel.
+
+### timepicker
+
+```json
+"timepicker": {
+    "collapse": false,
+    "enable": true,
+    "notice": false,
+    "now": true,
+    "hidden": false,
+    "nowDelay": "",
+    "quick_ranges": [
+      {
+        "display": "Last 6 hours",
+        "from": "now-6h",
+        "to": "now"
+      },
+      {
+        "display": "Last 7 days",
+        "from": "now-7d",
+        "to": "now"
+      }
+    ],
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ],
+    "status": "Stable",
+    "type": "timepicker"
+  }
+```
+
+Usage of the fields is explained below:
+
+| Name                   | Usage                                                                                                                                 |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| **collapse**           | whether timepicker is collapsed or not                                                                                                |
+| **enable**             | whether timepicker is enabled or not                                                                                                  |
+| **notice**             |                                                                                                                                       |
+| **now**                |                                                                                                                                       |
+| **hidden**             | whether timepicker is hidden or not                                                                                                   |
+| **nowDelay**           | override the now time by entering a time delay. Use this option to accommodate known delays in data aggregation to avoid null values. |
+| **quick\_ranges**      | custom quick ranges                                                                                                                   |
+| **refresh\_intervals** | interval options available in the refresh picker dropdown                                                                             |
+| **status**             |                                                                                                                                       |
+| **type**               |                                                                                                                                       |
+
+### templating
+
+The `templating` field contains an array of template variables with their saved values along with some other metadata, for example:
+
+```json
+ "templating": {
+    "enable": true,
+    "list": [
+      {
+        "allFormat": "wildcard",
+        "current": {
+          "tags": [],
+          "text": "prod",
+          "value": "prod"
+        },
+        "datasource": null,
+        "includeAll": true,
+        "name": "env",
+        "options": [
+          {
+            "selected": false,
+            "text": "All",
+            "value": "*"
+          },
+          {
+            "selected": false,
+            "text": "stage",
+            "value": "stage"
+          },
+          {
+            "selected": false,
+            "text": "test",
+            "value": "test"
+          }
+        ],
+        "query": "tag_values(cpu.utilization.average,env)",
+        "refresh": false,
+        "type": "query"
+      },
+      {
+        "allFormat": "wildcard",
+        "current": {
+          "text": "apache",
+          "value": "apache"
+        },
+        "datasource": null,
+        "includeAll": false,
+        "multi": false,
+        "multiFormat": "glob",
+        "name": "app",
+        "options": [
+          {
+            "selected": true,
+            "text": "tomcat",
+            "value": "tomcat"
+          },
+          {
+            "selected": false,
+            "text": "cassandra",
+            "value": "cassandra"
+          }
+        ],
+        "query": "tag_values(cpu.utilization.average,app)",
+        "refresh": false,
+        "regex": "",
+        "type": "query"
+      }
+    ]
+  }
+```
+
+Usage of the above mentioned fields in the templating section is explained below:
+
+| Name            | Usage                                                                                                   |
+| --------------- | ------------------------------------------------------------------------------------------------------- |
+| **enable**      | whether templating is enabled or not                                                                    |
+| **list**        | an array of objects each representing one template variable                                             |
+| **allFormat**   | format to use while fetching all values from data source, eg: `wildcard`, `glob`, `regex`, `pipe`, etc. |
+| **current**     | shows current selected variable text/value on the dashboard                                             |
+| **data source** | shows data source for the variables                                                                     |
+| **includeAll**  | whether all value option is available or not                                                            |
+| **multi**       | whether multiple values can be selected or not from variable value list                                 |
+| **multiFormat** | format to use while fetching timeseries from data source                                                |
+| **name**        | name of variable                                                                                        |
+| **options**     | array of variable text/value pairs available for selection on dashboard                                 |
+| **query**       | data source query used to fetch values for a variable                                                   |
+| **refresh**     | configures when to refresh a variable                                                                   |
+| **regex**       | extracts part of a series name or metric node segment                                                   |
+| **type**        | type of variable, i.e. `custom`, `query` or `interval`                                                  |

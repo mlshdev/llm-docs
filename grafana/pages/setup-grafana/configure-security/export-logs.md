@@ -1,0 +1,107 @@
+> Release-pinned source for Grafana v13.2.0: [docs/sources/setup-grafana/configure-security/export-logs.md](https://github.com/grafana/grafana/blob/f681b1359f6a0b8ecb9f2c49a88ac72b75bde73b/docs/sources/setup-grafana/configure-security/export-logs.md)
+
+# Export logs of usage insights
+
+> **Note**
+>
+> Available in [Grafana Enterprise](https://grafana.com/docs/grafana/v13.2/introduction/grafana-enterprise/) and to customers on select Grafana Cloud plans. For pricing information, visit [pricing](https://grafana.com/pricing/) or contact our sales team.
+
+By exporting usage logs to Loki, you can directly query them and create dashboards of the information that matters to you most, such as dashboard errors, most active organizations, or your top-10 most-used queries. This configuration is done for you in Grafana Cloud, with provisioned dashboards. Read about them in the [Grafana Cloud documentation](https://grafana.com/docs/grafana-cloud/usage-insights/).
+
+## Usage insights logs
+
+Usage insights logs are JSON objects that represent certain user activities, such as:
+
+- A user opens a dashboard.
+- A query is sent to a data source.
+
+### Scope
+
+A log is created every time:
+
+- A user opens a dashboard.
+- A query is sent to a data source in the dashboard view.
+- A query is performed via Explore.
+
+### Format
+
+Logs of usage insights contain the following fields, where the fields followed by \* are always available, and the others depend on the logged event:
+
+| Field name        | Type   | Description                                                                                                                                            |
+| ----------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `eventName`\*     | string | Type of the event, which can be either `data-request` or `dashboard-view`.                                                                             |
+| `folderName`\*    | string | Name of the dashboard folder.                                                                                                                          |
+| `dashboardName`\* | string | Name of the dashboard where the event happened.                                                                                                        |
+| `dashboardId`\*   | number | ID of the dashboard where the event happened.                                                                                                          |
+| `datasourceName`  | string | Name of the data source that was queried.                                                                                                              |
+| `datasourceType`  | string | Type of the data source that was queried. For example, `prometheus`, `elasticsearch`, or `loki`.                                                       |
+| `datasourceId`    | number | ID of the data source that was queried.                                                                                                                |
+| `panelId`         | number | ID of the panel of the query.                                                                                                                          |
+| `panelName`       | string | Name of the panel of the query.                                                                                                                        |
+| `error`           | string | Error returned by the query.                                                                                                                           |
+| `duration`        | number | Duration of the query.                                                                                                                                 |
+| `source`          | string | Source of the query. For example, `dashboard` or `explore`.                                                                                            |
+| `orgId`\*         | number | ID of the user’s organization.                                                                                                                         |
+| `orgName`\*       | string | Name of the user’s organization.                                                                                                                       |
+| `timestamp`\*     | string | The date and time that the request was made, in Coordinated Universal Time (UTC) in [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.6) format. |
+| `tokenId`\*       | number | ID of the user’s authentication token.                                                                                                                 |
+| `username`\*      | string | Name of the Grafana user that made the request.                                                                                                        |
+| `userId`\*        | number | ID of the Grafana user that made the request.                                                                                                          |
+| `totalQueries`\*  | number | Number of queries executed for the data request.                                                                                                       |
+| `cachedQueries`\* | number | Number of fetched queries that came from the cache.                                                                                                    |
+
+## Configuration
+
+To export your logs, enable the usage insights feature and [configure](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/) an export location in the configuration file:
+
+```ini
+[usage_insights.export]
+# Enable the usage insights export feature
+enabled = true
+# Storage type
+storage = loki
+```
+
+The options for storage type are `loki` and `logger` (added in Grafana Enterprise 8.2).
+
+If the storage type is set to `loki` you'll need to also configure Grafana
+to export to a Loki ingestion server. To do this, you'll need Loki installed.
+Refer to [Install Loki](https://grafana.com/docs/loki/latest/installation/) for instructions
+on how to install Loki.
+
+```ini
+[usage_insights.export.storage.loki]
+# Set the communication protocol to use with Loki (can be grpc or http)
+type = grpc
+# Set the address for writing logs to Loki (format must be host:port)
+url = localhost:9095
+# Defaults to true. If true, it establishes a secure connection to Loki
+tls = true
+# Set the tenant ID for Loki communication, which is disabled by default.
+# The tenant ID is required to interact with Loki running in multi-tenant mode.
+tenant_id =
+# How long to wait before sending a request to Loki with the batch of events. Uses duration format: e.g. 5s, 1m
+# Whatever happens first between `batch_wait_duration` and `batch_size_bytes` will trigger the batch to be sent to Loki.
+# If the wait duration is very long and the `batch_size_bytes` is very high, events may take a long time to be sent.
+batch_wait_duration = 5s
+# How many events (in bytes) to accumulate in a single batch before sending it to Loki.
+# Whatever happens first between `batch_wait_duration` and `batch_size_bytes` will trigger the batch to be sent to Loki.
+# If you wish to always wait for the `batch_wait_duration`, set this to a very high number.
+batch_size_bytes = 102400 # 100KiB
+```
+
+Using `logger` will print usage insights to your [Grafana server log](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#log).
+There is no option for configuring the `logger` storage type.
+
+## Visualize Loki usage insights in Grafana
+
+If you export logs into Loki, you can build Grafana dashboards to understand your Grafana instance usage.
+
+1. Add Loki as a data source. Refer to [Grafana fundamentals tutorial](https://grafana.com/tutorials/grafana-fundamentals/#6).
+2. Import one of the following dashboards:
+   - [Usage insights](https://grafana.com/grafana/dashboards/13785)
+   - [Usage insights datasource details](https://grafana.com/grafana/dashboards/13786)
+3. Play with usage insights to understand them:
+   - In Explore, you can use the query `{datasource="gdev-loki",kind="usage_insights"}` to retrieve all logs related to your `gdev-loki` data source.
+   - In a dashboard, you can build a table panel with the query `topk(10, sum by (error) (count_over_time({kind="usage_insights", datasource="gdev-prometheus"} | json | error != "" [$__interval])))` to display the 10 most common errors your users see using the `gdev-prometheus` data source.
+   - In a dashboard, you can build a graph panel with the queries `sum by(host) (count_over_time({kind="usage_insights"} | json | eventName="data-request" | error != "" [$__interval]))` and `sum by(host) (count_over_time({kind="usage_insights"} | json | eventName="data-request" | error = "" [$__interval]))` to show the evolution of the data request count over time. Using `by (host)` allows you to have more information for each Grafana server you have if you have set up Grafana for [high availability](https://grafana.com/docs/grafana/v13.2/setup-grafana/set-up-for-high-availability/).

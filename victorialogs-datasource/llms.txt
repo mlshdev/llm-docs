@@ -1,0 +1,20 @@
+# VictoriaLogs datasource for Grafana v0.31.0
+
+> Documentation generated from the latest stable release of [VictoriaMetrics/victorialogs-datasource](https://github.com/VictoriaMetrics/victorialogs-datasource) and pinned to immutable source commit `bb1f6d7b0ec2bdf943c2d8c27f2cb17004b147e8`.
+
+- [Full documentation](llms-full.txt): Complete normalized corpus for VictoriaLogs datasource for Grafana v0.31.0.
+- [Provenance manifest](manifest.json): Release, commit, document count, and generation notes.
+- Pages are the plugin catalog documentation, the repository guide, and the changelog at the immutable release tag.
+- Links and screenshots that upstream pins to a branch are rewritten to the released commit.
+
+## Plugin documentation
+
+- [VictoriaLogs datasource for Grafana](pages/plugin.md): Source `src/README.md`.
+
+## Repository
+
+- [VictoriaLogs datasource for Grafana: repository guide](pages/repository.md): Source `README.md`.
+
+## Release history
+
+- [VictoriaLogs datasource for Grafana: changelog](pages/changelog.md): Source `CHANGELOG.md`.

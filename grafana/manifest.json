@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "project": "grafana",
+  "title": "Grafana",
+  "repository": "grafana/grafana",
+  "tag": "v13.2.0",
+  "releaseId": 372341438,
+  "releasePublishedAt": "2026-08-18T12:48:13Z",
+  "sourceCommit": "f681b1359f6a0b8ecb9f2c49a88ac72b75bde73b",
+  "documentCount": 670,
+  "notes": [
+    "Page order, sections, and cross-references follow the Hugo weights of docs/sources at the release tag, resolved against https://grafana.com/docs/grafana/v13.2/.",
+    "Shared fragments referenced by `docs/shared` and `shared-snippet` are inlined into the pages that render them and are not published separately.",
+    "Hugo shortcodes are expanded to plain Markdown; version placeholders are replaced with the pinned release version.",
+    "Content that only exists as a website widget is omitted: `docs/ignore` blocks, the `docs/whats-new` release feed, and shared fragments owned by other Grafana products."
+  ],
+  "redactions": [
+    {
+      "name": "Grafana API key",
+      "count": 24
+    },
+    {
+      "name": "Grafana Cloud access policy token",
+      "count": 1
+    },
+    {
+      "name": "Grafana service account token",
+      "count": 15
+    }
+  ]
+}

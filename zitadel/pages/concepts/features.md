@@ -1,0 +1,10 @@
+> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/concepts/features/index.mdx](https://zitadel.com/docs/concepts/features)
+
+- [Identity Brokering](https://zitadel.com/docs/concepts/features/identity-brokering)
+- [Account Linking](https://zitadel.com/docs/concepts/features/account-linking)
+- [Self Service](https://zitadel.com/docs/concepts/features/selfservice)
+- [Custom Domain](https://zitadel.com/docs/concepts/features/custom-domain)
+- [Audit Trail](https://zitadel.com/docs/concepts/features/audit-trail)
+- [Passkeys](https://zitadel.com/docs/concepts/features/passkeys)
+- [Actions](https://zitadel.com/docs/concepts/features/actions)
+- [Console](https://zitadel.com/docs/guides/manage/console/console-overview)

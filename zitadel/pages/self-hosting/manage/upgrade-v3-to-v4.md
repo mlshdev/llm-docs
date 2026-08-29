@@ -1,0 +1,50 @@
+> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/self-hosting/manage/upgrade-v3-to-v4.mdx](https://zitadel.com/docs/self-hosting/manage/upgrade-v3-to-v4)
+
+## Summary
+
+Upgrading from v3 to v4 is a normal ZITADEL upgrade: run **setup** (migrations), then **start**.
+Existing instances keep working with their current login setup. Switching to Login V2 is optional and can be done later.
+
+The main behavioral risk on this upgrade is OIDC signing keys. Follow [A-10017](https://zitadel.com/docs/support/advisory/a10017) before moving to v4.
+
+## Prerequisites
+
+- Database backup
+- PostgreSQL version compatible with your target v4 release ([database requirements](https://zitadel.com/docs/self-hosting/manage/database))
+
+## Recommended path
+
+1. Upgrade to the latest **v3.4.x** (at least **v3.4.1**).
+2. Soak until legacy-signed JWTs/sessions have expired (see [A-10017](https://zitadel.com/docs/support/advisory/a10017)).
+3. Upgrade to **v4.x**:
+   - Existing installs: prefer `zitadel setup` then `zitadel start`, or `start-from-setup`
+   - Details: [Update and Scale](https://zitadel.com/docs/self-hosting/manage/updating_scaling)
+
+> **Note**
+>
+> `ZITADEL_FIRSTINSTANCE_*` and `ZITADEL_DEFAULTINSTANCE_*` apply only when an instance is created.
+> Changing them and restarting does not update existing instances.
+
+## After the upgrade
+
+OIDC applications that already use your ZITADEL issuer usually need no changes.
+
+**Staying on Login V1 is fine.** Existing instances keep Login V1, and you do not need to switch for a successful v4 upgrade.
+Adopt Login V2 only if you specifically need it (for example features or flows that depend on Login V2 / Actions V2).
+A switch can involve more than deploying the new UI — especially if you use **Actions V1**, which typically need to be reworked for **Actions V2**, and not every Login V1 customization maps one-to-one.
+
+When you decide to move, see [Adopt Login V2 on an existing installation](https://zitadel.com/docs/self-hosting/manage/adopt-login-v2).
+
+## Helm
+
+Follow the [Helm chart README](https://github.com/zitadel/zitadel-charts/blob/main/charts/zitadel/README.md) upgrade notes for the ZITADEL app version (for example chart v8 → v9 when moving to ZITADEL v4).
+
+Newer charts may deploy a Login V2 workload by default. That does **not** enable Login V2 for existing instances.
+If you are not adopting Login V2 yet, set `login.enabled: false` to omit the login Deployment.
+
+## Related
+
+- [A-10017: Web keys and v4 upgrades](https://zitadel.com/docs/support/advisory/a10017)
+- [Update and Scale](https://zitadel.com/docs/self-hosting/manage/updating_scaling)
+- [Adopt Login V2](https://zitadel.com/docs/self-hosting/manage/adopt-login-v2)
+- [Troubleshoot](https://zitadel.com/docs/self-hosting/deploy/troubleshooting/troubleshooting)

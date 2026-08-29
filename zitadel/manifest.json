@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "project": "zitadel",
+  "title": "ZITADEL",
+  "repository": "zitadel/zitadel",
+  "tag": "v4.17.1",
+  "releaseId": 370394679,
+  "releasePublishedAt": "2026-08-14T06:41:55Z",
+  "sourceCommit": "a9311b8c702531832575351a663e98a2242778e5",
+  "documentCount": 321,
+  "notes": [
+    "Pages come from the Fumadocs content tree in apps/docs/content; underscore-prefixed partials are inlined into the pages that import them.",
+    "Interactive elements the site renders from JavaScript - framework pickers, benchmark charts, permission and PII tables, and React partials such as the quick start console walkthroughs - are omitted because they carry no static prose.",
+    "Cross-references keep their published form on https://zitadel.com/docs; images and imported sample files point at the pinned commit on GitHub."
+  ]
+}

@@ -1,7 +1,10 @@
+import { buildDatasourcePlugin } from "./datasource-plugin.ts";
+import { buildGrafana } from "./grafana.ts";
 import { buildNetbird } from "./netbird.ts";
 import { buildPodman } from "./podman.ts";
 import { buildTraefik } from "./traefik.ts";
-import { buildVictoriametrics } from "./victoriametrics.ts";
+import { buildVictoriametricsDocs } from "./victoriametrics.ts";
+import { buildZitadel } from "./zitadel.ts";
 import type { LockedSource, ProjectBuild, SourceProject } from "../types.ts";
 
 export function buildProject(
@@ -15,7 +18,16 @@ export function buildProject(
       return buildNetbird(project, lock);
     case "podman":
       return buildPodman(project, lock);
+    case "grafana":
+      return buildGrafana(project, lock);
     case "victoriametrics":
-      return buildVictoriametrics(project, lock);
+    case "victorialogs":
+    case "vmestimator":
+      return buildVictoriametricsDocs(project, lock);
+    case "victoriametrics-datasource":
+    case "victorialogs-datasource":
+      return buildDatasourcePlugin(project, lock);
+    case "zitadel":
+      return buildZitadel(project, lock);
   }
 }

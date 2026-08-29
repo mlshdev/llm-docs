@@ -21,10 +21,46 @@
       "homepage": "https://docs.podman.io/"
     },
     {
+      "id": "grafana",
+      "title": "Grafana",
+      "repository": "grafana/grafana",
+      "homepage": "https://grafana.com/docs/grafana/latest/"
+    },
+    {
       "id": "victoriametrics",
       "title": "VictoriaMetrics",
       "repository": "VictoriaMetrics/VictoriaMetrics",
       "homepage": "https://docs.victoriametrics.com/"
+    },
+    {
+      "id": "victorialogs",
+      "title": "VictoriaLogs",
+      "repository": "VictoriaMetrics/VictoriaLogs",
+      "homepage": "https://docs.victoriametrics.com/victorialogs/"
+    },
+    {
+      "id": "victoriametrics-datasource",
+      "title": "VictoriaMetrics datasource for Grafana",
+      "repository": "VictoriaMetrics/victoriametrics-datasource",
+      "homepage": "https://grafana.com/grafana/plugins/victoriametrics-metrics-datasource/"
+    },
+    {
+      "id": "victorialogs-datasource",
+      "title": "VictoriaLogs datasource for Grafana",
+      "repository": "VictoriaMetrics/victorialogs-datasource",
+      "homepage": "https://grafana.com/grafana/plugins/victoriametrics-logs-datasource/"
+    },
+    {
+      "id": "vmestimator",
+      "title": "vmestimator",
+      "repository": "VictoriaMetrics/vmestimator",
+      "homepage": "https://docs.victoriametrics.com/victoriametrics/vmestimator/"
+    },
+    {
+      "id": "zitadel",
+      "title": "ZITADEL",
+      "repository": "zitadel/zitadel",
+      "homepage": "https://zitadel.com/docs"
     }
   ]
 }

@@ -1,0 +1,1468 @@
+# VictoriaLogs datasource for Grafana v0.31.0: full documentation
+
+Source repository: https://github.com/VictoriaMetrics/victorialogs-datasource
+Release tag: v0.31.0
+Source commit: bb1f6d7b0ec2bdf943c2d8c27f2cb17004b147e8
+
+# Document: VictoriaLogs datasource for Grafana
+
+Source path: src/README.md
+Canonical source: https://github.com/VictoriaMetrics/victorialogs-datasource/blob/bb1f6d7b0ec2bdf943c2d8c27f2cb17004b147e8/src/README.md
+
+# VictoriaLogs datasource for Grafana
+
+The [VictoriaLogs Grafana plugin](https://grafana.com/grafana/plugins/victoriametrics-logs-datasource/) allows Grafana
+to query, visualize, and interact with [VictoriaLogs](https://docs.victoriametrics.com/victorialogs/),
+a high-performance log storage and processing system.
+
+![Grafana Dashboard Screenshot](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/bb1f6d7b0ec2bdf943c2d8c27f2cb17004b147e8/src/img/dashboard.png)
+
+## Capabilities
+
+1. Use [LogsQL](https://docs.victoriametrics.com/victorialogs/logsql/) to filter, aggregate, and transform logs data to gain insights into application behavior.
+2. Use Explore mode with Grafana.
+3. Show live-streaming logs.
+4. Build dashboards and setup alerts.
+5. Use Ad Hoc filters.
+
+Try it at [VictoriaMetrics playground](https://play-grafana.victoriametrics.com/d/be5zidev72m80f/k8s-logs-demo)!
+
+## Installation
+
+For detailed instructions on how to install the plugin on Grafana Cloud or locally, please checkout the [Plugin installation docs](https://grafana.com/docs/grafana/latest/plugins/installation/).
+For installation options in Docker or Kubernetes refer to [these docs](https://github.com/VictoriaMetrics/victorialogs-datasource?tab=readme-ov-file#installation).
+
+## Multitenancy configuration
+
+VictoriaLogs datasource supports [multitenancy](https://docs.victoriametrics.com/victorialogs/#multitenancy) via `multitenancyHeaders` datasource configuration option.
+To configure it, set AccountID and ProjectID in the `multitenancyHeaders` section.
+
+![Multitenancy configuration](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/bb1f6d7b0ec2bdf943c2d8c27f2cb17004b147e8/src/img/multitenancy_configuration.png)
+
+### Manual configuration via UI
+
+Once the plugin is installed on your Grafana instance, follow [these instructions](https://grafana.com/docs/grafana/latest/datasources/add-a-data-source/)
+to add a new VictoriaLogs data source, and enter configuration options.
+
+### Configuration via file
+
+Provisioning of Grafana plugin requires creating [datasource config file](http://docs.grafana.org/administration/provisioning/#datasources):
+
+```yaml
+apiVersion: 1
+datasources:
+  - name: VictoriaLogs
+    type: victoriametrics-logs-datasource
+    access: proxy
+    url: http://victorialogs:9428
+    isDefault: true
+    jsonData:
+      # Multitenancy settings, see https://docs.victoriametrics.com/victorialogs/#multitenancy
+      # to use the multitenancy, uncomment lines below: AccountID and ProjectID
+      multitenancyHeaders:
+        #AccountID: 0
+        #ProjectID: 0
+```
+
+## Building queries
+
+VictoriaLogs query language is [LogsQL](https://docs.victoriametrics.com/victorialogs/logsql/).
+Queries can be built using raw LogsQL or via QueryBuilder.
+
+See panels examples at [VictoriaMetrics playground](https://play-grafana.victoriametrics.com/d/be5zidev72m80f/k8s-logs-demo)
+and LogsQL examples [here](https://docs.victoriametrics.com/victorialogs/logsql-examples/).
+
+### Query builder
+
+> **Note:** available since [v0.27.1](https://github.com/VictoriaMetrics/victorialogs-datasource/releases/tag/v0.27.1).
+
+A visual alternative to the LogsQL code editor: build queries by chaining typed pipes through an interactive UI with field/value dropdowns and keyboard navigation.
+
+![Query builder](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/bb1f6d7b0ec2bdf943c2d8c27f2cb17004b147e8/src/img/query_builder.gif)
+
+#### Switching between Builder and Code
+
+Use the **Builder** / **Code** toggle in the query editor header to switch modes.
+
+- **Builder → Code** is always safe — the current builder state is serialized to LogsQL.
+- **Code → Builder** shows a confirmation dialog and discards the manual query and any stream filters. Automatic conversion of raw LogsQL into builder pipes is not supported yet — it is planned for a future release.
+
+#### Available pipe types
+
+- **Filter**:
+  - **exact** — `field:in(values)`. Stream fields are available in the field picker (under the "Stream fields" group) — selecting one converts the filter into a stream filter automatically.
+  - **phrase** — substring match: `field:value`
+  - **range** — numeric comparison: `>`, `>=`, `<`, `<=`
+  - **regexp** — regex match: `~`, `!~`
+- **Modify** — `rename`, `copy`, `delete`, `keep`, `replace`, `replace_regexp`, `extract`.
+- **Aggregate** — `count`, `sum`, `avg`, `min`, `max`, `median`, `quantile`, `rate`, `histogram`. Each supports optional `by`, `if`, and `as` clauses.
+- **Sort** — `sort by field asc|desc`, with optional `limit`, `offset`, `partition by`, `rank as`.
+- **Limit** — `limit`, `offset`, `first`, `last`, `top`.
+- **Custom** — raw LogsQL escape hatch for syntax not covered by the structured pipes (not validated).
+
+See the [LogsQL pipes reference](https://docs.victoriametrics.com/victorialogs/logsql/#pipes) for the underlying semantics.
+
+#### Adding and editing pipes
+
+- Click the **+** button (Add pipe) to open the pipe picker. Pipes are grouped by category and searchable by name.
+- Hover the **|** separator between pipes to insert a new pipe at that position.
+- Click any placeholder chip to edit it. Field-name and field-value chips fetch live suggestions from VictoriaLogs; stream fields are surfaced first under a separate group as the faster lookup.
+- Multi-value chips (e.g., `field:in(...)`) accept comma-separated values rendered as inline pills.
+- Each pipe has a **✕** button to delete it and a **⋯** button to add optional clauses available for that pipe type (e.g., `by`, `if`, `as` on aggregations).
+- The trash icon at the bottom-right clears all pipes via the **Clear query** action.
+
+#### Keyboard navigation
+
+| Key             | Action                                                                                                 |
+| --------------- | ------------------------------------------------------------------------------------------------------ |
+| **Tab**         | Confirm the current segment and move to the next one. After the last segment, opens the Add pipe menu. |
+| **Enter**       | Pick the highlighted dropdown option.                                                                  |
+| **↑ / ↓**       | Navigate dropdown options.                                                                             |
+| **Escape**      | Cancel the current edit and revert the value.                                                          |
+| **Backspace**   | In an empty multi-value chip — remove the last entered value.                                          |
+| **Shift+Enter** | Run the query.                                                                                         |
+
+### Logs panel
+
+For using [Logs panel](https://grafana.com/docs/grafana/latest/panels-visualizations/visualizations/logs/)
+switch to `Raw Logs` query type:
+
+![Logs panel](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/bb1f6d7b0ec2bdf943c2d8c27f2cb17004b147e8/src/img/panel_logs.png)
+
+### Time series panel
+
+For using [Time series panel](https://grafana.com/docs/grafana/latest/panels-visualizations/visualizations/time-series/)
+switch to `Range` query type:
+
+![Time series panel](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/bb1f6d7b0ec2bdf943c2d8c27f2cb17004b147e8/src/img/panel_time_series.png)
+
+### Stats panel
+
+For using [Stats panel](https://grafana.com/docs/grafana/latest/panels-visualizations/visualizations/stat/)
+switch to `Instant` query type:
+
+![Stats panel](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/bb1f6d7b0ec2bdf943c2d8c27f2cb17004b147e8/src/img/panel_stat.png)
+
+For enabling background visualization switch to `Range` query type.
+
+### Table panel
+
+For using [Table panel](https://grafana.com/docs/grafana/latest/panels-visualizations/visualizations/table/)
+switch to `Raw Logs` query type:
+
+![Table panel](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/bb1f6d7b0ec2bdf943c2d8c27f2cb17004b147e8/src/img/panel_table.png)
+
+And apply `Transformations` by labels:
+
+![Transformations](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/bb1f6d7b0ec2bdf943c2d8c27f2cb17004b147e8/src/img/panel_table_transformation.png)
+
+### Heatmap panel
+
+For using [Heatmap panel](https://grafana.com/docs/grafana/latest/panels-visualizations/visualizations/heatmap/)
+switch to `Range` query type and use [`histogram` stats function](https://docs.victoriametrics.com/victorialogs/logsql/#histogram-stats). Use the step to adjust the granularity of the heatmap.
+Query example:
+
+```logsql
+{collector="otel-collector", k8s.namespace.name="play-otel", service.name="checkout"} "duration:"
+  | extract "duration: <duration>"
+  | stats histogram(duration)
+```
+
+![Heatmap panel](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/bb1f6d7b0ec2bdf943c2d8c27f2cb17004b147e8/src/img/panel_heatmap.png)
+
+### Log level rules
+
+The **Log level rules** section in the datasource configuration allows you to assign log levels based on custom field conditions. This helps classify logs dynamically (e.g., as `error`, `info`, `debug`, etc.) using rules you define.
+
+#### How to use
+
+1. Open the datasource settings.
+
+2. Scroll to the **Log level rules** section.
+
+3. Click **"Add rule"** to define a new rule.
+
+4. For each rule, configure the following:
+
+   - **Enable switch** – enable or disable the rule.
+   - **Field name** – the log field the condition will evaluate.
+   - **Operator** – choose from: `Equals`, `Not equal`, `Matches regex`, `Less than`, `Greater than`, `Word filter`
+   - **Value** – the value to compare the field against.
+   - **Log level** – level to assign if the condition matches: `critical`, `warning`, `error`, `info`, `debug`, `trace`, `unknown`
+   - **Delete button** – remove the rule.
+
+5. After adding or editing rules, click **"Save & test"** to apply the changes.
+
+**Rule priority**: If multiple rules match a log entry, the **first matching rule** (top to bottom) takes precedence.
+
+6. To define rules via the provision file, use the following format of the provision file:
+
+```yaml
+apiVersion: 1
+datasources:
+  # <string, required> Name of the VictoriaLogs datasource
+  # displayed in Grafana panels and queries.
+  - name: VictoriaLogs
+    # <string, required> Sets the data source type.
+    type: victoriametrics-logs-datasource
+    # <string, required> Sets the access mode, either
+    # proxy or direct (Server or Browser in the UI).
+    access: proxy
+    # <string> Sets URL for sending queries to VictoriaLogs server.
+    # see https://docs.victoriametrics.com/victorialogs/querying/
+    url: https://play-vmlogs.victoriametrics.com
+    # <string> Sets the pre-selected datasource for new panels.
+    # You can set only one default data source per organization.
+    isDefault: true
+    jsonData:
+      logLevelRules:
+        - field: "_stream_id"
+          value: "123123"
+          level: "error"
+          operator: "regex"
+          enabled: true
+```
+
+Where:
+
+- `field` is the name of the log field to evaluate (e.g. `_stream_id`, `status_code`, `message`).
+- `value` is the value to compare against. Can be a string or a number, depending on the field.
+- `level` is the log level to assign if the condition matches. Valid values: `critical`, `error`, `warning`, `info`, `debug`, `trace`, `unknown`.
+- `operator` is the comparison operator to use, such as `equals`, `notEquals`, `regex`, `lessThan`, `greaterThan`, `wordFilter`. The `wordFilter` operator follows [LogsQL word filter](https://docs.victoriametrics.com/victorialogs/logsql/#word-filter) semantics: the value matches whole tokens, not substrings (e.g. `error` matches `an error happened` but not `terror`).
+- `enabled` is a boolean flag to enable or disable the rule. Defaults to `true` if omitted.
+
+### Variables
+
+VictoriaLogs datasource supports [variables](https://grafana.com/docs/grafana/latest/variables/) in queries.
+
+#### Ad Hoc filter
+
+You can use [Ad Hoc filters](https://grafana.com/docs/grafana/latest/visualizations/dashboards/variables/add-template-variables/#add-ad-hoc-filters) to filter logs in Dashboards.
+By default, ad-hoc filters are applied to all panels in the Dashboard as the [extra\_filters](https://docs.victoriametrics.com/victorialogs/querying/#extra-filters) query parameter. If you navigate to the Explore page from the Dashboard, ad-hoc filters are also applied there.
+![Ad hoc filters](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/bb1f6d7b0ec2bdf943c2d8c27f2cb17004b147e8/src/img/extra_filters_explore_page.png)
+
+##### Ad-hoc filters mode
+
+> **Note:** available since [v0.28.0](https://github.com/VictoriaMetrics/victorialogs-datasource/releases/tag/v0.28.0).
+
+Each panel exposes an **Ad-hoc filters** selector in the Query Editor *Options* section that controls how ad-hoc values reach the query:
+
+- **Extra Filters** — *default*. Filters are sent as the `extra_filters` query parameter. They are applied at the top of the pipeline and do **not** propagate into `join` / `union` subqueries.
+- **Root Query** — filters are prepended to the query expression (e.g. `level:="error" | <your-query>`). Use this when you want ad-hoc values to participate in the main pipeline as ordinary filters.
+- **Off** — disables automatic ad-hoc filter injection for the panel. Choose this when you intentionally interpolate ad-hoc values yourself (e.g. through template variables) to avoid double filtering, or when filtering on fields produced by pipe transformations would silently drop all rows.
+
+#### Word filter
+
+If you want to filter logs by a specific word or phrase, you can use [word filter](https://docs.victoriametrics.com/victorialogs/logsql/#word-filter).
+To do this, you need to create a [text box variable](https://grafana.com/docs/grafana/latest/visualizations/dashboards/variables/add-template-variables/#add-a-text-box-variable).
+After it is created, you need to add this to the query: `<q> | $word_filter`. Type any word or phrase you want to look for. Set to "\*" to not filter. By default, the given word is searched in the \_msg field.
+![Word filter](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/bb1f6d7b0ec2bdf943c2d8c27f2cb17004b147e8/src/img/word_filter.png)
+
+#### Variable interpolation
+
+VictoriaLogs datasource supports automatic variable interpolation with the following rules:
+
+**1. Field Value Variables:**
+
+- `field:$var` → `field:in("v1", ..., "vN")`
+- `field:=$var` → `field:in("v1", ..., "vN")`
+- Values are quoted and escaped
+- Empty values or "All" expand to `in(*)`
+
+**2. Function Contexts:**
+
+- `in($var)` and `contains_any($var)` expand to quoted lists
+- Values maintain proper quoting within function calls
+
+**3. Inequality Operators in filters:**
+
+- `field:!$var` → `!field:in("v1", ..., "vN")`
+- `field:!=$var` → `!field:in("v1", ..., "vN")`
+
+**4. Stream Filters:**
+
+- `{tag=$var}` → `{tag in(...)}`
+- `{field!=$var}` → `{field not_in(...)}`
+
+**5. Restrictions:**
+
+- Avoid using variables as values in regexp filters (e.g., `field:~$var`), in this case, you will get a warning message
+- Invalid usage will show an error message
+
+## Line limits
+
+Every VictoriaLogs query is sent with a limit on the maximum number of log lines returned. Keeping this limit low
+reduces the rendering load on the browser and prevents the page from freezing when displaying heavy log results.
+
+There are two levels of control:
+
+- **Maximum lines** — the datasource-wide default, configured in the datasource settings. It applies to every query
+  that does not set its own limit. The default value is `1000` and the maximum allowed value is `10000`.
+- **Line limit** — a per-query override available in the query editor options. When set, it takes precedence over the
+  datasource-wide **Maximum lines** for that query. It is also capped at `10000`.
+
+Increase these limits only if needed; large values may make the browser sluggish.
+
+![Line limits configuration](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/bb1f6d7b0ec2bdf943c2d8c27f2cb17004b147e8/src/img/line_limits.png)
+
+### Configuring the default limit via file
+
+When [provisioning the datasource via file](#configuration-via-file), set the default limit through the `maxLines`
+field in `jsonData`:
+
+```yaml
+apiVersion: 1
+datasources:
+  - name: VictoriaLogs
+    type: victoriametrics-logs-datasource
+    access: proxy
+    url: http://victorialogs:9428
+    jsonData:
+      # Default maximum number of log lines returned per query.
+      # Defaults to 1000, maximum allowed value is 10000.
+      maxLines: 1000
+```
+
+## Correlations
+
+Signals can be correlated together if they share the same list of attributes, so they can uniquely identify the
+same system or event. Grafana provides various interfaces for the [correlations](https://grafana.com/docs/grafana/latest/administration/correlations/)
+feature for interactive links between visualizations.
+
+### Trace to logs
+
+Tempo, Jaeger, and Zipkin data sources support [Trace to logs](https://grafana.com/docs/grafana/latest/explore/trace-integration/#trace-to-logs)
+feature for navigating from a span in a trace directly to logs relevant for that span. *(Supported since Grafana v12.2.0)*.
+
+![Derived fields configuration](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/bb1f6d7b0ec2bdf943c2d8c27f2cb17004b147e8/src/img/trace_to_logs.png)
+
+An example of the correlation query in traces datasource is the following:
+
+```
+trace_id:="${__trace.traceId}" AND span_id:="${__span.spanId}"
+```
+
+### Log to metrics
+
+Log to traces correlation is possible via Derived Fields functionality. But for it to work log entries and time series
+in metrics datasource should share common labels that could be used as filters. See example of building logs to metrics
+correlation in [this issue](https://github.com/VictoriaMetrics/VictoriaMetrics/issues/9592#issuecomment-3202104607).
+
+### Log to traces
+
+Log to traces correlation is possible via Derived Fields functionality. See its description in the sections below.
+
+## OpenTelemetry preset
+
+> **Note:** available since [v0.27.1](https://github.com/VictoriaMetrics/victorialogs-datasource/releases/tag/v0.27.1).
+
+The **OpenTelemetry preset** in the datasource configuration automatically sets up [Derived Fields](#derived-fields) for trace IDs and [Log level rules](#log-level-rules) for OTel severity — without manual configuration.
+
+### How to enable
+
+1. Open the datasource settings.
+2. Scroll to the **OpenTelemetry preset** section.
+3. Toggle **Enable OpenTelemetry preset**.
+4. Click **Save & test** to save your datasource URL first if you have not done so — the preset needs a reachable VictoriaLogs backend to detect the field format.
+
+### What gets auto-detected
+
+After enabling the preset, the datasource queries recent logs to detect:
+
+- **Field format** — `snake_case` (`trace_id`) or `camelCase` (`traceId`).
+- **Severity field** — the first matching candidate among `severity_text`, `SeverityText`, `severity`, `Severity`.
+- **Severity value case** — whether the severity field contains `UPPERCASE`, `lowercase`, or mixed values, to generate the correct number of log level rules.
+
+The detected configuration is shown in the UI. Your manually created derived fields and log level rules are preserved.
+
+### Traces datasource
+
+Select an optional **Traces datasource** to make the generated `trace_id` derived field link directly to the matching trace. Currently only Jaeger is supported.
+
+### Changing the severity field
+
+If the auto-detected severity field is wrong, click **Change** next to the severity row to pick a different field from the dropdown. The preset will re-run detection using the selected field.
+
+### Provisioning
+
+The preset can be enabled via [Grafana provisioning](https://grafana.com/docs/grafana/latest/administration/provisioning/#data-sources).
+Auto-detection runs only in the datasource settings UI, so a provisioned datasource must specify the `detection` block
+explicitly — `enabled: true` alone has no effect:
+
+```yaml
+apiVersion: 1
+datasources:
+  - name: VictoriaLogs
+    type: victoriametrics-logs-datasource
+    access: proxy
+    url: http://victorialogs:9428
+    jsonData:
+      otelPreset:
+        enabled: true
+        # `uid` of a Jaeger datasource the generated trace ID derived field
+        # links to (currently only Jaeger is supported).
+        # Omit to skip trace linking.
+        tracesDatasourceUid: jaeger
+        detection:
+          # Log field holding the trace ID, e.g. trace_id, traceId or TraceId.
+          traceIdField: trace_id
+          # Omit `severity` to skip generating log level rules.
+          severity:
+            # Log field holding the severity, e.g. severity_text or severity_number.
+            field: severity_text
+            # `string` for text severities (info, WARN, ...) or
+            # `number` for numeric OTel severities (1-24).
+            valueCase: string
+            # `manual` because the field is set explicitly here
+            # (`auto` is reserved for UI auto-detection).
+            source: manual
+```
+
+Manually configured derived fields and log level rules are merged with the generated ones, user-defined entries win on conflict.
+
+## Derived Fields
+
+In VictoriaLogs datasource settings, you can configure rules of extracting values from a log message to create a link with that value.
+
+For example, if log entries have field `trace_id` then we can configure a Derived Field to make a link to Jaeger datasource
+for viewing an associated trace:
+
+![Derived fields configuration](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/bb1f6d7b0ec2bdf943c2d8c27f2cb17004b147e8/src/img/derived_fields_cfg.png)
+
+Once configured, in Explore mode or in Logs panel log entries with field `trace_id` will also get a link that would
+open a Jaeger datasource and search for the `trace_id` value:
+
+![Derived fields explore](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/bb1f6d7b0ec2bdf943c2d8c27f2cb17004b147e8/src/img/derived_fields_explore.png)
+
+If the trace ID is not stored in a separate field but in a log message itself, then use `Regex in log line` option
+to specify a regex expression for extracting the trace value from log message.
+
+The target of a Derived Field can be a tracing datasource (Tempo, Jaeger, Zipkin) or another VictoriaLogs datasource
+(logs → logs). When the target is VictoriaLogs, set `url` to a LogsQL query such as `trace_id:${__value.raw}`, and
+clicking the field opens Explore with that query — letting you pivot from a value like `trace_id` or `request_id`
+to all related logs.
+
+Derived Fields can also be configured via provisioning:
+
+```yaml
+apiVersion: 1
+datasources:
+  - name: VictoriaLogs
+    type: victoriametrics-logs-datasource
+    url: http://victorialogs:9428
+    jsonData:
+      derivedFields:
+        - name: trace_id
+          # Take the value from the `trace_id` log field (or use matcherType: regex
+          # with a capture group to extract it from the raw log line instead).
+          matcherType: label
+          matcherRegex: trace_id
+          # Value handed to the target datasource: the trace ID for a tracing
+          # datasource, or a LogsQL query like 'trace_id:${__value.raw}' for logs → logs.
+          url: '${__value.raw}'
+          urlDisplayLabel: View trace
+          # `uid` of the target datasource (a tracing or VictoriaLogs datasource).
+          datasourceUid: tempo
+```
+
+Learn more about [Derived Fields in Grafana](https://grafana.com/docs/grafana/next/datasources/loki/configure-loki-data-source/#derived-fields).
+
+## License
+
+This project is licensed under
+the [Apache 2.0 license](https://github.com/VictoriaMetrics/victorialogs-datasource/blob/bb1f6d7b0ec2bdf943c2d8c27f2cb17004b147e8/LICENSE).
+
+
+# Document: VictoriaLogs datasource for Grafana: repository guide
+
+Source path: README.md
+Canonical source: https://github.com/VictoriaMetrics/victorialogs-datasource/blob/bb1f6d7b0ec2bdf943c2d8c27f2cb17004b147e8/README.md
+
+# VictoriaLogs datasource for Grafana
+
+The VictoriaLogs datasource plugin allows you to query and visualize
+[VictoriaLogs](https://docs.victoriametrics.com/victorialogs/) data in [Grafana](https://grafana.com/grafana/plugins/victoriametrics-logs-datasource/).
+
+- [Installation](#installation)
+- [Development](#getting-started-development)
+- [How to make new release](#how-to-make-new-release)
+- [Notes](#notes)
+- [License](#license)
+
+Read more about plugin capabilities and application at [VictoriaLogs plugin page](https://grafana.com/grafana/plugins/victoriametrics-logs-datasource/).
+
+## Quick start
+
+To install plugin, try searching for `victorialogs` in Grafana's plugin list.
+For gitops follow [installation](#installation) instructions.
+
+Once installed, start exploring logs from [Grafana's Explore page](https://grafana.com/docs/grafana/latest/explore/get-started-with-explore/):
+
+![Grafana Explore](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/bb1f6d7b0ec2bdf943c2d8c27f2cb17004b147e8/docs/assets/explore.webp)
+
+> To search for all logs simply use `*` as a query. See [LogsQL specification](https://docs.victoriametrics.com/victorialogs/logsql/).
+
+- How to use plugin on [Grafana dashboards](https://github.com/VictoriaMetrics/victorialogs-datasource/tree/main/src#building-queries).
+- How to configure [log level rules](https://github.com/VictoriaMetrics/victorialogs-datasource/tree/main/src#log-level-rules).
+- How to connect Logs with Traces using [Derived Fields](https://github.com/VictoriaMetrics/victorialogs-datasource/tree/main/src#derived-fields).
+- [Demo dashboard](https://play-grafana.victoriametrics.com/d/be5zidev72m80f) built with VictoriaLogs plugin.
+
+## Installation
+
+For detailed instructions on how to install the plugin in Grafana Cloud or locally,
+please check out the [Plugin installation docs](https://grafana.com/docs/grafana/latest/plugins/installation/).
+
+### Install via Docker
+
+To install plugin via Grafana docker container [specify](https://grafana.com/docs/grafana/latest/setup-grafana/configure-docker/#build-a-grafana-docker-image-with-pre-installed-plugins)
+`GF_INSTALL_PLUGINS=victoriametrics-logs-datasource` environment variable. It will pre-install the plugin on container start.
+See more details at [Configure a Grafana Docker image](https://grafana.com/docs/grafana/latest/setup-grafana/configure-docker/).
+
+### Grafana Provisioning
+
+Provisioning of Grafana plugin requires creating [datasource config file](http://docs.grafana.org/administration/provisioning/#datasources).
+See how to provision Grafana in docker compose environment below.
+
+1. Create a file at `./provisioning/datasources/vl.yml`:
+
+```yaml
+apiVersion: 1
+datasources:
+    # <string, required> Name of the VictoriaLogs datasource
+    # displayed in Grafana panels and queries.
+  - name: VictoriaLogs
+    # <string, required> Sets the data source type.
+    type: victoriametrics-logs-datasource
+    # <string, required> Sets the access mode, either
+    # proxy or direct (Server or Browser in the UI).
+    access: proxy
+    # <string> Sets URL for sending queries to VictoriaLogs server.
+    # see https://docs.victoriametrics.com/victorialogs/querying/
+    url: http://victorialogs:9428
+```
+
+2. Create a `docker-compose.yaml` file:
+
+```yaml
+ services:
+    grafana:
+      image: grafana/grafana:12.0.2
+      environment:
+      - GF_INSTALL_PLUGINS=victoriametrics-logs-datasource
+      ports:
+      - 3000:3000/tcp
+      volumes:
+      - ./provisioning:/etc/grafana/provisioning
+```
+
+3. Run the docker-compose:
+
+```sh
+docker compose -f docker-compose.yaml up
+```
+
+After Grafana starts successfully, datasource should be available in the datasources tab
+
+![Configuration](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/bb1f6d7b0ec2bdf943c2d8c27f2cb17004b147e8/docs/assets/provision_datasources.webp)
+
+### Install in Kubernetes
+
+#### Grafana helm chart
+
+Example with Grafana [helm chart](https://github.com/grafana/helm-charts/blob/main/charts/grafana/README.md):
+
+##### Option 1. Using Grafana provisioning:
+
+```yaml
+env:
+  GF_INSTALL_PLUGINS: "victoriametrics-logs-datasource"
+```
+
+##### Option 2. Using Grafana plugins section in `values.yaml`:
+
+```yaml
+plugins:
+  - victoriametrics-logs-datasource
+```
+
+##### Option 3. Using init container.
+
+<details>
+<summary>extraInitContainers.yaml</summary>
+
+```yaml
+extraInitContainers:
+  - name: "load-vm-ds-plugin"
+    image: "curlimages/curl:7.85.0"
+    command: [ "/bin/sh" ]
+    workingDir: "/var/lib/grafana"
+    securityContext:
+      runAsUser: 472
+      runAsNonRoot: true
+      runAsGroup: 472
+    args:
+     - "-c"
+     - |
+       set -ex
+       mkdir -p /var/lib/grafana/plugins/
+       ver=$(curl -s -L https://api.github.com/repos/VictoriaMetrics/victorialogs-datasource/releases/latest | grep -oE 'v[0-9]+\.[0-9]+\.[0-9]+' | head -1)
+       curl -L https://github.com/VictoriaMetrics/victorialogs-datasource/releases/download/$ver/victoriametrics-logs-datasource-$ver.tar.gz -o /var/lib/grafana/plugins/vl-plugin.tar.gz
+       tar -xf /var/lib/grafana/plugins/vl-plugin.tar.gz -C /var/lib/grafana/plugins/
+       rm /var/lib/grafana/plugins/vl-plugin.tar.gz
+    volumeMounts:
+      # For grafana-operator users, change `name: storage` to `name: grafana-data`
+      - name: storage
+        mountPath: /var/lib/grafana
+```
+
+</details>
+
+For `grafana-operator` users, the above configuration should be done for the part `/spec/deployment/spec/template/spec/initContainers` of your `kind=Grafana` resource.
+
+This example uses init container to download and install plugin. To allow Grafana using this container as a sidecar set the following config:
+
+```yaml
+sidecar:
+  datasources:
+    initDatasources: true
+    enabled: true
+```
+
+See more about chart settings [here](https://github.com/grafana/helm-charts/blob/541d97051de87a309362e02d08741ffc868cfcd6/charts/grafana/values.yaml)
+
+##### Option 4. would be to build custom Grafana image with plugin based on the same installation instructions.
+
+#### Grafana operator
+
+Example with Grafana [operator](https://github.com/grafana-operator/grafana-operator).
+
+<details>
+<summary>deployment.yaml</summary>
+
+```yaml
+apiVersion: grafana.integreatly.org/v1beta1
+kind: Grafana
+metadata:
+  name: grafana-vm
+  labels:
+     dashboards: grafana
+spec:
+  persistentVolumeClaim:
+    spec:
+      accessModes:
+        - ReadWriteOnce
+      resources:
+        requests:
+          storage: 200Mi
+  deployment:
+    spec:
+      template:
+        spec:
+          initContainers:
+            - name: "load-vm-ds-plugin"
+              image: "curlimages/curl:7.85.0"
+              command: [ "/bin/sh" ]
+              workingDir: "/var/lib/grafana"
+              securityContext:
+                runAsUser: 472
+                runAsNonRoot: true
+                runAsGroup: 472
+              args:
+                - "-c"
+                - |
+                  set -ex
+                  mkdir -p /var/lib/grafana/plugins/
+                  ver=$(curl -s https://api.github.com/repos/VictoriaMetrics/victorialogs-datasource/releases/latest | grep -oE 'v[0-9]+\.[0-9]+\.[0-9]+' | head -1)
+                  curl -L https://github.com/VictoriaMetrics/victorialogs-datasource/releases/download/$ver/victoriametrics-logs-datasource-$ver.tar.gz -o /var/lib/grafana/plugins/vl-plugin.tar.gz
+                  tar -xf /var/lib/grafana/plugins/vl-plugin.tar.gz -C /var/lib/grafana/plugins/
+                  rm /var/lib/grafana/plugins/vl-plugin.tar.gz
+              volumeMounts:
+                - name: grafana-data
+                  mountPath: /var/lib/grafana
+```
+
+</details>
+
+See [Grafana operator reference](https://grafana.github.io/grafana-operator/docs/grafana/) to find more about Grafana operator.
+This example uses init container to download and install plugin.
+
+It is also possible to request plugin at `GrafanaDatasource` or `GrafanaDashboard` CRDs.
+
+<details>
+<summary>datasource-crd.yaml</summary>
+
+```yaml
+apiVersion: grafana.integreatly.org/v1beta1
+kind: GrafanaDatasource
+metadata:
+  name: vl-datasource
+spec:
+  datasource:
+    access: proxy
+    type: victoriametrics-logs-datasource
+    name: VL
+    url: http://victoria-logs-single-server.monitoring.svc.cluster.local:9428
+  instanceSelector:
+    matchLabels:
+      dashboards: grafana
+  plugins:
+    - name: victoriametrics-logs-datasource
+      version: "0.16.3"
+---
+apiVersion: grafana.integreatly.org/v1beta1
+kind: GrafanaDashboard
+metadata:
+  name: vl-dashboard
+spec:
+  resyncPeriod: 30s
+  plugins:
+    - name: victoriametrics-logs-datasource
+      version: "0.16.3"
+  instanceSelector:
+    matchLabels:
+      dashboards: "grafana"
+  json: |
+     {
+        "annotations": {
+           "list": [
+              {
+                 "builtIn": 1,
+                 "datasource": {
+                    "type": "grafana",
+                    "uid": "-- Grafana --"
+                 },
+                 "enable": true,
+                 "hide": true,
+                 "iconColor": "rgba(0, 211, 255, 1)",
+                 "name": "Annotations & Alerts",
+                 "type": "dashboard"
+              }
+           ]
+        },
+        "editable": true,
+        "fiscalYearStartMonth": 0,
+        "graphTooltip": 0,
+        "links": [],
+        "panels": [],
+        "preload": false,
+        "refresh": "",
+        "schemaVersion": 40,
+        "tags": [],
+        "templating": {
+           "list": []
+        },
+        "time": {
+           "from": "now-6h",
+           "to": "now"
+        },
+        "timepicker": {},
+        "timezone": "browser",
+        "title": "Example",
+        "version": 0,
+        "weekStart": ""
+     }
+```
+
+</details>
+
+### Dev release installation
+
+To download plugin build and move contents into Grafana plugins directory:
+
+```sh
+ver=$(curl -s https://api.github.com/repos/VictoriaMetrics/victorialogs-datasource/releases/latest | grep -oE 'v[0-9]+\.[0-9]+\.[0-9]+' | head -1)
+curl -L https://github.com/VictoriaMetrics/victorialogs-datasource/releases/download/$ver/victoriametrics-logs-datasource-$ver.tar.gz -o /var/lib/grafana/plugins/vl-plugin.tar.gz
+tar -xf /var/lib/grafana/plugins/vl-plugin.tar.gz -C /var/lib/grafana/plugins/
+rm /var/lib/grafana/plugins/vl-plugin.tar.gz
+```
+
+After downloading is finished, restart Grafana to load the plugin.
+
+## Getting started development
+
+### 1. Install [Grafana](https://grafana.com/docs/grafana/latest/setup-grafana/installation/)
+
+<details>
+<summary>Tip for Apple(arm64)</summary>
+
+To download the `arm64` build of grafana for macOS from the [grafana download page](https://grafana.com/grafana/download?platform=mac), need to change `amd64` to `arm64` in the `wget` url.
+
+More details about debugging grafana plugin on **Apple Silicon** can be found in [this article](https://st-g.de/2023/10/grafana-plugin-debugging-on-apple-silicon).
+
+</details>
+
+### 2. Configure Grafana
+
+Installing dev version of Grafana plugin requires to change `grafana.ini` config to allow loading unsigned plugins:
+
+```ini
+# Directory where Grafana will automatically scan and look for plugins
+plugins = {{path to directory with plugin}}
+```
+
+```ini
+[plugins]
+allow_loading_unsigned_plugins = victoriametrics-logs-datasource
+```
+
+### 3. Run the plugin
+
+#### 1. How to run a frontend plugin in development mode:
+
+In the project directory, you can run:
+
+```sh
+# install dependencies
+yarn install
+
+# run the app in the development mode
+yarn dev
+
+# build the plugin for production to the `victoriametrics-logs-datasource` folder and zip build
+yarn build:zip
+```
+
+#### 2. How to run a debugger for a backend plugin:
+
+1. install [delve](https://github.com/go-delve/delve)
+
+```sh
+  go install github.com/go-delve/delve/cmd/dlv@latest
+```
+
+2. install [mage](https://magefile.org/)
+
+```sh
+  go install github.com/magefile/mage@latest
+```
+
+2. install dependencies
+
+```sh
+  go mod download
+```
+
+3. build backend plugin
+
+```sh
+  mage build
+```
+
+4. build frontend plugin:
+
+```sh
+  make vl-frontend-plugin-build
+```
+
+5. run grafana
+6. run debugger for backend plugin
+
+```sh
+  mage debugger
+```
+
+6. run debugger in IDE with the following configuration - port:`3222`.
+
+### 4. How to build backend plugin
+
+From the root folder of the project run the following command:
+
+```
+make vl-backend-plugin-build
+```
+
+This command will build executable multi-platform files to the `victoriametrics-logs-datasource` folder for the following platforms:
+
+- linux/amd64
+- linux/arm64
+- linux/arm
+- linux/386
+- amd64
+- arm64
+- windows
+
+### 5.How to build frontend plugin
+
+From the root folder of the project run the following command:
+
+```
+make vl-frontend-plugin-build
+```
+
+This command will build all frontend app into `victoriametrics-logs-datasource` folder.
+
+### 6. How to build frontend and backend parts of the plugin:
+
+When frontend and backend parts of the plugin is required, run the following command from the root folder of the project:
+
+```
+make vl-plugin-build
+```
+
+### 7. How to build and run plugin via docker compose:
+
+From the root folder of the project run the following command:
+
+```
+make vl-plugin-build
+```
+
+Then you can run grafana with the installed plugin by running the following command:
+
+```
+docker compose up [-d]
+```
+
+The `-d` flag is optional and will run grafana in detached mode.
+The grafana data is stored in `./grafana` folder, so you can stop and start grafana without losing data.
+
+This command will build frontend part and backend part or the plugin and locate both parts into `victoriametrics-logs-datasource` folder.
+
+## How to make new release
+
+1. Make sure there are no open security issues.
+2. Change version in package.json in a `main` branch
+3. Trigger [release pipeline](https://github.com/VictoriaMetrics/victorialogs-datasource/actions/workflows/release.yaml).
+4. Go to [releases page](https://github.com/VictoriaMetrics/victorialogs-datasource/releases) once pipeline is finished and verify release with the name `TAG` has been created and has all the needed binaries and checksums attached.
+
+## Notes
+
+In the `plugin.json` file of our plugin, the `metrics` field is set to `true`. This is not to support metric queries in the classical sense but to ensure our plugin can be selected in the Grafana panel editor.
+
+For more information on the fields in `plugin.json`, please refer to the [Grafana documentation](https://grafana.com/developers/plugin-tools/reference-plugin-json#properties).
+
+## License
+
+This project is licensed under
+the [Apache 2.0 license](https://github.com/VictoriaMetrics/victorialogs-datasource/blob/bb1f6d7b0ec2bdf943c2d8c27f2cb17004b147e8/LICENSE).
+
+
+# Document: VictoriaLogs datasource for Grafana: changelog
+
+Source path: CHANGELOG.md
+Canonical source: https://github.com/VictoriaMetrics/victorialogs-datasource/blob/bb1f6d7b0ec2bdf943c2d8c27f2cb17004b147e8/CHANGELOG.md
+
+# Changelog
+
+## tip
+
+- FEATURE: `Filter for value` / `Filter out value` in log details now adds the value to the `Stream filters` when the clicked field is a stream field. Stream filters are resolved via the stream index, so such filters run noticeably faster on large volumes. See [#691](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/691).
+
+- FEATURE: speed up the logs volume histogram when log level rules reference high-cardinality fields like `_msg`. See [#700](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/700).
+
+- BUGFIX: keep the selected values of multi-value ad-hoc filter operators (`one of`, `not one of`) when serializing the query. Previously, such dashboard filters produced an empty `in()` filter, and the panel showed no results.
+
+- BUGFIX: interpolate dashboard variables into the query builder state and stream filter values when jumping from a dashboard panel to Explore. Previously, the raw variable names (e.g., `$app`) leaked back into the query on the first editor interaction, and the query returned no results.
+
+- BUGFIX: pass the panel time range to the `Instant` (stats) query type via the `start`/`end` query parameters instead of prepending a `_time:[...]` filter to the query text. The prepended filter was not parenthesized, so a top-level `OR` (e.g. `level:error OR level:warn | stats count()`) left part of the query outside the time range, making VictoriaLogs scan the full retention and the panel time out. Thanks to @github-vincent-miszczak for contributing.
+
+- BUGFIX: increase the default line limit for log queries from 50 to 1000. If your logs are large or expensive to render, set a lower limit in the datasource settings or via provisioning - see [Line limits](https://docs.victoriametrics.com/victorialogs/integrations/grafana/#line-limits).
+
+- BUGFIX: fix log lines overlapping each other in the logs panel after re-running a query, which happened in Grafana Explore when the results contained identical log lines. See [#706](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/706).
+
+## v0.30.1
+
+- VULNERABILITY: update Go and npm dependencies to fix known vulnerabilities, including [GHSA-hrxh-6v49-42gf](https://github.com/advisories/GHSA-hrxh-6v49-42gf) in `grpc` and [GHSA-23hp-3jrh-7fpw](https://github.com/advisories/GHSA-23hp-3jrh-7fpw) in `tar`.
+
+## v0.30.0
+
+- FEATURE: add a `:` (word filter) operator to Log Level Rules, matching a field value by whole word like LogsQL (e.g. `error` matches the word `error`, not `terror`). See [#611](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/611).
+
+- FEATURE: the visual query builder now shows context-aware keyboard hints at the bottom of its dropdowns, so the available shortcuts (select, navigate, confirm, run) are visible while you build a query. See [pr #683](https://github.com/VictoriaMetrics/victorialogs-datasource/pull/683).
+
+- FEATURE: add a `View as JSON` toggle in the query options for raw logs. When enabled, it shows all log fields as a single JSON message in the log line. It is useful for displaying all fields at once or when logs have no meaningful `_msg` field. See [#677](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/677).
+
+- BUGFIX: restore the `_stream` label in log query results. Previously, it was hidden from the log line labels. See [pr #685](https://github.com/VictoriaMetrics/victorialogs-datasource/pull/685).
+
+- BUGFIX: live tailing now picks up query changes immediately. Previously, editing the query expression while live logs were streaming kept showing results for the previous query until the page was reloaded.
+
+- BUGFIX: pad missing `_time` values in instant log query responses so mixed rows with and without `_time` still produce valid Grafana log frames. Thanks to @immanuwell for their contribution.
+
+- BUGFIX: highlight search terms in log lines when the query uses template variables (e.g. `_msg:$search`). Previously, highlighting looked for the literal variable name instead of its value, so nothing was highlighted. See [#684](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/684).
+
+- BUGFIX: stop showing log lines twice in the "Show context" modal. Previously, the two context queries overlapped by one second around the selected row, so every line within that window was displayed twice; the queries now split at the selected row's timestamp with nanosecond precision. See [#692](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/692).
+
+## v0.29.0
+
+- FEATURE: keep log fields in the order returned by VictoriaLogs (for example the order from `| fields a, b, c`) instead of sorting them alphabetically. See [#563](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/563).
+
+- FEATURE: highlight the terms you search for directly in the matching log lines for LogsQL queries — word filters (e.g. `error`), quoted phrases, `_msg:` filters, and `filter` pipes. See [#519](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/519).
+
+- FEATURE: derived fields can now link to another VictoriaLogs datasource (logs → logs). Clicking such a field opens Explore with a ready LogsQL query, letting you pivot from a value like `trace_id` or `request_id` to all related logs. See [#671](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/671).
+
+- FEATURE: in the "Show context" modal, each stream label of the selected log is shown as a toggleable chip. Turn labels off to widen the surrounding-logs search beyond the exact stream. See [#665](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/665).
+
+- BUGFIX: lower the default datasource `Maximum lines` limit from 1000 to 50 to reduce browser rendering load and prevent the page from freezing on heavy log results. You can change this value in the datasource configuration. See [Line limits](https://docs.victoriametrics.com/victorialogs/integrations/grafana/#line-limits) docs and [#669](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/669).
+
+## v0.28.0
+
+- FEATURE: add a per-row stable `id` field to log query frames so Grafana's built-in "Copy shortlink" action becomes available next to every log line in Explore and the Logs panel. See [#344](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/344).
+
+- FEATURE: replace the "Ad-hoc filters to root query" checkbox in Query Editor options with a three-mode selector: `Extra Filters` (default, sends filters as the `extra_filters` query parameter), `Root Query` (prepends filters to the query expression, preventing propagation into `join`/`union` subqueries) and `Off` (disables automatic ad-hoc filter injection entirely — useful when ad-hoc values are managed through Grafana variable interpolation or applied to pipe-transformed fields). Saved dashboards using the previous `isApplyExtraFiltersToRootQuery` flag continue to work without migration. See [#633](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/633). Thanks to @edspc for contributing.
+
+- FEATURE: add ability to set custom field names in dashboard variables, since fields do not necessarily exist at the time of creation or manipulation (e.g. when importing a dashboard from JSON, then editing a variable). See [pr #606](https://github.com/VictoriaMetrics/victorialogs-datasource/pull/606). Thanks to @github-vincent-miszczak for contributing.
+
+- FEATURE: group selected values under the same stream filter field into a single chip in the Stream Filters bar and popover. Each value keeps its own remove button, and a separate remove button clears the whole field at once. See [#647](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/647).
+
+- FEATURE: log level filter buttons now add removable filter chips and refresh results on click, instead of editing your query text. Your query stays exactly as you wrote it, and the buttons are available in both the code and visual builder editors.
+
+- FEATURE: support dashboard variables in the Field of a "Field values" template variable query. See [#377](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/377).
+
+- FEATURE: narrow down the Ad hoc filter field and value dropdowns based on the filters you have already selected. See [#313](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/313).
+
+- BUGFIX: restore propagation of dashboard ad-hoc filters when navigating from a panel to Grafana Explore.
+
+- BUGFIX: disable tenant configuration inputs (`Tenant`, `AccountID`, `ProjectID`) until the datasource health check passes. Previously, entering and clearing a tenant on a freshly created (not yet saved) datasource produced a validation error. See [#639](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/639).
+
+- BUGFIX: fix incorrect ordering of results in the log context view by explicitly specifying the sort direction when fetching surrounding log lines (`asc` for forward, `desc` for backward). See [pr #653](https://github.com/VictoriaMetrics/victorialogs-datasource/pull/653). Thanks to @KoHcoJlb for contributing.
+
+## v0.27.1
+
+- BUGFIX: fix a case where tenant settings (`AccountID`, `ProjectID`) and custom HTTP headers configured for the datasource could be silently dropped when the plugin automatically retried a request after a transient network error. This could lead to authorization failures or requests being served from the wrong tenant. The retried request now uses the same headers as the original one.
+
+## v0.27.0
+
+- FEATURE: add a visual query builder. Construct queries by chaining typed pipes (`filter`, `aggregate`, `modify`, `sort`, `limit`, `custom`) through an interactive UI with field name/value dropdowns and keyboard navigation. See [Query builder](https://docs.victoriametrics.com/victorialogs/integrations/grafana/#query-builder) docs and [#578](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/578).
+
+- FEATURE: replace the `/health` endpoint in the datasource backend health check with a real query to `/select/logsql/query`. This verifies that the VictoriaLogs backend can actually serve log queries, not just that the HTTP server is up. See [#599](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/599).
+
+- FEATURE: add OpenTelemetry preset to datasource configuration. When enabled, the preset auto-detects field format (`snake_case` / `camelCase`) of `traceID` and severity field from recent logs, then generates Derived Fields for `trace_id` and Log level rules for OTel severity — without manual configuration. See [OpenTelemetry preset](https://github.com/VictoriaMetrics/victorialogs-datasource/blob/bb1f6d7b0ec2bdf943c2d8c27f2cb17004b147e8/src/README.md#opentelemetry-preset) docs.
+
+- FEATURE: route "Filter for value" / "Filter out" actions in Grafana Explore into the `extra_filters` query parameter instead of mutating the main `expr`. The user's LogsQL stays untouched; added filters appear as removable chips under the query editor (via the existing Ad-hoc filters control). Dashboard behavior is unchanged — there Grafana keeps driving these clicks through ad-hoc template variables.
+
+- BUGFIX: protect Raw Logs queries from excessively large line limits. A hard upper bound of 10000 lines is now enforced on both the per-query `Line limit` and the datasource-wide `Maximum lines` settings; a confirmation dialog warns before committing a value above 1000 lines. See [#613](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/613).
+
+- BUGFIX: fix interpolation of a query with the variable at the end of the line. See [#614](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/614);
+
+- BUGFIX: skip the redundant `/select/logsql/hits` (logs volume) request for `Range` and `Instant` query types in Grafana Explore. The histogram is only meaningful for `Raw Logs` queries; for stats query types the main response already provides the chart. See [#630](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/630).
+
+- BUGFIX: prevent the wildcard `*` value of a multi-value template variable from being wrapped in double quotes inside the `in(...)` operator during query interpolation. See [pr #638](https://github.com/VictoriaMetrics/victorialogs-datasource/pull/638).
+
+- BUGFIX: fix off-by-one ordering of query results where the first row appeared in the wrong position relative to the rest of the sorted output. See [#625](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/625).
+
+## v0.26.3
+
+- BUGFIX: fix time range provided in `field_names` and `field_values` requests. Instead of being rounded to a 24-hour time range, the selected time range is now provided. See [pr #581](https://github.com/VictoriaMetrics/victorialogs-datasource/pull/581).
+- BUGFIX: fix template variables not being interpolated in the `Step` field of the query editor. See [pr #594](https://github.com/VictoriaMetrics/victorialogs-datasource/pull/594).
+- BUGFIX: fix the display of the histogram and bar chart for histogram stats functions. See [comment of issue #62](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/62#issuecomment-3974623620).
+- BUGFIX: fix search of filter values in the query builder.
+
+## v0.26.2
+
+- VULNERABILITY: update `minimatch` dependency to fix [CVE-2026-26996](https://github.com/advisories/GHSA-3ppc-4f35-3m26).
+
+## v0.26.1
+
+- BUGFIX: fix an issue where requests failed with compression formats other than gzip, resulting in no field names and no field values errors. See [pr #588](https://github.com/VictoriaMetrics/victorialogs-datasource/pull/588).
+
+## v0.26.0
+
+- FEATURE: pass the selected timezone offset to the offset query arg at `/select/logsql/hits` and `/select/logsql/stats_query_range` endpoints. See [#561](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/561).
+
+- FEATURE: add support for a heatmap panel. For using [Heatmap panel](https://grafana.com/docs/grafana/latest/panels-visualizations/visualizations/heatmap/) switch to `Range` query type and use [`histogram` stats function](https://docs.victoriametrics.com/victorialogs/logsql/#histogram-stats). See [#62](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/62).
+
+- BUGFIX: fix an interpolation query by handling additional patterns like `:in("*")` and `word in(".*")`. See [#573](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/573).
+
+## v0.25.0
+
+- FEATURE: limit the number of field values. This limit can be configured in the datasource settings. See [#543](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/543).
+- FEATURE: add "Ad-hoc filters to root query" checkbox to Query Editor options. When enabled, ad-hoc filters are applied directly to the root query expression instead of using the `extra_filters` parameter, preventing filter propagation into subqueries (join, union, etc.). See [#511](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/511).
+- FEATURE: add LogsQL syntax tooltips. See [#21](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/21). Thanks to @JeelDasvani for contributing.
+
+## v0.24.1
+
+- BUGFIX: fix an issue where the `histogram` function throws a warning. See [#524](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/524).
+- BUGFIX: quote label names containing colons(:) with double quotes. See [#549](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/549).
+
+## v0.24.0
+
+- FEATURE: add query suggestions to help users get started with log searches. See [#108](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/108).
+
+- BUGFIX: fix an issue where variables were incorrectly interpolated in the query, as a result of which the `repeat by variable` feature did not work correctly. See [#502](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/502).
+
+## v0.23.5
+
+- BUGFIX: fix closing connections in the datasource backend to prevent resource leak. See [pr #537](https://github.com/VictoriaMetrics/victorialogs-datasource/pull/537).
+
+## v0.23.4
+
+- BUGFIX: update dependencies to fix security issues with react-router. See [pr #534](https://github.com/VictoriaMetrics/victorialogs-datasource/pull/534).
+
+## v0.23.3
+
+- BUGFIX: fix the parsing of tenant IDs from provisioning configurations. See [#522](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/522).
+- BUGFIX: fix an issue where queries would run even if they were hidden. See [#521](https://github.com/VictoriaMetrics/victorialogs-datasource/pull/521).
+- BUGFIX: fix the issue of adhoc filters being lost when navigating from the Dashboard page to the Explore page. See [#361](https://github.com/VictoriaMetrics/victorialogs-datasource/pull/361).
+
+## v0.23.2
+
+- BUGFIX: fix the loading of tenant IDs when creating a new datasource from scratch.
+
+## v0.23.1
+
+- BUGFIX: fix a problem where the variables in the stream could be interpolated incorrectly.
+- BUGFIX: fix a problem where loading tenants throws errors continuously when you create a new datasource from scratch.
+- BUGFIX: fix sorting in the Logs panel, where incorrect logs were shown while the `oldest first` sort was active. See [#266](https://github.com/VictoriaMetrics/victorialogs-datasource/pull/266).
+
+## v0.23.0
+
+- FEATURE: fetch tenants from the VictoriaLogs backend and allow selecting a tenant in the datasource settings. See [#475](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/475).
+- FEATURE: enable client side caching and make reliable behavior in QueryBuilder filters. See [#357](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/357).
+- FEATURE: add compatibility with Grafana 10.x and 11.x by using dynamic component loading for Combobox.
+- FEATURE: add quick level filter, which allows filtering logs by level according to `Log Level Rules` and the base level field. It is the first part of the [issue #108](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/108). See [pr #495](https://github.com/VictoriaMetrics/victorialogs-datasource/pull/495).
+- FEATURE: add a default query expression `*` in Explore mode when none is provided. See [#483](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/483).
+
+## v0.22.4
+
+- BUGFIX: fix an issue where the `Internal link` from derived fields config was disabled. See [#479](https://github.com/VictoriaMetrics/victorialogs-datasource/pull/479).
+- BUGFIX: fix an issue where the `show context` failed if disable labels with transformations. See [#480](https://github.com/VictoriaMetrics/victorialogs-datasource/pull/480).
+- BUGFIX: add tenant information as a query parameter to `url` in `Run in vmui` button. See [#480](https://github.com/VictoriaMetrics/victorialogs-datasource/pull/480).
+- BUGFIX: fix vulnerability CVE-2025-58187 by updating `Go` version from `1.25.0` to `1.25.4`. Thanks for contributing @ami-descope. See [#477](https://github.com/VictoriaMetrics/victorialogs-datasource/pull/477).
+
+## v0.22.3
+
+- BUGFIX: fix an issue where `_msg` was incorrectly parsed to `detected_level` label according to `Log Level rules`. See [#465](https://github.com/VictoriaMetrics/victorialogs-datasource/pull/465).
+- BUGFIX: fix an issue where the `Logs panel` shows an empty view when infinite scrolling at the bottom. See [#466](https://github.com/VictoriaMetrics/victorialogs-datasource/pull/466).
+
+## v0.22.2
+
+- BUGFIX: fix an issue where an empty textbox variable was incorrectly interpolated. See [#454](https://github.com/VictoriaMetrics/victorialogs-datasource/pull/454).
+- BUGFIX: fix a `glob` package vulnerability [CVE-2025-64756](https://github.com/advisories/GHSA-5j98-mcp5-4vw2).
+- BUGFIX: fix an issue where live tailing logs in Grafana's explore page does not work. See [#460](https://github.com/VictoriaMetrics/victorialogs-datasource/pull/460).
+
+## v0.22.1
+
+- BUGFIX: fix an interpolating query with multivariables when going to the "explore" page. See [#380](https://github.com/VictoriaMetrics/victorialogs-datasource/pull/380).
+- BUGFIX: fix an issue where `*` was used instead of a variable with the selected `All` value. Now the priority is as follows: first, the `allValue` value is used, which is defined in the variable settings, if there is no such value and there is a `query` in the variable setting to filter the values, then the list of return values is used, if there is no query, then `*` is used for normal filters and `.*` for regexp filters. See [#452](https://github.com/VictoriaMetrics/victorialogs-datasource/pull/452).
+- BUGFIX: fix an interpolating query in variable settings: use the same algorithm as for the query on dashboards. See [#455](https://github.com/VictoriaMetrics/victorialogs-datasource/pull/455).
+- BUGFIX: fix an issue where a query was incorrectly interpolated with a variable inside a regexp operator. See [#449](https://github.com/VictoriaMetrics/victorialogs-datasource/pull/449).
+
+## v0.22.0
+
+- FEATURE: add bars as the default type of visualization for explore mode. Adjust the width of the bars to match the step size. See [#420](https://github.com/VictoriaMetrics/victorialogs-datasource/pull/420).
+
+- BUGFIX: fix an issue where a warning was displayed when using the regexp operator not with a variable. See [#438](https://github.com/VictoriaMetrics/victorialogs-datasource/pull/438).
+
+- BUGFIX: fix an issue where a single value wasn't interpolated by double quotes. See [#444](https://github.com/VictoriaMetrics/victorialogs-datasource/pull/444).
+
+## v0.21.4
+
+- BUGFIX: fix backward compatibility with queries containing regexp variables. Error in queries with regexp variables has been replaced with a warning with quick fix action. See [#432](https://github.com/VictoriaMetrics/victorialogs-datasource/pull/432).
+
+## v0.21.3
+
+- BUGFIX: sanitize URLs to prevent potential security issues, properly close gzip reader to prevent resource leaks, fix text filter interpolation for `*` character. See pr [#429](https://github.com/VictoriaMetrics/victorialogs-datasource/pull/429).
+
+## v0.21.2
+
+- BUGFIX: fix setting `extra_stream_filters` param to `Custom query parameters`. See [this comment](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/405#issuecomment-3420418177).
+- BUGFIX: add `sort by (_time) asc/desc` pipe if logs are sorted in asc/desc order. In versions of grafana below `12.x.x`, you need to manually run the query if the sorting has been changed. See [#379](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/379).
+- BUGFIX: fix the issue of overwriting the `level` label. Set the calculated level into a `detected_level` label, which is supported only in Grafana version 11.0.8 and above. See [#425](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/425).
+- BUGFIX: fix interpolation of multi-value query variables by mapping `filterName:$filterVar` and `filterName:=$filterVar` to the `filerName:in("v1", ..., "vN")`. Support negative operators and stream tags(`{tag = $var}` to `{tag in($var)}`). Disallow interpolation in regexp with variables (e.g., `field:~$var`). See [#238](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/238).
+- BUGFIX: fix rendering the graph with stats range queries by filling missing timestamps with null values. See [#421](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/421).
+
+## v0.21.1
+
+- BUGFIX: fix an issue with parsings of the logs lines when in the logs line empty `_stream` and missed `_msg` fields. See [#330](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/330).
+- BUGFIX: fix applying `Custom query parameters` when querying from Grafana variables. See [#405](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/405).
+- BUGFIX: fix duplication of `level` label. Keep the original `level` label as `__orig_level` for clarity and transparency if new calculated label after applying the datasource `Log Level Rules` is different from the original. See [#400](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/400).
+
+## v0.21.0
+
+- FEATURE: add run in vmui button. The VMUI URL can be configured in the datasource settings. If not specified, the datasource URL with the path `/select/vmui` will be used. See [#369](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/369).
+
+- BUGFIX: fix unpredictable behavior when determining a `Max Data Points` option for a range query. See [#393](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/393).
+
+- BUGFIX: respect user-specified `Min Interval` for a range queries. Before, the interval could have been rounded to smaller values and result in unexpected distance between datapoints on graph. See [#390](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/390).
+
+- BUGFIX: fix an issue with the incorrect handling `option` field in the query for the `/stats` API. By the [documentation](https://docs.victoriametrics.com/victorialogs/logsql/#query-options) it should be passed at the beginning of LogsQL query. See [#389](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/389).
+
+## v0.20.0
+
+- FEATURE: upgrade Go builder from Go1.24.2 to Go1.25. See [Go1.25 release notes](https://tip.golang.org/doc/go1.25).
+
+- FEATURE: add current version and changelog link to the Helpful links section.
+
+- FEATURE: add support for multi-value operators (`one of`, `not one of`) in Ad hoc filters (available since Grafana 11.3.x). See [#293](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/293).
+
+- BUGFIX: fix log level coloring when no custom rules are configured. See [#347](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/347).
+
+- BUGFIX: respect adhoc filters variables. See [#361](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/361)
+
+- BUGFIX: fix issue with concurrent map writes when performing multiple requests to the datasource. See [#363](https://github.com/VictoriaMetrics/victoriametrics-datasource/issues/363)
+
+- BUGFIX: fix a parsing issue with quoted characters inside `_stream` fields. See [#365](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/365).
+
+- BUGFIX: fix an issue with parsing stats response when it can be empty or have empty string or `nil` as a value. See [#374](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/374).
+
+## v0.19.3
+
+- BUGFIX: fix an issue with missing `_msg`, `_time` fields in the response and when `_stream` field is empty. See [#560](https://github.com/VictoriaMetrics/VictoriaLogs/issues/560)
+- BUGFIX: fix an issue with the propagating `AccountID` and `ProjectID` headers in the datasource for the `field_values` and `field_names` API calls. See [#354](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/354).
+
+## v0.19.2
+
+- BUGFIX: fix regression of the plugin that cause the plugin to not work with `field_values` and `field_names` queries. Fix comments after the plugin verification procedure.
+
+## v0.19.1
+
+- BUGFIX: upgrade `jest` library version to fix vulnerability warning.
+
+## v0.19.0
+
+- BREAKING: increase minimum required Grafana version to `>=10.4.0` to ensure compatibility with [`@grafana/plugin-ui`](https://github.com/grafana/plugin-ui). This drops support for older Grafana versions.
+
+- BUGFIX: fix an issue with missing `_msg` field in the response. If `_msg` field is missed in the response now always returned as an empty string. See [#330](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/330).
+
+- BUGFIX: fix an issue with parsing of the `_stream` field that contains commas in its value. Previously, commas in the `_stream` field values were incorrectly processed, leading to parsing errors. This has been fixed to properly handle complex string values with commas. See [#334](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/334).
+
+- BUGFIX: fix an issue with parsing timestamp from the `_time` field if it contains nanosecond precision. Now, the plugin correctly handles timestamps with nanosecond precision in the `_time` field and do not round it, ensuring accurate time representation in logs. See [#340](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/340)
+
+## v0.18.1
+
+- BUGFIX: fix an issue when the additional `level` label was added if the logs level rules aren't configured. See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/319).
+- BUGFIX: fix an issue with loading field names when creating a variable using a variable or a regexp operator in the query. See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/312).
+- BUGFIX: fix an issue where ad-hoc filtering is applied incorrectly with extract pipe. See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/298).
+
+## v0.18.0
+
+- FEATURE: improve query builder – when using AND operator, field and value selection is now narrowed. See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/244).
+- FEATURE: add a section to the datasource settings for tenant configuration. See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/307).
+- BUGFIX: fix an issue where line charts were incorrectly connecting data points across missing (null) values despite the "Connect null values" panel setting being set to "Never". See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/311).
+
+## v0.17.0
+
+- FEATURE: add support for configuring log level using custom rules. See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/294).
+- FEATURE: add support for build the freebsd/amd64. See [this pull request](https://github.com/VictoriaMetrics/victorialogs-datasource/pull/281). Thanks to @AlexanderThaller.
+- BUGFIX: fix an issue when Grafana decides that the response is not a wide series and shows the error "input data must be a wide series but got type not (input refid)". See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/302).
+
+## v0.16.3
+
+- FEATURE: enabled [PDC](https://grafana.com/docs/grafana-cloud/connect-externally-hosted/private-data-source-connect/) support. See [VictoriaMetrics#8800](https://github.com/VictoriaMetrics/VictoriaMetrics/issues/8800) for details.
+- BUGFIX: fix shows the original error message returned from the VictoriaLogs backend on status code 400. It should help to troubleshoot problems with query or syntax. See [this pull request](https://github.com/VictoriaMetrics/victorialogs-datasource/pull/287).
+- BUGFIX: fix extend the `Custom query parameters` label width to fix the title. See [this pull request](https://github.com/VictoriaMetrics/victorialogs-datasource/pull/284)
+  Thanks to @tommysitehost.
+- BUGFIX: fix handle empty `_stream` field when it returns like `_stream:"{}"` from the datasource. See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/237).
+
+## v0.16.2
+
+- BUGFIX: properly close io.ReadCloser to avoid memory leak. See [this pull request](https://github.com/VictoriaMetrics/victorialogs-datasource/pull/280).
+
+## v0.16.1
+
+- BUGFIX: fix log context in dashboard view. See [this pull request](https://github.com/VictoriaMetrics/victorialogs-datasource/pull/267).
+- BUGFIX: fix parsing of `_stream` field with other than alpha-numeric characters in stream keys. See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/265) and [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/254).
+- BUGFIX: fix a bug where array indices were appended to log messages, resulting in incorrect log display on the dashboard. See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/269).
+- BUGFIX: fix Ad Hoc filter values autocomplete. See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/237).
+- BUGFIX: fix loading of field values for Grafana variables. See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/255).
+
+## v0.16.0
+
+- FEATURE: implements the getLogRowContext method. See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/41).
+  Thanks to @Libr4rian for [this pull request](https://github.com/VictoriaMetrics/victorialogs-datasource/pull/247).
+- FEATURE: add support for build the linux/s390x. Extend backend build process to add more architectures. See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/250).
+- FEATURE: add configuration screen for Custom query parameters. See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/252).
+  Thanks to @tommysitehost for [this pull request](https://github.com/VictoriaMetrics/victorialogs-datasource/pull/256).
+- BUGFIX: fix build annotation from the label field. All labels transforms to the string representation. See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/188).
+- BUGFIX: fix the bug with incorrect bar display on the Logs Volume chart. See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/249).
+
+## v0.15.0
+
+- FEATURE: add configuration screen for derived fields. See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/202).
+  Thanks to @090809 for [the pull request](https://github.com/VictoriaMetrics/victorialogs-datasource/pull/231).
+- BUGFIX: fix live mode shows the first query result instead of separately requested two different results. See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/229).
+
+## v0.14.3
+
+- BUGFIX: fix image links in public readme.
+
+## v0.14.2
+
+- BUGFIX: fix issue with plugin signature.
+
+## v0.14.1
+
+- BUGFIX: fix the sign plugin procedure for the new release. See [this PR](https://github.com/VictoriaMetrics/victorialogs-datasource/pull/220) and See [this PR](https://github.com/VictoriaMetrics/victorialogs-datasource/pull/221).
+
+## v0.14.0
+
+- FEATURE: enable plugin sign procedure for new releases. See [this PR](https://github.com/VictoriaMetrics/victorialogs-datasource/pull/217).
+
+## v0.13.5
+
+- BUGFIX: clean up the plugin codebase after the plugin verification procedure. See [this PR](https://github.com/VictoriaMetrics/victorialogs-datasource/pull/213) and [this PR](https://github.com/VictoriaMetrics/victorialogs-datasource/pull/214).
+
+## v0.13.4
+
+- BUGFIX: updated the backend plugin ID and revised the README.md file after the plugin verification procedure. See [this PR](https://github.com/VictoriaMetrics/victorialogs-datasource/pull/208).
+
+## v0.13.3
+
+- BUGFIX: fix query display text in query history to show the actual expression instead of the full query object. See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/194).
+- BUGFIX: fix query type switching when creating alerts in Grafana. See [this issue](https://github.com/VictoriaMetrics/victoriametrics-datasource/issues/237)
+- BUGFIX: fix parsings of the datasource settings in the plugin. See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/199).
+
+## v0.13.2
+
+- SECURITY: bump Go version to 1.23.4. See the list of issues addressed in [Go1.23.4](https://github.com/golang/go/issues?q=milestone%3AGo1.23.4+label%3ACherryPickApproved).
+
+- SECURITY: bump golang.org/x/net to 0.33.0. See <https://github.com/advisories/GHSA-w32m-9786-jp63>
+
+- FEATURE: enable to set headers for every request to the datasource. It helps to use custom headers in the Grafana to define AccountID and ProjectID if it is needed. See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/85).
+
+## v0.13.1
+
+- FEATURE: update plugin dependencies to satisfy Grafana marketplace requirements.
+
+- BUGFIX: filter out empty variable values in queries. See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/159).
+
+## v0.13.0
+
+⚠️ **Breaking Change: Plugin ID Updated**
+**Update Note 1:**
+In the new version of the plugin, the plugin ID has been updated. The new plugin ID is `victoriametrics-logs-datasource`. **This is a breaking change**: Grafana will treat this as a new plugin.
+
+- You must update the `allow_loading_unsigned_plugins` field in the `grafana.ini` or `defaults.ini` configuration file.
+  **Example:**
+  ```ini
+  allow_loading_unsigned_plugins = victoriametrics-logs-datasource
+  ```
+- If you are using provisioning, update the `type` field to `victoriametrics-logs-datasource` in your provisioning configuration.
+- After making these changes, you must restart the Grafana server for the updates to take effect.
+
+* FEATURE: update plugin id name to `victoriametrics-logs-datasource` to prepare the plugin for the sign procedure. See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/156).
+
+## v0.12.0
+
+- FEATURE: add compatibility for Grafana `v10.x.x` to ensure `/select/logs/hits` displays precise logs volume on the Explore page. See [this comment](https://github.com/VictoriaMetrics/victorialogs-datasource/pull/146#issuecomment-2533419498).
+
+- BUGFIX: properly parse timestamps with milliseconds precision in datasource response. See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/147).
+
+## v0.11.1
+
+- BUGFIX: fix the check for the stats pipe functions in expressions.
+- BUGFIX: fix plugin loading issue in Grafana `v10.x.x`. See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/149).
+
+## v0.11.0
+
+- FEATURE: add tooltips and info messages for query types. Now, plugin will warn about correct usage of `stats` panels and will provide more info about different query types.
+
+- FEATURE: automatically add `_time` field if it s not present in the query for the `stats` [API call](https://docs.victoriametrics.com/victorialogs/querying/#querying-log-stats). See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/142).
+
+- FEATURE: add support for `/select/logs/hits` to display precise logs volume on the Explore page. See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/15).
+
+- BUGFIX: fix bug with incomplete rendering of time series panels when selecting bigger time intervals.
+
+- BUGFIX: fix a bug where the time range was reset when using query variables. See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/118).
+
+- BUGFIX: fix incorrect application of ad-hoc filters in panels. See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/135).
+
+- BUGFIX: fix replacement of multi-variables in expressions. See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/109).
+
+## v0.10.0
+
+- FEATURE: add alerting support. See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/98).
+
+- FEATURE: implement a toggle to switch between instant and range requests. See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/111).
+
+- FEATURE: add options to configure the legend template, limit for number of log lines, and step. See [this](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/114) and [this](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/124) issues.
+
+- BUGFIX: fix support mulit options with label values of stream-fields. See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/109).
+
+## v0.9.0
+
+- FEATURE: Add support for the `$__range` variable in queries.  It will be transformed to the `[time_from, time_to]` in the Unix format. See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/112).
+
+- BUGFIX: show the original error message returned from the VictoriaLogs backend. It should help to troubleshoot problems with query or syntax. See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/126).
+
+## v0.8.0
+
+- FEATURE: add support for the `/select/logsql/stats_query` and `/select/logsql/stats_query_range` API calls. This feature helps to build different panels with statistic data. See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/61).
+
+- BUGFIX: fix options sorting in variables for numerical data type. See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/97).
+
+## v0.7.0
+
+- FEATURE: add support to display live logs by querying the tail endpoint in the datasource. See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/83)
+
+## v0.6.2
+
+- BUGFIX: allow reading strings with arbitrary length when parsing response in stream mode. See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/91).
+
+## v0.6.1
+
+- BUGFIX: fixed healthcheck
+
+## v0.6.0
+
+- FEATURE: add `limit` param for the `/field_values` request. See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/75).
+
+- BUGFIX: fix variable substitution in queries. See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/77).
+
+- BUGFIX: fixed health path for case, when url ends with trailing slash.
+
+- BUGFIX: fix the application of filtering in queries. See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/81).
+
+## v0.5.0
+
+- FEATURE: add support of the `$__interval` variable in queries. See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/61).
+  Thanks to @yincongcyincong for [the pull request](https://github.com/VictoriaMetrics/victorialogs-datasource/pull/69).
+
+- BUGFIX: correctly pass time range filter when querying variable values. Before, time filter wasn't applied for `/field_values` and `/field_names` API calls. See [this](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/71) and [this](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/72) issues.
+
+- BUGFIX: fix the issue with displaying incorrect subfields when requesting logs with different set of fields. See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/60).
+
+## v0.4.0
+
+- FEATURE: make retry attempt for datasource requests if returned error is a temporary network error. See [this issue](https://github.com/VictoriaMetrics/victoriametrics-datasource/issues/193)
+
+- BUGFIX: fix dynamic variable issue causing `this is undefined` error. See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/64).
+
+- BUGFIX: fix multi-value variable handling to properly format queries. See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/65).
+
+- BUGFIX: fix issue with special characters in variable values. See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/65).
+
+## v0.3.0
+
+- FEATURE: add beta version of the query builder. The builder allows selecting `field names` and `field value`. See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/48).
+- FEATURE: add support for loading data for variables, including log field names and values. This feature allows querying `/select/logsql/field_names` for field names and `/select/logsql/field_values` for field values. See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/40).
+
+## v0.2.6
+
+- BUGFIX: fix issue with forwarding headers from datasource to the backend or proxy.
+  It might be helpful if a user wants to use some kind of authentication. See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/54)
+
+## v0.2.5
+
+- BUGFIX: fix bug with parsing response when time field is empty but message and labels are present.
+  It happens when the user tries to show only stats number. See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/45).
+
+## v0.2.4
+
+- BUGFIX: fix bug with parsing response when one of the field contains ANSI escape sequences. See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/24).
+
+## v0.2.3
+
+- BUGFIX: fix bug with displaying response when one of the stream field is defined and lines are not collected. See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/34).
+
+## v0.2.2
+
+- BUGFIX: fix bug with displaying responses with a custom set of fields. See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/23).
+- BUGFIX: change time range limitation from `_time` in the expression to `start` and `end` query args. See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/22).
+
+## v0.2.1
+
+- BUGFIX: change the `metrics` flag from `false` to `true` in `plugin.json` to ensure the plugin appears in the Grafana datasource selection list.
+
+## v0.2.0
+
+- FEATURE: add support for variables in the query. See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/5).
+
+- FEATURE: add client-side record limit check for VictoriaLogs < v0.5.0 support. See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/9).
+
+- BUGFIX: fix a bug where a manually removed filter would persist in the query after the "Run query" button is clicked.See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/8).
+
+- BUGFIX: fix query handling to correctly apply `_time` filter across all queries. See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/12) and [this issue](https://github.com/VictoriaMetrics/VictoriaMetrics/issues/5920).
+
+- BUGFIX: fix an issue where sometimes an empty response was returned despite having data in VictoriaLogs. See [this issue](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/10).
+

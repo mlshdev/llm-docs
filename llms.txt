@@ -7,7 +7,13 @@
 - [Traefik Proxy v3.7.12](traefik/llms.txt): [full corpus](traefik/llms-full.txt), [manifest](traefik/manifest.json)
 - [NetBird v0.77.1](netbird/llms.txt): [full corpus](netbird/llms-full.txt), [manifest](netbird/manifest.json)
 - [Podman v6.1.0](podman/llms.txt): [full corpus](podman/llms-full.txt), [manifest](podman/manifest.json)
+- [Grafana v13.2.0](grafana/llms.txt): [full corpus](grafana/llms-full.txt), [manifest](grafana/manifest.json)
 - [VictoriaMetrics v1.150.0](victoriametrics/llms.txt): [full corpus](victoriametrics/llms-full.txt), [manifest](victoriametrics/manifest.json)
+- [VictoriaLogs v1.52.0](victorialogs/llms.txt): [full corpus](victorialogs/llms-full.txt), [manifest](victorialogs/manifest.json)
+- [VictoriaMetrics datasource for Grafana v0.25.2](victoriametrics-datasource/llms.txt): [full corpus](victoriametrics-datasource/llms-full.txt), [manifest](victoriametrics-datasource/manifest.json)
+- [VictoriaLogs datasource for Grafana v0.31.0](victorialogs-datasource/llms.txt): [full corpus](victorialogs-datasource/llms-full.txt), [manifest](victorialogs-datasource/manifest.json)
+- [vmestimator v0.1.15](vmestimator/llms.txt): [full corpus](vmestimator/llms-full.txt), [manifest](vmestimator/manifest.json)
+- [ZITADEL v4.17.1](zitadel/llms.txt): [full corpus](zitadel/llms-full.txt), [manifest](zitadel/manifest.json)
 
 ## Update policy
 
