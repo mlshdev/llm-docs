@@ -2,6 +2,7 @@ export const projectIds = [
   "traefik",
   "netbird",
   "podman",
+  "docker",
   "grafana",
   "victoriametrics",
   "victorialogs",
@@ -18,6 +19,7 @@ export interface SourceProject {
   readonly title: string;
   readonly repository: string;
   readonly docsRepository?: string;
+  readonly branch?: string;
   readonly homepage: string;
 }
 
@@ -26,13 +28,27 @@ export interface SourcesConfig {
   readonly projects: readonly SourceProject[];
 }
 
-export interface LockedSource {
+export interface ReleaseLockedSource {
   readonly tag: string;
   readonly releaseId: number;
   readonly releasePublishedAt: string;
   readonly sourceCommit: string;
   readonly docsCommit?: string;
+  readonly branch?: never;
+  readonly sourceCommittedAt?: never;
 }
+
+export interface BranchLockedSource {
+  readonly tag: string;
+  readonly branch: string;
+  readonly sourceCommit: string;
+  readonly sourceCommittedAt: string;
+  readonly docsCommit?: never;
+  readonly releaseId?: never;
+  readonly releasePublishedAt?: never;
+}
+
+export type LockedSource = ReleaseLockedSource | BranchLockedSource;
 
 // A lock may omit a project that was added to the configuration but not yet
 // resolved against its upstream releases, which is the state `update` starts

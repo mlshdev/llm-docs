@@ -1,4 +1,5 @@
 import { buildDatasourcePlugin } from "./datasource-plugin.ts";
+import { buildDocker } from "./docker.ts";
 import { buildGrafana } from "./grafana.ts";
 import { buildNetbird } from "./netbird.ts";
 import { buildPodman } from "./podman.ts";
@@ -18,6 +19,8 @@ export function buildProject(
       return buildNetbird(project, lock);
     case "podman":
       return buildPodman(project, lock);
+    case "docker":
+      return buildDocker(project, lock);
     case "grafana":
       return buildGrafana(project, lock);
     case "victoriametrics":

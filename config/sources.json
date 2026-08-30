@@ -21,6 +21,13 @@
       "homepage": "https://docs.podman.io/"
     },
     {
+      "id": "docker",
+      "title": "Docker",
+      "repository": "docker/docs",
+      "branch": "main",
+      "homepage": "https://docs.docker.com/"
+    },
+    {
       "id": "grafana",
       "title": "Grafana",
       "repository": "grafana/grafana",

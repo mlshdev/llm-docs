@@ -5,6 +5,7 @@ import { exists, listFiles, writeUtf8 } from "./files.ts";
 import { normalizeSpacing } from "./markdown.ts";
 import { projectIds } from "./types.ts";
 import type {
+  BranchLockedSource,
   CompleteSourcesLock,
   Document,
   LockedSource,
@@ -23,8 +24,10 @@ interface ProjectManifest {
   readonly title: string;
   readonly repository: string;
   readonly tag: string;
-  readonly releaseId: number;
-  readonly releasePublishedAt: string;
+  readonly releaseId?: number;
+  readonly releasePublishedAt?: string;
+  readonly branch?: string;
+  readonly sourceCommittedAt?: string;
   readonly sourceCommit: string;
   readonly docsCommit?: string;
   readonly documentCount: number;
@@ -46,7 +49,7 @@ export async function writeProject(build: ProjectBuild): Promise<void> {
     outputPaths.add(document.outputPath);
     await writeUtf8(
       path.join(destination, document.outputPath),
-      renderDocument(build.project, build.lock.tag, document),
+      renderDocument(build.project, build.lock, document),
     );
   }
   await writeUtf8(
@@ -61,14 +64,22 @@ export async function writeProject(build: ProjectBuild): Promise<void> {
     path.join(destination, "LICENSE.upstream"),
     build.licenseText,
   );
+  const sourceDetails = isBranchLockedSource(build.lock)
+    ? {
+        branch: build.lock.branch,
+        sourceCommittedAt: build.lock.sourceCommittedAt,
+      }
+    : {
+        releaseId: build.lock.releaseId,
+        releasePublishedAt: build.lock.releasePublishedAt,
+      };
   const manifest: ProjectManifest = {
     schemaVersion: 1,
     project: build.project.id,
     title: build.project.title,
     repository: build.project.repository,
     tag: build.lock.tag,
-    releaseId: build.lock.releaseId,
-    releasePublishedAt: build.lock.releasePublishedAt,
+    ...sourceDetails,
     sourceCommit: build.lock.sourceCommit,
     ...(build.lock.docsCommit ? { docsCommit: build.lock.docsCommit } : {}),
     documentCount: build.documents.length,
@@ -85,9 +96,9 @@ export async function writeRootIndexes(
   lock: CompleteSourcesLock,
 ): Promise<void> {
   const summary = [
-    "# Release-pinned LLM documentation",
+    "# Source-pinned LLM documentation",
     "",
-    "> LLM-friendly documentation generated from immutable stable release tags. Each project includes provenance, normalized pages, an index, and a full concatenated corpus.",
+    "> LLM-friendly documentation generated from immutable upstream commits. Projects track stable releases unless their source repository is explicitly branch-pinned. Each project includes provenance, normalized pages, an index, and a full concatenated corpus.",
     "",
     "## Projects",
     "",
@@ -100,12 +111,13 @@ export async function writeRootIndexes(
     "",
     "- Drafts and prereleases are ignored.",
     "- Stable releases are discovered by scheduled GitHub API reconciliation.",
+    "- Docker documentation tracks the latest `main` commit because docker/docs does not publish current GitHub releases.",
     "- NetBird updates only after the separate documentation repository contains the API-generation commit for the same product tag.",
   ];
   await writeUtf8(path.join(rootDirectory, "llms.txt"), summary.join("\n"));
 
   const full: string[] = [
-    "# Release-pinned LLM documentation",
+    "# Source-pinned LLM documentation",
     "",
     "This file combines the complete project corpora listed below.",
   ];
@@ -178,7 +190,11 @@ export async function verifyOutputs(
     if (
       manifest.tag !== expected.tag ||
       manifest.sourceCommit !== expected.sourceCommit ||
-      manifest.docsCommit !== expected.docsCommit
+      manifest.docsCommit !== expected.docsCommit ||
+      manifest.releaseId !== expected.releaseId ||
+      manifest.releasePublishedAt !== expected.releasePublishedAt ||
+      manifest.branch !== expected.branch ||
+      manifest.sourceCommittedAt !== expected.sourceCommittedAt
     ) {
       throw new Error(
         `${project.id}/manifest.json does not match sources.lock.json`,
@@ -208,12 +224,12 @@ export async function verifyOutputs(
 
 function renderDocument(
   project: SourceProject,
-  tag: string,
+  source: LockedSource,
   document: Document,
 ): string {
   return normalizeSpacing(
     [
-      `> Release-pinned source for ${project.title} ${tag}: [${document.sourcePath}](${document.canonicalUrl})`,
+      `> ${source.branch ? "Commit-pinned" : "Release-pinned"} source for ${project.title} ${source.tag}: [${document.sourcePath}](${document.canonicalUrl})`,
       "",
       document.body,
     ].join("\n"),
@@ -241,6 +257,7 @@ function validateDocument(
       /<\/?(?:Note|Warning|Success|Property|Properties|CodeGroup|Tiles|Button|YouTube|Badge|Guides|Resources)\b|\{\{\s*(?:title|tag|className|anchor)\s*:/,
     podman:
       /@@(?:option|include)|<<(?:subcommand|fullsubcommand|pod|container| if )/,
+    docker: /\{\{[<%]\s*\/?\s*[a-zA-Z_]|\{\{\s*\$[a-zA-Z_]/,
     grafana: /\{\{[<%]\s*\/?\s*[a-zA-Z_]|\]\(ref:|<GRAFANA[_ ]VERSION>/,
     victoriametrics: hugoShortcode,
     victorialogs: hugoShortcode,
@@ -250,21 +267,40 @@ function validateDocument(
     zitadel:
       /<\/?(?:Admonition|ApiCard|Callout|Cards?|Column|DocCardList|DynamicCodeBlock|FrameworkSelector|GithubCodeBlock|Steps?|Tabs?)\b/,
   };
-  if (unresolved[projectId].test(document.body)) {
+  const source =
+    projectId === "docker" ? withoutFencedCode(document.body) : document.body;
+  if (unresolved[projectId].test(source)) {
     throw new Error(
       `Unresolved ${projectId} source syntax in ${document.sourcePath}`,
     );
   }
 }
 
+function withoutFencedCode(source: string): string {
+  const lines: string[] = [];
+  let fence: "```" | "~~~" | undefined;
+  for (const line of source.split("\n")) {
+    const marker = line.match(/^\s*(?:>\s*)*(```|~~~)/)?.[1] as
+      | "```"
+      | "~~~"
+      | undefined;
+    if (marker) {
+      fence = fence === marker ? undefined : marker;
+    } else if (!fence) {
+      lines.push(line);
+    }
+  }
+  return lines.join("\n");
+}
+
 function renderProjectIndex(build: ProjectBuild): string {
   const lines = [
     `# ${build.project.title} ${build.lock.tag}`,
     "",
-    `> Documentation generated from the latest stable release of [${build.project.repository}](https://github.com/${build.project.repository}) and pinned to immutable source commit \`${build.lock.sourceCommit}\`.`,
+    `> Documentation generated from ${build.lock.branch ? `the latest \`${build.lock.branch}\` branch commit of` : "the latest stable release of"} [${build.project.repository}](https://github.com/${build.project.repository}) and pinned to immutable source commit \`${build.lock.sourceCommit}\`.`,
     "",
     `- [Full documentation](llms-full.txt): Complete normalized corpus for ${build.project.title} ${build.lock.tag}.`,
-    "- [Provenance manifest](manifest.json): Release, commit, document count, and generation notes.",
+    "- [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.",
   ];
   for (const note of build.notes) {
     lines.push(`- ${note}`);
@@ -286,7 +322,9 @@ function renderProjectFull(build: ProjectBuild): string {
     `# ${build.project.title} ${build.lock.tag}: full documentation`,
     "",
     `Source repository: https://github.com/${build.project.repository}`,
-    `Release tag: ${build.lock.tag}`,
+    build.lock.branch
+      ? `Tracked branch: ${build.lock.branch}`
+      : `Release tag: ${build.lock.tag}`,
     `Source commit: ${build.lock.sourceCommit}`,
     ...(build.lock.docsCommit
       ? [`Documentation commit: ${build.lock.docsCommit}`]
@@ -384,6 +422,12 @@ function escapeHtml(value: string): string {
     };
     return replacements[character] ?? character;
   });
+}
+
+function isBranchLockedSource(
+  source: LockedSource,
+): source is BranchLockedSource {
+  return source.branch !== undefined;
 }
 
 async function assertNoSymlinks(directory: string): Promise<void> {

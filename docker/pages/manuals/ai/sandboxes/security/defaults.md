@@ -1,0 +1,74 @@
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/security/defaults.md](https://github.com/docker/docs/blob/dbad77a00e8352f30e663bec3eeae9fb31a19b4e/content/manuals/ai/sandboxes/security/defaults.md)
+
+# Default security posture
+
+A sandbox created with `sbx run` and no additional flags has the following
+security posture.
+
+## Network defaults
+
+All outbound TCP traffic, including HTTP, HTTPS, and SSH, is blocked unless an
+explicit rule allows the destination. Direct external UDP and ICMP traffic is
+blocked at the network layer. DNS queries use the sandbox's internal resolver,
+which enforces network policy.
+
+Run `sbx policy ls` to see the active network rules for your installation.
+Rules can be customized per machine with the `sbx policy` CLI, or managed
+centrally across your organization. Org-level rules take precedence over local
+rules. See
+[Network access policies](https://docs.docker.com/ai/sandboxes/governance/access-controls/network/).
+
+## Workspace defaults
+
+Sandboxes use a direct mount by default. The agent sees and modifies your
+working tree directly, and changes appear on your host immediately.
+
+The agent can read, write, and delete any file within the workspace directory,
+including hidden files, configuration files, build scripts, and Git hooks.
+See [Workspace isolation](https://docs.docker.com/ai/sandboxes/security/isolation/#workspace-isolation) for what to
+review after an agent session.
+
+## Shared skills defaults
+
+Sandboxes for supported agents mount a persistent shared skills store
+read-write by default. Every sandbox that uses the store can change skills that
+other participating sandboxes may load. Use `--no-share-skills` when creating a
+sandbox to keep it outside this shared trust boundary. See
+[Share agent skills](https://docs.docker.com/ai/sandboxes/workflows/agent-skills/).
+
+## Credential defaults
+
+No credentials are available to the sandbox unless you provide them using
+`sbx secret` or environment variables. When credentials are provided, the
+host-side proxy injects them into outbound HTTP headers. The agent cannot
+read the raw credential values.
+
+See [Credentials](https://docs.docker.com/ai/sandboxes/configuration/credentials/) for setup instructions.
+
+## Agent capabilities inside the sandbox
+
+The agent runs with full control inside the sandbox VM:
+
+- `sudo` access (the agent runs as a non-root user with sudo privileges)
+- A private Docker Engine for building images and running containers
+- Package installation through `apt`, `pip`, `npm`, and other package managers
+- Full read and write access to the VM filesystem
+
+Everything the agent installs or creates inside the VM, including packages,
+Docker images, and configuration changes, persists across stop and restart
+cycles. When you remove the sandbox with `sbx rm`, the VM and its contents
+are deleted. Workspace files and the shared skills store remain on the host.
+
+## What is blocked by default
+
+The following are blocked for all sandboxes and cannot be changed through
+policy configuration:
+
+- Host filesystem access outside explicitly mounted workspaces and the shared
+  skills store
+- Host Docker daemon
+- Direct network communication between sandboxes
+- Direct external UDP and ICMP connections
+
+Outbound TCP to destinations not in the allow list is also blocked by default,
+but you can add allow rules with `sbx policy allow`.

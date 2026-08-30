@@ -8,6 +8,13 @@ const pin = {
   sourceCommit: "413f95d65f08d2c3fb03e227b1f3ba42884ca796",
 };
 
+const branchPin = {
+  tag: "main",
+  branch: "main",
+  sourceCommit: "dbad77a00e8352f30e663bec3eeae9fb31a19b4e",
+  sourceCommittedAt: "2026-08-28T14:48:42Z",
+};
+
 const lock = (projects: Record<string, unknown>) => ({
   schemaVersion: 1,
   projects,
@@ -32,6 +39,10 @@ describe("sources lock validation", () => {
     ).toBe(true);
   });
 
+  test("accepts a branch-pinned source", () => {
+    expect(isSourcesLock(lock({ docker: branchPin }))).toBe(true);
+  });
+
   test("rejects an unknown project id", () => {
     expect(isSourcesLock(lock({ prometheus: pin }))).toBe(false);
   });
@@ -45,6 +56,9 @@ describe("sources lock validation", () => {
     ).toBe(false);
     expect(
       isSourcesLock(lock({ traefik: { ...pin, docsCommit: "nope" } })),
+    ).toBe(false);
+    expect(
+      isSourcesLock(lock({ docker: { ...branchPin, releaseId: 1 } })),
     ).toBe(false);
   });
 

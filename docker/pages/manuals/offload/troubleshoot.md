@@ -1,0 +1,55 @@
+> Commit-pinned source for Docker main: [content/manuals/offload/troubleshoot.md](https://github.com/docker/docs/blob/dbad77a00e8352f30e663bec3eeae9fb31a19b4e/content/manuals/offload/troubleshoot.md)
+
+# Troubleshoot Docker Offload
+
+**Docker Offload requirements**
+
+- Subscription: Docker Offload
+- Requires: Docker Desktop 4.68 or later
+
+Docker Offload requires:
+
+- Authentication
+- An active internet connection
+- No restrictive proxy or firewall blocking traffic to Docker Cloud
+- Access to Docker Offload
+- Docker Desktop 4.68 or later
+
+Docker Desktop uses Offload to run both builds and containers in the cloud.
+If builds or containers are failing to run, falling back to local, or reporting
+session errors, use the following steps to help resolve the issue.
+
+1. Ensure Docker Offload is enabled in Docker Desktop:
+
+   1. Open Docker Desktop and sign in.
+   2. Go to **Settings** > **Docker Offload**.
+   3. Ensure that **Enable Docker Offload** is toggled on.
+
+2. Use the following command to check if the connection is active:
+
+   ```console
+   $ docker offload status
+   ```
+
+3. To get more information, run the following command:
+
+   ```console
+   $ docker offload diagnose
+   ```
+
+4. If you're not connected, start a new session:
+
+   ```console
+   $ docker offload start
+   ```
+
+5. Verify authentication with `docker login`.
+
+6. If needed, you can sign out and then sign in again:
+
+   ```console
+   $ docker logout
+   $ docker login
+   ```
+
+7. Verify your usage. For more information, see [Docker Offload usage](https://docs.docker.com/offload/usage/).

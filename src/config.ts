@@ -54,6 +54,8 @@ function isSourcesConfig(value: unknown): value is SourcesConfig {
       typeof project.homepage !== "string" ||
       (project.docsRepository !== undefined &&
         typeof project.docsRepository !== "string") ||
+      (project.branch !== undefined &&
+        (typeof project.branch !== "string" || project.branch.trim() === "")) ||
       ids.has(project.id)
     ) {
       return false;
@@ -77,12 +79,27 @@ export function isSourcesLock(value: unknown): value is SourcesLock {
 }
 
 function isLockedSource(value: unknown): value is LockedSource {
+  if (
+    !isRecord(value) ||
+    typeof value.tag !== "string" ||
+    !isCommitSha(value.sourceCommit)
+  ) {
+    return false;
+  }
+  if (value.branch !== undefined) {
+    return (
+      typeof value.branch === "string" &&
+      value.branch === value.tag &&
+      typeof value.sourceCommittedAt === "string" &&
+      value.releaseId === undefined &&
+      value.releasePublishedAt === undefined &&
+      value.docsCommit === undefined
+    );
+  }
   return (
-    isRecord(value) &&
-    typeof value.tag === "string" &&
     typeof value.releaseId === "number" &&
     typeof value.releasePublishedAt === "string" &&
-    isCommitSha(value.sourceCommit) &&
+    value.sourceCommittedAt === undefined &&
     (value.docsCommit === undefined || isCommitSha(value.docsCommit))
   );
 }
