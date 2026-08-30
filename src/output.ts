@@ -3,8 +3,6 @@ import path from "node:path";
 import { rootDirectory } from "./config.ts";
 import { exists, listFiles, writeUtf8 } from "./files.ts";
 import { normalizeSpacing } from "./markdown.ts";
-import { mergeRedactions, redactCredentials } from "./redact.ts";
-import type { Redaction, RedactionResult } from "./redact.ts";
 import { projectIds } from "./types.ts";
 import type {
   CompleteSourcesLock,
@@ -31,72 +29,55 @@ interface ProjectManifest {
   readonly docsCommit?: string;
   readonly documentCount: number;
   readonly notes: readonly string[];
-  readonly redactions?: readonly Redaction[];
 }
 
-export async function writeProject(
-  build: ProjectBuild,
-): Promise<readonly Redaction[]> {
-  const results: RedactionResult[] = [];
-  const redacted: ProjectBuild = {
-    ...build,
-    documents: build.documents.map((document) => {
-      const result = redactCredentials(document.body);
-      results.push(result);
-      return { ...document, body: result.text };
-    }),
-  };
-  const redactions = mergeRedactions(results);
-  const destination = path.join(rootDirectory, redacted.project.id);
+export async function writeProject(build: ProjectBuild): Promise<void> {
+  const destination = path.join(rootDirectory, build.project.id);
   await rm(destination, { recursive: true, force: true });
   await mkdir(destination, { recursive: true });
   const outputPaths = new Set<string>();
-  for (const document of redacted.documents) {
-    validateDocument(redacted.project.id, document);
+  for (const document of build.documents) {
+    validateDocument(build.project.id, document);
     if (outputPaths.has(document.outputPath)) {
       throw new Error(
-        `Duplicate generated path for ${redacted.project.id}: ${document.outputPath}`,
+        `Duplicate generated path for ${build.project.id}: ${document.outputPath}`,
       );
     }
     outputPaths.add(document.outputPath);
     await writeUtf8(
       path.join(destination, document.outputPath),
-      renderDocument(redacted.project, redacted.lock.tag, document),
+      renderDocument(build.project, build.lock.tag, document),
     );
   }
   await writeUtf8(
     path.join(destination, "llms.txt"),
-    renderProjectIndex(redacted),
+    renderProjectIndex(build),
   );
   await writeUtf8(
     path.join(destination, "llms-full.txt"),
-    renderProjectFull(redacted),
+    renderProjectFull(build),
   );
   await writeUtf8(
     path.join(destination, "LICENSE.upstream"),
-    redacted.licenseText,
+    build.licenseText,
   );
   const manifest: ProjectManifest = {
     schemaVersion: 1,
-    project: redacted.project.id,
-    title: redacted.project.title,
-    repository: redacted.project.repository,
-    tag: redacted.lock.tag,
-    releaseId: redacted.lock.releaseId,
-    releasePublishedAt: redacted.lock.releasePublishedAt,
-    sourceCommit: redacted.lock.sourceCommit,
-    ...(redacted.lock.docsCommit
-      ? { docsCommit: redacted.lock.docsCommit }
-      : {}),
-    documentCount: redacted.documents.length,
-    notes: redacted.notes,
-    ...(redactions.length > 0 ? { redactions } : {}),
+    project: build.project.id,
+    title: build.project.title,
+    repository: build.project.repository,
+    tag: build.lock.tag,
+    releaseId: build.lock.releaseId,
+    releasePublishedAt: build.lock.releasePublishedAt,
+    sourceCommit: build.lock.sourceCommit,
+    ...(build.lock.docsCommit ? { docsCommit: build.lock.docsCommit } : {}),
+    documentCount: build.documents.length,
+    notes: build.notes,
   };
   await writeUtf8(
     path.join(destination, "manifest.json"),
     JSON.stringify(manifest, null, 2),
   );
-  return redactions;
 }
 
 export async function writeRootIndexes(

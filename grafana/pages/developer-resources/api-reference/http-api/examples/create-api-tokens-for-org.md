@@ -56,7 +56,7 @@ The task is to create a new organization and then add a Token that can be used b
    {
      "id": 7,
      "name": "test-token",
-     "key": "REDACTED_GRAFANA_API_KEY"
+     "key": "eyJrIjoiVjFxTHZ6dGdPSjg5Um92MjN1RlhjMkNqYkZUbm9jYkwiLCJuIjoiZ3JhZmFuYSIsImlkIjoxfQ=="
    }
    ```
 
@@ -69,7 +69,7 @@ Using the Token that was created in the previous step, you can create a dashboar
 1. [Add a dashboard](https://grafana.com/docs/grafana/v13.2/http_api/dashboard/#create-update-dashboard) using the key (or bearer token as it is also called):
 
 ```bash
-curl -X POST --insecure -H "Authorization: Bearer REDACTED_GRAFANA_API_KEY" -H "Content-Type: application/json" -d '{
+curl -X POST --insecure -H "Authorization: Bearer eyJrIjoiR0ZXZmt1UFc0OEpIOGN5RWdUalBJTllUTk83VlhtVGwiLCJuIjoiYXBpa2V5Y3VybCIsImlkIjo2fQ==" -H "Content-Type: application/json" -d '{
   "dashboard": {
     "id": null,
     "title": "Production Overview",

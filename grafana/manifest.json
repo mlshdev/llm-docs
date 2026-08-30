@@ -13,19 +13,5 @@
     "Shared fragments referenced by `docs/shared` and `shared-snippet` are inlined into the pages that render them and are not published separately.",
     "Hugo shortcodes are expanded to plain Markdown; version placeholders are replaced with the pinned release version.",
     "Content that only exists as a website widget is omitted: `docs/ignore` blocks, the `docs/whats-new` release feed, and shared fragments owned by other Grafana products."
-  ],
-  "redactions": [
-    {
-      "name": "Grafana API key",
-      "count": 24
-    },
-    {
-      "name": "Grafana Cloud access policy token",
-      "count": 1
-    },
-    {
-      "name": "Grafana service account token",
-      "count": 15
-    }
   ]
 }

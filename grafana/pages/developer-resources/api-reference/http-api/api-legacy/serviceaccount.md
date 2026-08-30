@@ -329,7 +329,7 @@ Content-Type: application/json
 {
 	"id": 7,
 	"name": "grafana",
-	"key": "REDACTED_GRAFANA_API_KEY"
+	"key": "eyJrIjoiVjFxTHZ6dGdPSjg5Um92MjN1RlhjMkNqYkZUbm9jYkwiLCJuIjoiZ3JhZmFuYSIsImlkIjoxfQ=="
 }
 ```
 

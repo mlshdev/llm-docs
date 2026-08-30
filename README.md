@@ -22,7 +22,6 @@ This repository converts documentation from stable upstream releases into determ
 - Release source is downloaded from immutable tags and recorded with the resolved commit SHA in `sources.lock.json`.
 - NetBird public documentation is maintained in the separate, untagged `netbirdio/docs` repository. A NetBird update is accepted only after that repository contains the exact `Update API pages with <tag>` commit. Until then, the previous complete product/docs pair remains published.
 - Generated files are committed so GitHub, raw-content clients, and local tools all expose the same corpus. The same files are published through GitHub Pages.
-- Example credentials that upstream documentation writes in the real token format are replaced with a named placeholder, because secret scanning rejects the push otherwise. Affected projects record the substitutions in `manifest.json`.
 
 ## Output layout
 

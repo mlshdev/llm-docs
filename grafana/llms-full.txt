@@ -41230,7 +41230,7 @@ The following request creates a custom role that includes permissions to access 
 
 ```
 curl --location --request POST '<grafana_url>/api/access-control/roles/' \
---header 'Authorization: Bearer REDACTED_GRAFANA_SERVICE_ACCOUNT_TOKEN' \
+--header 'Authorization: Bearer glsa_iNValIdinValiDinvalidinvalidinva_5b582697' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "version": 1,
@@ -41276,13 +41276,13 @@ By default, only a Grafana Server Admin can create and manage custom roles. If y
 
   ```bash
   # Fetch the role, modify it to add the desired permissions and increment its version
-  curl -H 'Authorization: Bearer REDACTED_GRAFANA_SERVICE_ACCOUNT_TOKEN' \
+  curl -H 'Authorization: Bearer glsa_iNValIdinValiDinvalidinvalidinva_5b582697' \
     -X GET '<grafana_url>/api/access-control/roles/basic_editor' | \
     jq 'del(.created)| del(.updated) | del(.permissions[].created) | del(.permissions[].updated) | .version += 1' | \
     jq '.permissions += [{"action": "roles:read", "scope": "roles:*"}, {"action": "roles:write", "scope": "permissions:type:delegate"}, {"action": "roles:delete", "scope": "permissions:type:delegate"}]' > /tmp/basic_editor.json
 
   # Update the role
-  curl -H 'Authorization: Bearer REDACTED_GRAFANA_SERVICE_ACCOUNT_TOKEN' -H 'Content-Type: application/json' \
+  curl -H 'Authorization: Bearer glsa_iNValIdinValiDinvalidinvalidinva_5b582697' -H 'Content-Type: application/json' \
     -X PUT-d @/tmp/basic_editor.json '<grafana_url>/api/access-control/roles/basic_editor'
   ```
 
@@ -41321,13 +41321,13 @@ If you want your `Viewers` to create reports, [update the `Viewer` basic role pe
 
   ```bash
   # Fetch the role, modify it to add the desired permissions and increment its version
-  curl -H 'Authorization: Bearer REDACTED_GRAFANA_SERVICE_ACCOUNT_TOKEN' \
+  curl -H 'Authorization: Bearer glsa_iNValIdinValiDinvalidinvalidinva_5b582697' \
     -X GET '<grafana_url>/api/access-control/roles/basic_viewer' | \
     jq 'del(.created)| del(.updated) | del(.permissions[].created) | del(.permissions[].updated) | .version += 1' | \
     jq '.permissions += [{"action": "reports:create"}, {"action": "reports:read", "scope": "reports:*"}, {"action": "reports:write", "scope": "reports:*"}, {"action": "reports:send", "scope": "reports:*"}]' > /tmp/basic_viewer.json
 
   # Update the role
-  curl -H 'Authorization: Bearer REDACTED_GRAFANA_SERVICE_ACCOUNT_TOKEN' -H 'Content-Type: application/json' \
+  curl -H 'Authorization: Bearer glsa_iNValIdinValiDinvalidinvalidinva_5b582697' -H 'Content-Type: application/json' \
     -X PUT-d @/tmp/basic_viewer.json '<grafana_url>/api/access-control/roles/basic_viewer'
   ```
 
@@ -41367,13 +41367,13 @@ There are two ways to achieve this:
 
   ```bash
   # Fetch the role, modify it to remove the undesired permissions and increment its version
-  curl -H 'Authorization: Bearer REDACTED_GRAFANA_SERVICE_ACCOUNT_TOKEN' \
+  curl -H 'Authorization: Bearer glsa_iNValIdinValiDinvalidinvalidinva_5b582697' \
     -X GET '<grafana_url>/api/access-control/roles/basic_grafana_admin' | \
     jq 'del(.created)| del(.updated) | del(.permissions[].created) | del(.permissions[].updated) | .version += 1' | \
     jq 'del(.permissions[] | select (.action == "users:create")) | del(.permissions[] | select (.action == "org.users:add" and .scope == "users:*"))' > /tmp/basic_grafana_admin.json
 
   # Update the role
-  curl -H 'Authorization: Bearer REDACTED_GRAFANA_SERVICE_ACCOUNT_TOKEN' -H 'Content-Type: application/json' \
+  curl -H 'Authorization: Bearer glsa_iNValIdinValiDinvalidinvalidinva_5b582697' -H 'Content-Type: application/json' \
     -X PUT-d @/tmp/basic_grafana_admin.json '<grafana_url>/api/access-control/roles/basic_grafana_admin'
   ```
 
@@ -41430,14 +41430,14 @@ Here are two ways to achieve this:
 
   ```bash
   # Fetch the role, modify it to remove the undesired permissions, add the new permission and increment its version
-  curl -H 'Authorization: Bearer REDACTED_GRAFANA_SERVICE_ACCOUNT_TOKEN' \
+  curl -H 'Authorization: Bearer glsa_iNValIdinValiDinvalidinvalidinva_5b582697' \
     -X GET '<grafana_url>/api/access-control/roles/basic_viewer' | \
     jq 'del(.created)| del(.updated) | del(.permissions[].created) | del(.permissions[].updated) | .version += 1' | \
     jq 'del(.permissions[] | select (.action == "plugins.app:access" and .scope == "plugins:*"))' | \
     jq '.permissions += [{"action": "plugins.app:access", "scope": "plugins:id:kentik-connect-app"}]' > /tmp/basic_viewer.json
 
   # Update the role
-  curl -H 'Authorization: Bearer REDACTED_GRAFANA_SERVICE_ACCOUNT_TOKEN' -H 'Content-Type: application/json' \
+  curl -H 'Authorization: Bearer glsa_iNValIdinValiDinvalidinvalidinva_5b582697' -H 'Content-Type: application/json' \
     -X PUT -d @/tmp/basic_viewer.json '<grafana_url>/api/access-control/roles/basic_viewer'
   ```
 
@@ -41469,13 +41469,13 @@ Here are two ways to achieve this:
 
   ```bash
   # Fetch the role, modify it to remove permissions to kentik-connect-app and increment role version
-  curl -H 'Authorization: Bearer REDACTED_GRAFANA_SERVICE_ACCOUNT_TOKEN' \
+  curl -H 'Authorization: Bearer glsa_iNValIdinValiDinvalidinvalidinva_5b582697' \
     -X GET '<grafana_url>/api/access-control/roles/basic_viewer' | \
     jq 'del(.created)| del(.updated) | del(.permissions[].created) | del(.permissions[].updated) | .version += 1' | \
     jq 'del(.permissions[] | select (.action == "plugins.app:access" and .scope == "plugins:id:kentik-connect-app"))'
 
   # Update the role
-  curl -H 'Authorization: Bearer REDACTED_GRAFANA_SERVICE_ACCOUNT_TOKEN' -H 'Content-Type: application/json' \
+  curl -H 'Authorization: Bearer glsa_iNValIdinValiDinvalidinvalidinva_5b582697' -H 'Content-Type: application/json' \
     -X PUT -d @/tmp/basic_viewer.json '<grafana_url>/api/access-control/roles/basic_viewer'
   ```
 
@@ -45440,7 +45440,7 @@ To list your token's permissions, use the `/api/access-control/user/permissions`
 Run the following command with the token whose permissions you want to check:
 
 ```bash
-curl -H "Authorization: Bearer REDACTED_GRAFANA_SERVICE_ACCOUNT_TOKEN" -X GET '<grafana_url>/api/access-control/user/permissions' | jq
+curl -H "Authorization: Bearer glsa_iNValIdinValiDinvalidinvalidinva_5b582697" -X GET '<grafana_url>/api/access-control/user/permissions' | jq
 ```
 
 The output lists the token's permissions:
@@ -45467,7 +45467,7 @@ The output lists the token's permissions:
 To list which dashboards a token can view, filter the `/api/access-control/user/permissions` endpoint's response for the `dashboards:read` permission key:
 
 ```bash
-curl -H "Authorization: Bearer REDACTED_GRAFANA_SERVICE_ACCOUNT_TOKEN" -X GET '<grafana_url>/api/access-control/user/permissions' | jq '."dashboards:read"'
+curl -H "Authorization: Bearer glsa_iNValIdinValiDinvalidinvalidinva_5b582697" -X GET '<grafana_url>/api/access-control/user/permissions' | jq '."dashboards:read"'
 ```
 
 The output lists the dashboards a token can view and the folders a token can view dashboards from,
@@ -45572,7 +45572,7 @@ Your current setup
 curl -X POST -H "Content-Type: application/json" -d '{"name": "my-api-key", "role": "Viewer"}' http://admin:admin@localhost:3000/api/auth/keys
 
 # response from the api
-{"id":2,"name":"my-api-key","key":"REDACTED_GRAFANA_API_KEY"}%
+{"id":2,"name":"my-api-key","key":"eyJrIjoiTFRSN1RBOVc3SGhjblc0bWZodXZ3MnNDcU92Um5VZUIiLKJuIjoibXktYXBpLWtleSIsImlkIjoxfQ=="}%
 ```
 
 New setup
@@ -45588,10 +45588,10 @@ curl -X POST -H "Content-Type: application/json" -d '{"name": "my-service-accoun
 curl -X POST -H "Content-Type: application/json" -d '{"name": "my-service-account-token"}' http://admin:admin@localhost:3000/api/serviceaccounts/1/tokens
 
 # response with the created SAT id,name and key.
-{"id":2,"name":"my-service-account-token","key":"REDACTED_GRAFANA_SERVICE_ACCOUNT_TOKEN"}%
+{"id":2,"name":"my-service-account-token","key":"glsa_iNValIdinValiDinvalidinvalidinva_5b582697"}%
 
 # now you can authenticate the same way as you did with the API key
-curl --request GET --url http://localhost:3000/api/folders --header 'Authorization: Bearer REDACTED_GRAFANA_SERVICE_ACCOUNT_TOKEN'
+curl --request GET --url http://localhost:3000/api/folders --header 'Authorization: Bearer glsa_iNValIdinValiDinvalidinvalidinva_5b582697'
 
 # response
 [{"id":1,"uid":"a5261a84-eebc-4733-83a9-61f4713561d1","title":"gdev dashboards"}]%
@@ -85795,7 +85795,7 @@ The following endpoints can be used to manage both alert rules and recording rul
 POST /api/v1/provisioning/alert-rules
 Accept: application/json
 Content-Type: application/json
-Authorization: Bearer REDACTED_GRAFANA_API_KEY
+Authorization: Bearer eyJrIjoiT0tTcG1pUlY2RnVKZTFVaDFsNFZXdE9ZWmNrMkZYbk
 
 {
   "title": "TEST-API_1",
@@ -85978,7 +85978,7 @@ Recording rules allow you to pre-compute frequently used or computationally expe
 POST /api/v1/provisioning/alert-rules
 Accept: application/json
 Content-Type: application/json
-Authorization: Bearer REDACTED_GRAFANA_API_KEY
+Authorization: Bearer eyJrIjoiT0tTcG1pUlY2RnVKZTFVaDFsNFZXdE9ZWmNrMkZYbk
 
 {
   "title": "my_recording_rule",
@@ -86084,7 +86084,7 @@ Content-Type: application/json
 GET /api/v1/provisioning/contact-points
 Accept: application/json
 Content-Type: application/json
-Authorization: Bearer REDACTED_GRAFANA_API_KEY
+Authorization: Bearer eyJrIjoiT0tTcG1pUlY2RnVKZTFVaDFsNFZXdE9ZWmNrMkZYbk
 ```
 
 **Example Response:**
@@ -86122,7 +86122,7 @@ The receiver permissions endpoints manage access control for contact point recei
 POST /api/access-control/receivers/abc123/users/5
 Accept: application/json
 Content-Type: application/json
-Authorization: Bearer REDACTED_GRAFANA_API_KEY
+Authorization: Bearer eyJrIjoiT0tTcG1pUlY2RnVKZTFVaDFsNFZXdE9ZWmNrMkZYbk
 
 {
   "permission": "Edit"
@@ -86146,7 +86146,7 @@ Content-Type: application/json
 POST /api/access-control/receivers/abc123/teams/3
 Accept: application/json
 Content-Type: application/json
-Authorization: Bearer REDACTED_GRAFANA_API_KEY
+Authorization: Bearer eyJrIjoiT0tTcG1pUlY2RnVKZTFVaDFsNFZXdE9ZWmNrMkZYbk
 
 {
   "permission": ""
@@ -86170,7 +86170,7 @@ Content-Type: application/json
 POST /api/access-control/receivers/abc123/builtInRoles/Viewer
 Accept: application/json
 Content-Type: application/json
-Authorization: Bearer REDACTED_GRAFANA_API_KEY
+Authorization: Bearer eyJrIjoiT0tTcG1pUlY2RnVKZTFVaDFsNFZXdE9ZWmNrMkZYbk
 
 {
   "permission": "View"
@@ -86220,7 +86220,7 @@ Content-Type: application/json
 GET /api/v1/provisioning/policies/export?format=yaml
 Accept: application/json
 Content-Type: application/json
-Authorization: Bearer REDACTED_GRAFANA_API_KEY
+Authorization: Bearer eyJrIjoiT0tTcG1pUlY2RnVKZTFVaDFsNFZXdE9ZWmNrMkZYbk
 ```
 
 **Example Response:**
@@ -86263,7 +86263,7 @@ Template groups enable you to define multiple notification templates (`{{ define
 GET /api/v1/provisioning/templates
 Accept: application/json
 Content-Type: application/json
-Authorization: Bearer REDACTED_GRAFANA_API_KEY
+Authorization: Bearer eyJrIjoiT0tTcG1pUlY2RnVKZTFVaDFsNFZXdE9ZWmNrMkZYbk
 ```
 
 **Example Response:**
@@ -86304,7 +86304,7 @@ Content-Type: application/json
 GET /api/v1/provisioning/mute-timings
 Accept: application/json
 Content-Type: application/json
-Authorization: Bearer REDACTED_GRAFANA_API_KEY
+Authorization: Bearer eyJrIjoiT0tTcG1pUlY2RnVKZTFVaDFsNFZXdE9ZWmNrMkZYbk
 ```
 
 **Example Response:**
@@ -125331,7 +125331,7 @@ The following endpoints can be used to manage both alert rules and recording rul
 POST /api/v1/provisioning/alert-rules
 Accept: application/json
 Content-Type: application/json
-Authorization: Bearer REDACTED_GRAFANA_API_KEY
+Authorization: Bearer eyJrIjoiT0tTcG1pUlY2RnVKZTFVaDFsNFZXdE9ZWmNrMkZYbk
 
 {
   "title": "TEST-API_1",
@@ -125514,7 +125514,7 @@ Recording rules allow you to pre-compute frequently used or computationally expe
 POST /api/v1/provisioning/alert-rules
 Accept: application/json
 Content-Type: application/json
-Authorization: Bearer REDACTED_GRAFANA_API_KEY
+Authorization: Bearer eyJrIjoiT0tTcG1pUlY2RnVKZTFVaDFsNFZXdE9ZWmNrMkZYbk
 
 {
   "title": "my_recording_rule",
@@ -125620,7 +125620,7 @@ Content-Type: application/json
 GET /api/v1/provisioning/contact-points
 Accept: application/json
 Content-Type: application/json
-Authorization: Bearer REDACTED_GRAFANA_API_KEY
+Authorization: Bearer eyJrIjoiT0tTcG1pUlY2RnVKZTFVaDFsNFZXdE9ZWmNrMkZYbk
 ```
 
 **Example Response:**
@@ -125658,7 +125658,7 @@ The receiver permissions endpoints manage access control for contact point recei
 POST /api/access-control/receivers/abc123/users/5
 Accept: application/json
 Content-Type: application/json
-Authorization: Bearer REDACTED_GRAFANA_API_KEY
+Authorization: Bearer eyJrIjoiT0tTcG1pUlY2RnVKZTFVaDFsNFZXdE9ZWmNrMkZYbk
 
 {
   "permission": "Edit"
@@ -125682,7 +125682,7 @@ Content-Type: application/json
 POST /api/access-control/receivers/abc123/teams/3
 Accept: application/json
 Content-Type: application/json
-Authorization: Bearer REDACTED_GRAFANA_API_KEY
+Authorization: Bearer eyJrIjoiT0tTcG1pUlY2RnVKZTFVaDFsNFZXdE9ZWmNrMkZYbk
 
 {
   "permission": ""
@@ -125706,7 +125706,7 @@ Content-Type: application/json
 POST /api/access-control/receivers/abc123/builtInRoles/Viewer
 Accept: application/json
 Content-Type: application/json
-Authorization: Bearer REDACTED_GRAFANA_API_KEY
+Authorization: Bearer eyJrIjoiT0tTcG1pUlY2RnVKZTFVaDFsNFZXdE9ZWmNrMkZYbk
 
 {
   "permission": "View"
@@ -125756,7 +125756,7 @@ Content-Type: application/json
 GET /api/v1/provisioning/policies/export?format=yaml
 Accept: application/json
 Content-Type: application/json
-Authorization: Bearer REDACTED_GRAFANA_API_KEY
+Authorization: Bearer eyJrIjoiT0tTcG1pUlY2RnVKZTFVaDFsNFZXdE9ZWmNrMkZYbk
 ```
 
 **Example Response:**
@@ -125799,7 +125799,7 @@ Template groups enable you to define multiple notification templates (`{{ define
 GET /api/v1/provisioning/templates
 Accept: application/json
 Content-Type: application/json
-Authorization: Bearer REDACTED_GRAFANA_API_KEY
+Authorization: Bearer eyJrIjoiT0tTcG1pUlY2RnVKZTFVaDFsNFZXdE9ZWmNrMkZYbk
 ```
 
 **Example Response:**
@@ -125840,7 +125840,7 @@ Content-Type: application/json
 GET /api/v1/provisioning/mute-timings
 Accept: application/json
 Content-Type: application/json
-Authorization: Bearer REDACTED_GRAFANA_API_KEY
+Authorization: Bearer eyJrIjoiT0tTcG1pUlY2RnVKZTFVaDFsNFZXdE9ZWmNrMkZYbk
 ```
 
 **Example Response:**
@@ -135315,7 +135315,7 @@ Content-Type: application/json
 {
 	"id": 7,
 	"name": "grafana",
-	"key": "REDACTED_GRAFANA_API_KEY"
+	"key": "eyJrIjoiVjFxTHZ6dGdPSjg5Um92MjN1RlhjMkNqYkZUbm9jYkwiLCJuIjoiZ3JhZmFuYSIsImlkIjoxfQ=="
 }
 ```
 
@@ -137436,7 +137436,7 @@ The task is to create a new organization and then add a Token that can be used b
    {
      "id": 7,
      "name": "test-token",
-     "key": "REDACTED_GRAFANA_API_KEY"
+     "key": "eyJrIjoiVjFxTHZ6dGdPSjg5Um92MjN1RlhjMkNqYkZUbm9jYkwiLCJuIjoiZ3JhZmFuYSIsImlkIjoxfQ=="
    }
    ```
 
@@ -137449,7 +137449,7 @@ Using the Token that was created in the previous step, you can create a dashboar
 1. [Add a dashboard](https://grafana.com/docs/grafana/v13.2/http_api/dashboard/#create-update-dashboard) using the key (or bearer token as it is also called):
 
 ```bash
-curl -X POST --insecure -H "Authorization: Bearer REDACTED_GRAFANA_API_KEY" -H "Content-Type: application/json" -d '{
+curl -X POST --insecure -H "Authorization: Bearer eyJrIjoiR0ZXZmt1UFc0OEpIOGN5RWdUalBJTllUTk83VlhtVGwiLCJuIjoiYXBpa2V5Y3VybCIsImlkIjo2fQ==" -H "Content-Type: application/json" -d '{
   "dashboard": {
     "id": null,
     "title": "Production Overview",
@@ -137995,7 +137995,7 @@ Example response:
   "lastUsedAt": "2022-06-08T22:05:46.959Z",
   "createdAt": "2022-06-08T22:05:46.959Z",
   "updatedAt": "2022-06-08T22:05:46.959Z",
-  "token": "REDACTED_GRAFANA_CLOUD_TOKEN"
+  "token": "glc_eyJrIjoiZjI0YzZkNGEwZDBmZmZjMmUzNTU2ODcxMmY0ZWZlNTQ1NTljMDFjOCIsIm4iOiJteXRva2VuIiwiaWQiOjF9"
 }
 ```
 
@@ -138897,7 +138897,7 @@ Example response:
 {
   "id": 1,
   "name": "testkey",
-  "key": "REDACTED_GRAFANA_API_KEY"
+  "key": "eyJrIjoiMWpSRVhRUVJHZlc3NW1laklzV3htQUt0cUxtS3RuWFUiLCJuIjoidGVzdGtleSIsImlkIjoxf"
 }
 ```
 
@@ -139412,7 +139412,7 @@ Example response:
   "createdAt": "2023-01-04T07:50:54.000Z",
   "updatedAt": null,
   "firstUsed": null,
-  "token": "REDACTED_GRAFANA_API_KEY",
+  "token": "eyJrIjoiZmU5ZDlmY2JkODkzNTg4ZGUyYTJhNmJiZGJiMWYwNjQyMGM0MzBkNiIsIm4iOiJjcmVhdGVhcGlrZXkiLCJpZCI6NjUyOTkyf",
   "links": [
     {
       "rel": "self",

@@ -490,7 +490,7 @@ Example response:
   "lastUsedAt": "2022-06-08T22:05:46.959Z",
   "createdAt": "2022-06-08T22:05:46.959Z",
   "updatedAt": "2022-06-08T22:05:46.959Z",
-  "token": "REDACTED_GRAFANA_CLOUD_TOKEN"
+  "token": "glc_eyJrIjoiZjI0YzZkNGEwZDBmZmZjMmUzNTU2ODcxMmY0ZWZlNTQ1NTljMDFjOCIsIm4iOiJteXRva2VuIiwiaWQiOjF9"
 }
 ```
 
@@ -1392,7 +1392,7 @@ Example response:
 {
   "id": 1,
   "name": "testkey",
-  "key": "REDACTED_GRAFANA_API_KEY"
+  "key": "eyJrIjoiMWpSRVhRUVJHZlc3NW1laklzV3htQUt0cUxtS3RuWFUiLCJuIjoidGVzdGtleSIsImlkIjoxf"
 }
 ```
 
@@ -1907,7 +1907,7 @@ Example response:
   "createdAt": "2023-01-04T07:50:54.000Z",
   "updatedAt": null,
   "firstUsed": null,
-  "token": "REDACTED_GRAFANA_API_KEY",
+  "token": "eyJrIjoiZmU5ZDlmY2JkODkzNTg4ZGUyYTJhNmJiZGJiMWYwNjQyMGM0MzBkNiIsIm4iOiJjcmVhdGVhcGlrZXkiLCJpZCI6NjUyOTkyf",
   "links": [
     {
       "rel": "self",

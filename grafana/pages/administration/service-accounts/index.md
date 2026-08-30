@@ -181,7 +181,7 @@ To list your token's permissions, use the `/api/access-control/user/permissions`
 Run the following command with the token whose permissions you want to check:
 
 ```bash
-curl -H "Authorization: Bearer REDACTED_GRAFANA_SERVICE_ACCOUNT_TOKEN" -X GET '<grafana_url>/api/access-control/user/permissions' | jq
+curl -H "Authorization: Bearer glsa_iNValIdinValiDinvalidinvalidinva_5b582697" -X GET '<grafana_url>/api/access-control/user/permissions' | jq
 ```
 
 The output lists the token's permissions:
@@ -208,7 +208,7 @@ The output lists the token's permissions:
 To list which dashboards a token can view, filter the `/api/access-control/user/permissions` endpoint's response for the `dashboards:read` permission key:
 
 ```bash
-curl -H "Authorization: Bearer REDACTED_GRAFANA_SERVICE_ACCOUNT_TOKEN" -X GET '<grafana_url>/api/access-control/user/permissions' | jq '."dashboards:read"'
+curl -H "Authorization: Bearer glsa_iNValIdinValiDinvalidinvalidinva_5b582697" -X GET '<grafana_url>/api/access-control/user/permissions' | jq '."dashboards:read"'
 ```
 
 The output lists the dashboards a token can view and the folders a token can view dashboards from,

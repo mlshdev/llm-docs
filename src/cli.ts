@@ -9,7 +9,6 @@ import {
   writeRootIndexes,
 } from "./output.ts";
 import { buildProject } from "./projects/index.ts";
-import type { Redaction } from "./redact.ts";
 import { projectIds } from "./types.ts";
 import type { CompleteSourcesLock, ProjectId, SourcesLock } from "./types.ts";
 
@@ -37,11 +36,7 @@ async function buildAll(): Promise<void> {
   const lock = await requireLock();
   for (const project of config.projects) {
     console.log(`Building ${project.id} ${lock.projects[project.id].tag}`);
-    reportRedactions(
-      await writeProject(
-        await buildProject(project, lock.projects[project.id]),
-      ),
-    );
+    await writeProject(await buildProject(project, lock.projects[project.id]));
   }
   await writeRootIndexes(config.projects, lock);
   await verifyOutputs(config.projects, lock);
@@ -66,11 +61,7 @@ async function update(): Promise<void> {
       continue;
     }
     console.log(`Updating ${project.id} to ${next.projects[project.id].tag}`);
-    reportRedactions(
-      await writeProject(
-        await buildProject(project, next.projects[project.id]),
-      ),
-    );
+    await writeProject(await buildProject(project, next.projects[project.id]));
   }
   await writeRootIndexes(config.projects, next);
   await writeFile(lockPath, `${JSON.stringify(next, null, 2)}\n`, "utf8");
@@ -89,12 +80,6 @@ async function site(): Promise<void> {
   await verifyOutputs(config.projects, lock);
   await buildSite(config.projects);
   console.log("GitHub Pages artifact prepared in _site");
-}
-
-function reportRedactions(redactions: readonly Redaction[]): void {
-  for (const { name, count } of redactions) {
-    console.log(`  Redacted ${count} ${name} example${count === 1 ? "" : "s"}`);
-  }
 }
 
 async function requireLock(): Promise<CompleteSourcesLock> {

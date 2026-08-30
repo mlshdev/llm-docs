@@ -50,7 +50,7 @@ The following endpoints can be used to manage both alert rules and recording rul
 POST /api/v1/provisioning/alert-rules
 Accept: application/json
 Content-Type: application/json
-Authorization: Bearer REDACTED_GRAFANA_API_KEY
+Authorization: Bearer eyJrIjoiT0tTcG1pUlY2RnVKZTFVaDFsNFZXdE9ZWmNrMkZYbk
 
 {
   "title": "TEST-API_1",
@@ -233,7 +233,7 @@ Recording rules allow you to pre-compute frequently used or computationally expe
 POST /api/v1/provisioning/alert-rules
 Accept: application/json
 Content-Type: application/json
-Authorization: Bearer REDACTED_GRAFANA_API_KEY
+Authorization: Bearer eyJrIjoiT0tTcG1pUlY2RnVKZTFVaDFsNFZXdE9ZWmNrMkZYbk
 
 {
   "title": "my_recording_rule",
@@ -339,7 +339,7 @@ Content-Type: application/json
 GET /api/v1/provisioning/contact-points
 Accept: application/json
 Content-Type: application/json
-Authorization: Bearer REDACTED_GRAFANA_API_KEY
+Authorization: Bearer eyJrIjoiT0tTcG1pUlY2RnVKZTFVaDFsNFZXdE9ZWmNrMkZYbk
 ```
 
 **Example Response:**
@@ -377,7 +377,7 @@ The receiver permissions endpoints manage access control for contact point recei
 POST /api/access-control/receivers/abc123/users/5
 Accept: application/json
 Content-Type: application/json
-Authorization: Bearer REDACTED_GRAFANA_API_KEY
+Authorization: Bearer eyJrIjoiT0tTcG1pUlY2RnVKZTFVaDFsNFZXdE9ZWmNrMkZYbk
 
 {
   "permission": "Edit"
@@ -401,7 +401,7 @@ Content-Type: application/json
 POST /api/access-control/receivers/abc123/teams/3
 Accept: application/json
 Content-Type: application/json
-Authorization: Bearer REDACTED_GRAFANA_API_KEY
+Authorization: Bearer eyJrIjoiT0tTcG1pUlY2RnVKZTFVaDFsNFZXdE9ZWmNrMkZYbk
 
 {
   "permission": ""
@@ -425,7 +425,7 @@ Content-Type: application/json
 POST /api/access-control/receivers/abc123/builtInRoles/Viewer
 Accept: application/json
 Content-Type: application/json
-Authorization: Bearer REDACTED_GRAFANA_API_KEY
+Authorization: Bearer eyJrIjoiT0tTcG1pUlY2RnVKZTFVaDFsNFZXdE9ZWmNrMkZYbk
 
 {
   "permission": "View"
@@ -475,7 +475,7 @@ Content-Type: application/json
 GET /api/v1/provisioning/policies/export?format=yaml
 Accept: application/json
 Content-Type: application/json
-Authorization: Bearer REDACTED_GRAFANA_API_KEY
+Authorization: Bearer eyJrIjoiT0tTcG1pUlY2RnVKZTFVaDFsNFZXdE9ZWmNrMkZYbk
 ```
 
 **Example Response:**
@@ -518,7 +518,7 @@ Template groups enable you to define multiple notification templates (`{{ define
 GET /api/v1/provisioning/templates
 Accept: application/json
 Content-Type: application/json
-Authorization: Bearer REDACTED_GRAFANA_API_KEY
+Authorization: Bearer eyJrIjoiT0tTcG1pUlY2RnVKZTFVaDFsNFZXdE9ZWmNrMkZYbk
 ```
 
 **Example Response:**
@@ -559,7 +559,7 @@ Content-Type: application/json
 GET /api/v1/provisioning/mute-timings
 Accept: application/json
 Content-Type: application/json
-Authorization: Bearer REDACTED_GRAFANA_API_KEY
+Authorization: Bearer eyJrIjoiT0tTcG1pUlY2RnVKZTFVaDFsNFZXdE9ZWmNrMkZYbk
 ```
 
 **Example Response:**

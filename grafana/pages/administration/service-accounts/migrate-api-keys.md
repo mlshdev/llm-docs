@@ -85,7 +85,7 @@ Your current setup
 curl -X POST -H "Content-Type: application/json" -d '{"name": "my-api-key", "role": "Viewer"}' http://admin:admin@localhost:3000/api/auth/keys
 
 # response from the api
-{"id":2,"name":"my-api-key","key":"REDACTED_GRAFANA_API_KEY"}%
+{"id":2,"name":"my-api-key","key":"eyJrIjoiTFRSN1RBOVc3SGhjblc0bWZodXZ3MnNDcU92Um5VZUIiLKJuIjoibXktYXBpLWtleSIsImlkIjoxfQ=="}%
 ```
 
 New setup
@@ -101,10 +101,10 @@ curl -X POST -H "Content-Type: application/json" -d '{"name": "my-service-accoun
 curl -X POST -H "Content-Type: application/json" -d '{"name": "my-service-account-token"}' http://admin:admin@localhost:3000/api/serviceaccounts/1/tokens
 
 # response with the created SAT id,name and key.
-{"id":2,"name":"my-service-account-token","key":"REDACTED_GRAFANA_SERVICE_ACCOUNT_TOKEN"}%
+{"id":2,"name":"my-service-account-token","key":"glsa_iNValIdinValiDinvalidinvalidinva_5b582697"}%
 
 # now you can authenticate the same way as you did with the API key
-curl --request GET --url http://localhost:3000/api/folders --header 'Authorization: Bearer REDACTED_GRAFANA_SERVICE_ACCOUNT_TOKEN'
+curl --request GET --url http://localhost:3000/api/folders --header 'Authorization: Bearer glsa_iNValIdinValiDinvalidinvalidinva_5b582697'
 
 # response
 [{"id":1,"uid":"a5261a84-eebc-4733-83a9-61f4713561d1","title":"gdev dashboards"}]%
