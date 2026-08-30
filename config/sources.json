@@ -28,6 +28,13 @@
       "homepage": "https://docs.docker.com/"
     },
     {
+      "id": "n8n",
+      "title": "n8n",
+      "repository": "n8n-io/n8n-docs",
+      "branch": "main",
+      "homepage": "https://docs.n8n.io/"
+    },
+    {
       "id": "grafana",
       "title": "Grafana",
       "repository": "grafana/grafana",

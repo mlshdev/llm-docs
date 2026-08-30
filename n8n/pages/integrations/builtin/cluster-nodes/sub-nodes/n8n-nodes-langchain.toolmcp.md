@@ -1,0 +1,40 @@
+> Commit-pinned source for n8n main: [docs/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp.md](https://github.com/n8n-io/n8n-docs/blob/0ece31e57a42e63cf2a2c7f9a33b42888e09a5b3/docs/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp.md)
+
+# MCP Client Tool node <a id="mcp-client-tool-node"></a>
+
+The MCP Client Tool node is a [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) client, allowing you to use the tools exposed by an external MCP server. You can connect the MCP Client Tool node to your models to call external tools with n8n agents.
+
+> **Info**
+> **Already in the registry?**
+>
+> If the service you want is available in n8n's [MCP servers](https://docs.n8n.io/build/integrate-ai/mcp-servers) registry, you can connect it straight from the node panel without adding a credential. Use this node for MCP servers that aren't in the registry yet.
+
+## Credentials
+
+The MCP Client Tool node supports [Bearer](https://docs.n8n.io/integrations/builtin/credentials/httprequest#using-bearer-auth), generic [header](https://docs.n8n.io/integrations/builtin/credentials/httprequest#using-header-auth), multiple headers, and [OAuth2](https://docs.n8n.io/integrations/builtin/credentials/mcp#using-oauth2) authentication methods.
+
+## Node parameters <a id="node-parameters"></a>
+
+Configure the node with the following parameters.
+
+- **SSE Endpoint**: The SSE endpoint for the MCP server you want to connect to.
+- **Authentication**: The authentication method for authentication to your MCP server. The MCP tool supports [bearer](https://docs.n8n.io/integrations/builtin/credentials/httprequest#using-bearer-auth), generic [header](https://docs.n8n.io/integrations/builtin/credentials/httprequest#using-header-auth), multiple headers, and [OAuth2](https://docs.n8n.io/integrations/builtin/credentials/mcp#using-oauth2) authentication. Select **None** to attempt to connect without authentication.
+  - **Multiple Headers Auth**: Use this when your MCP server requires more than one header, for example an API key and a username. Add each header as a **Name** and **Value** pair in the credential. You can add as many headers as you need.
+- **Tools to Include**: Choose which tools you want to expose to the AI Agent:
+  - **All**: Expose all the tools given by the MCP server.
+  - **Selected**: Activates a **Tools to Include** parameter where you can select the tools you want to expose to the AI Agent.
+  - **All Except**: Activates a **Tools to Exclude** parameter where you can select the tools you want to avoid sharing with the AI Agent. The AI Agent will have access to all MCP server's tools that aren't selected.
+
+## Templates and examples <a id="templates-and-examples"></a>
+
+[Browse MCP Client Tool node documentation integration templates](https://n8n.io/integrations/mcp-client-tool) or [search all templates](https://n8n.io/workflows/)
+
+## Related resources <a id="related-resources"></a>
+
+n8n also has an [MCP Server Trigger](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-langchain.mcptrigger) node that allows you to expose n8n tools to external AI Agents.
+
+Refer to the [MCP documentation](https://modelcontextprotocol.io/introduction) and [MCP specification](https://modelcontextprotocol.io/specification/) for more details about the protocol, servers, and clients.
+
+Refer to [LangChain's documentation on tools](https://langchain-ai.github.io/langgraphjs/how-tos/tool-calling/) for more information about tools in LangChain.
+
+View n8n's [Advanced AI](https://docs.n8n.io/build/integrate-ai) documentation.

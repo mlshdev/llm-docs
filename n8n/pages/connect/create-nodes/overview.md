@@ -1,0 +1,24 @@
+> Commit-pinned source for n8n main: [docs/connect/create-nodes/overview.md](https://github.com/n8n-io/n8n-docs/blob/0ece31e57a42e63cf2a2c7f9a33b42888e09a5b3/docs/connect/create-nodes/overview.md)
+
+# Creating nodes <a id="creating-nodes"></a>
+
+Learn how to build your own custom nodes[^1].
+
+This section includes:
+
+- Guidance on planning your build, including [which style to use](https://docs.n8n.io/connect/create-nodes/plan-your-node/choose-a-node-building-style).
+- [Tutorials](https://docs.n8n.io/connect/create-nodes/build-your-node) for different node building styles.
+- Instructions for [testing your node](https://docs.n8n.io/connect/create-nodes/test-your-node), including how to use the n8n [node linter](https://docs.n8n.io/connect/create-nodes/test-your-node/node-linter) and [troubleshooting](https://docs.n8n.io/connect/create-nodes/test-your-node/troubleshooting) support.
+- How to [share your node](https://docs.n8n.io/connect/create-nodes/deploy-your-node/submit-community-nodes) with the community, submit it for [verification by n8n](https://docs.n8n.io/connect/create-nodes/deploy-your-node/submit-community-nodes), or use it as a [private node](https://docs.n8n.io/connect/create-nodes/deploy-your-node/install-private-nodes).
+- [Reference material](https://docs.n8n.io/connect/create-nodes/build-your-node/reference), including UI elements and information on the individual files that make up a node.
+
+## Prerequisites <a id="prerequisites"></a>
+
+This section assumes the following:
+
+- Some familiarity with JavaScript and TypeScript.
+- Ability to manage your own development environment, including git.
+- Knowledge of npm, including creating and submitting packages.
+- Familiarity with n8n, including a good understanding of [data structures](https://docs.n8n.io/build/work-with-data/understand-n8ns-data-structure) and [item linking](https://docs.n8n.io/build/work-with-data/reference-data/link-data-items).
+
+[^1]: In n8n, nodes are individual components that you compose to create workflows. Nodes define when the workflow should run, allow you to fetch, send, and process data, can define flow control logic, and connect with external services.

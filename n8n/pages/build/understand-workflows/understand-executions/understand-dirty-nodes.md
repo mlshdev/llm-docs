@@ -1,0 +1,62 @@
+> Commit-pinned source for n8n main: [docs/build/understand-workflows/understand-executions/understand-dirty-nodes.md](https://github.com/n8n-io/n8n-docs/blob/0ece31e57a42e63cf2a2c7f9a33b42888e09a5b3/docs/build/understand-workflows/understand-executions/understand-dirty-nodes.md)
+
+# Dirty nodes <a id="dirty-nodes"></a>
+
+A **dirty node** is a node that executed successfully in the past, but whose output n8n now considers stale or unreliable. They're labeled like this to indicate that if the node executes again, the output may be different. It may also be the point where a [partial execution](https://docs.n8n.io/build/understand-workflows/understand-executions/types-of-executions#partial-executions) starts from.
+
+## How to recognize dirty node data <a id="how-to-recognize-dirty-node-data"></a>
+
+In the canvas of the workflow editor, you can identify dirty notes by their different-colored border and a yellow triangle in place of the previous green tick symbol. For example:
+
+![A node on the canvas with a yellow border and a yellow triangle icon instead of the usual green success tick](https://raw.githubusercontent.com/n8n-io/n8n-docs/0ece31e57a42e63cf2a2c7f9a33b42888e09a5b3/docs/build/.gitbook/assets/dirty-node-canvas.png)
+
+In the node editor view, the output panel also displays a yellow triangle on the output panel. If you hover over the triangle, a tooltip appears with more information about why n8n considers the data stale:
+
+![Node editor's output panel showing a yellow triangle icon with a tooltip explaining why the data is stale](https://raw.githubusercontent.com/n8n-io/n8n-docs/0ece31e57a42e63cf2a2c7f9a33b42888e09a5b3/docs/build/.gitbook/assets/dirty-node-editor.png)
+
+## Why n8n marks nodes dirty <a id="why-n8n-marks-nodes-dirty"></a>
+
+There are several reasons why n8n might flag execution data as stale. For example:
+
+- Inserting or deleting a node: labels the first node that follows the inserted node dirty.
+- Modifying node parameters: labels the modified node dirty.
+- Adding a connector: labels the destination node of the new connector dirty.
+- Deactivating a node: labels the first node that follows the deactivated node dirty.
+
+<details>
+
+<summary>Other reasons n8n marks nodes dirty</summary>
+
+- Unpinning a node: labels the unpinned node dirty.
+- Modifying pinned data: labels the node that comes after the pinned data dirty.
+- If any of the above actions occur inside a loop, also labels the first node of the loop dirty.
+
+For sub-nodes, also labels any executed parent nodes (up to and including the root) when:
+
+- Editing an executed sub-node
+- Adding a new sub-node
+- Disconnecting or deleting a sub-node
+- Deactivating a sub-node
+- Activating a sub-node
+
+</details>
+
+<div class="grid cards" markdown>
+
+- When deleting a connected node in a workflow:
+
+![Workflow canvas before you delete a connected node, with all nodes showing green success ticks](https://raw.githubusercontent.com/n8n-io/n8n-docs/0ece31e57a42e63cf2a2c7f9a33b42888e09a5b3/docs/build/.gitbook/assets/dirty-before.png)
+
+- The next node in the sequence becomes dirty:
+
+![Workflow canvas after you delete the node, with the next node in the sequence now marked dirty with a yellow border](https://raw.githubusercontent.com/n8n-io/n8n-docs/0ece31e57a42e63cf2a2c7f9a33b42888e09a5b3/docs/build/.gitbook/assets/dirty-after.png)
+
+</div>
+
+When using loops (with the [Loop over Items](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches) node), when any node within the loop is dirty, the initial node of the loop is also considered dirty:
+
+![Loop Over Items node marked dirty because a node inside its loop is dirty](https://raw.githubusercontent.com/n8n-io/n8n-docs/0ece31e57a42e63cf2a2c7f9a33b42888e09a5b3/docs/build/.gitbook/assets/dirty-loop.png)
+
+## Resolving dirty nodes <a id="resolving-dirty-nodes"></a>
+
+Executing a node again clears its dirty status. You can do this manually by triggering the whole workflow, or by running a [partial execution](https://docs.n8n.io/build/understand-workflows/understand-executions/types-of-executions#partial-executions) with **Execute step** on the individual node or any node which follows it.

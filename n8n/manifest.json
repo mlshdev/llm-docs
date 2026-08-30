@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "project": "n8n",
+  "title": "n8n",
+  "repository": "n8n-io/n8n-docs",
+  "tag": "main",
+  "branch": "main",
+  "sourceCommittedAt": "2026-08-29T20:06:47Z",
+  "sourceCommit": "0ece31e57a42e63cf2a2c7f9a33b42888e09a5b3",
+  "documentCount": 1313,
+  "notes": [
+    "n8n tracks the latest main-branch commit because n8n-docs does not publish releases or tags.",
+    "Pages follow each GitBook space's SUMMARY.md navigation; unpublished pages, utility spaces, and reusable fragments are omitted as standalone documents.",
+    "Reusable blocks are expanded from their commit-pinned Markdown sources, and GitBook hints, tabs, files, embeds, columns, and steppers are normalized to plain Markdown."
+  ]
+}

@@ -3,6 +3,7 @@ export const projectIds = [
   "netbird",
   "podman",
   "docker",
+  "n8n",
   "grafana",
   "victoriametrics",
   "victorialogs",

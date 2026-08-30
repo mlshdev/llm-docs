@@ -1,0 +1,48 @@
+> Commit-pinned source for n8n main: [docs/integrations/builtin/credentials/zendesk.md](https://github.com/n8n-io/n8n-docs/blob/0ece31e57a42e63cf2a2c7f9a33b42888e09a5b3/docs/integrations/builtin/credentials/zendesk.md)
+
+# Zendesk credentials <a id="zendesk-credentials"></a>
+
+You can use these credentials to authenticate the following nodes:
+
+- [Zendesk](https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.zendesk)
+- [Zendesk Trigger](https://docs.n8n.io/integrations/builtin/trigger-nodes/n8n-nodes-base.zendesktrigger)
+
+## Prerequisites <a id="prerequisites"></a>
+
+- Create a [Zendesk](https://zendesk.com/) account.
+- For API token authentication, enable token access to the API in Admin Center under **Apps and integrations > APIs > Zendesk APIs**.
+
+## Supported authentication methods <a id="supported-authentication-methods"></a>
+
+- API token
+- OAuth2
+
+## Related resources <a id="related-resources"></a>
+
+Refer to [Zendesk's API documentation](https://developer.zendesk.com/api-reference/) for more information about the service.
+
+## Using API token <a id="using-api-token"></a>
+
+To configure this credential, you'll need:
+
+- Your **Subdomain**: Your Zendesk subdomain is the portion of the URL between `https://` and `.zendesk.com`. For example, if the Zendesk URL is `https://n8n-example.zendesk.com/agent/dashboard`, the subdomain is `n8n-example`.
+- An **Email** address: Enter the email address you use to log in to Zendesk.
+- An **API Token**: Generate an API token in **Apps and integrations > APIs > Zendesk API**. Refer to [API token](https://developer.zendesk.com/api-reference/introduction/security-and-auth/#api-token) for more information.
+
+## Using OAuth2 <a id="using-oauth2"></a>
+
+To configure this credential, you'll need:
+
+- A **Client ID**: Generated when you create a new OAuth client.
+- A **Client Secret**: Generated when you create a new OAuth client.
+- Your **Subdomain**: Your Zendesk subdomain is the portion of the URL between `https://` and `.zendesk.com`. For example, if the Zendesk URL is `https://n8n-example.zendesk.com/agent/dashboard`, the subdomain is `n8n-example`.
+
+To create a new OAuth client, go to **Apps and integrations > APIs > Zendesk API > OAuth Clients**.
+
+Use these settings:
+
+- Copy the **OAuth Redirect URL** from n8n and enter it as a **Redirect URL** in the OAuth client.
+- Copy the **Unique identifier** for the Zendesk client and enter this as your n8n **Client ID**.
+- Copy the **Secret** from Zendesk and enter this as your n8n **Client Secret**
+
+Refer to [Registering your application with Zendesk](https://support.zendesk.com/hc/en-us/articles/4408845965210-Using-OAuth-authentication-with-your-application#topic_s21_lfs_qk) for more information.

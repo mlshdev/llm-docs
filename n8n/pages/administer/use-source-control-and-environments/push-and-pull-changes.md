@@ -1,0 +1,162 @@
+> Commit-pinned source for n8n main: [docs/administer/use-source-control-and-environments/push-and-pull-changes.md](https://github.com/n8n-io/n8n-docs/blob/0ece31e57a42e63cf2a2c7f9a33b42888e09a5b3/docs/administer/use-source-control-and-environments/push-and-pull-changes.md)
+
+# Push and pull <a id="push-and-pull"></a>
+
+If your n8n instance connects to a Git repository, you need to keep your work in sync with Git.
+
+This document assumes some familiarity with Git concepts and terminology. Refer to [Git and n8n](https://docs.n8n.io/administer/use-source-control-and-environments/use-git-in-n8n) for an introduction to how n8n works with Git.
+
+> **Info**
+> **Recommendation: don't push and pull to the same n8n instance**
+>
+> You can push work from an instance to a branch, and pull to the same instance. n8n doesn't recommend this. To reduce the risk of merge conflicts and overwriting work, try to create a process where work goes in one direction: either to Git, or from Git, but not both.
+
+## Fetch other people's work <a id="fetch-other-peoples-work"></a>
+
+> **Info**
+> **n8n roles control which users can pull (fetch) changes**
+>
+> You must be an instance owner or instance admin to pull changes from git.
+
+To pull work from Git, select **Pull** ![Pull icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/0ece31e57a42e63cf2a2c7f9a33b42888e09a5b3/docs/administer/.gitbook/assets/pull-icon.png) in the main menu.
+
+<details>
+
+<summary>View screenshot</summary>
+
+![](https://raw.githubusercontent.com/n8n-io/n8n-docs/0ece31e57a42e63cf2a2c7f9a33b42888e09a5b3/docs/reusable-content/.gitbook/assets/pull-push-menu-closed.png)
+*Pull and push buttons when menu is closed*
+
+![](https://raw.githubusercontent.com/n8n-io/n8n-docs/0ece31e57a42e63cf2a2c7f9a33b42888e09a5b3/docs/reusable-content/.gitbook/assets/pull-push-menu-open.png)
+*Pull and push buttons when menu is open*
+
+</details>
+
+n8n may display a warning about overriding local changes. Select **Pull and override** to override your local work with the content in Git.
+
+When the changes include new variable or credential stubs, n8n notifies you that you need to populate the values for the items before using them.
+
+> **Info**
+> **How deleted resources are handled**
+>
+> When workflows, credentials, variables, tags, and data tables are deleted from the repository, your local versions of these resources aren't deleted automatically. Instead, when you pull repository changes, n8n notifies you about any outdated resources and asks if you'd like to delete them.
+
+### Workflow and credential owner may change on pull <a id="workflow-and-credential-owner-may-change-on-pull"></a>
+
+When you pull from Git to an n8n instance, n8n tries to assign workflows and credentials to a matching user or project.
+
+If the original owner is a user:
+
+If the same owner is available on both instances (matching email), the owner remains the same. If the original owner isn't on the new instance, n8n sets the user performing the pull as the workflow owner.
+
+If the original owner is a [project](https://docs.n8n.io/administer/manage-users-and-access/set-permissions-and-roles-rbac):
+
+n8n tries to match the original project name to a project name on the new instance. If no matching project exists, n8n creates a new project with the name, assigns the current user as project owner, and imports the workflows and credentials to the project.
+
+### Auto publish workflows on pull <a id="auto-publish-workflows-on-pull"></a>
+
+When pulling, you can choose to automatically publish workflows using the **Auto publish** dropdown in the pull modal. This has three modes:
+
+- **Off** (default): Don't attempt to publish any workflows. Workflows keep their current local publish state.
+- **If workflow already published**: Only attempt to publish workflows that are already published on this instance. New workflows aren't published.
+- **On**: Attempt to publish all pulled workflows, including new ones.
+
+n8n never auto publishes archived workflows, regardless of the auto publish setting.
+
+After a pull with auto publish enabled, n8n displays a results modal showing which workflows were successfully published and which failed. Publishing can fail if a workflow has validation errors or missing credentials.
+
+Auto publish is also available through the [API](https://docs.n8n.io/connect/n8n-api/api-reference) using the `autoPublish` parameter on the pull endpoint, with values `none`, `published`, or `all`.
+
+### Pulling may cause brief service interruption <a id="pulling-may-cause-brief-service-interruption"></a>
+
+If you pull changes to a published workflow, n8n unpublishes the workflow while pulling, then republishes it. This may result in a few seconds of downtime for the workflow.
+
+## Send your work to Git <a id="send-your-work-to-git"></a>
+
+> **Info**
+> **n8n roles control which users can push changes**
+>
+> You must be an instance owner, instance admin, or project admin to push changes to git.
+
+To push work to Git:
+
+1. Select **Push** ![Push icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/0ece31e57a42e63cf2a2c7f9a33b42888e09a5b3/docs/reusable-content/.gitbook/assets/push-icon.png) in the main menu.
+2. In the **Commit and push changes** modal, select which workflows and data tables you want to push. You can filter by status (new, modified, deleted) and search for items. n8n automatically pushes tags, and variable and credential stubs.
+
+   n8n pushes the current saved version, not the published version, of the workflow. You need to then separately publish versions on the remote server.
+3. Enter a commit message. This should be a one sentence description of the changes you're making.
+4. Select **Commit and Push**. n8n sends the work to Git, and displays a success message on completion.
+
+## What gets committed <a id="what-gets-committed"></a>
+
+n8n commits the following to Git:
+
+- Workflows, including their tags and the email address of the workflow owner. You can choose which workflows to push.
+- Credential stubs - ID, name and type. Any other fields are included only if they are [expressions](https://docs.n8n.io/data/expressions/). You can choose which credentials to push.
+- Variable stubs (ID and name)
+- Data table schemas (table name and column definitions, not row data). You can choose which data tables to push.
+- Projects
+- Folders
+
+## Merge behaviors and conflicts <a id="merge-behaviors-and-conflicts"></a>
+
+n8n's implementation of source control is opinionated. It resolves merge conflicts for credentials and variables automatically. n8n can't detect conflicts on workflows.
+
+### Workflows <a id="workflows"></a>
+
+You have to explicitly tell n8n what to do about workflows when pushing or pulling. The Git repository acts as the source of truth.
+
+When pulling, you might get warned that your local copy of a workflow differs from Git, and if you accept, your local copy would be overridden. Be careful not to lose relevant changes when pulling.
+
+When you push, your local workflow will override what's in Git, so make sure that you have the most up to date version or you risk overriding recent changes.
+
+To prevent the issue described above, you should immediately push your changes to a workflow once you finish working on it. Then it's safe to pull.
+
+To avoid losing data:
+
+- Design your source control setup so that workflows flow in one direction. For example, make edits on a development instance, push to Git, then pull to production. Don't make edits on the production instance and push them.
+- Don't push all workflows. Select the ones you need.
+- Be cautious about manually editing files in the Git repository.
+
+### Credentials, variables and workflow tags <a id="credentials-variables-and-workflow-tags"></a>
+
+Credentials and variables can't have merge issues, as n8n chooses the version to keep.
+
+On pull:
+
+- If the tag, variable or credential doesn't exist, n8n creates it.
+- If the tag, variable or credential already exists, n8n doesn't update it, unless:
+  - You set the value of a variable using the API or externally. The new value overwrites any existing value.
+  - The credential name has changed. n8n uses the version in Git.
+  - The name of a tag has changed. n8n updates the tag name. Be careful when renaming tags as tag names are unique and this could cause database issues when it comes to uniqueness during the pull process.
+
+On push:
+
+- n8n overwrites the entire variables and tags files.
+- If a credential already exists, n8n overwrites it with the changes, but doesn't apply these changes to existing credentials on pull.
+
+### Data tables <a id="data-tables"></a>
+
+n8n syncs data table schemas (table structure and column definitions) across environments. Row data isn't synced.
+
+On push:
+
+- You can select which data tables to include.
+- n8n exports the table name, column names, column types, and column order.
+
+On pull:
+
+- n8n creates data tables that don't exist locally.
+- n8n updates existing data tables to match the schema in Git: it adds new columns and removes columns that no longer exist in the remote version. n8n keeps the data in the remaining columns.
+- n8n matches data tables by their name within a project. If you delete and recreate a data table with the same name in the source environment, or create it manually with the same name in both environments, n8n treats it as the same table: it reconciles the local table's ID to the incoming one, updates the schema like any other change, and keeps the local rows.
+- If a data table exists locally but not in Git, pulling deletes it, including all its row data. Interactive pulls list the table as **Deleted** in the confirmation dialog before anything happens. Pulls that use the force option, for example, through the API or in automated setups, delete the table without asking. To keep such a table, push it before pulling.
+
+> **Warning**
+> **Column removal causes data loss**
+>
+> If a pulled data table has columns removed compared to your local version, n8n deletes those columns and their data. This can't be undone. n8n displays a warning in the pull modal when this will happen.
+
+> **Info**
+> **Manage credentials with an external secrets vault**
+>
+> If you need different credentials on different n8n environments, use [external secrets](https://docs.n8n.io/administer/manage-credentials/use-external-secret-stores).

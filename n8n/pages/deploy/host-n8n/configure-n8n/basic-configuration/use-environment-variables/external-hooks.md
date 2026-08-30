@@ -1,0 +1,16 @@
+> Commit-pinned source for n8n main: [docs/deploy/host-n8n/configure-n8n/basic-configuration/use-environment-variables/external-hooks.md](https://github.com/n8n-io/n8n-docs/blob/0ece31e57a42e63cf2a2c7f9a33b42888e09a5b3/docs/deploy/host-n8n/configure-n8n/basic-configuration/use-environment-variables/external-hooks.md)
+
+# External hooks environment variables <a id="external-hooks-environment-variables"></a>
+
+> **Info**
+> **File-based configuration**
+>
+> You can add `_FILE` to individual variables to provide their configuration in a separate file. Refer to [Keeping sensitive data in separate files](https://docs.n8n.io/deploy/host-n8n/configure-n8n/basic-configuration#keeping-sensitive-data-in-separate-files) for more details.
+
+You can define external hooks that n8n executes whenever a specific operation runs. Refer to [External hooks](https://docs.n8n.io/deploy/host-n8n/configure-n8n/external-hooks) for the full reference, including available hooks and file formatting.
+
+| Variable                        | Type   | Default | Description                                                                                                                            |
+| :------------------------------ | :----- | :------ | :------------------------------------------------------------------------------------------------------------------------------------- |
+| `EXTERNAL_HOOK_FILES`           | String | -       | Files containing backend external hooks. Provide multiple files separated by the character defined in `EXTERNAL_HOOK_FILES_SEPARATOR`. |
+| `EXTERNAL_HOOK_FILES_SEPARATOR` | String | `:`     | Separator character for `EXTERNAL_HOOK_FILES`. Use `;` on Windows to avoid conflicts with drive-letter paths like `C:\`.               |
+| `EXTERNAL_FRONTEND_HOOKS_URLS`  | String | -       | URLs to files containing frontend external hooks. Provide multiple URLs as a colon-separated list ("`:`").                             |

@@ -1,0 +1,46 @@
+> Commit-pinned source for n8n main: [docs/integrations/builtin/credentials/vercel.md](https://github.com/n8n-io/n8n-docs/blob/0ece31e57a42e63cf2a2c7f9a33b42888e09a5b3/docs/integrations/builtin/credentials/vercel.md)
+
+# Vercel AI Gateway credentials <a id="vercel-ai-gateway-credentials"></a>
+
+You can use these credentials to authenticate the following nodes:
+
+- [Chat Vercel AI Gateway](https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatvercel)
+
+## Prerequisites <a id="prerequisites"></a>
+
+Create a [Vercel](https://vercel.com/) account.
+
+## Supported authentication methods <a id="supported-authentication-methods"></a>
+
+- API key
+- OIDC token
+
+## Related resources <a id="related-resources"></a>
+
+Refer to the [Vercel AI Gateway documentation](https://vercel.com/docs/ai-gateway) for more information about the service.
+
+## Using API key <a id="using-api-key"></a>
+
+To configure this credential, you'll need:
+
+- An **API Key**
+
+To generate your API Key:
+
+1. [Login to Vercel](https://vercel.com/login) or [create an account](https://vercel.com/signup).
+2. Go to the Vercel dashboard and select the **AI Gateway** tab.
+3. Select **API keys** on the left side bar.
+4. Select **Add key** and proceed with **Create key** from the Dialog.
+5. Copy your key and add it as the **API Key** in n8n.
+
+## Using OIDC token <a id="using-oidc-token"></a>
+
+To configure this credential, you'll need:
+
+- An **OIDC token**
+
+To generate your OIDC token:
+
+1. In local development, link your application to a Vercel project with the `vc link` command.
+2. Run the `vercel env pull` command to pull the environment variables from Vercel.
+3. Copy your token and add it as the **OIDC TOKEN** in n8n.

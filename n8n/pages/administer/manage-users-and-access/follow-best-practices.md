@@ -1,0 +1,25 @@
+> Commit-pinned source for n8n main: [docs/administer/manage-users-and-access/follow-best-practices.md](https://github.com/n8n-io/n8n-docs/blob/0ece31e57a42e63cf2a2c7f9a33b42888e09a5b3/docs/administer/manage-users-and-access/follow-best-practices.md)
+
+# Best practices for user management <a id="best-practices-for-user-management"></a>
+
+This page contains advice on best practices relating to user management in n8n.
+
+## All platforms <a id="all-platforms"></a>
+
+- n8n recommends that owners create a member-level account for themselves. Owners can see all workflows, but there is no way to see who created a particular workflow, so there is a risk of overriding other people's work if you build and edit workflows as an owner.
+- Users must be careful not to edit the same workflow simultaneously. It's possible to do it, but the users will overwrite each other's changes.
+- To move workflows between accounts, export the workflow as JSON, then import it to the new account. Note that this action loses the workflow history.
+- Webhook paths must be unique across the entire instance. This means each webhook path must be unique for all workflows and all users. By default, n8n generates a long random value for the webhook path, but users can edit this to their own custom path. If two users set the same path value:
+  - The path works for the first workflow that's run or published.
+  - Other workflows will error if they try to run with the same path.
+
+## Self-hosted <a id="self-hosted"></a>
+
+If you run n8n behind a reverse proxy, set the following environment variables so that n8n generates emails with the correct URL:
+
+- `N8N_HOST`
+- `N8N_PORT`
+- `N8N_PROTOCOL`
+- `N8N_EDITOR_BASE_URL`
+
+More information on these variables is available in [Environment variables](https://docs.n8n.io/deploy/host-n8n/configure-n8n/basic-configuration/use-environment-variables).

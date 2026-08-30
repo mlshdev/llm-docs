@@ -112,6 +112,7 @@ export async function writeRootIndexes(
     "- Drafts and prereleases are ignored.",
     "- Stable releases are discovered by scheduled GitHub API reconciliation.",
     "- Docker documentation tracks the latest `main` commit because docker/docs does not publish current GitHub releases.",
+    "- n8n documentation tracks the latest `main` commit because n8n-docs does not publish releases or tags.",
     "- NetBird updates only after the separate documentation repository contains the API-generation commit for the same product tag.",
   ];
   await writeUtf8(path.join(rootDirectory, "llms.txt"), summary.join("\n"));
@@ -258,6 +259,7 @@ function validateDocument(
     podman:
       /@@(?:option|include)|<<(?:subcommand|fullsubcommand|pod|container| if )/,
     docker: /\{\{[<%]\s*\/?\s*[a-zA-Z_]|\{\{\s*\$[a-zA-Z_]/,
+    n8n: /\{%\s*[a-zA-Z-]+/,
     grafana: /\{\{[<%]\s*\/?\s*[a-zA-Z_]|\]\(ref:|<GRAFANA[_ ]VERSION>/,
     victoriametrics: hugoShortcode,
     victorialogs: hugoShortcode,
@@ -268,7 +270,9 @@ function validateDocument(
       /<\/?(?:Admonition|ApiCard|Callout|Cards?|Column|DocCardList|DynamicCodeBlock|FrameworkSelector|GithubCodeBlock|Steps?|Tabs?)\b/,
   };
   const source =
-    projectId === "docker" ? withoutFencedCode(document.body) : document.body;
+    projectId === "docker" || projectId === "n8n"
+      ? withoutFencedCode(document.body)
+      : document.body;
   if (unresolved[projectId].test(source)) {
     throw new Error(
       `Unresolved ${projectId} source syntax in ${document.sourcePath}`,

@@ -26,6 +26,12 @@
       "sourceCommit": "dbad77a00e8352f30e663bec3eeae9fb31a19b4e",
       "sourceCommittedAt": "2026-08-28T14:48:42Z"
     },
+    "n8n": {
+      "tag": "main",
+      "branch": "main",
+      "sourceCommit": "0ece31e57a42e63cf2a2c7f9a33b42888e09a5b3",
+      "sourceCommittedAt": "2026-08-29T20:06:47Z"
+    },
     "grafana": {
       "tag": "v13.2.0",
       "releaseId": 372341438,
