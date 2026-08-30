@@ -3,6 +3,7 @@ import { Readable, Transform } from "node:stream";
 import { pipeline } from "node:stream/promises";
 import type { ReadableStream as NodeReadableStream } from "node:stream/web";
 import type {
+  BranchLockedSource,
   GithubCommit,
   GithubRelease,
   LockedSource,
@@ -18,9 +19,42 @@ export async function resolveLatestSources(
 ): Promise<Record<SourceProject["id"], LockedSource>> {
   const entries = await Promise.all(
     projects.map(async (project) => {
+      if (project.branch) {
+        const sourceCommit = await getCommit(
+          project.repository,
+          project.branch,
+        );
+        const previous = current[project.id];
+        if (
+          isBranchLockedSource(previous) &&
+          previous.branch === project.branch &&
+          previous.sourceCommit === sourceCommit.sha
+        ) {
+          return [project.id, previous] as const;
+        }
+        const sourceCommittedAt = sourceCommit.commit.author?.date;
+        if (!sourceCommittedAt) {
+          throw new Error(
+            `${project.repository} branch ${project.branch} commit has no author date`,
+          );
+        }
+        return [
+          project.id,
+          {
+            tag: project.branch,
+            branch: project.branch,
+            sourceCommit: sourceCommit.sha,
+            sourceCommittedAt,
+          },
+        ] as const;
+      }
       const release = await getLatestStableRelease(project.repository);
       const previous = current[project.id];
-      if (previous && compareVersions(release.tag_name, previous.tag) < 0) {
+      if (
+        previous &&
+        !isBranchLockedSource(previous) &&
+        compareVersions(release.tag_name, previous.tag) < 0
+      ) {
         console.warn(
           `${project.repository} latest release ${release.tag_name} is older than locked ${previous.tag}; retaining the locked version`,
         );
@@ -30,7 +64,11 @@ export async function resolveLatestSources(
         project.repository,
         release.tag_name,
       );
-      if (previous?.tag === release.tag_name) {
+      if (
+        previous &&
+        !isBranchLockedSource(previous) &&
+        previous.tag === release.tag_name
+      ) {
         if (previous.sourceCommit !== sourceCommit.sha) {
           throw new Error(
             `${project.repository} tag ${release.tag_name} moved from ${previous.sourceCommit} to ${sourceCommit.sha}`,
@@ -78,6 +116,12 @@ export async function resolveLatestSources(
     SourceProject["id"],
     LockedSource
   >;
+}
+
+function isBranchLockedSource(
+  source: LockedSource | undefined,
+): source is BranchLockedSource {
+  return source?.branch !== undefined;
 }
 
 function validateNetbirdDocsCommit(commit: GithubCommit): void {

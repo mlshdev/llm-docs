@@ -47,7 +47,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          git add -- sources.lock.json llms.txt llms-full.txt traefik netbird podman victoriametrics
+          git add -- sources.lock.json llms.txt llms-full.txt traefik netbird podman docker victoriametrics
           if git diff --cached --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
@@ -65,6 +65,7 @@ jobs:
             traefik
             netbird
             podman
+            docker
             victoriametrics
           if-no-files-found: error
           retention-days: "1"
@@ -126,16 +127,17 @@ jobs:
             git fetch --quiet origin main
             git reset --quiet --hard FETCH_HEAD
 
-            rm -rf traefik netbird podman victoriametrics
+            rm -rf traefik netbird podman docker victoriametrics
             cp _generated/sources.lock.json sources.lock.json
             cp _generated/llms.txt llms.txt
             cp _generated/llms-full.txt llms-full.txt
             cp -R _generated/traefik traefik
             cp -R _generated/netbird netbird
             cp -R _generated/podman podman
+            cp -R _generated/docker docker
             cp -R _generated/victoriametrics victoriametrics
 
-            git add -- sources.lock.json llms.txt llms-full.txt traefik netbird podman victoriametrics
+            git add -- sources.lock.json llms.txt llms-full.txt traefik netbird podman docker victoriametrics
             if git diff --cached --quiet; then
               echo "main already carries these snapshots; nothing to commit."
               exit 0

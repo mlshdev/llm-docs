@@ -1,0 +1,70 @@
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/agents/copilot.md](https://github.com/docker/docs/blob/dbad77a00e8352f30e663bec3eeae9fb31a19b4e/content/manuals/ai/sandboxes/agents/copilot.md)
+
+# Copilot
+
+This guide covers authentication, configuration, and usage of GitHub Copilot
+in a sandboxed environment.
+
+Official documentation: [GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli)
+
+## Quick start
+
+Create a sandbox and run Copilot for a project directory:
+
+```console
+$ sbx run copilot ~/my-project
+```
+
+The workspace parameter is optional and defaults to the current directory:
+
+```console
+$ cd ~/my-project
+$ sbx run copilot
+```
+
+## Authentication
+
+Copilot requires a GitHub token with Copilot access. Store your token using
+[stored secrets](https://docs.docker.com/ai/sandboxes/configuration/credentials/#stored-secrets):
+
+```console
+$ sbx secret set github --command 'gh auth token'
+```
+
+## Configuration
+
+Sandboxes don't pick up user-level configuration from your host. Only
+project-level configuration in the working directory is available inside the
+sandbox. See
+[Why doesn't the sandbox use my user-level agent configuration?](https://docs.docker.com/ai/sandboxes/faq/#why-doesnt-the-sandbox-use-my-user-level-agent-configuration)
+for workarounds.
+
+Copilot is configured to trust the workspace directory by default, so it
+operates without repeated confirmations for workspace files.
+
+### Default startup command
+
+Without extra args, the sandbox runs:
+
+```text
+copilot --yolo
+```
+
+Arguments after `--` are added after the default flags when the first one is
+itself a flag (begins with `-`), so `--yolo` is preserved:
+
+```console
+$ sbx run copilot -- -p "review this PR"   # runs copilot --yolo -p "review this PR"
+```
+
+When the first argument is a bare word — a subcommand or prompt — it replaces
+the defaults instead.
+
+## Base image
+
+Template: `docker/sandbox-templates:copilot`
+
+Preconfigured to trust the workspace directory.
+
+See [Customize](https://docs.docker.com/ai/sandboxes/customize/) to pre-install tools or customize this
+environment.

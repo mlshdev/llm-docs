@@ -1,0 +1,25 @@
+> Commit-pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/tools/think/index.md](https://github.com/docker/docs/blob/dbad77a00e8352f30e663bec3eeae9fb31a19b4e/_vendor/github.com/docker/docker-agent/docs/tools/think/index.md)
+
+# Think Tool
+
+*Step-by-step reasoning scratchpad for planning and decision-making.*
+
+## Overview
+
+The think tool is a reasoning scratchpad that lets agents think step-by-step before acting. The agent can write its thoughts without producing visible output to the user — ideal for planning complex tasks, breaking down problems, and reasoning through multi-step solutions.
+
+This is a lightweight tool with no side effects. It is most useful for models that lack built-in reasoning or thinking capabilities (e.g., smaller or older models). For models that already support native thinking — such as Claude with extended thinking, OpenAI o-series, or Gemini with a thinking budget — this tool is unnecessary since the model can reason internally.
+
+## Configuration
+
+```yaml
+toolsets:
+  - type: think
+```
+
+No configuration options.
+
+> \[!TIP]
+> **When to use**
+>
+> Use the think tool with models that don't have native reasoning capabilities. If your model already supports a [thinking budget](https://docs.docker.com/ai/docker-agent/configuration/models/#thinking-budget), you likely don't need this tool.

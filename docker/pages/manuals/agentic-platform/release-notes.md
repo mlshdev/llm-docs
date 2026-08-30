@@ -1,0 +1,28 @@
+> Commit-pinned source for Docker main: [content/manuals/agentic-platform/release-notes.md](https://github.com/docker/docs/blob/dbad77a00e8352f30e663bec3eeae9fb31a19b4e/content/manuals/agentic-platform/release-notes.md)
+
+# Docker Agentic Platform release notes
+
+## August 27, 2026
+
+- Added Groq and xAI credentials under **Secrets** for OpenCode sandboxes.
+
+## August 26, 2026
+
+Docker Agentic Platform is available for running agent and tool workloads in
+sandboxes hosted on Docker-managed cloud infrastructure.
+
+The initial release includes:
+
+- Predefined sandbox types for Claude Code, Codex, OpenCode, Copilot, and
+  Gemini CLI
+- A live terminal for interacting with the workload running in a sandbox
+- Pause, resume, and delete controls for sandboxes
+- Automatic sandbox stop or deletion after a timer from 1 to 24 hours
+- Predefined MCP servers and custom servers added by URL, with connection and
+  authorization flows
+- Provider and service credential management under **Secrets**, with values
+  kept outside sandboxes
+- Read-only kit policies that apply automatically, Docker-managed Open and
+  Balanced user policies, selectable custom policies, and deny-over-allow
+  precedence
+- Metered sandbox compute with selectable instance sizes

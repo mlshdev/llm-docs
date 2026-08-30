@@ -1,0 +1,125 @@
+> Commit-pinned source for Docker main: [content/manuals/ai/gordon/_index.md](https://github.com/docker/docs/blob/dbad77a00e8352f30e663bec3eeae9fb31a19b4e/content/manuals/ai/gordon/_index.md)
+
+# Gordon
+
+**Gordon requirements**
+
+- Requires: Docker Desktop [4.74.0](https://docs.docker.com/desktop/release-notes/#4740) or later
+
+Gordon is an AI-powered assistant that takes action on your Docker workflows.
+It analyzes your environment, proposes solutions, and executes commands with
+your permission.
+
+## What Gordon does
+
+Gordon takes action to help you with Docker tasks:
+
+- Explains Docker concepts and commands
+- Searches Docker documentation and web resources for solutions
+- Writes and modifies Dockerfiles following best practices
+- Debugs container failures by reading logs and proposing fixes
+- Manages containers, images, volumes, and networks
+
+Gordon proposes every action before executing. You approve what it does.
+
+## Where to use Gordon
+
+Gordon is available on four surfaces:
+
+- Open the Gordon view from the Docker Desktop sidebar to run Docker commands
+  with your approval. See [Using Gordon in Docker
+  Desktop](https://docs.docker.com/ai/gordon/how-to/docker-desktop/).
+- Run `docker ai` in the terminal to use the full assistant from the command
+  line. See [Using Gordon via CLI](https://docs.docker.com/ai/gordon/how-to/cli/).
+- Select the Gordon icon on any repository page at
+  [hub.docker.com](https://hub.docker.com) to ask about a repository's
+  images, tags, and metadata. Hand off to Docker Desktop to take action.
+- Select the Gordon icon on any page at
+  [docs.docker.com](https://docs.docker.com) to ask Docker questions.
+
+Docker Desktop and the CLI count against your Gordon plan's [usage
+limits](https://docs.docker.com/ai/gordon/usage-limits/). Gordon on Docker Hub and docs.docker.com is free
+and does not require a Docker account or a Docker Desktop install. It has
+its own shared public usage limit and does not access your Docker
+environment.
+
+## Get started
+
+### Prerequisites
+
+Before you begin:
+
+- Docker Desktop 4.74 or later
+- Sign in to your Docker account
+
+> \[!NOTE]
+> Gordon is enabled by default for signed-in Docker users. If your account
+> belongs to an organization with a Business subscription, access requires two
+> additional steps:
+>
+> 1. Contact Docker Support to activate Gordon for your organization. Docker
+>    will confirm when activation is complete.
+> 2. Once confirmed, an organization administrator must turn on Gordon via
+>    [Settings Management](https://docs.docker.com/enterprise/security/hardened-desktop/settings-management/).
+>    Set **Enable Gordon** to **Enabled** or **Always enabled**. Ensure all
+>    Settings Management prerequisites are met for the setting to take effect
+>    on Docker Desktop clients.
+
+### Quick start
+
+**Docker Desktop**
+
+1. Open Docker Desktop.
+2. Select **Gordon** in the sidebar.
+3. Select your project directory.
+4. Type a question: "What containers are running?"
+
+![Gordon running in Docker Desktop](https://raw.githubusercontent.com/docker/docs/dbad77a00e8352f30e663bec3eeae9fb31a19b4e/content/manuals/ai/gordon/images/gordon_gui.avif)
+
+5. Review Gordon's proposed actions and approve.
+
+**CLI**
+
+1. Open your terminal and run:
+
+   ```console
+   $ docker ai
+   ```
+
+   This opens the Terminal User Interface (TUI) for Gordon.
+
+2. Type a question: "what containers are running?" and press <kbd>Enter</kbd>.
+
+![Gordon running in the terminal](https://raw.githubusercontent.com/docker/docs/dbad77a00e8352f30e663bec3eeae9fb31a19b4e/content/manuals/ai/gordon/images/gordon_tui.avif)
+
+3. Review Gordon's proposed actions and approve by typing `y`.
+
+### Permissions
+
+By default, Gordon asks for approval before executing actions. You can approve
+individual actions or allow all actions for the current session.
+
+![Gordon permission request](https://raw.githubusercontent.com/docker/docs/dbad77a00e8352f30e663bec3eeae9fb31a19b4e/content/manuals/ai/gordon/images/gordon_permissions_prompt.avif)
+
+Permissions reset for each session. To configure default permissions or enable
+auto-approve mode, see [Permissions](https://docs.docker.com/ai/gordon/how-to/permissions/).
+
+### Try these examples
+
+Container inspection:
+
+```console
+$ docker ai "show me logs from my nginx container"
+```
+
+Dockerfile review:
+
+```console
+$ docker ai "review my Dockerfile for best practices"
+```
+
+Image management:
+
+```console
+$ docker ai "list my local images and their sizes"
+```

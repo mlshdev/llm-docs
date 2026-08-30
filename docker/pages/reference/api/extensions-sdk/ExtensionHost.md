@@ -1,0 +1,51 @@
+> Commit-pinned source for Docker main: [content/reference/api/extensions-sdk/ExtensionHost.md](https://github.com/docker/docs/blob/dbad77a00e8352f30e663bec3eeae9fb31a19b4e/content/reference/api/extensions-sdk/ExtensionHost.md)
+
+# Interface: ExtensionHost
+
+**`Since`**
+
+0.2.0
+
+## Properties
+
+### cli
+
+• `Readonly` **cli**: [`ExtensionCli`](https://docs.docker.com/reference/api/extensions-sdk/ExtensionCli/)
+
+Executes a command in the host.
+
+For example, execute the shipped binary `kubectl -h` command in the host:
+
+```typescript
+await ddClient.extension.host.cli.exec("kubectl", ["-h"]);
+```
+
+***
+
+Streams the output of the command executed in the backend container or in the host.
+
+Provided the `kubectl` binary is shipped as part of your extension, you can spawn the `kubectl -h` command in the host:
+
+```typescript
+await ddClient.extension.host.cli.exec("kubectl", ["-h"], {
+           stream: {
+             onOutput(data): void {
+                 // As we can receive both `stdout` and `stderr`, we wrap them in a JSON object
+                 JSON.stringify(
+                   {
+                     stdout: data.stdout,
+                     stderr: data.stderr,
+                   },
+                   null,
+                   "  "
+                 );
+             },
+             onError(error: any): void {
+               console.error(error);
+             },
+             onClose(exitCode: number): void {
+               console.log("onClose with exit code " + exitCode);
+             },
+           },
+         });
+```

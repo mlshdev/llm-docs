@@ -20,6 +20,12 @@
       "releasePublishedAt": "2026-08-12T20:12:23Z",
       "sourceCommit": "cade97a52ebdf9dbf9e81de8009015776837a074"
     },
+    "docker": {
+      "tag": "main",
+      "branch": "main",
+      "sourceCommit": "dbad77a00e8352f30e663bec3eeae9fb31a19b4e",
+      "sourceCommittedAt": "2026-08-28T14:48:42Z"
+    },
     "grafana": {
       "tag": "v13.2.0",
       "releaseId": 372341438,

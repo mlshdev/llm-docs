@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "project": "docker",
+  "title": "Docker",
+  "repository": "docker/docs",
+  "tag": "main",
+  "branch": "main",
+  "sourceCommittedAt": "2026-08-28T14:48:42Z",
+  "sourceCommit": "dbad77a00e8352f30e663bec3eeae9fb31a19b4e",
+  "documentCount": 1638,
+  "notes": [
+    "Docker tracks the latest main-branch commit because docker/docs does not publish current releases.",
+    "Hugo content and vendored Markdown mounts are normalized without executing Hugo; includes and documentation shortcodes are expanded into plain Markdown.",
+    "Docker and sbx CLI references, OpenAPI endpoints, glossary entries, and sample indexes are generated from data pinned in the same source archive.",
+    "Non-rendered stubs, redirects, assets, and include-only fragments are omitted."
+  ]
+}

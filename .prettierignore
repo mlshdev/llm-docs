@@ -4,6 +4,7 @@ _site/
 traefik/
 netbird/
 podman/
+docker/
 victoriametrics/
 victorialogs/
 victoriametrics-datasource/

@@ -1,0 +1,41 @@
+> Commit-pinned source for Docker main: [content/guides/lab-docker-agent.md](https://github.com/docker/docs/blob/dbad77a00e8352f30e663bec3eeae9fb31a19b4e/content/guides/lab-docker-agent.md)
+
+# Lab: Getting Started with Docker Agent
+
+This lab walks you through building intelligent agents with Docker Agent. You'll learn beginner
+agent concepts, then build sophisticated multi-agent teams that handle complex
+real-world tasks. Learn how to create, share, and orchestrate AI agents with
+Docker.
+
+## Launch the lab
+
+```console
+$ docker compose -p labspace -f oci://dockersamples/labspace-cagent up -d
+```
+
+Open <http://localhost> in your browser.
+
+```console
+$ docker compose -p labspace down
+```
+
+## What you'll learn
+
+- Create simple agents with Docker Agent
+- Use built-in generic agentic tools for common tasks
+- Integrate MCP servers from the MCP Toolkit
+- Share agents using the Docker Registry
+- Build multi-agent systems for complex workflows
+- Use Docker Model Runner with Docker Agent (preview)
+
+## Modules
+
+| # | Module                     | Description                                             |
+| - | -------------------------- | ------------------------------------------------------- |
+| 1 | Introduction               | Overview of Docker Agent and intelligent agent concepts |
+| 2 | Getting Started            | Create your first agent with Docker Agent               |
+| 3 | Using Built-in Tools       | Leverage the generic agentic tools in Docker Agent      |
+| 4 | Using MCP                  | Integrate MCP servers from the MCP Toolkit              |
+| 5 | Sharing Agents             | Package and share agents via Docker Registry            |
+| 6 | Introduction to Sub-agents | Build multi-agent systems with sub-agent orchestration  |
+| 7 | Conclusion                 | Summary and next steps                                  |

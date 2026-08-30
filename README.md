@@ -1,12 +1,13 @@
-# Release-pinned LLM documentation
+# Source-pinned LLM documentation
 
-This repository converts documentation from stable upstream releases into deterministic, LLM-friendly Markdown. Each upstream has its own directory with normalized pages, `llms.txt`, `llms-full.txt`, a provenance manifest, and its upstream license.
+This repository converts documentation from immutable upstream commits into deterministic, LLM-friendly Markdown. Projects track stable releases unless explicitly documented otherwise. Each upstream has its own directory with normalized pages, `llms.txt`, `llms-full.txt`, a provenance manifest, and its upstream license.
 
 ## Included projects
 
 - [Traefik Proxy](https://github.com/traefik/traefik)
 - [NetBird](https://github.com/netbirdio/netbird)
 - [Podman](https://github.com/podman-container-tools/podman)
+- [Docker](https://github.com/docker/docs)
 - [Grafana](https://github.com/grafana/grafana)
 - [VictoriaMetrics](https://github.com/VictoriaMetrics/VictoriaMetrics)
 - [VictoriaLogs](https://github.com/VictoriaMetrics/VictoriaLogs)
@@ -20,6 +21,7 @@ This repository converts documentation from stable upstream releases into determ
 - Drafts and prereleases are ignored.
 - The GitHub Actions workflow polls public GitHub releases every 15 minutes because GitHub cannot subscribe one repository directly to release events from unrelated repositories.
 - Release source is downloaded from immutable tags and recorded with the resolved commit SHA in `sources.lock.json`.
+- Docker tracks the latest `docker/docs` `main` commit because that repository does not publish current GitHub releases or release tags.
 - NetBird public documentation is maintained in the separate, untagged `netbirdio/docs` repository. A NetBird update is accepted only after that repository contains the exact `Update API pages with <tag>` commit. Until then, the previous complete product/docs pair remains published.
 - Generated files are committed so GitHub, raw-content clients, and local tools all expose the same corpus. The same files are published through GitHub Pages.
 
@@ -36,13 +38,14 @@ llms-full.txt
   pages/
 ```
 
-Project directories are named after the identifiers in `config/sources.json`: `traefik`, `netbird`, `podman`, `grafana`, `victoriametrics`, `victorialogs`, `victoriametrics-datasource`, `victorialogs-datasource`, `vmestimator`, and `zitadel`.
+Project directories are named after the identifiers in `config/sources.json`: `traefik`, `netbird`, `podman`, `docker`, `grafana`, `victoriametrics`, `victorialogs`, `victoriametrics-datasource`, `victorialogs-datasource`, `vmestimator`, and `zitadel`.
 
 ## Source-specific conversion
 
 - Traefik follows `docs/mkdocs.yml` navigation from the release tag and expands MkDocs include fragments.
 - NetBird converts MDX through a fail-closed AST transform with explicit handling for its documentation components. It includes public docs from the release-matched docs commit and technical architecture Markdown from the product tag.
 - Podman templates are expanded by a non-executing TypeScript implementation of the tagged repository's preprocessing rules before collecting command/man-page Markdown, tutorials, bindings, and operational documentation.
+- Docker follows the Hugo content tree and vendored module mounts at the pinned `docker/docs` commit, expands its documentation shortcodes, and generates CLI, OpenAPI, glossary, and sample reference pages from checked-in data without executing Hugo or upstream code.
 - Grafana walks the Hugo documentation tree under `docs/sources`, resolves `relref`, `ref:`, and shared-snippet references against the pages it publishes, expands the shortcodes the manual uses, and rewrites version placeholders to the release being generated.
 - VictoriaMetrics, VictoriaLogs, and vmestimator follow the Hugo `menu.docs` navigation declared in `docs/`, inline the fragments that pages pull in with `{{% content %}}`, and expand the remaining shortcodes (`available_from`, `deprecated_from`, `collapse`, `section`) into plain Markdown.
 - The VictoriaMetrics and VictoriaLogs Grafana datasources publish their documentation as repository Markdown; their pages keep the release README and `docs/` guides with Hugo front matter and site-relative links resolved.
