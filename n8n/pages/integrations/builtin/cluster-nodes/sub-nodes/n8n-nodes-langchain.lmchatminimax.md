@@ -1,0 +1,46 @@
+> Commit-pinned source for n8n main: [docs/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatminimax.md](https://github.com/n8n-io/n8n-docs/blob/0ece31e57a42e63cf2a2c7f9a33b42888e09a5b3/docs/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatminimax.md)
+
+# MiniMax Chat Model node <a id="minimax-chat-model-node"></a>
+
+Use the MiniMax Chat Model node to use MiniMax's chat models with conversational agents[^1].
+
+On this page, you'll find the node parameters for the MiniMax Chat Model node, and links to more resources.
+
+> **Info**
+> **Credentials**
+>
+> You can find authentication information for this node [here](https://docs.n8n.io/integrations/builtin/credentials/minimax).
+
+> **Info**
+> **Parameter resolution in sub-nodes**
+>
+> Sub-nodes behave differently to other nodes when processing multiple items using an expression.
+>
+> Most nodes, including root nodes, take any number of items as input, process these items, and output the results. You can use expressions to refer to input items, and the node resolves the expression for each item in turn. For example, given an input of five `name` values, the expression `{{ $json.name }}` resolves to each name in turn.
+>
+> In sub-nodes, the expression always resolves to the first item. For example, given an input of five `name` values, the expression `{{ $json.name }}` always resolves to the first name.
+
+## Node parameters <a id="node-parameters"></a>
+
+- **Model**: Select the model that generates the completion. Refer to [MiniMax's model documentation](https://platform.minimax.io/docs/guides/models-intro) for the available models.
+
+## Node options <a id="node-options"></a>
+
+- **Hide Thinking**: When turned on (default), the node strips `<think>` tags from the model's response. Turn this off to include the model's reasoning in the output.
+- **Maximum Number of Tokens**: Enter the maximum number of tokens used, which sets the completion length.
+- **Sampling Temperature**: Use this option to control the randomness of the sampling process. A higher temperature creates more diverse sampling, but increases the risk of hallucinations.
+- **Timeout**: Enter the maximum request time in milliseconds.
+- **Max Retries**: Enter the maximum number of times to retry a request.
+- **Top P**: Use this option to set the probability the completion should use. Use a lower value to ignore less probable options.
+
+## Templates and examples <a id="templates-and-examples"></a>
+
+[Browse MiniMax Chat Model node documentation integration templates](https://n8n.io/integrations/minimax-chat-model) or [search all templates](https://n8n.io/workflows/)
+
+## Related resources <a id="related-resources"></a>
+
+Refer to [MiniMax's documentation](https://platform.minimax.io/docs/guides/models-intro) for more information about the service.
+
+View n8n's [Advanced AI](https://docs.n8n.io/build/integrate-ai) documentation.
+
+[^1]: AI agents are artificial intelligence systems capable of responding to requests, making decisions, and performing real-world tasks for users. They use large language models (LLMs) to interpret user input and make decisions about how to best process requests using the information and resources they have available.

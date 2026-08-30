@@ -1,6 +1,7 @@
 traefik/** linguist-generated=true
 netbird/** linguist-generated=true
 podman/** linguist-generated=true
+n8n/** linguist-generated=true
 victoriametrics/** linguist-generated=true
 llms-full.txt linguist-generated=true
 **/llms-full.txt linguist-generated=true

@@ -5,6 +5,7 @@ traefik/
 netbird/
 podman/
 docker/
+n8n/
 victoriametrics/
 victorialogs/
 victoriametrics-datasource/

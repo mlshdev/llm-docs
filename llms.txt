@@ -8,6 +8,7 @@
 - [NetBird v0.77.1](netbird/llms.txt): [full corpus](netbird/llms-full.txt), [manifest](netbird/manifest.json)
 - [Podman v6.1.0](podman/llms.txt): [full corpus](podman/llms-full.txt), [manifest](podman/manifest.json)
 - [Docker main](docker/llms.txt): [full corpus](docker/llms-full.txt), [manifest](docker/manifest.json)
+- [n8n main](n8n/llms.txt): [full corpus](n8n/llms-full.txt), [manifest](n8n/manifest.json)
 - [Grafana v13.2.0](grafana/llms.txt): [full corpus](grafana/llms-full.txt), [manifest](grafana/manifest.json)
 - [VictoriaMetrics v1.150.0](victoriametrics/llms.txt): [full corpus](victoriametrics/llms-full.txt), [manifest](victoriametrics/manifest.json)
 - [VictoriaLogs v1.52.0](victorialogs/llms.txt): [full corpus](victorialogs/llms-full.txt), [manifest](victorialogs/manifest.json)
@@ -21,4 +22,5 @@
 - Drafts and prereleases are ignored.
 - Stable releases are discovered by scheduled GitHub API reconciliation.
 - Docker documentation tracks the latest `main` commit because docker/docs does not publish current GitHub releases.
+- n8n documentation tracks the latest `main` commit because n8n-docs does not publish releases or tags.
 - NetBird updates only after the separate documentation repository contains the API-generation commit for the same product tag.

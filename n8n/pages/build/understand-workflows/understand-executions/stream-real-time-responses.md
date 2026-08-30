@@ -1,0 +1,33 @@
+> Commit-pinned source for n8n main: [docs/build/understand-workflows/understand-executions/stream-real-time-responses.md](https://github.com/n8n-io/n8n-docs/blob/0ece31e57a42e63cf2a2c7f9a33b42888e09a5b3/docs/build/understand-workflows/understand-executions/stream-real-time-responses.md)
+
+# Stream real-time responses
+
+> **Info**
+> **Feature availability**
+>
+> Available on all plans.
+
+Streaming responses let you send data back to users as an AI Agent node generates it. This is useful for chatbots, where you want to show the user the answer as it's generated to provide a better user experience.
+
+You can enable streaming using either:
+
+- The [Chat Trigger](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger)
+- The [Webhook node](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.webhook)
+
+In both cases, set the node's **Response Mode** to **Streaming**.
+
+## Configure nodes for streaming <a id="configure-nodes-for-streaming"></a>
+
+To stream data, you need to add nodes to the workflow that support streaming output. Not all nodes support this feature.
+
+1. Choose a node that supports streaming, such as:
+   - [AI agent](https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent)
+   - [Respond to Webhook](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook)
+2. You can disable streaming in the options of these nodes. By default, they stream data whenever the executed trigger has its `Response Mode` set to `Streaming response`.
+
+## Important information <a id="important-information"></a>
+
+Keep in mind the following details when configuring streaming responses:
+
+- **Trigger**: Your trigger node must support streaming and have streaming configured. Without this, the workflow behaves according to your response mode settings.
+- **Node configuration**: Even with streaming enabled on the trigger, you need at least one node configured to stream data. Otherwise, your workflow will send no data.

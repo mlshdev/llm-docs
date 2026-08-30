@@ -1,0 +1,88 @@
+> Commit-pinned source for n8n main: [docs/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainllm.md](https://github.com/n8n-io/n8n-docs/blob/0ece31e57a42e63cf2a2c7f9a33b42888e09a5b3/docs/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainllm.md)
+
+# Basic LLM Chain node <a id="basic-llm-chain-node"></a>
+
+Use the Basic LLM Chain node to set the prompt that the model will use along with setting an optional parser for the response.
+
+On this page, you'll find the node parameters for the Basic LLM Chain node and links to more resources.
+
+> **Info**
+> **Examples and templates**
+>
+> For usage examples and templates to help you get started, refer to n8n's [Basic LLM Chain integrations](https://n8n.io/integrations/basic-llm-chain/) page.
+
+## Node parameters <a id="node-parameters"></a>
+
+### Prompt <a id="prompt"></a>
+
+Select how you want the node to construct the prompt (also known as the user's query or input from the chat).
+
+Choose from:
+
+- **Take from previous node automatically**: If you select this option, the node expects an input from a previous node called `chatInput`.
+- **Define below**: If you select this option, provide either static text or an expression for dynamic content to serve as the prompt in the **Prompt (User Message)** field.
+
+### Require Specific Output Format <a id="require-specific-output-format"></a>
+
+This parameter controls whether you want the node to require a specific output format. When turned on, n8n prompts you to connect one of these output parsers to the node:
+
+- [Auto-fixing Output Parser](https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserautofixing)
+- [Item List Output Parser](https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparseritemlist)
+- [Structured Output Parser](https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserstructured)
+
+## Chat Messages <a id="chat-messages"></a>
+
+Use **Chat Messages** when you're using a chat model to set a message.
+
+n8n ignores these options if you don't connect a chat model. Select the **Type Name or ID** you want the node to use:
+
+#### AI <a id="ai"></a>
+
+Enter a sample expected response in the **Message** field. The model will try to respond in the same way in its messages.
+
+#### System <a id="system"></a>
+
+Enter a system **Message** to include with the user input to help guide the model in what it should do.
+
+Use this option for things like defining tone, for example: `Always respond talking like a pirate`.
+
+#### User <a id="user"></a>
+
+Enter a sample user input. Using this with the AI option can help improve the output of the agent. Using both together provides a sample of an input and expected response (the **AI Message**) for the model to follow.
+
+Select one of these input types:
+
+- **Text**: Enter a sample user input as a text **Message**.
+- **Image (Binary)**: Select a binary input from a previous node. Enter the **Image Data Field Name** to identify which binary field from the previous node contains the image data.
+- **Image (URL)**: Use this option to feed an image in from a URL. Enter the **Image URL**.
+
+For both the **Image** types, select the **Image Details** to control how the model processes the image and generates its textual understanding. Choose from:
+
+- **Auto**: The model uses the auto setting, which looks at the image input size and decide if it should use the Low or High setting.
+- **Low**: The model receives a low-resolution 512px x 512px version of the image and represents the image with a budget of 65 tokens. This allows the API to return faster responses and consume fewer input tokens. Use this option for use cases that don't require high detail.
+- **High**: The model can access the low-resolution image and then creates detailed crops of input images as 512px squares based on the input image size. Each of the detailed crops uses twice the token budget (65 tokens) for a total of 129 tokens. Use this option for use cases that require high detail.
+
+## Templates and examples <a id="templates-and-examples"></a>
+
+[Browse Basic LLM Chain node documentation integration templates](https://n8n.io/integrations/basic-llm-chain) or [search all templates](https://n8n.io/workflows/)
+
+## Related resources <a id="related-resources"></a>
+
+Refer to [LangChain's documentation on Basic LLM Chains](https://js.langchain.com/docs/tutorials/llm_chain/) for more information about the service.
+
+View n8n's [Advanced AI](https://docs.n8n.io/build/integrate-ai) documentation.
+
+## Common issues <a id="common-issues"></a>
+
+Here are some common errors and issues with the Basic LLM Chain node and steps to resolve or troubleshoot them.
+
+### No prompt specified error <a id="no-prompt-specified-error"></a>
+
+This error displays when the **Prompt** is empty or invalid.
+
+You might see this error in one of two scenarios:
+
+1. When you've set the **Prompt** to **Define below** and haven't entered anything in the **Text** field.
+   - To resolve, enter a valid prompt in the **Text** field.
+2. When you've set the **Prompt** to **Connected Chat Trigger Node** and the incoming data has no field called `chatInput`.
+   - The node expects the `chatInput` field. If your previous node doesn't have this field, add an [Edit Fields (Set)](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.set) node to edit an incoming field name to `chatInput`.

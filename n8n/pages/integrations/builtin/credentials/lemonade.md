@@ -1,0 +1,30 @@
+> Commit-pinned source for n8n main: [docs/integrations/builtin/credentials/lemonade.md](https://github.com/n8n-io/n8n-docs/blob/0ece31e57a42e63cf2a2c7f9a33b42888e09a5b3/docs/integrations/builtin/credentials/lemonade.md)
+
+# Lemonade credentials <a id="lemonade-credentials"></a>
+
+You can use these credentials to authenticate the following nodes:
+
+- [Lemonade Chat Model](https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatlemonade)
+- [Lemonade Model](https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmlemonade)
+- [Embeddings Lemonade](https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingslemonade)
+
+## Prerequisites <a id="prerequisites"></a>
+
+Lemonade runs AI inference locally. These nodes connect directly to a Lemonade server process running on your machine or network. [Install and run Lemonade server](https://lemonade-server.ai/install_options.html) before creating credentials in n8n.
+
+## Supported authentication methods <a id="supported-authentication-methods"></a>
+
+- Lemonade server connection
+
+## Related resources <a id="related-resources"></a>
+
+Refer to [Lemonade's documentation](https://lemonade-server.ai/docs/) for more information about the service.
+
+View n8n's [Advanced AI](https://docs.n8n.io/build/integrate-ai) documentation.
+
+## Configuring Lemonade server connection <a id="configuring-lemonade-server-connection"></a>
+
+To configure this credential, you'll need:
+
+- **Base URL**: The URL of your Lemonade server, including the API path. The default for a local installation is `http://localhost:8000/api/v1`. If you're running n8n in Docker, use `http://host.docker.internal:8000/api/v1` instead. If your Lemonade server is on a remote machine, replace `localhost` with the server's address.
+- **API key** (optional): Optional API key for Lemonade server authentication. This isn't required for default Lemonade installation.

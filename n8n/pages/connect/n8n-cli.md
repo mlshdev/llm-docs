@@ -1,0 +1,179 @@
+> Commit-pinned source for n8n main: [docs/connect/n8n-cli.md](https://github.com/n8n-io/n8n-docs/blob/0ece31e57a42e63cf2a2c7f9a33b42888e09a5b3/docs/connect/n8n-cli.md)
+
+# Getting started with n8n CLI <a id="getting-started-with-n8n-cli"></a>
+
+**n8n CLI** is a lightweight command-line client that communicates with a running n8n instance through the [n8n API](https://docs.n8n.io/connect/n8n-api). It can run from any machine with network access and authenticates using an API key.
+
+Use the API CLI to:
+
+- List and inspect workflows
+- Create a workflow from JSON
+- Check recent executions
+- Create a credential
+- Manage projects
+
+All operations respect the permissions of the user and the scope of the API key.
+
+## n8n CLI versus server CLI <a id="n8n-cli-versus-server-cli"></a>
+
+If you need to manage your n8n instance (backups, license management, emergency resets), see the [Server CLI](https://docs.n8n.io/deploy/host-n8n/configure-n8n/use-the-command-line), a built-in tool that runs on the same machine as n8n.
+
+| Aspect                   | n8n CLI                                | Server CLI                               |
+| ------------------------ | -------------------------------------- | ---------------------------------------- |
+| **Runs from**            | Any machine with network access        | Same machine as n8n                      |
+| **Authentication**       | API key                                | Direct database access                   |
+| **Requires n8n running** | Yes                                    | No (not required for most operations)    |
+| **Best for**             | Developers, integrations, AI agents    | Instance operators, backups, emergencies |
+| **Permissions**          | Respects user roles and API key scopes | Bypasses access control                  |
+
+## Install n8n-cli <a id="install-n8n-cli"></a>
+
+```bash
+# Use directly with npx (zero install) <a id="use-directly-with-npx-zero-install"></a>
+npx @n8n/cli workflow list
+
+# Or install globally <a id="or-install-globally"></a>
+npm install -g @n8n/cli
+```
+
+## Connect to your instance <a id="connect-to-your-instance"></a>
+
+```bash
+n8n-cli config set-url https://your-instance.n8n.cloud
+n8n-cli config set-api-key YOUR_API_KEY
+n8n-cli config show
+```
+
+- The configuration is saved to `~/.n8n-cli/config.json` with restricted file permissions (`0600`).
+- Get your API key from **n8n > Settings > n8n API**
+
+Alternatively, skip the configuration file and use environment variables:
+
+```bash
+export N8N_URL=https://your-instance.n8n.cloud
+export N8N_API_KEY=your_api_key
+```
+
+## Inline flags <a id="inline-flags"></a>
+
+```bash
+n8n-cli --url=https://my-n8n.app.n8n.cloud --api-key=n8n_api_xxxxx workflow list
+```
+
+### Resolution order <a id="resolution-order"></a>
+
+1. Command-line flags (`--url`, `--api-key`)
+2. Environment variables (`N8N_URL`, `N8N_API_KEY`)
+3. Config file (`~/.n8n-cli/config.json`)
+
+## Commands <a id="commands"></a>
+
+Every command supports `--help` for detailed usage.
+
+| Topic               | Commands                                                                                           |
+| ------------------- | -------------------------------------------------------------------------------------------------- |
+| `workflow`          | `list`, `get`, `create`, `update`, `delete`, `activate`, `deactivate`, `tags`, `transfer`          |
+| `execution`         | `list`, `get`, `retry`, `stop`, `delete`                                                           |
+| `credential`        | `list`, `get`, `schema`, `create`, `delete`, `transfer`                                            |
+| `project`           | `list`, `get`, `create`, `update`, `delete`, `members`, `add-member`, `remove-member`              |
+| `tag`               | `list`, `create`, `update`, `delete`                                                               |
+| `variable`          | `list`, `create`, `update`, `delete`                                                               |
+| `data-table`        | `list`, `get`, `create`, `delete`, `rows`, `add-rows`, `update-rows`, `upsert-rows`, `delete-rows` |
+| `user`              | `list`, `get`                                                                                      |
+| `config`            | `set-url`, `set-api-key`, `show`                                                                   |
+| `source-control`    | `pull`                                                                                             |
+| `package (preview)` | `export`, `import`                                                                                 |
+| `skill`             | `install`                                                                                          |
+| `audit`             | (top-level)                                                                                        |
+| `login` / `logout`  | (top-level)                                                                                        |
+
+## Output formats <a id="output-formats"></a>
+
+All commands support three output formats via `--format`:
+
+| Format  | Flag                       | Use when                                |
+| ------- | -------------------------- | --------------------------------------- |
+| Table   | -`-format=table` (default) | You want human-readable terminal output |
+| JSON    | `--format=json`            | Piping to jq, programmatic use          |
+| ID-only | `--format=id-only`         | Piping to xargs, scripting              |
+
+### Examples <a id="examples"></a>
+
+- Human-readable table
+
+  ```bash
+  n8n-cli workflow list
+  ```
+
+- JSON for scripts
+
+  ```bash
+  n8n-cli workflow list --format=json | jq '.[] | select(.active) | .id'
+  ```
+
+- Pipe IDs into another command
+
+  ```bash
+  n8n-cli workflow list --format=id-only | xargs -I{} n8n-cli workflow deactivate {}
+  ```
+
+## Use as skill with Claude Code <a id="use-as-skill-with-claude-code"></a>
+
+Install the skill so Claude always knows how to use n8n-cli:
+
+```bash
+n8n-cli skill install --global
+```
+
+Then in Claude Code, type `/n8n-cli` to load it. Claude can now create, update, and manage workflows on your behalf without requiring an MCP.
+
+## Examples <a id="examples"></a>
+
+### List and inspect workflows <a id="list-and-inspect-workflows"></a>
+
+```bash
+n8n-cli workflow list
+n8n-cli workflow get <id>
+```
+
+### Create a workflow from JSON <a id="create-a-workflow-from-json"></a>
+
+```bash
+cat workflow.json | n8n-cli workflow create --stdin
+```
+
+### Check recent executions <a id="check-recent-executions"></a>
+
+```bash
+n8n-cli execution list --status=error --limit=10
+```
+
+### Create a credential <a id="create-a-credential"></a>
+
+```bash
+n8n-cli credential schema gmailOAuth2  # see required fields first
+n8n-cli credential create --type=gmailOAuth2 --name='My Gmail' --file=cred.json
+```
+
+### Manage projects <a id="manage-projects"></a>
+
+```bash
+n8n-cli project create --name="My Project"
+n8n-cli workflow transfer <id> --project=<projectId>
+```
+
+### Export and import packages <a id="export-and-import-packages"></a>
+
+> **Info**
+> **Preview status**
+>
+> The `package` command is in Preview and may change in future releases.
+
+```bash
+n8n-cli package export --workflow-id=<workflow-id> --output=export.n8np
+n8n-cli package export --project-id=<project-id> --output=project.n8np
+n8n-cli package import --file=export.n8np --workflow-conflict-policy=fail
+n8n-cli package import --file=export.n8np --project-id=<project-id> --workflow-conflict-policy=skip
+```
+
+See [n8n packages](https://docs.n8n.io/build/manage-workflows/n8n-packages) for what makes up a package, and [Import a package](https://docs.n8n.io/build/manage-workflows/n8n-packages/import-a-package) for every available flag.
