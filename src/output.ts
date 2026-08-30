@@ -300,7 +300,7 @@ function renderProjectIndex(build: ProjectBuild): string {
     `> Documentation generated from ${build.lock.branch ? `the latest \`${build.lock.branch}\` branch commit of` : "the latest stable release of"} [${build.project.repository}](https://github.com/${build.project.repository}) and pinned to immutable source commit \`${build.lock.sourceCommit}\`.`,
     "",
     `- [Full documentation](llms-full.txt): Complete normalized corpus for ${build.project.title} ${build.lock.tag}.`,
-    "- [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.",
+    `- [Provenance manifest](manifest.json): ${build.lock.branch ? "Source ref" : "Release"}, commit, document count, and generation notes.`,
   ];
   for (const note of build.notes) {
     lines.push(`- ${note}`);
