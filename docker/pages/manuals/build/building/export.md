@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/build/building/export.md](https://github.com/docker/docs/blob/652986790ecf1ddf1081149f29da132a95207a04/content/manuals/build/building/export.md)
+> Commit-pinned source for Docker main: [content/manuals/build/building/export.md](https://github.com/docker/docs/blob/ca60e92629079de412f38632876ab208d84267ef/content/manuals/build/building/export.md)
 
 Did you know that you can use Docker to build your application to standalone
 binaries? Sometimes, you don’t want to package and distribute your application

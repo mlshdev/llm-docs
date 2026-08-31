@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/integrate-ai/test-and-improve-ai-workflows/use-metrics-to-measure-quality.md](https://github.com/n8n-io/n8n-docs/blob/0ece31e57a42e63cf2a2c7f9a33b42888e09a5b3/docs/build/integrate-ai/test-and-improve-ai-workflows/use-metrics-to-measure-quality.md)
+> Commit-pinned source for n8n main: [docs/build/integrate-ai/test-and-improve-ai-workflows/use-metrics-to-measure-quality.md](https://github.com/n8n-io/n8n-docs/blob/afebf5d9c6ff327fa215b3e6f99627e11fc9d3f2/docs/build/integrate-ai/test-and-improve-ai-workflows/use-metrics-to-measure-quality.md)
 
 # Metric-based evaluations <a id="metric-based-evaluations"></a>
 
@@ -41,7 +41,7 @@ Follow the [setup instructions](https://docs.n8n.io/build/integrate-ai/test-and-
 
 The following steps use the same support ticket classification workflow from the light evaluation docs:
 
-![Light evaluation workflow](https://raw.githubusercontent.com/n8n-io/n8n-docs/0ece31e57a42e63cf2a2c7f9a33b42888e09a5b3/docs/build/.gitbook/assets/light-evaluation-workflow.png)
+![Light evaluation workflow](https://raw.githubusercontent.com/n8n-io/n8n-docs/afebf5d9c6ff327fa215b3e6f99627e11fc9d3f2/docs/build/.gitbook/assets/light-evaluation-workflow.png)
 
 ### 2. Add metrics to workflow <a id="2-add-metrics-to-workflow"></a>
 
@@ -65,7 +65,7 @@ For example:
 
 Calculating metrics can add latency and cost, so you may only want to do it when running an evaluation and avoid it when making a production execution. You can do this by putting the metric logic after a ['check if evaluating' operation](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.evaluation#check-if-evaluating).
 
-![Check if evaluating node](https://raw.githubusercontent.com/n8n-io/n8n-docs/0ece31e57a42e63cf2a2c7f9a33b42888e09a5b3/docs/build/.gitbook/assets/check-if-evaluating.png)
+![Check if evaluating node](https://raw.githubusercontent.com/n8n-io/n8n-docs/afebf5d9c6ff327fa215b3e6f99627e11fc9d3f2/docs/build/.gitbook/assets/check-if-evaluating.png)
 
 ### 3. Run evaluation and view results <a id="3-run-evaluation-and-view-results"></a>
 
@@ -77,7 +77,7 @@ You can see the results for each test case by clicking on the test run row. Clic
 
 On plans that support concurrency, **Run Test** is a split-button. The caret to the right opens a popover with a slider that controls how many test cases run at the same time.
 
-![](https://raw.githubusercontent.com/n8n-io/n8n-docs/0ece31e57a42e63cf2a2c7f9a33b42888e09a5b3/docs/build/.gitbook/assets/run-test-concurrency.png)
+![](https://raw.githubusercontent.com/n8n-io/n8n-docs/afebf5d9c6ff327fa215b3e6f99627e11fc9d3f2/docs/build/.gitbook/assets/run-test-concurrency.png)
 *The concurrency popover, with the slider at 3 of a maximum of 5 parallel test cases.*
 
 The default maximum depends on your plan:

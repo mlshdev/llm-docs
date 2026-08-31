@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_push.yaml](https://github.com/docker/docs/blob/652986790ecf1ddf1081149f29da132a95207a04/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_push.yaml)
+> Commit-pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_push.yaml](https://github.com/docker/docs/blob/ca60e92629079de412f38632876ab208d84267ef/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_push.yaml)
 
 # docker compose push
 

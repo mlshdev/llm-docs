@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/host-n8n/configure-n8n/set-up-task-runners.md](https://github.com/n8n-io/n8n-docs/blob/0ece31e57a42e63cf2a2c7f9a33b42888e09a5b3/docs/deploy/host-n8n/configure-n8n/set-up-task-runners.md)
+> Commit-pinned source for n8n main: [docs/deploy/host-n8n/configure-n8n/set-up-task-runners.md](https://github.com/n8n-io/n8n-docs/blob/afebf5d9c6ff327fa215b3e6f99627e11fc9d3f2/docs/deploy/host-n8n/configure-n8n/set-up-task-runners.md)
 
 # Set up task runners
 
@@ -17,7 +17,7 @@ This document describes how task runners work and how you can configure them.
 
 The task runner feature consists of these components: one or more task runners, a task broker, and a task requester.
 
-![Task runner overview](https://raw.githubusercontent.com/n8n-io/n8n-docs/0ece31e57a42e63cf2a2c7f9a33b42888e09a5b3/docs/deploy/.gitbook/assets/task-runner-concept%20\(1\).png)
+![Task runner overview](https://raw.githubusercontent.com/n8n-io/n8n-docs/afebf5d9c6ff327fa215b3e6f99627e11fc9d3f2/docs/deploy/.gitbook/assets/task-runner-concept%20\(1\).png)
 
 Task runners connect to the task broker using a websocket connection. A task requester submits a task request to the broker where an available task runner can pick it up for execution.
 
@@ -42,7 +42,7 @@ In internal mode, the n8n instance launches the task runner as a child process, 
 
 In external mode, a [launcher application](https://github.com/n8n-io/task-runner-launcher) launches task runners on demand and manages their lifecycle. Typically, this means that next to n8n you add a sidecar container running the [`n8nio/runners`](https://hub.docker.com/r/n8nio/runners) image containing the launcher, the JS task runner and the Python task runner. This sidecar container is independent from the n8n instance. The launcher exposes a health-check endpoint that it uses to monitor the task runner processes.
 
-![Task runner deployed as a side-car container](https://raw.githubusercontent.com/n8n-io/n8n-docs/0ece31e57a42e63cf2a2c7f9a33b42888e09a5b3/docs/deploy/.gitbook/assets/task-runner-external-mode.png)
+![Task runner deployed as a side-car container](https://raw.githubusercontent.com/n8n-io/n8n-docs/afebf5d9c6ff327fa215b3e6f99627e11fc9d3f2/docs/deploy/.gitbook/assets/task-runner-external-mode.png)
 
 When using [Queue mode](https://docs.n8n.io/deploy/host-n8n/configure-n8n/scaling/enable-queue-mode), each worker needs to have its own sidecar container for task runners.
 

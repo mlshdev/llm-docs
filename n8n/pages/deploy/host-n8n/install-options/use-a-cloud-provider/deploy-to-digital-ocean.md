@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-digital-ocean.md](https://github.com/n8n-io/n8n-docs/blob/0ece31e57a42e63cf2a2c7f9a33b42888e09a5b3/docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-digital-ocean.md)
+> Commit-pinned source for n8n main: [docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-digital-ocean.md](https://github.com/n8n-io/n8n-docs/blob/afebf5d9c6ff327fa215b3e6f99627e11fc9d3f2/docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-digital-ocean.md)
 
 # Hosting n8n on DigitalOcean <a id="hosting-n8n-on-digitalocean"></a>
 

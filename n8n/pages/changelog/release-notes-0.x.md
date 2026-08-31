@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/changelog/release-notes-0.x.md](https://github.com/n8n-io/n8n-docs/blob/0ece31e57a42e63cf2a2c7f9a33b42888e09a5b3/docs/changelog/release-notes-0.x.md)
+> Commit-pinned source for n8n main: [docs/changelog/release-notes-0.x.md](https://github.com/n8n-io/n8n-docs/blob/afebf5d9c6ff327fa215b3e6f99627e11fc9d3f2/docs/changelog/release-notes-0.x.md)
 
 # Release notes 0.x
 
@@ -1502,7 +1502,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.210.1...n8n@0.210
 >
 > When using [expressions](https://docs.n8n.io/build/work-with-data/expressions-versus-data-nodes), n8n will now offer you suggestions as you type.
 >
-> !["Animated GIF showing typeahead in action"](https://raw.githubusercontent.com/n8n-io/n8n-docs/0ece31e57a42e63cf2a2c7f9a33b42888e09a5b3/docs/changelog/.gitbook/assets/0.210.2-expressions-type-ahead.gif)
+> !["Animated GIF showing typeahead in action"](https://raw.githubusercontent.com/n8n-io/n8n-docs/afebf5d9c6ff327fa215b3e6f99627e11fc9d3f2/docs/changelog/.gitbook/assets/0.210.2-expressions-type-ahead.gif)
 
 ### Bug fixes <a id="bug-fixes"></a>
 
@@ -1722,7 +1722,7 @@ This release introduces a new inline expressions editor, and a new node: OpenAI.
 >
 > You can now quickly write expressions inline in a node parameter. You can still choose to open the full expressions editor.
 >
-> !["Screenshot of the inline expressions editors"](https://raw.githubusercontent.com/n8n-io/n8n-docs/0ece31e57a42e63cf2a2c7f9a33b42888e09a5b3/docs/changelog/.gitbook/assets/0.208.0-inline-expressions.png)
+> !["Screenshot of the inline expressions editors"](https://raw.githubusercontent.com/n8n-io/n8n-docs/afebf5d9c6ff327fa215b3e6f99627e11fc9d3f2/docs/changelog/.gitbook/assets/0.208.0-inline-expressions.png)
 
 - Add workflow sharing telemetry.
 - Core: allow for hiding page usage with environment variables (for upcoming feature)

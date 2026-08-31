@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/ways-of-building-workflows/ai-workflow-builder.md](https://github.com/n8n-io/n8n-docs/blob/0ece31e57a42e63cf2a2c7f9a33b42888e09a5b3/docs/build/ways-of-building-workflows/ai-workflow-builder.md)
+> Commit-pinned source for n8n main: [docs/build/ways-of-building-workflows/ai-workflow-builder.md](https://github.com/n8n-io/n8n-docs/blob/afebf5d9c6ff327fa215b3e6f99627e11fc9d3f2/docs/build/ways-of-building-workflows/ai-workflow-builder.md)
 
 # Use AI Workflow Builder
 
@@ -14,7 +14,7 @@ For details of pricing and availability of AI Workflow Builder, see [n8n Plans a
 2. **Monitor the build:** The builder provides real-time feedback through several phases.
 3. **Review and refine the generated workflow:** Review required credentials and other parameters. Refine the workflow using prompts.
 
-![AI Workflow Builder panel showing a generated workflow with a chat box for refining it](https://raw.githubusercontent.com/n8n-io/n8n-docs/0ece31e57a42e63cf2a2c7f9a33b42888e09a5b3/docs/build/.gitbook/assets/ai-workflow-builder.png)
+![AI Workflow Builder panel showing a generated workflow with a chat box for refining it](https://raw.githubusercontent.com/n8n-io/n8n-docs/afebf5d9c6ff327fa215b3e6f99627e11fc9d3f2/docs/build/.gitbook/assets/ai-workflow-builder.png)
 
 ### Commands you can run in the builder <a id="commands-you-can-run-in-the-builder"></a>
 

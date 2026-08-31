@@ -5,8 +5,8 @@
   "repository": "docker/docs",
   "tag": "main",
   "branch": "main",
-  "sourceCommittedAt": "2026-08-31T07:53:15Z",
-  "sourceCommit": "652986790ecf1ddf1081149f29da132a95207a04",
+  "sourceCommittedAt": "2026-08-31T08:31:03Z",
+  "sourceCommit": "ca60e92629079de412f38632876ab208d84267ef",
   "documentCount": 1638,
   "notes": [
     "Docker tracks the latest main-branch commit because docker/docs does not publish current releases.",

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/compose/compose-sdk.md](https://github.com/docker/docs/blob/652986790ecf1ddf1081149f29da132a95207a04/content/manuals/compose/compose-sdk.md)
+> Commit-pinned source for Docker main: [content/manuals/compose/compose-sdk.md](https://github.com/docker/docs/blob/ca60e92629079de412f38632876ab208d84267ef/content/manuals/compose/compose-sdk.md)
 
 # Using the Compose SDK
 

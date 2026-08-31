@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/connect/create-nodes/build-your-node/using-the-n8n-node-tool.md](https://github.com/n8n-io/n8n-docs/blob/0ece31e57a42e63cf2a2c7f9a33b42888e09a5b3/docs/connect/create-nodes/build-your-node/using-the-n8n-node-tool.md)
+> Commit-pinned source for n8n main: [docs/connect/create-nodes/build-your-node/using-the-n8n-node-tool.md](https://github.com/n8n-io/n8n-docs/blob/afebf5d9c6ff327fa215b3e6f99627e11fc9d3f2/docs/connect/create-nodes/build-your-node/using-the-n8n-node-tool.md)
 
 # Using the n8n-node tool <a id="using-the-n8n-node-tool"></a>
 
@@ -200,7 +200,7 @@ npm run dev
 
 Visit your `localhost:5678` to sign in to your n8n instance. If you open a workflow, your node appears in the nodes panel:
 
-![Trigger search panel in the workflow editor, listing a matching node in the results](https://raw.githubusercontent.com/n8n-io/n8n-docs/0ece31e57a42e63cf2a2c7f9a33b42888e09a5b3/docs/connect/.gitbook/assets/node_in_nodes_panel.png)
+![Trigger search panel in the workflow editor, listing a matching node in the results](https://raw.githubusercontent.com/n8n-io/n8n-docs/afebf5d9c6ff327fa215b3e6f99627e11fc9d3f2/docs/connect/.gitbook/assets/node_in_nodes_panel.png)
 
 From there, you can add it to your workflow and test the node's functionality as you develop.
 

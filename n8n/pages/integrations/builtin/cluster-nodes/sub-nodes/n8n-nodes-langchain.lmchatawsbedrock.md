@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatawsbedrock.md](https://github.com/n8n-io/n8n-docs/blob/0ece31e57a42e63cf2a2c7f9a33b42888e09a5b3/docs/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatawsbedrock.md)
+> Commit-pinned source for n8n main: [docs/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatawsbedrock.md](https://github.com/n8n-io/n8n-docs/blob/afebf5d9c6ff327fa215b3e6f99627e11fc9d3f2/docs/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatawsbedrock.md)
 
 # AWS Bedrock Chat Model node <a id="aws-bedrock-chat-model-node"></a>
 
@@ -27,7 +27,10 @@ On this page, you'll find the node parameters for the AWS Bedrock Chat Model nod
 - **Authentication**: Select the authentication method:
   - **AWS (IAM)**: Use an IAM access key. Select an **AWS** credential.
   - **AWS (Assume Role)**: Temporarily assume an IAM role. Select an **AWS (Assume Role)** credential.
-- **Model**: Select the model that generates the completion.
+- **Model**: Select the model or [inference profile](https://docs.aws.amazon.com/bedrock/latest/userguide/inference-profiles.html) that generates the completion. The dropdown lists on-demand foundation models and cross-region inference profiles together. The newest models (for example Claude Sonnet 4.x) are only available as inference profiles. If part of the list is missing, your IAM role may lack the `bedrock:ListFoundationModels` or `bedrock:ListInferenceProfiles` permission. You can also switch the field to **Expression** mode and enter a model ID, inference profile ID, or ARN directly.
+
+> **Info**
+> On node version 1.1, the dropdown shows one list at a time: use the **Model Source** parameter to switch between on-demand foundation models and inference profiles. Node version 1 only supports on-demand foundation models.
 
 Learn more about available models in the [Amazon Bedrock model documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/models-supported.html).
 

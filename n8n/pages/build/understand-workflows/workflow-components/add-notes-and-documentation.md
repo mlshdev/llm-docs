@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/understand-workflows/workflow-components/add-notes-and-documentation.md](https://github.com/n8n-io/n8n-docs/blob/0ece31e57a42e63cf2a2c7f9a33b42888e09a5b3/docs/build/understand-workflows/workflow-components/add-notes-and-documentation.md)
+> Commit-pinned source for n8n main: [docs/build/understand-workflows/workflow-components/add-notes-and-documentation.md](https://github.com/n8n-io/n8n-docs/blob/afebf5d9c6ff327fa215b3e6f99627e11fc9d3f2/docs/build/understand-workflows/workflow-components/add-notes-and-documentation.md)
 
 # Add notes and documentation
 
@@ -6,7 +6,7 @@ Sticky notes let you annotate and comment on your workflows.
 
 n8n recommends using sticky notes on template workflows[^1] to help other users understand your workflow.
 
-![A basic workflow with a sticky note attached](https://raw.githubusercontent.com/n8n-io/n8n-docs/0ece31e57a42e63cf2a2c7f9a33b42888e09a5b3/docs/build/.gitbook/assets/example-sticky-note.png)
+![A basic workflow with a sticky note attached](https://raw.githubusercontent.com/n8n-io/n8n-docs/afebf5d9c6ff327fa215b3e6f99627e11fc9d3f2/docs/build/.gitbook/assets/example-sticky-note.png)
 
 ## Create a sticky note <a id="create-a-sticky-note"></a>
 
@@ -27,10 +27,10 @@ Sticky notes are a core node. To add a new sticky note:
 To change the sticky note color:
 
 1. Hover over the sticky note.
-2. Select **Change color** ![Change Sticky Note color icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/0ece31e57a42e63cf2a2c7f9a33b42888e09a5b3/docs/build/.gitbook/assets/change-color.png).
+2. Select **Change color** ![Change Sticky Note color icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/afebf5d9c6ff327fa215b3e6f99627e11fc9d3f2/docs/build/.gitbook/assets/change-color.png).
 3. Choose from seven preset colors, or click the rainbow gradient button to select a custom color.
 
-![Color selector showing preset colors and custom color button](https://raw.githubusercontent.com/n8n-io/n8n-docs/0ece31e57a42e63cf2a2c7f9a33b42888e09a5b3/docs/build/.gitbook/assets/color-picker-popover.png)
+![Color selector showing preset colors and custom color button](https://raw.githubusercontent.com/n8n-io/n8n-docs/afebf5d9c6ff327fa215b3e6f99627e11fc9d3f2/docs/build/.gitbook/assets/color-picker-popover.png)
 
 ### Custom colors <a id="custom-colors"></a>
 

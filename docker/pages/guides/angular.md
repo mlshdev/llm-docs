@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/angular.md](https://github.com/docker/docs/blob/652986790ecf1ddf1081149f29da132a95207a04/content/guides/angular.md)
+> Commit-pinned source for Docker main: [content/guides/angular.md](https://github.com/docker/docs/blob/ca60e92629079de412f38632876ab208d84267ef/content/guides/angular.md)
 
 The Angular language-specific guide shows you how to containerize an Angular application using Docker, following best practices for creating efficient, production-ready containers.
 

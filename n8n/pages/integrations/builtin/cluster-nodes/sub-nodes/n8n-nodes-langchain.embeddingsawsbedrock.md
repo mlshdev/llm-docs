@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsawsbedrock.md](https://github.com/n8n-io/n8n-docs/blob/0ece31e57a42e63cf2a2c7f9a33b42888e09a5b3/docs/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsawsbedrock.md)
+> Commit-pinned source for n8n main: [docs/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsawsbedrock.md](https://github.com/n8n-io/n8n-docs/blob/afebf5d9c6ff327fa215b3e6f99627e11fc9d3f2/docs/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsawsbedrock.md)
 
 # Embeddings AWS Bedrock node <a id="embeddings-aws-bedrock-node"></a>
 
@@ -27,9 +27,15 @@ On this page, you'll find the node parameters for the Embeddings AWS Bedrock nod
 - **Authentication**: Select the authentication method:
   - **AWS (IAM)**: Use an IAM access key. Select an **AWS** credential.
   - **AWS (Assume Role)**: Temporarily assume an IAM role. Select an **AWS (Assume Role)** credential.
-- **Model**: Select the model to use to generate the embedding. If the dropdown is empty, your IAM role may not have the `bedrock:ListFoundationModels` permission. Switch the field to **Expression** mode and enter the model ID directly.
+- **Model**: Select the model or [inference profile](https://docs.aws.amazon.com/bedrock/latest/userguide/inference-profiles.html) that generates the embedding. The dropdown lists on-demand embedding models and embedding inference profiles together. If the dropdown is empty or incomplete, your IAM role may lack the `bedrock:ListFoundationModels` or `bedrock:ListInferenceProfiles` permission. Switch the field to **Expression** mode and enter the model or inference profile ID directly.
 
 Learn more about available models in the [Amazon Bedrock documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-bedrock.html).
+
+## Node options
+
+- **Additional Model Request Fields**: Enter model-specific request fields as JSON, for example Titan's `dimensions` and `normalize` or Cohere's `input_type` and `truncate`. Refer to the [AWS model parameters documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html) for the fields each model family supports.
+- **Max Retries**: Enter the maximum number of times to retry a request.
+- **Timeout**: Enter the maximum time in milliseconds to wait for a request to complete. Set it to `0` to disable the timeout.
 
 ## Templates and examples <a id="templates-and-examples"></a>
 
@@ -37,7 +43,7 @@ Learn more about available models in the [Amazon Bedrock documentation](https://
 
 ## Related resources <a id="related-resources"></a>
 
-Refer to [LangChains's AWS Bedrock embeddings documentation](https://js.langchain.com/docs/integrations/platforms/aws/#text-embedding-models) and the [AWS Bedrock documentation](https://docs.aws.amazon.com/bedrock/) for more information about AWS Bedrock.
+Refer to the [AWS Bedrock documentation](https://docs.aws.amazon.com/bedrock/) for more information about AWS Bedrock.
 
 View n8n's [Advanced AI](https://docs.n8n.io/build/integrate-ai) documentation.
 

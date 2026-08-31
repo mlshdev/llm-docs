@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/host-n8n/understand-the-architecture/understand-the-database.md](https://github.com/n8n-io/n8n-docs/blob/0ece31e57a42e63cf2a2c7f9a33b42888e09a5b3/docs/deploy/host-n8n/understand-the-architecture/understand-the-database.md)
+> Commit-pinned source for n8n main: [docs/deploy/host-n8n/understand-the-architecture/understand-the-database.md](https://github.com/n8n-io/n8n-docs/blob/afebf5d9c6ff327fa215b3e6f99627e11fc9d3f2/docs/deploy/host-n8n/understand-the-architecture/understand-the-database.md)
 
 # Database structure <a id="database-structure"></a>
 
@@ -119,6 +119,6 @@ Maps tags to workflows. [`tag_entity`](#tagentity) contains tag details.
 
 ## Entity Relationship Diagram (ERD) <a id="entity-relationship-diagram-erd"></a>
 
-![Entity relationship diagram showing foreign-key connections between n8n's database tables, including user, workflow\_entity, execution\_entity, and credentials\_entity](https://raw.githubusercontent.com/n8n-io/n8n-docs/0ece31e57a42e63cf2a2c7f9a33b42888e09a5b3/docs/deploy/.gitbook/assets/n8n-database-diagram.png)
+![Entity relationship diagram showing foreign-key connections between n8n's database tables, including user, workflow\_entity, execution\_entity, and credentials\_entity](https://raw.githubusercontent.com/n8n-io/n8n-docs/afebf5d9c6ff327fa215b3e6f99627e11fc9d3f2/docs/deploy/.gitbook/assets/n8n-database-diagram.png)
 
 [^1]: In n8n, credentials store authentication information to connect with specific apps and services. After creating credentials with your authentication information (username and password, API key, OAuth secrets, etc.), you can use the associated app node to interact with the service.
