@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/sbx_cli/sbx_create_copilot.yaml](https://github.com/docker/docs/blob/dbad77a00e8352f30e663bec3eeae9fb31a19b4e/data/sbx_cli/sbx_create_copilot.yaml)
+> Commit-pinned source for Docker main: [data/sbx_cli/sbx_create_copilot.yaml](https://github.com/docker/docs/blob/652986790ecf1ddf1081149f29da132a95207a04/data/sbx_cli/sbx_create_copilot.yaml)
 
 # sbx create copilot
 

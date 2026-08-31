@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/grafana-mcp-server-gemini.md](https://github.com/docker/docs/blob/dbad77a00e8352f30e663bec3eeae9fb31a19b4e/content/guides/grafana-mcp-server-gemini.md)
+> Commit-pinned source for Docker main: [content/guides/grafana-mcp-server-gemini.md](https://github.com/docker/docs/blob/652986790ecf1ddf1081149f29da132a95207a04/content/guides/grafana-mcp-server-gemini.md)
 
 # Connect Gemini to Grafana via MCP
 
@@ -64,31 +64,31 @@ A successful connection will show `MCP_DOCKER` as **Ready**, exposing dozens too
 
 *List all Prometheus and Loki data sources.*
 
-![List data sources; permission prompt](https://raw.githubusercontent.com/docker/docs/dbad77a00e8352f30e663bec3eeae9fb31a19b4e/content/guides/images/gemini-grafana-list-datasources.webp)
+![List data sources; permission prompt](https://raw.githubusercontent.com/docker/docs/652986790ecf1ddf1081149f29da132a95207a04/content/guides/images/gemini-grafana-list-datasources.webp)
 
-![List data sources; result](https://raw.githubusercontent.com/docker/docs/dbad77a00e8352f30e663bec3eeae9fb31a19b4e/content/guides/images/list-datasources-result.webp)
+![List data sources; result](https://raw.githubusercontent.com/docker/docs/652986790ecf1ddf1081149f29da132a95207a04/content/guides/images/list-datasources-result.webp)
 
 ### Logs Inspection
 
 Gemini performs intent parsing and translates the user's request into a precise LogQL query: `{device_name="edge-device-01"} |= "nginx"`. Once the system identifies Loki as the active datasource, the AI autonomously constructs this command to bridge the gap between human intent and complex syntax. This query targets specific Kubernetes pod logs, extracting raw OpenTelemetry (OTel) data—including pod UIDs, container metadata, and system labels—which Gemini then uses to identify the root cause of the issue within the containerized environment.
 
-![Filter logs based on loki labels](https://raw.githubusercontent.com/docker/docs/dbad77a00e8352f30e663bec3eeae9fb31a19b4e/content/guides/images/mcp-docker-grafana-loki-1.webp)
+![Filter logs based on loki labels](https://raw.githubusercontent.com/docker/docs/652986790ecf1ddf1081149f29da132a95207a04/content/guides/images/mcp-docker-grafana-loki-1.webp)
 
-![Gemini gets the Grafana's logs from MCP docker](https://raw.githubusercontent.com/docker/docs/dbad77a00e8352f30e663bec3eeae9fb31a19b4e/content/guides/images/mcp-docker-grafana-loki-2.webp)
+![Gemini gets the Grafana's logs from MCP docker](https://raw.githubusercontent.com/docker/docs/652986790ecf1ddf1081149f29da132a95207a04/content/guides/images/mcp-docker-grafana-loki-2.webp)
 
 In the final step, Gemini performs reasoning over the raw telemetry. After filtering through hundreds of lines to confirm the existence of Nginx logs, Gemini extracts a specific node\_filesystem\_device\_error buried within the stream. By surfacing this critical event, it alerts the DevOps engineer to a volume mounting issue on the edge node, transforming raw data into an actionable incident report.
 
-![Gemini gives an overall about the findings](https://raw.githubusercontent.com/docker/docs/dbad77a00e8352f30e663bec3eeae9fb31a19b4e/content/guides/images/mcp-docker-grafana-loki-3.webp)
+![Gemini gives an overall about the findings](https://raw.githubusercontent.com/docker/docs/652986790ecf1ddf1081149f29da132a95207a04/content/guides/images/mcp-docker-grafana-loki-3.webp)
 
 ### Dashboard Navigation
 
 *How many dashboards do we have?*
 
-![How many dashboards do we have?](https://raw.githubusercontent.com/docker/docs/dbad77a00e8352f30e663bec3eeae9fb31a19b4e/content/guides/images/mcp-grafana-dashboards.webp)
+![How many dashboards do we have?](https://raw.githubusercontent.com/docker/docs/652986790ecf1ddf1081149f29da132a95207a04/content/guides/images/mcp-grafana-dashboards.webp)
 
 *Tell me the summary of X dashboard*
 
-![Summary of X dashboard](https://raw.githubusercontent.com/docker/docs/dbad77a00e8352f30e663bec3eeae9fb31a19b4e/content/guides/images/mcp-grafana-summary-dashboard.webp)
+![Summary of X dashboard](https://raw.githubusercontent.com/docker/docs/652986790ecf1ddf1081149f29da132a95207a04/content/guides/images/mcp-grafana-summary-dashboard.webp)
 
 ### Other scenarios
 

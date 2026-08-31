@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/enterprise/security/single-sign-on/troubleshoot-sso.md](https://github.com/docker/docs/blob/dbad77a00e8352f30e663bec3eeae9fb31a19b4e/content/manuals/enterprise/security/single-sign-on/troubleshoot-sso.md)
+> Commit-pinned source for Docker main: [content/manuals/enterprise/security/single-sign-on/troubleshoot-sso.md](https://github.com/docker/docs/blob/652986790ecf1ddf1081149f29da132a95207a04/content/manuals/enterprise/security/single-sign-on/troubleshoot-sso.md)
 
 # Troubleshoot single sign-on
 

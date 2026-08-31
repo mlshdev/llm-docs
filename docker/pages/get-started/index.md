@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/get-started/_index.md](https://github.com/docker/docs/blob/dbad77a00e8352f30e663bec3eeae9fb31a19b4e/content/get-started/_index.md)
+> Commit-pinned source for Docker main: [content/get-started/_index.md](https://github.com/docker/docs/blob/652986790ecf1ddf1081149f29da132a95207a04/content/get-started/_index.md)
 
 # Get started
 

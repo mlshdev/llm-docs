@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/scout/integrations/team-collaboration/slack.md](https://github.com/docker/docs/blob/dbad77a00e8352f30e663bec3eeae9fb31a19b4e/content/manuals/scout/integrations/team-collaboration/slack.md)
+> Commit-pinned source for Docker main: [content/manuals/scout/integrations/team-collaboration/slack.md](https://github.com/docker/docs/blob/652986790ecf1ddf1081149f29da132a95207a04/content/manuals/scout/integrations/team-collaboration/slack.md)
 
 # Integrate Docker Scout with Slack
 
@@ -16,7 +16,7 @@ adding it to the Docker Scout Dashboard. Docker Scout will notify you about
 when a new vulnerability is disclosed, and it affects one or more of your
 images.
 
-![Slack notification from Docker Scout](https://raw.githubusercontent.com/docker/docs/dbad77a00e8352f30e663bec3eeae9fb31a19b4e/content/manuals/scout/images/scout-slack-notification.png?border=true "Example Slack notification from Docker Scout")
+![Slack notification from Docker Scout](https://raw.githubusercontent.com/docker/docs/652986790ecf1ddf1081149f29da132a95207a04/content/manuals/scout/images/scout-slack-notification.png?border=true "Example Slack notification from Docker Scout")
 
 ## How it works
 

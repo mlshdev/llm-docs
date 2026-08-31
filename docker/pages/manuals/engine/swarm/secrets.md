@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/engine/swarm/secrets.md](https://github.com/docker/docs/blob/dbad77a00e8352f30e663bec3eeae9fb31a19b4e/content/manuals/engine/swarm/secrets.md)
+> Commit-pinned source for Docker main: [content/manuals/engine/swarm/secrets.md](https://github.com/docker/docs/blob/652986790ecf1ddf1081149f29da132a95207a04/content/manuals/engine/swarm/secrets.md)
 
 # Manage sensitive data with Docker secrets
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/scout/integrations/registry/ecr.md](https://github.com/docker/docs/blob/dbad77a00e8352f30e663bec3eeae9fb31a19b4e/content/manuals/scout/integrations/registry/ecr.md)
+> Commit-pinned source for Docker main: [content/manuals/scout/integrations/registry/ecr.md](https://github.com/docker/docs/blob/652986790ecf1ddf1081149f29da132a95207a04/content/manuals/scout/integrations/registry/ecr.md)
 
 # Integrate Docker Scout with Amazon ECR
 
@@ -25,7 +25,7 @@ resources, see [CloudFormation stack template](#cloudformation-stack-template).
 
 The following diagram shows how the Docker Scout ECR integration works.
 
-![How the ECR integration works](https://raw.githubusercontent.com/docker/docs/dbad77a00e8352f30e663bec3eeae9fb31a19b4e/content/manuals/scout/images/Scout-ECR.png)
+![How the ECR integration works](https://raw.githubusercontent.com/docker/docs/652986790ecf1ddf1081149f29da132a95207a04/content/manuals/scout/images/Scout-ECR.png)
 
 After the integration, Docker Scout automatically pulls and analyzes images
 that you push to the ECR registry. Metadata about your images are stored on the

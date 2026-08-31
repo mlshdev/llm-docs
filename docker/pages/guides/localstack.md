@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/localstack.md](https://github.com/docker/docs/blob/dbad77a00e8352f30e663bec3eeae9fb31a19b4e/content/guides/localstack.md)
+> Commit-pinned source for Docker main: [content/guides/localstack.md](https://github.com/docker/docs/blob/652986790ecf1ddf1081149f29da132a95207a04/content/guides/localstack.md)
 
 # Develop and test AWS Cloud applications using LocalStack and Docker
 
@@ -56,11 +56,11 @@ Launch a quick demo of LocalStack by using the following steps:
 
    This Compose file also includes specifications for a required Mongo database. You can verify the services are up and running by visiting the Docker Desktop Dashboard.
 
-![Diagram showing the LocalStack and Mongo container up and running on Docker Desktop](https://raw.githubusercontent.com/docker/docs/dbad77a00e8352f30e663bec3eeae9fb31a19b4e/content/guides/images/launch-localstack.webp)
+![Diagram showing the LocalStack and Mongo container up and running on Docker Desktop](https://raw.githubusercontent.com/docker/docs/652986790ecf1ddf1081149f29da132a95207a04/content/guides/images/launch-localstack.webp)
 
 3. Verify that LocalStack is up and running by selecting the container and checking the logs.
 
-![Diagram showing the logs of LocalStack container](https://raw.githubusercontent.com/docker/docs/dbad77a00e8352f30e663bec3eeae9fb31a19b4e/content/guides/images/localstack-logs.webp)
+![Diagram showing the logs of LocalStack container](https://raw.githubusercontent.com/docker/docs/652986790ecf1ddf1081149f29da132a95207a04/content/guides/images/localstack-logs.webp)
 
 4. Creating a Local Amazon S3 Bucket
 
@@ -82,7 +82,7 @@ Launch a quick demo of LocalStack by using the following steps:
 
    You can verify if the S3 bucket gets created or not by selecting the LocalStack container on the Docker Desktop Dashboard and viewing the logs. The logs indicates that your LocalStack environment is configured correctly and you can now use the `mysamplebucket` for storing and retrieving objects.
 
-![Diagram showing the logs of LocalStack that highlights the S3 bucket being created successfully](https://raw.githubusercontent.com/docker/docs/dbad77a00e8352f30e663bec3eeae9fb31a19b4e/content/guides/images/localstack-s3put.webp)
+![Diagram showing the logs of LocalStack that highlights the S3 bucket being created successfully](https://raw.githubusercontent.com/docker/docs/652986790ecf1ddf1081149f29da132a95207a04/content/guides/images/localstack-s3put.webp)
 
 ## Using LocalStack in development
 
@@ -93,7 +93,7 @@ Now that you've familiarized yourself with LocalStack, it's time to see it in ac
 - MongoDB: A database to store all the to-do list data
 - LocalStack: Emulates the Amazon S3 service and stores and retrieve images.
 
-![Diagram showing the tech stack of the sample todo-list application that includes LocalStack, frontend and backend services](https://raw.githubusercontent.com/docker/docs/dbad77a00e8352f30e663bec3eeae9fb31a19b4e/content/guides/images/localstack-arch.webp)
+![Diagram showing the tech stack of the sample todo-list application that includes LocalStack, frontend and backend services](https://raw.githubusercontent.com/docker/docs/652986790ecf1ddf1081149f29da132a95207a04/content/guides/images/localstack-arch.webp)
 
 ## Connecting to LocalStack from a non-containerized app
 
@@ -189,11 +189,11 @@ To start the frontend service, open a new terminal and follow these steps:
 
    You can now access the app via <http://localhost:5173>. Go ahead, and upload an image by choosing an image file and clicking the **Upload** button.
 
-![Diagram showing a working todo-list application](https://raw.githubusercontent.com/docker/docs/dbad77a00e8352f30e663bec3eeae9fb31a19b4e/content/guides/images/localstack-todolist.webp)
+![Diagram showing a working todo-list application](https://raw.githubusercontent.com/docker/docs/652986790ecf1ddf1081149f29da132a95207a04/content/guides/images/localstack-todolist.webp)
 
 You can verify the image is uploaded to the S3 bucket by checking the LocalStack container logs:
 
-![Diagram showing the logs of the LocalStack that highlights image uploaded to the emulated S3 bucket](https://raw.githubusercontent.com/docker/docs/dbad77a00e8352f30e663bec3eeae9fb31a19b4e/content/guides/images/localstack-todolist-s3put.webp)
+![Diagram showing the logs of the LocalStack that highlights image uploaded to the emulated S3 bucket](https://raw.githubusercontent.com/docker/docs/652986790ecf1ddf1081149f29da132a95207a04/content/guides/images/localstack-todolist-s3put.webp)
 
 The `200` status code signifies that the `putObject` operation, which involves uploading an object to the S3 bucket, was executed successfully within the LocalStack environment. LocalStack logs this entry to provide visibility into the operations being performed. It helps debug and confirm that your application is interacting correctly with the emulated AWS services.
 

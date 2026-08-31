@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/desktop/features/wsl/best-practices.md](https://github.com/docker/docs/blob/dbad77a00e8352f30e663bec3eeae9fb31a19b4e/content/manuals/desktop/features/wsl/best-practices.md)
+> Commit-pinned source for Docker main: [content/manuals/desktop/features/wsl/best-practices.md](https://github.com/docker/docs/blob/652986790ecf1ddf1081149f29da132a95207a04/content/manuals/desktop/features/wsl/best-practices.md)
 
 # WSL 2 best practices for Docker Desktop on Windows
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/get-started/docker-concepts/running-containers/multi-container-applications.md](https://github.com/docker/docs/blob/dbad77a00e8352f30e663bec3eeae9fb31a19b4e/content/get-started/docker-concepts/running-containers/multi-container-applications.md)
+> Commit-pinned source for Docker main: [content/get-started/docker-concepts/running-containers/multi-container-applications.md](https://github.com/docker/docs/blob/652986790ecf1ddf1081149f29da132a95207a04/content/get-started/docker-concepts/running-containers/multi-container-applications.md)
 
 # Multi-container applications
 
@@ -142,7 +142,7 @@ Inside this directory, you'll find two sub-directories - `nginx` and `web`.
 
 7. If you look at the Docker Desktop Dashboard, you can see the containers and dive deeper into their configuration.
 
-![A screenshot of the Docker Desktop Dashboard showing multi-container applications](https://raw.githubusercontent.com/docker/docs/dbad77a00e8352f30e663bec3eeae9fb31a19b4e/content/get-started/docker-concepts/running-containers/images/multi-container-apps.webp?w=5000\&border=true)
+![A screenshot of the Docker Desktop Dashboard showing multi-container applications](https://raw.githubusercontent.com/docker/docs/652986790ecf1ddf1081149f29da132a95207a04/content/get-started/docker-concepts/running-containers/images/multi-container-apps.webp?w=5000\&border=true)
 
 8. With everything up and running, you can open <http://localhost> in your browser to see the site. Refresh the page several times to see the host that’s handling the request and the total number of requests:
 
@@ -159,7 +159,7 @@ Inside this directory, you'll find two sub-directories - `nginx` and `web`.
 
 9. You can use the Docker Desktop Dashboard to remove the containers by selecting the containers and selecting the **Delete** button.
 
-![A screenshot of Docker Desktop Dashboard showing how to delete the multi-container applications](https://raw.githubusercontent.com/docker/docs/dbad77a00e8352f30e663bec3eeae9fb31a19b4e/content/get-started/docker-concepts/running-containers/images/delete-multi-container-apps.webp?border=true)
+![A screenshot of Docker Desktop Dashboard showing how to delete the multi-container applications](https://raw.githubusercontent.com/docker/docs/652986790ecf1ddf1081149f29da132a95207a04/content/get-started/docker-concepts/running-containers/images/delete-multi-container-apps.webp?border=true)
 
 ## Simplify the deployment using Docker Compose
 
@@ -186,11 +186,11 @@ Navigate to the root of the project directory. Inside this directory, you'll fin
 
 2. If you look at the Docker Desktop Dashboard, you can see the containers and dive deeper into their configuration.
 
-![A screenshot of the Docker Desktop Dashboard showing the containers of the application stack deployed using Docker Compose](https://raw.githubusercontent.com/docker/docs/dbad77a00e8352f30e663bec3eeae9fb31a19b4e/content/get-started/docker-concepts/running-containers/images/list-containers.webp?border=true)
+![A screenshot of the Docker Desktop Dashboard showing the containers of the application stack deployed using Docker Compose](https://raw.githubusercontent.com/docker/docs/652986790ecf1ddf1081149f29da132a95207a04/content/get-started/docker-concepts/running-containers/images/list-containers.webp?border=true)
 
 3. Alternatively, you can use the Docker Desktop Dashboard to remove the containers by selecting the application stack and selecting the **Delete** button.
 
-![A screenshot of Docker Desktop Dashboard that shows how to remove the containers that you deployed using Docker Compose](https://raw.githubusercontent.com/docker/docs/dbad77a00e8352f30e663bec3eeae9fb31a19b4e/content/get-started/docker-concepts/running-containers/images/delete-containers.webp?border=true)
+![A screenshot of Docker Desktop Dashboard that shows how to remove the containers that you deployed using Docker Compose](https://raw.githubusercontent.com/docker/docs/652986790ecf1ddf1081149f29da132a95207a04/content/get-started/docker-concepts/running-containers/images/delete-containers.webp?border=true)
 
 In this guide, you learned how easy it is to use Docker Compose to start and stop a multi-container application compared to `docker run` which is error-prone and difficult to manage.
 
