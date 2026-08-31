@@ -15,7 +15,7 @@
 - [VictoriaMetrics datasource for Grafana v0.25.2](victoriametrics-datasource/llms.txt): [full corpus](victoriametrics-datasource/llms-full.txt), [manifest](victoriametrics-datasource/manifest.json)
 - [VictoriaLogs datasource for Grafana v0.31.0](victorialogs-datasource/llms.txt): [full corpus](victorialogs-datasource/llms-full.txt), [manifest](victorialogs-datasource/manifest.json)
 - [vmestimator v0.1.15](vmestimator/llms.txt): [full corpus](vmestimator/llms-full.txt), [manifest](vmestimator/manifest.json)
-- [ZITADEL v4.17.1](zitadel/llms.txt): [full corpus](zitadel/llms-full.txt), [manifest](zitadel/manifest.json)
+- [ZITADEL v4.17.2](zitadel/llms.txt): [full corpus](zitadel/llms-full.txt), [manifest](zitadel/manifest.json)
 
 ## Update policy
 

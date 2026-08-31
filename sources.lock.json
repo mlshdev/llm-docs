@@ -69,10 +69,10 @@
       "sourceCommit": "e10898e3c321067feeb951ef3eb5581a1b80f124"
     },
     "zitadel": {
-      "tag": "v4.17.1",
-      "releaseId": 370394679,
-      "releasePublishedAt": "2026-08-14T06:41:55Z",
-      "sourceCommit": "a9311b8c702531832575351a663e98a2242778e5"
+      "tag": "v4.17.2",
+      "releaseId": 379625648,
+      "releasePublishedAt": "2026-08-31T09:04:57Z",
+      "sourceCommit": "35aa213863395a73ee18dbfeae9a9ef41d6fff77"
     }
   }
 }
