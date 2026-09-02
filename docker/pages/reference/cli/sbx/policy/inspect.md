@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/sbx_cli/sbx_policy_inspect.yaml](https://github.com/docker/docs/blob/2028912e0e64869c14702deec64ba2ef5cc10441/data/sbx_cli/sbx_policy_inspect.yaml)
+> Commit-pinned source for Docker main: [data/sbx_cli/sbx_policy_inspect.yaml](https://github.com/docker/docs/blob/36f81c2363ef9a4f853ca8406a587889cdc0583d/data/sbx_cli/sbx_policy_inspect.yaml)
 
 # sbx policy inspect
 

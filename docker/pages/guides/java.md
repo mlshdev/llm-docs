@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/java.md](https://github.com/docker/docs/blob/2028912e0e64869c14702deec64ba2ef5cc10441/content/guides/java.md)
+> Commit-pinned source for Docker main: [content/guides/java.md](https://github.com/docker/docs/blob/36f81c2363ef9a4f853ca8406a587889cdc0583d/content/guides/java.md)
 
 The Java getting started guide teaches you how to create a containerized Spring Boot application using Docker. In this module, you’ll learn how to:
 
@@ -560,7 +560,7 @@ You should receive the following response:
 
 You’ll use the debugger that comes with the IntelliJ IDEA. You can use the community version of this IDE. Open your project in IntelliJ IDEA, go to the **Run** menu, and then **Edit Configuration**. Add a new Remote JVM Debug configuration similar to the following:
 
-![Java Connect a Debugger](https://raw.githubusercontent.com/docker/docs/2028912e0e64869c14702deec64ba2ef5cc10441/content/guides/images/java-connect-debugger.webp)
+![Java Connect a Debugger](https://raw.githubusercontent.com/docker/docs/36f81c2363ef9a4f853ca8406a587889cdc0583d/content/guides/images/java-connect-debugger.webp)
 
 Set a breakpoint.
 
@@ -568,11 +568,11 @@ Open `src/main/java/org/springframework/samples/petclinic/vet/VetController.java
 
 To start your debug session, select the **Run** menu and then **Debug *NameOfYourConfiguration***.
 
-![Debug menu](https://raw.githubusercontent.com/docker/docs/2028912e0e64869c14702deec64ba2ef5cc10441/content/guides/images/java-debug-menu.webp?w=300)
+![Debug menu](https://raw.githubusercontent.com/docker/docs/36f81c2363ef9a4f853ca8406a587889cdc0583d/content/guides/images/java-debug-menu.webp?w=300)
 
 You should now see the connection in the logs of your Compose application.
 
-![Compose log file](https://raw.githubusercontent.com/docker/docs/2028912e0e64869c14702deec64ba2ef5cc10441/content/guides/images/java-compose-logs.webp)
+![Compose log file](https://raw.githubusercontent.com/docker/docs/36f81c2363ef9a4f853ca8406a587889cdc0583d/content/guides/images/java-compose-logs.webp)
 
 You can now call the server endpoint.
 
@@ -582,7 +582,7 @@ $ curl --request GET --url http://localhost:8080/vets
 
 You should have seen the code break on the marked line and now you are able to use the debugger just like you would normally. You can also inspect and watch variables, set conditional breakpoints, view stack traces and a do bunch of other stuff.
 
-![Debugger code breakpoint](https://raw.githubusercontent.com/docker/docs/2028912e0e64869c14702deec64ba2ef5cc10441/content/guides/images/java-debugger-breakpoint.webp)
+![Debugger code breakpoint](https://raw.githubusercontent.com/docker/docs/36f81c2363ef9a4f853ca8406a587889cdc0583d/content/guides/images/java-debugger-breakpoint.webp)
 
 Press `ctrl+c` in the terminal to stop your application.
 

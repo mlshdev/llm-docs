@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaLogs datasource for Grafana v0.31.0: [README.md](https://github.com/VictoriaMetrics/victorialogs-datasource/blob/bb1f6d7b0ec2bdf943c2d8c27f2cb17004b147e8/README.md)
+> Release-pinned source for VictoriaLogs datasource for Grafana v0.32.0: [README.md](https://github.com/VictoriaMetrics/victorialogs-datasource/blob/9cce7548fe6771d542d86576e24ec63684197844/README.md)
 
 # VictoriaLogs datasource for Grafana
 
@@ -20,7 +20,7 @@ For gitops follow [installation](#installation) instructions.
 
 Once installed, start exploring logs from [Grafana's Explore page](https://grafana.com/docs/grafana/latest/explore/get-started-with-explore/):
 
-![Grafana Explore](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/bb1f6d7b0ec2bdf943c2d8c27f2cb17004b147e8/docs/assets/explore.webp)
+![Grafana Explore](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/9cce7548fe6771d542d86576e24ec63684197844/docs/assets/explore.webp)
 
 > To search for all logs simply use `*` as a query. See [LogsQL specification](https://docs.victoriametrics.com/victorialogs/logsql/).
 
@@ -85,7 +85,7 @@ docker compose -f docker-compose.yaml up
 
 After Grafana starts successfully, datasource should be available in the datasources tab
 
-![Configuration](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/bb1f6d7b0ec2bdf943c2d8c27f2cb17004b147e8/docs/assets/provision_datasources.webp)
+![Configuration](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/9cce7548fe6771d542d86576e24ec63684197844/docs/assets/provision_datasources.webp)
 
 ### Install in Kubernetes
 
@@ -440,6 +440,12 @@ The grafana data is stored in `./grafana` folder, so you can stop and start graf
 
 This command will build frontend part and backend part or the plugin and locate both parts into `victoriametrics-logs-datasource` folder.
 
+### 8. How to run e2e tests
+
+End-to-end tests run against a real Grafana + VictoriaLogs stack and can be executed
+against different Grafana and VictoriaLogs versions. See [tests/README.md](https://github.com/VictoriaMetrics/victorialogs-datasource/blob/9cce7548fe6771d542d86576e24ec63684197844/tests/README.md)
+for instructions.
+
 ## How to make new release
 
 1. Make sure there are no open security issues.
@@ -456,4 +462,4 @@ For more information on the fields in `plugin.json`, please refer to the [Grafan
 ## License
 
 This project is licensed under
-the [Apache 2.0 license](https://github.com/VictoriaMetrics/victorialogs-datasource/blob/bb1f6d7b0ec2bdf943c2d8c27f2cb17004b147e8/LICENSE).
+the [Apache 2.0 license](https://github.com/VictoriaMetrics/victorialogs-datasource/blob/9cce7548fe6771d542d86576e24ec63684197844/LICENSE).

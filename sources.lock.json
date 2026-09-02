@@ -23,8 +23,8 @@
     "docker": {
       "tag": "main",
       "branch": "main",
-      "sourceCommit": "2028912e0e64869c14702deec64ba2ef5cc10441",
-      "sourceCommittedAt": "2026-09-02T10:33:57Z"
+      "sourceCommit": "36f81c2363ef9a4f853ca8406a587889cdc0583d",
+      "sourceCommittedAt": "2026-09-02T11:31:40Z"
     },
     "n8n": {
       "tag": "main",
@@ -57,10 +57,10 @@
       "sourceCommit": "302cac37e958cf3d40413f04ebed199536649e34"
     },
     "victorialogs-datasource": {
-      "tag": "v0.31.0",
-      "releaseId": 365574116,
-      "releasePublishedAt": "2026-08-05T14:07:58Z",
-      "sourceCommit": "bb1f6d7b0ec2bdf943c2d8c27f2cb17004b147e8"
+      "tag": "v0.32.0",
+      "releaseId": 381204445,
+      "releasePublishedAt": "2026-09-02T11:40:21Z",
+      "sourceCommit": "9cce7548fe6771d542d86576e24ec63684197844"
     },
     "vmestimator": {
       "tag": "v0.1.15",

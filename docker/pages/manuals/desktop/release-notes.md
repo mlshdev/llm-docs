@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/desktop/release-notes.md](https://github.com/docker/docs/blob/2028912e0e64869c14702deec64ba2ef5cc10441/content/manuals/desktop/release-notes.md)
+> Commit-pinned source for Docker main: [content/manuals/desktop/release-notes.md](https://github.com/docker/docs/blob/36f81c2363ef9a4f853ca8406a587889cdc0583d/content/manuals/desktop/release-notes.md)
 
 # Docker Desktop release notes
 
@@ -1131,16 +1131,6 @@ Download Docker Desktop:
 
 **Release date:** 2026-03-30
 
-Download Docker Desktop:
-
-- [Windows](https://desktop.docker.com/win/main/amd64/222858/Docker%20Desktop%20Installer.exe)
-- [Windows ARM Early Access](https://desktop.docker.com/win/main/arm64/222858/Docker%20Desktop%20Installer.exe)
-- [Mac (Apple chip)](https://desktop.docker.com/mac/main/arm64/222858/Docker.dmg)
-- [Mac (Intel chip)](https://desktop.docker.com/mac/main/amd64/222858/Docker.dmg)
-- [Linux (Debian)](https://desktop.docker.com/linux/main/amd64/222858/docker-desktop-amd64.deb)
-- [Linux (RPM)](https://desktop.docker.com/linux/main/amd64/222858/docker-desktop-x86_64.rpm)
-- [Linux (Arch)](https://desktop.docker.com/linux/main/amd64/222858/docker-desktop-x86_64.pkg.tar.zst)
-
 ### New
 
 - Docker MCP Toolkit now has MCP profile template cards and an onboarding tour accessible via the **Profiles** tab.
@@ -1183,16 +1173,6 @@ Download Docker Desktop:
 
 **Release date:** 2026-03-26
 
-Download Docker Desktop:
-
-- [Windows](https://desktop.docker.com/win/main/amd64/222799/Docker%20Desktop%20Installer.exe)
-- [Windows ARM Early Access](https://desktop.docker.com/win/main/arm64/222799/Docker%20Desktop%20Installer.exe)
-- [Mac (Apple chip)](https://desktop.docker.com/mac/main/arm64/222799/Docker.dmg)
-- [Mac (Intel chip)](https://desktop.docker.com/mac/main/amd64/222799/Docker.dmg)
-- [Linux (Debian)](https://desktop.docker.com/linux/main/amd64/222799/docker-desktop-amd64.deb)
-- [Linux (RPM)](https://desktop.docker.com/linux/main/amd64/222799/docker-desktop-x86_64.rpm)
-- [Linux (Arch)](https://desktop.docker.com/linux/main/amd64/222799/docker-desktop-x86_64.pkg.tar.zst)
-
 ### Updates
 
 - [Docker Engine v29.3.1](https://docs.docker.com/engine/release-notes/29/#2931)
@@ -1200,16 +1180,6 @@ Download Docker Desktop:
 ## 4.66.0
 
 **Release date:** 2026-03-23
-
-Download Docker Desktop:
-
-- [Windows](https://desktop.docker.com/win/main/amd64/222299/Docker%20Desktop%20Installer.exe)
-- [Windows ARM Early Access](https://desktop.docker.com/win/main/arm64/222299/Docker%20Desktop%20Installer.exe)
-- [Mac (Apple chip)](https://desktop.docker.com/mac/main/arm64/222299/Docker.dmg)
-- [Mac (Intel chip)](https://desktop.docker.com/mac/main/amd64/222299/Docker.dmg)
-- [Linux (Debian)](https://desktop.docker.com/linux/main/amd64/222299/docker-desktop-amd64.deb)
-- [Linux (RPM)](https://desktop.docker.com/linux/main/amd64/222299/docker-desktop-x86_64.rpm)
-- [Linux (Arch)](https://desktop.docker.com/linux/main/amd64/222299/docker-desktop-x86_64.pkg.tar.zst)
 
 ### Updates
 
@@ -1235,16 +1205,6 @@ Download Docker Desktop:
 ## 4.65.0
 
 **Release date:** 2026-03-16
-
-Download Docker Desktop:
-
-- [Windows](https://desktop.docker.com/win/main/amd64/221669/Docker%20Desktop%20Installer.exe)
-- [Windows ARM Early Access](https://desktop.docker.com/win/main/arm64/221669/Docker%20Desktop%20Installer.exe)
-- [Mac (Apple chip)](https://desktop.docker.com/mac/main/arm64/221669/Docker.dmg)
-- [Mac (Intel chip)](https://desktop.docker.com/mac/main/amd64/221669/Docker.dmg)
-- [Linux (Debian)](https://desktop.docker.com/linux/main/amd64/221669/docker-desktop-amd64.deb)
-- [Linux (RPM)](https://desktop.docker.com/linux/main/amd64/221669/docker-desktop-x86_64.rpm)
-- [Linux (Arch)](https://desktop.docker.com/linux/main/amd64/221669/docker-desktop-x86_64.pkg.tar.zst)
 
 ### New
 
@@ -1277,16 +1237,6 @@ Download Docker Desktop:
 ## 4.64.0
 
 **Release date:** 2026-03-11
-
-Download Docker Desktop:
-
-- [Windows](https://desktop.docker.com/win/main/amd64/221278/Docker%20Desktop%20Installer.exe)
-- [Windows ARM Early Access](https://desktop.docker.com/win/main/arm64/221278/Docker%20Desktop%20Installer.exe)
-- [Mac (Apple chip)](https://desktop.docker.com/mac/main/arm64/221278/Docker.dmg)
-- [Mac (Intel chip)](https://desktop.docker.com/mac/main/amd64/221278/Docker.dmg)
-- [Linux (Debian)](https://desktop.docker.com/linux/main/amd64/221278/docker-desktop-amd64.deb)
-- [Linux (RPM)](https://desktop.docker.com/linux/main/amd64/221278/docker-desktop-x86_64.rpm)
-- [Linux (Arch)](https://desktop.docker.com/linux/main/amd64/221278/docker-desktop-x86_64.pkg.tar.zst)
 
 ### Updates
 
@@ -1321,16 +1271,6 @@ Download Docker Desktop:
 
 **Release date:** 2026-03-02
 
-Download Docker Desktop:
-
-- [Windows](https://desktop.docker.com/win/main/amd64/220185/Docker%20Desktop%20Installer.exe)
-- [Windows ARM Early Access](https://desktop.docker.com/win/main/arm64/220185/Docker%20Desktop%20Installer.exe)
-- [Mac (Apple chip)](https://desktop.docker.com/mac/main/arm64/220185/Docker.dmg)
-- [Mac (Intel chip)](https://desktop.docker.com/mac/main/amd64/220185/Docker.dmg)
-- [Linux (Debian)](https://desktop.docker.com/linux/main/amd64/220185/docker-desktop-amd64.deb)
-- [Linux (RPM)](https://desktop.docker.com/linux/main/amd64/220185/docker-desktop-x86_64.rpm)
-- [Linux (Arch)](https://desktop.docker.com/linux/main/amd64/220185/docker-desktop-x86_64.pkg.tar.zst)
-
 ### New
 
 - Added SLSA v1 provenance support in the **Builds** view.
@@ -1360,16 +1300,6 @@ Download Docker Desktop:
 ## 4.62.0
 
 **Release date:** 2026-02-23
-
-Download Docker Desktop:
-
-- [Windows](https://desktop.docker.com/win/main/amd64/219486/Docker%20Desktop%20Installer.exe)
-- [Windows ARM Early Access](https://desktop.docker.com/win/main/arm64/219486/Docker%20Desktop%20Installer.exe)
-- [Mac (Apple chip)](https://desktop.docker.com/mac/main/arm64/219486/Docker.dmg)
-- [Mac (Intel chip)](https://desktop.docker.com/mac/main/amd64/219486/Docker.dmg)
-- [Linux (Debian)](https://desktop.docker.com/linux/main/amd64/219486/docker-desktop-amd64.deb)
-- [Linux (RPM)](https://desktop.docker.com/linux/main/amd64/219486/docker-desktop-x86_64.rpm)
-- [Linux (Arch)](https://desktop.docker.com/linux/main/amd64/219486/docker-desktop-x86_64.pkg.tar.zst)
 
 ### New
 
@@ -1405,16 +1335,6 @@ Download Docker Desktop:
 ## 4.61.0
 
 **Release date:** 2026-02-18
-
-Download Docker Desktop:
-
-- [Windows](https://desktop.docker.com/win/main/amd64/219004/Docker%20Desktop%20Installer.exe)
-- [Windows ARM Early Access](https://desktop.docker.com/win/main/arm64/219004/Docker%20Desktop%20Installer.exe)
-- [Mac (Apple chip)](https://desktop.docker.com/mac/main/arm64/219004/Docker.dmg)
-- [Mac (Intel chip)](https://desktop.docker.com/mac/main/amd64/219004/Docker.dmg)
-- [Linux (Debian)](https://desktop.docker.com/linux/main/amd64/219004/docker-desktop-amd64.deb)
-- [Linux (RPM)](https://desktop.docker.com/linux/main/amd64/219004/docker-desktop-x86_64.rpm)
-- [Linux (Arch)](https://desktop.docker.com/linux/main/amd64/219004/docker-desktop-x86_64.pkg.tar.zst)
 
 ### New
 
@@ -1467,16 +1387,6 @@ Download Docker Desktop:
 
 **Release date:** 2026-02-09
 
-Download Docker Desktop:
-
-- [Windows](https://desktop.docker.com/win/main/amd64/218231/Docker%20Desktop%20Installer.exe)
-- [Windows ARM Early Access](https://desktop.docker.com/win/main/arm64/218231/Docker%20Desktop%20Installer.exe)
-- [Mac (Apple chip)](https://desktop.docker.com/mac/main/arm64/218231/Docker.dmg)
-- [Mac (Intel chip)](https://desktop.docker.com/mac/main/amd64/218231/Docker.dmg)
-- [Linux (Debian)](https://desktop.docker.com/linux/main/amd64/218231/docker-desktop-amd64.deb)
-- [Linux (RPM)](https://desktop.docker.com/linux/main/amd64/218231/docker-desktop-x86_64.rpm)
-- [Linux (Arch)](https://desktop.docker.com/linux/main/amd64/218231/docker-desktop-x86_64.pkg.tar.zst)
-
 ### New
 
 - Added a new `docker desktop diagnose` command to gather diagnostics.
@@ -1502,11 +1412,6 @@ Download Docker Desktop:
 
 **Release date:** 2026-02-03
 
-Download Docker Desktop:
-
-- [Mac (Apple chip)](https://desktop.docker.com/mac/main/arm64/217750/Docker.dmg)
-- [Mac (Intel chip)](https://desktop.docker.com/mac/main/amd64/217750/Docker.dmg)
-
 ### Bug fixes and enhancements
 
 #### For Mac
@@ -1516,16 +1421,6 @@ Download Docker Desktop:
 ## 4.59.0
 
 **Release date:** 2026-02-02
-
-Download Docker Desktop:
-
-- [Windows](https://desktop.docker.com/win/main/amd64/217644/Docker%20Desktop%20Installer.exe)
-- [Windows ARM Early Access](https://desktop.docker.com/win/main/arm64/217644/Docker%20Desktop%20Installer.exe)
-- [Mac (Apple chip)](https://desktop.docker.com/mac/main/arm64/217644/Docker.dmg)
-- [Mac (Intel chip)](https://desktop.docker.com/mac/main/amd64/217644/Docker.dmg)
-- [Linux (Debian)](https://desktop.docker.com/linux/main/amd64/217644/docker-desktop-amd64.deb)
-- [Linux (RPM)](https://desktop.docker.com/linux/main/amd64/217644/docker-desktop-x86_64.rpm)
-- [Linux (Arch)](https://desktop.docker.com/linux/main/amd64/217644/docker-desktop-x86_64.pkg.tar.zst)
 
 ### Updates
 
@@ -1573,16 +1468,6 @@ Download Docker Desktop:
 
 **Release date:** 2026-01-26
 
-Download Docker Desktop:
-
-- [Windows](https://desktop.docker.com/win/main/amd64/216728/Docker%20Desktop%20Installer.exe)
-- [Windows ARM Early Access](https://desktop.docker.com/win/main/arm64/216728/Docker%20Desktop%20Installer.exe)
-- [Mac (Apple chip)](https://desktop.docker.com/mac/main/arm64/216728/Docker.dmg)
-- [Mac (Intel chip)](https://desktop.docker.com/mac/main/amd64/216728/Docker.dmg)
-- [Linux (Debian)](https://desktop.docker.com/linux/main/amd64/216728/docker-desktop-amd64.deb)
-- [Linux (RPM)](https://desktop.docker.com/linux/main/amd64/216728/docker-desktop-x86_64.rpm)
-- [Linux (Arch)](https://desktop.docker.com/linux/main/amd64/216728/docker-desktop-x86_64.pkg.tar.zst)
-
 ### New
 
 - A new version of [Docker Sandboxes](https://docs.docker.com/ai/sandboxes/) is now available on Docker Desktop. It provides a secure, isolated, microVM-based environment for running coding agents.
@@ -1628,16 +1513,6 @@ Download Docker Desktop:
 
 **Release date:** 2026-01-19
 
-Download Docker Desktop:
-
-- [Windows](https://desktop.docker.com/win/main/amd64/215387/Docker%20Desktop%20Installer.exe)
-- [Windows ARM Early Access](https://desktop.docker.com/win/main/arm64/215387/Docker%20Desktop%20Installer.exe)
-- [Mac (Apple chip)](https://desktop.docker.com/mac/main/arm64/215387/Docker.dmg)
-- [Mac (Intel chip)](https://desktop.docker.com/mac/main/amd64/215387/Docker.dmg)
-- [Linux (Debian)](https://desktop.docker.com/linux/main/amd64/215387/docker-desktop-amd64.deb)
-- [Linux (RPM)](https://desktop.docker.com/linux/main/amd64/215387/docker-desktop-x86_64.rpm)
-- [Linux (Arch)](https://desktop.docker.com/linux/main/amd64/215387/docker-desktop-x86_64.pkg.tar.zst)
-
 ### Security
 
 - Fixed [CVE-2025-14740](https://www.cve.org/cverecord?id=CVE-2025-14740) where the Docker Desktop for Windows installer contained multiple incorrect permission assignment vulnerabilities in the handling of the `C:\ProgramData\DockerDesktop` directory.
@@ -1660,16 +1535,6 @@ Download Docker Desktop:
 ## 4.56.0
 
 **Release date:** 2026-01-12
-
-Download Docker Desktop:
-
-- [Windows](https://desktop.docker.com/win/main/amd64/214940/Docker%20Desktop%20Installer.exe)
-- [Windows ARM Early Access](https://desktop.docker.com/win/main/arm64/214940/Docker%20Desktop%20Installer.exe)
-- [Mac (Apple chip)](https://desktop.docker.com/mac/main/arm64/214940/Docker.dmg)
-- [Mac (Intel chip)](https://desktop.docker.com/mac/main/amd64/214940/Docker.dmg)
-- [Linux (Debian)](https://desktop.docker.com/linux/main/amd64/214940/docker-desktop-amd64.deb)
-- [Linux (RPM)](https://desktop.docker.com/linux/main/amd64/214940/docker-desktop-x86_64.rpm)
-- [Linux (Arch)](https://desktop.docker.com/linux/main/amd64/214940/docker-desktop-x86_64.pkg.tar.zst)
 
 ### New
 
@@ -1705,16 +1570,6 @@ Download Docker Desktop:
 ## 4.55.0
 
 **Release date:** 2025-12-16
-
-Download Docker Desktop:
-
-- [Windows](https://desktop.docker.com/win/main/amd64/213807/Docker%20Desktop%20Installer.exe)
-- [Windows ARM Early Access](https://desktop.docker.com/win/main/arm64/213807/Docker%20Desktop%20Installer.exe)
-- [Mac (Apple chip)](https://desktop.docker.com/mac/main/arm64/213807/Docker.dmg)
-- [Mac (Intel chip)](https://desktop.docker.com/mac/main/amd64/213807/Docker.dmg)
-- [Linux (Debian)](https://desktop.docker.com/linux/main/amd64/213807/docker-desktop-amd64.deb)
-- [Linux (RPM)](https://desktop.docker.com/linux/main/amd64/213807/docker-desktop-x86_64.rpm)
-- [Linux (Arch)](https://desktop.docker.com/linux/main/amd64/213807/docker-desktop-x86_64.pkg.tar.zst)
 
 ### Updates
 

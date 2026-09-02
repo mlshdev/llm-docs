@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaLogs datasource for Grafana v0.31.0: [src/README.md](https://github.com/VictoriaMetrics/victorialogs-datasource/blob/bb1f6d7b0ec2bdf943c2d8c27f2cb17004b147e8/src/README.md)
+> Release-pinned source for VictoriaLogs datasource for Grafana v0.32.0: [src/README.md](https://github.com/VictoriaMetrics/victorialogs-datasource/blob/9cce7548fe6771d542d86576e24ec63684197844/src/README.md)
 
 # VictoriaLogs datasource for Grafana
 
@@ -6,7 +6,7 @@ The [VictoriaLogs Grafana plugin](https://grafana.com/grafana/plugins/victoriame
 to query, visualize, and interact with [VictoriaLogs](https://docs.victoriametrics.com/victorialogs/),
 a high-performance log storage and processing system.
 
-![Grafana Dashboard Screenshot](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/bb1f6d7b0ec2bdf943c2d8c27f2cb17004b147e8/src/img/dashboard.png)
+![Grafana Dashboard Screenshot](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/9cce7548fe6771d542d86576e24ec63684197844/src/img/dashboard.png)
 
 ## Capabilities
 
@@ -28,7 +28,7 @@ For installation options in Docker or Kubernetes refer to [these docs](https://g
 VictoriaLogs datasource supports [multitenancy](https://docs.victoriametrics.com/victorialogs/#multitenancy) via `multitenancyHeaders` datasource configuration option.
 To configure it, set AccountID and ProjectID in the `multitenancyHeaders` section.
 
-![Multitenancy configuration](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/bb1f6d7b0ec2bdf943c2d8c27f2cb17004b147e8/src/img/multitenancy_configuration.png)
+![Multitenancy configuration](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/9cce7548fe6771d542d86576e24ec63684197844/src/img/multitenancy_configuration.png)
 
 ### Manual configuration via UI
 
@@ -55,6 +55,67 @@ datasources:
         #ProjectID: 0
 ```
 
+## Authentication
+
+The datasource supports the authentication methods provided by Grafana's standard HTTP settings
+(Basic auth, TLS client certificates, custom HTTP headers), plus forwarding the OAuth identity
+of the signed-in Grafana user.
+
+### Forward OAuth Identity
+
+If Grafana itself authenticates users via OAuth/OIDC (for example, [generic OAuth](https://grafana.com/docs/grafana/latest/setup-grafana/configure-security/configure-authentication/generic-oauth/)
+with Keycloak, Okta, Auth0 or another provider), the datasource can reuse the access token of the logged-in user.
+With **Forward OAuth Identity** enabled, Grafana adds the user's `Authorization: Bearer <access token>` header
+(and `X-Id-Token`, when available) to every request the plugin sends to the configured URL:
+data queries, health check ("Save & test") and autocomplete/resource requests.
+
+To enable it in the UI, turn on the **Forward OAuth Identity** toggle in the Auth section of the datasource settings.
+To enable it via provisioning, set `jsonData.oauthPassThru: true`:
+
+```yaml
+apiVersion: 1
+datasources:
+  - name: VictoriaLogs
+    type: victoriametrics-logs-datasource
+    access: proxy
+    # vmauth validates the forwarded JWT and routes the request to VictoriaLogs
+    url: http://vmauth:8427
+    jsonData:
+      oauthPassThru: true
+```
+
+This pairs naturally with [vmauth](https://docs.victoriametrics.com/victoriametrics/vmauth/) in front of VictoriaLogs:
+vmauth can verify the forwarded JWT via [OIDC discovery](https://docs.victoriametrics.com/victoriametrics/vmauth/#oidc-discovery)
+and authorize/route requests based on token claims via [JWT claim matching](https://docs.victoriametrics.com/victoriametrics/vmauth/#jwt-claim-matching):
+
+```yaml
+# vmauth -auth.config
+users:
+  - jwt:
+      oidc:
+        issuer: "https://sso.example.com/realms/main"
+      match_claims:
+        # authorize and route requests based on any JWT claims
+        team: "observability"
+      # Required for tokens issued by general-purpose identity providers
+      # (Keycloak, Okta, Auth0, ...) which don't embed the VictoriaMetrics-specific
+      # `vm_access` claim, see the note below.
+      default_vm_access_claim: {}
+    url_prefix: "http://victorialogs:9428/"
+```
+
+**Note about the `vm_access` claim:** since vmauth `v1.147.0`, a JWT token without the `vm_access` claim
+falls through to `unauthorized_user` and is rejected unless `default_vm_access_claim` is configured
+in the `jwt` section. Tokens issued by general-purpose identity providers normally don't contain `vm_access`,
+so either set `default_vm_access_claim` (as in the example above) or configure your identity provider
+to embed the [`vm_access` claim](https://docs.victoriametrics.com/victoriametrics/vmauth/#jwt-claim-based-request-templating).
+The rejection is silent by default — run vmauth with `-logInvalidAuthTokens` to see the reason.
+
+**Limitations:** the forwarded token exists only within the session of a signed-in user.
+Features that run without a user context — alerting and recording rules, public dashboards, reporting —
+send requests without the token and will be rejected by the auth proxy.
+For those, use a service credential (for example, Basic auth or a bearer token on a separate datasource).
+
 ## Building queries
 
 VictoriaLogs query language is [LogsQL](https://docs.victoriametrics.com/victorialogs/logsql/).
@@ -69,7 +130,7 @@ and LogsQL examples [here](https://docs.victoriametrics.com/victorialogs/logsql-
 
 A visual alternative to the LogsQL code editor: build queries by chaining typed pipes through an interactive UI with field/value dropdowns and keyboard navigation.
 
-![Query builder](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/bb1f6d7b0ec2bdf943c2d8c27f2cb17004b147e8/src/img/query_builder.gif)
+![Query builder](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/9cce7548fe6771d542d86576e24ec63684197844/src/img/query_builder.gif)
 
 #### Switching between Builder and Code
 
@@ -118,21 +179,21 @@ See the [LogsQL pipes reference](https://docs.victoriametrics.com/victorialogs/l
 For using [Logs panel](https://grafana.com/docs/grafana/latest/panels-visualizations/visualizations/logs/)
 switch to `Raw Logs` query type:
 
-![Logs panel](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/bb1f6d7b0ec2bdf943c2d8c27f2cb17004b147e8/src/img/panel_logs.png)
+![Logs panel](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/9cce7548fe6771d542d86576e24ec63684197844/src/img/panel_logs.png)
 
 ### Time series panel
 
 For using [Time series panel](https://grafana.com/docs/grafana/latest/panels-visualizations/visualizations/time-series/)
 switch to `Range` query type:
 
-![Time series panel](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/bb1f6d7b0ec2bdf943c2d8c27f2cb17004b147e8/src/img/panel_time_series.png)
+![Time series panel](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/9cce7548fe6771d542d86576e24ec63684197844/src/img/panel_time_series.png)
 
 ### Stats panel
 
 For using [Stats panel](https://grafana.com/docs/grafana/latest/panels-visualizations/visualizations/stat/)
 switch to `Instant` query type:
 
-![Stats panel](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/bb1f6d7b0ec2bdf943c2d8c27f2cb17004b147e8/src/img/panel_stat.png)
+![Stats panel](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/9cce7548fe6771d542d86576e24ec63684197844/src/img/panel_stat.png)
 
 For enabling background visualization switch to `Range` query type.
 
@@ -141,11 +202,11 @@ For enabling background visualization switch to `Range` query type.
 For using [Table panel](https://grafana.com/docs/grafana/latest/panels-visualizations/visualizations/table/)
 switch to `Raw Logs` query type:
 
-![Table panel](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/bb1f6d7b0ec2bdf943c2d8c27f2cb17004b147e8/src/img/panel_table.png)
+![Table panel](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/9cce7548fe6771d542d86576e24ec63684197844/src/img/panel_table.png)
 
 And apply `Transformations` by labels:
 
-![Transformations](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/bb1f6d7b0ec2bdf943c2d8c27f2cb17004b147e8/src/img/panel_table_transformation.png)
+![Transformations](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/9cce7548fe6771d542d86576e24ec63684197844/src/img/panel_table_transformation.png)
 
 ### Heatmap panel
 
@@ -159,7 +220,7 @@ Query example:
   | stats histogram(duration)
 ```
 
-![Heatmap panel](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/bb1f6d7b0ec2bdf943c2d8c27f2cb17004b147e8/src/img/panel_heatmap.png)
+![Heatmap panel](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/9cce7548fe6771d542d86576e24ec63684197844/src/img/panel_heatmap.png)
 
 ### Log level rules
 
@@ -230,7 +291,7 @@ VictoriaLogs datasource supports [variables](https://grafana.com/docs/grafana/la
 
 You can use [Ad Hoc filters](https://grafana.com/docs/grafana/latest/visualizations/dashboards/variables/add-template-variables/#add-ad-hoc-filters) to filter logs in Dashboards.
 By default, ad-hoc filters are applied to all panels in the Dashboard as the [extra\_filters](https://docs.victoriametrics.com/victorialogs/querying/#extra-filters) query parameter. If you navigate to the Explore page from the Dashboard, ad-hoc filters are also applied there.
-![Ad hoc filters](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/bb1f6d7b0ec2bdf943c2d8c27f2cb17004b147e8/src/img/extra_filters_explore_page.png)
+![Ad hoc filters](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/9cce7548fe6771d542d86576e24ec63684197844/src/img/extra_filters_explore_page.png)
 
 ##### Ad-hoc filters mode
 
@@ -247,7 +308,7 @@ Each panel exposes an **Ad-hoc filters** selector in the Query Editor *Options* 
 If you want to filter logs by a specific word or phrase, you can use [word filter](https://docs.victoriametrics.com/victorialogs/logsql/#word-filter).
 To do this, you need to create a [text box variable](https://grafana.com/docs/grafana/latest/visualizations/dashboards/variables/add-template-variables/#add-a-text-box-variable).
 After it is created, you need to add this to the query: `<q> | $word_filter`. Type any word or phrase you want to look for. Set to "\*" to not filter. By default, the given word is searched in the \_msg field.
-![Word filter](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/bb1f6d7b0ec2bdf943c2d8c27f2cb17004b147e8/src/img/word_filter.png)
+![Word filter](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/9cce7548fe6771d542d86576e24ec63684197844/src/img/word_filter.png)
 
 #### Variable interpolation
 
@@ -294,7 +355,7 @@ There are two levels of control:
 
 Increase these limits only if needed; large values may make the browser sluggish.
 
-![Line limits configuration](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/bb1f6d7b0ec2bdf943c2d8c27f2cb17004b147e8/src/img/line_limits.png)
+![Line limits configuration](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/9cce7548fe6771d542d86576e24ec63684197844/src/img/line_limits.png)
 
 ### Configuring the default limit via file
 
@@ -325,7 +386,7 @@ feature for interactive links between visualizations.
 Tempo, Jaeger, and Zipkin data sources support [Trace to logs](https://grafana.com/docs/grafana/latest/explore/trace-integration/#trace-to-logs)
 feature for navigating from a span in a trace directly to logs relevant for that span. *(Supported since Grafana v12.2.0)*.
 
-![Derived fields configuration](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/bb1f6d7b0ec2bdf943c2d8c27f2cb17004b147e8/src/img/trace_to_logs.png)
+![Derived fields configuration](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/9cce7548fe6771d542d86576e24ec63684197844/src/img/trace_to_logs.png)
 
 An example of the correlation query in traces datasource is the following:
 
@@ -418,12 +479,12 @@ In VictoriaLogs datasource settings, you can configure rules of extracting value
 For example, if log entries have field `trace_id` then we can configure a Derived Field to make a link to Jaeger datasource
 for viewing an associated trace:
 
-![Derived fields configuration](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/bb1f6d7b0ec2bdf943c2d8c27f2cb17004b147e8/src/img/derived_fields_cfg.png)
+![Derived fields configuration](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/9cce7548fe6771d542d86576e24ec63684197844/src/img/derived_fields_cfg.png)
 
 Once configured, in Explore mode or in Logs panel log entries with field `trace_id` will also get a link that would
 open a Jaeger datasource and search for the `trace_id` value:
 
-![Derived fields explore](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/bb1f6d7b0ec2bdf943c2d8c27f2cb17004b147e8/src/img/derived_fields_explore.png)
+![Derived fields explore](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/9cce7548fe6771d542d86576e24ec63684197844/src/img/derived_fields_explore.png)
 
 If the trace ID is not stored in a separate field but in a log message itself, then use `Regex in log line` option
 to specify a regex expression for extracting the trace value from log message.
@@ -461,4 +522,4 @@ Learn more about [Derived Fields in Grafana](https://grafana.com/docs/grafana/ne
 ## License
 
 This project is licensed under
-the [Apache 2.0 license](https://github.com/VictoriaMetrics/victorialogs-datasource/blob/bb1f6d7b0ec2bdf943c2d8c27f2cb17004b147e8/LICENSE).
+the [Apache 2.0 license](https://github.com/VictoriaMetrics/victorialogs-datasource/blob/9cce7548fe6771d542d86576e24ec63684197844/LICENSE).

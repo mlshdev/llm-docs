@@ -1,8 +1,16 @@
-> Release-pinned source for VictoriaLogs datasource for Grafana v0.31.0: [CHANGELOG.md](https://github.com/VictoriaMetrics/victorialogs-datasource/blob/bb1f6d7b0ec2bdf943c2d8c27f2cb17004b147e8/CHANGELOG.md)
+> Release-pinned source for VictoriaLogs datasource for Grafana v0.32.0: [CHANGELOG.md](https://github.com/VictoriaMetrics/victorialogs-datasource/blob/9cce7548fe6771d542d86576e24ec63684197844/CHANGELOG.md)
 
 # Changelog
 
 ## tip
+
+- FEATURE: add a `Group hits by` option to `Raw Logs` queries in Explore: the logs volume histogram can be grouped by any log field instead of the default `level`. See [#689](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/689).
+
+- BUGFIX: send an explicit `end` bound in the datasource health check. Without it, VictoriaLogs defaulted the upper bound to the maximum int64 nanosecond timestamp (year 2262), so instances running with `-search.maxQueryTimeRange` failed "Save & test" with `too big time range selected`. See [#712](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/712). Thanks to @dberkerdem for contributing.
+
+- BUGFIX: keep the selected fields in the Explore logs panel after a query returns no results. Previously, an empty result reset the field selection. See [#714](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/714).
+
+## v0.31.0
 
 - FEATURE: `Filter for value` / `Filter out value` in log details now adds the value to the `Stream filters` when the clicked field is a stream field. Stream filters are resolved via the stream index, so such filters run noticeably faster on large volumes. See [#691](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/691).
 
@@ -84,7 +92,7 @@
 
 - FEATURE: replace the `/health` endpoint in the datasource backend health check with a real query to `/select/logsql/query`. This verifies that the VictoriaLogs backend can actually serve log queries, not just that the HTTP server is up. See [#599](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/599).
 
-- FEATURE: add OpenTelemetry preset to datasource configuration. When enabled, the preset auto-detects field format (`snake_case` / `camelCase`) of `traceID` and severity field from recent logs, then generates Derived Fields for `trace_id` and Log level rules for OTel severity — without manual configuration. See [OpenTelemetry preset](https://github.com/VictoriaMetrics/victorialogs-datasource/blob/bb1f6d7b0ec2bdf943c2d8c27f2cb17004b147e8/src/README.md#opentelemetry-preset) docs.
+- FEATURE: add OpenTelemetry preset to datasource configuration. When enabled, the preset auto-detects field format (`snake_case` / `camelCase`) of `traceID` and severity field from recent logs, then generates Derived Fields for `trace_id` and Log level rules for OTel severity — without manual configuration. See [OpenTelemetry preset](https://github.com/VictoriaMetrics/victorialogs-datasource/blob/9cce7548fe6771d542d86576e24ec63684197844/src/README.md#opentelemetry-preset) docs.
 
 - FEATURE: route "Filter for value" / "Filter out" actions in Grafana Explore into the `extra_filters` query parameter instead of mutating the main `expr`. The user's LogsQL stays untouched; added filters appear as removable chips under the query editor (via the existing Ad-hoc filters control). Dashboard behavior is unchanged — there Grafana keeps driving these clicks through ad-hoc template variables.
 

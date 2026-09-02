@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/engine/storage/drivers/device-mapper-driver.md](https://github.com/docker/docs/blob/2028912e0e64869c14702deec64ba2ef5cc10441/content/manuals/engine/storage/drivers/device-mapper-driver.md)
+> Commit-pinned source for Docker main: [content/manuals/engine/storage/drivers/device-mapper-driver.md](https://github.com/docker/docs/blob/36f81c2363ef9a4f853ca8406a587889cdc0583d/content/manuals/engine/storage/drivers/device-mapper-driver.md)
 
 # Device Mapper storage driver (deprecated)
 
@@ -747,7 +747,7 @@ container, it is a snapshot of the image the container is based on. The followin
 example shows a Docker host with two running containers. The first is a `ubuntu`
 container and the second is a `busybox` container.
 
-![Ubuntu and busybox image layers](https://raw.githubusercontent.com/docker/docs/2028912e0e64869c14702deec64ba2ef5cc10441/content/manuals/engine/storage/drivers/images/two_dm_container.webp?w=450\&h=100)
+![Ubuntu and busybox image layers](https://raw.githubusercontent.com/docker/docs/36f81c2363ef9a4f853ca8406a587889cdc0583d/content/manuals/engine/storage/drivers/images/two_dm_container.webp?w=450\&h=100)
 
 ## How container reads and writes work with `devicemapper`
 
@@ -757,7 +757,7 @@ With `devicemapper`, reads happen at the block level. The diagram below shows
 the high level process for reading a single block (`0x44f`) in an example
 container.
 
-![Reading a block with devicemapper](https://raw.githubusercontent.com/docker/docs/2028912e0e64869c14702deec64ba2ef5cc10441/content/manuals/engine/storage/drivers/images/dm_container.webp?w=650)
+![Reading a block with devicemapper](https://raw.githubusercontent.com/docker/docs/36f81c2363ef9a4f853ca8406a587889cdc0583d/content/manuals/engine/storage/drivers/images/dm_container.webp?w=650)
 
 An application makes a read request for block `0x44f` in the container. Because
 the container is a thin snapshot of an image, it doesn't have the block, but it

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/compose/support-and-feedback/feedback.md](https://github.com/docker/docs/blob/2028912e0e64869c14702deec64ba2ef5cc10441/content/manuals/compose/support-and-feedback/feedback.md)
+> Commit-pinned source for Docker main: [content/manuals/compose/support-and-feedback/feedback.md](https://github.com/docker/docs/blob/36f81c2363ef9a4f853ca8406a587889cdc0583d/content/manuals/compose/support-and-feedback/feedback.md)
 
 # Give feedback
 
