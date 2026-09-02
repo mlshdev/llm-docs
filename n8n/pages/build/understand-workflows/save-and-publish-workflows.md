@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/understand-workflows/save-and-publish-workflows.md](https://github.com/n8n-io/n8n-docs/blob/1db58de3a8d474a1ba99f5a612beac694402d963/docs/build/understand-workflows/save-and-publish-workflows.md)
+> Commit-pinned source for n8n main: [docs/build/understand-workflows/save-and-publish-workflows.md](https://github.com/n8n-io/n8n-docs/blob/32d4c1af45711af43703671a66f502ef7bd2b932/docs/build/understand-workflows/save-and-publish-workflows.md)
 
 # Save and publish workflows
 
@@ -18,27 +18,27 @@ Publishing makes your workflow live and locks it to a specific version. Producti
 
 **Initial state** When you open a workflow with no publishable changes, the Publish button is disabled.
 
-![Disabled, greyed-out Publish button because there are no unpublished changes](https://raw.githubusercontent.com/n8n-io/n8n-docs/1db58de3a8d474a1ba99f5a612beac694402d963/docs/build/.gitbook/assets/publish-initial.png)
+![Disabled, greyed-out Publish button because there are no unpublished changes](https://raw.githubusercontent.com/n8n-io/n8n-docs/32d4c1af45711af43703671a66f502ef7bd2b932/docs/build/.gitbook/assets/publish-initial.png)
 
 **Ready to publish** When the workflow is not yet published but has changes, the button becomes active.
 
-![Active Publish button for a workflow that has unpublished changes](https://raw.githubusercontent.com/n8n-io/n8n-docs/1db58de3a8d474a1ba99f5a612beac694402d963/docs/build/.gitbook/assets/publish-ready.png)
+![Active Publish button for a workflow that has unpublished changes](https://raw.githubusercontent.com/n8n-io/n8n-docs/32d4c1af45711af43703671a66f502ef7bd2b932/docs/build/.gitbook/assets/publish-ready.png)
 
 **Published, up to date** The workflow is currently published and there are no new changes since the last publish.
 
-![Publish button showing the workflow is published and up to date, with no pending changes](https://raw.githubusercontent.com/n8n-io/n8n-docs/1db58de3a8d474a1ba99f5a612beac694402d963/docs/build/.gitbook/assets/published.png)
+![Publish button showing the workflow is published and up to date, with no pending changes](https://raw.githubusercontent.com/n8n-io/n8n-docs/32d4c1af45711af43703671a66f502ef7bd2b932/docs/build/.gitbook/assets/published.png)
 
 **Published, has changes** The workflow is published, but you've made changes since the last publish that haven't gone live yet.
 
-![Publish button showing the workflow is published but has changes not yet live](https://raw.githubusercontent.com/n8n-io/n8n-docs/1db58de3a8d474a1ba99f5a612beac694402d963/docs/build/.gitbook/assets/published-changes.png)
+![Publish button showing the workflow is published but has changes not yet live](https://raw.githubusercontent.com/n8n-io/n8n-docs/32d4c1af45711af43703671a66f502ef7bd2b932/docs/build/.gitbook/assets/published-changes.png)
 
 **Published, invalid changes** The workflow is published, but it's not in a state to be republished (no trigger requires publishing).
 
-![Publish button showing the workflow can't be republished because no trigger requires publishing](https://raw.githubusercontent.com/n8n-io/n8n-docs/1db58de3a8d474a1ba99f5a612beac694402d963/docs/build/.gitbook/assets/published-invalid.png)
+![Publish button showing the workflow can't be republished because no trigger requires publishing](https://raw.githubusercontent.com/n8n-io/n8n-docs/32d4c1af45711af43703671a66f502ef7bd2b932/docs/build/.gitbook/assets/published-invalid.png)
 
 **Published, error** The workflow is published, but there are errors in your recent changes that need to be fixed before you can publish again.
 
-![Publish button showing an error state because recent changes contain errors to fix](https://raw.githubusercontent.com/n8n-io/n8n-docs/1db58de3a8d474a1ba99f5a612beac694402d963/docs/build/.gitbook/assets/published-error.png)
+![Publish button showing an error state because recent changes contain errors to fix](https://raw.githubusercontent.com/n8n-io/n8n-docs/32d4c1af45711af43703671a66f502ef7bd2b932/docs/build/.gitbook/assets/published-error.png)
 
 ## How collaboration works <a id="how-collaboration-works"></a>
 
@@ -52,7 +52,7 @@ Only one person can edit a workflow at a time. If someone else is currently edit
 
 On the **Workflows** page, if a workflow is published an indicator will be displayed on the card.
 
-![Published indicator badge on a workflow card in the Workflows list](https://raw.githubusercontent.com/n8n-io/n8n-docs/1db58de3a8d474a1ba99f5a612beac694402d963/docs/build/.gitbook/assets/published-indicator-wf-list.png)
+![Published indicator badge on a workflow card in the Workflows list](https://raw.githubusercontent.com/n8n-io/n8n-docs/32d4c1af45711af43703671a66f502ef7bd2b932/docs/build/.gitbook/assets/published-indicator-wf-list.png)
 
 ## Publishing a workflow <a id="publishing-a-workflow"></a>
 
@@ -66,7 +66,7 @@ Each time you make a change to a workflow, n8n autosaves those changes to a new 
 
    If you only update workflow settings, n8n will re-publish the version without requiring you to take any action.
 
-![Publish modal with an editable version name (defaulting to a UUID) and description field](https://raw.githubusercontent.com/n8n-io/n8n-docs/1db58de3a8d474a1ba99f5a612beac694402d963/docs/build/.gitbook/assets/publish-modal.png)
+![Publish modal with an editable version name (defaulting to a UUID) and description field](https://raw.githubusercontent.com/n8n-io/n8n-docs/32d4c1af45711af43703671a66f502ef7bd2b932/docs/build/.gitbook/assets/publish-modal.png)
 
 > **Info**
 > **Workflow reviews**
@@ -92,7 +92,7 @@ To name a version from the canvas header:
 3. Enter a name and optional description.
 4. Select **Save**.
 
-![Publish button's dropdown menu with the Name version option](https://raw.githubusercontent.com/n8n-io/n8n-docs/1db58de3a8d474a1ba99f5a612beac694402d963/docs/build/.gitbook/assets/publish-dropdown.png)
+![Publish button's dropdown menu with the Name version option](https://raw.githubusercontent.com/n8n-io/n8n-docs/32d4c1af45711af43703671a66f502ef7bd2b932/docs/build/.gitbook/assets/publish-dropdown.png)
 
 To name a version from the version history page:
 

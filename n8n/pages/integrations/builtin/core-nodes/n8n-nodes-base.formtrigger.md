@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/builtin/core-nodes/n8n-nodes-base.formtrigger.md](https://github.com/n8n-io/n8n-docs/blob/1db58de3a8d474a1ba99f5a612beac694402d963/docs/integrations/builtin/core-nodes/n8n-nodes-base.formtrigger.md)
+> Commit-pinned source for n8n main: [docs/integrations/builtin/core-nodes/n8n-nodes-base.formtrigger.md](https://github.com/n8n-io/n8n-docs/blob/32d4c1af45711af43703671a66f502ef7bd2b932/docs/integrations/builtin/core-nodes/n8n-nodes-base.formtrigger.md)
 
 # n8n Form Trigger node <a id="n8n-form-trigger-node"></a>
 
@@ -72,11 +72,13 @@ Only users logged in to this n8n instance can view or submit the form.
 - Unauthenticated form submissions receive a 401 response.
 - By default, n8n adds the submitting user's ID, email, first name, and last name to the output data. Turn off **Include User in Output** in [Node options](#node-options) to exclude this.
 
+When you select **n8n User Auth**, a **Require Workflow Execute Permission** toggle appears. Turn it on to require that the triggering user also has permission to execute the workflow in the project it belongs to. Users who are logged in but lack execute permission on the workflow can't submit the form. This is useful with [end-user credentials](https://docs.n8n.io/administer/manage-credentials/end-user-credentials), where each user runs the workflow with their own connected account.
+
 ### Form URLs <a id="form-urls"></a>
 
 The Form Trigger node has two URLs: **Test URL** and **Production URL**. n8n displays the URLs at the top of the node panel. Select **Test URL** or **Production URL** to toggle which URL n8n displays.
 
-![Form Trigger node panel showing the Test URL and Production URL fields with the toggle between them](https://raw.githubusercontent.com/n8n-io/n8n-docs/1db58de3a8d474a1ba99f5a612beac694402d963/docs/integrations/.gitbook/assets/form-urls.png)
+![Form Trigger node panel showing the Test URL and Production URL fields with the toggle between them](https://raw.githubusercontent.com/n8n-io/n8n-docs/32d4c1af45711af43703671a66f502ef7bd2b932/docs/integrations/.gitbook/assets/form-urls.png)
 
 - **Test URL**: n8n registers a test webhook when you select **Execute Step** or **Execute Workflow**, if the workflow isn't active. When you call the URL, n8n displays the data in the workflow.
 - **Production URL**: n8n registers a production webhook when you publish the workflow. When using the production URL, n8n doesn't display the data in the workflow. You can still view workflow data for a production execution. Select the **Executions** tab in the workflow, then select the workflow execution you want to view.

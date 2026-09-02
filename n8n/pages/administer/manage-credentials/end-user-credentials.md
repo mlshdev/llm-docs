@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/administer/manage-credentials/end-user-credentials.md](https://github.com/n8n-io/n8n-docs/blob/1db58de3a8d474a1ba99f5a612beac694402d963/docs/administer/manage-credentials/end-user-credentials.md)
+> Commit-pinned source for n8n main: [docs/administer/manage-credentials/end-user-credentials.md](https://github.com/n8n-io/n8n-docs/blob/32d4c1af45711af43703671a66f502ef7bd2b932/docs/administer/manage-credentials/end-user-credentials.md)
 
 # End-user credentials
 
@@ -47,9 +47,10 @@ You can mix fixed and end-user credentials across nodes in one workflow. For exa
 
 - **Enterprise only:** End-user credentials require an Enterprise plan.
 - **Controlled creation:** By default, only [project admins](https://docs.n8n.io/administer/manage-users-and-access/set-permissions-and-roles-rbac/see-available-roles) can create end-user credentials. Grant this permission to other users through [custom roles](https://docs.n8n.io/administer/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles). Limiting who can create them keeps credential management central: an admin sets up a template once and shares it to the projects that need it, rather than many users each setting up their own.
+- **Team projects only:** You can only create end-user credentials in team projects, not in personal projects. This keeps them centrally managed, where an admin sets up the credential template, rather than individual users creating their own in personal projects.
 - **OAuth credentials only:** End-user credentials support OAuth-based credential types only.
 - **One connection per user:** Each user can connect a single account per end-user credential template.
-- **Supported triggers:** End-user credential resolution works with the manual trigger, [Chat Hub](https://docs.n8n.io/build/ways-of-building-workflows/chat-hub), and the MCP Server Trigger.
+- **Supported triggers:** End-user credential resolution works with the manual trigger, [Chat Hub](https://docs.n8n.io/build/ways-of-building-workflows/chat-hub), the MCP Server Trigger, and the [n8n Form Trigger](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.formtrigger).
 
 ## Create an end-user credential
 

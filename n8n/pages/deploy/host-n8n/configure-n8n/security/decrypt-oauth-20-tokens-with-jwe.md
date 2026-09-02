@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/host-n8n/configure-n8n/security/decrypt-oauth-20-tokens-with-jwe.md](https://github.com/n8n-io/n8n-docs/blob/1db58de3a8d474a1ba99f5a612beac694402d963/docs/deploy/host-n8n/configure-n8n/security/decrypt-oauth-20-tokens-with-jwe.md)
+> Commit-pinned source for n8n main: [docs/deploy/host-n8n/configure-n8n/security/decrypt-oauth-20-tokens-with-jwe.md](https://github.com/n8n-io/n8n-docs/blob/32d4c1af45711af43703671a66f502ef7bd2b932/docs/deploy/host-n8n/configure-n8n/security/decrypt-oauth-20-tokens-with-jwe.md)
 
 # JWE token decryption for OAuth 2.0 credentials <a id="jwe-token-decryption-for-oauth-20-credentials"></a>
 

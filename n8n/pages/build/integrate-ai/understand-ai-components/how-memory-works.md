@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/integrate-ai/understand-ai-components/how-memory-works.md](https://github.com/n8n-io/n8n-docs/blob/1db58de3a8d474a1ba99f5a612beac694402d963/docs/build/integrate-ai/understand-ai-components/how-memory-works.md)
+> Commit-pinned source for n8n main: [docs/build/integrate-ai/understand-ai-components/how-memory-works.md](https://github.com/n8n-io/n8n-docs/blob/32d4c1af45711af43703671a66f502ef7bd2b932/docs/build/integrate-ai/understand-ai-components/how-memory-works.md)
 
 # What's memory in AI? <a id="whats-memory-in-ai"></a>
 
