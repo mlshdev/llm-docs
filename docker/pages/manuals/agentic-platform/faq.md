@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/agentic-platform/faq.md](https://github.com/docker/docs/blob/ff96ad1711065cf2e9c3f1d701dad04775834f70/content/manuals/agentic-platform/faq.md)
+> Commit-pinned source for Docker main: [content/manuals/agentic-platform/faq.md](https://github.com/docker/docs/blob/2028912e0e64869c14702deec64ba2ef5cc10441/content/manuals/agentic-platform/faq.md)
 
 # Docker Agentic Platform FAQ
 
@@ -27,6 +27,10 @@ sandboxes, MCP connections, secrets, and network policies. Shared workspaces
 and collaborative ownership are not part of the initial release.
 
 ## How does a sandbox access external services?
+
+By default, every new sandbox uses the **Open** user policy, regardless of
+sandbox type. **Open** allows access to all outbound destinations. To restrict
+egress, replace **Open** with **Balanced**, a custom policy, or no user policy.
 
 Network policies control the destinations a sandbox can reach. The sandbox
 type's read-only kit policy applies automatically, and you can select zero or

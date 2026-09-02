@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/compose/how-tos/environment-variables/set-environment-variables.md](https://github.com/docker/docs/blob/ff96ad1711065cf2e9c3f1d701dad04775834f70/content/manuals/compose/how-tos/environment-variables/set-environment-variables.md)
+> Commit-pinned source for Docker main: [content/manuals/compose/how-tos/environment-variables/set-environment-variables.md](https://github.com/docker/docs/blob/2028912e0e64869c14702deec64ba2ef5cc10441/content/manuals/compose/how-tos/environment-variables/set-environment-variables.md)
 
 # Set environment variables within your container's environment
 

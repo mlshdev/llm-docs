@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/docker-hub/repos/manage/trusted-content/dsos-program.md](https://github.com/docker/docs/blob/ff96ad1711065cf2e9c3f1d701dad04775834f70/content/manuals/docker-hub/repos/manage/trusted-content/dsos-program.md)
+> Commit-pinned source for Docker main: [content/manuals/docker-hub/repos/manage/trusted-content/dsos-program.md](https://github.com/docker/docs/blob/2028912e0e64869c14702deec64ba2ef5cc10441/content/manuals/docker-hub/repos/manage/trusted-content/dsos-program.md)
 
 # Docker-Sponsored Open Source Program
 
@@ -6,7 +6,7 @@
 
 Images that are part of this program have a special badge on Docker Hub making it easier for users to identify projects that Docker has verified as trusted, secure, and active open-source projects.
 
-![Docker-Sponsored Open Source badge](https://raw.githubusercontent.com/docker/docs/ff96ad1711065cf2e9c3f1d701dad04775834f70/content/manuals/docker-hub/images/sponsored-badge-iso.png)
+![Docker-Sponsored Open Source badge](https://raw.githubusercontent.com/docker/docs/2028912e0e64869c14702deec64ba2ef5cc10441/content/manuals/docker-hub/images/sponsored-badge-iso.png)
 
 The Docker-Sponsored Open Source (DSOS) Program provides several features and benefits to non-commercial open source developers.
 
@@ -40,24 +40,24 @@ Only a user with an owner or editor role for the organization can change the rep
 1. Sign in to [Docker Hub](https://hub.docker.com).
 2. Go to the page of the repository that you want to change the logo for.
 3. Select the upload logo button, represented by a camera icon
-   (![camera icon](https://raw.githubusercontent.com/docker/docs/ff96ad1711065cf2e9c3f1d701dad04775834f70/content/manuals/docker-hub/images/upload_logo_sm.png))
+   (![camera icon](https://raw.githubusercontent.com/docker/docs/2028912e0e64869c14702deec64ba2ef5cc10441/content/manuals/docker-hub/images/upload_logo_sm.png))
    overlaying the current repository logo.
 4. In the dialog that opens, select the PNG image that you want to upload to
    set it as the logo for the repository.
 
 #### Remove the logo
 
-Select the **Clear** button (![clear button](https://raw.githubusercontent.com/docker/docs/ff96ad1711065cf2e9c3f1d701dad04775834f70/content/manuals/docker-hub/images/clear_logo_sm.png)) to remove a logo.
+Select the **Clear** button (![clear button](https://raw.githubusercontent.com/docker/docs/2028912e0e64869c14702deec64ba2ef5cc10441/content/manuals/docker-hub/images/clear_logo_sm.png)) to remove a logo.
 
 Removing the logo makes the repository default to using the organization logo, if set, or the following default logo if not.
 
-![Default logo which is a 3D grey cube](https://raw.githubusercontent.com/docker/docs/ff96ad1711065cf2e9c3f1d701dad04775834f70/content/manuals/docker-hub/images/default_logo_sm.png)
+![Default logo which is a 3D grey cube](https://raw.githubusercontent.com/docker/docs/2028912e0e64869c14702deec64ba2ef5cc10441/content/manuals/docker-hub/images/default_logo_sm.png)
 
 ### Verified Docker-Sponsored Open Source badge
 
 Docker verifies that developers can trust images with this badge on Docker Hub as an active open source project.
 
-![Fluent org with a Docker-Sponsored Open Source badge](https://raw.githubusercontent.com/docker/docs/ff96ad1711065cf2e9c3f1d701dad04775834f70/content/manuals/docker-hub/images/sponsored-badge.png)
+![Fluent org with a Docker-Sponsored Open Source badge](https://raw.githubusercontent.com/docker/docs/2028912e0e64869c14702deec64ba2ef5cc10441/content/manuals/docker-hub/images/sponsored-badge.png)
 
 ### Insights and analytics
 

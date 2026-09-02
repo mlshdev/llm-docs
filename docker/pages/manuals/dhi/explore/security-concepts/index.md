@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/dhi/explore/security-concepts/_index.md](https://github.com/docker/docs/blob/ff96ad1711065cf2e9c3f1d701dad04775834f70/content/manuals/dhi/explore/security-concepts/_index.md)
+> Commit-pinned source for Docker main: [content/manuals/dhi/explore/security-concepts/_index.md](https://github.com/docker/docs/blob/2028912e0e64869c14702deec64ba2ef5cc10441/content/manuals/dhi/explore/security-concepts/_index.md)
 
 # Security concepts
 

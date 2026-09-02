@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/get-started/docker-concepts/running-containers/sharing-local-files.md](https://github.com/docker/docs/blob/ff96ad1711065cf2e9c3f1d701dad04775834f70/content/get-started/docker-concepts/running-containers/sharing-local-files.md)
+> Commit-pinned source for Docker main: [content/get-started/docker-concepts/running-containers/sharing-local-files.md](https://github.com/docker/docs/blob/2028912e0e64869c14702deec64ba2ef5cc10441/content/get-started/docker-concepts/running-containers/sharing-local-files.md)
 
 # Sharing local files with containers
 
@@ -85,7 +85,7 @@ Using a bind mount, you can map the configuration file on your host computer to 
 
 1. Delete the existing container by using the Docker Desktop Dashboard:
 
-![A screenshot of Docker Desktop Dashboard showing how to delete the httpd container](https://raw.githubusercontent.com/docker/docs/ff96ad1711065cf2e9c3f1d701dad04775834f70/content/get-started/docker-concepts/running-containers/images/delete-httpd-container.webp?border=true)
+![A screenshot of Docker Desktop Dashboard showing how to delete the httpd container](https://raw.githubusercontent.com/docker/docs/2028912e0e64869c14702deec64ba2ef5cc10441/content/get-started/docker-concepts/running-containers/images/delete-httpd-container.webp?border=true)
 
 2. Create a new directory called `public_html` on your host system.
 
@@ -144,11 +144,11 @@ With everything now up and running, you should be able to access the site via <h
 
 1. You can view the mounted files inside a container by selecting the container's **Files** tab and then selecting a file inside the `/usr/local/apache2/htdocs/` directory. Then, select **Open file editor**.
 
-![A screenshot of Docker Desktop Dashboard showing the mounted files inside the container](https://raw.githubusercontent.com/docker/docs/ff96ad1711065cf2e9c3f1d701dad04775834f70/content/get-started/docker-concepts/running-containers/images/mounted-files.webp?border=true)
+![A screenshot of Docker Desktop Dashboard showing the mounted files inside the container](https://raw.githubusercontent.com/docker/docs/2028912e0e64869c14702deec64ba2ef5cc10441/content/get-started/docker-concepts/running-containers/images/mounted-files.webp?border=true)
 
 2. Delete the file on the host and verify the file is also deleted in the container. You will find that the files no longer exist under **Files** in the Docker Desktop Dashboard.
 
-![A screenshot of Docker Desktop Dashboard showing the deleted files inside the container](https://raw.githubusercontent.com/docker/docs/ff96ad1711065cf2e9c3f1d701dad04775834f70/content/get-started/docker-concepts/running-containers/images/deleted-files.webp?border=true)
+![A screenshot of Docker Desktop Dashboard showing the deleted files inside the container](https://raw.githubusercontent.com/docker/docs/2028912e0e64869c14702deec64ba2ef5cc10441/content/get-started/docker-concepts/running-containers/images/deleted-files.webp?border=true)
 
 3. Recreate the HTML file on the host system and see that file re-appears under the **Files** tab under **Containers** on the Docker Desktop Dashboard. By now, you will be able to access the site too.
 
