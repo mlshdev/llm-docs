@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/moby/buildkit/docs/buildkitd.toml.md](https://github.com/docker/docs/blob/c596433b17b6e062376dcd24395336f316e1714a/_vendor/github.com/moby/buildkit/docs/buildkitd.toml.md)
+> Commit-pinned source for Docker main: [_vendor/github.com/moby/buildkit/docs/buildkitd.toml.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/_vendor/github.com/moby/buildkit/docs/buildkitd.toml.md)
 
 The TOML file used to configure the buildkitd daemon settings has a short
 list of global settings followed by a series of sections for specific areas
@@ -62,7 +62,11 @@ provenanceEnvDir = "/etc/buildkit/provenance.d"
 [history]
   # maxAge is the maximum age of history entries to keep, in seconds.
   maxAge = 172800
-  # maxEntries is the maximum number of history entries to keep.
+  # maxEntries is the maximum number of history entries to keep. When the
+  # history section is omitted, the default is 50. If only maxAge is set,
+  # all entries older than maxAge are removed.
+  # Setting this value to 0 prevents recording new build history, including
+  # active-build events. Existing records remain available until normal GC.
   maxEntries = 50
 
 [worker.oci]

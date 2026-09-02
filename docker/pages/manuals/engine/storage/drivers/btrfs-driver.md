@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/engine/storage/drivers/btrfs-driver.md](https://github.com/docker/docs/blob/c596433b17b6e062376dcd24395336f316e1714a/content/manuals/engine/storage/drivers/btrfs-driver.md)
+> Commit-pinned source for Docker main: [content/manuals/engine/storage/drivers/btrfs-driver.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/engine/storage/drivers/btrfs-driver.md)
 
 # BTRFS storage driver
 
@@ -178,14 +178,14 @@ nested and snapshotted. The diagram below shows 4 subvolumes. 'Subvolume 2' and
 'Subvolume 3' are nested, whereas 'Subvolume 4' shows its own internal directory
 tree.
 
-![Subvolume example](https://raw.githubusercontent.com/docker/docs/c596433b17b6e062376dcd24395336f316e1714a/content/manuals/engine/storage/drivers/images/btfs_subvolume.webp?w=350\&h=100)
+![Subvolume example](https://raw.githubusercontent.com/docker/docs/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/engine/storage/drivers/images/btfs_subvolume.webp?w=350\&h=100)
 
 Only the base layer of an image is stored as a true subvolume. All the other
 layers are stored as snapshots, which only contain the differences introduced
 in that layer. You can create snapshots of snapshots as shown in the diagram
 below.
 
-![Snapshots diagram](https://raw.githubusercontent.com/docker/docs/c596433b17b6e062376dcd24395336f316e1714a/content/manuals/engine/storage/drivers/images/btfs_snapshots.webp?w=350\&h=100)
+![Snapshots diagram](https://raw.githubusercontent.com/docker/docs/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/engine/storage/drivers/images/btfs_snapshots.webp?w=350\&h=100)
 
 On disk, snapshots look and feel just like subvolumes, but in reality they are
 much smaller and more space-efficient. Copy-on-write is used to maximize storage
@@ -193,7 +193,7 @@ efficiency and minimize layer size, and writes in the container's writable layer
 are managed at the block level. The following image shows a subvolume and its
 snapshot sharing data.
 
-![Snapshot and subvolume sharing data](https://raw.githubusercontent.com/docker/docs/c596433b17b6e062376dcd24395336f316e1714a/content/manuals/engine/storage/drivers/images/btfs_pool.webp?w=450\&h=200)
+![Snapshot and subvolume sharing data](https://raw.githubusercontent.com/docker/docs/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/engine/storage/drivers/images/btfs_pool.webp?w=450\&h=200)
 
 For maximum efficiency, when a container needs more space, it is allocated in
 chunks of roughly 1 GB in size.
@@ -203,7 +203,7 @@ own Btrfs subvolume or snapshot. The base layer of an image is stored as a
 subvolume whereas child image layers and containers are stored as snapshots.
 This is shown in the diagram below.
 
-![Btrfs container layers](https://raw.githubusercontent.com/docker/docs/c596433b17b6e062376dcd24395336f316e1714a/content/manuals/engine/storage/drivers/images/btfs_container_layer.webp?w=600)
+![Btrfs container layers](https://raw.githubusercontent.com/docker/docs/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/engine/storage/drivers/images/btfs_container_layer.webp?w=600)
 
 The high level process for creating images and containers on Docker hosts
 running the `btrfs` driver is as follows:

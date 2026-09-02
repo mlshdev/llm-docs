@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/install.md](https://github.com/docker/docs/blob/c596433b17b6e062376dcd24395336f316e1714a/content/manuals/ai/sandboxes/install.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/install.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/ai/sandboxes/install.md)
 
 # Install Docker Sandboxes
 

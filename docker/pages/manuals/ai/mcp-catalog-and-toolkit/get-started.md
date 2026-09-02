@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/mcp-catalog-and-toolkit/get-started.md](https://github.com/docker/docs/blob/c596433b17b6e062376dcd24395336f316e1714a/content/manuals/ai/mcp-catalog-and-toolkit/get-started.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/mcp-catalog-and-toolkit/get-started.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/ai/mcp-catalog-and-toolkit/get-started.md)
 
 # Get started with Docker MCP Toolkit
 
@@ -153,7 +153,7 @@ $ claude "Use the GitHub MCP server to show me my open pull requests"
 Restart Claude Desktop and check the **Search and tools** menu in the chat
 input. You should see the `MCP_DOCKER` server listed and enabled:
 
-![Claude Desktop](https://raw.githubusercontent.com/docker/docs/c596433b17b6e062376dcd24395336f316e1714a/content/manuals/ai/mcp-catalog-and-toolkit/images/claude-desktop.avif)
+![Claude Desktop](https://raw.githubusercontent.com/docker/docs/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/ai/mcp-catalog-and-toolkit/images/claude-desktop.avif)
 
 Test the connection by submitting a prompt that invokes one of your installed
 MCP servers:
@@ -211,7 +211,7 @@ Open Cursor. If you configured the MCP Toolkit for a specific project, open the
 relevant project directory. Then navigate to **Cursor Settings > Tools & MCP**.
 You should see `MCP_DOCKER` under **Installed MCP Servers**:
 
-![Cursor](https://raw.githubusercontent.com/docker/docs/c596433b17b6e062376dcd24395336f316e1714a/content/manuals/ai/mcp-catalog-and-toolkit/images/cursor.avif)
+![Cursor](https://raw.githubusercontent.com/docker/docs/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/ai/mcp-catalog-and-toolkit/images/cursor.avif)
 
 Test the connection by submitting a prompt that invokes one of your installed
 MCP servers:
@@ -246,7 +246,7 @@ $ gemini "Use the GitHub MCP server to show me my open pull requests"
 Open the Goose desktop application and select **Extensions** in the sidebar.
 Under **Enabled Extensions**, you should see an extension named `Mcpdocker`:
 
-![Goose desktop app](https://raw.githubusercontent.com/docker/docs/c596433b17b6e062376dcd24395336f316e1714a/content/manuals/ai/mcp-catalog-and-toolkit/images/goose.avif)
+![Goose desktop app](https://raw.githubusercontent.com/docker/docs/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/ai/mcp-catalog-and-toolkit/images/goose.avif)
 
 **CLI**
 
@@ -285,7 +285,7 @@ Use the GitHub MCP server to show me my open pull requests
 Restart LM Studio and start a new chat. Open the integrations menu and look for
 an entry named `mcp/mcp-docker`. Use the toggle to enable the server:
 
-![LM Studio](https://raw.githubusercontent.com/docker/docs/c596433b17b6e062376dcd24395336f316e1714a/content/manuals/ai/mcp-catalog-and-toolkit/images/lm-studio.avif)
+![LM Studio](https://raw.githubusercontent.com/docker/docs/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/ai/mcp-catalog-and-toolkit/images/lm-studio.avif)
 
 Test the connection by submitting a prompt that invokes one of your installed
 MCP servers:
@@ -324,13 +324,13 @@ $ opencode "Use the GitHub MCP server to show me my open pull requests"
 In Sema4.ai Studio, select **Actions** in the sidebar, then select the **MCP
 Servers** tab. You should see Docker MCP Toolkit in the list:
 
-![Docker MCP Toolkit in Sema4.ai Studio](https://raw.githubusercontent.com/docker/docs/c596433b17b6e062376dcd24395336f316e1714a/content/manuals/ai/mcp-catalog-and-toolkit/images/sema4-mcp-list.avif)
+![Docker MCP Toolkit in Sema4.ai Studio](https://raw.githubusercontent.com/docker/docs/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/ai/mcp-catalog-and-toolkit/images/sema4-mcp-list.avif)
 
 To use MCP Toolkit with Sema4.ai, add it as an agent action. Find the agent you
 want to connect to the MCP Toolkit and open the agent editor. Select **Add
 Action**, enable Docker MCP Toolkit in the list, then save your agent:
 
-![Editing an agent in Sema4.ai Studio](https://raw.githubusercontent.com/docker/docs/c596433b17b6e062376dcd24395336f316e1714a/content/manuals/ai/mcp-catalog-and-toolkit/images/sema4-edit-agent.avif)
+![Editing an agent in Sema4.ai Studio](https://raw.githubusercontent.com/docker/docs/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/ai/mcp-catalog-and-toolkit/images/sema4-edit-agent.avif)
 
 Test the connection by submitting a prompt that invokes one of your installed
 MCP servers:
@@ -346,7 +346,7 @@ project, open the relevant project directory. Then open the **Extensions**
 pane. You should see the `MCP_DOCKER` server listed under installed MCP
 servers.
 
-![MCP\_DOCKER installed in Visual Studio Code](https://raw.githubusercontent.com/docker/docs/c596433b17b6e062376dcd24395336f316e1714a/content/manuals/ai/mcp-catalog-and-toolkit/images/vscode-extensions.avif)
+![MCP\_DOCKER installed in Visual Studio Code](https://raw.githubusercontent.com/docker/docs/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/ai/mcp-catalog-and-toolkit/images/vscode-extensions.avif)
 
 Test the connection by submitting a prompt that invokes one of your installed
 MCP servers:
@@ -359,11 +359,11 @@ Use the GitHub MCP server to show me my open pull requests
 
 Launch Zed and open agent settings:
 
-![Opening Zed agent settings from command palette](https://raw.githubusercontent.com/docker/docs/c596433b17b6e062376dcd24395336f316e1714a/content/manuals/ai/mcp-catalog-and-toolkit/images/zed-cmd-palette.avif)
+![Opening Zed agent settings from command palette](https://raw.githubusercontent.com/docker/docs/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/ai/mcp-catalog-and-toolkit/images/zed-cmd-palette.avif)
 
 Ensure that `MCP_DOCKER` is listed and enabled in the MCP Servers section:
 
-![MCP\_DOCKER in Zed's agent settings](https://raw.githubusercontent.com/docker/docs/c596433b17b6e062376dcd24395336f316e1714a/content/manuals/ai/mcp-catalog-and-toolkit/images/zed-agent-settings.avif)
+![MCP\_DOCKER in Zed's agent settings](https://raw.githubusercontent.com/docker/docs/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/ai/mcp-catalog-and-toolkit/images/zed-agent-settings.avif)
 
 Test the connection by submitting a prompt that invokes one of your installed
 MCP servers:

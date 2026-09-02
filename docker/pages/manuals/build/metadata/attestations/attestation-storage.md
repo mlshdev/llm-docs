@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/moby/buildkit/docs/attestations/attestation-storage.md](https://github.com/docker/docs/blob/c596433b17b6e062376dcd24395336f316e1714a/_vendor/github.com/moby/buildkit/docs/attestations/attestation-storage.md)
+> Commit-pinned source for Docker main: [_vendor/github.com/moby/buildkit/docs/attestations/attestation-storage.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/_vendor/github.com/moby/buildkit/docs/attestations/attestation-storage.md)
 
 # Image attestation storage
 
@@ -84,6 +84,10 @@ The contents of each layer will be a blob dependent on its `mediaType`.
   The subject of the attestation should be set to be the same digest as the
   target manifest described in the [Attestation Manifest Descriptor](#attestation-manifest-descriptor),
   or some object within.
+
+BuildKit limits each attestation file read from a build result to 80 MiB
+before wrapping it as an in-toto statement. This protects exporters from
+unbounded reads of frontend-provided attestation files.
 
 ### Attestation Manifest Descriptor
 

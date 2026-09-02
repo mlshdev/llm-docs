@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/moby/buildkit/frontend/dockerfile/docs/reference.md](https://github.com/docker/docs/blob/c596433b17b6e062376dcd24395336f316e1714a/_vendor/github.com/moby/buildkit/frontend/dockerfile/docs/reference.md)
+> Commit-pinned source for Docker main: [_vendor/github.com/moby/buildkit/frontend/dockerfile/docs/reference.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/_vendor/github.com/moby/buildkit/frontend/dockerfile/docs/reference.md)
 
 Docker can build images automatically by reading the instructions from a
 Dockerfile. A Dockerfile is a text document that contains all the commands a
@@ -708,7 +708,7 @@ The available `[OPTIONS]` for the `RUN` instruction are:
 
 | Option                          | Minimum Dockerfile version |
 | ------------------------------- | -------------------------- |
-| [`--device`](#run---device)     | 1.14-labs                  |
+| [`--device`](#run---device)     | 1.27                       |
 | [`--mount`](#run---mount)       | 1.2                        |
 | [`--network`](#run---network)   | 1.3                        |
 | [`--security`](#run---security) | 1.20                       |
@@ -729,8 +729,7 @@ The cache for `RUN` instructions can be invalidated by [`ADD`](#add) and [`COPY`
 ### RUN --device
 
 > \[!NOTE]
-> Not yet available in stable syntax, use [`docker/dockerfile:1-labs`](#syntax)
-> version. It also needs BuildKit 0.20.0 or later.
+> This option needs BuildKit 0.20.0 or later.
 
 ```dockerfile
 RUN --device=name,[required]
@@ -802,7 +801,7 @@ In this example we use the `--device` flag to run `llama.cpp` inference using
 an NVIDIA GPU device through CDI:
 
 ```dockerfile
-# syntax=docker/dockerfile:1-labs
+# syntax=docker/dockerfile:1
 
 FROM scratch AS model
 ADD https://huggingface.co/bartowski/Llama-3.2-1B-Instruct-GGUF/resolve/main/Llama-3.2-1B-Instruct-Q4_K_M.gguf /model.gguf
@@ -934,6 +933,23 @@ an environment variable by setting the `env` option.
 | `mode`                         | File mode for secret file in octal. Default `0400`.                                                             |
 | `uid`                          | User ID for secret file. Default `0`.                                                                           |
 | `gid`                          | Group ID for secret file. Default `0`.                                                                          |
+
+> \[!NOTE]
+> On Windows containers, the secret is delivered as a single-file, read-only
+> bind mount (there is no `tmpfs`). An explicit `target` is required because
+> there is no default `/run/secrets/` location, e.g.
+> `--mount=type=secret,id=mysecret,target=C:/path/to/secret`. Use forward
+> slashes in the target: the Dockerfile escape character (default `\`) otherwise
+> consumes the backslashes during parsing. The `mode`, `uid`, and `gid` options
+> are not supported on Windows and are ignored. The secret is written to a
+> temporary file restricted (via an explicit ACL) to SYSTEM, the Administrators
+> group, and the BuildKit daemon account, then removed after the step; it is
+> written in clear text, so consider BitLocker for at-rest encryption. Because
+> the file is not granted to the container's default user, the `RUN` step must
+> execute as an administrator (e.g. `USER ContainerAdministrator`) to read the
+> secret. The secret value is not persisted in the image; however, an empty
+> placeholder directory may remain at the `target` path in the resulting
+> layer, which is an inherent property of Windows bind mounts.
 
 #### Example: access to S3
 
@@ -1456,9 +1472,9 @@ ADD arr[[]0].txt /dest/
 #### Adding local tar archives
 
 When using a local tar archive as the source for `ADD`, and the archive is in a
-recognized compression format (`gzip`, `bzip2` or `xz`, or uncompressed), the
-archive is decompressed and extracted into the specified destination. Local tar
-archives are extracted by default, see the \[`ADD --unpack` flag].
+recognized compression format (`gzip`, `bzip2`, `xz` or `zstd`, or
+uncompressed), the archive is decompressed and extracted into the specified
+destination. Local tar archives are extracted by default, see the \[`ADD --unpack` flag].
 
 When a directory is extracted, it has the same behavior as `tar -x`.
 The result is the union of:
@@ -1636,9 +1652,10 @@ ADD [--unpack=<bool>] <src> ... <dir>
 ```
 
 The `--unpack` flag controls whether or not to automatically unpack tar
-archives (including compressed formats like `gzip` or `bzip2`) when adding them
-to the image. Local tar archives are unpacked by default, whereas remote tar
-archives (where `src` is a URL) are downloaded without unpacking.
+archives (including compressed formats like `gzip`, `bzip2`, `xz` or `zstd`)
+when adding them to the image. Local tar archives are unpacked by default,
+whereas remote tar archives (where `src` is a URL) are downloaded without
+unpacking.
 
 ```dockerfile
 # syntax=docker/dockerfile:1
@@ -2729,6 +2746,7 @@ RUN echo "I'm building for $TARGETPLATFORM"
 | `BUILDKIT_BUILD_NAME`           | String | Override the build name shown in [`buildx history` command](https://docs.docker.com/reference/cli/docker/buildx/history/) and [Docker Desktop Builds view](https://docs.docker.com/desktop/use-desktop/builds/). |
 | `BUILDKIT_CACHE_MOUNT_NS`       | String | Set optional cache ID namespace.                                                                                                                                                                                 |
 | `BUILDKIT_CONTEXT_KEEP_GIT_DIR` | Bool   | Trigger Git context to keep the `.git` directory.                                                                                                                                                                |
+| `BUILDKIT_GIT_ADVICE`           | Bool   | Show Git advice messages from BuildKit-managed Git operations. Defaults to `false`.                                                                                                                              |
 | `BUILDKIT_INLINE_CACHE`[^2]     | Bool   | Inline cache metadata to image config or not.                                                                                                                                                                    |
 | `BUILDKIT_MULTI_PLATFORM`       | Bool   | Opt into deterministic output regardless of multi-platform output or not.                                                                                                                                        |
 | `BUILDKIT_SANDBOX_HOSTNAME`     | String | Set the hostname (default `buildkitsandbox`)                                                                                                                                                                     |
