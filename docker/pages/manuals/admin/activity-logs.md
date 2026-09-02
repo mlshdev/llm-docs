@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/admin/activity-logs.md](https://github.com/docker/docs/blob/36f81c2363ef9a4f853ca8406a587889cdc0583d/content/manuals/admin/activity-logs.md)
+> Commit-pinned source for Docker main: [content/manuals/admin/activity-logs.md](https://github.com/docker/docs/blob/c596433b17b6e062376dcd24395336f316e1714a/content/manuals/admin/activity-logs.md)
 
 # Activity logs
 

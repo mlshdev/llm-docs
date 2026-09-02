@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/build/builders/drivers/docker.md](https://github.com/docker/docs/blob/36f81c2363ef9a4f853ca8406a587889cdc0583d/content/manuals/build/builders/drivers/docker.md)
+> Commit-pinned source for Docker main: [content/manuals/build/builders/drivers/docker.md](https://github.com/docker/docs/blob/c596433b17b6e062376dcd24395336f316e1714a/content/manuals/build/builders/drivers/docker.md)
 
 The Buildx Docker driver is the default driver. It uses the BuildKit server
 components built directly into the Docker Engine. The Docker driver requires no

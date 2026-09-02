@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/testcontainers-java-spring-boot-rest-api.md](https://github.com/docker/docs/blob/36f81c2363ef9a4f853ca8406a587889cdc0583d/content/guides/testcontainers-java-spring-boot-rest-api.md)
+> Commit-pinned source for Docker main: [content/guides/testcontainers-java-spring-boot-rest-api.md](https://github.com/docker/docs/blob/c596433b17b6e062376dcd24395336f316e1714a/content/guides/testcontainers-java-spring-boot-rest-api.md)
 
 # Testing a Spring Boot REST API with Testcontainers
 

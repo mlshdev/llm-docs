@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/features/cli/index.md](https://github.com/docker/docs/blob/36f81c2363ef9a4f853ca8406a587889cdc0583d/_vendor/github.com/docker/docker-agent/docs/features/cli/index.md)
+> Commit-pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/features/cli/index.md](https://github.com/docker/docs/blob/c596433b17b6e062376dcd24395336f316e1714a/_vendor/github.com/docker/docker-agent/docs/features/cli/index.md)
 
 *Complete reference for all Docker Agent command-line commands and flags.*
 

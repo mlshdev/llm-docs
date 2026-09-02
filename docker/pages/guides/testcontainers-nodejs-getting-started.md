@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/testcontainers-nodejs-getting-started.md](https://github.com/docker/docs/blob/36f81c2363ef9a4f853ca8406a587889cdc0583d/content/guides/testcontainers-nodejs-getting-started.md)
+> Commit-pinned source for Docker main: [content/guides/testcontainers-nodejs-getting-started.md](https://github.com/docker/docs/blob/c596433b17b6e062376dcd24395336f316e1714a/content/guides/testcontainers-nodejs-getting-started.md)
 
 # Getting started with Testcontainers for Node.js
 

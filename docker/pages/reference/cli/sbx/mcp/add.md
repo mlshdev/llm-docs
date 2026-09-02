@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/sbx_cli/sbx_mcp_add.yaml](https://github.com/docker/docs/blob/36f81c2363ef9a4f853ca8406a587889cdc0583d/data/sbx_cli/sbx_mcp_add.yaml)
+> Commit-pinned source for Docker main: [data/sbx_cli/sbx_mcp_add.yaml](https://github.com/docker/docs/blob/c596433b17b6e062376dcd24395336f316e1714a/data/sbx_cli/sbx_mcp_add.yaml)
 
 # sbx mcp add
 
@@ -158,7 +158,7 @@ Alternative input — local stdio command (--command + --args):
   sbx mcp add fetch --local --url https://registry.modelcontextprotocol.io/v0/servers/fetch-mcp/versions/latest
 
   # Private-network endpoint (host resolves to a private address) — opt out of the SSRF guard
-  sbx mcp add internal --url https://maas.prd.astra.example.com/mcp --skip-ssrf-check
+  sbx mcp add internal --url https://private.example.com/mcp --skip-ssrf-check
 
   # Remote endpoint with a hand-supplied OAuth override (server publishes no
   # well-known OAuth metadata): --oauth-authorization-server is a path or

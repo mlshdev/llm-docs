@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/admin/_index.md](https://github.com/docker/docs/blob/36f81c2363ef9a4f853ca8406a587889cdc0583d/content/manuals/admin/_index.md)
+> Commit-pinned source for Docker main: [content/manuals/admin/_index.md](https://github.com/docker/docs/blob/c596433b17b6e062376dcd24395336f316e1714a/content/manuals/admin/_index.md)
 
 # Administration
 
@@ -20,7 +20,7 @@ As an organization or company owner, you can:
 To provide centralized administration, Docker organizes companies and
 organizations into the following hierarchy and roles.
 
-![Diagram showing Docker’s administration hierarchy with Company at the top, followed by Organizations, Teams, and Members](https://raw.githubusercontent.com/docker/docs/36f81c2363ef9a4f853ca8406a587889cdc0583d/content/manuals/admin/images/docker-admin-structure.webp)
+![Diagram showing Docker’s administration hierarchy with Company at the top, followed by Organizations, Teams, and Members](https://raw.githubusercontent.com/docker/docs/c596433b17b6e062376dcd24395336f316e1714a/content/manuals/admin/images/docker-admin-structure.webp)
 
 ### Company
 

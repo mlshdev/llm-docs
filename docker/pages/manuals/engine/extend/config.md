@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/cli/docs/extend/config.md](https://github.com/docker/docs/blob/36f81c2363ef9a4f853ca8406a587889cdc0583d/_vendor/github.com/docker/cli/docs/extend/config.md)
+> Commit-pinned source for Docker main: [_vendor/github.com/docker/cli/docs/extend/config.md](https://github.com/docker/docs/blob/c596433b17b6e062376dcd24395336f316e1714a/_vendor/github.com/docker/cli/docs/extend/config.md)
 
 # Plugin Config Version 1 of Plugin V2
 

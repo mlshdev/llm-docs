@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/testcontainers-dotnet-aspnet-core.md](https://github.com/docker/docs/blob/36f81c2363ef9a4f853ca8406a587889cdc0583d/content/guides/testcontainers-dotnet-aspnet-core.md)
+> Commit-pinned source for Docker main: [content/guides/testcontainers-dotnet-aspnet-core.md](https://github.com/docker/docs/blob/c596433b17b6e062376dcd24395336f316e1714a/content/guides/testcontainers-dotnet-aspnet-core.md)
 
 # Testing an ASP.NET Core web app with Testcontainers
 
