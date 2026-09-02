@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/builtin/credentials/formiotrigger.md](https://github.com/n8n-io/n8n-docs/blob/0b69471cc64a4886de337982abd2f5d237dcd52a/docs/integrations/builtin/credentials/formiotrigger.md)
+> Commit-pinned source for n8n main: [docs/integrations/builtin/credentials/formiotrigger.md](https://github.com/n8n-io/n8n-docs/blob/78fea4497784e9c1f3f34b12757ef7a2a6b363af/docs/integrations/builtin/credentials/formiotrigger.md)
 
 # Form.io Trigger credentials <a id="formio-trigger-credentials"></a>
 

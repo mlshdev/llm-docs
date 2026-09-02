@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/connect/create-nodes/deploy-your-node/install-private-nodes.md](https://github.com/n8n-io/n8n-docs/blob/0b69471cc64a4886de337982abd2f5d237dcd52a/docs/connect/create-nodes/deploy-your-node/install-private-nodes.md)
+> Commit-pinned source for n8n main: [docs/connect/create-nodes/deploy-your-node/install-private-nodes.md](https://github.com/n8n-io/n8n-docs/blob/78fea4497784e9c1f3f34b12757ef7a2a6b363af/docs/connect/create-nodes/deploy-your-node/install-private-nodes.md)
 
 # Install private nodes <a id="install-private-nodes"></a>
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/connect/create-nodes/test-your-node/troubleshooting.md](https://github.com/n8n-io/n8n-docs/blob/0b69471cc64a4886de337982abd2f5d237dcd52a/docs/connect/create-nodes/test-your-node/troubleshooting.md)
+> Commit-pinned source for n8n main: [docs/connect/create-nodes/test-your-node/troubleshooting.md](https://github.com/n8n-io/n8n-docs/blob/78fea4497784e9c1f3f34b12757ef7a2a6b363af/docs/connect/create-nodes/test-your-node/troubleshooting.md)
 
 # Troubleshooting <a id="troubleshooting"></a>
 
@@ -35,7 +35,7 @@ credentials: [
 ],
 ```
 
-![Code examples with arrows linking the credential class's name property to the matching name field in the node's credentials array](https://raw.githubusercontent.com/n8n-io/n8n-docs/0b69471cc64a4886de337982abd2f5d237dcd52a/docs/connect/.gitbook/assets/troubleshooting-credentials-1.png)
+![Code examples with arrows linking the credential class's name property to the matching name field in the node's credentials array](https://raw.githubusercontent.com/n8n-io/n8n-docs/78fea4497784e9c1f3f34b12757ef7a2a6b363af/docs/connect/.gitbook/assets/troubleshooting-credentials-1.png)
 
 ## Editor UI <a id="editor-ui"></a>
 

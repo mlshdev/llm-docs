@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-azure.md](https://github.com/n8n-io/n8n-docs/blob/0b69471cc64a4886de337982abd2f5d237dcd52a/docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-azure.md)
+> Commit-pinned source for n8n main: [docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-azure.md](https://github.com/n8n-io/n8n-docs/blob/78fea4497784e9c1f3f34b12757ef7a2a6b363af/docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-azure.md)
 
 # Hosting n8n on Azure <a id="hosting-n8n-on-azure"></a>
 
@@ -25,8 +25,8 @@ You need [The Azure command line tool](https://learn.microsoft.com/en-us/cli/azu
 >
 > n8n releases a new minor version most weeks. The `stable` version is for production use. `beta` is the most recent release. The `beta` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
 >
-> Current `stable`: 2.36.9
-> Current `beta`: 2.38.1
+> Current `stable`: 2.37.7
+> Current `beta`: 2.38.2
 
 ## Hosting options <a id="hosting-options"></a>
 

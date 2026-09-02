@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/administer/use-source-control-and-environments/tutorial-create-environments-with-source-control.md](https://github.com/n8n-io/n8n-docs/blob/0b69471cc64a4886de337982abd2f5d237dcd52a/docs/administer/use-source-control-and-environments/tutorial-create-environments-with-source-control.md)
+> Commit-pinned source for n8n main: [docs/administer/use-source-control-and-environments/tutorial-create-environments-with-source-control.md](https://github.com/n8n-io/n8n-docs/blob/78fea4497784e9c1f3f34b12757ef7a2a6b363af/docs/administer/use-source-control-and-environments/tutorial-create-environments-with-source-control.md)
 
 # Tutorial: Create environments with source control <a id="tutorial-create-environments-with-source-control"></a>
 
@@ -28,7 +28,7 @@ Before setting up source control and environments, you need to plan your environ
 
 ### Multiple instances, multiple branches <a id="multiple-instances-multiple-branches"></a>
 
-![Development n8n instance linked to a development branch and production instance linked to a production branch](https://raw.githubusercontent.com/n8n-io/n8n-docs/0b69471cc64a4886de337982abd2f5d237dcd52a/docs/administer/.gitbook/assets/vc-multi-multi.png)
+![Development n8n instance linked to a development branch and production instance linked to a production branch](https://raw.githubusercontent.com/n8n-io/n8n-docs/78fea4497784e9c1f3f34b12757ef7a2a6b363af/docs/administer/.gitbook/assets/vc-multi-multi.png)
 
 The advantages of this pattern are:
 
@@ -39,7 +39,7 @@ The disadvantage is more manual steps to copy work between environments.
 
 ### Multiple instances, one branch <a id="multiple-instances-one-branch"></a>
 
-![Development and production n8n instances both connected to the same Git branch](https://raw.githubusercontent.com/n8n-io/n8n-docs/0b69471cc64a4886de337982abd2f5d237dcd52a/docs/administer/.gitbook/assets/vc-multi-one.png)
+![Development and production n8n instances both connected to the same Git branch](https://raw.githubusercontent.com/n8n-io/n8n-docs/78fea4497784e9c1f3f34b12757ef7a2a6b363af/docs/administer/.gitbook/assets/vc-multi-one.png)
 
 The advantage of this pattern is that work is instantly available to other environments when you push from one instance.
 
@@ -108,7 +108,7 @@ In your development instance, create a few workflows, tags, variables, and crede
 
 To push work to Git:
 
-1. Select **Push** ![Push icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/0b69471cc64a4886de337982abd2f5d237dcd52a/docs/reusable-content/.gitbook/assets/push-icon.png) in the main menu.
+1. Select **Push** ![Push icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/78fea4497784e9c1f3f34b12757ef7a2a6b363af/docs/reusable-content/.gitbook/assets/push-icon.png) in the main menu.
 2. In the **Commit and push changes** modal, select which workflows and data tables you want to push. You can filter by status (new, modified, deleted) and search for items. n8n automatically pushes tags, and variable and credential stubs.
 
    n8n pushes the current saved version, not the published version, of the workflow. You need to then separately publish versions on the remote server.
@@ -123,20 +123,20 @@ Your work is now in GitHub. If you're using a multi-branch setup, it's on the de
 
 1. In GitHub, create a pull request to merge development into production.
 2. Merge the pull request.
-3. In your production instance, select **Pull** ![Pull icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/0b69471cc64a4886de337982abd2f5d237dcd52a/docs/administer/.gitbook/assets/pull-icon.png) in the main menu.
+3. In your production instance, select **Pull** ![Pull icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/78fea4497784e9c1f3f34b12757ef7a2a6b363af/docs/administer/.gitbook/assets/pull-icon.png) in the main menu.
 
 **Single-branch**
 
-In your production instance, select **Pull** ![Pull icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/0b69471cc64a4886de337982abd2f5d237dcd52a/docs/administer/.gitbook/assets/pull-icon.png) in the main menu.
+In your production instance, select **Pull** ![Pull icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/78fea4497784e9c1f3f34b12757ef7a2a6b363af/docs/administer/.gitbook/assets/pull-icon.png) in the main menu.
 
 <details>
 
 <summary>View screenshot</summary>
 
-![](https://raw.githubusercontent.com/n8n-io/n8n-docs/0b69471cc64a4886de337982abd2f5d237dcd52a/docs/reusable-content/.gitbook/assets/pull-push-menu-closed.png)
+![](https://raw.githubusercontent.com/n8n-io/n8n-docs/78fea4497784e9c1f3f34b12757ef7a2a6b363af/docs/reusable-content/.gitbook/assets/pull-push-menu-closed.png)
 *Pull and push buttons when menu is closed*
 
-![](https://raw.githubusercontent.com/n8n-io/n8n-docs/0b69471cc64a4886de337982abd2f5d237dcd52a/docs/reusable-content/.gitbook/assets/pull-push-menu-open.png)
+![](https://raw.githubusercontent.com/n8n-io/n8n-docs/78fea4497784e9c1f3f34b12757ef7a2a6b363af/docs/reusable-content/.gitbook/assets/pull-push-menu-open.png)
 *Pull and push buttons when menu is open*
 
 </details>
