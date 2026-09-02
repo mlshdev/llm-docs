@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/builtin/credentials/typeform.md](https://github.com/n8n-io/n8n-docs/blob/50a2c8dc6704c114ca2b241eac1e72867ed718fe/docs/integrations/builtin/credentials/typeform.md)
+> Commit-pinned source for n8n main: [docs/integrations/builtin/credentials/typeform.md](https://github.com/n8n-io/n8n-docs/blob/1db58de3a8d474a1ba99f5a612beac694402d963/docs/integrations/builtin/credentials/typeform.md)
 
 # Typeform credentials <a id="typeform-credentials"></a>
 
@@ -57,3 +57,15 @@ To get your Client ID and Client Secret, register a new Typeform app:
 11. Once you enter both the **Client ID** and **Client Secret** in n8n, select **Connect my account** and follow the on-screen prompts to finish authorizing the app.
 
 Refer to [Create applications that integrate with Typeform's APIs](https://www.typeform.com/developers/get-started/applications/#1-create-an-application-in-the-typeform-admin-panel) for more information.
+
+## Setting custom scopes <a id="setting-custom-scopes"></a>
+
+Typeform OAuth2 credentials use the following scopes by default:
+
+- `forms:read`
+- `webhooks:read`
+- `webhooks:write`
+
+To select different scopes for your credentials, enable the **Custom Scopes** toggle and edit the **Enabled Scopes** field. Take care when removing a default scope, as this can stop the [Typeform Trigger](https://docs.n8n.io/integrations/builtin/trigger-nodes/n8n-nodes-base.typeformtrigger) node from working.
+
+Refer to Typeform's [Scopes documentation](https://www.typeform.com/developers/get-started/scopes/) for the full list of available scopes.

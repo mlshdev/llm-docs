@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/flow-logic/loop.md](https://github.com/n8n-io/n8n-docs/blob/50a2c8dc6704c114ca2b241eac1e72867ed718fe/docs/build/flow-logic/loop.md)
+> Commit-pinned source for n8n main: [docs/build/flow-logic/loop.md](https://github.com/n8n-io/n8n-docs/blob/1db58de3a8d474a1ba99f5a612beac694402d963/docs/build/flow-logic/loop.md)
 
 # Looping in n8n <a id="looping-in-n8n"></a>
 
@@ -8,7 +8,7 @@ Looping is useful when you want to process multiple items or perform an action r
 
 n8n nodes take any number of items as input, process these items, and output the results. You can think of each item as a single data point, or a single row in the output table of a node.
 
-![The Customer Datastore node output](https://raw.githubusercontent.com/n8n-io/n8n-docs/50a2c8dc6704c114ca2b241eac1e72867ed718fe/docs/build/.gitbook/assets/customer_datastore_node.png)
+![The Customer Datastore node output](https://raw.githubusercontent.com/n8n-io/n8n-docs/1db58de3a8d474a1ba99f5a612beac694402d963/docs/build/.gitbook/assets/customer_datastore_node.png)
 
 Nodes usually run once for each item. For example, if you wanted to send the name and notes of the customers in the Customer Datastore node as a message on Slack, you would:
 
@@ -34,7 +34,7 @@ To create a loop in an n8n workflow, connect the output of one node to the input
 
 Here is an [example workflow](https://n8n.io/workflows/1130) that implements a loop with an `IF` node:
 
-![Workflow canvas showing an IF node connected back to a previous node to form a loop, checking a condition to stop it](https://raw.githubusercontent.com/n8n-io/n8n-docs/50a2c8dc6704c114ca2b241eac1e72867ed718fe/docs/build/.gitbook/assets/example_workflow.png)
+![Workflow canvas showing an IF node connected back to a previous node to form a loop, checking a condition to stop it](https://raw.githubusercontent.com/n8n-io/n8n-docs/1db58de3a8d474a1ba99f5a612beac694402d963/docs/build/.gitbook/assets/example_workflow.png)
 
 ### Loop until all items are processed <a id="loop-until-all-items-are-processed"></a>
 
