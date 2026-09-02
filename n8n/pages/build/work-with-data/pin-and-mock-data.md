@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/work-with-data/pin-and-mock-data.md](https://github.com/n8n-io/n8n-docs/blob/78fea4497784e9c1f3f34b12757ef7a2a6b363af/docs/build/work-with-data/pin-and-mock-data.md)
+> Commit-pinned source for n8n main: [docs/build/work-with-data/pin-and-mock-data.md](https://github.com/n8n-io/n8n-docs/blob/50a2c8dc6704c114ca2b241eac1e72867ed718fe/docs/build/work-with-data/pin-and-mock-data.md)
 
 # Pinning and mocking data <a id="pinning-and-mocking-data"></a>
 
@@ -54,7 +54,7 @@ You can only pin data for nodes that have a single main output ("error" outputs 
 To pin data in a node:
 
 1. Run the node to load data.
-2. In the **OUTPUT** view, select **Pin data** ![Pin data icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/78fea4497784e9c1f3f34b12757ef7a2a6b363af/docs/reusable-content/.gitbook/assets/data-pinning-button.png). When data pinning is active, the button is disabled and a "This data is pinned" banner is displayed in the **OUTPUT** view.
+2. In the **OUTPUT** view, select **Pin data** ![Pin data icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/50a2c8dc6704c114ca2b241eac1e72867ed718fe/docs/reusable-content/.gitbook/assets/data-pinning-button.png). When data pinning is active, the button is disabled and a "This data is pinned" banner is displayed in the **OUTPUT** view.
 
 > **Info**
 > **Nodes that output binary data**
@@ -80,7 +80,7 @@ To edit output data:
 
 1. Run the node to load data.
 2. In the **OUTPUT** view, select **JSON** to switch to JSON view.
-3. Select **Edit** ![Edit data icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/78fea4497784e9c1f3f34b12757ef7a2a6b363af/docs/build/.gitbook/assets/edit-data.png).
+3. Select **Edit** ![Edit data icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/50a2c8dc6704c114ca2b241eac1e72867ed718fe/docs/build/.gitbook/assets/edit-data.png).
 4. Edit your data.
 5. Select **Save**. n8n saves your data changes and pins your data.
 
@@ -91,14 +91,14 @@ You can copy data from nodes in previous workflow executions:
 1. Open the left menu.
 2. Select **Executions**.
 3. Browse the workflow executions list to find the one with the data you want to copy.
-4. Select **Open Past Execution** ![Open past execution icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/78fea4497784e9c1f3f34b12757ef7a2a6b363af/docs/build/.gitbook/assets/open-execution.png).
+4. Select **Open Past Execution** ![Open past execution icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/50a2c8dc6704c114ca2b241eac1e72867ed718fe/docs/build/.gitbook/assets/open-execution.png).
 5. Double click the node whose data you want to copy.
 6. If it's table layout, select **JSON** to switch to JSON view.
 7. There are two ways to copy the JSON:
 8. Select the JSON you want by highlighting it, like selecting text. Then use `ctrl` + `c` to copy it.
 9. Select the JSON you want to copy by clicking on a parameter. Then:
-   1\. Hover over the JSON. n8n displays the **Copy** ![Copy data icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/78fea4497784e9c1f3f34b12757ef7a2a6b363af/docs/build/.gitbook/assets/copy-data.png) button.
-   2\. Select **Copy** ![Copy data icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/78fea4497784e9c1f3f34b12757ef7a2a6b363af/docs/build/.gitbook/assets/copy-data.png).
+   1\. Hover over the JSON. n8n displays the **Copy** ![Copy data icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/50a2c8dc6704c114ca2b241eac1e72867ed718fe/docs/build/.gitbook/assets/copy-data.png) button.
+   2\. Select **Copy** ![Copy data icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/50a2c8dc6704c114ca2b241eac1e72867ed718fe/docs/build/.gitbook/assets/copy-data.png).
    3\. You can choose what to copy:
    - **Copy Item Path** and **Copy Parameter Path** give you expressions that access parts of the JSON.
    - **Copy Value**: copies the entire selected JSON.
@@ -110,7 +110,7 @@ You can copy data from nodes in previous workflow executions:
 11. Open the node where you want to use the copied data.
 12. If there is no data, run the node to load data.
 13. In the **OUTPUT** view, select **JSON** to switch to JSON view.
-14. Select **Edit** ![Edit data icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/78fea4497784e9c1f3f34b12757ef7a2a6b363af/docs/build/.gitbook/assets/edit-data.png).
+14. Select **Edit** ![Edit data icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/50a2c8dc6704c114ca2b241eac1e72867ed718fe/docs/build/.gitbook/assets/edit-data.png).
 15. Paste in the data from the previous execution.
 16. Select **Save**. n8n saves your data changes and pins your data.
 

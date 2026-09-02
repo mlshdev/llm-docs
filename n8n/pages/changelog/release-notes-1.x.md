@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/changelog/release-notes-1.x.md](https://github.com/n8n-io/n8n-docs/blob/78fea4497784e9c1f3f34b12757ef7a2a6b363af/docs/changelog/release-notes-1.x.md)
+> Commit-pinned source for n8n main: [docs/changelog/release-notes-1.x.md](https://github.com/n8n-io/n8n-docs/blob/50a2c8dc6704c114ca2b241eac1e72867ed718fe/docs/changelog/release-notes-1.x.md)
 
 # Release notes 1.x
 
@@ -659,7 +659,7 @@ This release contains bug fixes and features.
 > - Create and edit workflows and folders<br>
 > - Use existing credentials but not create or edit credentials<br>
 >
-> ![Project roles is now available in the settings of your n8n Enterprise instance.](https://raw.githubusercontent.com/n8n-io/n8n-docs/78fea4497784e9c1f3f34b12757ef7a2a6b363af/docs/changelog/.gitbook/assets/projectroles.png)
+> ![Project roles is now available in the settings of your n8n Enterprise instance.](https://raw.githubusercontent.com/n8n-io/n8n-docs/50a2c8dc6704c114ca2b241eac1e72867ed718fe/docs/changelog/.gitbook/assets/projectroles.png)
 >
 > \
 > \*\*How it works\*\*\
@@ -774,8 +774,8 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.120.0...n8n@1.121
 > \
 > This feature simplifies integration and improves visibility across AI platforms that support MCP, helping you use your n8n workflows directly in the tools where you already work and experiment. [Learn more in documentation.](https://docs.n8n.io/connect/connect-to-n8n-mcp-server)<br>
 >
-> ![Enable MCP for an instance in instance settings.](https://raw.githubusercontent.com/n8n-io/n8n-docs/78fea4497784e9c1f3f34b12757ef7a2a6b363af/docs/changelog/.gitbook/assets/instance_mcp_settings.png)\
-> ![Enable MCP for each workflow in workflow settings.](https://raw.githubusercontent.com/n8n-io/n8n-docs/78fea4497784e9c1f3f34b12757ef7a2a6b363af/docs/changelog/.gitbook/assets/instance_mcp_workflow_settings.png)
+> ![Enable MCP for an instance in instance settings.](https://raw.githubusercontent.com/n8n-io/n8n-docs/50a2c8dc6704c114ca2b241eac1e72867ed718fe/docs/changelog/.gitbook/assets/instance_mcp_settings.png)\
+> ![Enable MCP for each workflow in workflow settings.](https://raw.githubusercontent.com/n8n-io/n8n-docs/50a2c8dc6704c114ca2b241eac1e72867ed718fe/docs/changelog/.gitbook/assets/instance_mcp_workflow_settings.png)
 
 ### Contributors <a id="contributors"></a>
 
@@ -878,7 +878,7 @@ This release includes multiple bug fixes for AI Agent, task runners, editor, and
 >
 > The MCP Client Tool now supports OAuth authentication, enabling secure connections to APIs that implement delegated access flows. [Learn more](https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp) about the MCP Client Tool node.<br>
 >
-> ![Authentication options in MCP Client Tool node](https://raw.githubusercontent.com/n8n-io/n8n-docs/78fea4497784e9c1f3f34b12757ef7a2a6b363af/docs/changelog/.gitbook/assets/oauthmcp.png)<br>
+> ![Authentication options in MCP Client Tool node](https://raw.githubusercontent.com/n8n-io/n8n-docs/50a2c8dc6704c114ca2b241eac1e72867ed718fe/docs/changelog/.gitbook/assets/oauthmcp.png)<br>
 
 ### Contributors <a id="contributors"></a>
 
@@ -1868,7 +1868,7 @@ This has the following implications:
 > - Registered Community Edition enables analysis of one evaluation in the **Evaluations** tab which allows easy comparison of evaluation runs over time. Pro and Enterprise plans allow unlimited evaluations in the **Evaluations** tab.
 >
 > \
-> ![Built-in Metrics](https://raw.githubusercontent.com/n8n-io/n8n-docs/78fea4497784e9c1f3f34b12757ef7a2a6b363af/docs/changelog/.gitbook/assets/Built-in_metrics.png)<br>
+> ![Built-in Metrics](https://raw.githubusercontent.com/n8n-io/n8n-docs/50a2c8dc6704c114ca2b241eac1e72867ed718fe/docs/changelog/.gitbook/assets/Built-in_metrics.png)<br>
 >
 > [Learn more](https://docs.n8n.io/build/integrate-ai/test-and-improve-ai-workflows/understand-why-to-test) about setting up and customizing evaluations.
 
@@ -2264,7 +2264,7 @@ This release contains core updates, editor improvements, node updates, and bug f
 > The **Evaluation node** includes several operations that, when used together, enable end-to-end AI evaluation.
 >
 > \
-> ![Evaluation node](https://raw.githubusercontent.com/n8n-io/n8n-docs/78fea4497784e9c1f3f34b12757ef7a2a6b363af/docs/changelog/.gitbook/assets/Evaluations_node.png)<br>
+> ![Evaluation node](https://raw.githubusercontent.com/n8n-io/n8n-docs/50a2c8dc6704c114ca2b241eac1e72867ed718fe/docs/changelog/.gitbook/assets/Evaluations_node.png)<br>
 >
 > Use this node to:
 >
@@ -2290,7 +2290,7 @@ This release contains core updates, editor improvements, node updates, and bug f
 >    > 💡 Well-defined metrics = smarter decisions. Scoring your outputs based on similarity, correctness, or categorization can help you track whether changes are actually improving performance. Learn more and get links to example templates [here](https://docs.n8n.io/build/integrate-ai/test-and-improve-ai-workflows/use-metrics-to-measure-quality#2-add-metrics-to-workflow).
 >
 > \
-> ![Evaluation workflow](https://raw.githubusercontent.com/n8n-io/n8n-docs/78fea4497784e9c1f3f34b12757ef7a2a6b363af/docs/changelog/.gitbook/assets/Evaluations_workflow.png)<br>
+> ![Evaluation workflow](https://raw.githubusercontent.com/n8n-io/n8n-docs/50a2c8dc6704c114ca2b241eac1e72867ed718fe/docs/changelog/.gitbook/assets/Evaluations_workflow.png)<br>
 >
 > When the Evaluation trigger node is executed, it runs each input in our dataset through your AI logic. This continues until all test cases are processed, a limit is reached, or you manually stop the execution. Once your evaluation path is set up, you can update your prompt, model, or workflow logic—and re-run the Evaluation trigger node to compare results. If you’ve added metrics, they’ll appear in the Evaluations tab.\ <br>
 >
@@ -2709,7 +2709,7 @@ This release contains API updates, core updates, editor updates, a new node, nod
 >
 > A new banner on the overview page that gives instance admins and owners a birds eye view of key metrics over the last 7 days.
 >
-> ![Insights summary banner](https://raw.githubusercontent.com/n8n-io/n8n-docs/78fea4497784e9c1f3f34b12757ef7a2a6b363af/docs/changelog/.gitbook/assets/Insights-summary-banner.png)
+> ![Insights summary banner](https://raw.githubusercontent.com/n8n-io/n8n-docs/50a2c8dc6704c114ca2b241eac1e72867ed718fe/docs/changelog/.gitbook/assets/Insights-summary-banner.png)
 >
 > Available metrics:
 >
@@ -2725,7 +2725,7 @@ This release contains API updates, core updates, editor updates, a new node, nod
 >
 > On Pro and Enterprise plans, a new dashboard offers a deeper view into workflow performance and activity.
 >
-> ![Insights dashboard](https://raw.githubusercontent.com/n8n-io/n8n-docs/78fea4497784e9c1f3f34b12757ef7a2a6b363af/docs/changelog/.gitbook/assets/Insights-dashboard.png)
+> ![Insights dashboard](https://raw.githubusercontent.com/n8n-io/n8n-docs/50a2c8dc6704c114ca2b241eac1e72867ed718fe/docs/changelog/.gitbook/assets/Insights-dashboard.png)
 >
 > The dashboard includes:
 >
@@ -2775,13 +2775,13 @@ This release contains new features, new nodes, performance improvements, and bug
 >
 > <br>
 >
-> [![Thumbnail linking to a Studio video walkthrough of the new MCP Server Trigger and Client Tool nodes](https://raw.githubusercontent.com/n8n-io/n8n-docs/78fea4497784e9c1f3f34b12757ef7a2a6b363af/docs/changelog/.gitbook/assets/MCP-YouTube-thumb.jpg)](https://youtu.be/45WPU7P-1QQ?feature=shared)
+> [![Thumbnail linking to a Studio video walkthrough of the new MCP Server Trigger and Client Tool nodes](https://raw.githubusercontent.com/n8n-io/n8n-docs/50a2c8dc6704c114ca2b241eac1e72867ed718fe/docs/changelog/.gitbook/assets/MCP-YouTube-thumb.jpg)](https://youtu.be/45WPU7P-1QQ?feature=shared)
 >
 > ### MCP Server Trigger <a id="mcp-server-trigger"></a>
 >
 > The MCP Server Trigger turns n8n into an MCP server, providing n8n tools to models running outside of n8n. The node acts as an entry point into n8n for MCP clients. It operates by exposing a URL that MCP clients can interact with to access n8n tools. This means your n8n workflows and integrations are now available to models run elsewhere. Pretty neat.
 >
-> ![MCP Server Trigger](https://raw.githubusercontent.com/n8n-io/n8n-docs/78fea4497784e9c1f3f34b12757ef7a2a6b363af/docs/changelog/.gitbook/assets/MCP-Server-Trigger.png)
+> ![MCP Server Trigger](https://raw.githubusercontent.com/n8n-io/n8n-docs/50a2c8dc6704c114ca2b241eac1e72867ed718fe/docs/changelog/.gitbook/assets/MCP-Server-Trigger.png)
 >
 > [Explore the MCP Server Trigger docs](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-langchain.mcptrigger)
 >
@@ -2789,7 +2789,7 @@ This release contains new features, new nodes, performance improvements, and bug
 >
 > The MCP Client Tool node is a MCP client, allowing you to use the tools exposed by an external MCP server. You can connect the MCP Client Tool node to your models to call external tools with n8n agents. In this regard it is similar to using a n8n tool with your AI agent. One advantage is that the MCP Client Tool can access multiple tools on the MCP server at once, keeping your canvas cleaner and easier to understand.
 >
-> ![MCP Client Tools](https://raw.githubusercontent.com/n8n-io/n8n-docs/78fea4497784e9c1f3f34b12757ef7a2a6b363af/docs/changelog/.gitbook/assets/MCP-Client-Tool.png)
+> ![MCP Client Tools](https://raw.githubusercontent.com/n8n-io/n8n-docs/50a2c8dc6704c114ca2b241eac1e72867ed718fe/docs/changelog/.gitbook/assets/MCP-Client-Tool.png)
 >
 > [Explore the MCP Client Tool docs](https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp)
 
@@ -3525,7 +3525,7 @@ This release contains new features, a new node, node updates, performance improv
 > \
 > To get the full picture, check out our Studio update with Max and Elias, where they discuss and demo the new editing experience. 👇<br>
 >
-> [![Thumbnail linking to a Studio video demoing the overhauled Code node editing experience](https://raw.githubusercontent.com/n8n-io/n8n-docs/78fea4497784e9c1f3f34b12757ef7a2a6b363af/docs/changelog/.gitbook/assets/The_Studio_thumbnail_Code_node.jpg)](https://youtu.be/De1E58MPaMQ?t=645)
+> [![Thumbnail linking to a Studio video demoing the overhauled Code node editing experience](https://raw.githubusercontent.com/n8n-io/n8n-docs/50a2c8dc6704c114ca2b241eac1e72867ed718fe/docs/changelog/.gitbook/assets/The_Studio_thumbnail_Code_node.jpg)](https://youtu.be/De1E58MPaMQ?t=645)
 
 ### New node: Microsoft Entra ID <a id="new-node-microsoft-entra-id"></a>
 
@@ -3671,7 +3671,7 @@ This release contains node updates, performance improvements, and bug fixes.
 >
 > We're introducing a significant performance upgrade to the Code node with our new Task runner system. This enhancement moves JavaScript code execution to a separate process, improving your workflow execution speed while adding better isolation.
 >
-> ![Task runners overview](https://raw.githubusercontent.com/n8n-io/n8n-docs/78fea4497784e9c1f3f34b12757ef7a2a6b363af/docs/changelog/.gitbook/assets/task-runner-concept.png)
+> ![Task runners overview](https://raw.githubusercontent.com/n8n-io/n8n-docs/50a2c8dc6704c114ca2b241eac1e72867ed718fe/docs/changelog/.gitbook/assets/task-runner-concept.png)
 >
 > Our benchmarks show up to 6x improvement in workflow executions using Code nodes - from approximately 6 to 35 executions per second. All these improvements happen under the hood, keeping your Code node experience exactly the same.
 >
@@ -3887,7 +3887,7 @@ This release contains a new features, new nodes, node enhancements, and bug fixe
 >
 > Use the [n8n Form node](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.form) to create user-facing forms with multiple pages. You can add other nodes with custom logic between to process user input. Start the workflow with a [n8n Form Trigger](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.formtrigger).
 >
-> ![A multi-page form with branching](https://raw.githubusercontent.com/n8n-io/n8n-docs/78fea4497784e9c1f3f34b12757ef7a2a6b363af/docs/changelog/.gitbook/assets/example_image.png)
+> ![A multi-page form with branching](https://raw.githubusercontent.com/n8n-io/n8n-docs/50a2c8dc6704c114ca2b241eac1e72867ed718fe/docs/changelog/.gitbook/assets/example_image.png)
 >
 > Additionally you can:
 >
@@ -4267,7 +4267,7 @@ This release contains new features, bug fixes and feature enhancements.
 >
 > We added collaborator avatars back to the workflow canvas. You will see other users who are active on the workflow, preventing you from overriding each other's work.
 >
-> ![Collaboration avatars](https://raw.githubusercontent.com/n8n-io/n8n-docs/78fea4497784e9c1f3f34b12757ef7a2a6b363af/docs/changelog/.gitbook/assets/Collaboration-avatar.png)
+> ![Collaboration avatars](https://raw.githubusercontent.com/n8n-io/n8n-docs/50a2c8dc6704c114ca2b241eac1e72867ed718fe/docs/changelog/.gitbook/assets/Collaboration-avatar.png)
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 

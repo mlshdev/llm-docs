@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/builtin/credentials/google/oauth-single-service.md](https://github.com/n8n-io/n8n-docs/blob/78fea4497784e9c1f3f34b12757ef7a2a6b363af/docs/integrations/builtin/credentials/google/oauth-single-service.md)
+> Commit-pinned source for n8n main: [docs/integrations/builtin/credentials/google/oauth-single-service.md](https://github.com/n8n-io/n8n-docs/blob/50a2c8dc6704c114ca2b241eac1e72867ed718fe/docs/integrations/builtin/credentials/google/oauth-single-service.md)
 
 # Google OAuth2 single service
 
@@ -29,7 +29,7 @@ n8n Cloud users can use **Managed OAuth2** for the following nodes:
 
 To use **Managed OAuth2**, click **Sign in with Google** in the credentials screen. You don't need any more setup in the Google Cloud Console or elsewhere.
 
-![n8n credential screen with a Sign in with Google button and a dropdown to switch to Custom OAuth2](https://raw.githubusercontent.com/n8n-io/n8n-docs/78fea4497784e9c1f3f34b12757ef7a2a6b363af/docs/integrations/.gitbook/assets/managed-oauth.png)
+![n8n credential screen with a Sign in with Google button and a dropdown to switch to Custom OAuth2](https://raw.githubusercontent.com/n8n-io/n8n-docs/50a2c8dc6704c114ca2b241eac1e72867ed718fe/docs/integrations/.gitbook/assets/managed-oauth.png)
 
 If you prefer to use Custom OAuth2, use the dropdown to change the authentication type.
 
@@ -59,7 +59,7 @@ First, create a Google Cloud Console project. If you already have a project, jum
 4. Select **Create**.
 5. Check the top navigation and make sure the project dropdown has your project selected. If not, select the project you just created.
 
-![](https://raw.githubusercontent.com/n8n-io/n8n-docs/78fea4497784e9c1f3f34b12757ef7a2a6b363af/docs/reusable-content/.gitbook/assets/google-cloud-project-dropdown.png)
+![](https://raw.githubusercontent.com/n8n-io/n8n-docs/50a2c8dc6704c114ca2b241eac1e72867ed718fe/docs/reusable-content/.gitbook/assets/google-cloud-project-dropdown.png)
 *Check the project dropdown in the Google Cloud top navigation*
 
 ### Enable APIs <a id="enable-apis"></a>
@@ -67,7 +67,7 @@ First, create a Google Cloud Console project. If you already have a project, jum
 With your project created, enable the APIs you'll need access to:
 
 1. Access your [Google Cloud Console - Library](https://console.cloud.google.com/apis/library). Make sure you're in the correct project.
-   ![](https://raw.githubusercontent.com/n8n-io/n8n-docs/78fea4497784e9c1f3f34b12757ef7a2a6b363af/docs/reusable-content/.gitbook/assets/google-cloud-project-dropdown.png)
+   ![](https://raw.githubusercontent.com/n8n-io/n8n-docs/50a2c8dc6704c114ca2b241eac1e72867ed718fe/docs/reusable-content/.gitbook/assets/google-cloud-project-dropdown.png)
    *Check the project dropdown in the Google Cloud top navigation*
 
 2. Go to **APIs & Services > Library**.

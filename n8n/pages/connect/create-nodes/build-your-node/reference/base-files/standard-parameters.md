@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/connect/create-nodes/build-your-node/reference/base-files/standard-parameters.md](https://github.com/n8n-io/n8n-docs/blob/78fea4497784e9c1f3f34b12757ef7a2a6b363af/docs/connect/create-nodes/build-your-node/reference/base-files/standard-parameters.md)
+> Commit-pinned source for n8n main: [docs/connect/create-nodes/build-your-node/reference/base-files/standard-parameters.md](https://github.com/n8n-io/n8n-docs/blob/50a2c8dc6704c114ca2b241eac1e72867ed718fe/docs/connect/create-nodes/build-your-node/reference/base-files/standard-parameters.md)
 
 # Standard parameters <a id="standard-parameters"></a>
 

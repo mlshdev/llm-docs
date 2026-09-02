@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/builtin/core-nodes/n8n-nodes-base.errortrigger.md](https://github.com/n8n-io/n8n-docs/blob/78fea4497784e9c1f3f34b12757ef7a2a6b363af/docs/integrations/builtin/core-nodes/n8n-nodes-base.errortrigger.md)
+> Commit-pinned source for n8n main: [docs/integrations/builtin/core-nodes/n8n-nodes-base.errortrigger.md](https://github.com/n8n-io/n8n-docs/blob/50a2c8dc6704c114ca2b241eac1e72867ed718fe/docs/integrations/builtin/core-nodes/n8n-nodes-base.errortrigger.md)
 
 # Error Trigger node <a id="error-trigger-node"></a>
 
@@ -10,7 +10,7 @@ You can use the Error Trigger node to create error workflows. When another linke
 2. Give the workflow a name, for example `Error Handler`.
 3. Select **Save**.
 4. In the workflow where you want to use this error workflow:
-   1. Select **Options** ![Options menu icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/78fea4497784e9c1f3f34b12757ef7a2a6b363af/docs/reusable-content/.gitbook/assets/three-dot-options-menu.png) > **Settings**.
+   1. Select **Options** ![Options menu icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/50a2c8dc6704c114ca2b241eac1e72867ed718fe/docs/reusable-content/.gitbook/assets/three-dot-options-menu.png) > **Settings**.
    2. In **Error workflow**, select the workflow you just created. For example, if you used the name Error Handler, select **Error handler**.
    3. Select **Save**.
       Now, when this workflow errors, the related error workflow runs.
