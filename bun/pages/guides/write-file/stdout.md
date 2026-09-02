@@ -1,0 +1,21 @@
+> Release-pinned source for Bun bun-v1.4.0: [docs/guides/write-file/stdout.mdx](https://bun.com/docs/guides/write-file/stdout)
+
+# Write to stdout
+
+The `console.log` function writes to `stdout` and appends a line break to the printed data.
+
+```ts
+console.log("Lorem ipsum");
+```
+
+***
+
+Bun also exposes `stdout` as a `BunFile` with the `Bun.stdout` property. Pass it as the destination to [`Bun.write()`](https://bun.com/docs/runtime/file-io#writing-files-bun-write).
+
+```ts
+await Bun.write(Bun.stdout, "Lorem ipsum");
+```
+
+***
+
+See [`Bun.write()`](https://bun.com/docs/runtime/file-io#writing-files-bun-write).

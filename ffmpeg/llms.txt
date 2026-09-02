@@ -1,0 +1,48 @@
+# FFmpeg master
+
+> Documentation generated from the latest `master` branch commit of [FFmpeg/FFmpeg](https://github.com/FFmpeg/FFmpeg) and pinned to immutable source commit `9fc8c785e2747c87121ec28f8f10ceab0562384b`.
+
+- [Full documentation](llms-full.txt): Complete normalized corpus for FFmpeg master.
+- [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
+- FFmpeg tracks master because its GitHub mirror does not publish GitHub releases.
+- Primary Texinfo manuals and their checked-in includes are converted without executing Make, Texinfo, or FFmpeg binaries.
+- Build-generated configuration sections, API Doxygen output, and duplicate Texinfo fragments are omitted.
+
+## Manuals
+
+- [Synopsis](pages/doc/ffmpeg.md): Source `doc/ffmpeg.texi`.
+- [Synopsis](pages/doc/ffplay.md): Source `doc/ffplay.texi`.
+- [Synopsis](pages/doc/ffprobe.md): Source `doc/ffprobe.texi`.
+- [Description](pages/doc/ffmpeg-utils.md): Source `doc/ffmpeg-utils.texi`.
+- [Description](pages/doc/ffmpeg-scaler.md): Source `doc/ffmpeg-scaler.texi`.
+- [Description](pages/doc/ffmpeg-resampler.md): Source `doc/ffmpeg-resampler.texi`.
+- [Description](pages/doc/ffmpeg-codecs.md): Source `doc/ffmpeg-codecs.texi`.
+- [Description](pages/doc/ffmpeg-formats.md): Source `doc/ffmpeg-formats.texi`.
+- [Description](pages/doc/ffmpeg-devices.md): Source `doc/ffmpeg-devices.texi`.
+- [Description](pages/doc/ffmpeg-filters.md): Source `doc/ffmpeg-filters.texi`.
+- [Description](pages/doc/ffmpeg-protocols.md): Source `doc/ffmpeg-protocols.texi`.
+- [Description](pages/doc/ffmpeg-bitstream-filters.md): Source `doc/ffmpeg-bitstream-filters.texi`.
+- [Introduction](pages/doc/developer.md): Source `doc/developer.texi`.
+- [General Questions](pages/doc/faq.md): Source `doc/faq.texi`.
+- [Introduction](pages/doc/fate.md): Source `doc/fate.texi`.
+- [External libraries](pages/doc/general.md): Source `doc/general.texi`.
+- [Organisation](pages/doc/community.md): Source `doc/community.texi`.
+- [Introduction](pages/doc/git-howto.md): Source `doc/git-howto.texi`.
+- [General Questions](pages/doc/mailing-list-faq.md): Source `doc/mailing-list-faq.texi`.
+- [Unix-like](pages/doc/platform.md): Source `doc/platform.texi`.
+
+## Development reference
+
+- [FFmpeg README](pages/README.md): Source `README.md`.
+- [Installing FFmpeg](pages/INSTALL.md): Source `INSTALL.md`.
+- [Note to Github users](pages/CONTRIBUTING.md): Source `CONTRIBUTING.md`.
+- [Build System.Txt](pages/doc/build_system.md): Source `doc/build_system.txt`.
+- [Filter design](pages/doc/filter_design.md): Source `doc/filter_design.txt`.
+- [FFmpeg Infrastructure:](pages/doc/infra.md): Source `doc/infra.txt`.
+- [FFmpeg's bug/feature request tracker manual](pages/doc/issue_tracker.md): Source `doc/issue_tracker.txt`.
+- [FFmpeg multithreading methods](pages/doc/multithreading.md): Source `doc/multithreading.txt`.
+- [optimization Tips (for libavcodec):](pages/doc/optimization.md): Source `doc/optimization.txt`.
+- [Rate Distortion.Txt](pages/doc/rate_distortion.md): Source `doc/rate_distortion.txt`.
+- [Tablegen.Txt](pages/doc/tablegen.md): Source `doc/tablegen.txt`.
+- [Transforms](pages/doc/transforms.md): Source `doc/transforms.md`.
+- [Bootstrap](pages/doc/writing_filters.md): Source `doc/writing_filters.txt`.

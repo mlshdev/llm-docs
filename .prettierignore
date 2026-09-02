@@ -13,6 +13,10 @@ victorialogs-datasource/
 vmestimator/
 grafana/
 zitadel/
+ffmpeg/
+yt-dlp/
+searxng/
+bun/
 llms.txt
 llms-full.txt
 bun.lock

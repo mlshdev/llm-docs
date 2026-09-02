@@ -268,11 +268,17 @@ function validateDocument(
     vmestimator: hugoShortcode,
     zitadel:
       /<\/?(?:Admonition|ApiCard|Callout|Cards?|Column|DocCardList|DynamicCodeBlock|FrameworkSelector|GithubCodeBlock|Steps?|Tabs?)\b/,
+    ffmpeg: /@(?:chapter|section|subsection|include|item|table|example|end)\b/,
+    "yt-dlp": /(?!)/,
+    searxng: /(?!)/,
+    bun: /<\/?(?:Accordion|Card|CodeGroup|Frame|Note|Step|Tab|Tip|Warning)\b/,
   };
   const source =
-    projectId === "docker" || projectId === "n8n"
-      ? withoutFencedCode(document.body)
-      : document.body;
+    projectId === "searxng" && document.sourcePath === "docs/dev/reST.rst"
+      ? ""
+      : projectId === "docker" || projectId === "n8n"
+        ? withoutFencedCode(document.body)
+        : document.body;
   if (unresolved[projectId].test(source)) {
     throw new Error(
       `Unresolved ${projectId} source syntax in ${document.sourcePath}`,

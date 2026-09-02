@@ -3,6 +3,10 @@ netbird/** linguist-generated=true
 podman/** linguist-generated=true
 n8n/** linguist-generated=true
 victoriametrics/** linguist-generated=true
+ffmpeg/** linguist-generated=true whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab
+yt-dlp/** linguist-generated=true whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab
+searxng/** linguist-generated=true whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab
+bun/** linguist-generated=true whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab
 llms-full.txt linguist-generated=true
 **/llms-full.txt linguist-generated=true
 llms-full.txt -diff

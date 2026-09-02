@@ -166,9 +166,25 @@ export async function downloadArchive(
   ref: string,
   destination: string,
 ): Promise<void> {
-  const response = await githubFetch(
-    `/repos/${repository}/tarball/${encodeURIComponent(ref)}`,
+  const token = process.env.GITHUB_TOKEN ?? process.env.GH_TOKEN;
+  const response = await fetch(
+    `https://codeload.github.com/${repository
+      .split("/")
+      .map(encodeURIComponent)
+      .join("/")}/tar.gz/${encodeURIComponent(ref)}`,
+    {
+      headers: {
+        "User-Agent": "mlshdev-llm-docs",
+        ...(token ? { Authorization: `Bearer ${token}` } : {}),
+      },
+      redirect: "follow",
+    },
   );
+  if (!response.ok) {
+    throw new Error(
+      `${repository}@${ref} archive download failed: ${response.status} ${response.statusText}`,
+    );
+  }
   const contentLength = Number(response.headers.get("content-length"));
   if (Number.isFinite(contentLength) && contentLength > maximumArchiveBytes) {
     throw new Error(`${repository}@${ref} archive exceeds 500 MiB`);

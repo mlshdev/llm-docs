@@ -73,6 +73,30 @@
       "releaseId": 379625648,
       "releasePublishedAt": "2026-08-31T09:04:57Z",
       "sourceCommit": "35aa213863395a73ee18dbfeae9a9ef41d6fff77"
+    },
+    "ffmpeg": {
+      "tag": "master",
+      "branch": "master",
+      "sourceCommit": "9fc8c785e2747c87121ec28f8f10ceab0562384b",
+      "sourceCommittedAt": "2026-08-31T12:20:31Z"
+    },
+    "yt-dlp": {
+      "tag": "2026.08.19",
+      "releaseId": 373411891,
+      "releasePublishedAt": "2026-08-19T23:48:43Z",
+      "sourceCommit": "3a08beaf031ab68f966401ead017ac81fe8486cf"
+    },
+    "searxng": {
+      "tag": "master",
+      "branch": "master",
+      "sourceCommit": "05cd77f71b466b7674658429d834a8db3b26811f",
+      "sourceCommittedAt": "2026-09-02T14:52:59Z"
+    },
+    "bun": {
+      "tag": "bun-v1.4.0",
+      "releaseId": 373437831,
+      "releasePublishedAt": "2026-08-20T14:07:21Z",
+      "sourceCommit": "34cbb9a40b4bd1bd767d134a7065e66c2432a676"
     }
   }
 }

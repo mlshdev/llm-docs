@@ -1,0 +1,208 @@
+# SearXNG master
+
+> Documentation generated from the latest `master` branch commit of [searxng/searxng](https://github.com/searxng/searxng) and pinned to immutable source commit `05cd77f71b466b7674658429d834a8db3b26811f`.
+
+- [Full documentation](llms-full.txt): Complete normalized corpus for SearXNG master.
+- [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
+- SearXNG tracks master because the repository publishes neither GitHub releases nor release tags.
+- Checked-in RST and Markdown includes are expanded without executing Sphinx, Jinja, or imported Python modules.
+- Generated autodoc output and non-text assets are omitted.
+
+## Project
+
+- [AI Policy](pages/AI_POLICY.md): Source `AI_POLICY.rst`.
+- [SearXNG](pages/CHANGELOG.md): Source `CHANGELOG.rst`.
+- [Translations](pages/CONTRIBUTING.md): Source `CONTRIBUTING.rst`.
+- [Setup](pages/README.md): Source `README.rst`.
+- [Security Policy](pages/SECURITY.md): Source `SECURITY.md`.
+
+## Administration
+
+- [Answer CAPTCHA from server's IP](pages/docs/admin/answer-captcha.md): Source `docs/admin/answer-captcha.rst`.
+- [Administration API](pages/docs/admin/api.md): Source `docs/admin/api.rst`.
+- [Architecture](pages/docs/admin/architecture.md): Source `docs/admin/architecture.rst`.
+- [Buildhosts](pages/docs/admin/buildhosts.md): Source `docs/admin/buildhosts.rst`.
+- [Administrator documentation](pages/docs/admin/index.md): Source `docs/admin/index.rst`.
+- [Apache](pages/docs/admin/installation-apache.md): Source `docs/admin/installation-apache.rst`.
+- [Installation container](pages/docs/admin/installation-docker.md): Source `docs/admin/installation-docker.rst`.
+- [Granian](pages/docs/admin/installation-granian.md): Source `docs/admin/installation-granian.rst`.
+- [NGINX](pages/docs/admin/installation-nginx.md): Source `docs/admin/installation-nginx.rst`.
+- [Installation Script](pages/docs/admin/installation-scripts.md): Source `docs/admin/installation-scripts.rst`.
+- [Step by step installation](pages/docs/admin/installation-searxng.md): Source `docs/admin/installation-searxng.rst`.
+- [uWSGI](pages/docs/admin/installation-uwsgi.md): Source `docs/admin/installation-uwsgi.rst`.
+- [Installation](pages/docs/admin/installation.md): Source `docs/admin/installation.rst`.
+- [List of plugins](pages/docs/admin/plugins.md): Source `docs/admin/plugins.rst`.
+- [Favicons](pages/docs/admin/searx.favicons.md): Source `docs/admin/searx.favicons.rst`.
+- [Limiter](pages/docs/admin/searx.limiter.md): Source `docs/admin/searx.limiter.rst`.
+- [Settings](pages/docs/admin/settings/index.md): Source `docs/admin/settings/index.rst`.
+- [settings.yml](pages/docs/admin/settings/settings.md): Source `docs/admin/settings/settings.rst`.
+- [brand:](pages/docs/admin/settings/settings_brand.md): Source `docs/admin/settings/settings_brand.rst`.
+- [categoriesastabs:](pages/docs/admin/settings/settings_categories_as_tabs.md): Source `docs/admin/settings/settings_categories_as_tabs.rst`.
+- [engines:](pages/docs/admin/settings/settings_engines.md): Source `docs/admin/settings/settings_engines.rst`.
+- [general:](pages/docs/admin/settings/settings_general.md): Source `docs/admin/settings/settings_general.rst`.
+- [outgoing:](pages/docs/admin/settings/settings_outgoing.md): Source `docs/admin/settings/settings_outgoing.rst`.
+- [plugins:](pages/docs/admin/settings/settings_plugins.md): Source `docs/admin/settings/settings_plugins.rst`.
+- [preferences:](pages/docs/admin/settings/settings_preferences.md): Source `docs/admin/settings/settings_preferences.rst`.
+- [redis:](pages/docs/admin/settings/settings_redis.md): Source `docs/admin/settings/settings_redis.rst`.
+- [search:](pages/docs/admin/settings/settings_search.md): Source `docs/admin/settings/settings_search.rst`.
+- [server:](pages/docs/admin/settings/settings_server.md): Source `docs/admin/settings/settings_server.rst`.
+- [ui:](pages/docs/admin/settings/settings_ui.md): Source `docs/admin/settings/settings_ui.rst`.
+- [valkey:](pages/docs/admin/settings/settings_valkey.md): Source `docs/admin/settings/settings_valkey.rst`.
+- [SearXNG maintenance](pages/docs/admin/update-searxng.md): Source `docs/admin/update-searxng.rst`.
+
+## Documentation
+
+- [Searxng](pages/docs/build-templates/searxng.md): Source `docs/build-templates/searxng.rst`.
+- [Welcome to SearXNG](pages/docs/index.md): Source `docs/index.rst`.
+- [Why use a private instance?](pages/docs/own-instance.md): Source `docs/own-instance.rst`.
+
+## Development
+
+- [Built-in Answerers](pages/docs/dev/answerers/builtins.md): Source `docs/dev/answerers/builtins.rst`.
+- [Answerer Development](pages/docs/dev/answerers/development.md): Source `docs/dev/answerers/development.rst`.
+- [Answerers](pages/docs/dev/answerers/index.md): Source `docs/dev/answerers/index.rst`.
+- [Random](pages/docs/dev/answerers/random.md): Source `docs/dev/answerers/random.rst`.
+- [Statistics](pages/docs/dev/answerers/statistics.md): Source `docs/dev/answerers/statistics.rst`.
+- [Git Commits & Change Management](pages/docs/dev/commits.md): Source `docs/dev/commits.rst`.
+- [How to contribute](pages/docs/dev/contribution_guide.md): Source `docs/dev/contribution_guide.rst`.
+- [Demo Offline Engine](pages/docs/dev/engines/demo/demo_offline.md): Source `docs/dev/engines/demo/demo_offline.rst`.
+- [Demo Online Engine](pages/docs/dev/engines/demo/demo_online.md): Source `docs/dev/engines/demo/demo_online.rst`.
+- [Engine Overview](pages/docs/dev/engines/engine_overview.md): Source `docs/dev/engines/engine_overview.rst`.
+- [Engine Library](pages/docs/dev/engines/enginelib.md): Source `docs/dev/engines/enginelib.rst`.
+- [SearXNG's engines loader](pages/docs/dev/engines/engines.md): Source `docs/dev/engines/engines.rst`.
+- [Engine Implementations](pages/docs/dev/engines/index.md): Source `docs/dev/engines/index.rst`.
+- [JSON Engine](pages/docs/dev/engines/json_engine.md): Source `docs/dev/engines/json_engine.rst`.
+- [MediaWiki Engine](pages/docs/dev/engines/mediawiki.md): Source `docs/dev/engines/mediawiki.rst`.
+- [Command Line Engines](pages/docs/dev/engines/offline/command-line-engines.md): Source `docs/dev/engines/offline/command-line-engines.rst`.
+- [NoSQL databases](pages/docs/dev/engines/offline/nosql-engines.md): Source `docs/dev/engines/offline/nosql-engines.rst`.
+- [Local Search APIs](pages/docs/dev/engines/offline/search-indexer-engines.md): Source `docs/dev/engines/offline/search-indexer-engines.rst`.
+- [SQL Engines](pages/docs/dev/engines/offline/sql-engines.md): Source `docs/dev/engines/offline/sql-engines.rst`.
+- [Offline Concept](pages/docs/dev/engines/offline_concept.md): Source `docs/dev/engines/offline_concept.rst`.
+- [500px](pages/docs/dev/engines/online/500px.md): Source `docs/dev/engines/online/500px.rst`.
+- [Adobe Stock](pages/docs/dev/engines/online/adobe_stock.md): Source `docs/dev/engines/online/adobe_stock.rst`.
+- [Alpine Linux Packages](pages/docs/dev/engines/online/alpinelinux.md): Source `docs/dev/engines/online/alpinelinux.rst`.
+- [Anna's Archive](pages/docs/dev/engines/online/annas_archive.md): Source `docs/dev/engines/online/annas_archive.rst`.
+- [Arch Linux](pages/docs/dev/engines/online/archlinux.md): Source `docs/dev/engines/online/archlinux.rst`.
+- [arXiv](pages/docs/dev/engines/online/arxiv.md): Source `docs/dev/engines/online/arxiv.rst`.
+- [Astrophysics Data System (ADS)](pages/docs/dev/engines/online/astrophysics_data_system.md): Source `docs/dev/engines/online/astrophysics_data_system.rst`.
+- [Azure Resources](pages/docs/dev/engines/online/azure.md): Source `docs/dev/engines/online/azure.rst`.
+- [Bing Engines](pages/docs/dev/engines/online/bing.md): Source `docs/dev/engines/online/bing.rst`.
+- [Bpb](pages/docs/dev/engines/online/bpb.md): Source `docs/dev/engines/online/bpb.rst`.
+- [Brave Engines](pages/docs/dev/engines/online/brave.md): Source `docs/dev/engines/online/brave.rst`.
+- [BT4G](pages/docs/dev/engines/online/bt4g.md): Source `docs/dev/engines/online/bt4g.rst`.
+- [Cara Images](pages/docs/dev/engines/online/cara.md): Source `docs/dev/engines/online/cara.rst`.
+- [ChinaSo](pages/docs/dev/engines/online/chinaso.md): Source `docs/dev/engines/online/chinaso.rst`.
+- [CORE](pages/docs/dev/engines/online/core.md): Source `docs/dev/engines/online/core.rst`.
+- [Crossref](pages/docs/dev/engines/online/crossref.md): Source `docs/dev/engines/online/crossref.rst`.
+- [Dailymotion](pages/docs/dev/engines/online/dailymotion.md): Source `docs/dev/engines/online/dailymotion.rst`.
+- [Discourse Forums](pages/docs/dev/engines/online/discourse.md): Source `docs/dev/engines/online/discourse.rst`.
+- [DuckDuckGo Engines](pages/docs/dev/engines/online/duckduckgo.md): Source `docs/dev/engines/online/duckduckgo.rst`.
+- [Exa API Engine](pages/docs/dev/engines/online/exaapi.md): Source `docs/dev/engines/online/exaapi.rst`.
+- [Geizhals](pages/docs/dev/engines/online/geizhals.md): Source `docs/dev/engines/online/geizhals.rst`.
+- [Gitea](pages/docs/dev/engines/online/gitea.md): Source `docs/dev/engines/online/gitea.rst`.
+- [Github Code](pages/docs/dev/engines/online/github_code.md): Source `docs/dev/engines/online/github_code.rst`.
+- [GitLab](pages/docs/dev/engines/online/gitlab.md): Source `docs/dev/engines/online/gitlab.rst`.
+- [Google Engines](pages/docs/dev/engines/online/google.md): Source `docs/dev/engines/online/google.rst`.
+- [Hugging Face](pages/docs/dev/engines/online/huggingface.md): Source `docs/dev/engines/online/huggingface.rst`.
+- [Jina Engine](pages/docs/dev/engines/online/jina.md): Source `docs/dev/engines/online/jina.rst`.
+- [Kagi Engines](pages/docs/dev/engines/online/kagi.md): Source `docs/dev/engines/online/kagi.rst`.
+- [Lemmy](pages/docs/dev/engines/online/lemmy.md): Source `docs/dev/engines/online/lemmy.rst`.
+- [Library of Congress](pages/docs/dev/engines/online/loc.md): Source `docs/dev/engines/online/loc.rst`.
+- [Marginalia Search](pages/docs/dev/engines/online/marginalia.md): Source `docs/dev/engines/online/marginalia.rst`.
+- [Mastodon](pages/docs/dev/engines/online/mastodon.md): Source `docs/dev/engines/online/mastodon.rst`.
+- [Moviepilot](pages/docs/dev/engines/online/moviepilot.md): Source `docs/dev/engines/online/moviepilot.rst`.
+- [Matrix Rooms Search (MRS)](pages/docs/dev/engines/online/mrs.md): Source `docs/dev/engines/online/mrs.rst`.
+- [Mwmbl Engine](pages/docs/dev/engines/online/mwmbl.md): Source `docs/dev/engines/online/mwmbl.rst`.
+- [Odysee](pages/docs/dev/engines/online/odysee.md): Source `docs/dev/engines/online/odysee.rst`.
+- [OpenAlex](pages/docs/dev/engines/online/openalex.md): Source `docs/dev/engines/online/openalex.rst`.
+- [Open Library](pages/docs/dev/engines/online/openlibrary.md): Source `docs/dev/engines/online/openlibrary.rst`.
+- [Peertube Engines](pages/docs/dev/engines/online/peertube.md): Source `docs/dev/engines/online/peertube.rst`.
+- [Piped](pages/docs/dev/engines/online/piped.md): Source `docs/dev/engines/online/piped.rst`.
+- [PubMed](pages/docs/dev/engines/online/pubmed.md): Source `docs/dev/engines/online/pubmed.rst`.
+- [Qwant](pages/docs/dev/engines/online/qwant.md): Source `docs/dev/engines/online/qwant.rst`.
+- [RadioBrowser](pages/docs/dev/engines/online/radio_browser.md): Source `docs/dev/engines/online/radio_browser.rst`.
+- [Recoll Engine](pages/docs/dev/engines/online/recoll.md): Source `docs/dev/engines/online/recoll.rst`.
+- [Repology](pages/docs/dev/engines/online/repology.md): Source `docs/dev/engines/online/repology.rst`.
+- [Reuters](pages/docs/dev/engines/online/reuters.md): Source `docs/dev/engines/online/reuters.rst`.
+- [Semantic Scholar](pages/docs/dev/engines/online/semantic_scholar.md): Source `docs/dev/engines/online/semantic_scholar.rst`.
+- [Soundcloud](pages/docs/dev/engines/online/soundcloud.md): Source `docs/dev/engines/online/soundcloud.rst`.
+- [Sourcehut](pages/docs/dev/engines/online/sourcehut.md): Source `docs/dev/engines/online/sourcehut.rst`.
+- [Springer Nature](pages/docs/dev/engines/online/springer.md): Source `docs/dev/engines/online/springer.rst`.
+- [Startpage Engines](pages/docs/dev/engines/online/startpage.md): Source `docs/dev/engines/online/startpage.rst`.
+- [Tagesschau API](pages/docs/dev/engines/online/tagesschau.md): Source `docs/dev/engines/online/tagesschau.rst`.
+- [Torznab WebAPI](pages/docs/dev/engines/online/torznab.md): Source `docs/dev/engines/online/torznab.rst`.
+- [Tube Archivist](pages/docs/dev/engines/online/tubearchivist.md): Source `docs/dev/engines/online/tubearchivist.rst`.
+- [Void Linux binary packages](pages/docs/dev/engines/online/void.md): Source `docs/dev/engines/online/void.rst`.
+- [Wallhaven](pages/docs/dev/engines/online/wallhaven.md): Source `docs/dev/engines/online/wallhaven.rst`.
+- [Wikimedia](pages/docs/dev/engines/online/wikipedia.md): Source `docs/dev/engines/online/wikipedia.rst`.
+- [Yacy](pages/docs/dev/engines/online/yacy.md): Source `docs/dev/engines/online/yacy.rst`.
+- [Yahoo Engine](pages/docs/dev/engines/online/yahoo.md): Source `docs/dev/engines/online/yahoo.rst`.
+- [Yandex Search API](pages/docs/dev/engines/online/yandex_api.md): Source `docs/dev/engines/online/yandex_api.rst`.
+- [Z-Library](pages/docs/dev/engines/online/zlibrary.md): Source `docs/dev/engines/online/zlibrary.rst`.
+- [Tineye](pages/docs/dev/engines/online_url_search/tineye.md): Source `docs/dev/engines/online_url_search/tineye.rst`.
+- [XPath Engine](pages/docs/dev/engines/xpath.md): Source `docs/dev/engines/xpath.rst`.
+- [Extended Types](pages/docs/dev/extended_types.md): Source `docs/dev/extended_types.rst`.
+- [Developer documentation](pages/docs/dev/index.md): Source `docs/dev/index.rst`.
+- [Makefile & ./manage](pages/docs/dev/makefile.md): Source `docs/dev/makefile.rst`.
+- [Built-in Plugins](pages/docs/dev/plugins/builtins.md): Source `docs/dev/plugins/builtins.rst`.
+- [Calculator](pages/docs/dev/plugins/calculator.md): Source `docs/dev/plugins/calculator.rst`.
+- [Plugin Development](pages/docs/dev/plugins/development.md): Source `docs/dev/plugins/development.rst`.
+- [Hash Values](pages/docs/dev/plugins/hash_plugin.md): Source `docs/dev/plugins/hash_plugin.rst`.
+- [Hostnames](pages/docs/dev/plugins/hostnames.md): Source `docs/dev/plugins/hostnames.rst`.
+- [Plugins](pages/docs/dev/plugins/index.md): Source `docs/dev/plugins/index.rst`.
+- [Infinite scroll](pages/docs/dev/plugins/infinite_scroll.md): Source `docs/dev/plugins/infinite_scroll.rst`.
+- [Self-Info](pages/docs/dev/plugins/self_info.md): Source `docs/dev/plugins/self_info.rst`.
+- [Time Zone](pages/docs/dev/plugins/time_zone.md): Source `docs/dev/plugins/time_zone.rst`.
+- [Tor check](pages/docs/dev/plugins/tor_check.md): Source `docs/dev/plugins/tor_check.rst`.
+- [Unit Converter](pages/docs/dev/plugins/unit_converter.md): Source `docs/dev/plugins/unit_converter.rst`.
+- [Development Quickstart](pages/docs/dev/quickstart.md): Source `docs/dev/quickstart.rst`.
+- [reST primer](pages/docs/dev/reST.md): Source `docs/dev/reST.rst`.
+- [Answer Results](pages/docs/dev/result_types/answer.md): Source `docs/dev/result_types/answer.rst`.
+- [Result](pages/docs/dev/result_types/base_result.md): Source `docs/dev/result_types/base_result.rst`.
+- [Correction Results](pages/docs/dev/result_types/correction.md): Source `docs/dev/result_types/correction.rst`.
+- [Result Types](pages/docs/dev/result_types/index.md): Source `docs/dev/result_types/index.rst`.
+- [Infobox Results](pages/docs/dev/result_types/infobox.md): Source `docs/dev/result_types/infobox.rst`.
+- [Code Results](pages/docs/dev/result_types/main/code.md): Source `docs/dev/result_types/main/code.rst`.
+- [File Results](pages/docs/dev/result_types/main/file.md): Source `docs/dev/result_types/main/file.rst`.
+- [Image Results](pages/docs/dev/result_types/main/image.md): Source `docs/dev/result_types/main/image.rst`.
+- [Key-Value Results](pages/docs/dev/result_types/main/keyvalue.md): Source `docs/dev/result_types/main/keyvalue.rst`.
+- [Main Results](pages/docs/dev/result_types/main/mainresult.md): Source `docs/dev/result_types/main/mainresult.rst`.
+- [Paper Results](pages/docs/dev/result_types/main/paper.md): Source `docs/dev/result_types/main/paper.rst`.
+- [Main Search Results](pages/docs/dev/result_types/main_result.md): Source `docs/dev/result_types/main_result.rst`.
+- [Suggestion Results](pages/docs/dev/result_types/suggestion.md): Source `docs/dev/result_types/suggestion.rst`.
+- [Search API](pages/docs/dev/search_api.md): Source `docs/dev/search_api.rst`.
+- [Tooling box searxngextra](pages/docs/dev/searxng_extra/index.md): Source `docs/dev/searxng_extra/index.rst`.
+- [searxngextra/update/](pages/docs/dev/searxng_extra/update.md): Source `docs/dev/searxng_extra/update.rst`.
+- [Simple Theme Templates](pages/docs/dev/templates.md): Source `docs/dev/templates.rst`.
+- [Translation](pages/docs/dev/translation.md): Source `docs/dev/translation.rst`.
+
+## Source reference
+
+- [Source-Code](pages/docs/src/index.md): Source `docs/src/index.rst`.
+- [Custom message extractor (i18n)](pages/docs/src/searx.babel_extract.md): Source `docs/src/searx.babel_extract.rst`.
+- [Bot Detection](pages/docs/src/searx.botdetection.md): Source `docs/src/searx.botdetection.rst`.
+- [Caches](pages/docs/src/searx.cache.md): Source `docs/src/searx.cache.rst`.
+- [SearXNG Exceptions](pages/docs/src/searx.exceptions.md): Source `docs/src/searx.exceptions.rst`.
+- [Favicons (source)](pages/docs/src/searx.favicons.md): Source `docs/src/searx.favicons.rst`.
+- [Online /info](pages/docs/src/searx.infopage.md): Source `docs/src/searx.infopage.rst`.
+- [Locales](pages/docs/src/searx.locales.md): Source `docs/src/searx.locales.rst`.
+- [Search processors](pages/docs/src/searx.search.processors.md): Source `docs/src/searx.search.processors.rst`.
+- [Search](pages/docs/src/searx.search.md): Source `docs/src/searx.search.rst`.
+- [Settings Loader](pages/docs/src/searx.settings.md): Source `docs/src/searx.settings.rst`.
+- [SQLite DB](pages/docs/src/searx.sqlitedb.md): Source `docs/src/searx.sqlitedb.rst`.
+- [Utility functions for the engines](pages/docs/src/searx.utils.md): Source `docs/src/searx.utils.rst`.
+- [Valkey DB](pages/docs/src/searx.valkeydb.md): Source `docs/src/searx.valkeydb.rst`.
+- [Valkey Library](pages/docs/src/searx.valkeylib.md): Source `docs/src/searx.valkeylib.rst`.
+- [Weather](pages/docs/src/searx.weather.md): Source `docs/src/searx.weather.rst`.
+
+## User guide
+
+- [About SearXNG](pages/docs/user/about.md): Source `docs/user/about.rst`.
+- [Configured Engines](pages/docs/user/configured_engines.md): Source `docs/user/configured_engines.rst`.
+- [User information](pages/docs/user/index.md): Source `docs/user/index.rst`.
+- [Search syntax](pages/docs/user/search-syntax.md): Source `docs/user/search-syntax.rst`.
+
+## Utilities
+
+- [DevOps tooling box](pages/docs/utils/index.md): Source `docs/utils/index.rst`.
+- [utils/searxng.sh](pages/docs/utils/searxng.sh.md): Source `docs/utils/searxng.sh.rst`.

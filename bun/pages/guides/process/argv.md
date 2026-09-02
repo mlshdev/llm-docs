@@ -1,0 +1,62 @@
+> Release-pinned source for Bun bun-v1.4.0: [docs/guides/process/argv.mdx](https://bun.com/docs/guides/process/argv)
+
+# Parse command-line arguments
+
+The *argument vector* is the list of arguments passed to the program when it is run. It is available as `Bun.argv`.
+
+```ts cli.ts icon="/icons/typescript.svg"
+console.log(Bun.argv);
+```
+
+***
+
+Running this file with arguments results in the following:
+
+```sh terminal icon="terminal"
+bun run cli.ts --flag1 --flag2 value
+```
+
+```txt
+[ "/path/to/bun", "/path/to/cli.ts", "--flag1", "--flag2", "value" ]
+```
+
+***
+
+To parse `argv` into a more useful format, use `util.parseArgs`.
+
+```ts cli.ts icon="/icons/typescript.svg"
+import { parseArgs } from "util";
+
+const { values, positionals } = parseArgs({
+  args: Bun.argv,
+  options: {
+    flag1: {
+      type: "boolean",
+    },
+    flag2: {
+      type: "string",
+    },
+  },
+  strict: true,
+  allowPositionals: true,
+});
+
+console.log(values);
+console.log(positionals);
+```
+
+***
+
+Running `cli.ts` with the same arguments prints the parsed values.
+
+```sh terminal icon="terminal"
+bun run cli.ts --flag1 --flag2 value
+```
+
+```txt
+[Object: null prototype] {
+  flag1: true,
+  flag2: "value",
+}
+[ "/path/to/bun", "/path/to/cli.ts" ]
+```

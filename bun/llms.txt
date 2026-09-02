@@ -1,0 +1,350 @@
+# Bun bun-v1.4.0
+
+> Documentation generated from the latest stable release of [oven-sh/bun](https://github.com/oven-sh/bun) and pinned to immutable source commit `34cbb9a40b4bd1bd767d134a7065e66c2432a676`.
+
+- [Full documentation](llms-full.txt): Complete normalized corpus for Bun bun-v1.4.0.
+- [Provenance manifest](manifest.json): Release, commit, document count, and generation notes.
+- Pages come from the release-tagged Mintlify documentation tree under docs; snippets are inlined rather than published as duplicate pages.
+- Static MDX cards, tabs, accordions, steps, callouts, and media frames are normalized to Markdown without executing JavaScript.
+- Published page links resolve to https://bun.com/docs; source assets point at the immutable release commit.
+
+## Bundler
+
+- [Bytecode Caching](pages/bundler/bytecode.md): Source `docs/bundler/bytecode.mdx`.
+- [CSS](pages/bundler/css.md): Source `docs/bundler/css.mdx`.
+- [esbuild](pages/bundler/esbuild.md): Source `docs/bundler/esbuild.mdx`.
+- [Single-file executable](pages/bundler/executables.md): Source `docs/bundler/executables.mdx`.
+- [Fullstack dev server](pages/bundler/fullstack.md): Source `docs/bundler/fullstack.mdx`.
+- [Hot reloading](pages/bundler/hot-reloading.md): Source `docs/bundler/hot-reloading.mdx`.
+- [HTML & static sites](pages/bundler/html-static.md): Source `docs/bundler/html-static.mdx`.
+- [Bundler](pages/bundler.md): Source `docs/bundler/index.mdx`.
+- [Loaders](pages/bundler/loaders.md): Source `docs/bundler/loaders.mdx`.
+- [Macros](pages/bundler/macros.md): Source `docs/bundler/macros.mdx`.
+- [Only remove whitespace](pages/bundler/minifier.md): Source `docs/bundler/minifier.mdx`.
+- [Plugins](pages/bundler/plugins.md): Source `docs/bundler/plugins.mdx`.
+- [Standalone HTML](pages/bundler/standalone-html.md): Source `docs/bundler/standalone-html.mdx`.
+
+## Getting started
+
+- [Feedback](pages/feedback.md): Source `docs/feedback.mdx`.
+- [Welcome to Bun](pages/index.md): Source `docs/index.mdx`.
+- [Installation](pages/installation.md): Source `docs/installation.mdx`.
+- [Quickstart](pages/quickstart.md): Source `docs/quickstart.mdx`.
+- [TypeScript 6 and 7](pages/typescript-6.md): Source `docs/typescript-6.mdx`.
+- [TypeScript](pages/typescript.md): Source `docs/typescript.mdx`.
+
+## Guides
+
+- [Convert an ArrayBuffer to an array of numbers](pages/guides/binary/arraybuffer-to-array.md): Source `docs/guides/binary/arraybuffer-to-array.mdx`.
+- [Convert an ArrayBuffer to a Blob](pages/guides/binary/arraybuffer-to-blob.md): Source `docs/guides/binary/arraybuffer-to-blob.mdx`.
+- [Convert an ArrayBuffer to a Buffer](pages/guides/binary/arraybuffer-to-buffer.md): Source `docs/guides/binary/arraybuffer-to-buffer.mdx`.
+- [Convert an ArrayBuffer to a string](pages/guides/binary/arraybuffer-to-string.md): Source `docs/guides/binary/arraybuffer-to-string.mdx`.
+- [Convert an ArrayBuffer to a Uint8Array](pages/guides/binary/arraybuffer-to-typedarray.md): Source `docs/guides/binary/arraybuffer-to-typedarray.mdx`.
+- [Convert a Blob to an ArrayBuffer](pages/guides/binary/blob-to-arraybuffer.md): Source `docs/guides/binary/blob-to-arraybuffer.mdx`.
+- [Convert a Blob to a DataView](pages/guides/binary/blob-to-dataview.md): Source `docs/guides/binary/blob-to-dataview.mdx`.
+- [Convert a Blob to a ReadableStream](pages/guides/binary/blob-to-stream.md): Source `docs/guides/binary/blob-to-stream.mdx`.
+- [Convert a Blob to a string](pages/guides/binary/blob-to-string.md): Source `docs/guides/binary/blob-to-string.mdx`.
+- [Convert a Blob to a Uint8Array](pages/guides/binary/blob-to-typedarray.md): Source `docs/guides/binary/blob-to-typedarray.mdx`.
+- [Convert a Buffer to an ArrayBuffer](pages/guides/binary/buffer-to-arraybuffer.md): Source `docs/guides/binary/buffer-to-arraybuffer.mdx`.
+- [Convert a Buffer to a blob](pages/guides/binary/buffer-to-blob.md): Source `docs/guides/binary/buffer-to-blob.mdx`.
+- [Convert a Buffer to a ReadableStream](pages/guides/binary/buffer-to-readablestream.md): Source `docs/guides/binary/buffer-to-readablestream.mdx`.
+- [Convert a Buffer to a string](pages/guides/binary/buffer-to-string.md): Source `docs/guides/binary/buffer-to-string.mdx`.
+- [Convert a Buffer to a Uint8Array](pages/guides/binary/buffer-to-typedarray.md): Source `docs/guides/binary/buffer-to-typedarray.mdx`.
+- [Convert a DataView to a string](pages/guides/binary/dataview-to-string.md): Source `docs/guides/binary/dataview-to-string.mdx`.
+- [Convert a Uint8Array to an ArrayBuffer](pages/guides/binary/typedarray-to-arraybuffer.md): Source `docs/guides/binary/typedarray-to-arraybuffer.mdx`.
+- [Convert a Uint8Array to a Blob](pages/guides/binary/typedarray-to-blob.md): Source `docs/guides/binary/typedarray-to-blob.mdx`.
+- [Convert a Uint8Array to a Buffer](pages/guides/binary/typedarray-to-buffer.md): Source `docs/guides/binary/typedarray-to-buffer.mdx`.
+- [Convert a Uint8Array to a DataView](pages/guides/binary/typedarray-to-dataview.md): Source `docs/guides/binary/typedarray-to-dataview.mdx`.
+- [Convert a Uint8Array to a ReadableStream](pages/guides/binary/typedarray-to-readablestream.md): Source `docs/guides/binary/typedarray-to-readablestream.mdx`.
+- [Convert a Uint8Array to a string](pages/guides/binary/typedarray-to-string.md): Source `docs/guides/binary/typedarray-to-string.mdx`.
+- [Deploy a Bun application on AWS Lambda](pages/guides/deployment/aws-lambda.md): Source `docs/guides/deployment/aws-lambda.mdx`.
+- [Deploy a Bun application on DigitalOcean](pages/guides/deployment/digital-ocean.md): Source `docs/guides/deployment/digital-ocean.mdx`.
+- [Deploy a Bun application on Google Cloud Run](pages/guides/deployment/google-cloud-run.md): Source `docs/guides/deployment/google-cloud-run.mdx`.
+- [Deploy a Bun application on Railway](pages/guides/deployment/railway.md): Source `docs/guides/deployment/railway.mdx`.
+- [Deploy a Bun application on Render](pages/guides/deployment/render.md): Source `docs/guides/deployment/render.mdx`.
+- [Deploy a Bun application on Vercel](pages/guides/deployment/vercel.md): Source `docs/guides/deployment/vercel.mdx`.
+- [Build an app with Astro and Bun](pages/guides/ecosystem/astro.md): Source `docs/guides/ecosystem/astro.mdx`.
+- [Create a Discord bot](pages/guides/ecosystem/discordjs.md): Source `docs/guides/ecosystem/discordjs.mdx`.
+- [Containerize a Bun application with Docker](pages/guides/ecosystem/docker.md): Source `docs/guides/ecosystem/docker.mdx`.
+- [Use Drizzle ORM with Bun](pages/guides/ecosystem/drizzle.md): Source `docs/guides/ecosystem/drizzle.mdx`.
+- [Build an HTTP server using Elysia and Bun](pages/guides/ecosystem/elysia.md): Source `docs/guides/ecosystem/elysia.mdx`.
+- [Build an HTTP server using Express and Bun](pages/guides/ecosystem/express.md): Source `docs/guides/ecosystem/express.mdx`.
+- [Use Gel with Bun](pages/guides/ecosystem/gel.md): Source `docs/guides/ecosystem/gel.mdx`.
+- [Build an HTTP server using Hono and Bun](pages/guides/ecosystem/hono.md): Source `docs/guides/ecosystem/hono.mdx`.
+- [Read and write data to MongoDB using Mongoose and Bun](pages/guides/ecosystem/mongoose.md): Source `docs/guides/ecosystem/mongoose.mdx`.
+- [Use Neon Postgres through Drizzle ORM](pages/guides/ecosystem/neon-drizzle.md): Source `docs/guides/ecosystem/neon-drizzle.mdx`.
+- [Use Neon's Serverless Postgres with Bun](pages/guides/ecosystem/neon-serverless-postgres.md): Source `docs/guides/ecosystem/neon-serverless-postgres.mdx`.
+- [Build an app with Next.js and Bun](pages/guides/ecosystem/nextjs.md): Source `docs/guides/ecosystem/nextjs.mdx`.
+- [Build an app with Nuxt and Bun](pages/guides/ecosystem/nuxt.md): Source `docs/guides/ecosystem/nuxt.mdx`.
+- [Run Bun as a daemon with PM2](pages/guides/ecosystem/pm2.md): Source `docs/guides/ecosystem/pm2.mdx`.
+- [Use Prisma Postgres with Bun](pages/guides/ecosystem/prisma-postgres.md): Source `docs/guides/ecosystem/prisma-postgres.mdx`.
+- [Use Prisma with Bun](pages/guides/ecosystem/prisma.md): Source `docs/guides/ecosystem/prisma.mdx`.
+- [Build an app with Qwik and Bun](pages/guides/ecosystem/qwik.md): Source `docs/guides/ecosystem/qwik.mdx`.
+- [Build a React app with Bun](pages/guides/ecosystem/react.md): Source `docs/guides/ecosystem/react.mdx`.
+- [Build an app with Remix and Bun](pages/guides/ecosystem/remix.md): Source `docs/guides/ecosystem/remix.mdx`.
+- [Add Sentry to a Bun app](pages/guides/ecosystem/sentry.md): Source `docs/guides/ecosystem/sentry.mdx`.
+- [Build an app with SolidStart and Bun](pages/guides/ecosystem/solidstart.md): Source `docs/guides/ecosystem/solidstart.mdx`.
+- [Server-side render (SSR) a React component](pages/guides/ecosystem/ssr-react.md): Source `docs/guides/ecosystem/ssr-react.mdx`.
+- [Build an app with SvelteKit and Bun](pages/guides/ecosystem/sveltekit.md): Source `docs/guides/ecosystem/sveltekit.mdx`.
+- [Run Bun as a daemon with systemd](pages/guides/ecosystem/systemd.md): Source `docs/guides/ecosystem/systemd.mdx`.
+- [Use TanStack Start with Bun](pages/guides/ecosystem/tanstack-start.md): Source `docs/guides/ecosystem/tanstack-start.mdx`.
+- [Bun Redis with Upstash](pages/guides/ecosystem/upstash.md): Source `docs/guides/ecosystem/upstash.mdx`.
+- [Build a frontend using Vite and Bun](pages/guides/ecosystem/vite.md): Source `docs/guides/ecosystem/vite.mdx`.
+- [Extract links from a webpage using HTMLRewriter](pages/guides/html-rewriter/extract-links.md): Source `docs/guides/html-rewriter/extract-links.mdx`.
+- [Extract social share images and Open Graph tags](pages/guides/html-rewriter/extract-social-meta.md): Source `docs/guides/html-rewriter/extract-social-meta.mdx`.
+- [Start a cluster of HTTP servers](pages/guides/http/cluster.md): Source `docs/guides/http/cluster.mdx`.
+- [fetch with unix domain sockets in Bun](pages/guides/http/fetch-unix.md): Source `docs/guides/http/fetch-unix.mdx`.
+- [Send an HTTP request using fetch](pages/guides/http/fetch.md): Source `docs/guides/http/fetch.mdx`.
+- [Upload files via HTTP using FormData](pages/guides/http/file-uploads.md): Source `docs/guides/http/file-uploads.mdx`.
+- [Hot reload an HTTP server](pages/guides/http/hot.md): Source `docs/guides/http/hot.mdx`.
+- [Proxy HTTP requests using fetch()](pages/guides/http/proxy.md): Source `docs/guides/http/proxy.mdx`.
+- [Common HTTP server usage](pages/guides/http/server.md): Source `docs/guides/http/server.mdx`.
+- [Write a simple HTTP server](pages/guides/http/simple.md): Source `docs/guides/http/simple.mdx`.
+- [Server-Sent Events (SSE) with Bun](pages/guides/http/sse.md): Source `docs/guides/http/sse.mdx`.
+- [Stream a file as an HTTP Response](pages/guides/http/stream-file.md): Source `docs/guides/http/stream-file.mdx`.
+- [Streaming HTTP Server with Async Iterators](pages/guides/http/stream-iterator.md): Source `docs/guides/http/stream-iterator.mdx`.
+- [Streaming HTTP Server with Node.js Streams](pages/guides/http/stream-node-streams-in-bun.md): Source `docs/guides/http/stream-node-streams-in-bun.mdx`.
+- [Configure TLS on an HTTP server](pages/guides/http/tls.md): Source `docs/guides/http/tls.mdx`.
+- [Guides](pages/guides.md): Source `docs/guides/index.mdx`.
+- [Add a development dependency](pages/guides/install/add-dev.md): Source `docs/guides/install/add-dev.mdx`.
+- [Add a Git dependency](pages/guides/install/add-git.md): Source `docs/guides/install/add-git.mdx`.
+- [Add an optional dependency](pages/guides/install/add-optional.md): Source `docs/guides/install/add-optional.mdx`.
+- [Add a peer dependency](pages/guides/install/add-peer.md): Source `docs/guides/install/add-peer.mdx`.
+- [Add a tarball dependency](pages/guides/install/add-tarball.md): Source `docs/guides/install/add-tarball.mdx`.
+- [Add a dependency](pages/guides/install/add.md): Source `docs/guides/install/add.mdx`.
+- [Using bun install with an Azure Artifacts npm registry](pages/guides/install/azure-artifacts.md): Source `docs/guides/install/azure-artifacts.mdx`.
+- [Install dependencies with Bun in GitHub Actions](pages/guides/install/cicd.md): Source `docs/guides/install/cicd.mdx`.
+- [Override the default npm registry for bun install](pages/guides/install/custom-registry.md): Source `docs/guides/install/custom-registry.mdx`.
+- [Migrate from npm install to bun install](pages/guides/install/from-npm-install-to-bun-install.md): Source `docs/guides/install/from-npm-install-to-bun-install.mdx`.
+- [Configure git to diff Bun's lockb lockfile](pages/guides/install/git-diff-bun-lockfile.md): Source `docs/guides/install/git-diff-bun-lockfile.mdx`.
+- [Using bun install with Artifactory](pages/guides/install/jfrog-artifactory.md): Source `docs/guides/install/jfrog-artifactory.mdx`.
+- [Install a package under a different name](pages/guides/install/npm-alias.md): Source `docs/guides/install/npm-alias.mdx`.
+- [Configure a private registry for an organization scope with bun install](pages/guides/install/registry-scope.md): Source `docs/guides/install/registry-scope.mdx`.
+- [Add a trusted dependency](pages/guides/install/trusted.md): Source `docs/guides/install/trusted.mdx`.
+- [Configuring a monorepo using workspaces](pages/guides/install/workspaces.md): Source `docs/guides/install/workspaces.mdx`.
+- [Generate a yarn-compatible lockfile](pages/guides/install/yarnlock.md): Source `docs/guides/install/yarnlock.mdx`.
+- [Parse command-line arguments](pages/guides/process/argv.md): Source `docs/guides/process/argv.mdx`.
+- [Listen for CTRL+C](pages/guides/process/ctrl-c.md): Source `docs/guides/process/ctrl-c.mdx`.
+- [Spawn a child process and communicate using IPC](pages/guides/process/ipc.md): Source `docs/guides/process/ipc.mdx`.
+- [Get the process uptime in nanoseconds](pages/guides/process/nanoseconds.md): Source `docs/guides/process/nanoseconds.mdx`.
+- [Listen to OS signals](pages/guides/process/os-signals.md): Source `docs/guides/process/os-signals.mdx`.
+- [Read stderr from a child process](pages/guides/process/spawn-stderr.md): Source `docs/guides/process/spawn-stderr.mdx`.
+- [Read stdout from a child process](pages/guides/process/spawn-stdout.md): Source `docs/guides/process/spawn-stdout.mdx`.
+- [Spawn a child process](pages/guides/process/spawn.md): Source `docs/guides/process/spawn.mdx`.
+- [Read from stdin](pages/guides/process/stdin.md): Source `docs/guides/process/stdin.mdx`.
+- [Read a file to an ArrayBuffer](pages/guides/read-file/arraybuffer.md): Source `docs/guides/read-file/arraybuffer.mdx`.
+- [Read a file to a Buffer](pages/guides/read-file/buffer.md): Source `docs/guides/read-file/buffer.mdx`.
+- [Check if a file exists](pages/guides/read-file/exists.md): Source `docs/guides/read-file/exists.mdx`.
+- [Read a JSON file](pages/guides/read-file/json.md): Source `docs/guides/read-file/json.mdx`.
+- [Get the MIME type of a file](pages/guides/read-file/mime.md): Source `docs/guides/read-file/mime.mdx`.
+- [Read a file as a ReadableStream](pages/guides/read-file/stream.md): Source `docs/guides/read-file/stream.mdx`.
+- [Read a file as a string](pages/guides/read-file/string.md): Source `docs/guides/read-file/string.mdx`.
+- [Read a file to a Uint8Array](pages/guides/read-file/uint8array.md): Source `docs/guides/read-file/uint8array.mdx`.
+- [Watch a directory for changes](pages/guides/read-file/watch.md): Source `docs/guides/read-file/watch.mdx`.
+- [Build-time constants with --define](pages/guides/runtime/build-time-constants.md): Source `docs/guides/runtime/build-time-constants.mdx`.
+- [Install and run Bun in GitHub Actions](pages/guides/runtime/cicd.md): Source `docs/guides/runtime/cicd.mdx`.
+- [Codesign a single-file JavaScript executable on macOS](pages/guides/runtime/codesign-macos-executable.md): Source `docs/guides/runtime/codesign-macos-executable.mdx`.
+- [Define and replace static globals & constants](pages/guides/runtime/define-constant.md): Source `docs/guides/runtime/define-constant.mdx`.
+- [Delete directories](pages/guides/runtime/delete-directory.md): Source `docs/guides/runtime/delete-directory.mdx`.
+- [Delete files](pages/guides/runtime/delete-file.md): Source `docs/guides/runtime/delete-file.mdx`.
+- [Inspect memory usage using V8 heap snapshots](pages/guides/runtime/heap-snapshot.md): Source `docs/guides/runtime/heap-snapshot.mdx`.
+- [Import a HTML file as text](pages/guides/runtime/import-html.md): Source `docs/guides/runtime/import-html.mdx`.
+- [Import a JSON file](pages/guides/runtime/import-json.md): Source `docs/guides/runtime/import-json.mdx`.
+- [Import a JSON5 file](pages/guides/runtime/import-json5.md): Source `docs/guides/runtime/import-json5.mdx`.
+- [Import a TOML file](pages/guides/runtime/import-toml.md): Source `docs/guides/runtime/import-toml.mdx`.
+- [Import an XML file](pages/guides/runtime/import-xml.md): Source `docs/guides/runtime/import-xml.mdx`.
+- [Import a YAML file](pages/guides/runtime/import-yaml.md): Source `docs/guides/runtime/import-yaml.mdx`.
+- [Read environment variables](pages/guides/runtime/read-env.md): Source `docs/guides/runtime/read-env.mdx`.
+- [Set environment variables](pages/guides/runtime/set-env.md): Source `docs/guides/runtime/set-env.mdx`.
+- [Run a Shell Command](pages/guides/runtime/shell.md): Source `docs/guides/runtime/shell.mdx`.
+- [Set a time zone in Bun](pages/guides/runtime/timezone.md): Source `docs/guides/runtime/timezone.mdx`.
+- [Re-map import paths](pages/guides/runtime/tsconfig-paths.md): Source `docs/guides/runtime/tsconfig-paths.mdx`.
+- [Install TypeScript declarations for Bun](pages/guides/runtime/typescript.md): Source `docs/guides/runtime/typescript.mdx`.
+- [Debugging Bun with the VS Code extension](pages/guides/runtime/vscode-debugger.md): Source `docs/guides/runtime/vscode-debugger.mdx`.
+- [Debugging Bun with the web debugger](pages/guides/runtime/web-debugger.md): Source `docs/guides/runtime/web-debugger.mdx`.
+- [Convert a Node.js Readable to an ArrayBuffer](pages/guides/streams/node-readable-to-arraybuffer.md): Source `docs/guides/streams/node-readable-to-arraybuffer.mdx`.
+- [Convert a Node.js Readable to a Blob](pages/guides/streams/node-readable-to-blob.md): Source `docs/guides/streams/node-readable-to-blob.mdx`.
+- [Convert a Node.js Readable to JSON](pages/guides/streams/node-readable-to-json.md): Source `docs/guides/streams/node-readable-to-json.mdx`.
+- [Convert a Node.js Readable to a string](pages/guides/streams/node-readable-to-string.md): Source `docs/guides/streams/node-readable-to-string.mdx`.
+- [Convert a Node.js Readable to an Uint8Array](pages/guides/streams/node-readable-to-uint8array.md): Source `docs/guides/streams/node-readable-to-uint8array.mdx`.
+- [Convert a ReadableStream to an array of chunks](pages/guides/streams/to-array.md): Source `docs/guides/streams/to-array.mdx`.
+- [Convert a ReadableStream to an ArrayBuffer](pages/guides/streams/to-arraybuffer.md): Source `docs/guides/streams/to-arraybuffer.mdx`.
+- [Convert a ReadableStream to a Blob](pages/guides/streams/to-blob.md): Source `docs/guides/streams/to-blob.mdx`.
+- [Convert a ReadableStream to a Buffer](pages/guides/streams/to-buffer.md): Source `docs/guides/streams/to-buffer.mdx`.
+- [Convert a ReadableStream to JSON](pages/guides/streams/to-json.md): Source `docs/guides/streams/to-json.mdx`.
+- [Convert a ReadableStream to a string](pages/guides/streams/to-string.md): Source `docs/guides/streams/to-string.mdx`.
+- [Convert a ReadableStream to a Uint8Array](pages/guides/streams/to-typedarray.md): Source `docs/guides/streams/to-typedarray.mdx`.
+- [Bail early with the Bun test runner](pages/guides/test/bail.md): Source `docs/guides/test/bail.mdx`.
+- [Selectively run tests concurrently with glob patterns](pages/guides/test/concurrent-test-glob.md): Source `docs/guides/test/concurrent-test-glob.mdx`.
+- [Set a code coverage threshold with the Bun test runner](pages/guides/test/coverage-threshold.md): Source `docs/guides/test/coverage-threshold.mdx`.
+- [Generate code coverage reports with the Bun test runner](pages/guides/test/coverage.md): Source `docs/guides/test/coverage.mdx`.
+- [Write browser DOM tests with Bun and happy-dom](pages/guides/test/happy-dom.md): Source `docs/guides/test/happy-dom.mdx`.
+- [Migrate from Jest to Bun's test runner](pages/guides/test/migrate-from-jest.md): Source `docs/guides/test/migrate-from-jest.mdx`.
+- [Set the system time in Bun's test runner](pages/guides/test/mock-clock.md): Source `docs/guides/test/mock-clock.mdx`.
+- [Mock functions in `bun test`](pages/guides/test/mock-functions.md): Source `docs/guides/test/mock-functions.mdx`.
+- [Re-run tests multiple times with the Bun test runner](pages/guides/test/rerun-each.md): Source `docs/guides/test/rerun-each.mdx`.
+- [Run your tests with the Bun test runner](pages/guides/test/run-tests.md): Source `docs/guides/test/run-tests.mdx`.
+- [Skip tests with the Bun test runner](pages/guides/test/skip-tests.md): Source `docs/guides/test/skip-tests.mdx`.
+- [Use snapshot testing in `bun test`](pages/guides/test/snapshot.md): Source `docs/guides/test/snapshot.mdx`.
+- [Spy on methods in `bun test`](pages/guides/test/spy-on.md): Source `docs/guides/test/spy-on.mdx`.
+- [import, require, and test Svelte components with bun test](pages/guides/test/svelte-test.md): Source `docs/guides/test/svelte-test.mdx`.
+- [Using Testing Library with Bun](pages/guides/test/testing-library.md): Source `docs/guides/test/testing-library.mdx`.
+- [Set a per-test timeout with the Bun test runner](pages/guides/test/timeout.md): Source `docs/guides/test/timeout.mdx`.
+- [Mark a test as a "todo" with the Bun test runner](pages/guides/test/todo-tests.md): Source `docs/guides/test/todo-tests.mdx`.
+- [Update snapshots in `bun test`](pages/guides/test/update-snapshots.md): Source `docs/guides/test/update-snapshots.mdx`.
+- [Run tests in watch mode with Bun](pages/guides/test/watch-mode.md): Source `docs/guides/test/watch-mode.mdx`.
+- [Encode and decode base64 data](pages/guides/util/base64.md): Source `docs/guides/util/base64.mdx`.
+- [Check if two objects are deeply equal](pages/guides/util/deep-equals.md): Source `docs/guides/util/deep-equals.mdx`.
+- [Compress and decompress data with DEFLATE](pages/guides/util/deflate.md): Source `docs/guides/util/deflate.mdx`.
+- [Detect when code is executed with Bun](pages/guides/util/detect-bun.md): Source `docs/guides/util/detect-bun.mdx`.
+- [Check if the current file is the entrypoint](pages/guides/util/entrypoint.md): Source `docs/guides/util/entrypoint.mdx`.
+- [Escape an HTML string](pages/guides/util/escape-html.md): Source `docs/guides/util/escape-html.mdx`.
+- [Convert a file URL to an absolute path](pages/guides/util/file-url-to-path.md): Source `docs/guides/util/file-url-to-path.mdx`.
+- [Compress and decompress data with gzip](pages/guides/util/gzip.md): Source `docs/guides/util/gzip.mdx`.
+- [Hash a password](pages/guides/util/hash-a-password.md): Source `docs/guides/util/hash-a-password.mdx`.
+- [Get the directory of the current file](pages/guides/util/import-meta-dir.md): Source `docs/guides/util/import-meta-dir.mdx`.
+- [Get the file name of the current file](pages/guides/util/import-meta-file.md): Source `docs/guides/util/import-meta-file.mdx`.
+- [Get the absolute path of the current file](pages/guides/util/import-meta-path.md): Source `docs/guides/util/import-meta-path.mdx`.
+- [Generate a UUID](pages/guides/util/javascript-uuid.md): Source `docs/guides/util/javascript-uuid.mdx`.
+- [Get the absolute path to the current entrypoint](pages/guides/util/main.md): Source `docs/guides/util/main.mdx`.
+- [Convert an absolute path to a file URL](pages/guides/util/path-to-file-url.md): Source `docs/guides/util/path-to-file-url.mdx`.
+- [Sleep for a fixed number of milliseconds](pages/guides/util/sleep.md): Source `docs/guides/util/sleep.mdx`.
+- [Upgrade Bun to the latest version](pages/guides/util/upgrade.md): Source `docs/guides/util/upgrade.mdx`.
+- [Get the current Bun version](pages/guides/util/version.md): Source `docs/guides/util/version.mdx`.
+- [Get the path to an executable bin file](pages/guides/util/which-path-to-executable-bin.md): Source `docs/guides/util/which-path-to-executable-bin.mdx`.
+- [Enable compression for WebSocket messages](pages/guides/websocket/compression.md): Source `docs/guides/websocket/compression.mdx`.
+- [Set per-socket contextual data on a WebSocket](pages/guides/websocket/context.md): Source `docs/guides/websocket/context.mdx`.
+- [Build a publish-subscribe WebSocket server](pages/guides/websocket/pubsub.md): Source `docs/guides/websocket/pubsub.mdx`.
+- [Build a simple WebSocket server](pages/guides/websocket/simple.md): Source `docs/guides/websocket/simple.mdx`.
+- [Append content to a file](pages/guides/write-file/append.md): Source `docs/guides/write-file/append.mdx`.
+- [Write a string to a file](pages/guides/write-file/basic.md): Source `docs/guides/write-file/basic.mdx`.
+- [Write a Blob to a file](pages/guides/write-file/blob.md): Source `docs/guides/write-file/blob.mdx`.
+- [Write a file to stdout](pages/guides/write-file/cat.md): Source `docs/guides/write-file/cat.mdx`.
+- [Copy a file to another location](pages/guides/write-file/file-cp.md): Source `docs/guides/write-file/file-cp.mdx`.
+- [Write a file incrementally](pages/guides/write-file/filesink.md): Source `docs/guides/write-file/filesink.mdx`.
+- [Write a Response to a file](pages/guides/write-file/response.md): Source `docs/guides/write-file/response.mdx`.
+- [Write to stdout](pages/guides/write-file/stdout.md): Source `docs/guides/write-file/stdout.mdx`.
+- [Write a ReadableStream to a file](pages/guides/write-file/stream.md): Source `docs/guides/write-file/stream.mdx`.
+- [Delete a file](pages/guides/write-file/unlink.md): Source `docs/guides/write-file/unlink.mdx`.
+
+## Package manager
+
+- [bunx](pages/pm/bunx.md): Source `docs/pm/bunx.mdx`.
+- [Catalogs](pages/pm/catalogs.md): Source `docs/pm/catalogs.mdx`.
+- [bun add](pages/pm/cli/add.md): Source `docs/pm/cli/add.mdx`.
+- [bun audit](pages/pm/cli/audit.md): Source `docs/pm/cli/audit.mdx`.
+- [bun dedupe](pages/pm/cli/dedupe.md): Source `docs/pm/cli/dedupe.mdx`.
+- [bun info](pages/pm/cli/info.md): Source `docs/pm/cli/info.mdx`.
+- [bun install](pages/pm/cli/install.md): Source `docs/pm/cli/install.mdx`.
+- [bun link](pages/pm/cli/link.md): Source `docs/pm/cli/link.mdx`.
+- [bun outdated](pages/pm/cli/outdated.md): Source `docs/pm/cli/outdated.mdx`.
+- [bun patch](pages/pm/cli/patch.md): Source `docs/pm/cli/patch.mdx`.
+- [bun pm](pages/pm/cli/pm.md): Source `docs/pm/cli/pm.mdx`.
+- [bun prune](pages/pm/cli/prune.md): Source `docs/pm/cli/prune.mdx`.
+- [bun publish](pages/pm/cli/publish.md): Source `docs/pm/cli/publish.mdx`.
+- [bun remove](pages/pm/cli/remove.md): Source `docs/pm/cli/remove.mdx`.
+- [bun update](pages/pm/cli/update.md): Source `docs/pm/cli/update.mdx`.
+- [bun why](pages/pm/cli/why.md): Source `docs/pm/cli/why.mdx`.
+- [bun --filter](pages/pm/filter.md): Source `docs/pm/filter.mdx`.
+- [Global cache](pages/pm/global-cache.md): Source `docs/pm/global-cache.mdx`.
+- [Global virtual store](pages/pm/global-store.md): Source `docs/pm/global-store.mdx`.
+- [Isolated installs](pages/pm/isolated-installs.md): Source `docs/pm/isolated-installs.mdx`.
+- [Lifecycle scripts](pages/pm/lifecycle.md): Source `docs/pm/lifecycle.mdx`.
+- [Lockfile](pages/pm/lockfile.md): Source `docs/pm/lockfile.mdx`.
+- [.npmrc support](pages/pm/npmrc.md): Source `docs/pm/npmrc.mdx`.
+- [Overrides and resolutions](pages/pm/overrides.md): Source `docs/pm/overrides.mdx`.
+- [Scopes and registries](pages/pm/scopes-registries.md): Source `docs/pm/scopes-registries.mdx`.
+- [Security Scanner API](pages/pm/security-scanner-api.md): Source `docs/pm/security-scanner-api.mdx`.
+- [Workspaces](pages/pm/workspaces.md): Source `docs/pm/workspaces.mdx`.
+
+## Project
+
+- [Benchmarking](pages/project/benchmarking.md): Source `docs/project/benchmarking.mdx`.
+- [Bindgen](pages/project/bindgen.md): Source `docs/project/bindgen.mdx`.
+- [Building Windows](pages/project/building-windows.md): Source `docs/project/building-windows.mdx`.
+- [Contributing](pages/project/contributing.md): Source `docs/project/contributing.mdx`.
+- [License](pages/project/license.md): Source `docs/project/license.mdx`.
+- [Roadmap](pages/project/roadmap.md): Source `docs/project/roadmap.mdx`.
+
+## Runtime
+
+- [Archive](pages/runtime/archive.md): Source `docs/runtime/archive.mdx`.
+- [Auto-install](pages/runtime/auto-install.md): Source `docs/runtime/auto-install.mdx`.
+- [Binary Data](pages/runtime/binary-data.md): Source `docs/runtime/binary-data.mdx`.
+- [Bun APIs](pages/runtime/bun-apis.md): Source `docs/runtime/bun-apis.mdx`.
+- [bunfig.toml](pages/runtime/bunfig.md): Source `docs/runtime/bunfig.mdx`.
+- [C Compiler](pages/runtime/c-compiler.md): Source `docs/runtime/c-compiler.mdx`.
+- [Spawn](pages/runtime/child-process.md): Source `docs/runtime/child-process.mdx`.
+- [Color](pages/runtime/color.md): Source `docs/runtime/color.mdx`.
+- [Console](pages/runtime/console.md): Source `docs/runtime/console.mdx`.
+- [Cookies](pages/runtime/cookies.md): Source `docs/runtime/cookies.mdx`.
+- [Cron](pages/runtime/cron.md): Source `docs/runtime/cron.mdx`.
+- [CSRF Protection](pages/runtime/csrf.md): Source `docs/runtime/csrf.mdx`.
+- [Debugging](pages/runtime/debugger.md): Source `docs/runtime/debugger.mdx`.
+- [Environment Variables](pages/runtime/environment-variables.md): Source `docs/runtime/environment-variables.mdx`.
+- [FFI](pages/runtime/ffi.md): Source `docs/runtime/ffi.mdx`.
+- [File I/O](pages/runtime/file-io.md): Source `docs/runtime/file-io.mdx`.
+- [File System Router](pages/runtime/file-system-router.md): Source `docs/runtime/file-system-router.mdx`.
+- [File Types](pages/runtime/file-types.md): Source `docs/runtime/file-types.mdx`.
+- [Glob](pages/runtime/glob.md): Source `docs/runtime/glob.mdx`.
+- [Globals](pages/runtime/globals.md): Source `docs/runtime/globals.mdx`.
+- [Hashing](pages/runtime/hashing.md): Source `docs/runtime/hashing.mdx`.
+- [HTMLRewriter](pages/runtime/html-rewriter.md): Source `docs/runtime/html-rewriter.mdx`.
+- [Cookies](pages/runtime/http/cookies.md): Source `docs/runtime/http/cookies.mdx`.
+- [Error Handling](pages/runtime/http/error-handling.md): Source `docs/runtime/http/error-handling.mdx`.
+- [Metrics](pages/runtime/http/metrics.md): Source `docs/runtime/http/metrics.mdx`.
+- [Routing](pages/runtime/http/routing.md): Source `docs/runtime/http/routing.mdx`.
+- [Server](pages/runtime/http/server.md): Source `docs/runtime/http/server.mdx`.
+- [TLS](pages/runtime/http/tls.md): Source `docs/runtime/http/tls.mdx`.
+- [WebSockets](pages/runtime/http/websockets.md): Source `docs/runtime/http/websockets.mdx`.
+- [Image](pages/runtime/image.md): Source `docs/runtime/image.mdx`.
+- [Bun Runtime](pages/runtime.md): Source `docs/runtime/index.mdx`.
+- [JSON5](pages/runtime/json5.md): Source `docs/runtime/json5.mdx`.
+- [JSONL](pages/runtime/jsonl.md): Source `docs/runtime/jsonl.mdx`.
+- [JSX](pages/runtime/jsx.md): Source `docs/runtime/jsx.mdx`.
+- [Markdown](pages/runtime/markdown.md): Source `docs/runtime/markdown.mdx`.
+- [Module Resolution](pages/runtime/module-resolution.md): Source `docs/runtime/module-resolution.mdx`.
+- [DNS](pages/runtime/networking/dns.md): Source `docs/runtime/networking/dns.mdx`.
+- [Fetch](pages/runtime/networking/fetch.md): Source `docs/runtime/networking/fetch.mdx`.
+- [TCP](pages/runtime/networking/tcp.md): Source `docs/runtime/networking/tcp.mdx`.
+- [UDP](pages/runtime/networking/udp.md): Source `docs/runtime/networking/udp.mdx`.
+- [Node-API](pages/runtime/node-api.md): Source `docs/runtime/node-api.mdx`.
+- [Node.js Compatibility](pages/runtime/nodejs-compat.md): Source `docs/runtime/nodejs-compat.mdx`.
+- [Plugins](pages/runtime/plugins.md): Source `docs/runtime/plugins.mdx`.
+- [Redis](pages/runtime/redis.md): Source `docs/runtime/redis.mdx`.
+- [REPL](pages/runtime/repl.md): Source `docs/runtime/repl.mdx`.
+- [S3](pages/runtime/s3.md): Source `docs/runtime/s3.mdx`.
+- [Secrets](pages/runtime/secrets.md): Source `docs/runtime/secrets.mdx`.
+- [Semver](pages/runtime/semver.md): Source `docs/runtime/semver.mdx`.
+- [Shell](pages/runtime/shell.md): Source `docs/runtime/shell.mdx`.
+- [SQL](pages/runtime/sql.md): Source `docs/runtime/sql.mdx`.
+- [SQLite](pages/runtime/sqlite.md): Source `docs/runtime/sqlite.mdx`.
+- [Streams](pages/runtime/streams.md): Source `docs/runtime/streams.mdx`.
+- [bun create](pages/runtime/templating/create.md): Source `docs/runtime/templating/create.mdx`.
+- [bun init](pages/runtime/templating/init.md): Source `docs/runtime/templating/init.mdx`.
+- [TOML](pages/runtime/toml.md): Source `docs/runtime/toml.mdx`.
+- [Transpiler](pages/runtime/transpiler.md): Source `docs/runtime/transpiler.mdx`.
+- [TypeScript](pages/runtime/typescript.md): Source `docs/runtime/typescript.mdx`.
+- [Utils](pages/runtime/utils.md): Source `docs/runtime/utils.mdx`.
+- [Watch Mode](pages/runtime/watch-mode.md): Source `docs/runtime/watch-mode.mdx`.
+- [Web APIs](pages/runtime/web-apis.md): Source `docs/runtime/web-apis.mdx`.
+- [WebView](pages/runtime/webview.md): Source `docs/runtime/webview.mdx`.
+- [Workers](pages/runtime/workers.md): Source `docs/runtime/workers.mdx`.
+- [XML](pages/runtime/xml.md): Source `docs/runtime/xml.mdx`.
+- [YAML](pages/runtime/yaml.md): Source `docs/runtime/yaml.mdx`.
+
+## Test runner
+
+- [Code coverage](pages/test/code-coverage.md): Source `docs/test/code-coverage.mdx`.
+- [Test configuration](pages/test/configuration.md): Source `docs/test/configuration.mdx`.
+- [Dates and times](pages/test/dates-times.md): Source `docs/test/dates-times.mdx`.
+- [Finding tests](pages/test/discovery.md): Source `docs/test/discovery.mdx`.
+- [DOM testing](pages/test/dom.md): Source `docs/test/dom.mdx`.
+- [Test runner](pages/test.md): Source `docs/test/index.mdx`.
+- [Lifecycle hooks](pages/test/lifecycle.md): Source `docs/test/lifecycle.mdx`.
+- [Mocks](pages/test/mocks.md): Source `docs/test/mocks.mdx`.
+- [Parallel & isolated test runs](pages/test/parallel.md): Source `docs/test/parallel.mdx`.
+- [Test Reporters](pages/test/reporters.md): Source `docs/test/reporters.mdx`.
+- [Runtime behavior](pages/test/runtime-behavior.md): Source `docs/test/runtime-behavior.mdx`.
+- [Snapshots](pages/test/snapshots.md): Source `docs/test/snapshots.mdx`.
+- [Writing tests](pages/test/writing-tests.md): Source `docs/test/writing-tests.mdx`.

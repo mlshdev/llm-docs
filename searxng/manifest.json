@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "project": "searxng",
+  "title": "SearXNG",
+  "repository": "searxng/searxng",
+  "tag": "master",
+  "branch": "master",
+  "sourceCommittedAt": "2026-09-02T14:52:59Z",
+  "sourceCommit": "05cd77f71b466b7674658429d834a8db3b26811f",
+  "documentCount": 178,
+  "notes": [
+    "SearXNG tracks master because the repository publishes neither GitHub releases nor release tags.",
+    "Checked-in RST and Markdown includes are expanded without executing Sphinx, Jinja, or imported Python modules.",
+    "Generated autodoc output and non-text assets are omitted."
+  ]
+}

@@ -1,0 +1,82 @@
+> Commit-pinned source for SearXNG master: [docs/dev/search_api.rst](https://github.com/searxng/searxng/blob/05cd77f71b466b7674658429d834a8db3b26811f/docs/dev/search_api.rst)
+
+.. \_search API:
+
+# Search API
+
+SearXNG supports querying via a simple HTTP API.  Two endpoints, `/` and
+`/search`, are supported for both GET and POST methods.  The `GET` method
+expects parameters as URL query parameters, while the POST method expects
+parameters as form data (`application/x-www-form-urlencoded`).
+
+If you want to consume the results as JSON, CSV, or RSS, you need to set the
+`format` parameter accordingly.  Supported formats are defined in
+`settings.yml`, under the \[settings search]\(#settings search) section.  Requesting an
+unset format will return a 403 Forbidden error.  Be aware that many public
+instances have these formats disabled.
+
+Endpoints:
+
+.. code:
+
+```text
+GET /
+GET /search
+POST /
+POST /search
+
+```
+
+example cURL calls:
+
+.. code:: bash
+
+curl '<https://searx.example.org/search?q=searxng&format=json>'
+curl -X POST '<https://searx.example.org/search>' -d 'q=searxng\&format=csv'
+curl -L -X POST -d 'q=searxng\&format=json' '<https://searx.example.org/>'
+
+# Parameters
+
+### Further reading ..
+
+- engines-dev
+- settings.yml
+- \[configured engines]\(#configured engines)
+
+`q` : required
+The search query.  This string is passed to external search services.  Thus,
+SearXNG supports syntax of each search service.  For example, `site:github.com
+  SearXNG` is a valid query for Google.  However, if simply the query above is
+passed to any search engine which does not filter its results based on this
+syntax, you might not get the results you wanted.
+
+See more at search-syntax
+
+`categories` : optional
+Comma separated list, specifies the active search categories (see
+\[configured engines]\(#configured engines))
+
+`language` : default from \[settings search]\(#settings search)
+Code of the language.
+
+`pageno` : default `1`
+Search page number.
+
+`time_range` : optional : \[ `day`, `month`, `year` ]
+Time range of search for engines which support it.  See if an engine supports
+time range search in the preferences page of an instance.
+
+`format` : optional :  \[ `json`, `csv`, `rss` ]
+Output format of results.  Format needs to be activated in :ref:`settings
+  search`.
+
+`safesearch` :  default from \[settings search]\(#settings search) : \[ `0`, `1`, `2` ]
+Filter search results of engines which support safe search.  See if an engine
+supports safe search in the preferences page of an instance.
+
+`theme` : default `simple` : \[ `simple` ]
+Theme of instance.
+
+Please note, available themes depend on an instance.  It is possible that an
+instance administrator deleted, created or renamed themes on their instance.
+See the available options in the preferences page of the instance.

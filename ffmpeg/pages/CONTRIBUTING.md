@@ -1,0 +1,7 @@
+> Commit-pinned source for FFmpeg master: [CONTRIBUTING.md](https://github.com/FFmpeg/FFmpeg/blob/9fc8c785e2747c87121ec28f8f10ceab0562384b/CONTRIBUTING.md)
+
+# Note to Github users
+
+Patches should be submitted to [Forgejo](https://code.ffmpeg.org/FFmpeg/FFmpeg/pulls) or the [ffmpeg-devel mailing list](https://ffmpeg.org/mailman/listinfo/ffmpeg-devel) using `git format-patch` or `git send-email`. Github pull requests should be avoided because they are not part of our review process and **will be ignored**.
+
+See <https://ffmpeg.org/developer.html#Contributing> for more information.

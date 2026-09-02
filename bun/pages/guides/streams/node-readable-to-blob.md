@@ -1,0 +1,11 @@
+> Release-pinned source for Bun bun-v1.4.0: [docs/guides/streams/node-readable-to-blob.mdx](https://bun.com/docs/guides/streams/node-readable-to-blob)
+
+# Convert a Node.js Readable to a Blob
+
+To convert a Node.js `Readable` stream to a [`Blob`](https://developer.mozilla.org/en-US/docs/Web/API/Blob) in Bun, create a [`Response`](https://developer.mozilla.org/en-US/docs/Web/API/Response) with the stream as the body, then call [`response.blob()`](https://developer.mozilla.org/en-US/docs/Web/API/Response/blob).
+
+```ts
+import { Readable } from "stream";
+const stream = Readable.from(["Hello, ", "world!"]);
+const blob = await new Response(stream).blob();
+```

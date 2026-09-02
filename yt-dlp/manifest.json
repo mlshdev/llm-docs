@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "project": "yt-dlp",
+  "title": "yt-dlp",
+  "repository": "yt-dlp/yt-dlp",
+  "tag": "2026.08.19",
+  "releaseId": 373411891,
+  "releasePublishedAt": "2026-08-19T23:48:43Z",
+  "sourceCommit": "3a08beaf031ab68f966401ead017ac81fe8486cf",
+  "documentCount": 5,
+  "notes": [
+    "Release-authored Markdown is normalized directly; generated binaries, man pages, and shell completions are omitted.",
+    "The supported-site catalog is retained as a separate reference page."
+  ]
+}

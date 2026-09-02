@@ -1,0 +1,125 @@
+> Release-pinned source for Bun bun-v1.4.0: [docs/guides/deployment/digital-ocean.mdx](https://bun.com/docs/guides/deployment/digital-ocean)
+
+# Deploy a Bun application on DigitalOcean
+
+[DigitalOcean](https://www.digitalocean.com/) is a cloud platform that provides a range of services for building and deploying applications.
+
+This guide deploys a Bun HTTP server to DigitalOcean using a `Dockerfile`.
+
+> **Note**
+>
+> Before continuing, make sure you have:
+>
+> - A Bun application ready for deployment
+> - A [DigitalOcean account](https://www.digitalocean.com/)
+> - [DigitalOcean CLI](https://docs.digitalocean.com/reference/doctl/how-to/install/#step-1-install-doctl) installed and configured
+> - [Docker](https://docs.docker.com/get-started/get-docker/) installed and added to your `PATH`
+
+***
+
+1. Create a new Container Registry to store the Docker image.
+
+   In the DigitalOcean dashboard, go to [**Container Registry**](https://cloud.digitalocean.com/registry), and enter the details for the new registry.
+
+   ![DigitalOcean registry dashboard](https://raw.githubusercontent.com/oven-sh/bun/34cbb9a40b4bd1bd767d134a7065e66c2432a676/docs/images/guides/digitalocean-7.png)
+
+   Make sure the details are correct, then click **Create Registry**.
+
+   ```bash terminal icon="terminal"
+   doctl registry create bun-digitalocean-demo
+   ```
+
+   ```txt
+   Name                     Endpoint                                           Region slug
+   bun-digitalocean-demo    registry.digitalocean.com/bun-digitalocean-demo    sfo2
+   ```
+
+   You should see the new registry in the [**DigitalOcean registry dashboard**](https://cloud.digitalocean.com/registry):
+
+   ![DigitalOcean registry dashboard](https://raw.githubusercontent.com/oven-sh/bun/34cbb9a40b4bd1bd767d134a7065e66c2432a676/docs/images/guides/digitalocean-1.png)
+2. Create a new `Dockerfile` in the root of your project. This file contains the instructions to initialize the container, copy your local project files into it, install dependencies, and start the application.
+
+   ```docker Dockerfile icon="docker"
+   # Use the official Bun image to run the application
+   FROM oven/bun:debian
+
+   # Set the work directory to `/app`
+   WORKDIR /app
+
+   # Copy the package.json and bun.lock into the container
+   COPY package.json bun.lock ./
+
+   # Install the dependencies
+   RUN bun install --production --frozen-lockfile
+
+   # Copy the rest of the application into the container
+   COPY . .
+
+   # Expose the port (DigitalOcean will set PORT env var)
+   EXPOSE 8080
+
+   # Run the application
+   CMD ["bun", "index.ts"]
+   ```
+
+   > **Note**
+   >
+   > Make sure that the start command corresponds to your application's entry point. The start command can also be `CMD ["bun", "run", "start"]` if you have a start script in your `package.json`.
+   >
+   > If your app doesn't have dependencies, you can omit the `COPY package.json bun.lock ./` and `RUN bun install --production --frozen-lockfile` lines. Bun doesn't write a `bun.lock` for a project with no dependencies.
+
+   Create a new `.dockerignore` file in the root of your project. It lists the files and directories to *exclude* from the container image, such as `node_modules`. Excluding them keeps builds faster and smaller:
+
+   ```docker .dockerignore icon="Docker"
+   node_modules
+   Dockerfile*
+   .dockerignore
+   .git
+   .gitignore
+   README.md
+   LICENSE
+   .vscode
+   .env
+   # Any other files or directories you want to exclude
+   ```
+3. Before building and pushing the Docker image, authenticate Docker with the DigitalOcean Container Registry:
+
+   ```bash terminal icon="terminal"
+   doctl registry login
+   ```
+
+   ```txt
+   Logging Docker in to registry.digitalocean.com
+   Notice: Login valid for 30 days. Use the --expiry-seconds flag to set a shorter expiration or --never-expire for no expiration.
+   ```
+
+   > **Note**
+   >
+   > This command authenticates Docker with DigitalOcean's registry using your DigitalOcean credentials. Without this step, the build and push command fails with a 401 authentication error.
+4. Make sure you're in the directory containing your `Dockerfile`, then build and push the Docker image to the DigitalOcean registry in one command:
+
+   ```bash terminal icon="terminal"
+   docker buildx build --platform=linux/amd64 -t registry.digitalocean.com/bun-digitalocean-demo/bun-digitalocean-demo:latest --push .
+   ```
+
+   > **Note**
+   >
+   > If you're building on an ARM Mac (M1/M2), you must use `docker buildx` with `--platform=linux/amd64` for compatibility with DigitalOcean's infrastructure. Using `docker build` without the platform flag creates an ARM64 image that won't run on DigitalOcean.
+
+   Once the image is pushed, you should see it in the [**DigitalOcean registry dashboard**](https://cloud.digitalocean.com/registry):
+
+   ![DigitalOcean registry dashboard](https://raw.githubusercontent.com/oven-sh/bun/34cbb9a40b4bd1bd767d134a7065e66c2432a676/docs/images/guides/digitalocean-2.png)
+5. In the DigitalOcean dashboard, go to [**App Platform**](https://cloud.digitalocean.com/apps) > **Create App**. You can create a project directly from the container image.
+
+   ![DigitalOcean App Platform project dashboard](https://raw.githubusercontent.com/oven-sh/bun/34cbb9a40b4bd1bd767d134a7065e66c2432a676/docs/images/guides/digitalocean-3.png)
+
+   Make sure the details are correct, then click **Next**.
+
+   ![DigitalOcean App Platform service dashboard](https://raw.githubusercontent.com/oven-sh/bun/34cbb9a40b4bd1bd767d134a7065e66c2432a676/docs/images/guides/digitalocean-4.png)
+
+   Review and configure resource settings, then click **Create app**.
+
+   ![DigitalOcean App Platform service dashboard](https://raw.githubusercontent.com/oven-sh/bun/34cbb9a40b4bd1bd767d134a7065e66c2432a676/docs/images/guides/digitalocean-6.png)
+6. Your app is now live. Once the app is created, you should see it in the App Platform dashboard with its public URL.
+
+   ![DigitalOcean App Platform app dashboard](https://raw.githubusercontent.com/oven-sh/bun/34cbb9a40b4bd1bd767d134a7065e66c2432a676/docs/images/guides/digitalocean-5.png)

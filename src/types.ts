@@ -11,6 +11,10 @@ export const projectIds = [
   "victorialogs-datasource",
   "vmestimator",
   "zitadel",
+  "ffmpeg",
+  "yt-dlp",
+  "searxng",
+  "bun",
 ] as const;
 
 export type ProjectId = (typeof projectIds)[number];

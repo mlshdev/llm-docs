@@ -1,0 +1,19 @@
+# yt-dlp 2026.08.19
+
+> Documentation generated from the latest stable release of [yt-dlp/yt-dlp](https://github.com/yt-dlp/yt-dlp) and pinned to immutable source commit `3a08beaf031ab68f966401ead017ac81fe8486cf`.
+
+- [Full documentation](llms-full.txt): Complete normalized corpus for yt-dlp 2026.08.19.
+- [Provenance manifest](manifest.json): Release, commit, document count, and generation notes.
+- Release-authored Markdown is normalized directly; generated binaries, man pages, and shell completions are omitted.
+- The supported-site catalog is retained as a separate reference page.
+
+## Manual
+
+- [INSTALLATION](pages/README.md): Source `README.md`.
+
+## Reference
+
+- [CONTRIBUTING TO YT-DLP](pages/CONTRIBUTING.md): Source `CONTRIBUTING.md`.
+- [Maintainers](pages/Maintainers.md): Source `Maintainers.md`.
+- [Changelog](pages/Changelog.md): Source `Changelog.md`.
+- [Supported sites](pages/supportedsites.md): Source `supportedsites.md`.

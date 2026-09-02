@@ -31,4 +31,4 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
         run: bun run build
       - name: Verify deterministic generated output
-        run: git diff --exit-code -- sources.lock.json llms.txt llms-full.txt traefik netbird podman docker n8n victoriametrics
+        run: git diff --exit-code -- sources.lock.json llms.txt llms-full.txt traefik netbird podman docker n8n grafana victoriametrics victorialogs victoriametrics-datasource victorialogs-datasource vmestimator zitadel ffmpeg yt-dlp searxng bun

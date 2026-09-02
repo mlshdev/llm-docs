@@ -16,6 +16,10 @@
 - [VictoriaLogs datasource for Grafana v0.32.0](victorialogs-datasource/llms.txt): [full corpus](victorialogs-datasource/llms-full.txt), [manifest](victorialogs-datasource/manifest.json)
 - [vmestimator v0.1.15](vmestimator/llms.txt): [full corpus](vmestimator/llms-full.txt), [manifest](vmestimator/manifest.json)
 - [ZITADEL v4.17.2](zitadel/llms.txt): [full corpus](zitadel/llms-full.txt), [manifest](zitadel/manifest.json)
+- [FFmpeg master](ffmpeg/llms.txt): [full corpus](ffmpeg/llms-full.txt), [manifest](ffmpeg/manifest.json)
+- [yt-dlp 2026.08.19](yt-dlp/llms.txt): [full corpus](yt-dlp/llms-full.txt), [manifest](yt-dlp/manifest.json)
+- [SearXNG master](searxng/llms.txt): [full corpus](searxng/llms-full.txt), [manifest](searxng/manifest.json)
+- [Bun bun-v1.4.0](bun/llms.txt): [full corpus](bun/llms-full.txt), [manifest](bun/manifest.json)
 
 ## Update policy
 

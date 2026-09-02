@@ -1,0 +1,30 @@
+> Release-pinned source for Bun bun-v1.4.0: [docs/guides/runtime/import-toml.mdx](https://bun.com/docs/guides/runtime/import-toml)
+
+# Import a TOML file
+
+Bun natively supports importing `.toml` files.
+
+```toml data.toml icon="file-code"
+name = "bun"
+version = "1.0.0"
+
+[author]
+name = "John Dough"
+email = "john@dough.com"
+```
+
+***
+
+Import the file like any other source file.
+
+```ts data.ts icon="/icons/typescript.svg"
+import data from "./data.toml";
+
+data.name; // => "bun"
+data.version; // => "1.0.0"
+data.author.name; // => "John Dough"
+```
+
+***
+
+See [TypeScript](https://bun.com/docs/runtime/typescript) for more on using TypeScript with Bun.

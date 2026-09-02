@@ -16,6 +16,10 @@ This repository converts documentation from immutable upstream commits into dete
 - [VictoriaLogs datasource for Grafana](https://github.com/VictoriaMetrics/victorialogs-datasource)
 - [vmestimator](https://github.com/VictoriaMetrics/vmestimator)
 - [ZITADEL](https://github.com/zitadel/zitadel)
+- [FFmpeg](https://github.com/FFmpeg/FFmpeg)
+- [yt-dlp](https://github.com/yt-dlp/yt-dlp)
+- [SearXNG](https://github.com/searxng/searxng)
+- [Bun](https://github.com/oven-sh/bun)
 
 ## Release policy
 
@@ -24,6 +28,7 @@ This repository converts documentation from immutable upstream commits into dete
 - Release source is downloaded from immutable tags and recorded with the resolved commit SHA in `sources.lock.json`.
 - Docker tracks the latest `docker/docs` `main` commit because that repository does not publish current GitHub releases or release tags.
 - n8n tracks the latest `n8n-io/n8n-docs` `main` commit because that repository does not publish releases or tags.
+- FFmpeg and SearXNG track their latest `master` commits because they do not publish stable GitHub releases.
 - NetBird public documentation is maintained in the separate, untagged `netbirdio/docs` repository. A NetBird update is accepted only after that repository contains the exact `Update API pages with <tag>` commit. Until then, the previous complete product/docs pair remains published.
 - Generated files are committed so GitHub, raw-content clients, and local tools all expose the same corpus. The same files are published through GitHub Pages.
 
@@ -40,7 +45,7 @@ llms-full.txt
   pages/
 ```
 
-Project directories are named after the identifiers in `config/sources.json`: `traefik`, `netbird`, `podman`, `docker`, `n8n`, `grafana`, `victoriametrics`, `victorialogs`, `victoriametrics-datasource`, `victorialogs-datasource`, `vmestimator`, and `zitadel`.
+Project directories are named after the identifiers in `config/sources.json`: `traefik`, `netbird`, `podman`, `docker`, `n8n`, `grafana`, `victoriametrics`, `victorialogs`, `victoriametrics-datasource`, `victorialogs-datasource`, `vmestimator`, `zitadel`, `ffmpeg`, `yt-dlp`, `searxng`, and `bun`.
 
 ## Source-specific conversion
 
@@ -53,6 +58,10 @@ Project directories are named after the identifiers in `config/sources.json`: `t
 - VictoriaMetrics, VictoriaLogs, and vmestimator follow the Hugo `menu.docs` navigation declared in `docs/`, inline the fragments that pages pull in with `{{% content %}}`, and expand the remaining shortcodes (`available_from`, `deprecated_from`, `collapse`, `section`) into plain Markdown.
 - The VictoriaMetrics and VictoriaLogs Grafana datasources publish their documentation as repository Markdown; their pages keep the release README and `docs/` guides with Hugo front matter and site-relative links resolved.
 - ZITADEL converts the Fumadocs MDX tree under `apps/docs/content` with the same fail-closed AST transform, inlining imported partials and sample files, turning documentation components into Markdown, and resolving cross-references to `https://zitadel.com/docs`.
+- FFmpeg expands the primary Texinfo manuals and converts their structural and inline markup to Markdown without executing Make or Texinfo tooling.
+- yt-dlp publishes its release-authored Markdown manuals, supported-site catalog, changelog, and contributor documentation.
+- SearXNG expands checked-in Sphinx includes and converts its RST documentation tree to Markdown without executing Sphinx or imported Python modules.
+- Bun follows the checked-in Mintlify MDX documentation tree, inlines documentation partials, converts presentation components to Markdown, and resolves published links to `https://bun.com/docs`.
 
 ## Local commands
 

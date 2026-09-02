@@ -1,0 +1,13 @@
+> Release-pinned source for Bun bun-v1.4.0: [docs/guides/runtime/import-html.mdx](https://bun.com/docs/guides/runtime/import-html)
+
+# Import a HTML file as text
+
+To import a `.html` file in Bun as a text file, use the `type: "text"` attribute in the import statement.
+
+```ts file.ts icon="/icons/typescript.svg"
+import html from "./file.html" with { type: "text" };
+
+console.log(html); // <!DOCTYPE html><html><head>...
+```
+
+With hot module reloading or watch mode, Bun reloads whenever `./file.html` changes.

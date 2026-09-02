@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "project": "ffmpeg",
+  "title": "FFmpeg",
+  "repository": "FFmpeg/FFmpeg",
+  "tag": "master",
+  "branch": "master",
+  "sourceCommittedAt": "2026-08-31T12:20:31Z",
+  "sourceCommit": "9fc8c785e2747c87121ec28f8f10ceab0562384b",
+  "documentCount": 33,
+  "notes": [
+    "FFmpeg tracks master because its GitHub mirror does not publish GitHub releases.",
+    "Primary Texinfo manuals and their checked-in includes are converted without executing Make, Texinfo, or FFmpeg binaries.",
+    "Build-generated configuration sections, API Doxygen output, and duplicate Texinfo fragments are omitted."
+  ]
+}

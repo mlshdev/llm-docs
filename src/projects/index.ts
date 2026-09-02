@@ -1,12 +1,16 @@
 import { buildDatasourcePlugin } from "./datasource-plugin.ts";
+import { buildBun } from "./bun.ts";
 import { buildDocker } from "./docker.ts";
+import { buildFfmpeg } from "./ffmpeg.ts";
 import { buildGrafana } from "./grafana.ts";
 import { buildNetbird } from "./netbird.ts";
 import { buildN8n } from "./n8n.ts";
 import { buildPodman } from "./podman.ts";
+import { buildSearxng } from "./searxng.ts";
 import { buildTraefik } from "./traefik.ts";
 import { buildVictoriametricsDocs } from "./victoriametrics.ts";
 import { buildZitadel } from "./zitadel.ts";
+import { buildYtDlp } from "./yt-dlp.ts";
 import type { LockedSource, ProjectBuild, SourceProject } from "../types.ts";
 
 export function buildProject(
@@ -35,5 +39,13 @@ export function buildProject(
       return buildDatasourcePlugin(project, lock);
     case "zitadel":
       return buildZitadel(project, lock);
+    case "ffmpeg":
+      return buildFfmpeg(project, lock);
+    case "yt-dlp":
+      return buildYtDlp(project, lock);
+    case "searxng":
+      return buildSearxng(project, lock);
+    case "bun":
+      return buildBun(project, lock);
   }
 }
