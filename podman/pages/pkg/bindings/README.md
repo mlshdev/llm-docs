@@ -1,4 +1,4 @@
-> Release-pinned source for Podman v6.1.0: [pkg/bindings/README.md](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/pkg/bindings/README.md)
+> Release-pinned source for Podman v6.1.1: [pkg/bindings/README.md](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/pkg/bindings/README.md)
 
 # Podman Golang bindings
 

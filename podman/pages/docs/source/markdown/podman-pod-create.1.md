@@ -1,4 +1,4 @@
-> Release-pinned source for Podman v6.1.0: [docs/source/markdown/podman-pod-create.1.md.in](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-pod-create.1.md.in)
+> Release-pinned source for Podman v6.1.1: [docs/source/markdown/podman-pod-create.1.md.in](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-pod-create.1.md.in)
 
 # podman-pod-create
 
@@ -125,7 +125,7 @@ this can result in the following division of CPU shares:
 
 On some systems, changing the resource limits may not be allowed for non-root
 users. For more details, see
-[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
+[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
 
 This option is not supported on cgroups V1 rootless systems.
 
@@ -141,7 +141,7 @@ CPUs in which to allow execution. Can be specified as a comma-separated list
 
 On some systems, changing the resource limits may not be allowed for non-root
 users. For more details, see
-[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
+[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
 
 This option is not supported on cgroups V1 rootless systems.
 
@@ -156,7 +156,7 @@ two memory nodes.
 
 On some systems, changing the resource limits may not be allowed for non-root
 users. For more details, see
-[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
+[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
 
 This option is not supported on cgroups V1 rootless systems.
 
@@ -193,7 +193,7 @@ Limit read rate (in bytes per second) from a device (e.g. **--device-read-bps=/d
 
 On some systems, changing the resource limits may not be allowed for non-root
 users. For more details, see
-[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
+[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
 
 This option is not supported on cgroups V1 rootless systems.
 
@@ -203,7 +203,7 @@ Limit write rate (in bytes per second) to a device (e.g. **--device-write-bps=/d
 
 On some systems, changing the resource limits may not be allowed for non-root
 users. For more details, see
-[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
+[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
 
 This option is not supported on cgroups V1 rootless systems.
 
@@ -402,7 +402,7 @@ Valid *mode* values are:
 
   For example, to set a static IPv4 address and a static mac address, use `--network bridge:ip=10.88.0.10,mac=44:33:22:11:00:99`.
 
-- *\<network name or ID>***\[:OPTIONS,...]**: Connect to a user-defined network; this is the network name or ID from a network created by **[podman network create](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-network-create.1.md.in)**. It is possible to specify the same options described under the bridge mode above. Use the **--network** option multiple times to specify additional networks. \
+- *\<network name or ID>***\[:OPTIONS,...]**: Connect to a user-defined network; this is the network name or ID from a network created by **[podman network create](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-network-create.1.md.in)**. It is possible to specify the same options described under the bridge mode above. Use the **--network** option multiple times to specify additional networks. \
   For backwards compatibility it is also possible to specify comma-separated networks on the first **--network** argument, however this prevents you from using the options described under the bridge section above.
 
 - **none**: Create a network namespace for the container but do not configure network interfaces for it, thus the container has no network connectivity.
@@ -503,7 +503,7 @@ private: create a new namespace for the pod (default)
 
 Write the pod ID to the file.
 
-#### **--publish**, **-p**=*\[\[ip:]\[hostPort]:]containerPort\[/protocol]*
+#### **--publish**, **-p**=*\[\[hostIP:]\[hostPort]:]containerPort\[/protocol]*
 
 Publish a container's port, or range of ports, within this pod to the host.
 
@@ -511,7 +511,17 @@ Both *hostPort* and *containerPort* can be specified as a range of ports.
 When specifying ranges for both, the number of container ports in the
 range must match the number of host ports in the range.
 
-If host IP is set to 0.0.0.0 or not set at all, the port is bound on all IPs on the host.
+If *hostIP* is `0.0.0.0`, only IPv4 addresses will be bound, if set to `[::]` only
+IPv6 addresses are bound. In all other cases the exact IP address as given will be bound.
+If *hostIP* is not set at all, the port is bound on all IP addresses on the host,
+both v4 and v6 (if possible).
+
+The default *hostIP* can be configured in **[containers.conf(5)](https://github.com/containers/container-libs/blob/main/common/docs/containers.conf.5.md)**
+using the `default_host_ips` option under the `[network]` section.
+This option accepts an array to be able to set multiple bind IP addresses.
+For example setting `default_host_ips = ["127.0.0.1", "::1"]` will make the
+port be published on the ipv4 and ipv6 localhost address respectively.
+An explicit *hostIP* set on the command will always override the config option.
 
 By default, Podman publishes TCP ports. To publish a UDP port instead, give
 `udp` as protocol. To publish both TCP and UDP ports, set `--publish` twice,
@@ -1061,11 +1071,11 @@ $ podman create --pod mypod redis
 
 ## SEE ALSO
 
-**[podman(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman.1.md)**, **[podman-pod(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-pod.1.md)**, **[podman-kube-play(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-kube-play.1.md.in)**, **containers.conf(1)**, **[cgroups(7)](https://man7.org/linux/man-pages/man7/cgroups.7.html)**
+**[podman(1)](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman.1.md)**, **[podman-pod(1)](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-pod.1.md)**, **[podman-kube-play(1)](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-kube-play.1.md.in)**, **containers.conf(1)**, **[cgroups(7)](https://man7.org/linux/man-pages/man7/cgroups.7.html)**
 
 ### Troubleshooting
 
-See [podman-troubleshooting(7)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/troubleshooting.md)
+See [podman-troubleshooting(7)](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/troubleshooting.md)
 for solutions to common issues.
 
 ## HISTORY

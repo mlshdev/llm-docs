@@ -1,4 +1,4 @@
-> Release-pinned source for Podman v6.1.0: [docs/source/markdown/podman-system-connection.1.md](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-system-connection.1.md)
+> Release-pinned source for Podman v6.1.1: [docs/source/markdown/podman-system-connection.1.md](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-system-connection.1.md)
 
 # podman-system-connection
 
@@ -31,11 +31,11 @@ not be edited with the **podman system connection** commands.
 
 | Command | Man Page                                                                                                                                                                                         | Description                                             |
 | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------- |
-| add     | [podman-system-connection-add(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-system-connection-add.1.md)         | Record destination for the Podman service               |
-| default | [podman-system-connection-default(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-system-connection-default.1.md) | Set named destination as default for the Podman service |
-| list    | [podman-system-connection-list(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-system-connection-list.1.md)       | List the destination for the Podman service(s)          |
-| remove  | [podman-system-connection-remove(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-system-connection-remove.1.md)   | Delete named destination                                |
-| rename  | [podman-system-connection-rename(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-system-connection-rename.1.md)   | Rename the destination for Podman service               |
+| add     | [podman-system-connection-add(1)](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-system-connection-add.1.md)         | Record destination for the Podman service               |
+| default | [podman-system-connection-default(1)](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-system-connection-default.1.md) | Set named destination as default for the Podman service |
+| list    | [podman-system-connection-list(1)](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-system-connection-list.1.md)       | List the destination for the Podman service(s)          |
+| remove  | [podman-system-connection-remove(1)](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-system-connection-remove.1.md)   | Delete named destination                                |
+| rename  | [podman-system-connection-rename(1)](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-system-connection-rename.1.md)   | Rename the destination for Podman service               |
 
 ## EXAMPLE
 
@@ -49,7 +49,7 @@ devl ssh://root@example.com/run/podman/podman.sock ~/.ssh/id_rsa  true     true
 
 ## SEE ALSO
 
-**[podman(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman.1.md)**, **[podman-system(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-system.1.md)**
+**[podman(1)](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman.1.md)**, **[podman-system(1)](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-system.1.md)**
 
 ## HISTORY
 

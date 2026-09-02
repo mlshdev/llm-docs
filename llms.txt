@@ -6,7 +6,7 @@
 
 - [Traefik Proxy v3.7.12](traefik/llms.txt): [full corpus](traefik/llms-full.txt), [manifest](traefik/manifest.json)
 - [NetBird v0.77.1](netbird/llms.txt): [full corpus](netbird/llms-full.txt), [manifest](netbird/manifest.json)
-- [Podman v6.1.0](podman/llms.txt): [full corpus](podman/llms-full.txt), [manifest](podman/manifest.json)
+- [Podman v6.1.1](podman/llms.txt): [full corpus](podman/llms-full.txt), [manifest](podman/manifest.json)
 - [Docker main](docker/llms.txt): [full corpus](docker/llms-full.txt), [manifest](docker/manifest.json)
 - [n8n main](n8n/llms.txt): [full corpus](n8n/llms-full.txt), [manifest](n8n/manifest.json)
 - [Grafana v13.2.1](grafana/llms.txt): [full corpus](grafana/llms-full.txt), [manifest](grafana/manifest.json)

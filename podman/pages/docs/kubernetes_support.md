@@ -1,4 +1,4 @@
-> Release-pinned source for Podman v6.1.0: [docs/kubernetes_support.md](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/kubernetes_support.md)
+> Release-pinned source for Podman v6.1.1: [docs/kubernetes_support.md](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/kubernetes_support.md)
 
 # Podman Kube Play Support
 

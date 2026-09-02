@@ -1,4 +1,4 @@
-> Release-pinned source for Podman v6.1.0: [docs/source/markdown/podman-quadlet.1.md](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-quadlet.1.md)
+> Release-pinned source for Podman v6.1.1: [docs/source/markdown/podman-quadlet.1.md](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-quadlet.1.md)
 
 # podman-quadlet
 
@@ -20,11 +20,11 @@ Podman Quadlets allow users to manage containers, pods, volumes, networks, and i
 
 | Command | Man Page                                                                                                                                                                        | Description                                   |
 | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------- |
-| install | [podman-quadlet-install(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-quadlet-install.1.md.in) | Install a quadlet file or quadlet application |
-| list    | [podman-quadlet-list(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-quadlet-list.1.md.in)       | List installed quadlets (alias ls)            |
-| print   | [podman-quadlet-print(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-quadlet-print.1.md)        | Display the contents of a quadlet             |
-| rm      | [podman-quadlet-rm(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-quadlet-rm.1.md.in)           | Removes an installed quadlet                  |
+| install | [podman-quadlet-install(1)](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-quadlet-install.1.md.in) | Install a quadlet file or quadlet application |
+| list    | [podman-quadlet-list(1)](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-quadlet-list.1.md.in)       | List installed quadlets (alias ls)            |
+| print   | [podman-quadlet-print(1)](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-quadlet-print.1.md)        | Display the contents of a quadlet             |
+| rm      | [podman-quadlet-rm(1)](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-quadlet-rm.1.md.in)           | Removes an installed quadlet                  |
 
 ## SEE ALSO
 
-**[podman(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman.1.md)**, **[podman-systemd.unit(5)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-systemd.unit.5.md)**
+**[podman(1)](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman.1.md)**, **[podman-systemd.unit(5)](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-systemd.unit.5.md)**

@@ -1,4 +1,4 @@
-> Release-pinned source for Podman v6.1.0: [docs/tutorials/rootless_tutorial.md](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/tutorials/rootless_tutorial.md)
+> Release-pinned source for Podman v6.1.1: [docs/tutorials/rootless_tutorial.md](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/tutorials/rootless_tutorial.md)
 
 ![PODMAN logo](https://raw.githubusercontent.com/containers/common/main/logos/podman-logo-full-vert.png)
 
@@ -24,7 +24,7 @@ Podman uses [pasta](https://passt.top/passt/about/#pasta) (provided by [passt](h
 
 Passt is [available on most Linux distributions](https://passt.top/passt/about/#availability) via their package distribution software such as `yum`, `dnf`, `apt`, `zypper`, etc. under the name `passt`.  If the package is not available, you can build and install `passt` from [its upstream](https://passt.top/passt/about/#try-it).
 
-More details about pasta can be found in [this blog post](https://blog.podman.io/2024/03/podman-5-0-breaking-changes-in-detail/) and in **[podman-network(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-network.1.md#pasta)**.
+More details about pasta can be found in [this blog post](https://blog.podman.io/2024/03/podman-5-0-breaking-changes-in-detail/) and in **[podman-network(1)](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-network.1.md#pasta)**.
 
 > \[!note]
 > pasta's default situation of not being able to communicate between the container and the host has been fixed in Podman 5.3: see [Podman 5.3 changes for improved networking experience with pasta](https://blog.podman.io/2024/10/podman-5-3-changes-for-improved-networking-experience-with-pasta/).
@@ -58,7 +58,7 @@ grep johndoe /etc/subuid /etc/subgid
 /etc/subgid:johndoe:100000:65536
 ```
 
-If you update either `/etc/subuid` or `/etc/subgid`, you need to stop all the running containers owned by the user and kill the pause process that is running on the system for that user.  This can be done automatically by running [`podman system migrate`](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-system-migrate.1.md) as that user.
+If you update either `/etc/subuid` or `/etc/subgid`, you need to stop all the running containers owned by the user and kill the pause process that is running on the system for that user.  This can be done automatically by running [`podman system migrate`](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-system-migrate.1.md) as that user.
 
 NOTE: Starting with shadow-utils 4.9, pluggable data sources for subid ranges can be configured via `/etc/nsswitch.conf`. SSSD provides a plugin (`libsubid_sss.so`) that can retrieve subordinate ID ranges from a central identity server. Instead of managing local `/etc/subuid` and `/etc/subgid` files. To enable this, configure `/etc/nsswitch.conf` with `subid: sss`. SSSD 2.6.0 added support for the IPA provider, and SSSD 2.12.0 extended this to the generic LDAP provider. For more details on centrally managed subordinate IDs with FreeIPA, see the [FreeIPA subordinate IDs documentation](https://freeipa.readthedocs.io/en/latest/designs/subordinate-ids.html).
 
@@ -216,6 +216,6 @@ Another consideration in regards to volumes:
 
 ## More information
 
-If you are still experiencing problems running Podman in a rootless environment, please refer to the [Shortcomings of Rootless Podman](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/rootless.md) page which lists known issues and solutions to known issues in this environment.
+If you are still experiencing problems running Podman in a rootless environment, please refer to the [Shortcomings of Rootless Podman](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/rootless.md) page which lists known issues and solutions to known issues in this environment.
 
-For more information on Podman and its subcommands, follow the links on the main [README.md](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/README.md#podman-information-for-developers) page or the [podman.io](https://podman.io) web site.
+For more information on Podman and its subcommands, follow the links on the main [README.md](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/README.md#podman-information-for-developers) page or the [podman.io](https://podman.io) web site.

@@ -1,4 +1,4 @@
-> Release-pinned source for Podman v6.1.0: [docs/tutorials/basic_networking.md](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/tutorials/basic_networking.md)
+> Release-pinned source for Podman v6.1.1: [docs/tutorials/basic_networking.md](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/tutorials/basic_networking.md)
 
 ![PODMAN logo](https://raw.githubusercontent.com/containers/common/main/logos/podman-logo-full-vert.png)
 
@@ -51,7 +51,7 @@ A bridge network is defined as an internal network is created where both the
 container and host are attached.  Then this network is capable of allowing the containers
 to communicate outside the host.
 
-![bridge\_network](https://raw.githubusercontent.com/podman-container-tools/podman/cade97a52ebdf9dbf9e81de8009015776837a074/docs/tutorials/podman_bridge.png)
+![bridge\_network](https://raw.githubusercontent.com/podman-container-tools/podman/8303f2e25b675ea7f82099d615c60969aec15870/docs/tutorials/podman_bridge.png)
 
 Consider the above illustration.  It depicts a laptop user running two containers:
 a web and db instance.  These two containers are on the virtual network with the
@@ -162,7 +162,7 @@ host. This interface can configure multiple subinterfaces.  And each subinterfac
 is capable of having its own MAC and IP address.  In the case of Podman containers,
 the container will present itself as if it is on the same network as the host.
 
-![macvlan\_network](https://raw.githubusercontent.com/podman-container-tools/podman/cade97a52ebdf9dbf9e81de8009015776837a074/docs/tutorials/podman_macvlan.png)
+![macvlan\_network](https://raw.githubusercontent.com/podman-container-tools/podman/8303f2e25b675ea7f82099d615c60969aec15870/docs/tutorials/podman_macvlan.png)
 
 In the illustration, outside clients will be able to access the web container by
 its IP address directly.  Usually the network information, including IP address,
@@ -237,7 +237,7 @@ allowed to make network interfaces on the host. Pasta creates a TAP device in
 the container’s network namespace and provides a user-mode TCP/IP stack.
 Consider the following illustration.
 
-![pasta\_network](https://raw.githubusercontent.com/podman-container-tools/podman/cade97a52ebdf9dbf9e81de8009015776837a074/docs/tutorials/podman_rootless_default.png)
+![pasta\_network](https://raw.githubusercontent.com/podman-container-tools/podman/8303f2e25b675ea7f82099d615c60969aec15870/docs/tutorials/podman_rootless_default.png)
 
 The unprivileged user on this laptop has created two containers: a DB container and
 a web container. Both of these containers have the ability to access content on
@@ -316,7 +316,7 @@ By definition, all containers in a Podman pod share the same network namespace. 
 fact means that they will have the same IP address, MAC addresses, and port mappings.
 You can conveniently communicate between containers in a pod by using localhost.
 
-![pod\_network](https://raw.githubusercontent.com/podman-container-tools/podman/cade97a52ebdf9dbf9e81de8009015776837a074/docs/tutorials/podman_pod.png)
+![pod\_network](https://raw.githubusercontent.com/podman-container-tools/podman/8303f2e25b675ea7f82099d615c60969aec15870/docs/tutorials/podman_pod.png)
 
 The above illustration describes a Pod on a bridged network.  As depicted, the Pod
 has two containers “inside” it: a DB and a Web container.  Because they share the

@@ -1,4 +1,4 @@
-> Release-pinned source for Podman v6.1.0: [build_windows.md](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/build_windows.md)
+> Release-pinned source for Podman v6.1.1: [build_windows.md](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/build_windows.md)
 
 # Building the Podman client and client installer on Windows
 
@@ -162,7 +162,7 @@ git repository into it.
 
 A developer can build the Podman client for Windows and the Windows installer
 with the PowerShell script
-[winmake.ps1](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/winmake.ps1).
+[winmake.ps1](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/winmake.ps1).
 
 Windows sets the ExecutionPolicy to `Restricted` by default; running scripts is
 prohibited. Determine the ExecutionPolicy on the machine with this command:
@@ -289,7 +289,7 @@ Use the locally built Podman client for Windows to run containers:
 ```
 
 To learn how to use the Podman client, refer to its
-[tutorial](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/tutorials/remote_client.md).
+[tutorial](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/tutorials/remote_client.md).
 
 ## Build and test the Podman Windows installer
 
@@ -571,9 +571,9 @@ The `lint` target provides a fast validation target. It runs the following
 tools:
 
 - `golangci-lint`: runs go-specific linters configured in
-  [`.golangci.yml`](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/.golangci.yml)
+  [`.golangci.yml`](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/.golangci.yml)
 - `pre-commit`: runs more linters configured in
-  [`.pre-commit-config.yaml`](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/.pre-commit-config.yaml)
+  [`.pre-commit-config.yaml`](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/.pre-commit-config.yaml)
 
 :information\_source: Install [golangci-lint](https://golangci-lint.run) and
 [pre-commit](https://pre-commit.com) to run `winmake.ps1 lint`:
@@ -587,7 +587,7 @@ tools:
 
 Target `validatepr` performs a more exhaustive validation but takes
 significantly more time to complete. It uses `podman` to run the target
-`.validatepr` of the [Linux `Makefile`](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/Makefile). It builds Podman for Linux,
+`.validatepr` of the [Linux `Makefile`](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/Makefile). It builds Podman for Linux,
 MacOS and Windows and then performs the same checks as the `lint` target plus
 many more.
 

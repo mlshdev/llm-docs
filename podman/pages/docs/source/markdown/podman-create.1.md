@@ -1,4 +1,4 @@
-> Release-pinned source for Podman v6.1.0: [docs/source/markdown/podman-create.1.md.in](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-create.1.md.in)
+> Release-pinned source for Podman v6.1.1: [docs/source/markdown/podman-create.1.md.in](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-create.1.md.in)
 
 # podman-create
 
@@ -144,7 +144,7 @@ each of **stdin**, **stdout**, and **stderr**.
 #### **--authfile**=*path*
 
 Path of the authentication file. Default is `${XDG_RUNTIME_DIR}/containers/auth.json` on Linux, and `$HOME/.config/containers/auth.json` on Windows/macOS.
-The file is created by **[podman login](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-login.1.md.in)**. If the authorization state is not found there, `$HOME/.docker/config.json` is checked, which is set using **docker login**.
+The file is created by **[podman login](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-login.1.md.in)**. If the authorization state is not found there, `$HOME/.docker/config.json` is checked, which is set using **docker login**.
 
 Note: There is also the option to override the default path of the authentication file by setting the `REGISTRY_AUTH_FILE` environment variable. This can be done with **export REGISTRY\_AUTH\_FILE=*path***.
 
@@ -243,7 +243,7 @@ microseconds.
 
 On some systems, changing the resource limits may not be allowed for non-root
 users. For more details, see
-[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
+[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
 
 This option is not supported on cgroups V1 rootless systems.
 
@@ -258,7 +258,7 @@ ends (controllable via **--cpu-period**).
 
 On some systems, changing the resource limits may not be allowed for non-root
 users. For more details, see
-[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
+[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
 
 This option is not supported on cgroups V1 rootless systems.
 
@@ -319,7 +319,7 @@ this can result in the following division of CPU shares:
 
 On some systems, changing the resource limits may not be allowed for non-root
 users. For more details, see
-[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
+[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
 
 This option is not supported on cgroups V1 rootless systems.
 
@@ -331,7 +331,7 @@ for **--cpu-period** and **--cpu-quota**, therefore the option cannot be specifi
 
 On some systems, changing the CPU limits may not be allowed for non-root
 users. For more details, see
-[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
+[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
 
 This option is not supported on cgroups V1 rootless systems.
 
@@ -343,7 +343,7 @@ CPUs in which to allow execution. Can be specified as a comma-separated list
 
 On some systems, changing the resource limits may not be allowed for non-root
 users. For more details, see
-[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
+[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
 
 This option is not supported on cgroups V1 rootless systems.
 
@@ -358,7 +358,7 @@ two memory nodes.
 
 On some systems, changing the resource limits may not be allowed for non-root
 users. For more details, see
-[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
+[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
 
 This option is not supported on cgroups V1 rootless systems.
 
@@ -422,7 +422,7 @@ Limit read rate (in bytes per second) from a device (e.g. **--device-read-bps=/d
 
 On some systems, changing the resource limits may not be allowed for non-root
 users. For more details, see
-[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
+[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
 
 This option is not supported on cgroups V1 rootless systems.
 
@@ -432,7 +432,7 @@ Limit read rate (in IO operations per second) from a device (e.g. **--device-rea
 
 On some systems, changing the resource limits may not be allowed for non-root
 users. For more details, see
-[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
+[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
 
 This option is not supported on cgroups V1 rootless systems.
 
@@ -442,7 +442,7 @@ Limit write rate (in bytes per second) to a device (e.g. **--device-write-bps=/d
 
 On some systems, changing the resource limits may not be allowed for non-root
 users. For more details, see
-[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
+[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
 
 This option is not supported on cgroups V1 rootless systems.
 
@@ -452,7 +452,7 @@ Limit write rate (in IO operations per second) to a device (e.g. **--device-writ
 
 On some systems, changing the resource limits may not be allowed for non-root
 users. For more details, see
-[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
+[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
 
 This option is not supported on cgroups V1 rootless systems.
 
@@ -693,7 +693,7 @@ This option can only be used with a private UTS namespace `--uts=private`
 
 When **--hostname** is not used and the container uses a private UTS namespace (default), Podman sets the hostname to the first 12 characters of the container ID. The container name assigned with **--name** is not used unless *container\_name\_as\_hostname=true* is set in `containers.conf`.
 
-Podman network DNS registers the container name, the short container ID (first 12 characters), and any explicitly set **--hostname** as DNS names. The default hostname matches the short ID alias. See **[podman-network(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-network.1.md)**.
+Podman network DNS registers the container name, the short container ID (first 12 characters), and any explicitly set **--hostname** as DNS names. The default hostname matches the short ID alias. See **[podman-network(1)](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-network.1.md)**.
 
 #### **--hosts-file**=*path* | *none* | *image*
 
@@ -1133,7 +1133,7 @@ container's primary IP address (also see the
 
 The name is not the hostname inside the container; see
 **--hostname**. See
-**[podman-network(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-network.1.md)** for more on network DNS.
+**[podman-network(1)](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-network.1.md)** for more on network DNS.
 
 #### **--network**=*mode*, **--net**
 
@@ -1156,7 +1156,7 @@ Valid *mode* values are:
 
   For example, to set a static IPv4 address and a static mac address, use `--network bridge:ip=10.88.0.10,mac=44:33:22:11:00:99`.
 
-- *\<network name or ID>***\[:OPTIONS,...]**: Connect to a user-defined network; this is the network name or ID from a network created by **[podman network create](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-network-create.1.md.in)**. It is possible to specify the same options described under the bridge mode above. Use the **--network** option multiple times to specify additional networks. \
+- *\<network name or ID>***\[:OPTIONS,...]**: Connect to a user-defined network; this is the network name or ID from a network created by **[podman network create](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-network-create.1.md.in)**. It is possible to specify the same options described under the bridge mode above. Use the **--network** option multiple times to specify additional networks. \
   For backwards compatibility it is also possible to specify comma-separated networks on the first **--network** argument, however this prevents you from using the options described under the bridge section above.
 
 - **none**: Create a network namespace for the container but do not configure network interfaces for it, thus the container has no network connectivity.
@@ -1341,7 +1341,7 @@ be set as containers can easily break out of confinement.
 Containers running in a user namespace (e.g., rootless containers) cannot have
 more privileges than the user that launched them.
 
-#### **--publish**, **-p**=*\[\[ip:]\[hostPort]:]containerPort\[/protocol]*
+#### **--publish**, **-p**=*\[\[hostIP:]\[hostPort]:]containerPort\[/protocol]*
 
 Publish a container's port, or range of ports, to the host.
 
@@ -1349,7 +1349,17 @@ Both *hostPort* and *containerPort* can be specified as a range of ports.
 When specifying ranges for both, the number of container ports in the
 range must match the number of host ports in the range.
 
-If host IP is set to 0.0.0.0 or not set at all, the port is bound on all IPs on the host.
+If *hostIP* is `0.0.0.0`, only IPv4 addresses will be bound, if set to `[::]` only
+IPv6 addresses are bound. In all other cases the exact IP address as given will be bound.
+If *hostIP* is not set at all, the port is bound on all IP addresses on the host,
+both v4 and v6 (if possible).
+
+The default *hostIP* can be configured in **[containers.conf(5)](https://github.com/containers/container-libs/blob/main/common/docs/containers.conf.5.md)**
+using the `default_host_ips` option under the `[network]` section.
+This option accepts an array to be able to set multiple bind IP addresses.
+For example setting `default_host_ips = ["127.0.0.1", "::1"]` will make the
+port be published on the ipv4 and ipv6 localhost address respectively.
+An explicit *hostIP* set on the command will always override the config option.
 
 By default, Podman publishes TCP ports. To publish a UDP port instead, give
 `udp` as protocol. To publish both TCP and UDP ports, set `--publish` twice,
@@ -2545,14 +2555,14 @@ NOTE: Use the environment variable `TMPDIR` to change the temporary storage loca
 
 ## SEE ALSO
 
-**[podman(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman.1.md)**, **[podman-save(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-save.1.md.in)**, **[podman-ps(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-ps.1.md.in)**, **[podman-attach(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-attach.1.md.in)**, **[podman-pod-create(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-pod-create.1.md.in)**, **[podman-port(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-port.1.md.in)**, **[podman-start(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-start.1.md.in)**, **[podman-kill(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-kill.1.md.in)**, **[podman-stop(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-stop.1.md.in)**, **[podman-generate-systemd(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-generate-systemd.1.md)**, **[podman-rm(1)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-rm.1.md.in)**, **[subgid(5)](https://www.unix.com/man-page/linux/5/subgid)**, **[subuid(5)](https://www.unix.com/man-page/linux/5/subuid)**, **[containers.conf(5)](https://github.com/containers/container-libs/blob/main/common/docs/containers.conf.5.md)**, **[podman-systemd.unit(5)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/source/markdown/podman-systemd.unit.5.md)**, **[setsebool(8)](https://man7.org/linux/man-pages/man8/setsebool.8.html)**, **[pasta(1)](https://passt.top/builds/latest/web/passt.1.html)**, **[fuse-overlayfs(1)](https://github.com/containers/fuse-overlayfs/blob/main/fuse-overlayfs.1.md)**, **proc(5)**, **[conmon(8)](https://github.com/containers/conmon/blob/main/docs/conmon.8.md)**, **personality(2)**
+**[podman(1)](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman.1.md)**, **[podman-save(1)](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-save.1.md.in)**, **[podman-ps(1)](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-ps.1.md.in)**, **[podman-attach(1)](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-attach.1.md.in)**, **[podman-pod-create(1)](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-pod-create.1.md.in)**, **[podman-port(1)](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-port.1.md.in)**, **[podman-start(1)](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-start.1.md.in)**, **[podman-kill(1)](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-kill.1.md.in)**, **[podman-stop(1)](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-stop.1.md.in)**, **[podman-generate-systemd(1)](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-generate-systemd.1.md)**, **[podman-rm(1)](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-rm.1.md.in)**, **[subgid(5)](https://www.unix.com/man-page/linux/5/subgid)**, **[subuid(5)](https://www.unix.com/man-page/linux/5/subuid)**, **[containers.conf(5)](https://github.com/containers/container-libs/blob/main/common/docs/containers.conf.5.md)**, **[podman-systemd.unit(5)](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-systemd.unit.5.md)**, **[setsebool(8)](https://man7.org/linux/man-pages/man8/setsebool.8.html)**, **[pasta(1)](https://passt.top/builds/latest/web/passt.1.html)**, **[fuse-overlayfs(1)](https://github.com/containers/fuse-overlayfs/blob/main/fuse-overlayfs.1.md)**, **proc(5)**, **[conmon(8)](https://github.com/containers/conmon/blob/main/docs/conmon.8.md)**, **personality(2)**
 
 ### Troubleshooting
 
-See [podman-troubleshooting(7)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/troubleshooting.md)
+See [podman-troubleshooting(7)](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/troubleshooting.md)
 for solutions to common issues.
 
-See [podman-rootless(7)](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/rootless.md)
+See [podman-rootless(7)](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/rootless.md)
 for rootless issues.
 
 ## HISTORY

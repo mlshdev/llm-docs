@@ -1,8 +1,8 @@
-# Podman v6.1.0
+# Podman v6.1.1
 
-> Documentation generated from the latest stable release of [podman-container-tools/podman](https://github.com/podman-container-tools/podman) and pinned to immutable source commit `cade97a52ebdf9dbf9e81de8009015776837a074`.
+> Documentation generated from the latest stable release of [podman-container-tools/podman](https://github.com/podman-container-tools/podman) and pinned to immutable source commit `8303f2e25b675ea7f82099d615c60969aec15870`.
 
-- [Full documentation](llms-full.txt): Complete normalized corpus for Podman v6.1.0.
+- [Full documentation](llms-full.txt): Complete normalized corpus for Podman v6.1.1.
 - [Provenance manifest](manifest.json): Release, commit, document count, and generation notes.
 - Podman man-page templates are expanded by a non-executing implementation of the tagged repository's documented preprocessing rules.
 - Generated aliases, duplicate rootless/troubleshooting pages, translations, assets, and vendored code are omitted.

@@ -1,4 +1,4 @@
-> Release-pinned source for Podman v6.1.0: [docs/tutorials/podman-for-windows.md](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/tutorials/podman-for-windows.md)
+> Release-pinned source for Podman v6.1.1: [docs/tutorials/podman-for-windows.md](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/tutorials/podman-for-windows.md)
 
 ![The Podman logo](https://raw.githubusercontent.com/containers/common/main/logos/podman-logo-full-vert.png)
 
@@ -95,7 +95,7 @@ file at `%APPDATA%\containers\containers.conf.d\99-podman-machine-provider.conf`
 (for user scope) or `%PROGRAMDATA%\containers\containers.conf.d\99-podman-machine-provider.conf`
 (for machine scope) with the selected provider.
 
-![Installing Podman 6.0.0](https://raw.githubusercontent.com/podman-container-tools/podman/cade97a52ebdf9dbf9e81de8009015776837a074/docs/tutorials/podman-win-install.jpg)
+![Installing Podman 6.0.0](https://raw.githubusercontent.com/podman-container-tools/podman/8303f2e25b675ea7f82099d615c60969aec15870/docs/tutorials/podman-win-install.jpg)
 
 Once installed, relaunch a new terminal. After this point, `podman.exe` will be
 present on your PATH, and you will be able to run the `podman machine init`
@@ -482,7 +482,7 @@ Entering WSL is a 2-click operation. Simply click the drop-down tag, and pick
 'podman-machine-default,' where you will be entered directly as the default
 user.
 
-![Using WSL in Windows Terminal](https://raw.githubusercontent.com/podman-container-tools/podman/cade97a52ebdf9dbf9e81de8009015776837a074/docs/tutorials/podman-wsl-term.jpg)
+![Using WSL in Windows Terminal](https://raw.githubusercontent.com/podman-container-tools/podman/8303f2e25b675ea7f82099d615c60969aec15870/docs/tutorials/podman-wsl-term.jpg)
 
 ```powershell
 [user@WINPC /]$ podman info --format '{{.Store.RunRoot}}'
@@ -577,4 +577,4 @@ WSL system state:
 ## Install Certificate Authority
 
 Instructions for installing a CA certificate can be found [in the dedicated
-article](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/tutorials/podman-install-certificate-authority.md).
+article](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/tutorials/podman-install-certificate-authority.md).

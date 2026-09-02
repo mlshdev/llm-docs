@@ -15,10 +15,10 @@
       "docsCommit": "d905fda2a3f04a2066746875d09e51a3fe62dfed"
     },
     "podman": {
-      "tag": "v6.1.0",
-      "releaseId": 369501266,
-      "releasePublishedAt": "2026-08-12T20:12:23Z",
-      "sourceCommit": "cade97a52ebdf9dbf9e81de8009015776837a074"
+      "tag": "v6.1.1",
+      "releaseId": 381417560,
+      "releasePublishedAt": "2026-09-02T16:35:51Z",
+      "sourceCommit": "8303f2e25b675ea7f82099d615c60969aec15870"
     },
     "docker": {
       "tag": "main",

@@ -1,10 +1,10 @@
-> Release-pinned source for Podman v6.1.0: [docs/tutorials/mac_win_client.md](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/tutorials/mac_win_client.md)
+> Release-pinned source for Podman v6.1.1: [docs/tutorials/mac_win_client.md](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/tutorials/mac_win_client.md)
 
 # Podman Remote clients for macOS and Windows
 
 ***
 
-***NOTE:*** For running Podman on Windows, refer to the [Podman for Windows](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/tutorials/podman-for-windows.md) guide, which uses the recommended approach of a Podman-managed Linux backend. For Mac, see the [Podman installation instructions](https://podman.io/docs/installation). This guide covers advanced usage of Podman as a remote client against a custom Linux VM or an external Linux system.
+***NOTE:*** For running Podman on Windows, refer to the [Podman for Windows](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/tutorials/podman-for-windows.md) guide, which uses the recommended approach of a Podman-managed Linux backend. For Mac, see the [Podman installation instructions](https://podman.io/docs/installation). This guide covers advanced usage of Podman as a remote client against a custom Linux VM or an external Linux system.
 
 ***
 
@@ -46,7 +46,7 @@ $ podman machine init
 $ podman machine start
 ```
 
-If you want your Podman machine to start automatically when you log in, see [Running Podman on macOS startup with launchd](https://github.com/podman-container-tools/podman/blob/cade97a52ebdf9dbf9e81de8009015776837a074/docs/tutorials/macos_autostart.md).
+If you want your Podman machine to start automatically when you log in, see [Running Podman on macOS startup with launchd](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/tutorials/macos_autostart.md).
 
 The rest of this guide focuses on option 2 (remote client to an external Linux machine).
 
