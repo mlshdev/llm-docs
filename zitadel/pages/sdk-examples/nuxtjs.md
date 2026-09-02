@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/sdk-examples/nuxtjs.mdx](https://zitadel.com/docs/sdk-examples/nuxtjs)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/sdk-examples/nuxtjs.mdx](https://zitadel.com/docs/sdk-examples/nuxtjs)
 
 ## Overview
 

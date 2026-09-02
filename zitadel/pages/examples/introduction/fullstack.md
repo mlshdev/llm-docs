@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/examples/introduction/fullstack/index.mdx](https://zitadel.com/docs/examples/introduction/fullstack)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/examples/introduction/fullstack/index.mdx](https://zitadel.com/docs/examples/introduction/fullstack)
 
 - [Astro](https://zitadel.com/docs/sdk-examples/astro)
 - [Dotnet](https://zitadel.com/docs/sdk-examples/dotnet)

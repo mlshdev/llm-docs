@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/concepts/eventstore/overview.mdx](https://zitadel.com/docs/concepts/eventstore/overview)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/concepts/eventstore/overview.mdx](https://zitadel.com/docs/concepts/eventstore/overview)
 
 ZITADEL is built on the [Event Sourcing pattern](https://zitadel.com/docs/concepts/architecture/software), where changes are stored as events in an Event Store.
 

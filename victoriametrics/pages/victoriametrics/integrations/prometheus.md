@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.150.0: [docs/victoriametrics/integrations/prometheus.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/victoriametrics/integrations/prometheus.md)
+> Release-pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/integrations/prometheus.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/prometheus.md)
 
 VictoriaMetrics integrates with Prometheus as [remote storage for writes](https://prometheus.io/docs/operating/integrations/#remote-endpoints-and-storage).
 

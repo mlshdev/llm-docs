@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/scout/how-tos/create-exceptions-vex.md](https://github.com/docker/docs/blob/ca60e92629079de412f38632876ab208d84267ef/content/manuals/scout/how-tos/create-exceptions-vex.md)
+> Commit-pinned source for Docker main: [content/manuals/scout/how-tos/create-exceptions-vex.md](https://github.com/docker/docs/blob/ff96ad1711065cf2e9c3f1d701dad04775834f70/content/manuals/scout/how-tos/create-exceptions-vex.md)
 
 Vulnerability Exploitability eXchange (VEX) is a standard format for
 documenting vulnerabilities in the context of a software package or product.

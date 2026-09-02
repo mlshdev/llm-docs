@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/guides/manage/console/projects-overview.mdx](https://zitadel.com/docs/guides/manage/console/projects-overview)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/manage/console/projects-overview.mdx](https://zitadel.com/docs/guides/manage/console/projects-overview)
 
 ## What is a project?
 
@@ -23,7 +23,7 @@ Imagine you are building a **Point of Sales (POS)** platform. In ZITADEL, you wo
 - **Roles:** You would create **Roles** (e.g., `admin`, `cashier`, `viewer`) inside this Project.
 - **Role assignment:** All applications in this project share these roles, allowing you to create unified role assignments for your users across all platforms.
 
-![POS Project](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/console/posproject.png)
+![POS Project](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/console/posproject.png)
 
 ## Core Components
 
@@ -52,7 +52,7 @@ This **Default Project** (named "ZITADEL") protects the ZITADEL Management Conso
 >
 > We do not recommend changing any settings in the Default Project or using it for your own applications, as this could influence the behavior of ZITADEL itself.
 
-![Default Project](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/solution-scenarios/console-default-project.png)
+![Default Project](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/solution-scenarios/console-default-project.png)
 
 ## Create a Project
 
@@ -62,7 +62,7 @@ To create a project:
 2. Go to **Projects** (or visit `https://${CUSTOM_DOMAIN}.zitadel.cloud/ui/console/projects`).
 3. Click the **Create New Project** button.
 
-![Empty Project](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/console_projects_empty.png)
+![Empty Project](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/console_projects_empty.png)
 
 4. Enter your project name and continue.
 
@@ -76,14 +76,14 @@ A powerful feature of ZITADEL is the ability to **Grant** a project to other org
 
 Using the POS example above: You could grant the `POS` project to a partner organization. That partner can then log in with their own domain, use their own branding, and manage their own cashier users, all while using your underlying application structure.
 
-![Granted project](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/console/grantedprojectgrid.png)
+![Granted project](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/console/grantedprojectgrid.png)
 
 ### How to Grant a Project
 
 1. Navigate to the Project you want to share (e.g., `POS`).
 2. In the **Project Grants** section, click **New**.
 
-![Grants](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/console/grantsmenu.png)
+![Grants](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/console/grantsmenu.png)
 
 3. Enter the **Domain** of the partner organization you want to grant access to.
    - *Tip: If you don't know the domain, navigate to the Organization detail page to find it.*
@@ -98,7 +98,7 @@ You can customize the behavior of your project, particularly regarding how login
 
 If you have different designs for your organizations (Private Labeling), you can define the login behavior on the project detail page.
 
-![Project branding](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/console/projectbranding.png)
+![Project branding](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/console/projectbranding.png)
 
 | Setting                      | Description                                                                                                                                                                                               |
 | :--------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -112,7 +112,7 @@ In a B2B use case, you would typically use **Allow login user policy**. If you w
 
 You can configure strict security checks regarding roles during authentication.
 
-![Role settings](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/console/rolesettings.png)
+![Role settings](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/console/rolesettings.png)
 
 - **Assert Roles on Authentication:** Role information is sent from the Userinfo endpoint (and in tokens, depending on app settings).
 - **Check Role Assignment on Authentication:** Users are **only** allowed to log in if they have at least one role assigned for this project. If they have no roles, access is denied immediately.
@@ -126,6 +126,6 @@ If you want roles to appear directly inside your Access or ID Tokens (to avoid c
 2. Open **Token Settings**.
 3. Check **Assert Roles on Authentication**.
 
-![Roles in token](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/console/tokenroles.png)
+![Roles in token](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/console/tokenroles.png)
 
 You can learn more about Application and Token settings [here](https://zitadel.com/docs/guides/manage/console/applications-overview).

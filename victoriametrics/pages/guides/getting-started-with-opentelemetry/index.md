@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.150.0: [docs/guides/getting-started-with-opentelemetry/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/getting-started-with-opentelemetry/_index.md)
+> Release-pinned source for VictoriaMetrics v1.151.0: [docs/guides/getting-started-with-opentelemetry/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/getting-started-with-opentelemetry/_index.md)
 
 This guide walks you through deploying VictoriaMetrics and VictoriaLogs on Kubernetes, and collecting [metrics](https://docs.victoriametrics.com/victoriametrics/data-ingestion/opentelemetry-collector/) and [logs](https://docs.victoriametrics.com/victorialogs/data-ingestion/opentelemetry/) from a Go application either directly or via the [OpenTelemetry Collector](https://opentelemetry.io/docs/collector/).
 
@@ -98,7 +98,7 @@ http://victoria-logs-victoria-logs-single-server.default.svc.cluster.local.:9428
 
 The [OpenTelemetry Collector](https://opentelemetry.io/docs/collector/) can be configured to route incoming metrics and logs from applications to the VictoriaMetrics and VictoriaLogs services running in the Kubernetes cluster.
 
-![OTEL Collector](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/getting-started-with-opentelemetry/collector.webp)
+![OTEL Collector](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/getting-started-with-opentelemetry/collector.webp)
 
 Add the OpenTelemetry Collector Helm repo:
 
@@ -179,7 +179,7 @@ kubectl port-forward svc/victoria-metrics-victoria-metrics-single-server 8428
 
 Visit <http://localhost:8428/vmui/#/?g0.expr=k8s_container_ready&g0.tab=1> to check if metric `k8s_container_ready` is present.
 
-![Screenshot of VMUI confirming that metrics are being collected](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/getting-started-with-opentelemetry/vmui-k8s_container_ready.webp)
+![Screenshot of VMUI confirming that metrics are being collected](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/getting-started-with-opentelemetry/vmui-k8s_container_ready.webp)
 
 <figcaption style="text-align: center; font-style: italic;">VictoriaMetrics UI (VMUI) showing the <code>k8s_container_ready</code> metric</figcaption>
 
@@ -194,7 +194,7 @@ kubectl port-forward svc/victoria-logs-victoria-logs-single-server 9428
 
 Visit <http://localhost:9428/select/vmui> to check if logs ingested by Collector are present.
 
-![Screenshot of VMUI for VictoriaLogs confirming logs are being ingested](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/getting-started-with-opentelemetry/vmui-vlogs.webp)
+![Screenshot of VMUI for VictoriaLogs confirming logs are being ingested](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/getting-started-with-opentelemetry/vmui-vlogs.webp)
 
 <figcaption style="text-align: center; font-style: italic;">VMUI for VictoriaLogs showing ingested log entries</figcaption>
 
@@ -208,7 +208,7 @@ In our example, we'll create a web server in [Go](https://go.dev/), with metrics
 
 ### Sending to OpenTelemetry Collector
 
-Download the [example code](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/getting-started-with-opentelemetry/app.go-collector.example) and rename it as `main.go`. The example code implements a dice roll web server that uses the OpenTelemetry SDK to send data to the OpenTelemetry Collector at `http://localhost:4318`.
+Download the [example code](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/getting-started-with-opentelemetry/app.go-collector.example) and rename it as `main.go`. The example code implements a dice roll web server that uses the OpenTelemetry SDK to send data to the OpenTelemetry Collector at `http://localhost:4318`.
 
 > \[!NOTE] Tip
 > See how to set up and run OpenTelemetry Collector [here](#opentelemetry-collector-with-victoriametrics-and-victorialogs).
@@ -244,14 +244,14 @@ for i in `seq 1 20`; do curl http://localhost:8080/rolldice; done
 After a few seconds, you should start seeing metrics sent to VictoriaMetrics by visiting <http://localhost:8428/vmui/#/?g0.expr=dice_rolls_total>
 in your browser or by querying the metric `dice_rolls_total` in the UI interface.
 
-![Screenshot of VMUI](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/getting-started-with-opentelemetry/vmui-dice-roll-metrics.webp)
+![Screenshot of VMUI](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/getting-started-with-opentelemetry/vmui-dice-roll-metrics.webp)
 
 <figcaption style="text-align: center; font-style: italic;">VMUI showing collected metrics for <code>dice_rolls_total</code></figcaption>
 
 Logs should be available by visiting <http://localhost:9428/select/vmui>
 using query `service.name: unknown_service:otel`.
 
-![Screenshot of VMUI for VictoriaLogs](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/getting-started-with-opentelemetry/vmui-dice-roll-logs.webp)
+![Screenshot of VMUI for VictoriaLogs](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/getting-started-with-opentelemetry/vmui-dice-roll-logs.webp)
 
 <figcaption style="text-align: center; font-style: italic;">VMUI for VictoriaLogs showing collected logs for <code>service.name: unknown_service:otel</code></figcaption>
 
@@ -259,11 +259,11 @@ using query `service.name: unknown_service:otel`.
 
 You can send telemetry directly from your application to VictoriaMetrics and VictoriaLogs; the Collector is optional. You may use any OpenTelemetry [instrumentation client](https://opentelemetry.io/docs/languages/) to communicate directly with VictoriaMetrics and VictoriaLogs.
 
-![OTEL direct](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/getting-started-with-opentelemetry/direct.webp)
+![OTEL direct](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/getting-started-with-opentelemetry/direct.webp)
 
 This time, we'll run a different web server, also in [Go](https://go.dev/) and instrumented with metrics and logs. This demo application sends telemetry data directly to VictoriaMetrics and VictoriaLogs services.
 
-Download the [example code](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/getting-started-with-opentelemetry/app.go.example) and rename it as `main.go`. In the same directory, execute the following commands:
+Download the [example code](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/getting-started-with-opentelemetry/app.go.example) and rename it as `main.go`. In the same directory, execute the following commands:
 
 ```sh
 go mod init vm/otel
@@ -296,7 +296,7 @@ for i in `seq 1 5`; do curl http://localhost:8081/api/slow; done
 
 After a few seconds, you should start seeing metrics sent to VictoriaMetrics by visiting <http://localhost:8428/vmui/#/?g0.expr=http_requests_total>.
 
-![Screenshot of VMUI](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/getting-started-with-opentelemetry/vmui-direct-metrics.webp)
+![Screenshot of VMUI](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/getting-started-with-opentelemetry/vmui-direct-metrics.webp)
 
 <figcaption style="text-align: center; font-style: italic;">VMUI showing metrics for <code>http_requests_total</code></figcaption>
 
@@ -306,7 +306,7 @@ After a few seconds, you should start seeing metrics sent to VictoriaMetrics by 
 Logs should be available by visiting <http://localhost:9428/select/vmui>
 using query `service.name: unknown_service:otel`.
 
-![Screenshot of VMUI](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/getting-started-with-opentelemetry/vmui-direct-logs.webp)
+![Screenshot of VMUI](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/getting-started-with-opentelemetry/vmui-direct-logs.webp)
 
 <figcaption style="text-align: center; font-style: italic;">VMUI for VictoriaLogs showing logs for <code>service.name: unknown_service:otel</code></figcaption>
 

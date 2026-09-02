@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.150.0: [docs/anomaly-detection/QuickStart.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/QuickStart.md)
+> Release-pinned source for VictoriaMetrics v1.151.0: [docs/anomaly-detection/QuickStart.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/QuickStart.md)
 
 For a broader overview please visit the [navigation page](https://docs.victoriametrics.com/anomaly-detection/).
 
@@ -125,7 +125,7 @@ Below are the steps to get `vmanomaly` up and running inside a Docker container:
 1. Pull Docker image:
 
 ```sh
-docker pull victoriametrics/vmanomaly:v1.30.2
+docker pull victoriametrics/vmanomaly:v1.30.4
 ```
 
 2. Create the license file with your license key.
@@ -145,7 +145,7 @@ docker run -it \
     -v ./license:/license \
     -v ./config.yaml:/config.yaml \
     -p 8490:8490 \
-    victoriametrics/vmanomaly:v1.30.2 \
+    victoriametrics/vmanomaly:v1.30.4 \
     /config.yaml \
     --licenseFile=/license \
     --loggerLevel=INFO \
@@ -162,7 +162,7 @@ docker run -it \
     -e VMANOMALY_DATA_DUMPS_DIR=/tmp/vmanomaly/data \
     -e VMANOMALY_MODEL_DUMPS_DIR=/tmp/vmanomaly/models \
     -p 8490:8490 \
-    victoriametrics/vmanomaly:v1.30.2 \
+    victoriametrics/vmanomaly:v1.30.4 \
     /config.yaml \
     --licenseFile=/license \
     --loggerLevel=INFO \
@@ -175,7 +175,7 @@ services:
   # ...
   vmanomaly:
     container_name: vmanomaly
-    image: victoriametrics/vmanomaly:v1.30.2
+    image: victoriametrics/vmanomaly:v1.30.4
     # ...
     restart: always
     volumes:
@@ -308,7 +308,7 @@ writer:
 
 *(available from vmanomaly v1.26.0)* `vmanomaly`'s built-in web UI supports prototyping and interactive generation of `vmanomaly` and `vmalert` configuration files. See the [UI documentation](https://docs.victoriametrics.com/anomaly-detection/ui/) for instructions and examples. For optional AI-assisted workflows, use the [UI Copilot](https://docs.victoriametrics.com/anomaly-detection/ui/#ai-assistance), connect the [vmanomaly MCP server](https://docs.victoriametrics.com/ai-tools/#vmanomaly-mcp-server), or follow the published [agent skills](https://docs.victoriametrics.com/ai-tools/#agent-skills).
 
-![vmanomaly-ui-overview](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/vmanomaly-ui-overview.webp)
+![vmanomaly-ui-overview](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/vmanomaly-ui-overview.webp)
 
 > \[!TIP]
 > Public playgrounds with pre-configured `vmanomaly` instances and VictoriaMetrics/VictoriaLogs/VictoriaTraces datasources are available for interactive experimenting without the need to set up your own instance or getting an enterprise license. You can find them in the [UI documentation](https://docs.victoriametrics.com/anomaly-detection/ui/#playgrounds) or access them directly via the links - [metrics](https://play-vmanomaly.victoriametrics.com/metrics/), [logs](https://play-vmanomaly.victoriametrics.com/logs/), [traces](https://play-vmanomaly.victoriametrics.com/traces/) - or embedded versions in the collapsible blocks.

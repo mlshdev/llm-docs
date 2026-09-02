@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/guides/integrate/scim-okta-guide.mdx](https://zitadel.com/docs/guides/integrate/scim-okta-guide)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/integrate/scim-okta-guide.mdx](https://zitadel.com/docs/guides/integrate/scim-okta-guide)
 
 This guide provides step-by-step instructions to configure SCIM provisioning from Okta into ZITADEL.
 
@@ -44,13 +44,13 @@ Follow these precise steps to configure SCIM provisioning in Okta:
 
 4. In the **Provisioning** section, select **SCIM** and then **Save**.
 
-![Enable SCIM provisioning in Okta](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/manage/users/enable-scim-provisioning.png)
+![Enable SCIM provisioning in Okta](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/manage/users/enable-scim-provisioning.png)
 
 5. Under the **General** tab, also confirm that [Federation Broker Mode](https://help.okta.com/en-us/content/topics/apps/apps-fbm-main.htm) is disabled.
 
 6. Click on the **Provisioning** tab, then go to the **Integration** tab and select **Edit**.
 
-![Select provisioning actions in Okta](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/manage/users/select-provisioning-actions.png)
+![Select provisioning actions in Okta](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/manage/users/select-provisioning-actions.png)
 
 7. Enter the **SCIM connector base URL** using this format:
 
@@ -88,7 +88,7 @@ Like the example in the above image:
 
 14. Click **Save** to apply these settings.
 
-![Enable provisioning to App in Okta](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/manage/users/provisioning-to-app.png)
+![Enable provisioning to App in Okta](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/manage/users/provisioning-to-app.png)
 
 ## Step 3: Attribute Mapping (Recommended)
 

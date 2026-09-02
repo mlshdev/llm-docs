@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/guides/integrate/identity-providers/additional-information.mdx](https://zitadel.com/docs/guides/integrate/identity-providers/additional-information)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/integrate/identity-providers/additional-information.mdx](https://zitadel.com/docs/guides/integrate/identity-providers/additional-information)
 
 ## Automatically pre-fill user data
 

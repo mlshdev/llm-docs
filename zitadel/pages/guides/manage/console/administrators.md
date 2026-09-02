@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/guides/manage/console/administrators.mdx](https://zitadel.com/docs/guides/manage/console/administrators)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/manage/console/administrators.mdx](https://zitadel.com/docs/guides/manage/console/administrators)
 
 > **Terminology update**
 >
@@ -20,14 +20,14 @@ Only the Administrators on the instance level can view resources, such as users,
 To configure administrators in ZITADEL, go to the resource where you like to add it (e.g., Instance, Organization, Project, GrantedProject).
 In the right part of the management console you can find **ADMINISTRATORS** in the details part. Here you have a list of the current administrators and can add a new one.
 
-![Administrators](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/console/administrators.png)
+![Administrators](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/console/administrators.png)
 
 When adding a new administrator, you can select multiple roles, some of which are only allowed to read data.
 This can be especially useful if you add service account for one of your projects where you only need read access.
 
 By default, you will only search for users within the selected organization. If you like to give a role to a user outside the organization, you need to switch to the global search and type the exact loginname of the users. This will prevent users from guessing users from other organizations.
 
-![Administrators](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/console/add_administrator.png)
+![Administrators](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/console/add_administrator.png)
 
 ## Roles
 

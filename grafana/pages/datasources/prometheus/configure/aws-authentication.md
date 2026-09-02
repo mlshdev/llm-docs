@@ -1,4 +1,4 @@
-> Release-pinned source for Grafana v13.2.0: [docs/sources/datasources/prometheus/configure/aws-authentication.md](https://github.com/grafana/grafana/blob/f681b1359f6a0b8ecb9f2c49a88ac72b75bde73b/docs/sources/datasources/prometheus/configure/aws-authentication.md)
+> Release-pinned source for Grafana v13.2.1: [docs/sources/datasources/prometheus/configure/aws-authentication.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/datasources/prometheus/configure/aws-authentication.md)
 
 # Migrate from Prometheus SigV4 to Amazon Managed Service for Prometheus
 
@@ -27,9 +27,9 @@ To determine if your Prometheus data sources have been migrated:
 
 The banner displays one of the following messages:
 
-- **"Migration Notice"** — The data source has been migrated to the Amazon Managed Service for Prometheus plugin.
-- **"Deprecation Notice"** — The data source hasn't been migrated yet.
-- **No banner** — No migration is needed (the data source doesn't use SigV4).
+- **"Migration Notice":** The data source has been migrated to the Amazon Managed Service for Prometheus plugin.
+- **"Deprecation Notice":** The data source hasn't been migrated yet.
+- **No banner:** No migration is needed (the data source doesn't use SigV4).
 
 ## Configure the Amazon Managed Service for Prometheus data source
 
@@ -74,6 +74,8 @@ Replace `<ACCESS_KEY>` and `<SECRET_KEY>` with your AWS credentials.
 
 ## Troubleshoot migration issues
 
+The following sections cover common issues you may encounter during or after the migration and how to resolve them.
+
 ### Amazon Managed Service for Prometheus plugin not installed
 
 **Symptom:** Migration doesn't occur or the data source type is missing.
@@ -90,7 +92,7 @@ Replace `<ACCESS_KEY>` and `<SECRET_KEY>` with your AWS credentials.
 
 **Solution:**
 
-1. **Self-hosted Grafana:** Verify that `grafana-amazonprometheus-datasource` is included in `forward_settings_to_plugins` under the `[aws]` heading in your `.ini` configuration file.
+1. **Self-managed Grafana:** Verify that `grafana-amazonprometheus-datasource` is included in `forward_settings_to_plugins` under the `[aws]` heading in your `.ini` configuration file.
 2. **Grafana Cloud:** Contact [Grafana Support](https://grafana.com/profile/org#support).
 
 ### Rollback the migration
@@ -168,7 +170,7 @@ echo "$response_body" | jq -c '.[] | select(.jsonData["prometheus-type-migration
     read_only=$(echo "$data" | jq -r '.readOnly // false')
 
     if [[ "$read_only" == "true" ]]; then
-        log_message "$uid is readOnly — edit the type to 'prometheus' in the provisioning file instead."
+        log_message "$uid is readOnly; edit the type to 'prometheus' in the provisioning file instead."
         continue
     fi
 

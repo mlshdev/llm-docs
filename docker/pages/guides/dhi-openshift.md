@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/dhi-openshift.md](https://github.com/docker/docs/blob/ca60e92629079de412f38632876ab208d84267ef/content/guides/dhi-openshift.md)
+> Commit-pinned source for Docker main: [content/guides/dhi-openshift.md](https://github.com/docker/docs/blob/ff96ad1711065cf2e9c3f1d701dad04775834f70/content/guides/dhi-openshift.md)
 
 Docker Hardened Images (DHI) can be deployed on Red Hat OpenShift Container
 Platform, but OpenShift’s security model differs from standard Kubernetes in

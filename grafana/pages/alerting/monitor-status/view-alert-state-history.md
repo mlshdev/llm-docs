@@ -1,4 +1,4 @@
-> Release-pinned source for Grafana v13.2.0: [docs/sources/alerting/monitor-status/view-alert-state-history.md](https://github.com/grafana/grafana/blob/f681b1359f6a0b8ecb9f2c49a88ac72b75bde73b/docs/sources/alerting/monitor-status/view-alert-state-history.md)
+> Release-pinned source for Grafana v13.2.1: [docs/sources/alerting/monitor-status/view-alert-state-history.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/alerting/monitor-status/view-alert-state-history.md)
 
 # View alert state history
 
@@ -13,6 +13,8 @@ An alert event is displayed each time an alert instance changes its state over a
 ## View from the History page
 
 The History page shows the history and state changes of all Grafana-managed alert rules. You can filter by labels and alert states.
+
+The **History** page also includes a **Notifications** tab for [notification history](https://grafana.com/docs/grafana/v13.2/alerting/monitor-status/view-notification-history/).
 
 Users can only view the history of alert rules they have permission to access (RBAC).
 

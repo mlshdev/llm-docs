@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.150.0: [docs/ai-tools/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/ai-tools/_index.md)
+> Release-pinned source for VictoriaMetrics v1.151.0: [docs/ai-tools/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/ai-tools/_index.md)
 
 VictoriaMetrics Observability Stack integrates with AI assistants through [MCP servers](https://docs.victoriametrics.com/ai-tools/#mcp-servers)
 and [agent skills](https://docs.victoriametrics.com/ai-tools/#agent-skills).

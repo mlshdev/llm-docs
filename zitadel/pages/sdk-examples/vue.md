@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/sdk-examples/vue.mdx](https://zitadel.com/docs/sdk-examples/vue)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/sdk-examples/vue.mdx](https://zitadel.com/docs/sdk-examples/vue)
 
 ## Overview
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/get-started/docker-concepts/the-basics/what-is-an-image.md](https://github.com/docker/docs/blob/ca60e92629079de412f38632876ab208d84267ef/content/get-started/docker-concepts/the-basics/what-is-an-image.md)
+> Commit-pinned source for Docker main: [content/get-started/docker-concepts/the-basics/what-is-an-image.md](https://github.com/docker/docs/blob/ff96ad1711065cf2e9c3f1d701dad04775834f70/content/get-started/docker-concepts/the-basics/what-is-an-image.md)
 
 # What is an image?
 
@@ -43,15 +43,15 @@ In this hands-on, you will learn how to search and pull a container image using 
 
 1. Open the Docker Desktop Dashboard and select the **Images** view in the left-hand navigation menu.
 
-![A screenshot of the Docker Desktop Dashboard showing the image view on the left sidebar](https://raw.githubusercontent.com/docker/docs/ca60e92629079de412f38632876ab208d84267ef/content/get-started/docker-concepts/the-basics/images/click-image.webp?border=true\&w=1050\&h=400)
+![A screenshot of the Docker Desktop Dashboard showing the image view on the left sidebar](https://raw.githubusercontent.com/docker/docs/ff96ad1711065cf2e9c3f1d701dad04775834f70/content/get-started/docker-concepts/the-basics/images/click-image.webp?border=true\&w=1050\&h=400)
 
 2. Select the **Search images to run** button. If you don't see it, select the *global search bar* at the top of the screen.
 
-![A screenshot of the Docker Desktop Dashboard showing the search ta](https://raw.githubusercontent.com/docker/docs/ca60e92629079de412f38632876ab208d84267ef/content/get-started/docker-concepts/the-basics/images/search-image.webp?border)
+![A screenshot of the Docker Desktop Dashboard showing the search ta](https://raw.githubusercontent.com/docker/docs/ff96ad1711065cf2e9c3f1d701dad04775834f70/content/get-started/docker-concepts/the-basics/images/search-image.webp?border)
 
 3. In the **Search** field, enter "welcome-to-docker". Once the search has completed, select the `docker/welcome-to-docker` image.
 
-![A screenshot of the Docker Desktop Dashboard showing the search results for the docker/welcome-to-docker image](https://raw.githubusercontent.com/docker/docs/ca60e92629079de412f38632876ab208d84267ef/content/get-started/docker-concepts/the-basics/images/select-image.webp?border=true\&w=1050\&h=400)
+![A screenshot of the Docker Desktop Dashboard showing the search results for the docker/welcome-to-docker image](https://raw.githubusercontent.com/docker/docs/ff96ad1711065cf2e9c3f1d701dad04775834f70/content/get-started/docker-concepts/the-basics/images/select-image.webp?border=true\&w=1050\&h=400)
 
 4. Select **Pull** to download the image.
 
@@ -63,11 +63,11 @@ Once you have an image downloaded, you can learn quite a few details about the i
 
 2. Select the **docker/welcome-to-docker** image to open details about the image.
 
-![A screenshot of the Docker Desktop Dashboard showing the images view with an arrow pointing to the docker/welcome-to-docker image](https://raw.githubusercontent.com/docker/docs/ca60e92629079de412f38632876ab208d84267ef/content/get-started/docker-concepts/the-basics/images/pulled-image.webp?border=true\&w=1050\&h=400)
+![A screenshot of the Docker Desktop Dashboard showing the images view with an arrow pointing to the docker/welcome-to-docker image](https://raw.githubusercontent.com/docker/docs/ff96ad1711065cf2e9c3f1d701dad04775834f70/content/get-started/docker-concepts/the-basics/images/pulled-image.webp?border=true\&w=1050\&h=400)
 
 3. The image details page presents you with information regarding the layers of the image, the packages and libraries installed in the image, and any discovered vulnerabilities.
 
-![A screenshot of the image details view for the docker/welcome-to-docker image](https://raw.githubusercontent.com/docker/docs/ca60e92629079de412f38632876ab208d84267ef/content/get-started/docker-concepts/the-basics/images/image-layers.webp?border=true\&w=1050\&h=400)
+![A screenshot of the image details view for the docker/welcome-to-docker image](https://raw.githubusercontent.com/docker/docs/ff96ad1711065cf2e9c3f1d701dad04775834f70/content/get-started/docker-concepts/the-basics/images/image-layers.webp?border=true\&w=1050\&h=400)
 
 **Using the CLI**
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/scout/integrations/_index.md](https://github.com/docker/docs/blob/ca60e92629079de412f38632876ab208d84267ef/content/manuals/scout/integrations/_index.md)
+> Commit-pinned source for Docker main: [content/manuals/scout/integrations/_index.md](https://github.com/docker/docs/blob/ff96ad1711065cf2e9c3f1d701dad04775834f70/content/manuals/scout/integrations/_index.md)
 
 # Integrating Docker Scout with other systems
 
@@ -19,11 +19,9 @@ registries enables Docker Scout to run image analysis on those repositories,
 so that you can get insights into the composition of those images even if they
 aren't hosted on Docker Hub.
 
-The following container registry integrations are available:
-
-- [Amazon Elastic Container Registry](https://docs.docker.com/scout/integrations/registry/ecr/) (deprecated, retiring September 1, 2026)
-- [Azure Container Registry](https://docs.docker.com/scout/integrations/registry/acr/) (deprecated, retiring September 1, 2026)
-- [JFrog Artifactory](https://docs.docker.com/scout/integrations/registry/artifactory/)
+Docker Scout integrates with any Docker/OCI-compliant registry using
+[`docker scout watch`](https://docs.docker.com/scout/integrations/registry/), including Amazon ECR, Azure
+Container Registry, JFrog Artifactory, Harbor, and Sonatype Nexus.
 
 ### Continuous Integration
 
@@ -54,39 +52,3 @@ The following environment monitoring integrations are available:
 
 For more information about environment integrations, see
 [Environments](https://docs.docker.com/scout/integrations/environment/).
-
-### Code quality
-
-Integrating Docker Scout with code analysis tools enables quality checks
-directly on source code, helping you keep track of bugs, security issues, test
-coverage, and more. In addition to image analysis and environment monitoring,
-code quality gates let you shift left your supply chain management with Docker
-Scout.
-
-Once you enable a code quality integration, Docker Scout includes the code
-quality assessments as policy evaluation results for the repositories where
-you've enabled the integration.
-
-The following code quality integrations are available:
-
-- [SonarQube](https://docs.docker.com/scout/integrations/code-quality/sonarqube/) (deprecated, retiring September 1, 2026)
-
-### Source code management
-
-Integrate Docker Scout with your version control system to get guided
-remediation advice on how to address issues detected by Docker Scout image
-analysis, directly in your repositories.
-
-The following source code management integrations are available:
-
-- [GitHub](https://docs.docker.com/scout/integrations/source-code-management/github/) (retired)
-
-### Team collaboration
-
-Integrations in this category let you integrate Docker Scout with collaboration
-platforms for broadcasting notifications about your software supply chain in
-real-time to team communication platforms.
-
-The following team collaboration integrations are available:
-
-- [Slack](https://docs.docker.com/scout/integrations/team-collaboration/slack/) (deprecated, retiring September 1, 2026)

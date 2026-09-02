@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/concepts/eventstore/implementation.mdx](https://zitadel.com/docs/concepts/eventstore/implementation)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/concepts/eventstore/implementation.mdx](https://zitadel.com/docs/concepts/eventstore/implementation)
 
 This documentation gives you an insight into the structure of the ZITADEL database.
 The goal is to give you a rough overview, so you know where which data is stored and which database schemas and tables are used.

@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/guides/integrate/actions/testing-function-manipulation.mdx](https://zitadel.com/docs/guides/integrate/actions/testing-function-manipulation)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/integrate/actions/testing-function-manipulation.mdx](https://zitadel.com/docs/guides/integrate/actions/testing-function-manipulation)
 
 This guide shows you how to leverage the ZITADEL actions feature to enhance different functions in your ZITADEL instance.
 You can use the actions feature to create a target that will be called when a specific functionality is used.
@@ -9,7 +9,6 @@ This is useful for integrating with other systems which need specific claims in 
 Before you start, make sure you have everything set up correctly.
 
 - You need to be at least a ZITADEL [*IAM\_OWNER*](https://zitadel.com/docs/guides/manage/console/administrators)
-- Your ZITADEL instance needs to have the actions feature enabled.
 
 > **Note**
 >

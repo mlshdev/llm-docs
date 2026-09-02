@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/connect/create-nodes/build-your-node/reference/code-standards.md](https://github.com/n8n-io/n8n-docs/blob/afebf5d9c6ff327fa215b3e6f99627e11fc9d3f2/docs/connect/create-nodes/build-your-node/reference/code-standards.md)
+> Commit-pinned source for n8n main: [docs/connect/create-nodes/build-your-node/reference/code-standards.md](https://github.com/n8n-io/n8n-docs/blob/0b69471cc64a4886de337982abd2f5d237dcd52a/docs/connect/create-nodes/build-your-node/reference/code-standards.md)
 
 # Code standards <a id="code-standards"></a>
 

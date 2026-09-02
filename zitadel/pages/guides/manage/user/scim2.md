@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/guides/manage/user/scim2.mdx](https://zitadel.com/docs/guides/manage/user/scim2)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/manage/user/scim2.mdx](https://zitadel.com/docs/guides/manage/user/scim2)
 
 Zitadel’s **[SCIM v2](https://scim.cloud/) service provider interface** enables standardized provisioning and lifecycle management of users and other instance resources.
 By implementing the official *System for Cross-domain Identity Management (SCIM) v2.0* specification, Zitadel allows seamless and automated user creation, updates, deactivation, and deprovisioning across systems.

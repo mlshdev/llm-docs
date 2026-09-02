@@ -1,8 +1,8 @@
-> Release-pinned source for Grafana v13.2.0: [docs/sources/datasources/pyroscope/configure-traces-to-profiles.md](https://github.com/grafana/grafana/blob/f681b1359f6a0b8ecb9f2c49a88ac72b75bde73b/docs/sources/datasources/pyroscope/configure-traces-to-profiles.md)
+> Release-pinned source for Grafana v13.2.1: [docs/sources/datasources/pyroscope/configure-traces-to-profiles/index.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/datasources/pyroscope/configure-traces-to-profiles/index.md)
 
 # Configure Trace to profiles
 
-Trace to profiles lets you navigate from a trace span directly to the profiling data for that span. You configure the integration in the Tempo data source, which connects your tracing data in Tempo with your profiling data in Pyroscope.
+Trace to profiles lets you navigate from a trace span directly to the profiling data for that span. You configure it in the Tempo data source, which connects your tracing data in Tempo with your profiling data in Pyroscope.
 
 > **Note**
 >
@@ -120,9 +120,9 @@ The following table describes options for configuring your **Trace to profiles**
 | Use custom query | Toggles use of custom query with interpolation.                                                                                                                                                                                                                                                                |
 | Query            | Input to write custom query. Use variable interpolation to customize it with variables from span.                                                                                                                                                                                                              |
 
-## Verify the integration
+## Verify the connection
 
-After you configure the Tempo data source and instrument your application, verify that the integration works.
+After you configure the Tempo data source and instrument your application, verify that Trace to profiles works.
 
 1. Open a trace in **Explore** using your Tempo data source.
 2. Expand a span to view its details.
@@ -133,7 +133,7 @@ If the span attribute `pyroscope.profile.id` isn't present on the span, the Open
 
 ## Troubleshoot trace to profiles
 
-Use the following checklist to diagnose common issues with the Trace to profiles integration.
+Use the following checklist to diagnose common issues with Trace to profiles.
 
 ### No "Profiles for this span" button appears
 

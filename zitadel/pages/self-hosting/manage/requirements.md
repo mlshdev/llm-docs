@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/self-hosting/manage/requirements.mdx](https://zitadel.com/docs/self-hosting/manage/requirements)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/self-hosting/manage/requirements.mdx](https://zitadel.com/docs/self-hosting/manage/requirements)
 
 This page lists the infrastructure versions that ZITADEL is tested against and officially supports.
 

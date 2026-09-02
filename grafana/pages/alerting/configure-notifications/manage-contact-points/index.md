@@ -1,4 +1,4 @@
-> Release-pinned source for Grafana v13.2.0: [docs/sources/alerting/configure-notifications/manage-contact-points/_index.md](https://github.com/grafana/grafana/blob/f681b1359f6a0b8ecb9f2c49a88ac72b75bde73b/docs/sources/alerting/configure-notifications/manage-contact-points/_index.md)
+> Release-pinned source for Grafana v13.2.1: [docs/sources/alerting/configure-notifications/manage-contact-points/_index.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/alerting/configure-notifications/manage-contact-points/_index.md)
 
 # Configure contact points
 
@@ -119,3 +119,7 @@ After creating a contact point, you can enable it to receive alert notifications
 
 - **Assign it to alert rules** – Select the contact point in the [notifications options for Grafana-managed alert rules](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/create-grafana-managed-rule/) to directly associate it with specific alerts.
 - **Assign it to notification policies** – Add the contact point to one or more [notification policies](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/manage-contact-points/), which manage the alert notifications you want the contact point to receive.
+
+## Troubleshoot notification delivery
+
+The **Contact points** tab shows the status of the latest notification deliveries for each contact point. To review past delivery attempts and filter by contact point or delivery outcome, refer to [View notification history](https://grafana.com/docs/grafana/v13.2/alerting/monitor-status/view-notification-history/).

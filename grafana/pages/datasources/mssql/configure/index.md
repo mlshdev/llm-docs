@@ -1,4 +1,4 @@
-> Release-pinned source for Grafana v13.2.0: [docs/sources/datasources/mssql/configure/index.md](https://github.com/grafana/grafana/blob/f681b1359f6a0b8ecb9f2c49a88ac72b75bde73b/docs/sources/datasources/mssql/configure/index.md)
+> Release-pinned source for Grafana v13.2.1: [docs/sources/datasources/mssql/configure/index.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/datasources/mssql/configure/index.md)
 
 # Configure the Microsoft SQL Server data source
 
@@ -27,7 +27,7 @@ Before configuring the Microsoft SQL Server data source, ensure you have the fol
 
 > **Note**
 >
-> Grafana ships with a built-in Microsoft SQL Server data source plugin. No additional installation is required.
+> The Microsoft SQL Server data source plugin is preinstalled in Grafana, so no additional installation is required. As of Grafana 13.2, it's packaged as a standalone plugin that updates independently of Grafana releases. Refer to [Plugin updates](https://grafana.com/docs/grafana/v13.2/datasources/mssql/#plugin-updates) for details.
 
 > **Tip**
 >
@@ -43,7 +43,7 @@ To add the MSSQL data source, complete the following steps:
 4. Select **Microsoft SQL Server** under data source.
 5. Click **Add new data source** in the upper right.
 
-Grafana takes you to the **Settings** tab, where you will set up your Microsoft SQL Server configuration.
+Grafana takes you to the **Settings** tab, where you set up your Microsoft SQL Server configuration.
 
 ## Configure the data source in the UI
 
@@ -53,10 +53,10 @@ Following are configuration options for the Microsoft SQL Server data source.
 >
 > Kerberos is not supported in Grafana Cloud.
 
-| **Setting** | **Description**                                                                                                                            |
-| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Name**    | The data source name. Sets the name you use to refer to the data source in panels and queries. Examples: `MSSQL-1`, `MSSQL_Sales1`.        |
-| **Default** | Toggle to select as the default name in dashboard panels. When you go to a dashboard panel, this will be the default selected data source. |
+| **Setting** | **Description**                                                                                                                       |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| **Name**    | The data source name. Sets the name you use to refer to the data source in panels and queries. Examples: `MSSQL-1`, `MSSQL_Sales1`.   |
+| **Default** | Toggle to select as the default name in dashboard panels. When you go to a dashboard panel, this is the default selected data source. |
 
 **Connection:**
 
@@ -108,15 +108,15 @@ When **Encrypt** is set to **True**, the following additional TLS options are av
 
 **Authentication:**
 
-| Authentication Type                                   | Description                                                                                                                     | Credentials / Fields                                                                                                                                                                                                                               |
-| ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **SQL Server Authentication**                         | Default method to connect to MSSQL. Use a SQL Server or Windows login in `DOMAIN\User` format.                                  | **Username**: SQL Server username. **Password**: SQL Server password.                                                                                                                                                                              |
-| **Windows Authentication** (Integrated Security)      | Uses the logged-in Windows user's credentials via single sign-on. Available only when SQL Server allows Windows Authentication. | No input required; uses the logged-in Windows user's credentials.                                                                                                                                                                                  |
-| **Windows AD** (Username/Password)                    | Authenticates a domain user with their Active Directory username and password.                                                  | **Username**: `user@example.com`. **Password**: Active Directory password.                                                                                                                                                                         |
-| **Windows AD** (Keytab)                               | Authenticates a domain user using a keytab file.                                                                                | **Username**: `user@example.com`. **Keytab file path**: Path to your keytab file.                                                                                                                                                                  |
-| **Windows AD** (Credential Cache)                     | Uses a Kerberos credential cache already loaded in memory (for example, from a prior `kinit` command). No file needed.          | **Credential cache path**: Path to in-memory credential (for example, `/tmp/krb5cc_1000`).                                                                                                                                                         |
-| **Windows AD** (Credential Cache File)                | Authenticates a domain user using a credential cache file (`.ccache`).                                                          | **Username**: `user@example.com`. **Credential cache file path**: for example, `/home/grot/cache.json`.                                                                                                                                            |
-| **Azure Entra ID (formerly Azure AD) Authentication** | Authenticates the data source using Azure authentication methods.                                                               | Details on the supported authentication methods and how to configure them can be found in the [Azure authentication section](https://grafana.com/docs/grafana/v13.2/datasources/mssql/configure/#azure-entra-id-formerly-azure-ad-authentication). |
+| Authentication Type                                   | Description                                                                                                                     | Credentials / Fields                                                                                                                                                                                          |
+| ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **SQL Server Authentication**                         | Default method to connect to MSSQL. Use a SQL Server or Windows login in `DOMAIN\User` format.                                  | **Username**: SQL Server username. **Password**: SQL Server password.                                                                                                                                         |
+| **Windows Authentication** (Integrated Security)      | Uses the logged-in Windows user's credentials via single sign-on. Available only when SQL Server allows Windows Authentication. | No input required; uses the logged-in Windows user's credentials.                                                                                                                                             |
+| **Windows AD** (Username/Password)                    | Authenticates a domain user with their Active Directory username and password.                                                  | **Username**: `user@example.com`. **Password**: Active Directory password.                                                                                                                                    |
+| **Windows AD** (Keytab)                               | Authenticates a domain user using a keytab file.                                                                                | **Username**: `user@example.com`. **Keytab file path**: Path to your keytab file.                                                                                                                             |
+| **Windows AD** (Credential Cache)                     | Uses a Kerberos credential cache already loaded in memory (for example, from a prior `kinit` command). No file needed.          | **Credential cache path**: Path to in-memory credential (for example, `/tmp/krb5cc_1000`).                                                                                                                    |
+| **Windows AD** (Credential Cache File)                | Authenticates a domain user using a credential cache file (`.ccache`).                                                          | **Username**: `user@example.com`. **Credential cache file path**: for example, `/home/grot/cache.json`.                                                                                                       |
+| **Azure Entra ID (formerly Azure AD) Authentication** | Authenticates the data source using Azure authentication methods. The UI label is **Azure AD Authentication**.                  | For supported methods and configuration steps, refer to [Azure Entra ID authentication](https://grafana.com/docs/grafana/v13.2/datasources/mssql/configure/#azure-entra-id-formerly-azure-ad-authentication). |
 
 > **Note**
 >
@@ -133,7 +133,7 @@ Grafana maintains a connection pool for each configured MSSQL data source. These
 | Setting           | Description                                                                                                                                                                                  |
 | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Max open**      | The maximum number of open connections to the database. If set to `0`, there is no limit. If `max open` is greater than `0` and less than `max idle`, `max idle` is adjusted to match.       |
-| **Auto max idle** | When enabled, automatically sets `max idle` to match `max open`. If `max open` isn’t set, it defaults to `100`.                                                                              |
+| **Auto max idle** | When enabled, automatically sets `max idle` to match `max open`. If `max open` isn't set, it defaults to `100`.                                                                              |
 | **Max idle**      | The maximum number of idle connections in the pool. If `max open` is set and is lower than `max idle`, then `max idle` is reduced to match. If set to `0`, no idle connections are retained. |
 | **Max lifetime**  | The maximum time (in seconds) a connection can be reused before being closed and replaced. If set to `0`, connections are reused indefinitely.                                               |
 
@@ -143,10 +143,10 @@ Grafana maintains a connection pool for each configured MSSQL data source. These
 
 **Connection details:**
 
-| **Setting**            | **Description**                                                                                                                                                                                                                                                |
-| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Min time interval**  | Specifies the lower bound for the auto-generated `GROUP BY` time interval. Grafana recommends matching this value to the data write frequency—for example, `1m` if data is written every minute. Refer to [Min time interval](#min-time-interval) for details. |
-| **Connection timeout** | Specifies the maximum number of seconds to wait when attempting to connect to the database before timing out. A value of `0` (the default) disables the timeout.                                                                                               |
+| **Setting**            | **Description**                                                                                                                                                                                                                                                     |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Min time interval**  | Specifies the lower bound for the auto-generated `GROUP BY` time interval. Grafana recommends matching this value to the data write frequency. For example, use `1m` if data is written every minute. Refer to [Min time interval](#min-time-interval) for details. |
+| **Connection timeout** | Specifies the maximum number of seconds to wait when attempting to connect to the database before timing out. A value of `0` (the default) disables the timeout.                                                                                                    |
 
 **Windows AD Advanced settings:**
 
@@ -235,7 +235,7 @@ Depending on the method you choose, additional flags are required (documented in
 
 This is the recommended authentication mechanism when working with SQL Server instances that are hosted in Azure. It allows users to be authenticated to and query the database using their own credentials rather than long-lived credentials.
 
-This authentication method requires your Grafana instance to be configured with Azure Entra ID (formerly Active Directory) authentication for login. With Azure Entra ID login, this method can be used to forward the currently logged in user’s credentials to the data source. The users credentials will then be used when requesting data from the data source. For details on how to configure your Grafana instance using Azure Entra refer to the [documentation](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/azuread/).
+This authentication method requires your Grafana instance to be configured with Azure Entra ID (formerly Active Directory) authentication for login. With Azure Entra ID login, this method can be used to forward the currently logged in user's credentials to the data source. The user's credentials are then used when requesting data from the data source. For details on how to configure your Grafana instance using Azure Entra, refer to the [documentation](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/azuread/).
 
 > **Note**
 >
@@ -366,7 +366,7 @@ You can connect to an Azure SQL database using the username and password of a us
 
 ### Min time interval
 
-The **Min time interval** setting defines a lower limit for the [`$__interval`](https://grafana.com/docs/grafana/v13.2/dashboards/variables/add-template-variables/#__interval) and \[`$__interval_ms`]\[add-template-variables-interval\_ms] variables.
+The **Min time interval** setting defines a lower limit for the [`$__interval`](https://grafana.com/docs/grafana/v13.2/dashboards/variables/add-template-variables/#__interval) and [`$__interval_ms`](https://grafana.com/docs/grafana/v13.2/dashboards/variables/add-template-variables/#__interval_ms) variables.
 
 This value *must* be formatted as a number followed by a valid time identifier:
 
@@ -407,7 +407,7 @@ Grafana recommends that you use the latest available service pack for optimal co
 
 You can define and configure the data source in YAML files as part of the Grafana provisioning system. For more information about provisioning, and for available configuration options, refer to [Provision Grafana](https://grafana.com/docs/grafana/v13.2/administration/provisioning/).
 
-#### Provisioning example
+#### Example
 
 ```yaml
 apiVersion: 1

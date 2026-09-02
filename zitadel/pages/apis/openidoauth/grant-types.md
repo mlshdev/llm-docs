@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/apis/openidoauth/grant-types.mdx](https://zitadel.com/docs/apis/openidoauth/grant-types)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/apis/openidoauth/grant-types.mdx](https://zitadel.com/docs/apis/openidoauth/grant-types)
 
 For a list of supported or unsupported `Grant Types` please have a look at the table below.
 

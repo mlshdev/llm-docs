@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/guides/migrate/users.mdx](https://zitadel.com/docs/guides/migrate/users)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/migrate/users.mdx](https://zitadel.com/docs/guides/migrate/users)
 
 Migrating users from an existing system, while minimizing impact on said users, can be a challenging task.
 

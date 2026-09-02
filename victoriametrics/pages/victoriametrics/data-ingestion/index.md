@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.150.0: [docs/victoriametrics/data-ingestion/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/victoriametrics/data-ingestion/_index.md)
+> Release-pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/data-ingestion/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/data-ingestion/_index.md)
 
 In This Folder you will find instructions for sending data to VictoriaMetrics from a variety of platforms.
 If your tool is not listed it is likely you can ingest your data into VictoriaMetrics using one of the protocols listed

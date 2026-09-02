@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/self-hosting/manage/usage_control.mdx](https://zitadel.com/docs/self-hosting/manage/usage_control)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/self-hosting/manage/usage_control.mdx](https://zitadel.com/docs/self-hosting/manage/usage_control)
 
 If you have a self-hosted ZITADEL environment, you can limit the usage of your [instances](https://zitadel.com/docs/concepts/structure/instance).
 For example, if you provide your customers [their own virtual instances](https://zitadel.com/docs/concepts/structure/instance#multiple-virtual-instances) with access on their own domains, you can design a pricing model based on the usage of their instances.

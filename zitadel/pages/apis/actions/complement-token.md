@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/apis/actions/complement-token.mdx](https://zitadel.com/docs/apis/actions/complement-token)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/apis/actions/complement-token.mdx](https://zitadel.com/docs/apis/actions/complement-token)
 
 This flow is executed during the creation of tokens and token introspection.
 

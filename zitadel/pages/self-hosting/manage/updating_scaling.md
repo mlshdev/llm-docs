@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/self-hosting/manage/updating_scaling.mdx](https://zitadel.com/docs/self-hosting/manage/updating_scaling)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/self-hosting/manage/updating_scaling.mdx](https://zitadel.com/docs/self-hosting/manage/updating_scaling)
 
 ## TL;DR
 

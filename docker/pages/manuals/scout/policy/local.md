@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/scout/policy/local.md](https://github.com/docker/docs/blob/ca60e92629079de412f38632876ab208d84267ef/content/manuals/scout/policy/local.md)
+> Commit-pinned source for Docker main: [content/manuals/scout/policy/local.md](https://github.com/docker/docs/blob/ff96ad1711065cf2e9c3f1d701dad04775834f70/content/manuals/scout/policy/local.md)
 
 **Evaluate policies requirements**
 
@@ -25,21 +25,7 @@ Policies come from three sources, which can be combined:
 - Local `.rego` files: for authoring and iterating on custom policies with
   `--policy-file` or `--policy-dir`.
 
-## Migrate from Policy Evaluation in the Dashboard
-
-If you used the Policies page in the Docker Scout Dashboard, `docker scout
-policy` provides the same capability from the CLI. The built-in policies are
-the same set. To evaluate an image:
-
-```console
-$ docker scout policy <image>
-```
-
-If you had customized policies in the dashboard, such as adjusted severity
-thresholds or disabled policies, you can replicate those settings with a
-`--policy-config` file. See [Configure built-in policies](#configure-built-in-policies).
-
-### Use in CI
+## Use in CI
 
 Use the [Docker Scout GitHub Action](https://github.com/marketplace/actions/docker-scout)
 to evaluate policies as part of your workflow:
@@ -57,15 +43,11 @@ For other CI platforms, install the
 [Docker Scout CLI plugin](https://docs.docker.com/scout/install/) on your runner and run
 `docker scout policy <image> --exit-code`.
 
-### Migrate the GitHub Action from dashboard-based policy evaluation
-
-The Docker Scout GitHub Action now supports the same local policy configuration
-flags as `docker scout policy`. If you used `compare --exit-on policy` with
-dashboard-managed policy settings, replicate those settings locally with
-`--policy-config`:
+To gate a build on policy compliance compared to an environment, use the
+`compare` command with a policy configuration:
 
 ```yaml
-- uses: docker/scout-action@v1.23.0
+- uses: docker/scout-action@v1
   with:
     command: compare
     image: ${{ env.IMAGE_NAME }}

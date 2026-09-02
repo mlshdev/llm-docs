@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/self-hosting/manage/login-client.mdx](https://zitadel.com/docs/self-hosting/manage/login-client)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/self-hosting/manage/login-client.mdx](https://zitadel.com/docs/self-hosting/manage/login-client)
 
 To enable your self-hosted Login UI to connect to the Zitadel API, it needs a token for a user with the IAM\_LOGIN\_CLIENT role.
 On new installations, the Zitadel setup job can be configured to automatically write a Personal Access Token (PAT) for the login client.

@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/sdk-examples/oidc-libraries.mdx](https://zitadel.com/docs/sdk-examples/oidc-libraries)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/sdk-examples/oidc-libraries.mdx](https://zitadel.com/docs/sdk-examples/oidc-libraries)
 
 Since ZITADEL is a certified provider, you can use industry-standard tools to handle authentication and API protection in any language or framework without vendor lock-in.
 

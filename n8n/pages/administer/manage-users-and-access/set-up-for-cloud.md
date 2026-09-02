@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/administer/manage-users-and-access/set-up-for-cloud.md](https://github.com/n8n-io/n8n-docs/blob/afebf5d9c6ff327fa215b3e6f99627e11fc9d3f2/docs/administer/manage-users-and-access/set-up-for-cloud.md)
+> Commit-pinned source for n8n main: [docs/administer/manage-users-and-access/set-up-for-cloud.md](https://github.com/n8n-io/n8n-docs/blob/0b69471cc64a4886de337982abd2f5d237dcd52a/docs/administer/manage-users-and-access/set-up-for-cloud.md)
 
 # Set up user management on n8n Cloud <a id="set-up-user-management-on-n8n-cloud"></a>
 

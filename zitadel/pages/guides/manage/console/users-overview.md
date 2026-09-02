@@ -1,10 +1,10 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/guides/manage/console/users-overview.mdx](https://zitadel.com/docs/guides/manage/console/users-overview)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/manage/console/users-overview.mdx](https://zitadel.com/docs/guides/manage/console/users-overview)
 
 ## Overview
 
 ZITADEL supports authentication and authorization for different user types. We mainly differentiate between **users** (interactive) and **Service Accounts** (machine-to-machine).
 
-![User types](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/console/usersmenu.png)
+![User types](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/console/usersmenu.png)
 
 ## Types of Users
 
@@ -85,7 +85,7 @@ To create a new user, go to Users and click on **New**. Enter the required conta
 
 **Human User**
 
-![Invite Human](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/console/invitehuman.png)
+![Invite Human](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/console/invitehuman.png)
 
 When creating a new user you have different options.
 First add the email, and select if the email address should be added automatically as "verified".
@@ -97,12 +97,12 @@ In the last section you can choose the authentication options:
   - When using the [Zitadel Login V1](https://zitadel.com/docs/guides/integrate/login/hosted-login) the user will be prompted to setup a password
   - When using the [Zitadel Login V2](https://zitadel.com/docs/guides/integrate/login/hosted-login#hosted-login-version-2) the user has the option to choose the authentication method (password, passkey, identity provider), based on the settings of the organization
 
-    ![Invite Human - Setup authentication method](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/console/setupauthmethod.png)
+    ![Invite Human - Setup authentication method](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/console/setupauthmethod.png)
 - **Set an initial password for the user**: The user will receive an email and be able to setup an authentication method (e.g Password, Passkey, External SSO)
 
 **Human User \[deprecated]**
 
-![Add Human](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/console/addhuman.png)
+![Add Human](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/console/addhuman.png)
 
 After a user is created, by default, an initialization mail with a code is sent to the registered email. This code then has to be verified on first login.
 If you want to omit this mail, you can check the **email verified** and **set initial password** toggle.
@@ -110,13 +110,13 @@ If no password is set initially, the initialization mail prompting the user to s
 
 **Service Account**
 
-![Add Service Account](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/console/addmachine.png)
+![Add Service Account](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/console/addmachine.png)
 
 You can prompt the user to add a second factor method too by checking the **Force MFA** toggle in [Login behaviour settings](https://zitadel.com/docs/guides/manage/console/default-settings#login-behavior-and-security).
 
 When logged in, a user can then manage the profile in the management console, adding a profile picture, external IDPs and Passkeys.
 
-![Profile Self Manage](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/console/myprofile.png)
+![Profile Self Manage](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/console/myprofile.png)
 
 ### Metadata
 
@@ -125,7 +125,7 @@ ZITADEL provides a key-value storage system for users, which is essential for bu
 **Example Use Case:**
 In a Point of Sales application, you could add a `stripeCustomerId` as a metadata key to a user. Your client application can then read this metadata to fetch payment details directly from the Stripe API.
 
-![User Metadata](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/console/usermetadata.png)
+![User Metadata](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/console/usermetadata.png)
 
 **Accessing Metadata:**
 Metadata can be requested via the Auth and Management APIs, the Userinfo endpoint, or asserted directly into the ID Token.
@@ -133,7 +133,7 @@ Metadata can be requested via the Auth and Management APIs, the Userinfo endpoin
 1. **Userinfo Endpoint:** Add the scope `urn:zitadel:iam:user:metadata` to your authentication request.
 2. **ID Token:** To include metadata in the token, navigate to your **Application Settings** and toggle **User Info inside ID Token**.
 
-![ID Token settings](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/console/appidtokensettings.png)
+![ID Token settings](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/console/appidtokensettings.png)
 
 ### Role Assignments
 

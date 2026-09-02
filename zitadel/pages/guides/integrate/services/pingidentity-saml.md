@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/guides/integrate/services/pingidentity-saml.mdx](https://zitadel.com/docs/guides/integrate/services/pingidentity-saml)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/integrate/services/pingidentity-saml.mdx](https://zitadel.com/docs/guides/integrate/services/pingidentity-saml)
 
 This guide shows how to enable login with ZITADEL on Ping Identity.
 
@@ -24,10 +24,10 @@ To add an [external identity provider](https://docs.pingidentity.com/bundle/ping
 can follow the instructions [here](https://docs.pingidentity.com/bundle/pingone/page/ovy1567784211297.html)
 
 1. As described you have to create a new provider, with a unique identifier:
-   ![](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/saml/pingidentity/create_idp_profile.png)
+   ![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/saml/pingidentity/create_idp_profile.png)
 
 We recommend activating signing the auth request whenever possible:
-![](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/saml/pingidentity/conf_connection.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/saml/pingidentity/conf_connection.png)
 
 2. Manually enter the necessary information:
 
@@ -35,7 +35,7 @@ We recommend activating signing the auth request whenever possible:
 - IDP EntityID, for example <https://accounts.example.com/saml/metadata>
 - Binding, which is a decision which you can take yourself, we recommend HTTP POST as it has fewer restrictions
 - Import certificate, provided from the certificate endpoint
-  ![](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/saml/pingidentity/conf_idp_connection.png)
+  ![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/saml/pingidentity/conf_idp_connection.png)
 
 Everything you need to know about the attribute mapping you can find
 in [Ping Identity's documentation](https://docs.pingidentity.com/bundle/pingone/page/pwv1567784207915.html)
@@ -63,19 +63,19 @@ ENTITYID="PINGONE (SP) ENTITY ID"
 </md:EntityDescriptor>
 ```
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/saml/pingidentity/idp_p1_connection.png)
-![](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/saml/pingidentity/idp_idp_configuration.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/saml/pingidentity/idp_p1_connection.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/saml/pingidentity/idp_idp_configuration.png)
 
 In your existing project:
 
 1. Press the "+"-button to add an application
-   ![](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/saml/zitadel/project.png)
+   ![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/saml/zitadel/project.png)
 2. Fill in a name for the application and chose the SAML type, then click "Continue".
-   ![](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/saml/zitadel/application_saml.png)
+   ![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/saml/zitadel/application_saml.png)
 3. Either fill in the URL where ZITADEL can read the metadata from, or upload the metadata XML directly, then click "
    Continue".
-   ![](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/saml/zitadel/application_saml_metadata.png)
+   ![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/saml/zitadel/application_saml_metadata.png)
 4. Check your application, if everything is correct, press "Create".
-   ![](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/saml/zitadel/application_saml_create.png)
+   ![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/saml/zitadel/application_saml_create.png)
 
 Everything on the side of ZITADEL is done if the application is correctly created.

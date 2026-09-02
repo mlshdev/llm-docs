@@ -1,11 +1,11 @@
-> Release-pinned source for Grafana v13.2.0: [docs/sources/datasources/elasticsearch/annotations/index.md](https://github.com/grafana/grafana/blob/f681b1359f6a0b8ecb9f2c49a88ac72b75bde73b/docs/sources/datasources/elasticsearch/annotations/index.md)
+> Release-pinned source for Grafana v13.2.1: [docs/sources/datasources/elasticsearch/annotations/index.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/datasources/elasticsearch/annotations/index.md)
 
 # Elasticsearch annotations
 
 Annotations overlay event data on your dashboard graphs, helping you correlate log events with metrics.
 You can use Elasticsearch as a data source for annotations to display events such as deployments, alerts, or other significant occurrences on your visualizations.
 
-For general information about annotations, refer to [Annotate visualizations](https://grafana.com/docs/grafana/v13.2/dashboards/build-dashboards/annotate-visualizations/).
+For general information about annotations, refer to [Annotate visualizations](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/annotate-visualizations/).
 
 ## Before you begin
 

@@ -1,4 +1,4 @@
-> Release-pinned source for Grafana v13.2.0: [docs/sources/alerting/configure-notifications/_index.md](https://github.com/grafana/grafana/blob/f681b1359f6a0b8ecb9f2c49a88ac72b75bde73b/docs/sources/alerting/configure-notifications/_index.md)
+> Release-pinned source for Grafana v13.2.1: [docs/sources/alerting/configure-notifications/_index.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/alerting/configure-notifications/_index.md)
 
 # Configure notifications
 
@@ -20,6 +20,8 @@ The topics in this section include step-by-step instructions for:
 - [Templating notifications](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/template-notifications/) to customize notification messages.
 - [Configuring silences](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/create-silence/) or [mute timings](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/mute-timings/) to stop notifications.
 - [Configuring inhibition rules](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/inhibition-rules/) to suppress notifications for dependent alerts when a root-cause alert is already firing.
+
+After you configure notifications, you can refer to [View notification history](https://grafana.com/docs/grafana/v13.2/alerting/monitor-status/view-notification-history/) to confirm delivery and troubleshoot failed notifications.
 
 ## Alertmanager architecture
 

@@ -1,6 +1,6 @@
 # Docker main
 
-> Documentation generated from the latest `main` branch commit of [docker/docs](https://github.com/docker/docs) and pinned to immutable source commit `ca60e92629079de412f38632876ab208d84267ef`.
+> Documentation generated from the latest `main` branch commit of [docker/docs](https://github.com/docker/docs) and pinned to immutable source commit `ff96ad1711065cf2e9c3f1d701dad04775834f70`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Docker main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -1026,16 +1026,10 @@
 - [Integrate Docker Scout with GitLab CI/CD](pages/manuals/scout/integrations/ci/gitlab.md): Source `content/manuals/scout/integrations/ci/gitlab.md`.
 - [Using Docker Scout in continuous integration](pages/manuals/scout/integrations/ci/index.md): Source `content/manuals/scout/integrations/ci/_index.md`.
 - [Integrate Docker Scout with Jenkins](pages/manuals/scout/integrations/ci/jenkins.md): Source `content/manuals/scout/integrations/ci/jenkins.md`.
-- [Integrate Docker Scout with SonarQube](pages/manuals/scout/integrations/code-quality/sonarqube.md): Source `content/manuals/scout/integrations/code-quality/sonarqube.md`.
 - [Generic environment integration with CLI](pages/manuals/scout/integrations/environment/cli.md): Source `content/manuals/scout/integrations/environment/cli.md`.
 - [Integrating Docker Scout with environments](pages/manuals/scout/integrations/environment/index.md): Source `content/manuals/scout/integrations/environment/_index.md`.
 - [Integrating Docker Scout with other systems](pages/manuals/scout/integrations/index.md): Source `content/manuals/scout/integrations/_index.md`.
-- [Integrate Docker Scout with Azure Container Registry](pages/manuals/scout/integrations/registry/acr.md): Source `content/manuals/scout/integrations/registry/acr.md`.
-- [Integrate Docker Scout with Artifactory Container Registry](pages/manuals/scout/integrations/registry/artifactory.md): Source `content/manuals/scout/integrations/registry/artifactory.md`.
-- [Integrate Docker Scout with Amazon ECR](pages/manuals/scout/integrations/registry/ecr.md): Source `content/manuals/scout/integrations/registry/ecr.md`.
-- [Integrate Docker Scout with GitHub](pages/manuals/scout/integrations/source-code-management/github.md): Source `content/manuals/scout/integrations/source-code-management/github.md`.
-- [Integrate Docker Scout with Slack](pages/manuals/scout/integrations/team-collaboration/slack.md): Source `content/manuals/scout/integrations/team-collaboration/slack.md`.
-- [Use the Policies page in the Dashboard](pages/manuals/scout/policy/dashboard.md): Source `content/manuals/scout/policy/dashboard.md`.
+- [Integrate Docker Scout with a container registry](pages/manuals/scout/integrations/registry.md): Source `content/manuals/scout/integrations/registry.md`.
 - [Policy Evaluation](pages/manuals/scout/policy/index.md): Source `content/manuals/scout/policy/_index.md`.
 - [Evaluate policies](pages/manuals/scout/policy/local.md): Source `content/manuals/scout/policy/local.md`.
 - [Docker Scout quickstart](pages/manuals/scout/quickstart.md): Source `content/manuals/scout/quickstart.md`.

@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/apis/openidoauth/claims.mdx](https://zitadel.com/docs/apis/openidoauth/claims)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/apis/openidoauth/claims.mdx](https://zitadel.com/docs/apis/openidoauth/claims)
 
 ZITADEL asserts claims on different places according to the corresponding specifications or project and applications settings.
 Please check below the matrix for an overview where which scope is asserted.

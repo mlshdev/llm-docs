@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/guides/integrate/token-introspection/index.mdx](https://zitadel.com/docs/guides/integrate/token-introspection)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/integrate/token-introspection/index.mdx](https://zitadel.com/docs/guides/integrate/token-introspection)
 
 Token introspection is the process of checking whether an access token is valid and can be used to access protected resources.
 

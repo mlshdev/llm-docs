@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/community-nodes/blocklist.md](https://github.com/n8n-io/n8n-docs/blob/afebf5d9c6ff327fa215b3e6f99627e11fc9d3f2/docs/integrations/community-nodes/blocklist.md)
+> Commit-pinned source for n8n main: [docs/integrations/community-nodes/blocklist.md](https://github.com/n8n-io/n8n-docs/blob/0b69471cc64a4886de337982abd2f5d237dcd52a/docs/integrations/community-nodes/blocklist.md)
 
 # n8n community node blocklist <a id="n8n-community-node-blocklist"></a>
 

@@ -1,4 +1,4 @@
-> Release-pinned source for Grafana v13.2.0: [docs/sources/administration/data-source-management/teamlbac/configure-teamlbac-for-prometheus/index.md](https://github.com/grafana/grafana/blob/f681b1359f6a0b8ecb9f2c49a88ac72b75bde73b/docs/sources/administration/data-source-management/teamlbac/configure-teamlbac-for-prometheus/index.md)
+> Release-pinned source for Grafana v13.2.1: [docs/sources/administration/data-source-management/teamlbac/configure-teamlbac-for-prometheus/index.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/administration/data-source-management/teamlbac/configure-teamlbac-for-prometheus/index.md)
 
 # Configure LBAC for data sources for Prometheus data source
 
@@ -8,9 +8,7 @@ LBAC for data sources is available on Grafana Cloud using a new Prometheus data 
 
 ## Before you begin
 
-To be able to use LBAC for Prometheus data sources, you need to enable the feature toggle `teamHttpHeadersMimir` on your Grafana instance. Go to the feature toggles page in setting to enable the feature.
-
-- Be sure that you have the permission setup to create a Prometheus tenant in Grafana Cloud
+- Be sure that you have the permission setup to create a Prometheus tenant in Grafana Cloud.
 - Be sure that you have admin data source permissions for Grafana.
 
 ## Grafana Cloud
@@ -48,8 +46,6 @@ LBAC for data sources is available in Grafana Enterprise for Prometheus connecte
 You cannot configure LBAC rules for Grafana-provisioned data sources from the UI. Alternatively, you can replicate the setting of the provisioned data source in a new data source as described in [LBAC Configuration for new Prometheus data source](https://grafana.com/docs/grafana/v13.2/administration/data-source-management/teamlbac/configure-teamlbac-for-prometheus/#task-1-lbac-configuration-for-new-prometheus-data-source) and then add the LBAC configuration to the new data source.
 
 ## Before you begin
-
-To be able to use LBAC for Prometheus data sources, you need to enable the feature toggle `teamHttpHeadersMimir` on your Grafana instance. Contact support to enable the feature toggle for you.
 
 - Be sure that you have the permission setup to create a cluster in your Grafana
 - Be sure that you have admin plugins permissions for Grafana.

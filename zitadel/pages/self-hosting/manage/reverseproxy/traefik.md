@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/self-hosting/manage/reverseproxy/traefik/index.mdx](https://zitadel.com/docs/self-hosting/manage/reverseproxy/traefik)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/self-hosting/manage/reverseproxy/traefik/index.mdx](https://zitadel.com/docs/self-hosting/manage/reverseproxy/traefik)
 
 With these examples, you create and run a minimal  configuration for Zitadel with [Docker Compose](https://docs.docker.com/compose).
 Whereas the guide focuses on the configuration for Traefik, you can inspect the settings for the Zitadel API, the Zitadel login and the database in the base Docker Compose file.

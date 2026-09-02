@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.150.0: [docs/guides/vmalert-datasource-managed-alerts-grafana/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/vmalert-datasource-managed-alerts-grafana/_index.md)
+> Release-pinned source for VictoriaMetrics v1.151.0: [docs/guides/vmalert-datasource-managed-alerts-grafana/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/vmalert-datasource-managed-alerts-grafana/_index.md)
 
 Grafana offers a rich alerting UI, including rule grouping, silences, and notification history. While Grafana-managed alerts are easy to use, [they can hit performance issues without additional configuration since they depend on a relational database by default](https://grafana.com/blog/how-we-improved-grafanas-alert-state-history-to-provide-better-insights-into-your-alerting-data/).
 
@@ -32,7 +32,7 @@ The proposed alert setup relies on the following services:
 - Alertmanager: groups and routes alerts to the configured recipients.
 - Grafana: serves as the unified UI, connecting to VictoriaMetrics for rules and metrics, and to Alertmanager for notifications/silences.
 
-![Topology Diagram](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/vmalert-datasource-managed-alerts-grafana/topology.webp)
+![Topology Diagram](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/vmalert-datasource-managed-alerts-grafana/topology.webp)
 
 ## vmalert Demo with Docker {#docker}
 
@@ -101,7 +101,7 @@ The final piece is the Docker Compose file. This ties all the services together 
 # compose.yml
 services:
   victoriametrics:
-    image: victoriametrics/victoria-metrics:v1.149.0
+    image: victoriametrics/victoria-metrics:v1.150.0
     command:
       - "--storageDataPath=/victoria-metrics-data"
       - "--selfScrapeInterval=10s"
@@ -122,7 +122,7 @@ services:
       - ./alertmanager.yml:/etc/alertmanager/alertmanager.yml:ro
 
   vmalert:
-    image: victoriametrics/vmalert:v1.149.0
+    image: victoriametrics/vmalert:v1.150.0
     depends_on:
       - victoriametrics
       - alertmanager
@@ -187,23 +187,23 @@ Open your browser at `localhost:3000` and log in to Grafana with username `admin
 
 If you open the sidebar and select **Alerting** > **Alert rules**, you should be able to see one alert pending or firing.
 
-![Screenshot of Grafana alert pane](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/vmalert-datasource-managed-alerts-grafana/grafana-alert-firing.webp)
+![Screenshot of Grafana alert pane](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/vmalert-datasource-managed-alerts-grafana/grafana-alert-firing.webp)
 
 <figcaption style="text-align: center; font-style: italic;">Datasource-managed alert firing in Grafana</figcaption>
 
 Open the sidebar again and go to **Alerting** > **Active notifications** to see the active alert reported by Alertmanager.
 
-![Screenshot of Grafana Active notifications Page](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/vmalert-datasource-managed-alerts-grafana/grafana-notifications.webp)
+![Screenshot of Grafana Active notifications Page](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/vmalert-datasource-managed-alerts-grafana/grafana-notifications.webp)
 
 You can also see the alerts in VMUI by opening the browser in `http://localhost:8428/vmui/?#/rules`. This is possible only when we have configured `-vmalert.proxyURL` in VictoriaMetrics.
 
-![Screenshot of VMUI](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/vmalert-datasource-managed-alerts-grafana/vmui-alerts.webp)
+![Screenshot of VMUI](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/vmalert-datasource-managed-alerts-grafana/vmui-alerts.webp)
 
 <figcaption style="text-align: center; font-style: italic;">Alerts can be visualized in VMUI directly</figcaption>
 
 If you open the browser in `http://localhost:9093/#/alerts`, you will see the Alertmanager UI with the firing alert.
 
-![Screenshot of Alertmanager](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/vmalert-datasource-managed-alerts-grafana/alertmanager-alerts.webp)
+![Screenshot of Alertmanager](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/vmalert-datasource-managed-alerts-grafana/alertmanager-alerts.webp)
 
 <figcaption style="text-align: center; font-style: italic;">Alertmanager UI showing the firing alert</figcaption>
 
@@ -602,7 +602,7 @@ Next, add Alertmanager to Grafana:
 
 6. Press **Save & Test**.
 
-![Screenshot of Grafana](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/vmalert-datasource-managed-alerts-grafana/grafana-alertmanager.webp)
+![Screenshot of Grafana](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/vmalert-datasource-managed-alerts-grafana/grafana-alertmanager.webp)
 
 <figcaption style="text-align: center; font-style: italic;">Adding Alertmanager to Grafana</figcaption>
 

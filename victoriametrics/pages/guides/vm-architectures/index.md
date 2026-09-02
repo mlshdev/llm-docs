@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.150.0: [docs/guides/vm-architectures/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/vm-architectures/_index.md)
+> Release-pinned source for VictoriaMetrics v1.151.0: [docs/guides/vm-architectures/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/vm-architectures/_index.md)
 
 ## Matching Architecture to Risk
 
@@ -31,7 +31,7 @@ Each subsequent section of this guide presents an architecture designed to handl
 
 ### The decision tree
 
-![Decision Tree](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/vm-architectures/decision-tree.webp)
+![Decision Tree](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/vm-architectures/decision-tree.webp)
 
 ## Basic
 
@@ -52,7 +52,7 @@ Installation guide reference: [VictoriaMetrics Single](https://docs.victoriametr
 
 **Schema:**
 
-![Basic Architecture](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/vm-architectures/basic-architecture.webp)
+![Basic Architecture](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/vm-architectures/basic-architecture.webp)
 
 ### Unavailability Scenarios
 
@@ -81,7 +81,7 @@ High availability implementation: [HA VictoriaMetrics Cluster](https://docs.vict
 
 **Schema:**
 
-![Single AZ Architecture](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/vm-architectures/single-az-architecture.webp)
+![Single AZ Architecture](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/vm-architectures/single-az-architecture.webp)
 
 ### Application vs. Storage Replication
 
@@ -196,7 +196,7 @@ To ensure reliability, vmagent implements the bulkhead pattern: each destination
 
 **Schema:**
 
-![Multi-AZ Architecture](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/vm-architectures/multi-az-architecture.webp)
+![Multi-AZ Architecture](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/vm-architectures/multi-az-architecture.webp)
 
 ### Unavailability Scenarios
 
@@ -242,7 +242,7 @@ For complete disaster recovery, this entire cell-based architecture is duplicate
 
 A global, stateless layer of routing cells (vmagent, vmauth) sits on top. It routes traffic to several logical groups of storage cells. Each storage group contains multiple AZs, and data is replicated or sharded across them. There are several approaches to implementing it.
 
-![Hyperscale Architecture](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/vm-architectures/hyperscale-architecture.webp)
+![Hyperscale Architecture](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/vm-architectures/hyperscale-architecture.webp)
 
 ### Choosing Your Read Path Strategy
 
@@ -358,7 +358,7 @@ This multitenancy approach gives us another trade-off in the isolation implement
 
 **Schema:**
 
-![Logical Layers Architecture](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/vm-architectures/logical-layers-architecture.webp)
+![Logical Layers Architecture](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/vm-architectures/logical-layers-architecture.webp)
 
 **Path A: Shared resources.** We have a single, shared pool of all cluster components.
 

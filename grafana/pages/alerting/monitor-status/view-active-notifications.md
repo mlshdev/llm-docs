@@ -1,4 +1,4 @@
-> Release-pinned source for Grafana v13.2.0: [docs/sources/alerting/monitor-status/view-active-notifications.md](https://github.com/grafana/grafana/blob/f681b1359f6a0b8ecb9f2c49a88ac72b75bde73b/docs/sources/alerting/monitor-status/view-active-notifications.md)
+> Release-pinned source for Grafana v13.2.1: [docs/sources/alerting/monitor-status/view-active-notifications.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/alerting/monitor-status/view-active-notifications.md)
 
 # View active notifications
 
@@ -12,6 +12,8 @@ In this view, you can:
 - Filter for alert instances that match specific criteria.
 
 The Active notifications view is useful for debugging and verifying how notifications are grouped based on your notification policy settings.
+
+To review notifications that were already sent, refer to [View notification history](https://grafana.com/docs/grafana/v13.2/alerting/monitor-status/view-notification-history/).
 
 ## View alert groups and notification state
 
@@ -65,3 +67,5 @@ To view notification errors, navigate to **Alerts & IRM** -> **Alerting** -> **N
 Each contact point displays a message about the status of their latest notification deliveries.
 
 If a contact point is failing, a red message indicates that there are errors delivering notifications. Hover over the error message to see the notification error details.
+
+To review past delivery attempts across contact points, refer to [View notification history](https://grafana.com/docs/grafana/v13.2/alerting/monitor-status/view-notification-history/).

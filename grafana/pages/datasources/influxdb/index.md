@@ -1,10 +1,12 @@
-> Release-pinned source for Grafana v13.2.0: [docs/sources/datasources/influxdb/_index.md](https://github.com/grafana/grafana/blob/f681b1359f6a0b8ecb9f2c49a88ac72b75bde73b/docs/sources/datasources/influxdb/_index.md)
+> Release-pinned source for Grafana v13.2.1: [docs/sources/datasources/influxdb/_index.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/datasources/influxdb/_index.md)
 
 # InfluxDB data source
 
 [InfluxDB](https://www.influxdata.com/products/) is an open-source time series database (TSDB) developed by [InfluxData](https://www.influxdata.com/). It is optimized for fast, high-availability storage and retrieval of time series data in fields such as operations monitoring, application metrics, IoT sensor data, and real-time analytics.
 
-Grafana includes a built-in InfluxDB data source plugin, enabling you to query and visualize data from InfluxDB without installing additional plugins. Grafana offers multiple configuration options for this data source, including a choice of three query languages (SQL, InfluxQL, and Flux). SQL and InfluxQL provide both visual builder and code editing modes, while Flux provides a code editor only.
+Grafana ships with the InfluxDB data source out of the box. The data source is preinstalled in both Grafana OSS and Grafana Enterprise, so there's nothing for you to install. It's packaged as a standalone plugin that Grafana can update independently of Grafana releases. For details, refer to [Plugin updates](#plugin-updates).
+
+Grafana offers multiple configuration options for this data source, including a choice of three query languages (SQL, InfluxQL, and Flux). SQL and InfluxQL provide both visual builder and code editing modes, while Flux provides a code editor only.
 
 ## Supported versions
 
@@ -49,11 +51,37 @@ After configuring the data source, you can:
 
 ## Plugin updates
 
-Always ensure that your plugin version is up-to-date so you have access to all current features and improvements. Navigate to **Plugins and data** > **Plugins** to check for updates. Grafana recommends upgrading to the latest Grafana version, and this applies to plugins as well.
+Starting with Grafana v13.2, the InfluxDB data source is a standalone plugin, preinstalled in both Grafana OSS and Enterprise. This enables more frequent updates independent of Grafana releases. Grafana automatically checks the plugin catalog and installs the latest version on each server restart.
+
+To adjust this behavior:
+
+- **Opt out of auto-updates:** Set `preinstall_auto_update` to `false` in your [configuration file](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/).
+- **Update manually:** Update at any time from the **Administration > Plugins** page without restarting Grafana.
+
+The standalone plugin requires Grafana 12.3.0 or later. The InfluxDB data source bundled with Grafana 13.1 and earlier continues to work as before. Those versions are unaffected by this change.
+
+> **Caution**
+>
+> Grafana recommends running plugin version 13.1.0 or later. Earlier versions could write API tokens to Grafana server logs in plain text at default log levels. If you've run an earlier version, treat your server logs as sensitive and rotate any tokens that may have been exposed.
+
+Users running Grafana 12.3.x through 13.1.x can install the standalone plugin from the plugin catalog if they want the latest features before upgrading to Grafana 13.2. To use the standalone plugin with these versions, add the following to your [configuration file](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/):
+
+```ini
+[plugin.influxdb]
+as_external = true
+
+[plugins]
+; Install the latest version on startup:
+preinstall_sync = influxdb
+; Or install a specific version:
+; preinstall_sync = influxdb@<version>
+```
+
+On self-managed Grafana, you control the plugin version. To roll back after a problematic update, pin a known-good version with `preinstall_sync = influxdb@<version>` and restart Grafana, or install a specific version from the **Administration > Plugins** page.
 
 > **Note**
 >
-> Plugins are automatically updated in Grafana Cloud.
+> In Grafana Cloud, plugin updates are managed automatically. You can't pin the plugin to a specific version or roll back to a previous one yourself. If a plugin update causes problems with your dashboards or queries, contact Grafana Support.
 
 ## Related resources
 

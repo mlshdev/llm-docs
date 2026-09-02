@@ -1,4 +1,4 @@
-> Release-pinned source for Grafana v13.2.0: [docs/sources/datasources/google-cloud-monitoring/troubleshooting/index.md](https://github.com/grafana/grafana/blob/f681b1359f6a0b8ecb9f2c49a88ac72b75bde73b/docs/sources/datasources/google-cloud-monitoring/troubleshooting/index.md)
+> Release-pinned source for Grafana v13.2.1: [docs/sources/datasources/google-cloud-monitoring/troubleshooting/index.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/datasources/google-cloud-monitoring/troubleshooting/index.md)
 
 # Troubleshoot Google Cloud Monitoring data source issues
 
@@ -256,9 +256,9 @@ These errors occur when using template variables with the Google Cloud Monitorin
 
 For more information on template variables, refer to the [template variables documentation](https://grafana.com/docs/grafana/v13.2/datasources/google-cloud-monitoring/template-variables/).
 
-## Pre-configured dashboard issues
+## Dashboard issues
 
-These issues occur with the bundled pre-configured dashboards.
+These issues occur with dashboards that use the Google Cloud Monitoring data source. As of plugin version 12.6.1, the plugin no longer bundles curated dashboards, so the data source **Dashboards** tab doesn't list them. To build dashboards, use community and Grafana-authored dashboards from the [Grafana dashboards catalog](https://grafana.com/grafana/dashboards/?dataSource=stackdriver) or recreate panels with the [query editor](https://grafana.com/docs/grafana/v13.2/datasources/google-cloud-monitoring/query-editor/).
 
 ### Imported dashboards show no data
 
@@ -271,7 +271,7 @@ These issues occur with the bundled pre-configured dashboards.
 
 1. Verify the data source name in the dashboard matches your Google Cloud Monitoring data source.
 2. Check that the service account has access to the projects shown in the project variable.
-3. Ensure the resources (Compute Engine instances, Cloud SQL, etc.) exist and are emitting metrics.
+3. Ensure the resources (Compute Engine instances, Cloud SQL, and similar) exist and are emitting metrics.
 4. Verify the required GCP services are enabled in your project.
 
 ## Enable debug logging

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/scout/release-notes/platform.md](https://github.com/docker/docs/blob/ca60e92629079de412f38632876ab208d84267ef/content/manuals/scout/release-notes/platform.md)
+> Commit-pinned source for Docker main: [content/manuals/scout/release-notes/platform.md](https://github.com/docker/docs/blob/ff96ad1711065cf2e9c3f1d701dad04775834f70/content/manuals/scout/release-notes/platform.md)
 
 # Docker Scout release notes
 
@@ -8,6 +8,32 @@ Docker Scout platform, including the Dashboard. For CLI release notes, refer to
 [Docker Scout CLI release notes](https://docs.docker.com/scout/release-notes/cli/).
 
 ## Q2 2026
+
+### 2026-09-01
+
+The following Docker Scout features were retired:
+
+- Notifications: In-product and email notifications about newly disclosed CVEs.
+  Integrate `docker scout cves` or `docker scout policy` into your CI pipeline
+  to surface vulnerability and policy results without push notifications.
+- Native Amazon ECR integration: ECR is still supported using
+  [`docker scout watch`](https://docs.docker.com/scout/integrations/registry/) for continuous
+  polling, or by integrating Scout into your CI pipeline.
+- Native Azure Container Registry integration: ACR is still supported using
+  the same options as ECR.
+- Policies page in the Dashboard: The `docker scout policy`
+  command replaces this with more options for evaluating policies. You can run
+  evaluations locally, in CI, against custom Rego policies, or using OCI
+  bundles. See [Evaluate policies](https://docs.docker.com/scout/policy/local/).
+- SonarQube integration.
+
+### 2026-07-30
+
+The following Docker Scout feature was retired:
+
+- Slack integration: Integrate `docker scout cves` or `docker scout policy`
+  into your CI pipeline to surface vulnerability and policy results without
+  push notifications.
 
 ### 2026-07-01
 
@@ -22,36 +48,22 @@ The following Docker Scout features were retired:
 - Sysdig integration: The Sysdig runtime environment integration has been removed.
 - GitHub source code management integration: Migrate to GitHub Dependabot for
   base-image updates and build with `--provenance=mode=max` for
-  image-to-source linkage. See
-  [GitHub integration](https://docs.docker.com/scout/integrations/source-code-management/github/)
-  for a migration guide.
+  image-to-source linkage.
 
 The following is deprecated and will be retired on July 30, 2026:
 
 - Slack integration: Vulnerability and policy compliance notifications to Slack
-  channels. Integrate `docker scout cves` or `docker scout policy` into your CI
-  pipeline as an alternative. See
-  [Slack integration](https://docs.docker.com/scout/integrations/team-collaboration/slack/).
+  channels.
 
 The following are deprecated and will be retired on September 1, 2026:
 
 - Notifications: In-product and email notifications about newly disclosed CVEs.
-  Integrate `docker scout cves` or `docker scout policy` into your CI pipeline
-  to surface vulnerability and policy results without push notifications.
-
-- Amazon ECR integration: Migrate to
-  [`docker scout watch`](https://docs.docker.com/reference/cli/docker/scout/watch/) for continuous
-  polling or integrate Scout into your CI pipeline. See
-  [ECR integration](https://docs.docker.com/scout/integrations/registry/ecr/) for a migration guide.
-
-- Azure Container Registry integration: Same migration options as ECR. See
-  [ACR integration](https://docs.docker.com/scout/integrations/registry/acr/) for a migration guide.
-
-- Policies page in the Dashboard: The `docker scout policy`
-  command replaces this with more options for evaluating policies. You can run
-  evaluations locally, in CI, against custom Rego policies, or using OCI
-  bundles. See [Evaluate policies](https://docs.docker.com/scout/policy/local/).
-
+- Amazon ECR integration: Automatically analyzed images pushed to ECR
+  registries.
+- Azure Container Registry integration: Automatically analyzed images pushed
+  to ACR registries.
+- Policies page in the Dashboard: Provided a visual interface in the Docker
+  Scout Dashboard for tracking policy compliance.
 - SonarQube integration.
 
 ## Q4 2024
@@ -174,7 +186,7 @@ making the now-removed **All critical vulnerabilities** policy redundant.
 [General Availability](https://docs.docker.com/release-lifecycle/#general-availability-ga).
 
 For more information and setup instructions, see
-[Integrate Azure Container Registry](https://docs.docker.com/scout/integrations/registry/acr/).
+Integrate Azure Container Registry.
 
 ### 2024-01-23
 
@@ -207,11 +219,10 @@ more precise recommendations.
 
 For more information about the types of recommendations that Docker Scout can
 provide to help you improve policy compliance, see
-[Use the Dashboard](https://docs.docker.com/scout/policy/dashboard/).
+Use the Dashboard.
 
 For more information about how to authorize the Docker Scout GitHub app on your
-source repositories, see
-[Integrate Docker Scout with GitHub](https://docs.docker.com/scout/integrations/source-code-management/github/).
+source repositories, see Integrate Docker Scout with GitHub.
 
 ## Q4 2023
 
@@ -224,7 +235,7 @@ New features and enhancements released in the fourth quarter of 2023.
 [Early Access](https://docs.docker.com/release-lifecycle/#early-access-ea).
 
 For more information and setup instructions, see
-[Integrate Azure Container Registry](https://docs.docker.com/scout/integrations/registry/acr/).
+Integrate Azure Container Registry.
 
 ### 2023-12-06
 
@@ -242,7 +253,7 @@ Registry** (ACR) integration, which lets Docker Scout pull and analyze images
 in ACR repositories automatically.
 
 To learn more about the integration and how to get started, see
-[Integrate Azure Container Registry](https://docs.docker.com/scout/integrations/registry/acr/).
+Integrate Azure Container Registry.
 
 ### 2023-11-21
 
@@ -255,7 +266,7 @@ policies for your organization include:
 - Customize the list of "high-profile vulnerabilities"
 - Add or remove software licenses to flag as "copyleft"
 
-For more information, see [Configurable policies](https://docs.docker.com/scout/policy/dashboard/).
+For more information, see Configurable policies.
 
 ### 2023-11-10
 
@@ -286,7 +297,7 @@ Policy Evaluation is an early access feature that helps you ensure software
 integrity and track how your artifacts are doing over time. This release ships
 with four out-of-the-box policies, enabled by default for all organizations.
 
-![Policy overview in Dashboard](https://raw.githubusercontent.com/docker/docs/ca60e92629079de412f38632876ab208d84267ef/content/manuals/scout/images/release-notes/policy-ea.webp)
+![Policy overview in Dashboard](https://raw.githubusercontent.com/docker/docs/ff96ad1711065cf2e9c3f1d701dad04775834f70/content/manuals/scout/images/release-notes/policy-ea.webp)
 
 - **Base images not up-to-date** evaluates whether the base images are out of
   date, and require updating. Up-to-date base images help you ensure that your
@@ -315,8 +326,8 @@ metadata about the image contents, and not the container images themselves.
 
 The integration offers a straightforward process for adding additional
 repositories, activating Docker Scout for specific repositories, and removing
-the integration if needed. To learn more, refer to the [Amazon ECR integration
-documentation](https://docs.docker.com/scout/integrations/registry/ecr/).
+the integration if needed. To learn more, refer to the Amazon ECR integration
+documentation.
 
 #### Sysdig integration
 

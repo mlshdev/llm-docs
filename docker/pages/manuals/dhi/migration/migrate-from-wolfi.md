@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/dhi/migration/migrate-from-wolfi.md](https://github.com/docker/docs/blob/ca60e92629079de412f38632876ab208d84267ef/content/manuals/dhi/migration/migrate-from-wolfi.md)
+> Commit-pinned source for Docker main: [content/manuals/dhi/migration/migrate-from-wolfi.md](https://github.com/docker/docs/blob/ff96ad1711065cf2e9c3f1d701dad04775834f70/content/manuals/dhi/migration/migrate-from-wolfi.md)
 
 This guide helps you migrate from Wolfi-based images to Docker Hardened
 Images (DHI). Generally, the migration process is straightforward since Wolfi is

@@ -1,4 +1,4 @@
-> Release-pinned source for Grafana v13.2.0: [docs/sources/datasources/elasticsearch/alerting/index.md](https://github.com/grafana/grafana/blob/f681b1359f6a0b8ecb9f2c49a88ac72b75bde73b/docs/sources/datasources/elasticsearch/alerting/index.md)
+> Release-pinned source for Grafana v13.2.1: [docs/sources/datasources/elasticsearch/alerting/index.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/datasources/elasticsearch/alerting/index.md)
 
 # Elasticsearch alerting
 
@@ -27,11 +27,11 @@ Queries that return time series data allow Grafana to evaluate values over time 
 
 | Query type                     | Alerting support | Notes                                                       |
 | ------------------------------ | ---------------- | ----------------------------------------------------------- |
-| Metrics with Date histogram    | ✅ Full support   | Recommended for alerting                                    |
-| Metrics without Date histogram | ⚠️ Limited       | May not evaluate correctly over time                        |
-| Logs                           | ❌ Not supported  | Use metrics queries instead                                 |
-| Raw data                       | ❌ Not supported  | Use metrics queries instead                                 |
-| Raw document (deprecated)      | ❌ Not supported  | Deprecated since Grafana v10.1. Use metrics queries instead |
+| Metrics with Date histogram    | Supported        | Recommended for alerting                                    |
+| Metrics without Date histogram | Limited          | May not evaluate correctly over time                        |
+| Logs                           | Not supported    | Use metrics queries instead                                 |
+| Raw data                       | Not supported    | Use metrics queries instead                                 |
+| Raw document (deprecated)      | Not supported    | Deprecated since Grafana v10.1. Use metrics queries instead |
 
 ## Create an alert rule
 

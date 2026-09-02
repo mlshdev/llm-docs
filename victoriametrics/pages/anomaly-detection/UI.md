@@ -1,10 +1,10 @@
-> Release-pinned source for VictoriaMetrics v1.150.0: [docs/anomaly-detection/UI.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/UI.md)
+> Release-pinned source for VictoriaMetrics v1.151.0: [docs/anomaly-detection/UI.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/UI.md)
 
 ## Introduction
 
 *(available from vmanomaly v1.26.0)* `vmanomaly` includes a built-in [vmui-like](https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/#vmui) [UI](https://en.wikipedia.org/wiki/Graphical_user_interface) for exploring queries, comparing anomaly detection models, and tuning model or domain settings before production deployment.
 
-![vmanomaly-ui-overview](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/vmanomaly-ui-overview.webp)
+![vmanomaly-ui-overview](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/vmanomaly-ui-overview.webp)
 
 ## Accessing the UI
 
@@ -134,7 +134,7 @@ users:
 
 Then, on [settings panel](#settings-panel) of the UI, set the URLs accordingly, also check the option to forward auth headers to the datasource:
 
-![vmanomaly-ui-sections-settings](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/vmanomaly-ui-sections-settings.webp)
+![vmanomaly-ui-sections-settings](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/vmanomaly-ui-sections-settings.webp)
 
 ### Pre-configured Datasource
 
@@ -152,7 +152,7 @@ export VMANOMALY_UI_DATASOURCE_TYPE=vm
 
 Start `vmanomaly` as usual. All UI queries will use the configured datasource:
 
-![vmanomaly-ui-preconfigured-datasource-1](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/vmanomaly-ui-preconfigured-datasource-1.webp)
+![vmanomaly-ui-preconfigured-datasource-1](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/vmanomaly-ui-preconfigured-datasource-1.webp)
 
 ## Preset
 
@@ -299,7 +299,7 @@ docker run -it --rm \
   -e VMANOMALY_MCP_SERVER_URL=http://mcp-vmanomaly:8081/mcp \
   -p 8080:8080 \
   -p 8490:8490 \
-  victoriametrics/vmanomaly:v1.30.2 \
+  victoriametrics/vmanomaly:v1.30.4 \
   vmanomaly_config.yaml
 ```
 
@@ -316,7 +316,7 @@ The UI has four main areas:
 
 Use Query Explorer to run MetricsQL or LogsQL queries and visualize input data.
 
-![vmanomaly-ui-sections-explore](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/vmanomaly-ui-sections-explore.webp)
+![vmanomaly-ui-sections-explore](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/vmanomaly-ui-sections-explore.webp)
 
 Users can:
 
@@ -333,13 +333,13 @@ The Visualization Panel displays either raw query results or model output, depen
 
 After selecting **Execute Query**:
 
-![vmanomaly-ui-sections-plot-area-query-mode](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/vmanomaly-ui-sections-plot-area-query-mode.webp)
+![vmanomaly-ui-sections-plot-area-query-mode](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/vmanomaly-ui-sections-plot-area-query-mode.webp)
 
 All returned series appear in one vmui-like plot with zooming and panning.
 
 After selecting **Detect Anomalies**:
 
-![vmanomaly-ui-sections-plot-area-detect-mode](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/vmanomaly-ui-sections-plot-area-detect-mode.webp)
+![vmanomaly-ui-sections-plot-area-detect-mode](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/vmanomaly-ui-sections-plot-area-detect-mode.webp)
 
 The plot groups model output by input series and compares actual values (`y`) with predictions (`yhat`), confidence intervals (`yhat_lower`, `yhat_upper`), and detected anomalies. Hover over an anomaly marker to inspect its score and labels.
 
@@ -351,7 +351,7 @@ Toggle individual output series from the legend.
 
 ### Model Panel
 
-![vmanomaly-ui-sections-model](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/vmanomaly-ui-sections-model.webp)
+![vmanomaly-ui-sections-model](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/vmanomaly-ui-sections-model.webp)
 
 The Model Panel provides:
 
@@ -364,9 +364,9 @@ The Model Panel provides:
 A form-based menu configures model hyperparameters and domain knowledge:
 
 - Model selection, for example Temporal Envelope or Online MAD.
-  ![vmanomaly-ui-model-config-menu](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/vmanomaly-ui-model-config-menu.webp)
+  ![vmanomaly-ui-model-config-menu](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/vmanomaly-ui-model-config-menu.webp)
 - A wizard with **model-agnostic settings** such as detection direction, data range, clipping, and minimum deviation, plus the selected model's hyperparameters. *(available from vmanomaly v1.27.0)* Press **Tab** to autocomplete suggested values.
-  ![vmanomaly-ui-model-config-wizard](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/vmanomaly-ui-model-config-wizard.webp)
+  ![vmanomaly-ui-model-config-wizard](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/vmanomaly-ui-model-config-wizard.webp)
 
 [Back to UI navigation](#ui-navigation)
 
@@ -380,7 +380,7 @@ The vmui-like "Settings" panel allows users to configure global settings and pre
 - UI Theme
 - *(available from vmanomaly v1.27.0)* Auth Headers forwarding to datasource (VictoriaMetrics, VictoriaLogs).
 
-![vmanomaly-ui-sections-settings](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/vmanomaly-ui-sections-settings.webp)
+![vmanomaly-ui-sections-settings](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/vmanomaly-ui-sections-settings.webp)
 
 [Back to navigation](#ui-navigation)
 
@@ -399,7 +399,7 @@ Similarly to vmui, vmanomaly UI supports **configuration sharing via URL** by en
 
 Once the desired UI state is set up (query, time range, model configuration, etc.), the URL can be copied from the browser's address bar and shared with others, who can then open the URL in their browsers to see the same UI state (given that the data source is accessible to them).
 
-![vmanomaly-ui-state-sharing-url](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/vmanomaly-ui-state-sharing-url.webp)
+![vmanomaly-ui-state-sharing-url](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/vmanomaly-ui-state-sharing-url.webp)
 
 <p>Example URL content:</p>
 
@@ -435,14 +435,14 @@ After that, accessing `http://<vmanomaly-host>:<port>/vmui/` (e.g. `http://local
 Once the configuration is set up and saved in the UI (selected model type and validated hyperparameters), equivalent configuration in production-ready YAML format can be obtained by:
 
 Accessing the "YAML" Tab in the model configuration section
-![vmanomaly-ui-model-config-menu](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/vmanomaly-ui-model-config-menu.webp)
-![vmanomaly-ui-model-config-yaml-tab](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/vmanomaly-ui-model-config-menu-yaml-tab.webp)
+![vmanomaly-ui-model-config-menu](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/vmanomaly-ui-model-config-menu.webp)
+![vmanomaly-ui-model-config-yaml-tab](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/vmanomaly-ui-model-config-menu-yaml-tab.webp)
 
 Clicking the "Show Config" button to access (model-only or full) configuration and hitting "Download" button to get the configuration as a YAML file.
 
-![vmanomaly-ui-open-config-btn](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/vmanomaly-ui-open-config-btn.webp)
+![vmanomaly-ui-open-config-btn](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/vmanomaly-ui-open-config-btn.webp)
 
-![vmanomaly-ui-open-config-menu](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/vmanomaly-ui-open-config-menu.webp)
+![vmanomaly-ui-open-config-menu](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/vmanomaly-ui-open-config-menu.webp)
 
 ## Optimize Resource Usage
 
@@ -548,17 +548,17 @@ Set appropriate tenants (if data source supports multi-tenancy) and access [sett
 
 Set up the time range and resolution (step) for data visualization and anomaly detection purposes - e.g. last 7 days with 30m step, especially if the data has daily/weekly seasonality. Also, set the step according to the desired granularity of anomaly detection results (e.g. 30m step for 30m granularity) which itself is based on alerting needs and latency requirements.
 
-![vmanomaly-ui-sections-explore](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/vmanomaly-ui-sections-explore.webp)
+![vmanomaly-ui-sections-explore](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/vmanomaly-ui-sections-explore.webp)
 
 Pay attention to trends, seasonality, noise, outliers, and other patterns in the data, which can influence the choice of anomaly detection model and its hyperparameters. Use [Temporal Envelope](https://docs.victoriametrics.com/anomaly-detection/components/models/#temporal-envelope) for complex data with trend or calendar patterns, and [Online MAD](https://docs.victoriametrics.com/anomaly-detection/components/models/#online-mad) for simple, mostly stationary data where robustness to outliers matters.
 
-![vmanomaly-ui-sections-plot-area-query-mode](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/vmanomaly-ui-sections-plot-area-query-mode.webp)
+![vmanomaly-ui-sections-plot-area-query-mode](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/vmanomaly-ui-sections-plot-area-query-mode.webp)
 
 ### Select and Configure Model
 
 Choose an appropriate anomaly detection model from the Model Panel based on the characteristics of the data and the specific requirements (domain knowledge) of the use case.
 
-![vmanomaly-ui-sections-model](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/vmanomaly-ui-sections-model.webp)
+![vmanomaly-ui-sections-model](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/vmanomaly-ui-sections-model.webp)
 
 Set the "Fit Every" and "Fit Window" parameters to control how often and over what time window the model is retrained on new data to imitate production behavior - e.g. fit every 7 days on a rolling window of last 14 days.
 
@@ -566,7 +566,7 @@ Set the "Fit Every" and "Fit Window" parameters to control how often and over wh
 
 Tune the model hyperparameters and apply domain knowledge settings using the form-based menu in the Model Panel. See (i) tooltips for parameter descriptions and [model documentation](https://docs.victoriametrics.com/anomaly-detection/components/models/) link for recommended values and guidelines.
 
-![vmanomaly-ui-model-config-wizard](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/vmanomaly-ui-model-config-wizard.webp)
+![vmanomaly-ui-model-config-wizard](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/vmanomaly-ui-model-config-wizard.webp)
 
 For example, for a **MAD online** [model](https://docs.victoriametrics.com/anomaly-detection/components/models/#online-mad), that should be run on a query, returning per-mode CPU utilization (as fractions of 1, data range `[0, 1]`), where you are interested in capturing **spikes of at least 6% deviations** from expected behavior:
 
@@ -592,7 +592,7 @@ Hit the "Detect Anomalies" button to run anomaly detection on the queried data w
 
 > The long running task (e.g. detection on misconfigured query returning too much metrics) can be canceled by hitting the "Cancel" button.
 
-![vmanomaly-ui-sections-plot-area-detect-mode](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/vmanomaly-ui-sections-plot-area-detect-mode.webp)
+![vmanomaly-ui-sections-plot-area-detect-mode](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/vmanomaly-ui-sections-plot-area-detect-mode.webp)
 
 Iterate over the legend to view **individual vmanomaly output** (e.g. actual values, expected values, confidence intervals, anomalies, etc.) for different series returned by the query.
 
@@ -614,17 +614,29 @@ If the **results** look good, but should be shared with others first, timeseries
 
 If the **results** look good and the **model configuration should be deployed in production jobs of anomaly detection**, the equivalent configuration in production-ready YAML format can be obtained by accessing the "YAML" Tab in the model configuration section and hitting the "Show Config" button to access (model-only or full) configuration to download/copy as a YAML file.
 
-![vmanomaly-ui-open-config-menu](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/vmanomaly-ui-open-config-menu.webp)
+![vmanomaly-ui-open-config-menu](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/vmanomaly-ui-open-config-menu.webp)
 
 *(available from vmanomaly v1.28.0)* **Example alerting rules are generated** based on the current UI configuration. Hit the "Example Alert" button in the Model Panel to access and copy/download an example of parametrized [vmalert](https://docs.victoriametrics.com/victoriametrics/vmalert/) alerting rule snippet in YAML format to finetune and use in production alerting setup.
 
-![vmanomaly-ui-example-alert-btn](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/vmanomaly-ui-example-alert-btn.webp)
+![vmanomaly-ui-example-alert-btn](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/vmanomaly-ui-example-alert-btn.webp)
 
-![vmanomaly-ui-example-alert-menu](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/vmanomaly-ui-example-alert-menu.webp)
+![vmanomaly-ui-example-alert-menu](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/vmanomaly-ui-example-alert-menu.webp)
 
 ## Changelog
 
 **Release history**
+
+### v1.8.3
+
+Released: 2026-08-27
+
+Recommended vmanomaly version: [v1.30.4](https://docs.victoriametrics.com/anomaly-detection/changelog/#v1304)
+
+- IMPROVEMENT: Fresh anomaly investigations default to the online univariate Temporal Envelope, and the model selector lists online models before offline alternatives.
+
+- BUGFIX: AI-suggested business settings remain synchronized with both the model wizard and the generated model configuration.
+
+- BUGFIX: Advanced model drop-downs display the selected option label instead of the control's internal numeric option position while preserving correctly typed configuration values.
 
 ### v1.8.2
 

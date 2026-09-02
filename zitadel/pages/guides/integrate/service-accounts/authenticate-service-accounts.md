@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/guides/integrate/service-accounts/authenticate-service-accounts.mdx](https://zitadel.com/docs/guides/integrate/service-accounts/authenticate-service-accounts)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/integrate/service-accounts/authenticate-service-accounts.mdx](https://zitadel.com/docs/guides/integrate/service-accounts/authenticate-service-accounts)
 
 > **Terminology update**
 >

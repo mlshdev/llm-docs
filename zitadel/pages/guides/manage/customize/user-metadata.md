@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/guides/manage/customize/user-metadata.mdx](https://zitadel.com/docs/guides/manage/customize/user-metadata)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/manage/customize/user-metadata.mdx](https://zitadel.com/docs/guides/manage/customize/user-metadata)
 
 This guide shows you how to request metadata from a user.
 ZITADEL offers multiple methods to retrieve metadata.
@@ -81,7 +81,7 @@ So the value `MTIzNA` decodes to `1234`.
 You might want to include metadata directly into the ID Token.
 For that you need to enable "User Info inside ID Token" in your application's settings.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/console_projects_application_token_settings.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/console_projects_application_token_settings.png)
 
 Now request a new token from ZITADEL by logging in with the user that has metadata attached.
 Make sure you log into the correct client/application where you enabled the settings.

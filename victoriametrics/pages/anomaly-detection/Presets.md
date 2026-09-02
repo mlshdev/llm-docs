@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.150.0: [docs/anomaly-detection/Presets.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/Presets.md)
+> Release-pinned source for VictoriaMetrics v1.151.0: [docs/anomaly-detection/Presets.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/Presets.md)
 
 > Please check the [Quick Start Guide](https://docs.victoriametrics.com/anomaly-detection/quickstart/) to install and run `vmanomaly`
 
@@ -36,7 +36,7 @@ preset: "ui"
 
 Please refer to the [UI documentation](https://docs.victoriametrics.com/anomaly-detection/ui/) for detailed instructions on how to use the interface and [backtest your anomaly detection configurations guide](https://docs.victoriametrics.com/anomaly-detection/ui/#example-usage).
 
-![vmanomaly-ui-overview](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/vmanomaly-ui-overview.webp)
+![vmanomaly-ui-overview](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/vmanomaly-ui-overview.webp)
 
 ## Default
 
@@ -61,7 +61,7 @@ Alternatively, you can [download it from Grafana cloud](https://grafana.com/graf
 
 #### Filters
 
-![dashboard-as-filter-section](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/vmanomaly-default-dashboard-filters.webp)
+![dashboard-as-filter-section](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/vmanomaly-default-dashboard-filters.webp)
 
 **P.S.** Expand the **"Dashboard Hints"** panel to view suggested usage tips.
 
@@ -83,7 +83,7 @@ Alternatively, you can [download it from Grafana cloud](https://grafana.com/graf
 
 #### Global Anomaly Score Statistics
 
-![dashboard-as-sections-global](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/vmanomaly-default-dashboard-sections-global.webp)
+![dashboard-as-sections-global](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/vmanomaly-default-dashboard-sections-global.webp)
 
 This section provides aggregated anomaly score statistics, grouped by the selected `Group by` filter label (e.g. by `for`):
 
@@ -102,7 +102,7 @@ This section provides aggregated anomaly score statistics, grouped by the select
 
 #### Local Anomaly Score Statistics
 
-![dashboard-as-sections-local](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/vmanomaly-default-dashboard-sections-local.webp)
+![dashboard-as-sections-local](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/vmanomaly-default-dashboard-sections-local.webp)
 
 This section provides anomaly score statistics at the individual time series level:
 
@@ -145,12 +145,12 @@ To analyze anomalies effectively, start from a high-level overview and progressi
    - Focus on the most affected category (`context_switch` in this case).
    - Notice when the anomaly score first exceeded the threshold — around 15:35 in the example.
 
-![dashboard-as-example-step-1](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/vmanomaly-default-dashboard-example-step-1.webp)
+![dashboard-as-example-step-1](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/vmanomaly-default-dashboard-example-step-1.webp)
 
 6. **Refine the view:**
    - Before switching to the [Local Anomaly Score Statistics](#local-anomaly-score-statistics) section, apply an ad-hoc filter (e.g., `for=context_switch`) to exclude unrelated data.
 
-![dashboard-as-example-step-2](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/vmanomaly-default-dashboard-example-step-2.webp)
+![dashboard-as-example-step-2](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/vmanomaly-default-dashboard-example-step-2.webp)
 
 ***
 
@@ -161,13 +161,13 @@ In the **Local View** section, identify the most anomalous time series by:
 
 To focus on the most significant anomalies, set the `Min anomaly %` dashboard constant (e.g., `5%` in this example). This will filter the table and graph to display only time series with anomaly percentages over selected range above the threshold.
 
-![dashboard-as-example-step-3](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/vmanomaly-default-dashboard-sections-local.webp)
+![dashboard-as-example-step-3](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/vmanomaly-default-dashboard-sections-local.webp)
 
 To further refine the results, you can:
 
 - **(Global effect)** Filter table columns (e.g., by a specific `instance`).
   > This applies an additional ad-hoc filter at the dashboard level, so remember to remove it after your investigation.
-  > ![dashboard-as-example-step-4](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/vmanomaly-default-dashboard-example-step-3.webp)
+  > ![dashboard-as-example-step-4](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/vmanomaly-default-dashboard-example-step-3.webp)
 
 - **(Local effect)** Click on legend values to isolate specific series (`CTRL` or `CMD` + click to select multiple items).
 
@@ -175,10 +175,10 @@ For 1 or more filtered timeseries, explore the label set directly in the table o
 To determine whether the anomaly is a true or [false positive](https://victoriametrics.com/blog/victoriametrics-anomaly-detection-handbook-chapter-1/#false-positive), check the raw metric values:
 
 - **(Preferred method)** Directly within the dashboard, if [univariate models](https://docs.victoriametrics.com/anomaly-detection/components/models/#univariate-models) were used and the `provide_series` [argument](https://docs.victoriametrics.com/anomaly-detection/components/models/#provide-series) explicitly or implicitly included `y` (i.e., the original values observed by the model at prediction time). Also, using **Show series** filter to add `yhat`, `yhat_lower`, `yhat_upper` to the visualizations (if respective columns were defined in `provide_series`) might help to understand model behavior and the magnitude of produced anomaly scores.
-  ![dashboard-as-example-step-4a](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/vmanomaly-default-dashboard-example-step-4a.webp)
+  ![dashboard-as-example-step-4a](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/vmanomaly-default-dashboard-example-step-4a.webp)
 
 - **(Alternative method)** Use the `Explore` tab in Grafana:
-  ![dashboard-as-example-step-4b](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/vmanomaly-default-dashboard-example-step-4b.webp)
+  ![dashboard-as-example-step-4b](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/vmanomaly-default-dashboard-example-step-4b.webp)
   - Copy the corresponding `for` query MetricsQL expression from the `reader.queries` section of the `vmanomaly` config (e.g., `rate(node_context_switches_total[3m])` in this particular example).
   - Paste that expression into the `Metrics browser` field.
   - Apply filters to isolate specific series, either by adding `{label=value}` filters to the query or by clicking on legend items as shown in the screenshot.
@@ -332,21 +332,21 @@ Here's how attached [Grafana dashboard](https://github.com/VictoriaMetrics/Victo
 
 On the (global) graph **'Percentage of Anomalies'**, you can see a spike 8.75% of anomalies at the timestamp '2024-06-03 10:35:00'. The (global) graph **'Anomalies per Indicator'** shows the indicators that were anomalous at the corresponding time.
 
-![global](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/presets_global_percentage.webp)
+![global](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/presets_global_percentage.webp)
 
 At this timestamp on the **'Number of Anomalous Indicators by Node'** graph we can identify the node that had the most anomalies: `10.142.0.27`
 
-![by\_node](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/presets_anomalies_by_node.webp)
+![by\_node](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/presets_anomalies_by_node.webp)
 
 Now you can select anomalous node to drill down further (local):
 
-![anomalous\_node\_selection](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/presets_anomalous_node_selection.webp)
+![anomalous\_node\_selection](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/presets_anomalous_node_selection.webp)
 
 For this node from the timestamp `2024-06-03 10:35:00` CPU time spent handling software interrupts started to grow.
 (`cpu_seconds_total{mode="softirq"}`)
 
-![irq](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/presets_cpu_seconds_softirq.webp)
+![irq](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/presets_cpu_seconds_softirq.webp)
 
 At the same time `cpu_seconds_total` for `steal` mode started to grow as well.
 
-![steal](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/presets_cpu_seconds_steal.webp)
+![steal](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/presets_cpu_seconds_steal.webp)

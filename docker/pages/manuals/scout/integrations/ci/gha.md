@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/scout/integrations/ci/gha.md](https://github.com/docker/docs/blob/ca60e92629079de412f38632876ab208d84267ef/content/manuals/scout/integrations/ci/gha.md)
+> Commit-pinned source for Docker main: [content/manuals/scout/integrations/ci/gha.md](https://github.com/docker/docs/blob/ff96ad1711065cf2e9c3f1d701dad04775834f70/content/manuals/scout/integrations/ci/gha.md)
 
 # Integrate Docker Scout with GitHub Actions
 
@@ -146,11 +146,11 @@ showing only what's changed.
 The GitHub Action outputs the comparison results in a pull request comment by
 default.
 
-![A screenshot showing the results of Docker Scout output in a GitHub Action](https://raw.githubusercontent.com/docker/docs/ca60e92629079de412f38632876ab208d84267ef/content/manuals/scout/images/gha-output.webp)
+![A screenshot showing the results of Docker Scout output in a GitHub Action](https://raw.githubusercontent.com/docker/docs/ff96ad1711065cf2e9c3f1d701dad04775834f70/content/manuals/scout/images/gha-output.webp)
 
 Expand the **Policies** section to view the difference in policy compliance
 between the two images. Note that while the new image in this example isn't
 fully compliant, the output shows that the standing for the new image has
 improved compared to the baseline.
 
-![GHA policy evaluation output](https://raw.githubusercontent.com/docker/docs/ca60e92629079de412f38632876ab208d84267ef/content/manuals/scout/images/gha-policy-eval.webp)
+![GHA policy evaluation output](https://raw.githubusercontent.com/docker/docs/ff96ad1711065cf2e9c3f1d701dad04775834f70/content/manuals/scout/images/gha-policy-eval.webp)

@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/sdk-examples/nestjs.mdx](https://zitadel.com/docs/sdk-examples/nestjs)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/sdk-examples/nestjs.mdx](https://zitadel.com/docs/sdk-examples/nestjs)
 
 ## Overview
 

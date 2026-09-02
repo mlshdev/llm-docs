@@ -1,4 +1,4 @@
-> Release-pinned source for Grafana v13.2.0: [docs/sources/datasources/influxdb/configure/_index.md](https://github.com/grafana/grafana/blob/f681b1359f6a0b8ecb9f2c49a88ac72b75bde73b/docs/sources/datasources/influxdb/configure/_index.md)
+> Release-pinned source for Grafana v13.2.1: [docs/sources/datasources/influxdb/configure/_index.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/datasources/influxdb/configure/_index.md)
 
 # Configure the InfluxDB data source
 
@@ -21,6 +21,8 @@ If you're new to InfluxDB, these terms are used throughout the configuration:
 
 To configure the InfluxDB data source, you must have the `Administrator` role.
 
+Grafana and Grafana Cloud don't provide a hosted InfluxDB service. The data source connects to an InfluxDB instance that you run and manage yourself, or to one of InfluxData's cloud products. You must have a running InfluxDB instance before you configure the data source.
+
 InfluxData provides three query languages:
 
 - **SQL** - Standard SQL query language for InfluxDB 3.x and newer cloud products (Cloud Serverless, Cloud Dedicated, Clustered). InfluxData recommends SQL for new deployments. It supports JOINs, subqueries, and standard SQL functions. Refer to [InfluxDB SQL reference](https://docs.influxdata.com/influxdb/cloud-serverless/reference/sql/) for the full list of supported statements, operators, and functions.
@@ -42,6 +44,10 @@ Complete the following steps to set up a new InfluxDB data source:
 3. Type `InfluxDB` in the search bar.
 4. Select the **InfluxDB** data source.
 5. Click **Add new data source** in the upper right.
+
+> **Note**
+>
+> Complete the required connection settings and click **Save & test** before you rename the data source. If you rename a new data source before saving it, Grafana validates the entire configuration and returns an error because the **URL** field is still empty.
 
 Grafana opens the **Settings** tab where you configure the data source. A sidebar on the left displays navigation links to each configuration section:
 
@@ -98,7 +104,7 @@ The following table shows which query languages are available for each InfluxDB 
 Toggle **Advanced HTTP Settings** to expand optional settings for more control over your data source.
 
 - **Allowed cookies** - Defines which cookies are forwarded to the data source. All other cookies are deleted by default.
-- **Timeout** - Set an HTTP request timeout in seconds.
+- **Timeout** - Sets the HTTP request timeout in seconds. If you don't set a value, Grafana uses the `timeout` setting in the `dataproxy` section of the [configuration file](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#dataproxy), which defaults to `30` seconds. Increase this value if complex queries or large result sets fail with timeout errors such as `context deadline exceeded`. Alert rule evaluations use the same timeout, so increasing it also gives alert queries more time to complete.
 
 **Custom HTTP headers**
 
@@ -188,6 +194,12 @@ Toggle **Advanced Database Settings** to expand optional settings that give you 
 *For Grafana Cloud only.* Private data source connect (PDC) allows you to establish a private, secured connection between a Grafana Cloud instance and data sources secured within a private network. For more information, refer to [Private data source connect (PDC)](https://grafana.com/docs/grafana-cloud/connect-externally-hosted/private-data-source-connect/).
 
 Click **Manage private data source connect** to go to your PDC connection page, where you'll find your PDC configuration details.
+
+> **Caution**
+>
+> When you use PDC, don't set the InfluxDB URL to `127.0.0.1` or `localhost`. PDC tunnels traffic through a SOCKS proxy, which can't resolve loopback addresses. Use the machine's LAN IP address or a hostname that's resolvable from the network where the PDC agent runs. Refer to [PDC connection fails with "no such host"](https://grafana.com/docs/grafana/v13.2/datasources/influxdb/troubleshooting/#pdc-connection-fails-with-no-such-host) for more information.
+
+PDC agent deployment, proxy configuration, and network and token management are covered in the PDC documentation, not here. Refer to [Configure PDC](https://grafana.com/docs/grafana-cloud/connect-externally-hosted/private-data-source-connect/configure-pdc/) for setup and [Troubleshoot PDC issues](https://grafana.com/docs/grafana-cloud/connect-externally-hosted/private-data-source-connect/troubleshooting/) for agent errors, log interpretation, and failure modes.
 
 ### Save and test
 

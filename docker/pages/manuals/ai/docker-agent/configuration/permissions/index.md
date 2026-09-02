@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/configuration/permissions/index.md](https://github.com/docker/docs/blob/ca60e92629079de412f38632876ab208d84267ef/_vendor/github.com/docker/docker-agent/docs/configuration/permissions/index.md)
+> Commit-pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/configuration/permissions/index.md](https://github.com/docker/docs/blob/ff96ad1711065cf2e9c3f1d701dad04775834f70/_vendor/github.com/docker/docker-agent/docs/configuration/permissions/index.md)
 
 *Control which tools can execute automatically, require confirmation, or are blocked entirely.*
 

@@ -1,8 +1,8 @@
-# ZITADEL v4.17.1
+# ZITADEL v4.17.2
 
-> Documentation generated from the latest stable release of [zitadel/zitadel](https://github.com/zitadel/zitadel) and pinned to immutable source commit `a9311b8c702531832575351a663e98a2242778e5`.
+> Documentation generated from the latest stable release of [zitadel/zitadel](https://github.com/zitadel/zitadel) and pinned to immutable source commit `35aa213863395a73ee18dbfeae9a9ef41d6fff77`.
 
-- [Full documentation](llms-full.txt): Complete normalized corpus for ZITADEL v4.17.1.
+- [Full documentation](llms-full.txt): Complete normalized corpus for ZITADEL v4.17.2.
 - [Provenance manifest](manifest.json): Release, commit, document count, and generation notes.
 - Pages come from the Fumadocs content tree in apps/docs/content; underscore-prefixed partials are inlined into the pages that import them.
 - Interactive elements the site renders from JavaScript - framework pickers, benchmark charts, permission and PII tables, and React partials such as the quick start console walkthroughs - are omitted because they carry no static prose.
@@ -148,6 +148,7 @@
 - [Authenticate users with SAML](pages/guides/integrate/login/saml.md): Source `apps/docs/content/guides/integrate/login/saml.mdx`.
 - [Device Authorization Grant in Custom Login UI](pages/guides/integrate/login-ui/device-auth.md): Source `apps/docs/content/guides/integrate/login-ui/device-auth.mdx`.
 - [Handle External Logins in a Custom Login UI](pages/guides/integrate/login-ui/external-login.md): Source `apps/docs/content/guides/integrate/login-ui/external-login.mdx`.
+- [Maintain and Deploy a Customized ZITADEL Login UI](pages/guides/integrate/login-ui/fork-and-deploy-login-app.md): Source `apps/docs/content/guides/integrate/login-ui/fork-and-deploy-login-app.mdx`.
 - [Build your own Login UI](pages/guides/integrate/login-ui.md): Source `apps/docs/content/guides/integrate/login-ui/index.mdx`.
 - [Login App](pages/guides/integrate/login-ui/login-app.md): Source `apps/docs/content/guides/integrate/login-ui/login-app.mdx`.
 - [Logging Out via a Custom Login UI](pages/guides/integrate/login-ui/logout.md): Source `apps/docs/content/guides/integrate/login-ui/logout.mdx`.
@@ -246,6 +247,7 @@
 - [Policies](pages/legal/policies.md): Source `apps/docs/content/legal/policies/index.mdx`.
 - [Privacy Policy](pages/legal/policies/privacy-policy.md): Source `apps/docs/content/legal/policies/privacy-policy.mdx`.
 - [Rate Limit Policy](pages/legal/policies/rate-limit-policy.md): Source `apps/docs/content/legal/policies/rate-limit-policy.mdx`.
+- [ZITADEL Refund Policy](pages/legal/policies/refund-policy.md): Source `apps/docs/content/legal/policies/refund-policy.mdx`.
 - [Vulnerability Disclosure Policy](pages/legal/policies/vulnerability-disclosure-policy.md): Source `apps/docs/content/legal/policies/vulnerability-disclosure-policy.mdx`.
 - [ZITADEL Cloud & Enterprise Service Description](pages/legal/service-description/cloud-service-description.md): Source `apps/docs/content/legal/service-description/cloud-service-description.mdx`.
 - [Service description](pages/legal/service-description.md): Source `apps/docs/content/legal/service-description/index.mdx`.

@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.150.0: [docs/guides/vmagent-openid-configuration/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/vmagent-openid-configuration/_index.md)
+> Release-pinned source for VictoriaMetrics v1.151.0: [docs/guides/vmagent-openid-configuration/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/vmagent-openid-configuration/_index.md)
 
 Using [vmagent](https://docs.victoriametrics.com/victoriametrics/vmagent/) with [vmauth](https://docs.victoriametrics.com/victoriametrics/vmauth/) and OAuth authentication *(available from v1.138.0)* enables secure metric ingestion in multi-tenant environments, where vmagent authenticates to vmauth using [JWT tokens](https://en.wikipedia.org/wiki/JSON_Web_Token) issued by an external identity provider. These tokens include tenant information so that metrics are written to the correct tenant.
 
@@ -88,21 +88,21 @@ Once Keycloak is available at `http://keycloak:3001`, follow the steps below to 
    - Use `OpenID Connect` as `Client Type`.
    - Specify `vmagent` as `Client ID`.
    - Click `Next`.
-     ![Create client 1](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/vmagent-openid-configuration/vmagent-create-client-1.webp)
+     ![Create client 1](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/vmagent-openid-configuration/vmagent-create-client-1.webp)
 2. Enable `Client authentication`.
    - Enable `Authorization`.
-     ![Create client 2](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/vmagent-openid-configuration/vmagent-create-client-2.webp)
+     ![Create client 2](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/vmagent-openid-configuration/vmagent-create-client-2.webp)
    - Click `Next`.
 3. Leave the URLs section empty as vmagent does not require any URLs.
-   ![Create client 3](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/vmagent-openid-configuration/vmagent-create-client-3.webp)
+   ![Create client 3](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/vmagent-openid-configuration/vmagent-create-client-3.webp)
    - Click `Save`.
 4. Go to `Clients` -> `vmagent` -> `Credentials`.
-   ![Client secret](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/vmagent-openid-configuration/vmagent-client-secret.webp)
+   ![Client secret](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/vmagent-openid-configuration/vmagent-client-secret.webp)
    - Copy the value of `Client secret`. It will be used later in vmagent configuration.
 5. Go to `Clients` -> `vmagent` -> `Client scopes`.
-   ![Create mapper 1](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/vmagent-openid-configuration/vmagent-create-mapper-1.webp)
+   ![Create mapper 1](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/vmagent-openid-configuration/vmagent-create-mapper-1.webp)
    - Click on `vmagent-dedicated` -> `Configure a new mapper` -> `User attribute`.
-     ![Create mapper 2](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/vmagent-openid-configuration/vmagent-create-mapper-2.webp)
+     ![Create mapper 2](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/vmagent-openid-configuration/vmagent-create-mapper-2.webp)
 6. Configure the mapper as follows:
    - `Name` as `vm_access`.
    - `User Attribute` as `vm_access`.
@@ -110,7 +110,7 @@ Once Keycloak is available at `http://keycloak:3001`, follow the steps below to 
    - `Claim JSON Type` as `JSON`.
    - Enable `Add to ID token` and `Add to access token`.
 
-![Create mapper 3](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/vmagent-openid-configuration/vmagent-create-mapper-3.webp)
+![Create mapper 3](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/vmagent-openid-configuration/vmagent-create-mapper-3.webp)
 
 - Click `Save`.
 
@@ -119,15 +119,15 @@ Once Keycloak is available at `http://keycloak:3001`, follow the steps below to 
 1. Go to `Realm settings` -> `User profile`.
    - Click `Create attribute`.
    - Specify `vm_access` as `Attribute [Name]`.
-     ![User attributes](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/vmagent-openid-configuration/create-attribute.webp)
+     ![User attributes](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/vmagent-openid-configuration/create-attribute.webp)
    - Click `Create`.
 
 ### Configure service account
 
 1. Go to `Client` -> `vmagent` -> `Service account roles` -> click on `service-account-vmagent`.
-   ![vmagent service account](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/vmagent-openid-configuration/vmagent-sa.webp)
+   ![vmagent service account](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/vmagent-openid-configuration/vmagent-sa.webp)
 2. Set the `vm_access` attribute value to `{"metrics_account_id": 0, "metrics_project_id": 0}`.
-   ![User attributes](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/vmagent-openid-configuration/vmagent-sa-attributes.webp)
+   ![User attributes](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/vmagent-openid-configuration/vmagent-sa-attributes.webp)
    - Click `Save`.
 
 ### Test identity provider
@@ -163,15 +163,15 @@ These services will store and query the metrics scraped by vmagent.
 # compose.yaml
 services:
   vmstorage:
-    image: victoriametrics/vmstorage:v1.149.0-cluster
+    image: victoriametrics/vmstorage:v1.150.0-cluster
 
   vminsert:
-    image: victoriametrics/vminsert:v1.149.0-cluster
+    image: victoriametrics/vminsert:v1.150.0-cluster
     command:
       - -storageNode=vmstorage:8400
 
   vmselect:
-    image: victoriametrics/vmselect:v1.149.0-cluster
+    image: victoriametrics/vmselect:v1.150.0-cluster
     command:
       - -storageNode=vmstorage:8401
     ports:
@@ -204,7 +204,7 @@ Add the vmauth service to `compose.yaml`:
 # compose.yaml
 services:
   vmauth:
-    image: victoriametrics/vmauth:v1.149.0-enterprise
+    image: victoriametrics/vmauth:v1.150.0-enterprise
     ports:
       - 8427:8427
     volumes:
@@ -259,7 +259,7 @@ Add the vmagent service to `compose.yaml` with OAuth2 configuration:
 # compose.yaml
 services:
   vmagent:
-    image: victoriametrics/vmagent:v1.149.0
+    image: victoriametrics/vmagent:v1.150.0
     volumes:
       - ./scrape.yaml:/etc/vmagent/config.yaml
     command:

@@ -1,17 +1,38 @@
-> Release-pinned source for Grafana v13.2.0: [docs/sources/datasources/pyroscope/_index.md](https://github.com/grafana/grafana/blob/f681b1359f6a0b8ecb9f2c49a88ac72b75bde73b/docs/sources/datasources/pyroscope/_index.md)
+> Release-pinned source for Grafana v13.2.1: [docs/sources/datasources/pyroscope/_index.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/datasources/pyroscope/_index.md)
 
-# Grafana Pyroscope data source
+# Pyroscope data source
 
 Grafana Pyroscope is a horizontally scalable, highly available, multi-tenant, OSS, continuous profiling aggregation system.
 Add a Pyroscope data source to query your profiles in [Explore](https://grafana.com/docs/grafana/v13.2/explore/).
 
+Grafana includes built-in support for Pyroscope, so you don't need to install a plugin. The Pyroscope data source requires Grafana v12.3 or later.
+
 Refer to [Introduction to Pyroscope](https://grafana.com/docs/pyroscope/latest/introduction/) to understand profiling and Pyroscope.
 
-To use profiling data, you should:
+## Supported features
 
-- [Configure your application to send profiles](https://grafana.com/docs/pyroscope/latest/configure-client/)
-- [Configure the Grafana Pyroscope data source](https://grafana.com/docs/grafana/v13.2/datasources/pyroscope/configure-pyroscope-data-source/).
-- [View and query profiling data using Profiles Drilldown or the query editor ](https://grafana.com/docs/grafana/v13.2/datasources/pyroscope/query-profile-data/)
+The Pyroscope data source supports the following features.
+
+| Feature     | Supported |
+| ----------- | --------- |
+| Metrics     | Yes       |
+| Logs        | No        |
+| Traces      | No        |
+| Alerting    | No        |
+| Annotations | No        |
+
+The Pyroscope data source returns profiling data visualized as flame graphs and time-series metrics derived from profiles. It also integrates with tracing data through the Trace to profiles feature.
+
+## Get started
+
+The following documents help you get started with the Pyroscope data source:
+
+- [Configure the Pyroscope data source](https://grafana.com/docs/grafana/v13.2/datasources/pyroscope/configure/)
+- [Query profile data](https://grafana.com/docs/grafana/v13.2/datasources/pyroscope/query-editor/)
+- [Template variables](https://grafana.com/docs/grafana/v13.2/datasources/pyroscope/template-variables/)
+- [Troubleshoot the Pyroscope data source](https://grafana.com/docs/grafana/v13.2/datasources/pyroscope/troubleshooting/)
+
+Before you query profiles, [configure your application to send profiles](https://grafana.com/docs/pyroscope/latest/configure-client/) to Pyroscope.
 
 ## Continuous profiling
 
@@ -29,51 +50,42 @@ These dimensions, coupled with the detailed nature of performance profiles, make
 
 ### Flame graphs
 
-Flame graphs help you visualize resource allocation and performance bottlenecks, and you even get suggested recommendations and performance fixes via AI-driven flame graph analysis, as well as line-level insights from our GitHub integration.
+Flame graphs help you visualize resource allocation and performance bottlenecks. For more information about the visualization and its features, refer to the [Flame graph panel](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/flame-graph/).
 
-On views with a flame graph, you can use **Explain flame graph** to provide an AI flame graph analysis that explains the performance bottleneck, root cause, and recommended fix.
-For more information, refer to [Flame graph AI](https://grafana.com/docs/grafana-cloud/monitor-applications/profiles/flamegraph-ai/).
+## Grafana Cloud-only features
+
+Some Pyroscope features are available only in Grafana Cloud:
+
+- **Explain flame graph:** On views with a flame graph, Grafana Cloud provides an AI-driven analysis that explains the performance bottleneck, its root cause, and a recommended fix. For more information, refer to [Flame graph AI](https://grafana.com/docs/grafana-cloud/monitor-applications/profiles/flamegraph-ai/).
+- **GitHub line-level insights:** Through the GitHub integration, Grafana Cloud maps profiling data to your source code and shows line-level performance insights.
 
 ## Integrate profiles into dashboards
 
 Using the Pyroscope data source, you can integrate profiles into your dashboards.
 For example, you can embed flame graphs using the [flame graph panel](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/flame-graph/).
 
-In this case, the screenshot shows memory profiles alongside panels for logs and metrics to be able to debug out of memory (OOM) errors alongside the associated logs and metrics.
+This example shows memory profiles alongside panels for logs and metrics, which helps you debug out of memory (OOM) errors together with the associated logs and metrics.
 
 ![dashboard](https://grafana.com/static/img/pyroscope/grafana-pyroscope-dashboard-2023-11-30.png)
 
-## Visualize traces and profiles data using Traces to profiles
+## Visualize traces and profiles data using Trace to profiles
 
 You can link profile and tracing data using your Pyroscope data source with the Tempo data source.
-To learn more about how profiles and tracing can work together, refer to [Profiling and tracing synergies](https://grafana.com/docs/grafana/v13.2/datasources/pyroscope/profiling-and-tracing/).
 
-Combined traces and profiles let you see granular line-level detail when available for a trace span. This allows you pinpoint the exact function that's causing a bottleneck in your application as well as a specific request.
+Combined traces and profiles let you see granular line-level detail when available for a trace span. This allows you to pinpoint the exact function that's causing a bottleneck in your application as well as a specific request.
 
 ![trace-profiler-view](https://grafana.com/static/img/pyroscope/pyroscope-trace-profiler-view-2023-11-30.png)
 
-For more information, refer to the [Traces to profile section](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/) and [Link tracing and profiling with span profiles](https://grafana.com/docs/pyroscope/latest/configure-client/trace-span-profiles/).
+For more information, refer to [Configure Trace to profiles](https://grafana.com/docs/grafana/v13.2/datasources/pyroscope/configure-traces-to-profiles/) and [Link tracing and profiling with span profiles](https://grafana.com/docs/pyroscope/latest/configure-client/trace-span-profiles/).
 
 [Watch the video on YouTube](https://www.youtube.com/watch?v=AG8VzfFMLxo)
 
-## Provision the Pyroscope data source
+## Related Pyroscope documentation
 
-You can modify the Grafana configuration files to provision the Pyroscope data source.
-To learn more, and to view the available provisioning settings, refer to [provisioning documentation](https://grafana.com/docs/grafana/v13.2/administration/provisioning/#datasources).
+For more information about Pyroscope beyond the data source, refer to the following Pyroscope product documentation:
 
-Here is an example configuration:
-
-```yaml
-apiVersion: 1
-
-datasources:
-  - name: Grafana Pyroscope
-    type: grafana-pyroscope-datasource
-    url: http://localhost:4040
-    jsonData:
-      minStep: '15s'
-```
-
-## Troubleshoot
-
-If you encounter issues when configuring or using the Pyroscope data source, refer to the [Troubleshooting guide](https://grafana.com/docs/grafana/v13.2/datasources/pyroscope/troubleshooting/) for solutions to common problems.
+- [Introduction to Pyroscope](https://grafana.com/docs/pyroscope/latest/introduction/): Understand continuous profiling and how Pyroscope works.
+- [Configure the client to send profiles](https://grafana.com/docs/pyroscope/latest/configure-client/): Instrument your application to send profiling data to Pyroscope.
+- [Link traces to profiles with span profiles](https://grafana.com/docs/pyroscope/latest/configure-client/trace-span-profiles/): Correlate trace spans with profiling data.
+- [Deploy Pyroscope](https://grafana.com/docs/pyroscope/latest/deploy-kubernetes/): Deploy and run a self-managed Pyroscope backend.
+- [Configure the Pyroscope server](https://grafana.com/docs/pyroscope/latest/configure-server/): Reference the available server configuration parameters.

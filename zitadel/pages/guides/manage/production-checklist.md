@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/guides/manage/production-checklist.mdx](https://zitadel.com/docs/guides/manage/production-checklist)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/manage/production-checklist.mdx](https://zitadel.com/docs/guides/manage/production-checklist)
 
 This checklist is specifically designed for teams deploying on **ZITADEL Cloud**.
 Following these steps ensures your managed instance is resilient, branded and recovery-ready.

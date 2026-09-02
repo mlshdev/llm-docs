@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/apis/actions/external-authentication.mdx](https://zitadel.com/docs/apis/actions/external-authentication)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/apis/actions/external-authentication.mdx](https://zitadel.com/docs/apis/actions/external-authentication)
 
 This flow is executed if the user logs in using an [identity provider](https://zitadel.com/docs/guides/integrate/identity-providers/introduction).
 

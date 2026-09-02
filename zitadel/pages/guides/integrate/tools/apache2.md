@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/guides/integrate/tools/apache2.mdx](https://zitadel.com/docs/guides/integrate/tools/apache2)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/integrate/tools/apache2.mdx](https://zitadel.com/docs/guides/integrate/tools/apache2)
 
 This integration guide shows you the basic OpenID Connect integration with ZITADEL and an Apache 2.0 server.
 
@@ -8,11 +8,11 @@ This integration guide shows you the basic OpenID Connect integration with ZITAD
 - When created go to the "Redirect Settings" and *enable Development Mode*
 - Add the Redirect Uri, f.e. `http://localhost:8080/secure/callback`
 - Add the Post Logout Uri, f.e. `http://localhost:8080/index.html`
-  ![](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/integrate/tools/apache-configuration.png)
-  ![](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/integrate/tools/apache-redirect_settings.png)
+  ![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/integrate/tools/apache-configuration.png)
+  ![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/integrate/tools/apache-redirect_settings.png)
 
 You can find the url to your discovery endpoint under "URLs":
-![](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/integrate/tools/apache-urls.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/integrate/tools/apache-urls.png)
 
 ## Configure Apache2
 

@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/self-hosting/manage/custom-domain.mdx](https://zitadel.com/docs/self-hosting/manage/custom-domain)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/self-hosting/manage/custom-domain.mdx](https://zitadel.com/docs/self-hosting/manage/custom-domain)
 
 ## Why do I get an "Instance not found" error?
 

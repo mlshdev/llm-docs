@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/host-n8n/configure-n8n/basic-configuration/use-environment-variables/user-management-and-2fa.md](https://github.com/n8n-io/n8n-docs/blob/afebf5d9c6ff327fa215b3e6f99627e11fc9d3f2/docs/deploy/host-n8n/configure-n8n/basic-configuration/use-environment-variables/user-management-and-2fa.md)
+> Commit-pinned source for n8n main: [docs/deploy/host-n8n/configure-n8n/basic-configuration/use-environment-variables/user-management-and-2fa.md](https://github.com/n8n-io/n8n-docs/blob/0b69471cc64a4886de337982abd2f5d237dcd52a/docs/deploy/host-n8n/configure-n8n/basic-configuration/use-environment-variables/user-management-and-2fa.md)
 
 # User management SMTP, and two-factor authentication environment variables <a id="user-management-smtp-and-two-factor-authentication-environment-variables"></a>
 

@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/examples/secure-api/nodejs-nestjs.mdx](https://zitadel.com/docs/examples/secure-api/nodejs-nestjs)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/examples/secure-api/nodejs-nestjs.mdx](https://zitadel.com/docs/examples/secure-api/nodejs-nestjs)
 
 ## ZITADEL with Node.js (NestJS)
 

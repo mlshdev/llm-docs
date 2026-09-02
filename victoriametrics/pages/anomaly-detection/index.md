@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.150.0: [docs/anomaly-detection/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/_index.md)
+> Release-pinned source for VictoriaMetrics v1.151.0: [docs/anomaly-detection/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/_index.md)
 
 In today's fast-paced and complex landscape of system monitoring, [VictoriaMetrics Anomaly Detection](https://victoriametrics.com/products/enterprise/anomaly-detection/) (`vmanomaly`), a part of our [Enterprise offering](https://victoriametrics.com/products/enterprise/), serves as an **observability layer** for SREs and DevOps teams atop of collected data to **automate the detection of anomalies in time-series data**, reducing manual efforts required to identify abnormal system behavior.
 
@@ -20,7 +20,7 @@ Key functions:
 
 The diagram below illustrates how `vmanomaly` fits into an observability setup, such as detecting anomalies in metrics collected by `node_exporter`:
 
-![Typical vmanomaly observability pipeline using node-exporter, vmagent, VictoriaMetrics, Grafana, vmalert, and Alertmanager](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/guides/guide-vmanomaly-vmalert/guide-vmanomaly-vmalert_overview.svg)
+![Typical vmanomaly observability pipeline using node-exporter, vmagent, VictoriaMetrics, Grafana, vmalert, and Alertmanager](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/guides/guide-vmanomaly-vmalert/guide-vmanomaly-vmalert_overview.svg)
 
 ## How does it work?
 
@@ -37,7 +37,7 @@ The required path is `config.yml` → Scheduler → Reader → Model → Writer.
 
 Solid nodes and arrows show the required anomaly-detection path. Dashed nodes and arrows show optional self-monitoring integrations.
 
-![vmanomaly component interaction: the Scheduler starts Reader, Model, and Writer work against a configured datasource; Monitoring is optional](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/components/vmanomaly-components.svg)
+![vmanomaly component interaction: the Scheduler starts Reader, Model, and Writer work against a configured datasource; Monitoring is optional](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/components/vmanomaly-components.svg)
 
 ## Key benefits
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/work-with-data/reference-data/link-data-items/README.md](https://github.com/n8n-io/n8n-docs/blob/afebf5d9c6ff327fa215b3e6f99627e11fc9d3f2/docs/build/work-with-data/reference-data/link-data-items/README.md)
+> Commit-pinned source for n8n main: [docs/build/work-with-data/reference-data/link-data-items/README.md](https://github.com/n8n-io/n8n-docs/blob/0b69471cc64a4886de337982abd2f5d237dcd52a/docs/build/work-with-data/reference-data/link-data-items/README.md)
 
 # Linking data items <a id="linking-data-items"></a>
 

@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/guides/integrate/identity-providers/okta_saml.mdx](https://zitadel.com/docs/guides/integrate/identity-providers/okta_saml)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/integrate/identity-providers/okta_saml.mdx](https://zitadel.com/docs/guides/integrate/identity-providers/okta_saml)
 
 This guides shows you how to connect OKTA as an identity provider in ZITADEL.
 
@@ -17,7 +17,7 @@ Go to the settings page of your instance or organization and choose "Identity Pr
 In the table you can see all the providers you have configured.
 Also, you see all provider templates that are available.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/zitadel_identity_provider_overview.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/zitadel_identity_provider_overview.png)
 
 Select the SAML Provider template.
 
@@ -34,11 +34,11 @@ As an alternative you can add the SAML identity provider through the API, either
 - [Add Default SAML Identity Provider](https://zitadel.com/docs/reference/api/admin/zitadel.admin.v1.AdminService.AddSAMLProvider)
 - [Add SAML Identity Provider on Organization](https://zitadel.com/docs/reference/api/management/zitadel.management.v1.ManagementService.AddSAMLProvider)
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/zitadel_okta_saml_provider_empty.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/zitadel_okta_saml_provider_empty.png)
 
 After you created the SAML Provider in ZITADEL, you can copy the URLs you need to configure in your OKTA application.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/zitadel_okta_saml_provider_urls.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/zitadel_okta_saml_provider_urls.png)
 
 ## OKTA Configuration
 
@@ -55,7 +55,7 @@ After you created the SAML Provider in ZITADEL, you can copy the URLs you need t
 5. Save the settings
 6. Copy the metadata URL from the details
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/okta_add_saml_app.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/okta_add_saml_app.png)
 
 ### Add Attribute Statements
 
@@ -70,7 +70,7 @@ Add the following three mappings:
 | surname      | Basic       | user.lastName  |
 | emailaddress | Basic       | user.email     |
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/okta_saml_attribute_mapping.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/okta_saml_attribute_mapping.png)
 
 ### Assign Users to Application
 
@@ -80,7 +80,7 @@ To allow users to authenticate with that app go to the "Assign" Tab.
 2. Choose Assign To People
 3. Select the users you like to be able to authenticate
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/okta_assign_user_to_app.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/okta_assign_user_to_app.png)
 
 ## Finish ZITADEL Setup
 
@@ -96,7 +96,7 @@ If you prefer changing the settings through the API you can update the SAML prov
 - [Update Default SAML Identity Provider](https://zitadel.com/docs/reference/api/admin/zitadel.admin.v1.AdminService.UpdateSAMLProvider)
 - [Update SAML Identity Provider on Organization](https://zitadel.com/docs/reference/api/management/zitadel.management.v1.ManagementService.UpdateSAMLProvider)
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/zitadel_okta_saml_provider_filled.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/zitadel_okta_saml_provider_filled.png)
 
 You can also fill the optional fields if needed:
 
@@ -122,7 +122,7 @@ The provider can also be activated via API. As the identity providers are sub-re
 - [Activate Default Identity Provider](https://zitadel.com/docs/reference/api/admin/zitadel.admin.v1.AdminService.AddIDPToLoginPolicy)
 - [Activate Organization Identity Provider](https://zitadel.com/docs/reference/api/management/zitadel.management.v1.ManagementService.AddIDPToLoginPolicy)
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/zitadel_activate_okta_saml.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/zitadel_activate_okta_saml.png)
 
 ### Ensure your Login Policy allows External IDPs
 
@@ -137,7 +137,7 @@ You can also change the settings through the API directly either in the default 
 - [Update Default Login Settings](https://zitadel.com/docs/reference/api/admin/zitadel.admin.v1.AdminService.UpdateLoginPolicy)
 - [Update Organization Login Settings](https://zitadel.com/docs/reference/api/management/zitadel.management.v1.ManagementService.UpdateCustomLoginPolicy)
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/zitadel_allow_external_idp.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/zitadel_allow_external_idp.png)
 
 ## Test the setup
 
@@ -151,9 +151,9 @@ The organization scope looks like this: `urn:zitadel:iam:org:id:{id}`.
 You can [read more about the reserved scopes](https://zitadel.com/docs/apis/openidoauth/scopes#reserved-scopes)
 or [use the ZITADEL OIDC Playground](https://zitadel.com/playgrounds/oidc) to see what happens with the login when you send different scopes.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/zitadel_login_okta.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/zitadel_login_okta.png)
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/okta_login.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/okta_login.png)
 
 ### Add Action to map user attributes
 

@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.150.0: [docs/guides/migrate-from-influx/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/migrate-from-influx/_index.md)
+> Release-pinned source for VictoriaMetrics v1.151.0: [docs/guides/migrate-from-influx/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/migrate-from-influx/_index.md)
 
 InfluxDB is a well-known time series database built for
 [IoT](https://en.wikipedia.org/wiki/Internet_of_things) monitoring, Application Performance Monitoring (APM) and
@@ -119,7 +119,7 @@ VictoriaMetrics does not have a command-line interface (CLI). Instead, it provid
 [VMUI](https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/#vmui) - a graphical User Interface for
 querying and visualizing metrics:
 
-![Migrate from Influx](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/migrate-from-influx/vmui.webp)
+![Migrate from Influx](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/migrate-from-influx/vmui.webp)
 
 VictoriaMetrics can be configured as [Grafana datasource](https://docs.victoriametrics.com/victoriametrics/integrations/grafana/).
 See more about [how to query data in VictoriaMetrics](https://docs.victoriametrics.com/victoriametrics/keyconcepts/#query-data).
@@ -147,7 +147,7 @@ foo,instance=localhost bar=4.00 1652170560000000000
 This data sample consists of data points for a measurement `foo` and a field `bar` with additional
 tag `instance=localhost`. If we would like plot this data as a time series in Grafana it might have the following look:
 
-![Data sample in Influx](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/migrate-from-influx/data-sample-in-influx.webp)
+![Data sample in Influx](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/migrate-from-influx/data-sample-in-influx.webp)
 
 The query used for this panel is written in [InfluxQL](https://docs.influxdata.com/influxdb/v1.8/query_language/):
 
@@ -180,7 +180,7 @@ to [MetricsQL](https://docs.victoriametrics.com/victoriametrics/metricsql/) let'
 In result, the MetricsQL expression will have the following form: `foo_bar{instance="localhost"}`.
 See its result executed with `step=1m` for the same set of data in Grafana below:
 
-![Data sample in VM](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/migrate-from-influx/data-sample-in-vm.webp)
+![Data sample in VM](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/migrate-from-influx/data-sample-in-vm.webp)
 
 Visualizations from both databases are a bit different - VictoriaMetrics shows some extra points filling the gaps in the graph.
 This behavior is described in more detail [here](https://docs.victoriametrics.com/victoriametrics/keyconcepts/#range-query).

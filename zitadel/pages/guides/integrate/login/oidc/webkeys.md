@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/guides/integrate/login/oidc/webkeys.mdx](https://zitadel.com/docs/guides/integrate/login/oidc/webkeys)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/integrate/login/oidc/webkeys.mdx](https://zitadel.com/docs/guides/integrate/login/oidc/webkeys)
 
 Web Keys in ZITADEL are used to sign and verify JSON Web Tokens (JWT).
 ID tokens are created, signed and returned by ZITADEL when a OpenID connect (OIDC) or OAuth2

@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.150.0: [docs/guides/guide-vmcluster-multiple-retention-setup/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/guide-vmcluster-multiple-retention-setup/_index.md)
+> Release-pinned source for VictoriaMetrics v1.151.0: [docs/guides/guide-vmcluster-multiple-retention-setup/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/guide-vmcluster-multiple-retention-setup/_index.md)
 
 > [VictoriaMetrics Enterprise](https://docs.victoriametrics.com/victoriametrics/enterprise/) supports specifying multiple retentions for distinct sets of time series and tenants. If you are an Enterprise user, [configure multiple retentions directly through retention filters](https://docs.victoriametrics.com/victoriametrics/cluster-victoriametrics/#retention-filters) instead of following this guide.
 
@@ -16,7 +16,7 @@ To support multiple retentions with the open source version of VictoriaMetrics c
 
 Each storage group is connected to a separate vminsert, while a shared vmselect layer queries across all storage groups so that dashboards and alerts continue to see a single unified VictoriaMetrics backend.
 
-![Setup](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/guide-vmcluster-multiple-retention-setup/setup.webp)
+![Setup](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/guide-vmcluster-multiple-retention-setup/setup.webp)
 
 In the example used throughout this guide, the cluster is divided into three groups:
 

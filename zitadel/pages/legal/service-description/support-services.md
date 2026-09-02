@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/legal/service-description/support-services.mdx](https://zitadel.com/docs/legal/service-description/support-services)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/legal/service-description/support-services.mdx](https://zitadel.com/docs/legal/service-description/support-services)
 
 Last updated on November 15, 2023
 

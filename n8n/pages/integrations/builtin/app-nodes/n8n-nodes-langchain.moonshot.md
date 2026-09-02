@@ -1,6 +1,9 @@
-> Commit-pinned source for n8n main: [docs/integrations/builtin/app-nodes/n8n-nodes-langchain.moonshot.md](https://github.com/n8n-io/n8n-docs/blob/afebf5d9c6ff327fa215b3e6f99627e11fc9d3f2/docs/integrations/builtin/app-nodes/n8n-nodes-langchain.moonshot.md)
+> Commit-pinned source for n8n main: [docs/integrations/builtin/app-nodes/n8n-nodes-langchain.moonshot.md](https://github.com/n8n-io/n8n-docs/blob/0b69471cc64a4886de337982abd2f5d237dcd52a/docs/integrations/builtin/app-nodes/n8n-nodes-langchain.moonshot.md)
 
 # Moonshot Kimi
+
+> **Info**
+> On n8n Cloud, you can use the Moonshot Kimi node with [Gateway credits](https://docs.n8n.io/deploy/use-n8n-cloud/gateway-credits) instead of your own Moonshot API key. Select **Use Gateway credits** in the node's credential field to run the node without a Moonshot account.
 
 The Moonshot Kimi node connects n8n workflows to Moonshot Kimi AI models. Use it to send prompts and receive model responses, attach images to messages, or analyze images with an image-analysis model.
 

@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.150.0: [docs/anomaly-detection/components/reader.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/components/reader.md)
+> Release-pinned source for VictoriaMetrics v1.151.0: [docs/anomaly-detection/components/reader.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/components/reader.md)
 
 VictoriaMetrics Anomaly Detection (`vmanomaly`) reads Prometheus-compatible metrics from [VictoriaMetrics](https://docs.victoriametrics.com/victoriametrics/) through [VmReader](#vm-reader) and [MetricsQL](https://docs.victoriametrics.com/victoriametrics/metricsql/). It can also derive metrics from [VictoriaLogs](https://docs.victoriametrics.com/victorialogs/) or [VictoriaTraces](https://docs.victoriametrics.com/victoriatraces/) through [VLogsReader](#victorialogs-reader) and [LogsQL](https://docs.victoriametrics.com/victorialogs/logsql/).
 

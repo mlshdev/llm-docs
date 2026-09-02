@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.150.0: [docs/anomaly-detection/components/models.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/components/models.md)
+> Release-pinned source for VictoriaMetrics v1.151.0: [docs/anomaly-detection/components/models.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/components/models.md)
 
 This section covers the `Models` component of VictoriaMetrics Anomaly Detection (commonly referred to as [`vmanomaly`](https://docs.victoriametrics.com/anomaly-detection/)) and provides a guide on how to configure the service.
 
@@ -130,7 +130,7 @@ The `detection_direction` argument *(available from vmanomaly v1.13.0)* can redu
 
 Here's how the three options differ:
 
-![detection\_direction comparison](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/components/schema_detection_direction.webp)
+![detection\_direction comparison](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/components/schema_detection_direction.webp)
 
 With the default, backward-compatible `both` value, anomalies are tracked in both directions (`y > yhat` or `y < yhat`). This is useful when there is no domain expertise to filter the required direction.
 
@@ -184,7 +184,7 @@ models:
 
 The visualization below demonstrates this concept. The narrow blue model prediction boundary is nested inside the wider green business protection boundary. Actual values outside the prediction boundary but still within `[yhat - min_dev_from_expected, yhat + min_dev_from_expected]` receive `anomaly_score = 0`; only values outside the green boundary remain anomalous.
 
-![min\_dev\_from\_expected](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/components/schema_min_dev_from_expected.webp)
+![min\_dev\_from\_expected](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/components/schema_min_dev_from_expected.webp)
 
 Example config of how to use this param based on query results:
 
@@ -220,7 +220,7 @@ Parameter can be a list of two float values, *allowing separate thresholds for u
 
 The green business protection boundary below scales with `|yhat|`, while the model prediction boundary remains visible inside it. Actual values outside the blue boundary but inside the proportional green boundary receive `anomaly_score = 0`.
 
-![min\_rel\_dev\_from\_expected](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/components/schema_min_rel_dev_from_expected.webp)
+![min\_rel\_dev\_from\_expected](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/components/schema_min_rel_dev_from_expected.webp)
 
 *Example*: Consider a scenario of monitoring incoming traffic to websites that typically receives *unknown in advance* requests per second (from tens to thousands). Setting absolute deviation threshold with `min_dev_from_expected` *may not be effective in reducing false positives*, as even a small increase in traffic (e.g., from 10 to 20 requests per second) can represent a 100% relative increase, which may be significant for that website. Instead, setting `min_rel_dev_from_expected` to smaller relative value - `[20, 40]` (20/40%) - will ensure that traffic drop from 10 to 8 requests per second (20% decrease) and traffic spike from 10 to 14 requests per second (40% increase) won't be considered anomalous, even if they exceed confidence intervals, thus, reducing false positives for small absolute deviations that are relatively significant.
 
@@ -319,7 +319,7 @@ For example, setting `scale: [1.2, 0.75]` for particular model will:
 
 Alternative visualization:
 
-![two-sided scale comparison](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/components/schema_scale_overview_v2.webp)
+![two-sided scale comparison](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/components/schema_scale_overview_v2.webp)
 
 The most common **use case** is when there is a preference to **widen one side** to blacklist smaller false positives (which otherwise would have [anomaly scores](https://docs.victoriametrics.com/anomaly-detection/faq/#how-is-anomaly-score-calculated) **only slightly higher than 1.0**, still making such data points **anomalous**), while **tightening the other side** to avoid missing true positives due to an overly loose margin (leading to [anomaly scores](https://docs.victoriametrics.com/anomaly-detection/faq/#how-is-anomaly-score-calculated) being slightly less than 1.0, making such data points **non-anomalous**).
 
@@ -505,7 +505,7 @@ If during an inference, you got a series having **new labelset** (not present in
 
 **Examples:** [Temporal Envelope](#temporal-envelope), [Online MAD](#online-mad), [Online Z-score](#online-z-score), [Online Seasonal Quantile](#online-seasonal-quantile)
 
-![Univariate model lifecycle](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/components/model-lifecycle-univariate.svg)
+![Univariate model lifecycle](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/components/model-lifecycle-univariate.svg)
 
 ### Multivariate Models
 
@@ -523,7 +523,7 @@ If during an inference, you got a **different amount of series** or some series 
 
 **Recommended:** [Temporal Envelope](#temporal-envelope). Existing [Isolation Forest](#isolation-forest-multivariate) configurations can migrate to its multivariate form.
 
-![Multivariate model lifecycle](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/components/model-lifecycle-multivariate.svg)
+![Multivariate model lifecycle](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/components/model-lifecycle-multivariate.svg)
 
 The following configuration applies a multivariate Temporal Envelope model to the same aligned input series:
 
@@ -683,7 +683,7 @@ models:
   # ...
 ```
 
-![AutoTunedModel tuning and inference lifecycle](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/components/autotune.svg)
+![AutoTunedModel tuning and inference lifecycle](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/components/autotune.svg)
 
 #### Shared asynchronous autotune workflow
 
@@ -1406,7 +1406,30 @@ class CustomModel(Model):
         return deserialize_basic(model)
 ```
 
-`Model` is univariate and offline by default. A custom online model should derive from `OnlineModel` and implement causal update semantics; setting `is_online = True` alone is not sufficient. A multivariate model must follow the merged-channel input contract and return one joint `anomaly_score`; use `MultivariateModel` as its base class.
+`Model` is offline and uses the one-input-to-one-output service topology by default. A custom online model should derive from `OnlineModel` and implement causal update semantics; setting `is_online = True` alone is not sufficient.
+
+*(available from vmanomaly v1.30.3)* Custom models must use `ModelTopology` to declare how service-level input identities map to output identities. The topology controls orchestration, persistence, grouping, and output-label restoration; it does **not** describe the number of columns returned by `infer`.
+
+- `ModelTopology.ONE_TO_ONE` is the default: the service maintains one model for each input series.
+- `ModelTopology.MANY_TO_ONE` merges aligned input series into one model identity and one joint `anomaly_score`. The model may also return per-channel `y`, `yhat`, `yhat_lower`, `yhat_upper`, or `forecast_at` prediction columns; those diagnostics do not change its many-to-one topology.
+- `ModelTopology.MANY_TO_MANY` is the `WideModel` extension contract for an online model that tracks a changing pool of peer series and restores an output identity for each entity.
+
+For a custom many-to-one model, derive from `MultivariateModel` and declare the contract explicitly:
+
+```python
+from model.model import MultivariateModel
+from model.topology import ModelTopology
+
+class CustomMultivariateModel(MultivariateModel):
+    topology = ModelTopology.MANY_TO_ONE
+
+    # fit receives timestamp plus one value column per aligned input channel.
+    # infer returns a joint anomaly_score and may include per-channel diagnostics.
+```
+
+The legacy `is_multivariate = True` class flag may still describe an algorithm internally, but it no longer selects service routing. A class that sets only that flag is orchestrated as one-to-one. Existing compatible built-in multivariate dumps continue to restore through their built-in class definitions.
+
+For a changing peer pool, derive from `WideModel`. Its `fit` and `infer` methods consume a long DataFrame with `timestamp`, `entity_id`, and `y`; returned entity-level rows must retain `entity_id` so the service can restore the original labels. `WideModel` is a semantic extension contract, not a marker used only to store `topology`.
 
 ### 2. Configuration file
 
@@ -1462,7 +1485,7 @@ See the [component configuration reference](https://docs.victoriametrics.com/ano
 Pull the `vmanomaly` image:
 
 ```sh
-docker pull victoriametrics/vmanomaly:v1.30.2
+docker pull victoriametrics/vmanomaly:v1.30.4
 ```
 
 Mount the module at `/vmanomaly/src/model/custom.py`, which matches the configured import path `model.custom.CustomModel`. Validate the complete configuration with `--dryRun` before starting the long-running service.
@@ -1472,7 +1495,7 @@ docker run --rm \
   -v "$PWD/license:/license:ro" \
   -v "$PWD/custom_model.py:/vmanomaly/src/model/custom.py:ro" \
   -v "$PWD/config.yaml:/config.yaml:ro" \
-  victoriametrics/vmanomaly:v1.30.2 \
+  victoriametrics/vmanomaly:v1.30.4 \
   /config.yaml \
   --licenseFile=/license \
   --dryRun
@@ -1515,7 +1538,7 @@ Such models put **more pressure** on your reader's source, i.e. if your model sh
 
 **Examples:** [RollingQuantile](#rolling-quantile), **prior to [v1.28.0](https://docs.victoriametrics.com/anomaly-detection/changelog/#v1280)** where it become online model.
 
-![vmanomaly-model-type-rolling](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/components/model-type-rolling.webp)
+![vmanomaly-model-type-rolling](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/components/model-type-rolling.webp)
 
 #### Non-Rolling Models
 
@@ -1533,7 +1556,7 @@ Produced model instances are **stored in-memory** between consecutive re-fit cal
 
 **Examples:** [Prophet](#prophet)
 
-![vmanomaly-model-type-non-rolling](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/components/model-type-non-rolling.webp)
+![vmanomaly-model-type-non-rolling](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/components/model-type-non-rolling.webp)
 
 ### Deprecated models
 

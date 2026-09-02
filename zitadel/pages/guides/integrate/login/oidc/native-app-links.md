@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/guides/integrate/login/oidc/native-app-links.mdx](https://zitadel.com/docs/guides/integrate/login/oidc/native-app-links)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/integrate/login/oidc/native-app-links.mdx](https://zitadel.com/docs/guides/integrate/login/oidc/native-app-links)
 
 Native mobile apps that create or use passkeys with platform WebAuthn APIs need the issuer domain to publish OS trust association files.
 ZITADEL serves those files from your instance based on iOS and Android settings on OIDC applications.
@@ -44,10 +44,10 @@ On update:
 
 ZITADEL aggregates association data from **active** OIDC apps on the instance and serves:
 
-| Path                                                      | Purpose                                                                      |
-| --------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| `${CUSTOM_DOMAIN}/.well-known/apple-app-site-association` | iOS Associated Domains / `webcredentials`                                    |
-| `${CUSTOM_DOMAIN}/.well-known/assetlinks.json`            | Android Digital Asset Links for `delegate_permission/common.get_login_creds` |
+| Path                                                      | Purpose                                                                                                                       |
+| --------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| `${CUSTOM_DOMAIN}/.well-known/apple-app-site-association` | iOS Associated Domains / `webcredentials`                                                                                     |
+| `${CUSTOM_DOMAIN}/.well-known/assetlinks.json`            | Android Digital Asset Links for `delegate_permission/common.handle_all_urls` and `delegate_permission/common.get_login_creds` |
 
 If no apps are configured, both endpoints still return HTTP `200` with empty collections.
 
@@ -71,7 +71,10 @@ Duplicate iOS App IDs across apps are deduplicated.
 ```json
 [
   {
-    "relation": ["delegate_permission/common.get_login_creds"],
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
     "target": {
       "namespace": "android_app",
       "package_name": "com.example.one",
@@ -85,29 +88,21 @@ Duplicate iOS App IDs across apps are deduplicated.
 
 Fingerprints are normalized to colon-separated uppercase hex when served.
 
+Both relations from [Google's Credential Manager prerequisites](https://developer.android.com/identity/credential-manager/prerequisites) are included, as some devices reject passkey creation when `handle_all_urls` is missing.
+The additional relation only takes effect if your app declares matching intent filters.
+
 ## Caching
 
-Successful responses include a `Cache-Control` header so intermediate caches may reuse the documents for a short time.
-
-By default (and in ZITADEL Cloud) caching is allowed for 5 minutes:
+The contents are specific to your instance domain, so HTTP caching is disabled and the files are always served directly by ZITADEL:
 
 ```
-Cache-Control: public, max-age=300
+Cache-Control: no-store
 ```
-
-Self-hosters can change this with the `ZITADEL_WELLKNOWN_APPLINKSCACHECONTROLMAXAGE` environment variable or in the settings YAML:
-
-```yaml
-WellKnown:
-  AppLinksCacheControlMaxAge: 5m
-```
-
-Setting the value to `0` results in `Cache-Control: no-store`.
 
 > **Note**
 >
-> Platform verifiers may cache association files on their side as well.
-> After you change app link settings, allow time for HTTP caches and OS verification to refresh before expecting passkeys to work with the new values.
+> Platform verifiers cache association files on their side.
+> After you change app link settings, allow time for OS verification to refresh before expecting passkeys to work with the new values.
 
 ## Verify
 
@@ -120,7 +115,7 @@ Confirm:
 
 - HTTP status `200`
 - `Content-Type: application/json`
-- Expected `Cache-Control` header
+- `Cache-Control: no-store` header
 - JSON contents match your configured apps
 
 ## Related

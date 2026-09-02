@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/guides/integrate/onboarding/end-users.mdx](https://zitadel.com/docs/guides/integrate/onboarding/end-users)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/integrate/onboarding/end-users.mdx](https://zitadel.com/docs/guides/integrate/onboarding/end-users)
 
 End Users have three different possibilities on how to login with ZITADEL.
 
@@ -19,7 +19,7 @@ To create a new user, go to Users and click on **New**. Enter the required conta
 
 **Human User**
 
-![Invite Human](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/console/invitehuman.png)
+![Invite Human](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/console/invitehuman.png)
 
 When creating a new user you have different options.
 First add the email, and select if the email address should be added automatically as "verified".
@@ -31,12 +31,12 @@ In the last section you can choose the authentication options:
   - When using the [Zitadel Login V1](https://zitadel.com/docs/guides/integrate/login/hosted-login) the user will be prompted to setup a password
   - When using the [Zitadel Login V2](https://zitadel.com/docs/guides/integrate/login/hosted-login#hosted-login-version-2) the user has the option to choose the authentication method (password, passkey, identity provider), based on the settings of the organization
 
-    ![Invite Human - Setup authentication method](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/console/setupauthmethod.png)
+    ![Invite Human - Setup authentication method](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/console/setupauthmethod.png)
 - **Set an initial password for the user**: The user will receive an email and be able to setup an authentication method (e.g Password, Passkey, External SSO)
 
 **Human User \[deprecated]**
 
-![Add Human](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/console/addhuman.png)
+![Add Human](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/console/addhuman.png)
 
 After a user is created, by default, an initialization mail with a code is sent to the registered email. This code then has to be verified on first login.
 If you want to omit this mail, you can check the **email verified** and **set initial password** toggle.
@@ -44,13 +44,13 @@ If no password is set initially, the initialization mail prompting the user to s
 
 **Service Account**
 
-![Add Service Account](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/console/addmachine.png)
+![Add Service Account](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/console/addmachine.png)
 
 You can prompt the user to add a second factor method too by checking the **Force MFA** toggle in [Login behaviour settings](https://zitadel.com/docs/guides/manage/console/default-settings#login-behavior-and-security).
 
 When logged in, a user can then manage the profile in the management console, adding a profile picture, external IDPs and Passkeys.
 
-![Profile Self Manage](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/console/myprofile.png)
+![Profile Self Manage](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/console/myprofile.png)
 
 ## Automated / Self-registration possibilities
 
@@ -83,7 +83,7 @@ If an organization allows local user registration as well as registration with a
 
 As soon as users click the "register" button, they will be presented with a screen showing the different registration options.
 
-![Register Options](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/solution-scenarios/register-options.png)
+![Register Options](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/solution-scenarios/register-options.png)
 
 After that, the user can select either local user registration or an external provider.
 By pressing the button of an external provider, the user will directly be redirected to the provider for consent.
@@ -98,11 +98,11 @@ By pressing the button of an external provider, the user will directly be redire
 To allow users to register themselves, you have to enable the "register allowed" in the login behavior settings.
 You will now see the register button on the login screen.
 
-![Register End User](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/solution-scenarios/register-end-user.png)
+![Register End User](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/solution-scenarios/register-end-user.png)
 
 If nothing else is specified, a user will be registered to the default organization.
 
-![Default Organization](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/solution-scenarios/default-organization.png)
+![Default Organization](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/solution-scenarios/default-organization.png)
 
 You can specify another organization, by sending the organization scope in the authorization requests.
 By sending the scope below the settings of the specified organization will be triggered and only users of the said organization will be able to authenticate.
@@ -116,7 +116,7 @@ If the user chooses to register a local account, the register form will be shown
 All the mandatory fields like first name, last name, e-mail and password have to be filled.
 You can only setup authentication with the built-in form.
 
-![Register local user](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/solution-scenarios/register-local-user.png)
+![Register local user](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/solution-scenarios/register-local-user.png)
 
 #### Registration with Social Login
 
@@ -129,7 +129,7 @@ Please follow the setup guides for the needed providers: [Let Users Login with P
 
 The configured providers will be shown on the first login screen or when the users click on the registration button, they will be able to choose between local account or the social login.
 
-![Register End User](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/solution-scenarios/register-end-user.png)
+![Register End User](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/solution-scenarios/register-end-user.png)
 
 #### Registration with Organization External Identity Provider
 

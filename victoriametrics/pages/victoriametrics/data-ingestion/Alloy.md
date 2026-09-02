@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.150.0: [docs/victoriametrics/data-ingestion/Alloy.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/victoriametrics/data-ingestion/Alloy.md)
+> Release-pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/data-ingestion/Alloy.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/data-ingestion/Alloy.md)
 
 [Grafana Alloy](https://grafana.com/docs/alloy/latest/) supports sending data via the Prometheus remote write protocol and OpenTelemetry Protocol (OTLP).
 Collecting metrics and forwarding them to VictoriaMetrics using Prometheus scraping and remote writing is more straightforward, but using OpenTelemetry enables more complex processing operations to occur before sending data to VictoriaMetrics.

@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.150.0: [docs/victoriametrics/vmalert.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/victoriametrics/vmalert.md)
+> Release-pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/vmalert.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmalert.md)
 
 `vmalert` executes a list of the given [alerting](https://docs.victoriametrics.com/victoriametrics/vmalert/#alerting-rules)
 or [recording](https://docs.victoriametrics.com/victoriametrics/vmalert/#recording-rules)
@@ -619,7 +619,7 @@ rules execution, storing recording rules results and alerts state.
     -notifier.url=http://alertmanager:9093          # AlertManager addr to send alerts when they trigger
 ```
 
-![vmalert single](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/victoriametrics/vmalert_single.webp)
+![vmalert single](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmalert_single.webp)
 
 ### Cluster VictoriaMetrics
 
@@ -639,7 +639,7 @@ Cluster mode could have multiple `vminsert` and `vmselect` components.
     -notifier.url=http://alertmanager:9093                      # AlertManager addr to send alerts when they trigger
 ```
 
-![vmalert cluster](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/victoriametrics/vmalert_cluster.webp)
+![vmalert cluster](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmalert_cluster.webp)
 
 In case when you want to spread the load on these components - add balancers before them and configure
 `vmalert` with balancer addresses. Please, see more about [VictoriaMetrics cluster architecture](https://docs.victoriametrics.com/victoriametrics/cluster-victoriametrics/#architecture-overview).
@@ -662,7 +662,7 @@ Alertmanagers.
     -notifier.url=http://alertmanagerN:9093         # The same alert will be sent to all configured notifiers
 ```
 
-![vmalert ha](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/victoriametrics/vmalert_ha.webp)
+![vmalert ha](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmalert_ha.webp)
 
 To avoid recording rules results and alerts state duplication in VictoriaMetrics server
 don't forget to configure [deduplication](https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/#deduplication).
@@ -738,7 +738,7 @@ or reducing resolution) and push results to "cold" cluster.
     -remoteWrite.url=http://aggregated-cluster-vminsert:8480/insert/0/prometheus    # vminsert addr to persist recording rules results
 ```
 
-![vmalert multi cluster](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/victoriametrics/vmalert_multicluster.webp)
+![vmalert multi cluster](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmalert_multicluster.webp)
 
 Please note, [replay](#rules-backfilling) feature may be used for transforming historical data.
 
@@ -752,7 +752,7 @@ For persisting recording or alerting rule results `vmalert` requires `-remoteWri
 But this flag supports only one destination. To persist rule results to multiple destinations
 we recommend using [vmagent](https://docs.victoriametrics.com/victoriametrics/vmagent/) as fan-out proxy:
 
-![vmalert multiple remote write destinations](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/victoriametrics/vmalert_multiple_rw.webp)
+![vmalert multiple remote write destinations](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmalert_multiple_rw.webp)
 
 In this topology, `vmalert` is configured to persist rule results to `vmagent`. And `vmagent`
 is configured to fan-out received data to two or more destinations.
@@ -1011,6 +1011,9 @@ Try the following tips to avoid common issues:
      In that case, the default step will be used (`-datasource.queryStep`) and may cause unexpected results compared to
      executing this query in vmui/Grafana, where step is adjusted differently.
 
+See [practical examples for reducing alert noise](https://victoriametrics.com/blog/alerting-best-practices/#reducing-noise),
+including aggregating alerts and configuring inhibition.
+
 ### Rule state
 
 vmalert keeps the last `-rule.updateEntriesLimit` updates (or `update_entries_limit` [per-rule config](https://docs.victoriametrics.com/victoriametrics/vmalert/#alerting-rules))
@@ -1020,7 +1023,7 @@ for each rule. You can see these updates in vmalert's [web UI](#web):
 2. Find the Group and rule you're interested in
 3. Click the `Details` link next to rule's name and look at the `Last N updates` section:
 
-![vmalert state](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/victoriametrics/vmalert_state.webp)
+![vmalert state](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmalert_state.webp)
 
 The rows in this section show the rule's evaluations in order, along with their results.
 
@@ -1066,6 +1069,9 @@ Sometimes, it's hard to understand why a specific alert fired or not. Keep in mi
 If evaluation returns error (i.e. datasource is unavailable), alert state doesn't change.
 If at least one evaluation returns no data, then alert's `for` state resets.
 
+See [how to tune the `for` parameter](https://victoriametrics.com/blog/alerting-best-practices/#the-for-param),
+including its tradeoff with the query lookbehind window.
+
 > Note: The alert state is tracked separately for each time series returned during evaluation.
 > For example, if the 1st evaluation returns series A and B, and the 2nd evaluation returns only B – the alert will remain active **only for B**.
 
@@ -1081,12 +1087,12 @@ Data delay is one of the most common problems when running rules.
 vmalert runs the configured rules at specific timestamps.
 It expects that the needed data is already available in the configured `-datasource.url` **at the time** the rule is evaluated.
 
-![vmalert expected evaluation](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/victoriametrics/vmalert_ts_normal.gif)
+![vmalert expected evaluation](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmalert_ts_normal.gif)
 
 Usually, troubles begin when data in `-datasource.url` is delayed or absent. In such cases, evaluations
 may get an empty response from the datasource, produce empty recording rules or reset alerts state:
 
-![vmalert evaluation when data is delayed](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/victoriametrics/vmalert_ts_data_delay.gif)
+![vmalert evaluation when data is delayed](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmalert_ts_data_delay.gif)
 
 > Please note, data delay is inevitable in distributed systems. And it is better to account for it rather than ignore it.
 
@@ -1106,13 +1112,18 @@ Or for all rules within the [group](#groups) *(available from v1.117.0)*.
 Just set `debug: true` in configuration and vmalert will start printing additional log messages:
 
 ```sh
-2022-09-15T13:35:41.155Z  DEBUG alerting rule "TestGroup":"Conns" (2601299393013563564) at 2022-09-15T15:35:41+02:00: query returned 0 series (elapsed: 5.896041ms, isPartial: false)
-2022-09-15T13:35:56.149Z  DEBUG datasource request: executing POST request with params "denyPartialResponse=true&query=sum%28vm_tcplistener_conns%7Binstance%3D%22localhost%3A8429%22%7D%29+by%28instance%29+%3E+0&step=15s&time=1663248945"
-2022-09-15T13:35:56.178Z  DEBUG alerting rule "TestGroup":"Conns" (2601299393013563564) at 2022-09-15T15:35:56+02:00: query returned 1 series (elapsed: 28.368208ms, isPartial: false)
-2022-09-15T13:35:56.178Z  DEBUG datasource request: executing POST request with params "denyPartialResponse=true&query=sum%28vm_tcplistener_conns%7Binstance%3D%22localhost%3A8429%22%7D%29&step=15s&time=1663248945"
-2022-09-15T13:35:56.179Z  DEBUG alerting rule "TestGroup":"Conns" (2601299393013563564) at 2022-09-15T15:35:56+02:00: alert 10705778000901301787 {alertgroup="TestGroup",alertname="Conns",cluster="east-1",instance="localhost:8429",replica="a"} created in state PENDING
+2026-08-20T08:21:29.464Z        info    VictoriaMetrics/app/vmalert/datasource/client.go:262    DEBUG datasource request: executing POST request with params "http://victoriametrics:8428/api/v1/query?query=up%7Bjob%3D~%22.%2A%28victoriametrics%7Cvmselect%7Cvminsert%7Cvmstorage%7Cvmagent%7Cvmalert%7Cvmsingle%7Cvmalertmanager%7Cvmauth%29.%2A%22%7D&step=300s&time=2026-08-20T08%3A20%3A00Z"
+2026-08-20T08:21:29.465Z        info    VictoriaMetrics/app/vmalert/rule/alerting.go:273        DEBUG alerting rule "/etc/alerts/alerts-health.yml", "vm-health":"ServiceDown" (1340947595484135783) at 2026-08-20T08:20:00Z: query returned 0 series (series_fetched: 0, elapsed: 1.075166ms, isPartial: false)
 ...
-2022-09-15T13:36:56.153Z  DEBUG alerting rule "TestGroup":"Conns" (2601299393013563564) at 2022-09-15T15:36:56+02:00: alert 10705778000901301787 {alertgroup="TestGroup",alertname="Conns",cluster="east-1",instance="localhost:8429",replica="a"} PENDING => FIRING: 1m0s since becoming active at 2022-09-15 15:35:56.126006 +0200 CEST m=+39.384575417
+2026-08-20T08:22:29.466Z        info    VictoriaMetrics/app/vmalert/datasource/client.go:262    DEBUG datasource request: executing POST request with params "http://victoriametrics:8428/api/v1/query?query=up%7Bjob%3D~%22.%2A%28victoriametrics%7Cvmselect%7Cvminsert%7Cvmstorage%7Cvmagent%7Cvmalert%7Cvmsingle%7Cvmalertmanager%7Cvmauth%29.%2A%22%7D&step=300s&time=2026-08-20T08%3A21%3A00Z"
+2026-08-20T08:22:29.468Z        info    VictoriaMetrics/app/vmalert/rule/alerting.go:273        DEBUG alerting rule "/etc/alerts/alerts-health.yml", "vm-health":"ServiceDown" (1340947595484135783) at 2026-08-20T08:21:00Z: query returned 2 series (series_fetched: 2, elapsed: 2.055916ms, isPartial: false)
+2026-08-20T08:22:29.469Z        info    VictoriaMetrics/app/vmalert/rule/alerting.go:273        DEBUG alerting rule "/etc/alerts/alerts-health.yml", "vm-health":"ServiceDown" (1340947595484135783) at 2026-08-20T08:21:00Z: alert 4671711516378822929 {alertgroup="vm-health",alertname="ServiceDown",instance="victoriametrics:8428",job="victoriametrics",severity="critical"} created in state PENDING
+2026-08-20T08:22:29.469Z        info    VictoriaMetrics/app/vmalert/rule/alerting.go:273        DEBUG alerting rule "/etc/alerts/alerts-health.yml", "vm-health":"ServiceDown" (1340947595484135783) at 2026-08-20T08:21:00Z: alert 6230585559362831632 {alertgroup="vm-health",alertname="ServiceDown",instance="vmagent:8429",job="vmagent",severity="critical"} created in state PENDING
+...
+2026-08-20T08:23:29.463Z        info    VictoriaMetrics/app/vmalert/datasource/client.go:262    DEBUG datasource request: executing POST request with params "http://victoriametrics:8428/api/v1/query?query=up%7Bjob%3D~%22.%2A%28victoriametrics%7Cvmselect%7Cvminsert%7Cvmstorage%7Cvmagent%7Cvmalert%7Cvmsingle%7Cvmalertmanager%7Cvmauth%29.%2A%22%7D&step=300s&time=2026-08-20T08%3A22%3A00Z"
+2026-08-20T08:23:29.465Z        info    VictoriaMetrics/app/vmalert/rule/alerting.go:273        DEBUG alerting rule "/etc/alerts/alerts-health.yml", "vm-health":"ServiceDown" (1340947595484135783) at 2026-08-20T08:22:00Z: query returned 2 series (series_fetched: 2, elapsed: 1.391416ms, isPartial: false)
+2026-08-20T08:23:29.466Z        info    VictoriaMetrics/app/vmalert/rule/alerting.go:273        DEBUG alerting rule "/etc/alerts/alerts-health.yml", "vm-health":"ServiceDown" (1340947595484135783) at 2026-08-20T08:22:00Z: alert 4671711516378822929 {alertgroup="vm-health",alertname="ServiceDown",instance="victoriametrics:8428",job="victoriametrics",severity="critical"} PENDING => FIRING: 1m0s since becoming active at 2026-08-20 08:21:00 +0000 UTC
+2026-08-20T08:23:29.466Z        info    VictoriaMetrics/app/vmalert/rule/alerting.go:273        DEBUG alerting rule "/etc/alerts/alerts-health.yml", "vm-health":"ServiceDown" (1340947595484135783) at 2026-08-20T08:22:00Z: alert 6230585559362831632 {alertgroup="vm-health",alertname="ServiceDown",instance="vmagent:8429",job="vmagent",severity="critical"} PENDING => FIRING: 1m0s since becoming active at 2026-08-20 08:21:00 +0000 UTC
 ```
 
 Sensitive info is stripped from the `curl` examples - see [security](#security) section for more details.
@@ -1610,6 +1621,8 @@ See the docs at https://docs.victoriametrics.com/victoriametrics/vmalert/ .
      Defines a duration for idle (keep-alive connections) to exist. Consider settings this value less to the value of "-http.idleConnTimeout". It must prevent possible "write: broken pipe" and "read: connection reset by peer" errors. (default 50s)
   -remoteWrite.maxBatchSize int
      Defines max number of timeseries to be flushed at once (default 10000)
+  -remoteWrite.maxIdleConnections int
+     Defines the number of idle (keep-alive connections) to -remoteWrite.url for the vmalert-tool debug writer, which sends every series in a separate request. Too low a value may result in a high number of sockets in TIME_WAIT state. (default 100)
   -remoteWrite.maxQueueSize int
      Defines the max number of pending datapoints to remote write endpoint (default 100000)
   -remoteWrite.oauth2.clientID string

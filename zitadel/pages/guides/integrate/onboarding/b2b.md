@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/guides/integrate/onboarding/b2b.mdx](https://zitadel.com/docs/guides/integrate/onboarding/b2b)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/integrate/onboarding/b2b.mdx](https://zitadel.com/docs/guides/integrate/onboarding/b2b)
 
 In this guide we will explain how you can create and set up new organizations in ZITADEL to help you with your onboarding flows.
 Creating a new organization is the best choice for multi-tenancy use cases that require separation of customers, teams, or groups of users.
@@ -31,12 +31,12 @@ Make sure that your admins have a [Administrator role](https://zitadel.com/docs/
 
 1. Create a new Organization. Click the dropdown in the header and click "+ New Organization" to be redirected to the create organization screen.
 
-![Create Organization Dropdown](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/solution-scenarios/create-org-dropdown.png)
+![Create Organization Dropdown](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/solution-scenarios/create-org-dropdown.png)
 
 If the setting "Use your personal account as organization owner" is enabled, your user will automatically get the role "ORG\_OWNER" in the organization.
 Give the organization a name and create it.
 
-![Create Organization](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/solution-scenarios/create-organization.png)
+![Create Organization](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/solution-scenarios/create-organization.png)
 
 Click on the newly created organization in the list and you will switch your context to that organization.
 
@@ -55,7 +55,7 @@ To create a new user, go to Users and click on **New**. Enter the required conta
 
 **Human User**
 
-![Invite Human](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/console/invitehuman.png)
+![Invite Human](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/console/invitehuman.png)
 
 When creating a new user you have different options.
 First add the email, and select if the email address should be added automatically as "verified".
@@ -67,12 +67,12 @@ In the last section you can choose the authentication options:
   - When using the [Zitadel Login V1](https://zitadel.com/docs/guides/integrate/login/hosted-login) the user will be prompted to setup a password
   - When using the [Zitadel Login V2](https://zitadel.com/docs/guides/integrate/login/hosted-login#hosted-login-version-2) the user has the option to choose the authentication method (password, passkey, identity provider), based on the settings of the organization
 
-    ![Invite Human - Setup authentication method](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/console/setupauthmethod.png)
+    ![Invite Human - Setup authentication method](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/console/setupauthmethod.png)
 - **Set an initial password for the user**: The user will receive an email and be able to setup an authentication method (e.g Password, Passkey, External SSO)
 
 **Human User \[deprecated]**
 
-![Add Human](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/console/addhuman.png)
+![Add Human](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/console/addhuman.png)
 
 After a user is created, by default, an initialization mail with a code is sent to the registered email. This code then has to be verified on first login.
 If you want to omit this mail, you can check the **email verified** and **set initial password** toggle.
@@ -80,13 +80,13 @@ If no password is set initially, the initialization mail prompting the user to s
 
 **Service Account**
 
-![Add Service Account](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/console/addmachine.png)
+![Add Service Account](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/console/addmachine.png)
 
 You can prompt the user to add a second factor method too by checking the **Force MFA** toggle in [Login behaviour settings](https://zitadel.com/docs/guides/manage/console/default-settings#login-behavior-and-security).
 
 When logged in, a user can then manage the profile in the management console, adding a profile picture, external IDPs and Passkeys.
 
-![Profile Self Manage](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/console/myprofile.png)
+![Profile Self Manage](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/console/myprofile.png)
 
 #### Add Administrator Role to User
 
@@ -95,14 +95,14 @@ If you do want to know more about the roles, check out the [ZITADEL Administrato
 
 Go to the detail page of the organization and select the "+" button in the top right corner, where you already see a list of existing administrators.
 
-![Administrators](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/console/administrators.png)
+![Administrators](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/console/administrators.png)
 
 When adding a new administrator, you can select multiple roles, some of which are only allowed to read data.
 This can be especially useful if you add service account for one of your projects where you only need read access.
 
 By default, you will only search for users within the selected organization. If you like to give a role to a user outside the organization, you need to switch to the global search and type the exact loginname of the users. This will prevent users from guessing users from other organizations.
 
-![Administrators](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/console/add_administrator.png)
+![Administrators](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/console/add_administrator.png)
 
 ### Invite Team Members
 
@@ -181,7 +181,7 @@ If you want to know more about domain discovery and how to set it up please read
 
 Your user is now ready to log in with SSO.
 
-![User Login with SSO](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/solution-scenarios/user-login-with-external-idp.png)
+![User Login with SSO](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/solution-scenarios/user-login-with-external-idp.png)
 
 ## Automated onboarding for your customers
 
@@ -196,7 +196,7 @@ When a user registers through this form, an organization and a user are created.
 The user will automatically get the role "ORG\_OWNER" withing ZITADEL and is able to manage the whole organization.
 You can read more about the administrators, roles and their meanings [here](https://zitadel.com/docs/guides/manage/console/administrators)
 
-![Register Organization Form](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/solution-scenarios/register-organization.png)
+![Register Organization Form](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/solution-scenarios/register-organization.png)
 
 #### Disable built-in register organization form
 
@@ -215,7 +215,7 @@ This request allows you only to set up a user with password authentication at th
 By specifying the roles you can define which permission the user should have within ZITADEL.
 By default, the user will automatically get "ORG\_OWNER".
 
-![Setup Organization with Admin User Graphic](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/solution-scenarios/register-team-graphic.png)
+![Setup Organization with Admin User Graphic](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/solution-scenarios/register-team-graphic.png)
 
 #### Example Request
 

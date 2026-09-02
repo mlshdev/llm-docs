@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/get-started/choose-how-to-use-n8n.md](https://github.com/n8n-io/n8n-docs/blob/afebf5d9c6ff327fa215b3e6f99627e11fc9d3f2/docs/get-started/choose-how-to-use-n8n.md)
+> Commit-pinned source for n8n main: [docs/get-started/choose-how-to-use-n8n.md](https://github.com/n8n-io/n8n-docs/blob/0b69471cc64a4886de337982abd2f5d237dcd52a/docs/get-started/choose-how-to-use-n8n.md)
 
 # Choose your n8n <a id="choose-your-n8n"></a>
 
@@ -15,7 +15,7 @@ This page helps with both.
       media="(prefers-color-scheme: dark)"
     />
     <img
-      src="https://raw.githubusercontent.com/n8n-io/n8n-docs/afebf5d9c6ff327fa215b3e6f99627e11fc9d3f2/docs/get-started/.gitbook/assets/choose-your-n8n-diag-light.png"
+      src="https://raw.githubusercontent.com/n8n-io/n8n-docs/0b69471cc64a4886de337982abd2f5d237dcd52a/docs/get-started/.gitbook/assets/choose-your-n8n-diag-light.png"
       alt="Decision flowchart: n8n Cloud offers the Starter, Pro, and Enterprise plans; self-hosted offers the Community, Registered Community, Business, and Enterprise editions"
     />
   </picture>

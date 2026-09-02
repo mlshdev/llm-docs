@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/guides/manage/console/organizations-overview.mdx](https://zitadel.com/docs/guides/manage/console/organizations-overview)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/manage/console/organizations-overview.mdx](https://zitadel.com/docs/guides/manage/console/organizations-overview)
 
 ## Overview
 
@@ -12,7 +12,7 @@ Key characteristics of Organizations in ZITADEL include:
 
 In a B2B use case, an organization typically represents a business partner who requires their own branding, specific access settings, or distinct federated login providers.
 
-![Overview ZITADEL Organizations](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/concepts/objects/organization.png)
+![Overview ZITADEL Organizations](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/concepts/objects/organization.png)
 
 ## Structure and Delegation
 
@@ -26,7 +26,7 @@ ZITADEL allows you to give *other* organizations permission to manage certain as
 
 For example, you could set up a project with roles that define access to your software, but allow a partner organization to allocate those roles to their own users independently. As a service provider, this allows you to establish a self-service culture for your business customers.
 
-![Project Grant](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/concepts/objects/project_grants.png)
+![Project Grant](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/concepts/objects/project_grants.png)
 
 ## Managing Organizations
 
@@ -39,7 +39,7 @@ You have two options regarding the initial administrator:
 1. **Current User:** Create the organization with your currently logged-in user as the organization manager. A membership for the new organization will be added to your account.
 2. **New Account:** Directly create a new account to manage the organization.
 
-![Select Organization](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/console_org_select.png)
+![Select Organization](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/console_org_select.png)
 
 ### Self-Service Registration
 
@@ -48,7 +48,7 @@ If you want to enable your customers to create organizations themselves, ZITADEL
 
 The customer simply fills in the organization name and contact details to get started.
 
-![Register new organization](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/console_org_register.png)
+![Register new organization](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/console_org_register.png)
 
 ### Default Organization
 
@@ -110,7 +110,7 @@ If the **validate Organization Domains** setting in [Domain Settings](https://zi
 2. Select the menu entry **Organization Domains**.
 3. Click on the domain name you wish to verify. A dialog will appear offering DNS or HTTP challenge methods.
 
-![Verify Domain Dialog](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/console_verify_domain.png)
+![Verify Domain Dialog](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/console_verify_domain.png)
 
 4. **DNS Challenge Example:** Create a TXT record with your DNS provider using the value provided by ZITADEL.
    - [Cloudflare Guide](https://www.zoho.com/mail/help/adminconsole/cloudflare.html#alink1)

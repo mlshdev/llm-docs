@@ -1,4 +1,4 @@
-> Release-pinned source for Grafana v13.2.0: [docs/sources/upgrade-guide/_index.md](https://github.com/grafana/grafana/blob/f681b1359f6a0b8ecb9f2c49a88ac72b75bde73b/docs/sources/upgrade-guide/_index.md)
+> Release-pinned source for Grafana v13.2.1: [docs/sources/upgrade-guide/_index.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/upgrade-guide/_index.md)
 
 # Upgrade Grafana
 
@@ -11,6 +11,7 @@ To learn what's available in a Grafana release, refer to [What's New](https://gr
 Refer to any of the following upgrade guides:
 
 - [Upgrade strategies](https://grafana.com/docs/grafana/v13.2/upgrade-guide/when-to-upgrade/)
+- [Upgrade to v13.2](https://grafana.com/docs/grafana/v13.2/upgrade-guide/upgrade-v13.2/)
 - [Upgrade to v13.1](https://grafana.com/docs/grafana/v13.2/upgrade-guide/upgrade-v13.1/)
 - [Upgrade to v13.0](https://grafana.com/docs/grafana/v13.2/upgrade-guide/upgrade-v13.0/)
 - [Upgrade to v12.4](https://grafana.com/docs/grafana/v13.2/upgrade-guide/upgrade-v12.4/)

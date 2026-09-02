@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.150.0: [docs/guides/getting-started-with-vm-operator/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/getting-started-with-vm-operator/_index.md)
+> Release-pinned source for VictoriaMetrics v1.151.0: [docs/guides/getting-started-with-vm-operator/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/getting-started-with-vm-operator/_index.md)
 
 The [VictoriaMetrics Kubernetes Operator](https://docs.victoriametrics.com/operator/) simplifies deploying VictoriaMetrics Stack components on Kubernetes or OpenShift using declarative YAML [custom resources](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/).
 
@@ -254,7 +254,7 @@ Forwarding from [::1]:8429 -> 8429
 
 To check that `vmagent` is collecting metrics by browsing `http://127.0.0.1:8429/targets`. You will see something like this:
 
-![Screenshot of vmagent status](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/getting-started-with-vm-operator/vmcluster.webp)
+![Screenshot of vmagent status](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/getting-started-with-vm-operator/vmcluster.webp)
 
 <figcaption style="text-align: center; font-style: italic;">vmagent's status for discovered targets</figcaption>
 
@@ -292,7 +292,7 @@ Update `vmagent`:
 kubectl apply -f vmagent-config.yml
 ```
 
-Download the [vmscrape-config.yml-example](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/getting-started-with-vm-operator/vmscrape-config.yml-example) file and rename it to `vmscrape-config.yml`. This config sets up scrape CRDs for key Kubernetes components, including nodes, pods, APIs, and services.
+Download the [vmscrape-config.yml-example](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/getting-started-with-vm-operator/vmscrape-config.yml-example) file and rename it to `vmscrape-config.yml`. This config sets up scrape CRDs for key Kubernetes components, including nodes, pods, APIs, and services.
 
 Apply the scrape CRDs:
 
@@ -312,7 +312,7 @@ vmscrapeconfig.operator.victoriametrics.com/kubernetes-service-endpoints created
 
 Go back to the `vmagent` target page by browsing `http://127.0.0.1:8429/targets`. This time, you should find targets such as `nodeScrape/default/kubelet-cadvisor` and `nodeScrape/default/kubelet-metrics` with an up status:
 
-![Screenshot of vmagent status](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/getting-started-with-vm-operator/vmagent-scrape-kubernetes.webp)
+![Screenshot of vmagent status](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/getting-started-with-vm-operator/vmagent-scrape-kubernetes.webp)
 
 <figcaption style="text-align: center; font-style: italic;">You should find Kubernetes-specific targets now</figcaption>
 
@@ -458,25 +458,25 @@ To check that [VictoriaMetrics](https://victoriametrics.com) is collecting metri
 
 Use `admin` for login and the `password` obtained with `kubectl get secret ...`.
 
-![Screenshot of Grafana dashboards](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/getting-started-with-vm-operator/vmcluster-grafana1.webp)
+![Screenshot of Grafana dashboards](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/getting-started-with-vm-operator/vmcluster-grafana1.webp)
 
 <figcaption style="text-align: center; font-style: italic;">List of pre-installed dashboards in Grafana</figcaption>
 
 The "VictoriaMetrics - cluster" dashboard shows activity of the VictoriaMetrics services.
 
-![Screenshot of grafana dashboard](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/getting-started-with-vm-operator/vm-cluster-dashboard.webp)
+![Screenshot of grafana dashboard](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/getting-started-with-vm-operator/vm-cluster-dashboard.webp)
 
 <figcaption style="text-align: center; font-style: italic;">Grafana dashboard showing metrics for the VictoriaMetrics cluster services</figcaption>
 
 There is a separate dashboard for the `vmagent` service's activity. This shows the ingestion rate and resource utilization.
 
-![Screenshot of Grafana dashboard](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/getting-started-with-vm-operator/vmagent-dashboard.webp)
+![Screenshot of Grafana dashboard](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/getting-started-with-vm-operator/vmagent-dashboard.webp)
 
 <figcaption style="text-align: center; font-style: italic;">Grafana dashboard showing metrics for the vmagent service</figcaption>
 
 If you added the scrape configs, the Kubernetes dashboard will be populated with metrics; otherwise, it will be empty.
 
-![Screenshot of Grafana dashboard](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/getting-started-with-vm-operator/kubernetes-dashboard.webp)
+![Screenshot of Grafana dashboard](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/getting-started-with-vm-operator/kubernetes-dashboard.webp)
 
 <figcaption style="text-align: center; font-style: italic;">Grafana dashboard showing Kubernetes cluster metrics</figcaption>
 

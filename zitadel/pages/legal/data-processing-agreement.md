@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/legal/data-processing-agreement.mdx](https://zitadel.com/docs/legal/data-processing-agreement)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/legal/data-processing-agreement.mdx](https://zitadel.com/docs/legal/data-processing-agreement)
 
 Last updated on May 8, 2025
 

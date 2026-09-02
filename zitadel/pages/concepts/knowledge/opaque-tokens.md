@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/concepts/knowledge/opaque-tokens.mdx](https://zitadel.com/docs/concepts/knowledge/opaque-tokens)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/concepts/knowledge/opaque-tokens.mdx](https://zitadel.com/docs/concepts/knowledge/opaque-tokens)
 
 In the context of application security, robust authentication mechanisms are essential for safeguarding sensitive data and ensuring user trust.
 Opaque tokens, the default token type within the ZITADEL platform, play a crucial role in bolstering security measures.

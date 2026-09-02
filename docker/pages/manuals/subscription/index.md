@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/subscription/_index.md](https://github.com/docker/docs/blob/ca60e92629079de412f38632876ab208d84267ef/content/manuals/subscription/_index.md)
+> Commit-pinned source for Docker main: [content/manuals/subscription/_index.md](https://github.com/docker/docs/blob/ff96ad1711065cf2e9c3f1d701dad04775834f70/content/manuals/subscription/_index.md)
 
 # Overview
 
@@ -33,9 +33,7 @@ Plans come with usage entitlements that can be extended without upgrading to a d
 
 ## Manage your plans
 
-To subscribe to a new plan, you can self-serve through **Billing** in [Docker Home](https://app.docker.com), or by <a id="dkr_docs_index_sales"></a>contacting sales.
-
-To learn more about adding a new plan or upgrading an active plan, see [Manage plans](https://docs.docker.com/subscription/manage/).
+To subscribe to a new plan or upgrade an active plan, see [Manage plans](https://docs.docker.com/subscription/manage/). See [Docker plans](https://docs.docker.com/subscription/plans/docker/) to learn about Docker Team, Business, and Pro. You can also <a id="dkr_docs_index_sales"></a>contact sales.
 
 ## Next steps
 

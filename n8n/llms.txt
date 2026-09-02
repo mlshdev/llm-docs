@@ -1,6 +1,6 @@
 # n8n main
 
-> Documentation generated from the latest `main` branch commit of [n8n-io/n8n-docs](https://github.com/n8n-io/n8n-docs) and pinned to immutable source commit `afebf5d9c6ff327fa215b3e6f99627e11fc9d3f2`.
+> Documentation generated from the latest `main` branch commit of [n8n-io/n8n-docs](https://github.com/n8n-io/n8n-docs) and pinned to immutable source commit `0b69471cc64a4886de337982abd2f5d237dcd52a`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for n8n main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -37,6 +37,7 @@
 - [Create and run workflows](pages/build/understand-workflows/create-and-run-workflows.md): Source `docs/build/understand-workflows/create-and-run-workflows.md`.
 - [Save and publish workflows](pages/build/understand-workflows/save-and-publish-workflows.md): Source `docs/build/understand-workflows/save-and-publish-workflows.md`.
 - [Create and edit credentials](pages/build/understand-workflows/create-and-edit-credentials.md): Source `docs/build/understand-workflows/create-and-edit-credentials.md`.
+- [Use Gateway credits](pages/build/understand-workflows/use-gateway-credits.md): Source `docs/build/understand-workflows/use-gateway-credits.md`.
 - [Build and manage agents](pages/build/build-and-manage-agents.md): Source `docs/build/build-and-manage-agents.md`.
 - [Ways of building workflows](pages/build/ways-of-building-workflows/README.md): Source `docs/build/ways-of-building-workflows/README.md`.
 - [Use AI Assistant](pages/build/ways-of-building-workflows/ai-assistant.md): Source `docs/build/ways-of-building-workflows/ai-assistant.md`.
@@ -1166,6 +1167,9 @@
 - [Manage your data](pages/deploy/use-n8n-cloud/configure-cloud/manage-your-data.md): Source `docs/deploy/use-n8n-cloud/configure-cloud/manage-your-data.md`.
 - [Change Instance Ownership or Username](pages/deploy/use-n8n-cloud/configure-cloud/change-instance-ownership-or-username.md): Source `docs/deploy/use-n8n-cloud/configure-cloud/change-instance-ownership-or-username.md`.
 - [Cloud concurrency](pages/deploy/use-n8n-cloud/understand-concurrency.md): Source `docs/deploy/use-n8n-cloud/understand-concurrency.md`.
+- [Gateway credits](pages/deploy/use-n8n-cloud/gateway-credits/README.md): Source `docs/deploy/use-n8n-cloud/gateway-credits/README.md`.
+- [Top up Gateway credits](pages/deploy/use-n8n-cloud/gateway-credits/top-up-gateway-credits.md): Source `docs/deploy/use-n8n-cloud/gateway-credits/top-up-gateway-credits.md`.
+- [Track Gateway credit spend](pages/deploy/use-n8n-cloud/gateway-credits/track-gateway-credit-spend.md): Source `docs/deploy/use-n8n-cloud/gateway-credits/track-gateway-credit-spend.md`.
 - [Download workflows](pages/deploy/use-n8n-cloud/download-workflows.md): Source `docs/deploy/use-n8n-cloud/download-workflows.md`.
 - [n8n Hosting Documentation and Guides](pages/deploy/host-n8n/README.md): Source `docs/deploy/host-n8n/README.md`.
 - [Install options](pages/deploy/host-n8n/install-options/README.md): Source `docs/deploy/host-n8n/install-options/README.md`.

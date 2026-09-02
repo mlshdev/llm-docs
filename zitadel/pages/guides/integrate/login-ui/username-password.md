@@ -1,8 +1,8 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/guides/integrate/login-ui/username-password.mdx](https://zitadel.com/docs/guides/integrate/login-ui/username-password)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/integrate/login-ui/username-password.mdx](https://zitadel.com/docs/guides/integrate/login-ui/username-password)
 
 ## Flow
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/login-ui/username-password-flow.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/login-ui/username-password-flow.png)
 
 ## Register
 

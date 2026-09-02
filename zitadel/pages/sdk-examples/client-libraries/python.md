@@ -1,6 +1,6 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/sdk-examples/client-libraries/python.mdx](https://zitadel.com/docs/sdk-examples/client-libraries/python)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/sdk-examples/client-libraries/python.mdx](https://zitadel.com/docs/sdk-examples/client-libraries/python)
 
-![python logo](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/tech/python.svg)
+![python logo](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/tech/python.svg)
 
 This guide covers the official Zitadel Management API Client for Python (3.9+), which allows you to programmatically manage resources in your Zitadel instance.
 

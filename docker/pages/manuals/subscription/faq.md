@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/subscription/faq.md](https://github.com/docker/docs/blob/ca60e92629079de412f38632876ab208d84267ef/content/manuals/subscription/faq.md)
+> Commit-pinned source for Docker main: [content/manuals/subscription/faq.md](https://github.com/docker/docs/blob/ff96ad1711065cf2e9c3f1d701dad04775834f70/content/manuals/subscription/faq.md)
 
 # Plan FAQs
 
@@ -24,6 +24,11 @@ Docker offers two content contribution programs:
 - [Docker Verified Publisher (DVP)](https://docs.docker.com/docker-hub/repos/manage/trusted-content/dvp-program/) for commercial publishers
 
 You can also join the [Developer Preview Program](https://www.docker.com/community/get-involved/developer-preview/) or sign up for early access programs to participate in research and try new features.
+
+## How do I upgrade to Docker Pro?
+
+To upgrade to Docker Pro, go to the <a id="dkr_docs_pricing_faq_pro"></a>Docker pricing page
+and select **Buy now**.
 
 > \[!TIP]
 >

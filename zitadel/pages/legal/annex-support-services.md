@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/legal/annex-support-services.mdx](https://zitadel.com/docs/legal/annex-support-services)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/legal/annex-support-services.mdx](https://zitadel.com/docs/legal/annex-support-services)
 
 Last updated on November 15, 2023
 

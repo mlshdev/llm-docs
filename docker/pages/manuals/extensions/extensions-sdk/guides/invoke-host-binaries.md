@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/extensions/extensions-sdk/guides/invoke-host-binaries.md](https://github.com/docker/docs/blob/ca60e92629079de412f38632876ab208d84267ef/content/manuals/extensions/extensions-sdk/guides/invoke-host-binaries.md)
+> Commit-pinned source for Docker main: [content/manuals/extensions/extensions-sdk/guides/invoke-host-binaries.md](https://github.com/docker/docs/blob/ff96ad1711065cf2e9c3f1d701dad04775834f70/content/manuals/extensions/extensions-sdk/guides/invoke-host-binaries.md)
 
 In some cases, your extension may need to invoke some command from the host. For example, you
 might want to invoke the CLI of your cloud provider to create a new resource, or the CLI of a tool your extension

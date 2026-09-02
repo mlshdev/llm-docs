@@ -1,4 +1,4 @@
-> Release-pinned source for Grafana v13.2.0: [docs/sources/datasources/mssql/troubleshooting/index.md](https://github.com/grafana/grafana/blob/f681b1359f6a0b8ecb9f2c49a88ac72b75bde73b/docs/sources/datasources/mssql/troubleshooting/index.md)
+> Release-pinned source for Grafana v13.2.1: [docs/sources/datasources/mssql/troubleshooting/index.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/datasources/mssql/troubleshooting/index.md)
 
 # Troubleshoot Microsoft SQL Server data source issues
 
@@ -179,7 +179,7 @@ These errors occur when there are issues with authentication credentials or perm
 
 ### Login failed for user '' (empty username)
 
-**Error message:** "Login failed for user ''"—the saved username appears blank when Grafana connects to SQL Server.
+**Error message:** "Login failed for user ''". The saved username appears blank when Grafana connects to SQL Server.
 
 **Cause:** A known issue on certain Grafana release channels caused the SQL Server Authentication username to appear saved in the UI but send an empty string to the server during connection. This was identified on the "fast" release channel.
 
@@ -239,7 +239,7 @@ These errors occur when there are issues with authentication credentials or perm
 >
 > Kerberos authentication is not supported in Grafana Cloud. Use SQL Server Authentication or Azure Entra ID instead.
 
-### KDC\_ERR\_C\_PRINCIPAL\_UNKNOWN with Availability Group Listeners
+### `KDC_ERR_C_PRINCIPAL_UNKNOWN` with Availability Group listeners
 
 **Error message:** "KDC\_ERR\_C\_PRINCIPAL\_UNKNOWN" when connecting through a SQL Server Availability Group Listener
 
@@ -341,7 +341,7 @@ These errors occur when there are issues with query syntax or configuration.
 **Solution:**
 
 1. Verify macro syntax: use `$__timeFilter(column)` not `$_timeFilter(column)`.
-2. Macros don't work inside stored procedures—use explicit date parameters instead.
+2. Macros don't work inside stored procedures. Use explicit date parameters instead.
 3. Check that the column name passed to macros exists in your table.
 4. View the expanded query by clicking **Generated SQL** after running the query to debug macro expansion.
 
@@ -364,7 +364,7 @@ These errors occur when there are issues with query syntax or configuration.
    FROM your_table
    ```
 
-4. Don't pass timezone parameters to time macros—they're not supported.
+4. Don't pass timezone parameters to time macros. They're not supported.
 
 ### Query returns too many rows
 
@@ -524,6 +524,7 @@ If you continue to experience issues after following this troubleshooting guide:
 When reporting issues, include:
 
 - Grafana version
+- Microsoft SQL Server data source plugin version, found on the **Administration > Plugins** page. The plugin updates independently of Grafana releases.
 - SQL Server version
 - Error messages (redact sensitive information)
 - Steps to reproduce

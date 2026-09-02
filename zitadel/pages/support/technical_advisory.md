@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/support/technical_advisory.mdx](https://zitadel.com/docs/support/technical_advisory)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/support/technical_advisory.mdx](https://zitadel.com/docs/support/technical_advisory)
 
 Technical advisories are notices that report major issues with ZITADEL Self-Hosted or the ZITADEL Cloud platform that could potentially impact security or stability in production environments.
 These advisories may include details about the nature of the issue, its potential impact, and recommended mitigation actions.

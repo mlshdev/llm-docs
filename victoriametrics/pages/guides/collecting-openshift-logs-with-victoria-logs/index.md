@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.150.0: [docs/guides/collecting-openshift-logs-with-victoria-logs/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/collecting-openshift-logs-with-victoria-logs/_index.md)
+> Release-pinned source for VictoriaMetrics v1.151.0: [docs/guides/collecting-openshift-logs-with-victoria-logs/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/collecting-openshift-logs-with-victoria-logs/_index.md)
 
 This guide explains how to collect and store logs from an OpenShift cluster in VictoriaLogs.
 
@@ -195,10 +195,10 @@ To install the operator:
 
 1. Navigate to **Ecosystem** > **Software Catalog**
 2. Search for "OpenShift Logging" and select the operator.
-   ![Screenshot of OpenShift web console](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/collecting-openshift-logs-with-victoria-logs/software-catalog-openshift-logging-1.webp)
+   ![Screenshot of OpenShift web console](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/collecting-openshift-logs-with-victoria-logs/software-catalog-openshift-logging-1.webp)
 3. Press **Install**.
 4. Confirm the settings and press **Install** again.
-   ![Screenshot of OpenShift web console](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/collecting-openshift-logs-with-victoria-logs/software-catalog-openshift-logging-options-3.webp)
+   ![Screenshot of OpenShift web console](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/collecting-openshift-logs-with-victoria-logs/software-catalog-openshift-logging-options-3.webp)
 
 ## Configure logs forwarding
 
@@ -274,9 +274,9 @@ Alternatively, you can configure log forwarding in the OpenShift web console. To
 3. Find **Red Hat OpenShift Logging**
 4. Navigate to **ClusterLogForwarders**.
 5. Click on **Create ClusterLogForwarder**.
-   ![Screenshot of OpenShift web console](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/collecting-openshift-logs-with-victoria-logs/software-catalog-openshift-logging-forwarder-5.webp)
+   ![Screenshot of OpenShift web console](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/collecting-openshift-logs-with-victoria-logs/software-catalog-openshift-logging-forwarder-5.webp)
 6. Use the form to configure each type of forwarder.
-   ![Screenshot of OpenShift web console](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/collecting-openshift-logs-with-victoria-logs/forwarder-form.webp)
+   ![Screenshot of OpenShift web console](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/collecting-openshift-logs-with-victoria-logs/forwarder-form.webp)
 7. Click **Create**
 
 ## Verify logs ingestion
@@ -304,14 +304,14 @@ kubectl -n vl port-forward svc/vl-victoria-logs-single-server 9428:9428
 
 Open your browser in `http://localhost:9428/select/vmui/#/overview` and verify that logs are being collected. This overview page shows the number of log entries being consumed in real time.
 
-![Screenshot of VMUI for VictoriaLogs](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/collecting-openshift-logs-with-victoria-logs/vmui-overview.webp)
+![Screenshot of VMUI for VictoriaLogs](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/collecting-openshift-logs-with-victoria-logs/vmui-overview.webp)
 
 <figcaption style="text-align: center; font-style: italic;">Overview pane in VMUI</figcaption>
 
 You can query your logs in the **Query** tab, found in `http://localhost:9428/select/vmui`.
 You can filter streams on the left side pane to filter logs and use [LogsQL](https://docs.victoriametrics.com/victorialogs/logsql/) to search for entries. Note that logs will have `log_type` attached to them to distinguish between different types of logs.
 
-![Screenshot of VMUI for VictoriaLogs](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/collecting-openshift-logs-with-victoria-logs/vmui-query-filters.webp)
+![Screenshot of VMUI for VictoriaLogs](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/collecting-openshift-logs-with-victoria-logs/vmui-query-filters.webp)
 
 <figcaption style="text-align: center; font-style: italic;">Query pane in VMUI</figcaption>
 

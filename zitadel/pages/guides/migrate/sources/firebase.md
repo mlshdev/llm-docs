@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/guides/migrate/sources/firebase.mdx](https://zitadel.com/docs/guides/migrate/sources/firebase)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/migrate/sources/firebase.mdx](https://zitadel.com/docs/guides/migrate/sources/firebase)
 
 ## 1. Introduction
 

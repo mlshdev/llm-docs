@@ -1,8 +1,8 @@
-# VictoriaMetrics v1.150.0
+# VictoriaMetrics v1.151.0
 
-> Documentation generated from the latest stable release of [VictoriaMetrics/VictoriaMetrics](https://github.com/VictoriaMetrics/VictoriaMetrics) and pinned to immutable source commit `413f95d65f08d2c3fb03e227b1f3ba42884ca796`.
+> Documentation generated from the latest stable release of [VictoriaMetrics/VictoriaMetrics](https://github.com/VictoriaMetrics/VictoriaMetrics) and pinned to immutable source commit `83fc70c6aced8c99a0a445a872ee891191b98517`.
 
-- [Full documentation](llms-full.txt): Complete normalized corpus for VictoriaMetrics v1.150.0.
+- [Full documentation](llms-full.txt): Complete normalized corpus for VictoriaMetrics v1.151.0.
 - [Provenance manifest](manifest.json): Release, commit, document count, and generation notes.
 - Pages follow the Hugo `menu.docs` navigation declared in docs/ at the immutable release tag.
 - Fragments pulled in by `{{% content %}}` are inlined into the page that renders them and are not published separately.

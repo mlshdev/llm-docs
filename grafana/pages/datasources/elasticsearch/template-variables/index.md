@@ -1,4 +1,4 @@
-> Release-pinned source for Grafana v13.2.0: [docs/sources/datasources/elasticsearch/template-variables/index.md](https://github.com/grafana/grafana/blob/f681b1359f6a0b8ecb9f2c49a88ac72b75bde73b/docs/sources/datasources/elasticsearch/template-variables/index.md)
+> Release-pinned source for Grafana v13.2.1: [docs/sources/datasources/elasticsearch/template-variables/index.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/datasources/elasticsearch/template-variables/index.md)
 
 # Elasticsearch template variables
 
@@ -6,7 +6,7 @@ Instead of hard-coding details such as server, application, and sensor names in 
 Grafana lists these variables in drop-down select boxes at the top of the dashboard to help you change the data displayed in your dashboard.
 Grafana refers to such variables as template variables.
 
-For an introduction to templating and template variables, refer to the [Templating](https://grafana.com/docs/grafana/v13.2/dashboards/variables/) and [Add and manage variables](https://grafana.com/docs/grafana/v13.2/dashboards/variables/add-template-variables/) documentation.
+For an introduction to templating and template variables, refer to the [Templating](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/variables/) and [Add and manage variables](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/variables/add-template-variables/) documentation.
 
 ## Use filters
 
@@ -34,7 +34,7 @@ The Elasticsearch data source supports two variable syntaxes for use in the **Qu
 - `[[varname]]`, such as `hostname:[[hostname]]`
 
 When the *Multi-value* or *Include all value* options are enabled, Grafana converts the labels from plain text to a Lucene-compatible condition.
-For details, refer to the [Multi-value variables](https://grafana.com/docs/grafana/v13.2/dashboards/variables/add-template-variables/#multi-value-variables) documentation.
+For details, refer to the [Multi-value variables](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/variables/add-template-variables/#multi-value-variables) documentation.
 
 ## Use variables in queries
 

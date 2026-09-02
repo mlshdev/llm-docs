@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/self-hosting/deploy/kubernetes/caching.mdx](https://zitadel.com/docs/self-hosting/deploy/kubernetes/caching)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/self-hosting/deploy/kubernetes/caching.mdx](https://zitadel.com/docs/self-hosting/deploy/kubernetes/caching)
 
 This guide explains how to connect Zitadel caches to Redis or Valkey on Kubernetes.
 

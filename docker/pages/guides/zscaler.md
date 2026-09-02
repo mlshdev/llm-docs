@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/zscaler.md](https://github.com/docker/docs/blob/ca60e92629079de412f38632876ab208d84267ef/content/guides/zscaler.md)
+> Commit-pinned source for Docker main: [content/guides/zscaler.md](https://github.com/docker/docs/blob/ff96ad1711065cf2e9c3f1d701dad04775834f70/content/guides/zscaler.md)
 
 # Using Docker with Zscaler
 

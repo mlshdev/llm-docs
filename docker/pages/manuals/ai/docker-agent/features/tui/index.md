@@ -1,8 +1,8 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/features/tui/index.md](https://github.com/docker/docs/blob/ca60e92629079de412f38632876ab208d84267ef/_vendor/github.com/docker/docker-agent/docs/features/tui/index.md)
+> Commit-pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/features/tui/index.md](https://github.com/docker/docs/blob/ff96ad1711065cf2e9c3f1d701dad04775834f70/_vendor/github.com/docker/docker-agent/docs/features/tui/index.md)
 
 *Docker Agent's default interface is a rich, interactive terminal UI with file attachments, themes, session management, and more.*
 
-![Docker Agent TUI in action showing an interactive agent session](https://raw.githubusercontent.com/docker/docs/ca60e92629079de412f38632876ab208d84267ef/_vendor/github.com/docker/docker-agent/docs/demo.gif)
+![Docker Agent TUI in action showing an interactive agent session](https://raw.githubusercontent.com/docker/docs/ff96ad1711065cf2e9c3f1d701dad04775834f70/_vendor/github.com/docker/docker-agent/docs/demo.gif)
 
 ## Launching the TUI
 

@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/guides/manage/user/reg-create-user.mdx](https://zitadel.com/docs/guides/manage/user/reg-create-user)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/manage/user/reg-create-user.mdx](https://zitadel.com/docs/guides/manage/user/reg-create-user)
 
 The ZITADEL API has different possibilities to create users.
 This can be used, if you are building your own registration page.

@@ -1,4 +1,4 @@
-> Release-pinned source for Grafana v13.2.0: [docs/sources/datasources/mssql/query-editor/index.md](https://github.com/grafana/grafana/blob/f681b1359f6a0b8ecb9f2c49a88ac72b75bde73b/docs/sources/datasources/mssql/query-editor/index.md)
+> Release-pinned source for Grafana v13.2.1: [docs/sources/datasources/mssql/query-editor/index.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/datasources/mssql/query-editor/index.md)
 
 # Microsoft SQL Server query editor
 
@@ -214,7 +214,7 @@ This allows you to add any number of parameters.
 
 For backward compatibility, there's an exception to the above rule for queries that return three columns and include a string column named `metric`.
 Instead of transforming the `metric` column into field labels, it becomes the field name, and then the series name is formatted as the value of the `metric` column.
-See the example with the `metric` column below.
+Refer to the example with the `metric` column below.
 
 To optionally customize the default series name formatting, refer to [Standard options definitions](https://grafana.com/docs/grafana/v13.2/panels-visualizations/configure-standard-options/#display-name).
 

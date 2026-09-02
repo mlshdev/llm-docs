@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/apis/observability/metrics.mdx](https://zitadel.com/docs/apis/observability/metrics)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/apis/observability/metrics.mdx](https://zitadel.com/docs/apis/observability/metrics)
 
 ZITADEL provides a `metrics` endpoint with the help of the [opentelemetry-go](https://github.com/open-telemetry/opentelemetry-go) package.
 

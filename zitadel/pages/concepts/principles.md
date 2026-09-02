@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/concepts/principles.mdx](https://zitadel.com/docs/concepts/principles)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/concepts/principles.mdx](https://zitadel.com/docs/concepts/principles)
 
 ## ZITADEL engineering and design principles
 

@@ -1,6 +1,9 @@
-> Commit-pinned source for n8n main: [docs/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatmoonshot.md](https://github.com/n8n-io/n8n-docs/blob/afebf5d9c6ff327fa215b3e6f99627e11fc9d3f2/docs/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatmoonshot.md)
+> Commit-pinned source for n8n main: [docs/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatmoonshot.md](https://github.com/n8n-io/n8n-docs/blob/0b69471cc64a4886de337982abd2f5d237dcd52a/docs/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatmoonshot.md)
 
 # Moonshot Kimi Chat Model node
+
+> **Info**
+> On n8n Cloud, you can use the Moonshot Kimi Chat Model node with [Gateway credits](https://docs.n8n.io/deploy/use-n8n-cloud/gateway-credits) instead of your own Moonshot API key. Select **Use Gateway credits** in the node's credential field to run the node without a Moonshot account.
 
 Use the Moonshot Kimi Chat Model node to send chat requests to the Kimi chat API and generate conversational responses. Use it when you need an AI chat model in a workflow. For example, you can power assistants, build multi-step AI chains, or produce model-driven content with tunable sampling and token settings.
 

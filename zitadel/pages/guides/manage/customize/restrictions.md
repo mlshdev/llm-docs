@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/guides/manage/customize/restrictions.mdx](https://zitadel.com/docs/guides/manage/customize/restrictions)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/manage/customize/restrictions.mdx](https://zitadel.com/docs/guides/manage/customize/restrictions)
 
 New self-hosted and [ZITADEL Cloud instances](https://zitadel.com/admin) are unrestricted by default.
 Self-hosters can change this default using the DefaultInstance.Restrictions settings section.

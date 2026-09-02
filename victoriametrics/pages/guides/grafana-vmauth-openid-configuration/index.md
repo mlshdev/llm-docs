@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.150.0: [docs/guides/grafana-vmauth-openid-configuration/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/grafana-vmauth-openid-configuration/_index.md)
+> Release-pinned source for VictoriaMetrics v1.151.0: [docs/guides/grafana-vmauth-openid-configuration/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/grafana-vmauth-openid-configuration/_index.md)
 
 Using [Grafana](https://grafana.com/) with [vmauth](https://docs.victoriametrics.com/victoriametrics/vmauth/) is an effective way to provide [multi-tenant](https://docs.victoriametrics.com/victoriametrics/cluster-victoriametrics/#multitenancy) access to your metrics, logs, and traces.
 vmauth provides a way to authenticate users using [JWT tokens](https://en.wikipedia.org/wiki/JSON_Web_Token) *(available from v1.138.0)* issued by an external identity provider.
@@ -101,19 +101,19 @@ Once Keycloak is available, follow the steps below to configure the OIDC client 
    - Use `OpenID Connect` as `Client Type`.
    - Specify `grafana` as `Client ID`.
    - Click `Next`.
-     ![Create client 1](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/grafana-vmauth-openid-configuration/create-client-1.webp)
+     ![Create client 1](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/grafana-vmauth-openid-configuration/create-client-1.webp)
 4. Enable `Client authentication`
    - Enable `Authorization`.
    - Enable `Direct access grants` (this is only required for testing the token but it can be disabled in production)
-     ![Create client 2](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/grafana-vmauth-openid-configuration/create-client-2.webp)
+     ![Create client 2](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/grafana-vmauth-openid-configuration/create-client-2.webp)
    - Click `Next`.
 5. Add the Grafana URL as `Root URL`. For example, `http://grafana:3000`.
-   ![Create client 3](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/grafana-vmauth-openid-configuration/create-client-3.webp)
+   ![Create client 3](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/grafana-vmauth-openid-configuration/create-client-3.webp)
    - Click `Save`.
 6. Go to `Clients` -> `grafana` -> `Client scopes`.
-   ![Create mapper 1](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/grafana-vmauth-openid-configuration/create-mapper-1.webp)
+   ![Create mapper 1](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/grafana-vmauth-openid-configuration/create-mapper-1.webp)
    - Click on `grafana-dedicated` -> `Configure a new mapper` -> `User attribute`.
-     ![Create mapper 2](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/grafana-vmauth-openid-configuration/create-mapper-2.webp)
+     ![Create mapper 2](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/grafana-vmauth-openid-configuration/create-mapper-2.webp)
 7. Configure the mapper as follows:
    - Set `Name` to `vm_access`.
    - Set `User Attribute` to `vm_access`.
@@ -121,7 +121,7 @@ Once Keycloak is available, follow the steps below to configure the OIDC client 
    - Set `Claim JSON Type` to `JSON`.
    - Enable `Add to ID token` and `Add to access token`.
 
-![Create mapper 3](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/grafana-vmauth-openid-configuration/create-mapper-3.webp)
+![Create mapper 3](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/grafana-vmauth-openid-configuration/create-mapper-3.webp)
 
 - Click `Save`.
 
@@ -130,7 +130,7 @@ Once Keycloak is available, follow the steps below to configure the OIDC client 
 1. Go to `Realm settings` -> `User profile`.
    - Click `Create attribute`.
    - Specify `vm_access` as `Attribute [Name]`.
-     ![User attributes](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/grafana-vmauth-openid-configuration/create-attribute.webp)
+     ![User attributes](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/grafana-vmauth-openid-configuration/create-attribute.webp)
    - Click `Create`.
 
 2. Go to `Users` -> `Add user`.
@@ -139,7 +139,7 @@ Once Keycloak is available, follow the steps below to configure the OIDC client 
    - Specify `test-dev@example.com` as `Email`.
    - Specify `vm_access` as `{"metrics_account_id": 1, "metrics_project_id": 2, "metrics_extra_labels": ["team=dev"]}`.
    - Press `Create`
-     ![User attributes](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/grafana-vmauth-openid-configuration/user-attributes.webp)
+     ![User attributes](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/grafana-vmauth-openid-configuration/user-attributes.webp)
    - Go to `Users` -> `test-dev` user -> `Credentials` tab.
    - Press `Set Password`.
    - Type the password `testpass`.
@@ -159,7 +159,7 @@ Gather the following information needed to configure Grafana:
 1. The Realm name must be `master`. To get the name, go to `Realm settings` -> `General` and copy the `Name`.
 2. The Client ID must be `grafana`. To get the ID, go to `Clients` -> `grafana` -> `Settings` and copy the `Client ID`.
 3. The Client Secret is dynamically generated. To get the secret, go to `Clients` -> `grafana` -> `Credentials` and copy the `Client Secret`.<br>
-   ![Client secret](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/grafana-vmauth-openid-configuration/client-secret.webp) <br>
+   ![Client secret](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/grafana-vmauth-openid-configuration/client-secret.webp) <br>
 
 Test that everything is working by requesting a token using `curl`:
 
@@ -235,23 +235,23 @@ vmagent will write data into VictoriaMetrics single-node and cluster (with tenan
 # compose.yaml
 services:
   vmsingle:
-    image: victoriametrics/victoria-metrics:v1.149.0
+    image: victoriametrics/victoria-metrics:v1.150.0
 
   vmstorage:
-    image: victoriametrics/vmstorage:v1.149.0-cluster
+    image: victoriametrics/vmstorage:v1.150.0-cluster
 
   vminsert:
-    image: victoriametrics/vminsert:v1.149.0-cluster
+    image: victoriametrics/vminsert:v1.150.0-cluster
     command:
       - -storageNode=vmstorage:8400
 
   vmselect:
-    image: victoriametrics/vmselect:v1.149.0-cluster
+    image: victoriametrics/vmselect:v1.150.0-cluster
     command:
       - -storageNode=vmstorage:8401
 
   vmagent:
-    image: victoriametrics/vmagent:v1.149.0
+    image: victoriametrics/vmagent:v1.150.0
     volumes:
       - ./scrape.yaml:/etc/vmagent/config.yaml
     command:
@@ -304,7 +304,7 @@ Now add the vmauth service to `compose.yaml`:
 # compose.yaml
 services:
   vmauth:
-    image: docker.io/victoriametrics/vmauth:v1.149.0
+    image: docker.io/victoriametrics/vmauth:v1.150.0
     ports:
       - 8427:8427
     volumes:
@@ -412,13 +412,13 @@ use_refresh_token = true
 
 After starting Grafana with the new config, you should be able to log in <http://grafana:3000> using your [identity provider](https://docs.victoriametrics.com/guides/grafana-vmauth-openid-configuration/#identity-provider).
 
-![Grafana login](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/grafana-vmauth-openid-configuration/grafana-login.webp)
+![Grafana login](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/grafana-vmauth-openid-configuration/grafana-login.webp)
 
 ### Datasource
 
 Create two Prometheus datasources in Grafana with the following URLs: `http://vmauth:8427/select` and `http://vmauth:8427/single`, pointing to the `vmselect` and `vmsingle` services, respectively. Make sure the authentication method is set to `Forward OAuth identity`.
 
-![Prometheus datasource](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/grafana-vmauth-openid-configuration/grafana-datasource-prometheus.webp)
+![Prometheus datasource](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/grafana-vmauth-openid-configuration/grafana-datasource-prometheus.webp)
 
 You can also use the VictoriaMetrics [Grafana datasource](https://github.com/VictoriaMetrics/victoriametrics-datasource) plugin.
 See installation instructions in [Grafana datasource - Installation](https://docs.victoriametrics.com/victoriametrics/integrations/grafana/#victoriametrics-datasource).
@@ -429,7 +429,7 @@ Users with the `vm_access` claim will be able to query metrics from the specifie
 
 The Grafana datasources configuration should be as follows:
 
-![Test datasources](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/grafana-vmauth-openid-configuration/grafana-test-datasources.webp)
+![Test datasources](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/grafana-vmauth-openid-configuration/grafana-test-datasources.webp)
 
 <figcaption style="text-align: center; font-style: italic;">Grafana vmauth datasources</figcaption>
 
@@ -438,13 +438,13 @@ Both data sources should return the same metrics.
 
 The only difference is the filter: for the VictoriaMetrics cluster, the `vmauth-cluster` data source must restrict results by `tenant=1:2`.
 
-![Cluster dev](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/grafana-vmauth-openid-configuration/grafana-cluster-dev.webp)
+![Cluster dev](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/grafana-vmauth-openid-configuration/grafana-cluster-dev.webp)
 
 <figcaption style="text-align: center; font-style: italic;">Logged in as dev user to Grafana dashboard on VictoriaMetrics Cluster</figcaption>
 
 While on VictoriaMetrics single `vmauth-single` must apply the `team=dev` label filter instead.
 
-![Single dev](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/grafana-vmauth-openid-configuration/grafana-single-dev.webp)
+![Single dev](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/grafana-vmauth-openid-configuration/grafana-single-dev.webp)
 
 <figcaption style="text-align: center; font-style: italic;">Logged in as dev user to Grafana dashboard on VictoriaMetrics Single</figcaption>
 
@@ -452,13 +452,13 @@ Let's log in as an admin user. The `vmauth-single` data source should differ fro
 
 The only difference is the filter: in the VictoriaMetrics cluster `vmauth-cluster`, the data source must restrict results by `tenant=1:2`.
 
-![Cluster admin](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/grafana-vmauth-openid-configuration/grafana-cluster-admin.webp)
+![Cluster admin](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/grafana-vmauth-openid-configuration/grafana-cluster-admin.webp)
 
 <figcaption style="text-align: center; font-style: italic;">Logged in as admin user to Grafana dashboard on VictoriaMetrics Cluster</figcaption>
 
 While in VictoriaMetrics single `vmauth-single` must apply the `team=admin` label filter instead.
 
-![Cluster admin](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/grafana-vmauth-openid-configuration/grafana-single-admin.webp)
+![Cluster admin](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/grafana-vmauth-openid-configuration/grafana-single-admin.webp)
 
 <figcaption style="text-align: center; font-style: italic;">Logged in as admin user to Grafana dashboard on VictoriaMetrics Single</figcaption>
 

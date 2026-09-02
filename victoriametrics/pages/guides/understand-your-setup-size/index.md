@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.150.0: [docs/guides/understand-your-setup-size/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/understand-your-setup-size/_index.md)
+> Release-pinned source for VictoriaMetrics v1.151.0: [docs/guides/understand-your-setup-size/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/understand-your-setup-size/_index.md)
 
 This guide is based on capacity planning for [Single-Node](https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/#capacity-planning),
 [Cluster](https://docs.victoriametrics.com/victoriametrics/cluster-victoriametrics/#capacity-planning)

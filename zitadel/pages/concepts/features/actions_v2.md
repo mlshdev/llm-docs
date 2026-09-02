@@ -1,16 +1,6 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/concepts/features/actions_v2.mdx](https://zitadel.com/docs/concepts/features/actions_v2)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/concepts/features/actions_v2.mdx](https://zitadel.com/docs/concepts/features/actions_v2)
 
 By using ZITADEL Actions v2, you can modify ZITADEL's behavior on specific API calls, events, or functions. This is useful when you have special business requirements that ZITADEL does not support out-of-the-box.
-
-> **Note**
->
-> We're working on Actions continuously. In the [roadmap](https://zitadel.com/roadmap), you can see how we plan to expand and improve this feature. Please tell us about your needs to help us prioritize further improvements and features.
-
-> **Note**
->
-> To use Actions v2, activate the "Actions" [feature flag](https://zitadel.com/docs/reference/api/feature/zitadel.feature.v2.FeatureService.SetInstanceFeatures) in order to manage the related resources.
->
-> Actions v2 will always be executed if available, even if the feature flag is switched off. To remove any Actions v2, the related Execution must be removed.
 
 ## Why Actions?
 

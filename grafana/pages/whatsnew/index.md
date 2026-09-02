@@ -1,4 +1,4 @@
-> Release-pinned source for Grafana v13.2.0: [docs/sources/whatsnew/_index.md](https://github.com/grafana/grafana/blob/f681b1359f6a0b8ecb9f2c49a88ac72b75bde73b/docs/sources/whatsnew/_index.md)
+> Release-pinned source for Grafana v13.2.1: [docs/sources/whatsnew/_index.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/whatsnew/_index.md)
 
 # What's new in Grafana
 
@@ -16,6 +16,7 @@ For a complete list of every change, with links to pull requests and related iss
 
 ## Grafana 13
 
+- [What's new in 13.2](https://grafana.com/docs/grafana/v13.2/whatsnew/whats-new-in-v13-2)
 - [What's new in 13.1](https://grafana.com/docs/grafana/v13.2/whatsnew/whats-new-in-v13-1)
 - [What's new in 13.0](https://grafana.com/docs/grafana/v13.2/whatsnew/whats-new-in-v13-0)
 

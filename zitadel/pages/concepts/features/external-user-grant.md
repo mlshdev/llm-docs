@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/concepts/features/external-user-grant.mdx](https://zitadel.com/docs/concepts/features/external-user-grant)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/concepts/features/external-user-grant.mdx](https://zitadel.com/docs/concepts/features/external-user-grant)
 
 > **Terminology update**
 >
@@ -8,7 +8,7 @@ ZITADEL's external user role assignment is a feature that allows you to grant ac
 This is useful in scenarios where you want to collaborate with external users without needing them to be part of your organization.
 By using external user role assignments, you can streamline collaboration with external users while maintaining control over access to your projects within ZITADEL.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/concepts/features/external-user-grant.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/concepts/features/external-user-grant.png)
 
 ## Where to store users
 

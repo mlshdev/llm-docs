@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/legal/policies/rate-limit-policy.mdx](https://zitadel.com/docs/legal/policies/rate-limit-policy)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/legal/policies/rate-limit-policy.mdx](https://zitadel.com/docs/legal/policies/rate-limit-policy)
 
 Last updated on February 24, 2025
 

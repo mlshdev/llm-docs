@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/legal/subprocessors.mdx](https://zitadel.com/docs/legal/subprocessors)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/legal/subprocessors.mdx](https://zitadel.com/docs/legal/subprocessors)
 
 Last updated on December 5, 2025.
 

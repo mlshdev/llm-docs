@@ -1,17 +1,17 @@
-> Release-pinned source for VictoriaMetrics v1.150.0: [docs/anomaly-detection/guides/guide-vmanomaly-vmalert/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/guides/guide-vmanomaly-vmalert/_index.md)
+> Release-pinned source for VictoriaMetrics v1.151.0: [docs/anomaly-detection/guides/guide-vmanomaly-vmalert/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/guides/guide-vmanomaly-vmalert/_index.md)
 
 **Prerequisites**:
 
 - To use *vmanomaly*, part of the enterprise package, a license key is required. Obtain your key [here](https://victoriametrics.com/products/enterprise/trial/) for this tutorial or for enterprise use.
 - In the tutorial, we'll be using the following VictoriaMetrics components:
-  - [VictoriaMetrics Single-Node](https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/) (v1.149.0)
-  - [vmalert](https://docs.victoriametrics.com/victoriametrics/vmalert/) (v1.149.0)
-  - [vmagent](https://docs.victoriametrics.com/victoriametrics/vmagent/) (v1.149.0)
+  - [VictoriaMetrics Single-Node](https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/) (v1.150.0)
+  - [vmalert](https://docs.victoriametrics.com/victoriametrics/vmalert/) (v1.150.0)
+  - [vmagent](https://docs.victoriametrics.com/victoriametrics/vmagent/) (v1.150.0)
 - [Grafana](https://grafana.com/) (v12.2.0)
 - [Docker](https://docs.docker.com/get-docker/) and [Docker Compose](https://docs.docker.com/compose/)
 - [Node exporter](https://github.com/prometheus/node_exporter#node-exporter) (v1.9.1) and [Alertmanager](https://prometheus.io/docs/alerting/latest/alertmanager/) (v0.28.1)
 
-![Typical vmanomaly observability pipeline](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/guides/guide-vmanomaly-vmalert/guide-vmanomaly-vmalert_overview.svg)
+![Typical vmanomaly observability pipeline](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/guides/guide-vmanomaly-vmalert/guide-vmanomaly-vmalert_overview.svg)
 
 > **Configurations used throughout this guide can be found [here](https://github.com/VictoriaMetrics/VictoriaMetrics/tree/master/deployment/docker/vmanomaly/vmanomaly-integration/)**
 
@@ -93,7 +93,7 @@ In this context, the metric `node_cpu_seconds_total` provides a comprehensive br
 The `node_cpu_seconds_total` metric is classified as a [counter](https://docs.victoriametrics.com/victoriametrics/keyconcepts/#counter) type. To analyze the duration each CPU core spends in these modes, it is necessary to compute the rate of change per second using the [rate function](https://docs.victoriametrics.com/victoriametrics/metricsql/#rate): `rate(node_cpu_seconds_total)`. For a more refined and smoother aggregation of data by mode, we apply the sum function. The resulting query is formulated as follows: `sum(rate(node_cpu_seconds_total[5m])) by (mode, instance, job)`.
 
 Below is an illustrative example of how this query might be visualized in Grafana:
-![node\_cpu\_rate\_graph](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/guides/guide-vmanomaly-vmalert/guide-vmanomaly-vmalert-query.webp)
+![node\_cpu\_rate\_graph](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/guides/guide-vmanomaly-vmalert/guide-vmanomaly-vmalert-query.webp)
 
 This query will yield a total of eight time series, each corresponding to a CPU mode. The number of series is unaffected by the number of CPU cores, due to the `by` aggregation applied. These series serve as the input for `vmanomaly`, where the service independently fits a separate instance of the configured model type to each of time series.
 
@@ -308,7 +308,7 @@ Let's wrap it all up together into the `docker-compose.yml` file.
 services:
   vmagent:
     container_name: vmagent
-    image: victoriametrics/vmagent:v1.149.0
+    image: victoriametrics/vmagent:v1.150.0
     depends_on:
       - "victoriametrics"
     ports:
@@ -325,7 +325,7 @@ services:
 
   victoriametrics:
     container_name: victoriametrics
-    image: victoriametrics/victoria-metrics:v1.149.0
+    image: victoriametrics/victoria-metrics:v1.150.0
     ports:
       - 8428:8428
     volumes:
@@ -357,7 +357,7 @@ services:
 
   vmalert:
     container_name: vmalert
-    image: victoriametrics/vmalert:v1.149.0
+    image: victoriametrics/vmalert:v1.150.0
     depends_on:
       - "victoriametrics"
     ports:
@@ -379,7 +379,7 @@ services:
     restart: always
   vmanomaly:
     container_name: vmanomaly
-    image: victoriametrics/vmanomaly:v1.30.2
+    image: victoriametrics/vmanomaly:v1.30.4
     depends_on:
       - "victoriametrics"
     ports:
@@ -428,7 +428,7 @@ networks:
 
 Before running our docker-compose make sure that your directory contains all required files:
 
-![all files](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/guides/guide-vmanomaly-vmalert/guide-vmanomaly-vmalert_files.webp)
+![all files](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/guides/guide-vmanomaly-vmalert/guide-vmanomaly-vmalert_files.webp)
 
 This docker-compose file will pull docker images,  set up each service and run them all together with the command:
 
@@ -460,7 +460,7 @@ Each of these metrics will contain same labels our query `sum(rate(node_cpu_seco
 ### Anomaly scores for each metric with its according labels.
 
 Query: `anomaly_score`
-![Anomaly score graph](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/guides/guide-vmanomaly-vmalert/guide-vmanomaly-vmalert_anomaly-score.webp)
+![Anomaly score graph](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/guides/guide-vmanomaly-vmalert/guide-vmanomaly-vmalert_anomaly-score.webp)
 
 <br>Check out if the anomaly score is high for datapoints you think are anomalies. If not, you can try other parameters in the config file or try other model type.
 
@@ -470,7 +470,7 @@ As you may notice a lot of data shows anomaly score greater than 1. It is expect
 
 Queries: `yhat_lower`, `yhat_upper` and `yhat`
 
-![yhat lower and yhat upper](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/guides/guide-vmanomaly-vmalert/guide-vmanomaly-vmalert-boundaries.webp)
+![yhat lower and yhat upper](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/guides/guide-vmanomaly-vmalert/guide-vmanomaly-vmalert-boundaries.webp)
 
 Boundaries of 'normal' metric values according to model inference.
 
@@ -478,10 +478,10 @@ Boundaries of 'normal' metric values according to model inference.
 
 On the page `http://localhost:8880/vmalert/groups` you can find our configured Alerting rule:
 
-![alert rule](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/guides/guide-vmanomaly-vmalert/guide-vmanomaly-vmalert_alert-rule.webp)
+![alert rule](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/guides/guide-vmanomaly-vmalert/guide-vmanomaly-vmalert_alert-rule.webp)
 
 According to the rule configured for vmalert we will see Alert when anomaly score exceed 1. You will see an alert on Alert tab. `http://localhost:8880/vmalert/alerts`:
-![alerts firing](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/anomaly-detection/guides/guide-vmanomaly-vmalert/guide-vmanomaly-vmalert_alerts-firing.webp)
+![alerts firing](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/guides/guide-vmanomaly-vmalert/guide-vmanomaly-vmalert_alerts-firing.webp)
 
 ## 10. Conclusion
 

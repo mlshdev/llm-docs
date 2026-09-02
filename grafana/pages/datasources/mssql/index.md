@@ -1,8 +1,10 @@
-> Release-pinned source for Grafana v13.2.0: [docs/sources/datasources/mssql/_index.md](https://github.com/grafana/grafana/blob/f681b1359f6a0b8ecb9f2c49a88ac72b75bde73b/docs/sources/datasources/mssql/_index.md)
+> Release-pinned source for Grafana v13.2.1: [docs/sources/datasources/mssql/_index.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/datasources/mssql/_index.md)
 
 # Microsoft SQL Server data source
 
-Microsoft SQL Server (MSSQL) is one of the most widely used relational databases for business applications, analytics, and operational workloads. The built-in MSSQL data source lets you query your existing SQL Server instance directly from Grafana, no data migration or additional plugins required.
+Microsoft SQL Server (MSSQL) is one of the most widely used relational databases for business applications, analytics, and operational workloads. The MSSQL data source lets you query your existing SQL Server instance directly from Grafana, with no data migration required.
+
+The data source ships with Grafana out of the box. It's preinstalled in both Grafana OSS and Grafana Enterprise, so there's nothing for you to install. Starting with Grafana 13.2, it's packaged as a standalone plugin that updates independently of Grafana releases. Refer to [Plugin updates](#plugin-updates) for details.
 
 You can connect to Microsoft SQL Server 2012 or newer, Azure SQL Database, and Azure SQL Managed Instance.
 
@@ -53,6 +55,30 @@ The following documentation helps you set up and use the Microsoft SQL Server da
 - [Annotations](https://grafana.com/docs/grafana/v13.2/datasources/mssql/annotations/)
 - [Alerting](https://grafana.com/docs/grafana/v13.2/datasources/mssql/alerting/)
 - [Troubleshooting](https://grafana.com/docs/grafana/v13.2/datasources/mssql/troubleshooting/)
+
+## Plugin updates
+
+Starting with Grafana 13.2, the Microsoft SQL Server data source is a standalone plugin, preinstalled in both Grafana OSS and Grafana Enterprise. This enables more frequent updates independent of Grafana releases. Grafana automatically checks the plugin catalog and installs the latest version on each server restart.
+
+To adjust this behavior:
+
+- **Opt out of auto-updates:** Set `preinstall_auto_update` to `false` in your [configuration file](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/).
+- **Update manually:** Update at any time from the **Administration > Plugins** page without restarting Grafana.
+
+The standalone plugin requires Grafana 12.3.0 or later. The Microsoft SQL Server data source bundled with Grafana 13.1 and earlier continues to work as before. These versions are unaffected by the change.
+
+Users running Grafana 12.3.x through 13.1.x can install the standalone plugin from the plugin catalog if they want the latest features before upgrading to Grafana 13.2. To use the standalone plugin with Grafana 12.3.x through 13.1.x, add the following to your [configuration file](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/):
+
+```ini
+[plugin.mssql]
+as_external = true
+
+[plugins]
+; Install the latest version on startup:
+preinstall_sync = mssql
+; Or install a specific version:
+; preinstall_sync = mssql@<version>
+```
 
 ## Additional features
 

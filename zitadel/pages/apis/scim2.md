@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/apis/scim2.mdx](https://zitadel.com/docs/apis/scim2)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/apis/scim2.mdx](https://zitadel.com/docs/apis/scim2)
 
 The Zitadel [SCIM v2](https://scim.cloud/) service provider interface enables integration of identity and
 access management (instance) systems with Zitadel,

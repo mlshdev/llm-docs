@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/workflows/authentication.md](https://github.com/docker/docs/blob/ca60e92629079de412f38632876ab208d84267ef/content/manuals/ai/sandboxes/workflows/authentication.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/workflows/authentication.md](https://github.com/docker/docs/blob/ff96ad1711065cf2e9c3f1d701dad04775834f70/content/manuals/ai/sandboxes/workflows/authentication.md)
 
 The sandbox proxy handles API credentials for model providers automatically,
 but agents often also need credentials for tools like `gh`, `docker`, or a

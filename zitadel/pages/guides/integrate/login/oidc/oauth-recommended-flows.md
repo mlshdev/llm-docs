@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/guides/integrate/login/oidc/oauth-recommended-flows.mdx](https://zitadel.com/docs/guides/integrate/login/oidc/oauth-recommended-flows)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/integrate/login/oidc/oauth-recommended-flows.mdx](https://zitadel.com/docs/guides/integrate/login/oidc/oauth-recommended-flows)
 
 ## Introduction
 
@@ -33,7 +33,7 @@ So what do we want to achieve with delegated authentication?
   - Users have to **authorize** applications to access certain [**scopes**](https://zitadel.com/docs/apis/openidoauth/scopes) (eg, email address or custom roles). Applications can request [**claims**](https://zitadel.com/docs/apis/openidoauth/claims) (key:value pairs, e.g. email address) for the authorized scopes with the access token or ID token from ZITADEL
   - Access tokens are bearer tokens, meaning that possession of the token provides access to a resource. But the tokens expire frequently and the application must request a new access token via **refresh token** or the user must reauthenticate
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/consulting_federated_identities_basics.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/consulting_federated_identities_basics.png)
 
 This is where the so-called “flows” come into play: There are a number of different flows on how to handle the process from authentication, over authorization, getting tokens and requesting additional information about the user.
 

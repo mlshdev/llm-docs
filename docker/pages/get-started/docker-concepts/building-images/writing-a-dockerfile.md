@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/get-started/docker-concepts/building-images/writing-a-dockerfile.md](https://github.com/docker/docs/blob/ca60e92629079de412f38632876ab208d84267ef/content/get-started/docker-concepts/building-images/writing-a-dockerfile.md)
+> Commit-pinned source for Docker main: [content/get-started/docker-concepts/building-images/writing-a-dockerfile.md](https://github.com/docker/docs/blob/ff96ad1711065cf2e9c3f1d701dad04775834f70/content/get-started/docker-concepts/building-images/writing-a-dockerfile.md)
 
 [Watch the video](https://www.youtube.com/watch?v=Jx8zoIhiP4c)
 

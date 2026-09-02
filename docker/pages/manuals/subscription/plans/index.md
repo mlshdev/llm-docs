@@ -1,11 +1,11 @@
-> Commit-pinned source for Docker main: [content/manuals/subscription/plans/_index.md](https://github.com/docker/docs/blob/ca60e92629079de412f38632876ab208d84267ef/content/manuals/subscription/plans/_index.md)
+> Commit-pinned source for Docker main: [content/manuals/subscription/plans/_index.md](https://github.com/docker/docs/blob/ff96ad1711065cf2e9c3f1d701dad04775834f70/content/manuals/subscription/plans/_index.md)
 
 # Plans
 
 > \[!TIP]
 > Interested in pricing details? Check out the <a id="dkr_docs_index_pricing"></a>pricing page to compare plans.
 
-You can subscribe to plans on a self-serve basis when you go to the Docker product catalog from the billing portal. Plans can be tied to personal or organization account types, and include options to extend usage limits.
+To subscribe to a plan, see [Manage plans](https://docs.docker.com/subscription/manage/) or [Docker plans](https://docs.docker.com/subscription/plans/docker/). Plans can be tied to personal or organization account types, and include options to extend usage limits.
 
 This section covers usage entitlements, billing cycle, and plan management options for each available plan.
 

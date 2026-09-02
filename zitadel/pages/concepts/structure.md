@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/concepts/structure/index.mdx](https://zitadel.com/docs/concepts/structure)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/concepts/structure/index.mdx](https://zitadel.com/docs/concepts/structure)
 
 - [Instance](https://zitadel.com/docs/concepts/structure/instance)
 - [Organizations](https://zitadel.com/docs/guides/manage/console/organizations-overview)

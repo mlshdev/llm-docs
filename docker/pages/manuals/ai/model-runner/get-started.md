@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/model-runner/get-started.md](https://github.com/docker/docs/blob/ca60e92629079de412f38632876ab208d84267ef/content/manuals/ai/model-runner/get-started.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/model-runner/get-started.md](https://github.com/docker/docs/blob/ff96ad1711065cf2e9c3f1d701dad04775834f70/content/manuals/ai/model-runner/get-started.md)
 
 Docker Model Runner (DMR) lets you run and manage AI models locally using Docker. This page shows you how to enable DMR, pull and run a model, configure model settings, and publish custom models.
 
@@ -79,7 +79,7 @@ Models are cached locally.
 1. Select **Models** and select the **Docker Hub** tab.
 2. Find the model you want and select **Pull**.
 
-![Screenshot showing the Docker Hub view.](https://raw.githubusercontent.com/docker/docs/ca60e92629079de412f38632876ab208d84267ef/content/manuals/ai/model-runner/images/dmr-catalog.png)
+![Screenshot showing the Docker Hub view.](https://raw.githubusercontent.com/docker/docs/ff96ad1711065cf2e9c3f1d701dad04775834f70/content/manuals/ai/model-runner/images/dmr-catalog.png)
 
 **From the Docker CLI**
 
@@ -101,7 +101,7 @@ docker model pull hf.co/bartowski/Llama-3.2-1B-Instruct-GGUF
 1. Select **Models** and select the **Local** tab.
 2. Select the play button. The interactive chat screen opens.
 
-![Screenshot showing the Local view.](https://raw.githubusercontent.com/docker/docs/ca60e92629079de412f38632876ab208d84267ef/content/manuals/ai/model-runner/images/dmr-run.png)
+![Screenshot showing the Local view.](https://raw.githubusercontent.com/docker/docs/ff96ad1711065cf2e9c3f1d701dad04775834f70/content/manuals/ai/model-runner/images/dmr-run.png)
 
 **From the Docker CLI**
 
@@ -160,7 +160,7 @@ To troubleshoot issues, display the logs:
 
 Select **Models** and select the **Logs** tab.
 
-![Screenshot showing the Models view.](https://raw.githubusercontent.com/docker/docs/ca60e92629079de412f38632876ab208d84267ef/content/manuals/ai/model-runner/images/dmr-logs.png)
+![Screenshot showing the Models view.](https://raw.githubusercontent.com/docker/docs/ff96ad1711065cf2e9c3f1d701dad04775834f70/content/manuals/ai/model-runner/images/dmr-logs.png)
 
 **From the Docker CLI**
 

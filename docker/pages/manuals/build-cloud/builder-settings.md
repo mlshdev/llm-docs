@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/build-cloud/builder-settings.md](https://github.com/docker/docs/blob/ca60e92629079de412f38632876ab208d84267ef/content/manuals/build-cloud/builder-settings.md)
+> Commit-pinned source for Docker main: [content/manuals/build-cloud/builder-settings.md](https://github.com/docker/docs/blob/ff96ad1711065cf2e9c3f1d701dad04775834f70/content/manuals/build-cloud/builder-settings.md)
 
 # Builder settings
 
@@ -45,7 +45,7 @@ two builders:
 
 ### Get more build cache space
 
-To get more Build cache space, [upgrade your subscription](https://docs.docker.com/subscription/manage/#upgrade-plans).
+To get more Build cache space, [upgrade your subscription](https://docs.docker.com/subscription/plans/docker/).
 
 > \[!TIP]
 >

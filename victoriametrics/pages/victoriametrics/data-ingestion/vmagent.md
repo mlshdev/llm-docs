@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.150.0: [docs/victoriametrics/data-ingestion/vmagent.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/victoriametrics/data-ingestion/vmagent.md)
+> Release-pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/data-ingestion/vmagent.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/data-ingestion/vmagent.md)
 
 vmagent can receive data via the same protocols as VictoriaMetrics Single or Cluster versions,
 as well as scrape Prometheus endpoints. In other words,

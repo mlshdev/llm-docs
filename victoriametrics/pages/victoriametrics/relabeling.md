@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.150.0: [docs/victoriametrics/relabeling.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/victoriametrics/relabeling.md)
+> Release-pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/relabeling.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/relabeling.md)
 
 The relabeling cookbook provides practical examples and patterns for
 transforming your metrics data as it flows through VictoriaMetrics, helping you

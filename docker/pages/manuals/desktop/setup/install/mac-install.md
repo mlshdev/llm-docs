@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/desktop/setup/install/mac-install.md](https://github.com/docker/docs/blob/ca60e92629079de412f38632876ab208d84267ef/content/manuals/desktop/setup/install/mac-install.md)
+> Commit-pinned source for Docker main: [content/manuals/desktop/setup/install/mac-install.md](https://github.com/docker/docs/blob/ff96ad1711065cf2e9c3f1d701dad04775834f70/content/manuals/desktop/setup/install/mac-install.md)
 
 # Install Docker Desktop on Mac
 
@@ -84,7 +84,7 @@ This page provides download links, system requirements, and step-by-step install
 
 6. From the installation window, select either:
    - **Use recommended settings (Requires password)**. This lets Docker Desktop automatically set the necessary configuration settings.
-   - **Use advanced settings**. You can then set the location of the Docker CLI tools either in the system or user directory, enable the default Docker socket, and enable privileged port mapping. See [Settings](https://docs.docker.com/desktop/settings-and-maintenance/settings/#advanced), for more information and how to set the location of the Docker CLI tools.
+   - **Use advanced settings**. You can then set the location of the Docker CLI tools either in the system or user directory, and enable the default Docker socket. With version 4.88.0 and earlier, you can also enable privileged port mapping. See [Settings](https://docs.docker.com/desktop/settings-and-maintenance/settings/#advanced), for more information and how to set the location of the Docker CLI tools.
 
 7. Select **Finish**. If you have applied any of the previous configurations that require a password in step 6, enter your password to confirm your choice.
 

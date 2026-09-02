@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/concepts/features/index.mdx](https://zitadel.com/docs/concepts/features)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/concepts/features/index.mdx](https://zitadel.com/docs/concepts/features)
 
 - [Identity Brokering](https://zitadel.com/docs/concepts/features/identity-brokering)
 - [Account Linking](https://zitadel.com/docs/concepts/features/account-linking)

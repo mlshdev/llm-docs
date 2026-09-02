@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/desktop/setup/install/windows-permission-requirements.md](https://github.com/docker/docs/blob/ca60e92629079de412f38632876ab208d84267ef/content/manuals/desktop/setup/install/windows-permission-requirements.md)
+> Commit-pinned source for Docker main: [content/manuals/desktop/setup/install/windows-permission-requirements.md](https://github.com/docker/docs/blob/ff96ad1711065cf2e9c3f1d701dad04775834f70/content/manuals/desktop/setup/install/windows-permission-requirements.md)
 
 # Understand permission requirements for Windows
 
@@ -61,7 +61,6 @@ The service performs the following functionalities:
 
 - Ensuring that `kubernetes.docker.internal` is defined in the Win32 hosts file. Defining the DNS name `kubernetes.docker.internal` allows Docker to share Kubernetes contexts with containers.
 - Ensuring that `host.docker.internal` and `gateway.docker.internal` are defined in the Win32 hosts file. They point to the host local IP address and allow an application to resolve the host IP using the same name from either the host itself or a container.
-- Securely caching the Registry Access Management policy which is read-only for the developer.
 - Creating the Hyper-V VM `"DockerDesktopVM"` and managing its lifecycle - starting, stopping, and destroying it. The VM name is hard coded in the service code so the service cannot be used for creating or manipulating any other VMs.
 - Moving the VHDX file or folder.
 - Starting and stopping the Windows Docker engine and querying whether it's running.
@@ -70,6 +69,7 @@ The service performs the following functionalities:
 - Checking if the bootloader activates Hyper-V.
 - Checking if required Windows features are both installed and enabled.
 - Conducting healthchecks and retrieving the version of the service itself.
+- Securely caching the Registry Access Management policy which is read-only for the developer. (Applies to version 4.88.0 and earlier)
 
 The service start mode depends on which container engine is selected, and, for WSL, on whether it is needed to maintain `host.docker.internal` and `gateway.docker.internal` in the Win32 hosts file. This is controlled by a setting under `Use the WSL 2 based engine` in the settings page. When this is set, WSL engine behaves the same as Hyper-V. So:
 

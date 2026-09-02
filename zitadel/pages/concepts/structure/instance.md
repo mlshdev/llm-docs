@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/concepts/structure/instance.mdx](https://zitadel.com/docs/concepts/structure/instance)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/concepts/structure/instance.mdx](https://zitadel.com/docs/concepts/structure/instance)
 
 > **Terminology update**
 >
@@ -16,7 +16,7 @@ which in turn can represent your own company (e.g. departments), your business c
 
 Read more about how to configure your instance in our [instance guide](https://zitadel.com/docs/guides/manage/console/default-settings).
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/concepts/objects/object_overview.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/concepts/objects/object_overview.png)
 
 This overview shows the general structure of ZITADEL.
 You will find more detailed explanations around the different concepts in the following sections.
@@ -30,4 +30,4 @@ This is useful if you have business customers, which in turn have their business
 By providing a virtual ZITADEL instances, your customers have all the customization options available in ZITADEL.
 Scaling ZITADEL instances virtually enables you to easily distribute your limited compute resources to all your customers.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/concepts/objects/instances.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/concepts/objects/instances.png)

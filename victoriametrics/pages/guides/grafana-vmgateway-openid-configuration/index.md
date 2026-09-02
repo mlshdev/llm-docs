@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.150.0: [docs/guides/grafana-vmgateway-openid-configuration/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/grafana-vmgateway-openid-configuration/_index.md)
+> Release-pinned source for VictoriaMetrics v1.151.0: [docs/guides/grafana-vmgateway-openid-configuration/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/grafana-vmgateway-openid-configuration/_index.md)
 
 > vmgateway access control feature has been deprecated. Consider following the vmauth guide [Setup vmauth - Multi-Tenant Access with Grafana & OIDC](https://docs.victoriametrics.com/guides/grafana-vmauth-openid-configuration/) instead. See [migration](https://docs.victoriametrics.com/victoriametrics/vmgateway/#access-control-migration-to-vmauth) docs.
 
@@ -41,21 +41,21 @@ See details about all supported options in the [vmgateway documentation](https:/
    Use `OpenID Connect` as `Client Type`.<br>
    Specify `grafana` as `Client ID`.<br>
    Click `Next`.<br>
-   ![Create client 1](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/grafana-vmgateway-openid-configuration/create-client-1.webp)
+   ![Create client 1](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/grafana-vmgateway-openid-configuration/create-client-1.webp)
 3. Enable `Client authentication`.<br>
    Enable `Authorization`.<br>
-   ![Create client 2](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/grafana-vmgateway-openid-configuration/create-client-2.webp)
+   ![Create client 2](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/grafana-vmgateway-openid-configuration/create-client-2.webp)
    Click `Next`.<br>
 4. Add Grafana URL as `Root URL`. For example, `http://localhost:3000/`.<br>
-   ![Create client 3](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/grafana-vmgateway-openid-configuration/create-client-3.webp)
+   ![Create client 3](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/grafana-vmgateway-openid-configuration/create-client-3.webp)
    Click `Save`.<br>
 5. Go to `Clients` -> `grafana` -> `Credentials`.<br>
-   ![Client secret](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/grafana-vmgateway-openid-configuration/client-secret.webp)
+   ![Client secret](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/grafana-vmgateway-openid-configuration/client-secret.webp)
    Copy the value of `Client secret`. It will be used later in Grafana configuration.<br>
 6. Go to `Clients` -> `grafana` -> `Client scopes`.<br>
    Click at `grafana-dedicated` -> `Configure a new mapper` -> `User attribute`.<br>
-   ![Create mapper 1](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/grafana-vmgateway-openid-configuration/create-mapper-1.webp)
-   ![Create mapper 2](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/grafana-vmgateway-openid-configuration/create-mapper-2.webp)
+   ![Create mapper 1](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/grafana-vmgateway-openid-configuration/create-mapper-1.webp)
+   ![Create mapper 2](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/grafana-vmgateway-openid-configuration/create-mapper-2.webp)
    Configure the mapper as follows<br>
    - `Name` as `vm_access`.
    - `Token Claim Name` as `vm_access`.
@@ -63,13 +63,13 @@ See details about all supported options in the [vmgateway documentation](https:/
    - `Claim JSON Type` as `JSON`.
      Enable `Add to ID token` and `Add to access token`.<br>
 
-![Create mapper 3](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/grafana-vmgateway-openid-configuration/create-mapper-3.webp)
+![Create mapper 3](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/grafana-vmgateway-openid-configuration/create-mapper-3.webp)
 Click `Save`.<br>
 
 1. Go to `Realm settings` -> `User profile`.<br>
    Click `Create attribute`.<br>
    Specify `vm_access` as `Attribute [Name]`.<br>
-   ![User attributes](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/grafana-vmgateway-openid-configuration/create-attribute.webp)
+   ![User attributes](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/grafana-vmgateway-openid-configuration/create-attribute.webp)
    Click `Save`.<br>
 2. Go to `Users` -> select user to configure.<br>
    Modify value of `vm_access` attribute.<br>
@@ -78,7 +78,7 @@ Click `Save`.<br>
    - for the second user we will specify `{"tenant_id" : {"account_id": 0, "project_id": 1 },"extra_labels":{ "team": "dev" }}` as `Value`.
      <br>
 
-![User attributes](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/grafana-vmgateway-openid-configuration/user-attributes.webp)
+![User attributes](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/grafana-vmgateway-openid-configuration/user-attributes.webp)
 Click `Save`.
 
 ## Configure Grafana
@@ -202,7 +202,7 @@ URL should point to the vmgateway instance.
 
 In the "Type and version" section, it is recommended to set the type to "Prometheus" and the version to at least "2.24.x":
 
-![Prometheus datasource](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/grafana-vmgateway-openid-configuration/grafana-datasource-prometheus.webp)
+![Prometheus datasource](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/grafana-vmgateway-openid-configuration/grafana-datasource-prometheus.webp)
 
 This allows Grafana to use a more efficient API to get label values.
 
@@ -210,7 +210,7 @@ You can also use VictoriaMetrics [Grafana datasource](https://github.com/Victori
 See installation instructions [here](https://docs.victoriametrics.com/victoriametrics/integrations/grafana/datasource/#installation).
 
 Enable `Forward OAuth identity` flag.<br>
-![Oauth identity](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/grafana-vmgateway-openid-configuration/grafana-ds.webp)
+![Oauth identity](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/grafana-vmgateway-openid-configuration/grafana-ds.webp)
 
 Now you can use Grafana to query metrics from the specified tenant.
 Users with a `vm_access` claim will be able to query metrics from the specified tenant.
@@ -339,25 +339,25 @@ vmagent will write data into VictoriaMetrics single-node and cluster(with tenant
 
 Grafana datasources configuration will be the following:
 
-![Test datasources](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/grafana-vmgateway-openid-configuration/grafana-test-datasources.webp)
+![Test datasources](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/grafana-vmgateway-openid-configuration/grafana-test-datasources.webp)
 
 Let's log in as a user with `team=dev` labels limitation set via claims.
 
 Using `vmgateway-cluster` results in `No data` response as the proxied request will go to tenant `0:1`.
 Since vmagent is configured to write only to `0:0`, the `No data` response is expected.
 
-![Dev cluster nodata](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/grafana-vmgateway-openid-configuration/dev-cluster-nodata.webp)
+![Dev cluster nodata](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/grafana-vmgateway-openid-configuration/dev-cluster-nodata.webp)
 
 Switching to `vmgateway-single` does have data. Note that it is limited to metrics with the `team=dev` label.
 
-![Dev single data](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/grafana-vmgateway-openid-configuration/dev-single-data.webp)
+![Dev single data](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/grafana-vmgateway-openid-configuration/dev-single-data.webp)
 
 Now let's log in as a user with `team=admin`.
 
 Both cluster and single-node datasources now return metrics for `team=admin`.
 
-![Admin cluster data](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/grafana-vmgateway-openid-configuration/admin-cluster-data.webp)
-![Admin single data](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/grafana-vmgateway-openid-configuration/admin-single-data.webp)
+![Admin cluster data](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/grafana-vmgateway-openid-configuration/admin-cluster-data.webp)
+![Admin single data](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/grafana-vmgateway-openid-configuration/admin-single-data.webp)
 
 ## Using OAuth for remote write with vmagent
 
@@ -370,21 +370,21 @@ In order to create a client for vmagent to use, follow the steps below:
    Use `OpenID Connect` as `Client Type`.<br>
    Specify `vmagent` as `Client ID`.<br>
    Click `Next`.<br>
-   ![Create client 1](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/grafana-vmgateway-openid-configuration/vmagent-create-client-1.webp)
+   ![Create client 1](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/grafana-vmgateway-openid-configuration/vmagent-create-client-1.webp)
 3. Enable `Client authentication`.<br>
    Enable `Authorization`.<br>
-   ![Create client 2](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/grafana-vmgateway-openid-configuration/vmagent-create-client-2.webp)
+   ![Create client 2](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/grafana-vmgateway-openid-configuration/vmagent-create-client-2.webp)
    Click `Next`.<br>
 4. Leave the URLs section empty, as vmagent will not use any.
-   ![Create client 3](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/grafana-vmgateway-openid-configuration/vmagent-create-client-3.webp)
+   ![Create client 3](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/grafana-vmgateway-openid-configuration/vmagent-create-client-3.webp)
    Click `Save`.<br>
 5. Go to `Clients` -> `vmagent` -> `Credentials`.<br>
-   ![Client secret](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/grafana-vmgateway-openid-configuration/vmagent-client-secret.webp)
+   ![Client secret](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/grafana-vmgateway-openid-configuration/vmagent-client-secret.webp)
    Copy the value of `Client secret`. It will be used later in vmagent configuration.<br>
 6. Go to `Clients` -> `vmagent` -> `Client scopes`.<br>
    Click at `vmagent-dedicated` -> `Configure a new mapper` -> `User attribute`.<br>
-   ![Create mapper 1](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/grafana-vmgateway-openid-configuration/vmagent-create-mapper-1.webp)
-   ![Create mapper 2](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/grafana-vmgateway-openid-configuration/vmagent-create-mapper-2.webp)
+   ![Create mapper 1](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/grafana-vmgateway-openid-configuration/vmagent-create-mapper-1.webp)
+   ![Create mapper 2](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/grafana-vmgateway-openid-configuration/vmagent-create-mapper-2.webp)
    Configure the mapper as follows<br>
    - `Name` as `vm_access`.
    - `Token Claim Name` as `vm_access`.
@@ -392,14 +392,14 @@ In order to create a client for vmagent to use, follow the steps below:
    - `Claim JSON Type` as `JSON`.
      Enable `Add to ID token` and `Add to access token`.<br>
 
-![Create mapper 3](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/grafana-vmgateway-openid-configuration/vmagent-create-mapper-3.webp)
+![Create mapper 3](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/grafana-vmgateway-openid-configuration/vmagent-create-mapper-3.webp)
 Click `Save`.<br>
 
 1. Go to `Service account roles` -> click on `service-account-vmagent`.<br>
-   ![vmagent service account](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/grafana-vmgateway-openid-configuration/vmagent-sa.webp)
+   ![vmagent service account](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/grafana-vmgateway-openid-configuration/vmagent-sa.webp)
 2. Go to the `Attributes` tab and add an attribute.
    Change `vm_access` attribute value to `{"tenant_id" : {"account_id": 0, "project_id": 0 }}`. <br>
-   ![User attributes](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/guides/grafana-vmgateway-openid-configuration/vmagent-sa-attributes.webp)
+   ![User attributes](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/grafana-vmgateway-openid-configuration/vmagent-sa-attributes.webp)
    Click `Save`.
 
 Once the iDP configuration is done, the vmagent configuration needs to be updated to use OAuth for remote write:

@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.150.0: [docs/victoriametrics/vmagent.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/victoriametrics/vmagent.md)
+> Release-pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/vmagent.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmagent.md)
 
 `vmagent` is a tiny agent that helps you collect metrics from various sources,
 [relabel and filter the collected metrics](https://docs.victoriametrics.com/victoriametrics/relabeling/)
@@ -8,7 +8,7 @@ or via the [VictoriaMetrics `remote_write` protocol](#victoriametrics-remote-wri
 
 See [Quick Start](#quick-start) for details.
 
-![vmagent](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/victoriametrics/vmagent.webp)
+![vmagent](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmagent.webp)
 
 ## Motivation
 
@@ -127,6 +127,7 @@ to other remote storage systems that support Prometheus `remote_write` protocol 
 If a single remote storage instance is temporarily unavailable, the collected data remains available on the other remote storage instances.
 `vmagent` buffers the collected data in files at `-remoteWrite.tmpDataPath` until the remote storage becomes available again.
 Then it sends the buffered data to the remote storage in order to prevent data gaps.
+See how `vmagent` [selects shards and places replicas](https://victoriametrics.com/blog/vmagent-how-it-works/#step-4-sharding--replication) for implementation details.
 
 [VictoriaMetrics cluster](https://docs.victoriametrics.com/victoriametrics/cluster-victoriametrics/) already supports replication,
 so there is no need to specify multiple `-remoteWrite.url` flags when writing data to the same cluster.
@@ -136,7 +137,8 @@ See [these docs](https://docs.victoriametrics.com/victoriametrics/cluster-victor
 
 `vmagent` can add, remove, or update labels on the collected data before sending it to the remote storage.
 It can filter scrape targets or remove unwanted samples via Prometheus-like relabeling.
-Please see the [Relabeling cookbook](https://docs.victoriametrics.com/victoriametrics/relabeling/) for details.
+Please see the [Relabeling cookbook](https://docs.victoriametrics.com/victoriametrics/relabeling/) for configuration examples.
+For ingestion pipeline internals, see how `vmagent` [applies global relabeling and cardinality limits](https://victoriametrics.com/blog/vmagent-how-it-works/#step-2-global-relabeling-cardinality-reduction).
 
 ### Sharding among remote storages
 
@@ -255,6 +257,8 @@ for the collected samples. Examples:
   ./vmagent -remoteWrite.url=http://remote-storage/api/v1/write -streamAggr.dropInputLabels=replica -streamAggr.dedupInterval=60s
   ```
 
+See how `vmagent` [orders global deduplication and stream aggregation](https://victoriametrics.com/blog/vmagent-how-it-works/#step-3-global-deduplication--stream-aggregation) in the ingestion pipeline.
+
 ### Monitoring Data eXchange
 
 The Monitoring Data eXchange (MDX) *(available from v1.147.0)* feature allows `vmagent` to forward only VictoriaMetrics metrics to selected `-remoteWrite.url` destinations while dropping metrics from non-VictoriaMetrics services.
@@ -265,9 +269,13 @@ To enable MDX, set `-remoteWrite.mdx.enable=true` for the target URL and `-remot
 ./vmagent \
   -remoteWrite.url=http://service-to-keep-all-metrics:8428/api/v1/write \
   -remoteWrite.mdx.enable=false \
+  -remoteWrite.disableMetadata=false \
   -remoteWrite.url=http://service-to-keep-only-vm-metrics:8428/api/v1/write \
-  -remoteWrite.mdx.enable=true
+  -remoteWrite.mdx.enable=true \
+  -remoteWrite.disableMetadata=true
 ```
+
+> Recommendation: Set `-remoteWrite.disableMetadata=true` for MDX remote writes to save resource usage. Otherwise, `vmagent` sends [metrics metadata](https://docs.victoriametrics.com/victoriametrics/vmagent/#metric-metadata) from all scraped targets to the MDX destination.
 
 When MDX is enabled for a `-remoteWrite.url`, `vmagent` forwards only metrics that:
 
@@ -282,6 +290,7 @@ When MDX is enabled for a `-remoteWrite.url`, `vmagent` forwards only metrics th
 ./vmagent \
   -remoteWrite.url=http://service-to-keep-only-vm-metrics:8428/api/v1/write \
   -remoteWrite.mdx.enable=true \
+  -remoteWrite.disableMetadata=true \
   -mdx.label="service=victoriametrics"
 ```
 
@@ -348,6 +357,8 @@ in addition to the pull-based Prometheus-compatible targets' scraping:
 - Native data import protocol via `http://<vmagent>:8429/api/v1/import/native`. See [these docs](https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/#how-to-import-data-in-native-format).
 - Prometheus exposition format via `http://<vmagent>:8429/api/v1/import/prometheus`. See [these docs](https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/#how-to-import-data-in-prometheus-exposition-format) for details.
 - Arbitrary CSV data via `http://<vmagent>:8429/api/v1/import/csv`. See [these docs](https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/#how-to-import-csv-data).
+
+See how `vmagent` [handles concurrency, decompression, and stream parsing](https://victoriametrics.com/blog/vmagent-how-it-works/#step-1-receiving-data-via-api-or-scrape) during ingestion.
 
 ## How to collect metrics in Prometheus format
 
@@ -1061,6 +1072,7 @@ This behavior can be changed with the `-remoteWrite.inmemoryQueues` *(available 
 When set to a non-zero value, vmagent starts the given number of additional workers,
 which send only recently ingested data from the in-memory queue, while the workers configured via `-remoteWrite.queues` drain the file-based backlog concurrently.
 This reduces the delivery lag for fresh samples after remote storage outages or slowdowns. The flag can be set individually per each `-remoteWrite.url`.
+See how the [in-memory and file-based queues manage blocks](https://victoriametrics.com/blog/vmagent-how-it-works/#in-memory-queue) for implementation details.
 
 Note that these workers are started in addition to the workers configured via `-remoteWrite.queues`, so the total number of concurrent connections to
 the remote storage becomes the sum of both flags. Take this into account if the remote storage limits the number of concurrent requests.
@@ -1504,7 +1516,7 @@ See the docs at https://docs.victoriametrics.com/victoriametrics/vmagent/ .
   -enableMetadata
      Whether to enable metadata processing for metrics scraped from targets, received via VictoriaMetrics remote write, Prometheus remote write v1 or OpenTelemetry protocol. See also remoteWrite.maxMetadataPerBlock (default true)
   -enableMultitenancyViaHeaders
-     Enables multitenancy via HTTP headers. See https://docs.victoriametrics.com/victoriametrics/vmagent/#multitenancy
+     Enables multitenancy via HTTP headers. See https://docs.victoriametrics.com/victoriametrics/vmagent/#multitenancy (default true)
   -enableMultitenantHandlers
      Whether to process incoming data via multitenant insert handlers according to https://docs.victoriametrics.com/victoriametrics/cluster-victoriametrics/#url-format . By default incoming data is processed via single-node insert handlers according to https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/#how-to-import-time-series-data .See https://docs.victoriametrics.com/victoriametrics/vmagent/#multitenancy for details
   -enableTCP6
@@ -1771,6 +1783,8 @@ See the docs at https://docs.victoriametrics.com/victoriametrics/vmagent/ .
      Interval for checking for changes in Kubernetes API server. This works only if kubernetes_sd_configs is configured in '-promscrape.config' file. See https://docs.victoriametrics.com/victoriametrics/sd_configs/#kubernetes_sd_configs for details (default 30s)
   -promscrape.kumaSDCheckInterval duration
      Interval for checking for changes in kuma service discovery. This works only if kuma_sd_configs is configured in '-promscrape.config' file. See https://docs.victoriametrics.com/victoriametrics/sd_configs/#kuma_sd_configs for details (default 30s)
+  -promscrape.linodeSDCheckInterval duration
+     Interval for checking for changes in Linode. This works only if linode_sd_configs is configured in '-promscrape.config' file. See https://docs.victoriametrics.com/victoriametrics/sd_configs/#linode_sd_configs for details (default 1m0s)
   -promscrape.marathonSDCheckInterval duration
      Interval for checking for changes in Marathon REST API. This works only if marathon_sd_configs is configured in '-promscrape.config' file. See https://docs.victoriametrics.com/victoriametrics/sd_configs/#marathon_sd_configs for details (default 30s)
   -promscrape.maxDroppedTargets int

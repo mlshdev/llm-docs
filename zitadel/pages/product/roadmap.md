@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/product/roadmap.mdx](https://zitadel.com/docs/product/roadmap)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/product/roadmap.mdx](https://zitadel.com/docs/product/roadmap)
 
 Identity has changed significantly since Zitadel was first built.
 

@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/apis/observability/health.mdx](https://zitadel.com/docs/apis/observability/health)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/apis/observability/health.mdx](https://zitadel.com/docs/apis/observability/health)
 
 ZITADEL exposes a `Ready`- and `Healthy` endpoint to allow external systems like load balancers, orchestration systems, uptime probes and others to check the status.
 

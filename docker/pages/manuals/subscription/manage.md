@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/subscription/manage.md](https://github.com/docker/docs/blob/ca60e92629079de412f38632876ab208d84267ef/content/manuals/subscription/manage.md)
+> Commit-pinned source for Docker main: [content/manuals/subscription/manage.md](https://github.com/docker/docs/blob/ff96ad1711065cf2e9c3f1d701dad04775834f70/content/manuals/subscription/manage.md)
 
 # Manage plans
 
@@ -7,7 +7,7 @@ self-serve Docker products, while the Overview page shows your active plans with
 
 ## Set up a new plan
 
-You can purchase Docker plans through the product catalog:
+You can purchase Docker Team, Docker Business, and other products through the product catalog:
 
 1. Sign in to [Docker Home](https://app.docker.com/), then choose your personal
    account or your organization account.
@@ -22,6 +22,9 @@ You can purchase Docker plans through the product catalog:
      checkbox and enter your Tax ID.
    - Your VAT number must include your country prefix. For example, enter
      `DE123456789` for a German VAT number.
+
+To upgrade to Docker Pro, go to the <a id="dkr_docs_pricing_manage_pro"></a>Docker pricing page
+and select **Buy now**.
 
 ## Upgrade plans
 

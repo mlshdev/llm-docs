@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/guides/integrate/actions/testing-response.mdx](https://zitadel.com/docs/guides/integrate/actions/testing-response)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/integrate/actions/testing-response.mdx](https://zitadel.com/docs/guides/integrate/actions/testing-response)
 
 This guide shows you how to leverage the ZITADEL actions feature to react to API responses in your ZITADEL instance.
 You can use the actions feature to create a target that will be called when a specific API response occurs.
@@ -9,7 +9,6 @@ This is useful for information provisioning in between systems or for triggering
 Before you start, make sure you have everything set up correctly.
 
 - You need to be at least a ZITADEL [*IAM\_OWNER*](https://zitadel.com/docs/guides/manage/console/administrators)
-- Your ZITADEL instance needs to have the actions feature enabled.
 
 > **Note**
 >

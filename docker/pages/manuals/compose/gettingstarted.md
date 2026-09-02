@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/compose/gettingstarted.md](https://github.com/docker/docs/blob/ca60e92629079de412f38632876ab208d84267ef/content/manuals/compose/gettingstarted.md)
+> Commit-pinned source for Docker main: [content/manuals/compose/gettingstarted.md](https://github.com/docker/docs/blob/ff96ad1711065cf2e9c3f1d701dad04775834f70/content/manuals/compose/gettingstarted.md)
 
 # Docker Compose Quickstart
 
@@ -381,7 +381,7 @@ you want to reuse infrastructure definitions across projects.
 1. Create a new file in your project directory called `infra.yaml` and move the Redis service and volume into it:
 
    ```yaml
-    services:
+   services:
      redis:
        image: redis:alpine
        volumes:

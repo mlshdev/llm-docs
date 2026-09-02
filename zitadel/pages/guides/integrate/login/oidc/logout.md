@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/guides/integrate/login/oidc/logout.mdx](https://zitadel.com/docs/guides/integrate/login/oidc/logout)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/integrate/login/oidc/logout.mdx](https://zitadel.com/docs/guides/integrate/login/oidc/logout)
 
 This guide shows you the different concepts and use cases of the logout process and how to use it in ZITADEL.
 
@@ -56,9 +56,7 @@ Each client with an OpenID Session of the user that supports front-channel rende
 The back-channel logout is a mechanism on the server-side and the user agent does not have to do anything.
 The user will log out from all clients even in the case the user agent was closed.
 
-> **Note**
->
-> This is not yet implemented in ZITADEL
+ZITADEL supports OpenID Connect Back-Channel Logout. See [OIDC Back-Channel Logout](https://zitadel.com/docs/guides/integrate/back-channel-logout) for how it works and how to configure your application.
 
 ## Scenarios
 

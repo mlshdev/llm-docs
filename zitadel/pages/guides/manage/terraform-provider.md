@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/guides/manage/terraform-provider.mdx](https://zitadel.com/docs/guides/manage/terraform-provider)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/manage/terraform-provider.mdx](https://zitadel.com/docs/guides/manage/terraform-provider)
 
 The [ZITADEL Terraform Provider](https://registry.terraform.io/providers/zitadel/zitadel/latest/docs) is a tool that allows you to manage ZITADEL resources through Terraform.
 In other words, it lets you define and provision infrastructure for ZITADEL using Terraform configuration files.

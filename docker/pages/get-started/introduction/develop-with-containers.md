@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/get-started/introduction/develop-with-containers.md](https://github.com/docker/docs/blob/ca60e92629079de412f38632876ab208d84267ef/content/get-started/introduction/develop-with-containers.md)
+> Commit-pinned source for Docker main: [content/get-started/introduction/develop-with-containers.md](https://github.com/docker/docs/blob/ff96ad1711065cf2e9c3f1d701dad04775834f70/content/get-started/introduction/develop-with-containers.md)
 
 # Develop with containers
 
@@ -42,7 +42,7 @@ In this hands-on guide, you'll learn how to develop with containers.
 
 3. Open your browser to <http://localhost> to see the application up and running. It may take a few minutes for the app to run. The app is a simple to-do application, so feel free to add an item or two, mark some as done, or even delete an item.
 
-![Screenshot of the getting started to-do app after its first launch](https://raw.githubusercontent.com/docker/docs/ca60e92629079de412f38632876ab208d84267ef/content/get-started/introduction/images/develop-getting-started-app-first-launch.webp)
+![Screenshot of the getting started to-do app after its first launch](https://raw.githubusercontent.com/docker/docs/ff96ad1711065cf2e9c3f1d701dad04775834f70/content/get-started/introduction/images/develop-getting-started-app-first-launch.webp)
 
 ### What's in the environment?
 
@@ -87,7 +87,7 @@ The greeting at the top of the page is populated by an API call at `/api/greetin
 
 3. If you haven't done so yet, save the file. If you refresh your browser, you should see a new greeting. If you keep refreshing, you should see all of the messages appear.
 
-![Screenshot of the to-do app with a new greeting](https://raw.githubusercontent.com/docker/docs/ca60e92629079de412f38632876ab208d84267ef/content/get-started/introduction/images/develop-app-with-greetings.webp)
+![Screenshot of the to-do app with a new greeting](https://raw.githubusercontent.com/docker/docs/ff96ad1711065cf2e9c3f1d701dad04775834f70/content/get-started/introduction/images/develop-app-with-greetings.webp)
 
 ### Change the placeholder text
 
@@ -111,7 +111,7 @@ When you look at the app, you'll see the placeholder text is simply "New Item". 
 
 3. Save the file and go back to your browser. You should see the change already hot-reloaded into your browser. If you don't like it, feel free to tweak it until it looks just right.
 
-![Screenshot of the to-do app with an updated placeholder in the add item text field"](https://raw.githubusercontent.com/docker/docs/ca60e92629079de412f38632876ab208d84267ef/content/get-started/introduction/images/develop-app-with-updated-placeholder.webp)
+![Screenshot of the to-do app with an updated placeholder in the add item text field"](https://raw.githubusercontent.com/docker/docs/ff96ad1711065cf2e9c3f1d701dad04775834f70/content/get-started/introduction/images/develop-app-with-updated-placeholder.webp)
 
 ### Change the background color
 
@@ -133,7 +133,7 @@ Before you consider the application finalized, you need to make the colors bette
 
    Each save should let you see the change immediately in the browser. Keep adjusting it until it's the perfect setup for you.
 
-![Screenshot of the to-do app with a new placeholder and background color"](https://raw.githubusercontent.com/docker/docs/ca60e92629079de412f38632876ab208d84267ef/content/get-started/introduction/images/develop-app-with-updated-client.webp)
+![Screenshot of the to-do app with a new placeholder and background color"](https://raw.githubusercontent.com/docker/docs/ff96ad1711065cf2e9c3f1d701dad04775834f70/content/get-started/introduction/images/develop-app-with-updated-client.webp)
 
 And with that, you're done. Congrats on updating your website.
 
@@ -143,11 +143,7 @@ Before you move on, take a moment and reflect on what happened here. Within a fe
 
 - Start a complete development project with zero installation effort. The containerized environment provided the development environment, ensuring you have everything you need. You didn't have to install Node, MySQL, or any of the other dependencies directly on your machine. All you needed was Docker Desktop and a code editor.
 
-- Make changes and see them immediately. This was made possible because
-  1. the processes running in each container are watching and responding to
-     file changes and 2) the files in your local project directory are shared
-     with the containerized environment, so edits you make locally are
-     automatically synced to the containers.
+- Make changes and see them immediately. This was made possible because 1) the processes running in each container are watching and responding to file changes and 2) the files in your local project directory are shared with the containerized environment, so edits you make locally are automatically synced to the containers.
 
 Docker Desktop enables all of this and so much more. Once you start thinking with containers, you can create almost any environment and easily share it with your team.
 

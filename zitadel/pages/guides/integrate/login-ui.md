@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/guides/integrate/login-ui/index.mdx](https://zitadel.com/docs/guides/integrate/login-ui)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/integrate/login-ui/index.mdx](https://zitadel.com/docs/guides/integrate/login-ui)
 
 - [Session Validation](https://zitadel.com/docs/guides/integrate/login-ui/session-validation)
 - [Username Password](https://zitadel.com/docs/guides/integrate/login-ui/username-password)
@@ -12,3 +12,4 @@
 - [Saml Standard](https://zitadel.com/docs/guides/integrate/login-ui/saml-standard)
 - [Device Auth](https://zitadel.com/docs/guides/integrate/login-ui/device-auth)
 - [Login App](https://zitadel.com/docs/guides/integrate/login-ui/login-app)
+- [Fork And Deploy Login App](https://zitadel.com/docs/guides/integrate/login-ui/fork-and-deploy-login-app)

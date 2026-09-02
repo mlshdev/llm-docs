@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/desktop/release-notes.md](https://github.com/docker/docs/blob/ca60e92629079de412f38632876ab208d84267ef/content/manuals/desktop/release-notes.md)
+> Commit-pinned source for Docker main: [content/manuals/desktop/release-notes.md](https://github.com/docker/docs/blob/ff96ad1711065cf2e9c3f1d701dad04775834f70/content/manuals/desktop/release-notes.md)
 
 # Docker Desktop release notes
 
@@ -9,6 +9,43 @@ Releases are gradually rolled out to ensure quality control. If the latest versi
 Docker Desktop versions older than 6 months from the latest release are not available for download. Previous release notes are available in our [documentation repository](https://github.com/docker/docs/tree/main/content/manuals/desktop/previous-versions).
 
 For more frequently asked questions, see the [FAQs](https://docs.docker.com/desktop/troubleshoot-and-support/faqs/releases/).
+
+## 4.89.0
+
+**Release date:** 2026-08-31
+
+Download Docker Desktop:
+
+- [Windows](https://desktop.docker.com/win/main/amd64/238018/Docker%20Desktop%20Installer.exe)
+- [Windows ARM Early Access](https://desktop.docker.com/win/main/arm64/238018/Docker%20Desktop%20Installer.exe)
+- [Mac (Apple chip)](https://desktop.docker.com/mac/main/arm64/238018/Docker.dmg)
+- [Mac (Intel chip)](https://desktop.docker.com/mac/main/amd64/238018/Docker.dmg)
+- [Linux (Debian)](https://desktop.docker.com/linux/main/amd64/238018/docker-desktop-amd64.deb)
+- [Linux (RPM)](https://desktop.docker.com/linux/main/amd64/238018/docker-desktop-x86_64.rpm)
+- [Linux (Arch)](https://desktop.docker.com/linux/main/amd64/238018/docker-desktop-x86_64.pkg.tar.zst)
+
+### Updates
+
+- [Docker Compose v5.5.0](https://github.com/docker/compose/releases/tag/v5.5.0)
+- [NVIDIA Container Toolkit v1.20.0](https://github.com/NVIDIA/nvidia-container-toolkit/releases/tag/v1.20.0)
+- [Docker Agent v1.127.0](https://github.com/docker/docker-agent/releases/tag/v1.127.0)
+
+### Bug fixes and enhancements
+
+#### For all platforms
+
+- Fixed an issue where background container and image polling was waking the Docker engine unnecessarily when Resource Saver mode was active.
+- Fixed slow Zsh startup caused by duplicated Docker CLI completion setup in `.zshrc`. Docker Desktop now keeps a single completion block and removes existing duplicates. Fixes [docker/desktop-feedback#561](https://github.com/docker/desktop-feedback/issues/561).
+- Sidebar customization permanently is now available to all users. Right-click the left-hand navigation, select **Customize**, and then select, deselect, or re-order the tabs.
+- Fixed the **Disk usage** slider in **Settings** to no longer show duplicate tick marks at small ranges, now displaying values in GiB with one decimal place for ranges up to 8 TiB.
+- Fixed excessive update notifications in the notification center so that pop-ups only appear for failures or when user action is required, not during in-progress update steps.
+- Fixed a dashboard crash issue. Fixes [docker/desktop-feedback#611](https://github.com/docker/desktop-feedback/issues/611)
+
+#### For Windows
+
+- When `CONTAINERD_BUILDX_FOR_WINDOWS` is enabled, Windows Containers now uses `dockerd`'s embedded containerd and in-process BuildKit, replacing the standalone containerd and buildkitd services.
+- Fixed a bug where Docker Desktop could fail to start after an ungraceful shutdown left behind a stuck socket file.
+- Fixed a bug where Docker VMM did not explain how to fix an unavailable Windows Hypervisor platform.
 
 ## 4.88.1
 

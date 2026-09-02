@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.150.0: [docs/opentelemetry/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/opentelemetry/_index.md)
+> Release-pinned source for VictoriaMetrics v1.151.0: [docs/opentelemetry/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/opentelemetry/_index.md)
 
 VictoriaMetrics software provides native [OpenTelemetry](https://opentelemetry.io/) ingestion across **metrics**, **logs**, and **traces** via dedicated components.
 This allows running OpenTelemetry-based observability pipeline with VictoriaMetrics software as your backend.
@@ -9,7 +9,7 @@ VictoriaMetrics provides a dedicated database for each [signal type](https://ope
 - [VictoriaLogs](https://docs.victoriametrics.com/victorialogs/) for [Logs](https://opentelemetry.io/docs/concepts/signals/logs/);
 - [VictoriaTraces](https://docs.victoriametrics.com/victoriatraces/) for [Traces](https://opentelemetry.io/docs/concepts/signals/traces/).
 
-![README.webp](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/opentelemetry/README.webp)
+![README.webp](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/opentelemetry/README.webp)
 
 Each database is optimized for its own signal and usage scenario to improve maintainability and efficiency.
 

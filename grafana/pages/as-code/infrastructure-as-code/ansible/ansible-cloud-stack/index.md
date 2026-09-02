@@ -1,4 +1,4 @@
-> Release-pinned source for Grafana v13.2.0: [docs/sources/as-code/infrastructure-as-code/ansible/ansible-cloud-stack/index.md](https://github.com/grafana/grafana/blob/f681b1359f6a0b8ecb9f2c49a88ac72b75bde73b/docs/sources/as-code/infrastructure-as-code/ansible/ansible-cloud-stack/index.md)
+> Release-pinned source for Grafana v13.2.1: [docs/sources/as-code/infrastructure-as-code/ansible/ansible-cloud-stack/index.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/as-code/infrastructure-as-code/ansible/ansible-cloud-stack/index.md)
 
 # Create and manage your Grafana Cloud stack using Ansible
 

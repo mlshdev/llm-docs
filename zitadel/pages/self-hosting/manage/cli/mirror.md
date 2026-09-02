@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/self-hosting/manage/cli/mirror.mdx](https://zitadel.com/docs/self-hosting/manage/cli/mirror)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/self-hosting/manage/cli/mirror.mdx](https://zitadel.com/docs/self-hosting/manage/cli/mirror)
 
 The `mirror` command allows you to do database to database migrations. This functionality is useful to copy data from one database to another.
 

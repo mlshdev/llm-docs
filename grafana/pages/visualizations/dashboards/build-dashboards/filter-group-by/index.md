@@ -1,4 +1,4 @@
-> Release-pinned source for Grafana v13.2.0: [docs/sources/visualizations/dashboards/build-dashboards/filter-group-by/index.md](https://github.com/grafana/grafana/blob/f681b1359f6a0b8ecb9f2c49a88ac72b75bde73b/docs/sources/visualizations/dashboards/build-dashboards/filter-group-by/index.md)
+> Release-pinned source for Grafana v13.2.1: [docs/sources/visualizations/dashboards/build-dashboards/filter-group-by/index.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/visualizations/dashboards/build-dashboards/filter-group-by/index.md)
 
 # Filter and group by controls
 
@@ -114,14 +114,11 @@ You can also do this programmatically by returning the data frame with the appro
 
 Cross-filtering is supported for the following visualizations:
 
-| Visualization  | Requires Group by |
-| -------------- | ----------------- |
-| Bar chart      | no                |
-| Histogram      | yes               |
-| State timeline | yes               |
-| Status history | yes               |
-| Table          | no                |
-| Time series    | yes               |
+| Visualization | Requires Group by |
+| ------------- | ----------------- |
+| Bar chart     | no                |
+| Table         | no                |
+| Time series   | yes               |
 
 ### Apply cross-filtering
 

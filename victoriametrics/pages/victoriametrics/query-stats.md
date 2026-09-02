@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.150.0: [docs/victoriametrics/query-stats.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/victoriametrics/query-stats.md)
+> Release-pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/query-stats.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/query-stats.md)
 
 [VictoriaMetrics Enterprise](https://docs.victoriametrics.com/victoriametrics/enterprise/) supports logging statistics *(available from v1.116.0)* for
 read queries made through the [/api/v1/query](https://docs.victoriametrics.com/victoriametrics/keyconcepts/#instant-query)
@@ -77,7 +77,7 @@ or
 With [VictoriaLogs Grafana datasource](https://docs.victoriametrics.com/victorialogs/victorialogs-datasource/)
 you can build a dashboard to view and filter query stats easily:
 
-![query-stats\_dashboard.webp](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/victoriametrics/query-stats_dashboard.webp)
+![query-stats\_dashboard.webp](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/query-stats_dashboard.webp)
 
 The example of Grafana datasource for VictoriaMetrics cluster
 is available at the [query statistics dashboard](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/master/dashboards/query-stats.json).

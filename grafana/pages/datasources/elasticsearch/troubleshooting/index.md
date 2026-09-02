@@ -1,4 +1,4 @@
-> Release-pinned source for Grafana v13.2.0: [docs/sources/datasources/elasticsearch/troubleshooting/index.md](https://github.com/grafana/grafana/blob/f681b1359f6a0b8ecb9f2c49a88ac72b75bde73b/docs/sources/datasources/elasticsearch/troubleshooting/index.md)
+> Release-pinned source for Grafana v13.2.1: [docs/sources/datasources/elasticsearch/troubleshooting/index.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/datasources/elasticsearch/troubleshooting/index.md)
 
 # Troubleshoot issues with the Elasticsearch data source
 
@@ -75,7 +75,7 @@ The following errors occur when there are issues with authentication credentials
 1. Verify the user has read access to the specified index.
 2. Check Elasticsearch security settings and role mappings.
 3. Ensure the user has permission to access the `_cluster/health` endpoint.
-4. If using AWS Elasticsearch Service with SigV4 authentication, verify the IAM policy grants the required permissions.
+4. If using SigV4 authentication with an AWS-hosted Elasticsearch-compatible domain, verify the IAM policy grants the required permissions.
 
 ## Cluster health errors
 
@@ -114,7 +114,7 @@ The following errors occur when there are issues with the configured index or in
 
 ### Index not found
 
-**Error message:** "Error validating index: index\_not\_found"
+**Error message:** "Error validating index: `index_not_found`"
 
 **Cause:** The specified index or index pattern does not match any existing indices.
 
@@ -151,9 +151,10 @@ The following errors occur when there are issues with query syntax or configurat
 **Solution:**
 
 1. Reduce the time range of your query.
-2. Increase the date histogram interval (for example, change from `10s` to `1m`).
+2. Increase the date histogram interval (for example, change from `10s` to `1m`). For nested aggregations with **Interval** set to `Auto`, newer plugin versions widen the auto interval when the query would exceed `max_buckets`.
 3. Add filters to reduce the number of documents being aggregated.
-4. Increase the `search.max_buckets` setting in Elasticsearch (requires cluster admin access).
+4. Increase the `search.max_buckets` setting in Elasticsearch (requires cluster administrator access).
+5. Update the Elasticsearch plugin if you are on an older version. Refer to [Plugin updates](https://grafana.com/docs/grafana/v13.2/datasources/elasticsearch/#plugin-updates).
 
 ### Required field missing
 
@@ -183,7 +184,7 @@ The following errors occur when there are Elasticsearch version compatibility is
 
 ### Unsupported Elasticsearch version
 
-**Error message:** "Support for Elasticsearch versions after their end-of-life (currently versions < 7.16) was removed. Using unsupported version of Elasticsearch may lead to unexpected and incorrect results."
+**Error message:** "Support for Elasticsearch versions after their end-of-life (currently versions < 7.17) was removed. Using unsupported version of Elasticsearch may lead to unexpected and incorrect results."
 
 **Cause:** The Elasticsearch version is no longer supported by the Grafana data source.
 
@@ -192,6 +193,18 @@ The following errors occur when there are Elasticsearch version compatibility is
 1. Upgrade Elasticsearch to a supported version (7.17+, 8.x, or 9.x).
 2. Refer to [Elastic Product End of Life Dates](https://www.elastic.co/support/eol) for version support information.
 3. Note that queries may still work, but Grafana does not guarantee functionality for unsupported versions.
+
+### Elastic Cloud Serverless health check returns 410 Gone
+
+**Error message:** Health check fails with status `410 Gone` when connecting to Elastic Cloud Serverless.
+
+**Cause:** An older version of the Elasticsearch plugin used a health-check request that Elastic Cloud Serverless no longer accepts.
+
+**Solution:**
+
+1. Update the Elasticsearch plugin to **12.8.0** or later. Refer to [Plugin updates](https://grafana.com/docs/grafana/v13.2/datasources/elasticsearch/#plugin-updates).
+2. Confirm `preinstall_auto_update` is enabled so Grafana installs the latest plugin on restart, or update manually from **Plugins and data** > **Plugins**.
+3. Click **Save & test** again after the plugin update.
 
 ## Other common issues
 
@@ -220,25 +233,18 @@ The following issues don't produce specific error messages but are commonly enco
 4. Check Elasticsearch cluster performance and resource utilization.
 5. Consider using index aliases or data streams for better query routing.
 
-### CORS errors in browser console
+### Browser access mode disabled
 
-**Cause:** Cross-Origin Resource Sharing (CORS) is blocking requests from the browser to Elasticsearch.
+**Error message:** Direct browser access is no longer available, or the data source fails when configured for browser access.
+
+**Cause:** Browser access mode was removed in Grafana 9.2.0. The Elasticsearch data source must use Server (proxy) access so the Grafana backend connects to Elasticsearch.
 
 **Solution:**
 
-1. Use Server (proxy) access mode instead of Browser access mode in the data source configuration.
-2. If Browser access is required, configure CORS settings in Elasticsearch:
-
-```yaml
-http.cors.enabled: true
-http.cors.allow-origin: '<your-grafana-url>'
-http.cors.allow-headers: 'Authorization, Content-Type'
-http.cors.allow-credentials: true
-```
-
-> **Note**
->
-> Server (proxy) access mode is recommended for security and reliability.
+1. Open the data source configuration in Grafana.
+2. Ensure access mode is set to **Server** (proxy). Provisioned data sources should use `access: proxy`.
+3. Click **Save & test** to verify the connection.
+4. If you still see browser CORS errors, upgrade Grafana and the Elasticsearch plugin. Older configurations that attempted direct browser-to-Elasticsearch requests are no longer supported.
 
 ## Get additional help
 

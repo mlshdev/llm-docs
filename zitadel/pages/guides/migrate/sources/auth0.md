@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/guides/migrate/sources/auth0.mdx](https://zitadel.com/docs/guides/migrate/sources/auth0)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/migrate/sources/auth0.mdx](https://zitadel.com/docs/guides/migrate/sources/auth0)
 
 ## 1. Introduction
 

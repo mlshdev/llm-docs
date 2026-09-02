@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/apis/actions/code-examples.mdx](https://zitadel.com/docs/apis/actions/code-examples)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/apis/actions/code-examples.mdx](https://zitadel.com/docs/apis/actions/code-examples)
 
 Actions are a powerful tool to extend ZITADEL, and you might wonder what use cases actions can be used for.
 

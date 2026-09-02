@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/examples/introduction/backend/index.mdx](https://zitadel.com/docs/examples/introduction/backend)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/examples/introduction/backend/index.mdx](https://zitadel.com/docs/examples/introduction/backend)
 
 - [Go](https://zitadel.com/docs/examples/secure-api/go)
 - [Java Spring](https://zitadel.com/docs/examples/secure-api/java-spring)

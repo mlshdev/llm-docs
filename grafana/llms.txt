@@ -1,8 +1,8 @@
-# Grafana v13.2.0
+# Grafana v13.2.1
 
-> Documentation generated from the latest stable release of [grafana/grafana](https://github.com/grafana/grafana) and pinned to immutable source commit `f681b1359f6a0b8ecb9f2c49a88ac72b75bde73b`.
+> Documentation generated from the latest stable release of [grafana/grafana](https://github.com/grafana/grafana) and pinned to immutable source commit `56cd3e9288d8255fecebe5d05b48d191f50674b5`.
 
-- [Full documentation](llms-full.txt): Complete normalized corpus for Grafana v13.2.0.
+- [Full documentation](llms-full.txt): Complete normalized corpus for Grafana v13.2.1.
 - [Provenance manifest](manifest.json): Release, commit, document count, and generation notes.
 - Page order, sections, and cross-references follow the Hugo weights of docs/sources at the release tag, resolved against https://grafana.com/docs/grafana/v13.2/.
 - Shared fragments referenced by `docs/shared` and `shared-snippet` are inlined into the pages that render them and are not published separately.
@@ -36,6 +36,7 @@
 ## What's new in Grafana
 
 - [What's new in Grafana](pages/whatsnew/index.md): Source `docs/sources/whatsnew/_index.md`.
+- [What's new in Grafana v13.2](pages/whatsnew/whats-new-in-v13-2.md): Source `docs/sources/whatsnew/whats-new-in-v13-2.md`.
 - [What's new in Grafana v13.1](pages/whatsnew/whats-new-in-v13-1.md): Source `docs/sources/whatsnew/whats-new-in-v13-1.md`.
 - [What's new in Grafana v13.0](pages/whatsnew/whats-new-in-v13-0.md): Source `docs/sources/whatsnew/whats-new-in-v13-0.md`.
 - [What's new in Grafana v12.4](pages/whatsnew/whats-new-in-v12-4.md): Source `docs/sources/whatsnew/whats-new-in-v12-4.md`.
@@ -85,6 +86,7 @@
 
 - [Upgrade Grafana](pages/upgrade-guide/index.md): Source `docs/sources/upgrade-guide/_index.md`.
 - [Strategies for upgrading your self-managed Grafana instance](pages/upgrade-guide/when-to-upgrade/index.md): Source `docs/sources/upgrade-guide/when-to-upgrade/index.md`.
+- [Upgrade to Grafana v13.2](pages/upgrade-guide/upgrade-v13.2/index.md): Source `docs/sources/upgrade-guide/upgrade-v13.2/index.md`.
 - [Upgrade to Grafana v13.1](pages/upgrade-guide/upgrade-v13.1/index.md): Source `docs/sources/upgrade-guide/upgrade-v13.1/index.md`.
 - [Upgrade to Grafana v13.0](pages/upgrade-guide/upgrade-v13.0/index.md): Source `docs/sources/upgrade-guide/upgrade-v13.0/index.md`.
 - [Upgrade to Grafana v12.4](pages/upgrade-guide/upgrade-v12.4/index.md): Source `docs/sources/upgrade-guide/upgrade-v12.4/index.md`.
@@ -338,14 +340,17 @@
 - [InfluxDB annotations](pages/datasources/influxdb/annotations/index.md): Source `docs/sources/datasources/influxdb/annotations/index.md`.
 - [InfluxDB alerting](pages/datasources/influxdb/alerting/index.md): Source `docs/sources/datasources/influxdb/alerting/index.md`.
 - [Troubleshoot InfluxDB data source issues](pages/datasources/influxdb/troubleshooting/index.md): Source `docs/sources/datasources/influxdb/troubleshooting/index.md`.
-- [Configure the Loki data source](pages/datasources/loki/index.md): Source `docs/sources/datasources/loki/_index.md`.
-- [Configure the Loki data source](pages/datasources/loki/configure-loki-data-source.md): Source `docs/sources/datasources/loki/configure-loki-data-source.md`.
-- [Loki query editor](pages/datasources/loki/query-editor/index.md): Source `docs/sources/datasources/loki/query-editor/index.md`.
-- [Loki template variables](pages/datasources/loki/template-variables/index.md): Source `docs/sources/datasources/loki/template-variables/index.md`.
 - [Jaeger data source](pages/datasources/jaeger/index.md): Source `docs/sources/datasources/jaeger/_index.md`.
 - [Configure the Jaeger data source](pages/datasources/jaeger/configure/index.md): Source `docs/sources/datasources/jaeger/configure/index.md`.
 - [Jaeger query editor](pages/datasources/jaeger/query-editor/index.md): Source `docs/sources/datasources/jaeger/query-editor/index.md`.
 - [Troubleshoot Jaeger data source issues](pages/datasources/jaeger/troubleshooting/index.md): Source `docs/sources/datasources/jaeger/troubleshooting/index.md`.
+- [Loki data source](pages/datasources/loki/index.md): Source `docs/sources/datasources/loki/_index.md`.
+- [Configure the Loki data source](pages/datasources/loki/configure/index.md): Source `docs/sources/datasources/loki/configure/index.md`.
+- [Loki query editor](pages/datasources/loki/query-editor/index.md): Source `docs/sources/datasources/loki/query-editor/index.md`.
+- [Loki template variables](pages/datasources/loki/template-variables/index.md): Source `docs/sources/datasources/loki/template-variables/index.md`.
+- [Loki annotations](pages/datasources/loki/annotations/index.md): Source `docs/sources/datasources/loki/annotations/index.md`.
+- [Loki alerting](pages/datasources/loki/alerting/index.md): Source `docs/sources/datasources/loki/alerting/index.md`.
+- [Troubleshoot Loki data source issues](pages/datasources/loki/troubleshooting/index.md): Source `docs/sources/datasources/loki/troubleshooting/index.md`.
 - [Microsoft SQL Server data source](pages/datasources/mssql/index.md): Source `docs/sources/datasources/mssql/_index.md`.
 - [Configure the Microsoft SQL Server data source](pages/datasources/mssql/configure/index.md): Source `docs/sources/datasources/mssql/configure/index.md`.
 - [Microsoft SQL Server query editor](pages/datasources/mssql/query-editor/index.md): Source `docs/sources/datasources/mssql/query-editor/index.md`.
@@ -388,11 +393,11 @@
 - [Prometheus annotations](pages/datasources/prometheus/annotations/index.md): Source `docs/sources/datasources/prometheus/annotations/index.md`.
 - [Prometheus alerting](pages/datasources/prometheus/alerting/index.md): Source `docs/sources/datasources/prometheus/alerting/index.md`.
 - [Troubleshoot Prometheus data source issues](pages/datasources/prometheus/troubleshooting/index.md): Source `docs/sources/datasources/prometheus/troubleshooting/index.md`.
-- [Pyroscope](pages/datasources/pyroscope/index.md): Source `docs/sources/datasources/pyroscope/_index.md`.
-- [Configure the Grafana Pyroscope data source](pages/datasources/pyroscope/configure-pyroscope-data-source.md): Source `docs/sources/datasources/pyroscope/configure-pyroscope-data-source.md`.
-- [How profiling and tracing work together](pages/datasources/pyroscope/profiling-and-tracing.md): Source `docs/sources/datasources/pyroscope/profiling-and-tracing.md`.
-- [Configure traces to profiles](pages/datasources/pyroscope/configure-traces-to-profiles.md): Source `docs/sources/datasources/pyroscope/configure-traces-to-profiles.md`.
-- [Query profile data](pages/datasources/pyroscope/query-profile-data.md): Source `docs/sources/datasources/pyroscope/query-profile-data.md`.
+- [Pyroscope data source](pages/datasources/pyroscope/index.md): Source `docs/sources/datasources/pyroscope/_index.md`.
+- [Configure the Pyroscope data source](pages/datasources/pyroscope/configure/index.md): Source `docs/sources/datasources/pyroscope/configure/index.md`.
+- [Configure Trace to profiles](pages/datasources/pyroscope/configure-traces-to-profiles/index.md): Source `docs/sources/datasources/pyroscope/configure-traces-to-profiles/index.md`.
+- [Query profile data](pages/datasources/pyroscope/query-editor/index.md): Source `docs/sources/datasources/pyroscope/query-editor/index.md`.
+- [Pyroscope template variables](pages/datasources/pyroscope/template-variables/index.md): Source `docs/sources/datasources/pyroscope/template-variables/index.md`.
 - [Troubleshoot Pyroscope data source issues](pages/datasources/pyroscope/troubleshooting/index.md): Source `docs/sources/datasources/pyroscope/troubleshooting/index.md`.
 - [Tempo data source](pages/datasources/tempo/index.md): Source `docs/sources/datasources/tempo/_index.md`.
 - [Configure the Tempo data source](pages/datasources/tempo/configure-tempo-data-source/index.md): Source `docs/sources/datasources/tempo/configure-tempo-data-source/_index.md`.
@@ -484,6 +489,7 @@
 - [View alert rules](pages/alerting/monitor-status/view-alert-rules.md): Source `docs/sources/alerting/monitor-status/view-alert-rules.md`.
 - [View alert state](pages/alerting/monitor-status/view-alert-state.md): Source `docs/sources/alerting/monitor-status/view-alert-state.md`.
 - [View alert state history](pages/alerting/monitor-status/view-alert-state-history.md): Source `docs/sources/alerting/monitor-status/view-alert-state-history.md`.
+- [View notification history](pages/alerting/monitor-status/view-notification-history.md): Source `docs/sources/alerting/monitor-status/view-notification-history.md`.
 - [View active notifications](pages/alerting/monitor-status/view-active-notifications.md): Source `docs/sources/alerting/monitor-status/view-active-notifications.md`.
 - [Declare incidents from firing alerts](pages/alerting/monitor-status/declare-incident-from-alert.md): Source `docs/sources/alerting/monitor-status/declare-incident-from-alert.md`.
 - [Additional configuration](pages/alerting/set-up/index.md): Source `docs/sources/alerting/set-up/_index.md`.
@@ -507,6 +513,7 @@
 - [Handle connectivity errors in alerts](pages/alerting/guides/connectivity-errors.md): Source `docs/sources/alerting/guides/connectivity-errors.md`.
 - [Handle missing data in Grafana Alerting](pages/alerting/guides/missing-data.md): Source `docs/sources/alerting/guides/missing-data.md`.
 - [When SLOs reduce alert noise](pages/alerting/guides/when-slos-reduce-alert-noise.md): Source `docs/sources/alerting/guides/when-slos-reduce-alert-noise.md`.
+- [Alerting on forecasts](pages/alerting/guides/alerting-on-forecasts.md): Source `docs/sources/alerting/guides/alerting-on-forecasts.md`.
 - [Examples](pages/alerting/examples/index.md): Source `docs/sources/alerting/examples/_index.md`.
 - [Example of multi-dimensional alerts on time series data](pages/alerting/examples/multi-dimensional-alerts.md): Source `docs/sources/alerting/examples/multi-dimensional-alerts.md`.
 - [Example of alerting on tabular data](pages/alerting/examples/table-data.md): Source `docs/sources/alerting/examples/table-data.md`.

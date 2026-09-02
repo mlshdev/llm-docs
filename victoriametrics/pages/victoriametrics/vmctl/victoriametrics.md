@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.150.0: [docs/victoriametrics/vmctl/victoriametrics.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/victoriametrics/vmctl/victoriametrics.md)
+> Release-pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/vmctl/victoriametrics.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmctl/victoriametrics.md)
 
 The simplest way to migrate data between VictoriaMetrics installations is [to copy data between instances](https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/#data-migration) or [to run single-node and cluster together](https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/#from-single-node-to-cluster).
 But when simple copy isn't possible (migration between single-node and cluster, or re-sharding) or when data needs to be

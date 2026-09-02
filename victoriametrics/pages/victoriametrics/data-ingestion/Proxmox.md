@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.150.0: [docs/victoriametrics/data-ingestion/Proxmox.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/victoriametrics/data-ingestion/Proxmox.md)
+> Release-pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/data-ingestion/Proxmox.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/data-ingestion/Proxmox.md)
 
 Since Proxmox Virtual Environment(PVE) and Proxmox Backup Server(PBS) support sending data using the InfluxDB
 we can use the InfluxDB write support built into VictoriaMetrics.
@@ -12,7 +12,7 @@ or a username and password.
 1. Login to PVE as an administrator
 2. Go to DataCenter > MetricServer > Add > InfluxDB
 
-![PVE Metric Navigation](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/victoriametrics/data-ingestion/Proxmox-pve-nav.webp)
+![PVE Metric Navigation](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/data-ingestion/Proxmox-pve-nav.webp)
 
 3. Set the parameters as follows:
 
@@ -27,7 +27,7 @@ or a username and password.
 
 4. Click the `Create` button
 
-![PVE Metric Form](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/victoriametrics/data-ingestion/Proxmox-pve-form.webp)
+![PVE Metric Form](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/data-ingestion/Proxmox-pve-form.webp)
 
 5. Run `system_uptime{object="nodes"}` in vmui or in the explore view in Grafana to verify metrics from PVE are being sent to VictoriaMetrics.
    You should see 1 time series per node in your PVE cluster.
@@ -37,7 +37,7 @@ or a username and password.
 1. Log in to PBS as an administrator
 2. Go to Configuration > Metrics Server > Add > InfluxDB
 
-![PBS Metric Navigation](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/victoriametrics/data-ingestion/Proxmox-pbs-nav.webp)
+![PBS Metric Navigation](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/data-ingestion/Proxmox-pbs-nav.webp)
 
 3. Set the parameters as follows:
 
@@ -51,7 +51,7 @@ or a username and password.
 
 4. Click the `Create` button
 
-![PBS Metric Form](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/victoriametrics/data-ingestion/Proxmox-pbs-form.webp)
+![PBS Metric Form](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/data-ingestion/Proxmox-pbs-form.webp)
 
 5. Run `cpustat_idle{object="host"}` in vmui or in the explore view in Grafana to verify metrics from PBS are being to VictoriaMetrics.
 

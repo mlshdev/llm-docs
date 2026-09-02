@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/self-hosting/manage/http2.mdx](https://zitadel.com/docs/self-hosting/manage/http2)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/self-hosting/manage/http2.mdx](https://zitadel.com/docs/self-hosting/manage/http2)
 
 ZITADEL follows a strict API first approach and makes heavy use of the modern API framework called [gRPC](https://grpc.io/).
 Besides gRPC all APIs are also available in an openapi Rest fashion as well as in gRPC-web for compatibility towards browser integrations.

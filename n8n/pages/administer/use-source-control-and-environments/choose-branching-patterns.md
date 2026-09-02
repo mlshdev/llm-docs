@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/administer/use-source-control-and-environments/choose-branching-patterns.md](https://github.com/n8n-io/n8n-docs/blob/afebf5d9c6ff327fa215b3e6f99627e11fc9d3f2/docs/administer/use-source-control-and-environments/choose-branching-patterns.md)
+> Commit-pinned source for n8n main: [docs/administer/use-source-control-and-environments/choose-branching-patterns.md](https://github.com/n8n-io/n8n-docs/blob/0b69471cc64a4886de337982abd2f5d237dcd52a/docs/administer/use-source-control-and-environments/choose-branching-patterns.md)
 
 # Branch patterns <a id="branch-patterns"></a>
 
@@ -22,7 +22,7 @@ The advantages of this pattern are:
 
 The disadvantage is more manual steps to copy work between environments.
 
-![Development and production n8n instances, each connected to its own Git branch, with a pull request moving work between the branches](https://raw.githubusercontent.com/n8n-io/n8n-docs/afebf5d9c6ff327fa215b3e6f99627e11fc9d3f2/docs/administer/.gitbook/assets/vc-multi-multi.png)
+![Development and production n8n instances, each connected to its own Git branch, with a pull request moving work between the branches](https://raw.githubusercontent.com/n8n-io/n8n-docs/0b69471cc64a4886de337982abd2f5d237dcd52a/docs/administer/.gitbook/assets/vc-multi-multi.png)
 
 ## Multiple instances, one branch <a id="multiple-instances-one-branch"></a>
 
@@ -39,7 +39,7 @@ The disadvantages are:
 - If you push by mistake, there is a risk the work will make it into your production instance. If you [use a GitHub Action to automate pulls](https://docs.n8n.io/administer/use-source-control-and-environments/tutorial-create-environments-with-source-control#optional-use-a-github-action-to-automate-pulls) to production, you must either use the multi-instance, multi-branch pattern, or be careful to never push work that you don't want in production.
 - Pushing and pulling to the same instance can cause data loss as changes are overridden when performing these actions. You should set up processes to ensure content flows in one direction.
 
-![Development and production n8n instances both connected to the same single Git branch](https://raw.githubusercontent.com/n8n-io/n8n-docs/afebf5d9c6ff327fa215b3e6f99627e11fc9d3f2/docs/administer/.gitbook/assets/vc-multi-one.png)
+![Development and production n8n instances both connected to the same single Git branch](https://raw.githubusercontent.com/n8n-io/n8n-docs/0b69471cc64a4886de337982abd2f5d237dcd52a/docs/administer/.gitbook/assets/vc-multi-one.png)
 
 ## One instance, multiple branches <a id="one-instance-multiple-branches"></a>
 
@@ -52,10 +52,10 @@ This is useful to review work. For example, different users could work on their 
 >
 > n8n doesn't clean up the existing contents of an instance when changing branches. Switching branches in this pattern results in all the workflows from each branch being in your instance.
 
-![One n8n instance switching between several Git branches to review work pushed by different users](https://raw.githubusercontent.com/n8n-io/n8n-docs/afebf5d9c6ff327fa215b3e6f99627e11fc9d3f2/docs/administer/.gitbook/assets/vc-one-multi.png)
+![One n8n instance switching between several Git branches to review work pushed by different users](https://raw.githubusercontent.com/n8n-io/n8n-docs/0b69471cc64a4886de337982abd2f5d237dcd52a/docs/administer/.gitbook/assets/vc-one-multi.png)
 
 ## One instance, one branch <a id="one-instance-one-branch"></a>
 
 This is the simplest pattern.
 
-![Single n8n instance connected to a single Git branch](https://raw.githubusercontent.com/n8n-io/n8n-docs/afebf5d9c6ff327fa215b3e6f99627e11fc9d3f2/docs/administer/.gitbook/assets/vc-one-one.png)
+![Single n8n instance connected to a single Git branch](https://raw.githubusercontent.com/n8n-io/n8n-docs/0b69471cc64a4886de337982abd2f5d237dcd52a/docs/administer/.gitbook/assets/vc-one-one.png)

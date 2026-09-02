@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/guides/integrate/token-introspection/private-key-jwt.mdx](https://zitadel.com/docs/guides/integrate/token-introspection/private-key-jwt)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/integrate/token-introspection/private-key-jwt.mdx](https://zitadel.com/docs/guides/integrate/token-introspection/private-key-jwt)
 
 This guide explains how to use ZITADEL's [Private Key JWT authentication method](https://zitadel.com/docs/apis/openidoauth/authn-methods#jwt-with-private-key) to authenticate your application and call the token introspection endpoint. This is not about securing an API, but about allowing your backend to introspect access tokens in a secure way.
 
@@ -10,35 +10,35 @@ To use Private Key JWT for introspection, you must register your client applicat
 
 1. In your ZITADEL project, click **New** to add an application.
 
-![Register the app](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/integrate/token-introspection-jwt-profile-1.png)
+![Register the app](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/integrate/token-introspection-jwt-profile-1.png)
 
 2. Enter a name (e.g., "Backend Client") and select **API** as the application type.
 
-![Set application type](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/integrate/token-introspection-jwt-profile-2.png)
+![Set application type](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/integrate/token-introspection-jwt-profile-2.png)
 
 3. Choose **JWT** as the authentication method and click **Continue**.
 
-![Choose JWT Profile](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/integrate/token-introspection-jwt-profile-3.png)
+![Choose JWT Profile](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/integrate/token-introspection-jwt-profile-3.png)
 
 4. Review your settings and click **Create**.
 
-![Create application](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/integrate/token-introspection-jwt-profile-4.png)
+![Create application](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/integrate/token-introspection-jwt-profile-4.png)
 
 5. After creation, you’ll see the application’s **Client ID**. There is no client secret—instead, authentication relies on your private key and JWT.
 
-![Client ID](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/integrate/token-introspection-jwt-profile-5.png)
+![Client ID](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/integrate/token-introspection-jwt-profile-5.png)
 
 6. To generate a key pair, click **New** under the application’s keys section.
 
-![Generate a new key](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/integrate/token-introspection-jwt-profile-6.png)
+![Generate a new key](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/integrate/token-introspection-jwt-profile-6.png)
 
 7. Select **JSON** as the key type, set an expiration if desired, and click **Add**.
 
-![Key details](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/integrate/token-introspection-jwt-profile-7.png)
+![Key details](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/integrate/token-introspection-jwt-profile-7.png)
 
 8. Download and save the generated key by clicking **Download**. Afterward, click **Close**.
 
-![Download key](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/integrate/token-introspection-jwt-profile-8.png)
+![Download key](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/integrate/token-introspection-jwt-profile-8.png)
 
 9. The downloaded key file will look like this:
 
@@ -54,11 +54,11 @@ To use Private Key JWT for introspection, you must register your client applicat
 
 10. In the left menu, select **URLs** to view the application’s OIDC endpoints. Note the **issuer** URL, **token\_endpoint**, and **introspection\_endpoint**.
 
-![OIDC Endpoints](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/integrate/token-introspection-jwt-profile-10.png)
+![OIDC Endpoints](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/integrate/token-introspection-jwt-profile-10.png)
 
 11. Optionally, note your **Project ID** for reference.
 
-![Project ID](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/integrate/token-introspection-jwt-profile-11.png)
+![Project ID](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/integrate/token-introspection-jwt-profile-11.png)
 
 ## Calling the Introspection Endpoint
 

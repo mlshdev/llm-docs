@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/guides/integrate/service-accounts/private-key-jwt.mdx](https://zitadel.com/docs/guides/integrate/service-accounts/private-key-jwt)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/integrate/service-accounts/private-key-jwt.mdx](https://zitadel.com/docs/guides/integrate/service-accounts/private-key-jwt)
 
 This guide explains how developers can use private key JWT authentication to secure communication between service accounts and client applications in ZITADEL.
 
@@ -19,7 +19,7 @@ Read more about the [different authentication methods for service accounts](http
 9. The client sends an API request, including the `access_token` in the Authorization header.
 10. The resource server validates the JWT with [token introspection](https://zitadel.com/docs/guides/integrate/token-introspection).
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/guides/integrate/service-users/sequence-private-key-jwt.svg)
+![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/integrate/service-users/sequence-private-key-jwt.svg)
 
 ## Prerequisites
 
@@ -70,7 +70,7 @@ To upload your public key, use the [User Service Add Key API](https://zitadel.co
 >
 > If you set an expiration date when generating a key in ZITADEL, that key will expire at midnight on the specified day.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/console_serviceaccounts_new_key.gif)
+![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/console_serviceaccounts_new_key.gif)
 
 If you let ZITADEL generate a key for you and download the JSON file, it will look similar to the example below. In this ZITADEL-generated key file, the `key` property contains the *private* key for your service account. Store this JSON securely and never share your private key. ZITADEL automatically stores the public key component, so you do not need to upload it.
 

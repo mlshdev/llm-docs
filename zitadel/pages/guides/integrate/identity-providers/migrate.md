@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/guides/integrate/identity-providers/migrate.mdx](https://zitadel.com/docs/guides/integrate/identity-providers/migrate)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/integrate/identity-providers/migrate.mdx](https://zitadel.com/docs/guides/integrate/identity-providers/migrate)
 
 ## Migrate Generic OIDC Provider
 

@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/guides/manage/cloud/support.mdx](https://zitadel.com/docs/guides/manage/cloud/support)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/manage/cloud/support.mdx](https://zitadel.com/docs/guides/manage/cloud/support)
 
 > **Note**
 >
@@ -8,9 +8,9 @@
 
 We always recommend first having a look at our [documentation](https://zitadel.com/docs), [discord chat](https://zitadel.com/chat) and [GitHub repository](https://github.com/zitadel/zitadel). You can also ask our AI assistant for help before contacting Support.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/manuals/portal/customer_portal_general_support.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/manuals/portal/customer_portal_general_support.png)
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/manuals/portal/customer_portal_general_support_inkeep.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/manuals/portal/customer_portal_general_support_inkeep.png)
 
 ## Support Request
 
@@ -25,9 +25,9 @@ Create a new support request with the following information:
 - Affected Instance (Only for cloud instances)
 - Database Version (Only for self-hosted instances)
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/manuals/portal/customer_portal_support.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/manuals/portal/customer_portal_support.png)
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/manuals/portal/customer_portal_support_2.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/manuals/portal/customer_portal_support_2.png)
 
 After submitting the form, you will receive a confirmation email, and our team will be in touch with you shortly.
 

@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.150.0: [docs/victoriametrics/integrations/grafana/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/victoriametrics/integrations/grafana/_index.md)
+> Release-pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/integrations/grafana/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/grafana/_index.md)
 
 VictoriaMetrics integrates with Grafana using either [Prometheus datasource](https://grafana.com/docs/grafana/latest/datasources/prometheus/)
 or [VictoriaMetrics datasource](https://grafana.com/grafana/plugins/victoriametrics-metrics-datasource/) plugins.
@@ -45,10 +45,10 @@ If you don't see an option to create a data source - try contacting system admin
 Create [Prometheus datasource](https://grafana.com/docs/grafana/latest/datasources/prometheus/configure/)
 in Grafana. Follow the same connection instructions as for [VictoriaMetrics datasource](#victoriametrics-datasource).
 
-In the "Type and version" section set the type to "Prometheus" and the version to at least "2.24.x".
+In the "Performance" section set the Prometheus type to "Prometheus" and the Prometheus version to at least "2.24.x".
 This allows Grafana to use a more efficient API to get label values:
 
-![Datasource](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/victoriametrics/integrations/grafana/datasource-prometheus.webp)
+![Datasource](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/grafana/datasource-prometheus.webp)
 
 Once connected, you can build graphs and dashboards using [PromQL](https://prometheus.io/docs/prometheus/latest/querying/basics/).
 

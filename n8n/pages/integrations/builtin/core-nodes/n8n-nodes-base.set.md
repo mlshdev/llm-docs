@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/builtin/core-nodes/n8n-nodes-base.set.md](https://github.com/n8n-io/n8n-docs/blob/afebf5d9c6ff327fa215b3e6f99627e11fc9d3f2/docs/integrations/builtin/core-nodes/n8n-nodes-base.set.md)
+> Commit-pinned source for n8n main: [docs/integrations/builtin/core-nodes/n8n-nodes-base.set.md](https://github.com/n8n-io/n8n-docs/blob/0b69471cc64a4886de337982abd2f5d237dcd52a/docs/integrations/builtin/core-nodes/n8n-nodes-base.set.md)
 
 # Edit Fields (Set)
 
@@ -28,7 +28,7 @@ If you don't want to use expressions:
 
 You can do this for both the name and value of the field.
 
-![A field being dragged from INPUT into Fields to Set, then its Value toggled from Expression to Fixed](https://raw.githubusercontent.com/n8n-io/n8n-docs/afebf5d9c6ff327fa215b3e6f99627e11fc9d3f2/docs/integrations/.gitbook/assets/drag-drop-fixed-toggle%20\(1\).gif)
+![A field being dragged from INPUT into Fields to Set, then its Value toggled from Expression to Fixed](https://raw.githubusercontent.com/n8n-io/n8n-docs/0b69471cc64a4886de337982abd2f5d237dcd52a/docs/integrations/.gitbook/assets/drag-drop-fixed-toggle%20\(1\).gif)
 
 ### Keep Only Set Fields <a id="keep-only-set-fields"></a>
 

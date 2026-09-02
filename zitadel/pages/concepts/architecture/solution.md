@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/concepts/architecture/solution.mdx](https://zitadel.com/docs/concepts/architecture/solution)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/concepts/architecture/solution.mdx](https://zitadel.com/docs/concepts/architecture/solution)
 
 ## High Availability
 
@@ -34,7 +34,7 @@ Hence our reference design for Kubernetes is to have three application nodes and
 
 > If you are using a serverless offering like Google Cloud Run you can scale Zitadel from 0 to 1000 Pods without the need of deploying the node across multiple availability zones.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/zitadel_cluster_architecture.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/zitadel_cluster_architecture.png)
 
 ### Multi Cluster / Region
 
@@ -44,7 +44,7 @@ To keep the data in sync across all clusters, we recommend using Postgres with r
 Make sure to read our [Production Guide](https://zitadel.com/docs/self-hosting/manage/production#prefer-postgre-sql) before you decide to use it.
 Consult the [Postgres documentation](https://www.postgresql.org/docs/current/high-availability.html) for more details.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/a9311b8c702531832575351a663e98a2242778e5/apps/docs/public/img/zitadel_multicluster_architecture.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/zitadel_multicluster_architecture.png)
 
 ## Zero Downtime Updates
 

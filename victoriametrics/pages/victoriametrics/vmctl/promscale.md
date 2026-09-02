@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.150.0: [docs/victoriametrics/vmctl/promscale.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/victoriametrics/vmctl/promscale.md)
+> Release-pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/vmctl/promscale.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmctl/promscale.md)
 
 [Promscale](https://github.com/timescale/promscale) supports [Prometheus Remote Read API](https://prometheus.io/docs/prometheus/latest/querying/remote_read_api/).
 To migrate historical data from Promscale to VictoriaMetrics use `vmctl` in [remote-read mode](https://docs.victoriametrics.com/victoriametrics/vmctl/remoteread/).

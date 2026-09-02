@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.150.0: [docs/victoriametrics/scrape_config_examples.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/413f95d65f08d2c3fb03e227b1f3ba42884ca796/docs/victoriametrics/scrape_config_examples.md)
+> Release-pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/scrape_config_examples.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/scrape_config_examples.md)
 
 - [Static configs](#static-configs)
 - [File-based target discovery](#file-based-target-discovery)
@@ -21,8 +21,8 @@ scrape_configs:
 After you created the `scrape.yaml` file, download and unpack [single-node VictoriaMetrics](https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/) to the same directory:
 
 ```sh
-wget https://github.com/VictoriaMetrics/VictoriaMetrics/releases/download/v1.149.0/victoria-metrics-linux-amd64-v1.149.0.tar.gz
-tar xzf victoria-metrics-linux-amd64-v1.149.0.tar.gz
+wget https://github.com/VictoriaMetrics/VictoriaMetrics/releases/download/v1.150.0/victoria-metrics-linux-amd64-v1.150.0.tar.gz
+tar xzf victoria-metrics-linux-amd64-v1.150.0.tar.gz
 ```
 
 Then start VictoriaMetrics and instruct it to scrape targets defined in `scrape.yaml` and save scraped metrics
@@ -136,8 +136,8 @@ Then start [single-node VictoriaMetrics](https://docs.victoriametrics.com/victor
 
 ```yaml
 # Download and unpack single-node VictoriaMetrics
-wget https://github.com/VictoriaMetrics/VictoriaMetrics/releases/download/v1.149.0/victoria-metrics-linux-amd64-v1.149.0.tar.gz
-tar xzf victoria-metrics-linux-amd64-v1.149.0.tar.gz
+wget https://github.com/VictoriaMetrics/VictoriaMetrics/releases/download/v1.150.0/victoria-metrics-linux-amd64-v1.150.0.tar.gz
+tar xzf victoria-metrics-linux-amd64-v1.150.0.tar.gz
 
 # Run single-node VictoriaMetrics with the given scrape.yaml
 ./victoria-metrics-prod -promscrape.config=scrape.yaml

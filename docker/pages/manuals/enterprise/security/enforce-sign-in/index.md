@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/enterprise/security/enforce-sign-in/_index.md](https://github.com/docker/docs/blob/ca60e92629079de412f38632876ab208d84267ef/content/manuals/enterprise/security/enforce-sign-in/_index.md)
+> Commit-pinned source for Docker main: [content/manuals/enterprise/security/enforce-sign-in/_index.md](https://github.com/docker/docs/blob/ff96ad1711065cf2e9c3f1d701dad04775834f70/content/manuals/enterprise/security/enforce-sign-in/_index.md)
 
 # Enforce sign-in for Docker Desktop
 
@@ -49,7 +49,7 @@ On the next Docker Desktop restart:
 
 ## Enforcing sign-in versus enforcing single sign-on (SSO)
 
-Enforcing Docker Desktop sign-in and [enforcing SSO](https://docs.docker.com/enterprise/security/single-sign-on/connect/#optional-enforce-sso) are different features that serve different purposes:
+Enforcing Docker Desktop sign-in and [enforcing SSO](https://docs.docker.com/enterprise/security/single-sign-on/connect/#enforce-sso) are different features that serve different purposes:
 
 | Enforcement                       | Description                                                    | Benefits                                                                                                                                                                                                                                               |
 | :-------------------------------- | :------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

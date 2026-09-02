@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/self-hosting/deploy/kubernetes/observability.mdx](https://zitadel.com/docs/self-hosting/deploy/kubernetes/observability)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/self-hosting/deploy/kubernetes/observability.mdx](https://zitadel.com/docs/self-hosting/deploy/kubernetes/observability)
 
 This guide covers how to collect traces, metrics, and logs from the Zitadel and Login containers.
 

@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/apis/assets/assets.mdx](https://zitadel.com/docs/apis/assets/assets)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/apis/assets/assets.mdx](https://zitadel.com/docs/apis/assets/assets)
 
 ## AssetsService
 

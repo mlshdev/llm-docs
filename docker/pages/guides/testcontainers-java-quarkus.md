@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/testcontainers-java-quarkus.md](https://github.com/docker/docs/blob/ca60e92629079de412f38632876ab208d84267ef/content/guides/testcontainers-java-quarkus.md)
+> Commit-pinned source for Docker main: [content/guides/testcontainers-java-quarkus.md](https://github.com/docker/docs/blob/ff96ad1711065cf2e9c3f1d701dad04775834f70/content/guides/testcontainers-java-quarkus.md)
 
 # Testing Quarkus applications with Testcontainers
 

@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/guides/integrate/dynamic-client-registration.mdx](https://zitadel.com/docs/guides/integrate/dynamic-client-registration)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/integrate/dynamic-client-registration.mdx](https://zitadel.com/docs/guides/integrate/dynamic-client-registration)
 
 ZITADEL implements [OAuth 2.0 Dynamic Client Registration (RFC 7591)](https://datatracker.ietf.org/doc/html/rfc7591).
 It exposes a [`registration_endpoint`](https://zitadel.com/docs/apis/openidoauth/endpoints#registration-endpoint) that lets clients register

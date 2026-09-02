@@ -1,4 +1,4 @@
-> Release-pinned source for Grafana v13.2.0: [docs/sources/datasources/tempo/configure-tempo-data-source/_index.md](https://github.com/grafana/grafana/blob/f681b1359f6a0b8ecb9f2c49a88ac72b75bde73b/docs/sources/datasources/tempo/configure-tempo-data-source/_index.md)
+> Release-pinned source for Grafana v13.2.1: [docs/sources/datasources/tempo/configure-tempo-data-source/_index.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/datasources/tempo/configure-tempo-data-source/_index.md)
 
 # Configure the Tempo data source
 
@@ -193,7 +193,7 @@ If streaming isn't working, refer to [Streaming issues](https://grafana.com/docs
 
 Grafana provides several ways to link traces to other telemetry signals. The following diagram shows the available correlation mechanisms, the direction each goes, and where each is configured.
 
-![Linking traces to other signals](https://raw.githubusercontent.com/grafana/grafana/f681b1359f6a0b8ecb9f2c49a88ac72b75bde73b/docs/sources/datasources/tempo/configure-tempo-data-source/tempo-trace-correlation-diagram.svg)
+![Linking traces to other signals](https://raw.githubusercontent.com/grafana/grafana/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/datasources/tempo/configure-tempo-data-source/tempo-trace-correlation-diagram.svg)
 
 The Tempo data source settings page includes three sections for linking from spans to other signals. Each corresponds to a section in the settings form:
 

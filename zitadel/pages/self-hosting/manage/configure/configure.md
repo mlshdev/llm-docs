@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.1: [apps/docs/content/self-hosting/manage/configure/configure.mdx](https://zitadel.com/docs/self-hosting/manage/configure/configure)
+> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/self-hosting/manage/configure/configure.mdx](https://zitadel.com/docs/self-hosting/manage/configure/configure)
 
 This guide assumes you are familiar with [running ZITADEL using the least amount of configuration possible](https://zitadel.com/docs/self-hosting/deploy/overview).
 
@@ -717,11 +717,6 @@ OIDC:
     MaxTtl: 5m  # ZITADEL_OIDC_BACKCHANNELLOGOUT_MAXTTL
     # Lifetime of the token used to notify clients through OIDC back-channel logout.
     TokenLifetime: 15m # ZITADEL_OIDC_BACKCHANNELLOGOUT_TOKENLIFETIME
-
-WellKnown:
-  # HTTP Cache-Control max-age for /.well-known/apple-app-site-association and
-  # /.well-known/assetlinks.json. 0 sets Cache-Control: no-store.
-  AppLinksCacheControlMaxAge: 5m # ZITADEL_WELLKNOWN_APPLINKSCACHECONTROLMAXAGE
 
 SAML:
   DefaultLoginURLV2: "/ui/v2/login/login?samlRequest=" # ZITADEL_SAML_DEFAULTLOGINURLV2
