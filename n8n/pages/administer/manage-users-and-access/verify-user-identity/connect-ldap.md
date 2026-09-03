@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/administer/manage-users-and-access/verify-user-identity/connect-ldap.md](https://github.com/n8n-io/n8n-docs/blob/b732ee99d015bf1b55668862de6e07bbcb573c0c/docs/administer/manage-users-and-access/verify-user-identity/connect-ldap.md)
+> Commit-pinned source for n8n main: [docs/administer/manage-users-and-access/verify-user-identity/connect-ldap.md](https://github.com/n8n-io/n8n-docs/blob/e2348a766e0ed24d6420aae246e6f0bccbc2c50e/docs/administer/manage-users-and-access/verify-user-identity/connect-ldap.md)
 
 # Lightweight Directory Access Protocol (LDAP) <a id="lightweight-directory-access-protocol-ldap"></a>
 
@@ -19,7 +19,7 @@ LDAP allows users to sign in to n8n with their organization credentials, instead
 ## Enable LDAP <a id="enable-ldap"></a>
 
 1. Log in to n8n as the instance owner.
-2. Select **Settings** ![Settings icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/b732ee99d015bf1b55668862de6e07bbcb573c0c/docs/administer/.gitbook/assets/settings.png) > **LDAP**.
+2. Select **Settings** ![Settings icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/e2348a766e0ed24d6420aae246e6f0bccbc2c50e/docs/administer/.gitbook/assets/settings.png) > **LDAP**.
 3. Toggle on **Enable LDAP Login**.
 4. Complete the fields with details from your LDAP server.
 5. Select **Test connection** to check your connection setup, or **Save connection** to create the connection.
@@ -48,7 +48,7 @@ You must manage user details on the LDAP server, not in n8n. If you update or de
 To turn LDAP off:
 
 1. Log in to n8n as the instance owner.
-2. Select **Settings** ![Settings icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/b732ee99d015bf1b55668862de6e07bbcb573c0c/docs/administer/.gitbook/assets/settings.png) > **LDAP**.
+2. Select **Settings** ![Settings icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/e2348a766e0ed24d6420aae246e6f0bccbc2c50e/docs/administer/.gitbook/assets/settings.png) > **LDAP**.
 3. Toggle off **Enable LDAP Login**.
 
 If you turn LDAP off, n8n converts existing LDAP users to email users on their next login. The users must reset their password.

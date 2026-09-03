@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/administer/use-source-control-and-environments/understand-source-control.md](https://github.com/n8n-io/n8n-docs/blob/b732ee99d015bf1b55668862de6e07bbcb573c0c/docs/administer/use-source-control-and-environments/understand-source-control.md)
+> Commit-pinned source for n8n main: [docs/administer/use-source-control-and-environments/understand-source-control.md](https://github.com/n8n-io/n8n-docs/blob/e2348a766e0ed24d6420aae246e6f0bccbc2c50e/docs/administer/use-source-control-and-environments/understand-source-control.md)
 
 # Understand source control and environments <a id="understand-source-control-and-environments"></a>
 

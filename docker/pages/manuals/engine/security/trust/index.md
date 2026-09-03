@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/engine/security/trust/_index.md](https://github.com/docker/docs/blob/d47e43dee68bd9cbd16af81b1aa6aef45023e17c/content/manuals/engine/security/trust/_index.md)
+> Commit-pinned source for Docker main: [content/manuals/engine/security/trust/_index.md](https://github.com/docker/docs/blob/f6dc902a4d40c625f5f2c23a5c1eb735ffe7b570/content/manuals/engine/security/trust/_index.md)
 
 # Content trust in Docker
 
@@ -51,7 +51,7 @@ tag could be unsigned while the `3.1.6` tag could be signed. It is the
 responsibility of the image publisher to decide if an image tag is signed or
 not. In this representation, some image tags are signed, others are not:
 
-![Signed tags](https://raw.githubusercontent.com/docker/docs/d47e43dee68bd9cbd16af81b1aa6aef45023e17c/content/manuals/engine/security/trust/images/tag_signing.png)
+![Signed tags](https://raw.githubusercontent.com/docker/docs/f6dc902a4d40c625f5f2c23a5c1eb735ffe7b570/content/manuals/engine/security/trust/images/tag_signing.png)
 
 Publishers can choose to sign a specific tag or not. As a result, the content of
 an unsigned tag and that of a signed tag with the same name may not match. For
@@ -67,7 +67,7 @@ Enabling DCT is a bit like applying a "filter" to your registry. Consumers "see"
 only signed image tags and the less desirable, unsigned image tags are
 "invisible" to them.
 
-![Trust view](https://raw.githubusercontent.com/docker/docs/d47e43dee68bd9cbd16af81b1aa6aef45023e17c/content/manuals/engine/security/trust/images/trust_view.png)
+![Trust view](https://raw.githubusercontent.com/docker/docs/f6dc902a4d40c625f5f2c23a5c1eb735ffe7b570/content/manuals/engine/security/trust/images/trust_view.png)
 
 To the consumer who has not enabled DCT, nothing about how they work with Docker
 images changes. Every image is visible regardless of whether it is signed or
@@ -86,7 +86,7 @@ of the following classes of keys:
 
 The following image depicts the various signing keys and their relationships:
 
-![Content Trust components](https://raw.githubusercontent.com/docker/docs/d47e43dee68bd9cbd16af81b1aa6aef45023e17c/content/manuals/engine/security/trust/images/trust_components.png)
+![Content Trust components](https://raw.githubusercontent.com/docker/docs/f6dc902a4d40c625f5f2c23a5c1eb735ffe7b570/content/manuals/engine/security/trust/images/trust_components.png)
 
 > \[!WARNING]
 >

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/desktop/docker_desktop_enable_model_runner.yaml](https://github.com/docker/docs/blob/d47e43dee68bd9cbd16af81b1aa6aef45023e17c/data/cli/desktop/docker_desktop_enable_model_runner.yaml)
+> Commit-pinned source for Docker main: [data/cli/desktop/docker_desktop_enable_model_runner.yaml](https://github.com/docker/docs/blob/f6dc902a4d40c625f5f2c23a5c1eb735ffe7b570/data/cli/desktop/docker_desktop_enable_model_runner.yaml)
 
 # docker desktop enable model-runner
 

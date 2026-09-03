@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/use-n8n-cloud/gateway-credits/top-up-gateway-credits.md](https://github.com/n8n-io/n8n-docs/blob/b732ee99d015bf1b55668862de6e07bbcb573c0c/docs/deploy/use-n8n-cloud/gateway-credits/top-up-gateway-credits.md)
+> Commit-pinned source for n8n main: [docs/deploy/use-n8n-cloud/gateway-credits/top-up-gateway-credits.md](https://github.com/n8n-io/n8n-docs/blob/e2348a766e0ed24d6420aae246e6f0bccbc2c50e/docs/deploy/use-n8n-cloud/gateway-credits/top-up-gateway-credits.md)
 
 # Top up Gateway credits
 

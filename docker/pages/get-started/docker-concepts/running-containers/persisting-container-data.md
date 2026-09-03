@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/get-started/docker-concepts/running-containers/persisting-container-data.md](https://github.com/docker/docs/blob/d47e43dee68bd9cbd16af81b1aa6aef45023e17c/content/get-started/docker-concepts/running-containers/persisting-container-data.md)
+> Commit-pinned source for Docker main: [content/get-started/docker-concepts/running-containers/persisting-container-data.md](https://github.com/docker/docs/blob/f6dc902a4d40c625f5f2c23a5c1eb735ffe7b570/content/get-started/docker-concepts/running-containers/persisting-container-data.md)
 
 # Persisting container data
 

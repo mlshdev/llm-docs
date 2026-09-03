@@ -1,16 +1,14 @@
-> Commit-pinned source for Docker main: [content/manuals/engine/network/links.md](https://github.com/docker/docs/blob/d47e43dee68bd9cbd16af81b1aa6aef45023e17c/content/manuals/engine/network/links.md)
+> Commit-pinned source for Docker main: [content/manuals/engine/network/links.md](https://github.com/docker/docs/blob/f6dc902a4d40c625f5f2c23a5c1eb735ffe7b570/content/manuals/engine/network/links.md)
 
 # Legacy container links
 
 > \[!WARNING]
 >
-> The `--link` flag is a legacy feature of Docker. It may eventually
-> be removed. Unless you absolutely need to continue using it, we recommend that you use
-> user-defined networks to facilitate communication between two containers instead of using
-> `--link`. One feature that user-defined networks do not support that you can do
-> with `--link` is sharing environment variables between containers. However,
-> you can use other mechanisms such as volumes to share environment variables
-> between containers in a more controlled way.
+> Links on the default `bridge` network are deprecated and scheduled for removal
+> in Docker Engine 30.0. Starting with Docker Engine 29.6, Docker emits a
+> deprecation warning when you create a container with these links. Links on
+> non-default networks remain supported. Use user-defined networks instead of
+> the legacy `--link` flag whenever possible.
 >
 > See [Differences between user-defined bridges and the default bridge](https://docs.docker.com/engine/network/drivers/bridge/#differences-between-user-defined-bridges-and-the-default-bridge)
 > for some alternatives to using `--link`.
@@ -249,6 +247,14 @@ recipient container in two ways:
 - Updating the `/etc/hosts` file.
 
 ### Environment variables
+
+> \[!WARNING]
+>
+> Legacy-link environment variables were deprecated in Docker Engine 28.4, are
+> disabled by default in Docker Engine 29.0, and are scheduled for removal in
+> Docker Engine 30.0. In Docker Engine 29.x, set
+> `DOCKER_KEEP_DEPRECATED_LEGACY_LINKS_ENV_VARS=1` in the `dockerd` process
+> environment and restart the daemon to temporarily re-enable them.
 
 Docker creates several environment variables when you link containers. Docker
 automatically creates environment variables in the target container based on

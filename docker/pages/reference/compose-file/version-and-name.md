@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/reference/compose-file/version-and-name.md](https://github.com/docker/docs/blob/d47e43dee68bd9cbd16af81b1aa6aef45023e17c/content/reference/compose-file/version-and-name.md)
+> Commit-pinned source for Docker main: [content/reference/compose-file/version-and-name.md](https://github.com/docker/docs/blob/f6dc902a4d40c625f5f2c23a5c1eb735ffe7b570/content/reference/compose-file/version-and-name.md)
 
 # Version and name top-level elements
 

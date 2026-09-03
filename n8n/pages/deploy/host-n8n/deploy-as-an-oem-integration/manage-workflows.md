@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/host-n8n/deploy-as-an-oem-integration/manage-workflows.md](https://github.com/n8n-io/n8n-docs/blob/b732ee99d015bf1b55668862de6e07bbcb573c0c/docs/deploy/host-n8n/deploy-as-an-oem-integration/manage-workflows.md)
+> Commit-pinned source for n8n main: [docs/deploy/host-n8n/deploy-as-an-oem-integration/manage-workflows.md](https://github.com/n8n-io/n8n-docs/blob/e2348a766e0ed24d6420aae246e6f0bccbc2c50e/docs/deploy/host-n8n/deploy-as-an-oem-integration/manage-workflows.md)
 
 # Managing workflows <a id="managing-workflows"></a>
 
@@ -37,9 +37,9 @@ After all relevant credential details have been obtained, you can proceed to cre
 
 1. From the menu select **Credentials** > **New**.
 2. Use the drop-down to select the **Credential type** to create, for example *Airtable*.
-   ![Create New Credentials drop-down](https://raw.githubusercontent.com/n8n-io/n8n-docs/b732ee99d015bf1b55668862de6e07bbcb573c0c/docs/deploy/.gitbook/assets/create_new_credentials.png)
+   ![Create New Credentials drop-down](https://raw.githubusercontent.com/n8n-io/n8n-docs/e2348a766e0ed24d6420aae246e6f0bccbc2c50e/docs/deploy/.gitbook/assets/create_new_credentials.png)
 3. In the **Create New Credentials** modal, enter the corresponding credentials details for the user, and select the nodes that will have access to these credentials.
-   ![Create New Credentials modal](https://raw.githubusercontent.com/n8n-io/n8n-docs/b732ee99d015bf1b55668862de6e07bbcb573c0c/docs/deploy/.gitbook/assets/create_new_credentials2.png)
+   ![Create New Credentials modal](https://raw.githubusercontent.com/n8n-io/n8n-docs/e2348a766e0ed24d6420aae246e6f0bccbc2c50e/docs/deploy/.gitbook/assets/create_new_credentials2.png)
 4. Click **Create** to finish and save.
 
 #### Using the API <a id="using-the-api"></a>
@@ -103,7 +103,7 @@ You can duplicate and customize your template workflow using either the Editor U
 1. From the menu select **Workflows** > **Open** to open the template workflow to be duplicated.
 
 2. Select **Workflows** > **Duplicate**, then enter a name for this new workflow and click **Save**.
-   ![Duplicate workflow](https://raw.githubusercontent.com/n8n-io/n8n-docs/b732ee99d015bf1b55668862de6e07bbcb573c0c/docs/deploy/.gitbook/assets/duplicate_workflow.png)
+   ![Duplicate workflow](https://raw.githubusercontent.com/n8n-io/n8n-docs/e2348a766e0ed24d6420aae246e6f0bccbc2c50e/docs/deploy/.gitbook/assets/duplicate_workflow.png)
 
 3. Update all relevant nodes to use the credentials for this user (created above).
 

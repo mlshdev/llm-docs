@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/docker-hub/repos/manage/hub-images/oci-artifacts.md](https://github.com/docker/docs/blob/d47e43dee68bd9cbd16af81b1aa6aef45023e17c/content/manuals/docker-hub/repos/manage/hub-images/oci-artifacts.md)
+> Commit-pinned source for Docker main: [content/manuals/docker-hub/repos/manage/hub-images/oci-artifacts.md](https://github.com/docker/docs/blob/f6dc902a4d40c625f5f2c23a5c1eb735ffe7b570/content/manuals/docker-hub/repos/manage/hub-images/oci-artifacts.md)
 
 # Software artifacts on Docker Hub
 
@@ -94,13 +94,13 @@ Steps:
 5. Go to the repository page on Docker Hub. The **Tags** section of the page
    shows the Helm chart tag.
 
-![List of repository tags](https://raw.githubusercontent.com/docker/docs/d47e43dee68bd9cbd16af81b1aa6aef45023e17c/content/manuals/docker-hub/repos/manage/hub-images/images/oci-helm.png)
+![List of repository tags](https://raw.githubusercontent.com/docker/docs/f6dc902a4d40c625f5f2c23a5c1eb735ffe7b570/content/manuals/docker-hub/repos/manage/hub-images/images/oci-helm.png)
 
 6. Select the tag name to go to the page for that tag.
 
    The page lists a few useful commands for working with Helm charts.
 
-![Tag page of a Helm chart artifact](https://raw.githubusercontent.com/docker/docs/d47e43dee68bd9cbd16af81b1aa6aef45023e17c/content/manuals/docker-hub/repos/manage/hub-images/images/oci-helm-tagview.png)
+![Tag page of a Helm chart artifact](https://raw.githubusercontent.com/docker/docs/f6dc902a4d40c625f5f2c23a5c1eb735ffe7b570/content/manuals/docker-hub/repos/manage/hub-images/images/oci-helm-tagview.png)
 
 ### Push a volume
 
@@ -140,7 +140,7 @@ Steps:
 4. Go to the repository page on Docker Hub. The **Tags** section on that page
    shows the volume tag.
 
-![Repository page showing a volume in the tag list](https://raw.githubusercontent.com/docker/docs/d47e43dee68bd9cbd16af81b1aa6aef45023e17c/content/manuals/docker-hub/repos/manage/hub-images/images/oci-volume.png)
+![Repository page showing a volume in the tag list](https://raw.githubusercontent.com/docker/docs/f6dc902a4d40c625f5f2c23a5c1eb735ffe7b570/content/manuals/docker-hub/repos/manage/hub-images/images/oci-volume.png)
 
 ### Push a generic artifact file
 
@@ -173,4 +173,4 @@ Steps:
 4. Go to the repository page on Docker Hub. The **Tags** section on that page
    shows the artifact tag.
 
-![Repository page showing an artifact in the tag list](https://raw.githubusercontent.com/docker/docs/d47e43dee68bd9cbd16af81b1aa6aef45023e17c/content/manuals/docker-hub/repos/manage/hub-images/images/oci-artifact.png)
+![Repository page showing an artifact in the tag list](https://raw.githubusercontent.com/docker/docs/f6dc902a4d40c625f5f2c23a5c1eb735ffe7b570/content/manuals/docker-hub/repos/manage/hub-images/images/oci-artifact.png)

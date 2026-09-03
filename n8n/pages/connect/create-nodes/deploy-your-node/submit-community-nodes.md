@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/connect/create-nodes/deploy-your-node/submit-community-nodes.md](https://github.com/n8n-io/n8n-docs/blob/b732ee99d015bf1b55668862de6e07bbcb573c0c/docs/connect/create-nodes/deploy-your-node/submit-community-nodes.md)
+> Commit-pinned source for n8n main: [docs/connect/create-nodes/deploy-your-node/submit-community-nodes.md](https://github.com/n8n-io/n8n-docs/blob/e2348a766e0ed24d6420aae246e6f0bccbc2c50e/docs/connect/create-nodes/deploy-your-node/submit-community-nodes.md)
 
 # Submit community nodes <a id="submit-community-nodes"></a>
 

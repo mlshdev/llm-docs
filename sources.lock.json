@@ -23,14 +23,14 @@
     "docker": {
       "tag": "main",
       "branch": "main",
-      "sourceCommit": "d47e43dee68bd9cbd16af81b1aa6aef45023e17c",
-      "sourceCommittedAt": "2026-09-03T08:47:34Z"
+      "sourceCommit": "f6dc902a4d40c625f5f2c23a5c1eb735ffe7b570",
+      "sourceCommittedAt": "2026-09-03T12:30:51Z"
     },
     "n8n": {
       "tag": "main",
       "branch": "main",
-      "sourceCommit": "b732ee99d015bf1b55668862de6e07bbcb573c0c",
-      "sourceCommittedAt": "2026-09-03T10:14:29Z"
+      "sourceCommit": "e2348a766e0ed24d6420aae246e6f0bccbc2c50e",
+      "sourceCommittedAt": "2026-09-03T12:05:36Z"
     },
     "grafana": {
       "tag": "v13.2.1",
