@@ -1,4 +1,4 @@
-> Commit-pinned source for SearXNG master: [CHANGELOG.rst](https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/CHANGELOG.rst)
+> Commit-pinned source for SearXNG master: [CHANGELOG.rst](https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/CHANGELOG.rst)
 
 # SearXNG
 

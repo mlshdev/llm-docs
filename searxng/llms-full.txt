@@ -2,12 +2,12 @@
 
 Source repository: https://github.com/searxng/searxng
 Tracked branch: master
-Source commit: 745d5b6fc506da30b3f275a80497de5d509df540
+Source commit: 8f452ee89293d9a752a776f4c33f5a5f124fff97
 
 # Document: AI Policy
 
 Source path: AI_POLICY.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/AI_POLICY.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/AI_POLICY.rst
 
 .. SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -33,7 +33,7 @@ The *golden rule* is that a contribution should be worth more to the project tha
 # Document: SearXNG
 
 Source path: CHANGELOG.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/CHANGELOG.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/CHANGELOG.rst
 
 # SearXNG
 
@@ -48,7 +48,7 @@ master branch:
 # Document: Translations
 
 Source path: CONTRIBUTING.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/CONTRIBUTING.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/CONTRIBUTING.rst
 
 .. SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -137,7 +137,7 @@ For our policy on the use of AI tools, please read [AI Policy](https://github.co
 # Document: Setup
 
 Source path: README.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/README.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/README.rst
 
 .. SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -195,7 +195,7 @@ See LICENSE for more details.
 # Document: Security Policy
 
 Source path: SECURITY.md
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/SECURITY.md
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/SECURITY.md
 
 # Security Policy
 
@@ -212,7 +212,7 @@ the issue in to your report.
 # Document: Answer CAPTCHA from server's IP
 
 Source path: docs/admin/answer-captcha.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/admin/answer-captcha.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/admin/answer-captcha.rst
 
 # Answer CAPTCHA from server's IP
 
@@ -289,7 +289,7 @@ Do not execute a remote command.  This is useful for just forwarding ports.
 # Document: Administration API
 
 Source path: docs/admin/api.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/admin/api.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/admin/api.rst
 
 .. \_adminapi:
 
@@ -384,7 +384,7 @@ HTML of the site.  URL of the SearXNG instance and values are customizable.
 # Document: Architecture
 
 Source path: docs/admin/architecture.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/admin/architecture.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/admin/architecture.rst
 
 .. \_architecture:
 
@@ -425,7 +425,7 @@ The reference installation activates `server.limiter` and
 # Document: Buildhosts
 
 Source path: docs/admin/buildhosts.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/admin/buildhosts.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/admin/buildhosts.rst
 
 .. \_buildhosts:
 
@@ -592,7 +592,7 @@ To lint shell scripts we use ShellCheck - a shell script static analysis tool
 # Document: Administrator documentation
 
 Source path: docs/admin/index.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/admin/index.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/admin/index.rst
 
 # Administrator documentation
 
@@ -600,7 +600,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Apache
 
 Source path: docs/admin/installation-apache.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/admin/installation-apache.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/admin/installation-apache.rst
 
 .. \_installation apache:
 
@@ -989,7 +989,7 @@ SearXNG is located at root (`/`).
 # Document: Installation container
 
 Source path: docs/admin/installation-docker.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/admin/installation-docker.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/admin/installation-docker.rst
 
 .. \_installation container:
 
@@ -1341,7 +1341,7 @@ If everything is working on the new environment, you can remove the old
 # Document: Granian
 
 Source path: docs/admin/installation-granian.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/admin/installation-granian.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/admin/installation-granian.rst
 
 .. \_searxng granian:
 
@@ -1397,7 +1397,7 @@ you should change something, Granian documents all available parameters in the
 # Document: NGINX
 
 Source path: docs/admin/installation-nginx.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/admin/installation-nginx.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/admin/installation-nginx.rst
 
 .. \_installation nginx:
 
@@ -1657,7 +1657,7 @@ http {
 # Document: Installation Script
 
 Source path: docs/admin/installation-scripts.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/admin/installation-scripts.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/admin/installation-scripts.rst
 
 .. \_installation scripts:
 
@@ -1723,7 +1723,7 @@ We implemented installation procedures for:
 # Document: Step by step installation
 
 Source path: docs/admin/installation-searxng.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/admin/installation-searxng.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/admin/installation-searxng.rst
 
 .. \_installation basic:
 
@@ -1854,7 +1854,7 @@ command twice).  At this point SearXNG is not demonized; uwsgi allows this.
 # Document: uWSGI
 
 Source path: docs/admin/installation-uwsgi.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/admin/installation-uwsgi.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/admin/installation-uwsgi.rst
 
 .. \_searxng uwsgi:
 
@@ -2134,7 +2134,7 @@ Groups:
 # Document: Installation
 
 Source path: docs/admin/installation.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/admin/installation.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/admin/installation.rst
 
 .. \_installation:
 
@@ -2164,7 +2164,7 @@ should read this section first!
 # Document: List of plugins
 
 Source path: docs/admin/plugins.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/admin/plugins.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/admin/plugins.rst
 
 .. \_plugins admin:
 
@@ -2181,7 +2181,7 @@ Further reading ..
 # Document: Favicons
 
 Source path: docs/admin/searx.favicons.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/admin/searx.favicons.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/admin/searx.favicons.rst
 
 .. \_favicons:
 
@@ -2440,7 +2440,7 @@ into the *proxy*:
 # Document: Limiter
 
 Source path: docs/admin/searx.limiter.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/admin/searx.limiter.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/admin/searx.limiter.rst
 
 .. \_limiter:
 
@@ -2457,7 +2457,7 @@ The limiter requires a \[Valkey]\(#settings valkey) database.
 # Document: Settings
 
 Source path: docs/admin/settings/index.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/admin/settings/index.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/admin/settings/index.rst
 
 .. \_searxng settings.yml:
 
@@ -2472,7 +2472,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: settings.yml
 
 Source path: docs/admin/settings/settings.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/admin/settings/settings.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/admin/settings/settings.rst
 
 .. \_settings.yml:
 
@@ -2592,7 +2592,7 @@ engines:
 # Document: brand:
 
 Source path: docs/admin/settings/settings_brand.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/admin/settings/settings_brand.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/admin/settings/settings_brand.rst
 
 .. \_settings brand:
 
@@ -2605,7 +2605,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: categoriesastabs:
 
 Source path: docs/admin/settings/settings_categories_as_tabs.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/admin/settings/settings_categories_as_tabs.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/admin/settings/settings_categories_as_tabs.rst
 
 .. \_settings categories\_as\_tabs:
 
@@ -2641,7 +2641,7 @@ in one of the UI tabs (not included in `categories_as_tabs`).
 # Document: engines:
 
 Source path: docs/admin/settings/settings_engines.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/admin/settings/settings_engines.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/admin/settings/settings_engines.rst
 
 .. \_settings engines:
 
@@ -2910,7 +2910,7 @@ When searching, the default google engine will return German results and
 # Document: general:
 
 Source path: docs/admin/settings/settings_general.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/admin/settings/settings_general.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/admin/settings/settings_general.rst
 
 .. \_settings general:
 
@@ -2966,7 +2966,7 @@ Basic Auth can be randomly chosen as only the password is being validated.
 # Document: outgoing:
 
 Source path: docs/admin/settings/settings_outgoing.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/admin/settings/settings_outgoing.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/admin/settings/settings_outgoing.rst
 
 .. \_settings outgoing:
 
@@ -3072,7 +3072,7 @@ Using tor proxy (`true`) or not (`false`) for all engines.  The default is
 # Document: plugins:
 
 Source path: docs/admin/settings/settings_plugins.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/admin/settings/settings_plugins.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/admin/settings/settings_plugins.rst
 
 .. \_settings plugins:
 
@@ -3199,7 +3199,7 @@ to improve search quality.
 # Document: preferences:
 
 Source path: docs/admin/settings/settings_preferences.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/admin/settings/settings_preferences.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/admin/settings/settings_preferences.rst
 
 .. \_settings preferences:
 
@@ -3212,7 +3212,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: redis:
 
 Source path: docs/admin/settings/settings_redis.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/admin/settings/settings_redis.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/admin/settings/settings_redis.rst
 
 .. \_settings redis:
 
@@ -3255,7 +3255,7 @@ To install Valkey read: \[Valkey Developer Notes]\(#Valkey Developer Notes)
 # Document: search:
 
 Source path: docs/admin/settings/settings_search.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/admin/settings/settings_search.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/admin/settings/settings_search.rst
 
 .. \_settings search:
 
@@ -3383,7 +3383,7 @@ case).
 # Document: server:
 
 Source path: docs/admin/settings/settings_server.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/admin/settings/settings_server.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/admin/settings/settings_server.rst
 
 .. \_settings server:
 
@@ -3461,7 +3461,7 @@ Set additional [HTTP headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/
 # Document: ui:
 
 Source path: docs/admin/settings/settings_ui.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/admin/settings/settings_ui.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/admin/settings/settings_ui.rst
 
 .. \_settings ui:
 
@@ -3530,7 +3530,7 @@ Formatting type to use for result URLs: `pretty`, `full` or `host`.
 # Document: valkey:
 
 Source path: docs/admin/settings/settings_valkey.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/admin/settings/settings_valkey.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/admin/settings/settings_valkey.rst
 
 .. \_settings valkey:
 
@@ -3590,7 +3590,7 @@ $ ./utils/searxng.sh install valkey
 # Document: SearXNG maintenance
 
 Source path: docs/admin/update-searxng.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/admin/update-searxng.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/admin/update-searxng.rst
 
 .. \_searxng maintenance:
 
@@ -3680,7 +3680,7 @@ INFO    searx.valkeydb                 : connected to Valkey
 # Document: Searxng
 
 Source path: docs/build-templates/searxng.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/build-templates/searxng.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/build-templates/searxng.rst
 
 .. template evaluated by: ./utils/searxng.sh searxng.doc.rst
 .. hint: all dollar-names are variables, dollar sign itself is quoted by: \\$
@@ -3933,7 +3933,7 @@ container or in a script, test with curl:
 # Document: Built-in Answerers
 
 Source path: docs/dev/answerers/builtins.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/answerers/builtins.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/answerers/builtins.rst
 
 .. \_builtin answerers:
 
@@ -3943,7 +3943,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Answerer Development
 
 Source path: docs/dev/answerers/development.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/answerers/development.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/answerers/development.rst
 
 .. \_dev answerers:
 
@@ -3955,7 +3955,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Answerers
 
 Source path: docs/dev/answerers/index.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/answerers/index.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/answerers/index.rst
 
 # Answerers
 
@@ -3963,7 +3963,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Random
 
 Source path: docs/dev/answerers/random.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/answerers/random.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/answerers/random.rst
 
 .. \_answerer.random:
 
@@ -3976,7 +3976,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Statistics
 
 Source path: docs/dev/answerers/statistics.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/answerers/statistics.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/answerers/statistics.rst
 
 .. \_answerer.statistics:
 
@@ -3989,7 +3989,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Git Commits & Change Management
 
 Source path: docs/dev/commits.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/commits.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/commits.rst
 
 .. \_create commit:
 
@@ -4105,7 +4105,7 @@ full commit messages:
 # Document: How to contribute
 
 Source path: docs/dev/contribution_guide.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/contribution_guide.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/contribution_guide.rst
 
 .. \_how to contribute:
 
@@ -4269,7 +4269,7 @@ If you are working in your own brand, don't forget to adjust your
 # Document: Demo Offline Engine
 
 Source path: docs/dev/engines/demo/demo_offline.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/demo/demo_offline.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/demo/demo_offline.rst
 
 .. \_demo offline engine:
 
@@ -4282,7 +4282,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Demo Online Engine
 
 Source path: docs/dev/engines/demo/demo_online.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/demo/demo_online.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/demo/demo_online.rst
 
 .. \_demo online engine:
 
@@ -4295,7 +4295,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Engine Overview
 
 Source path: docs/dev/engines/engine_overview.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/engine_overview.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/engine_overview.rst
 
 .. \_engines-dev:
 
@@ -4536,7 +4536,7 @@ by templates.  For more details read section:
 # Document: Engine Library
 
 Source path: docs/dev/engines/enginelib.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/enginelib.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/enginelib.rst
 
 .. \_searx.enginelib:
 
@@ -4556,7 +4556,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: SearXNG's engines loader
 
 Source path: docs/dev/engines/engines.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/engines.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/engines.rst
 
 .. \_searx.engines loader:
 
@@ -4569,7 +4569,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Engine Implementations
 
 Source path: docs/dev/engines/index.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/index.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/index.rst
 
 .. \_engine implementations:
 
@@ -4638,7 +4638,7 @@ list of the engines can be found in the source under: :origin:`searx/engines`.
 # Document: JSON Engine
 
 Source path: docs/dev/engines/json_engine.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/json_engine.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/json_engine.rst
 
 .. \_json\_engine engine:
 
@@ -4651,7 +4651,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: MediaWiki Engine
 
 Source path: docs/dev/engines/mediawiki.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/mediawiki.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/mediawiki.rst
 
 .. \_mediawiki engine:
 
@@ -4664,7 +4664,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Command Line Engines
 
 Source path: docs/dev/engines/offline/command-line-engines.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/offline/command-line-engines.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/offline/command-line-engines.rst
 
 .. \_engine command:
 
@@ -4686,7 +4686,7 @@ Initial sponsored by `Search and Discovery Fund    <https://nlnet.nl/discovery>`
 # Document: NoSQL databases
 
 Source path: docs/dev/engines/offline/nosql-engines.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/offline/nosql-engines.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/offline/nosql-engines.rst
 
 .. \_nosql engines:
 
@@ -4773,7 +4773,7 @@ their structure.
 # Document: Local Search APIs
 
 Source path: docs/dev/engines/offline/search-indexer-engines.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/offline/search-indexer-engines.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/offline/search-indexer-engines.rst
 
 # Local Search APIs
 
@@ -4828,7 +4828,7 @@ in section \[private engines]\(#private engines).
 # Document: SQL Engines
 
 Source path: docs/dev/engines/offline/sql-engines.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/offline/sql-engines.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/offline/sql-engines.rst
 
 .. \_sql engines:
 
@@ -4953,7 +4953,7 @@ returned results use the option `limit`.
 # Document: Offline Concept
 
 Source path: docs/dev/engines/offline_concept.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/offline_concept.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/offline_concept.rst
 
 # Offline Concept
 
@@ -5023,7 +5023,7 @@ search.  If not, requests from an offline engines return errors.
 # Document: 500px
 
 Source path: docs/dev/engines/online/500px.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/500px.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/500px.rst
 
 .. \_500px engine:
 
@@ -5036,7 +5036,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Adobe Stock
 
 Source path: docs/dev/engines/online/adobe_stock.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/adobe_stock.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/adobe_stock.rst
 
 .. \_adobe stock engine:
 
@@ -5049,7 +5049,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Alpine Linux Packages
 
 Source path: docs/dev/engines/online/alpinelinux.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/alpinelinux.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/alpinelinux.rst
 
 .. \_alpinelinux engine:
 
@@ -5062,7 +5062,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Anna's Archive
 
 Source path: docs/dev/engines/online/annas_archive.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/annas_archive.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/annas_archive.rst
 
 .. \_annas\_archive engine:
 
@@ -5075,7 +5075,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Arch Linux
 
 Source path: docs/dev/engines/online/archlinux.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/archlinux.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/archlinux.rst
 
 .. \_archlinux engine:
 
@@ -5088,7 +5088,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: arXiv
 
 Source path: docs/dev/engines/online/arxiv.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/arxiv.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/arxiv.rst
 
 .. \_arxiv engine:
 
@@ -5101,7 +5101,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Astrophysics Data System (ADS)
 
 Source path: docs/dev/engines/online/astrophysics_data_system.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/astrophysics_data_system.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/astrophysics_data_system.rst
 
 .. \_astrophysics\_data\_system engine:
 
@@ -5114,7 +5114,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Azure Resources
 
 Source path: docs/dev/engines/online/azure.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/azure.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/azure.rst
 
 .. \_azure engine:
 
@@ -5127,7 +5127,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Bing Engines
 
 Source path: docs/dev/engines/online/bing.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/bing.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/bing.rst
 
 .. \_bing engines:
 
@@ -5165,7 +5165,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Bpb
 
 Source path: docs/dev/engines/online/bpb.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/bpb.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/bpb.rst
 
 .. \_bpb engine:
 
@@ -5178,7 +5178,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Brave Engines
 
 Source path: docs/dev/engines/online/brave.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/brave.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/brave.rst
 
 # Brave Engines
 
@@ -5208,7 +5208,7 @@ The API engine requires an API key from Brave. This can be obtained from the
 # Document: BT4G
 
 Source path: docs/dev/engines/online/bt4g.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/bt4g.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/bt4g.rst
 
 .. \_bt4g engine:
 
@@ -5221,7 +5221,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Cara Images
 
 Source path: docs/dev/engines/online/cara.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/cara.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/cara.rst
 
 .. \_cara engine:
 
@@ -5234,7 +5234,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: ChinaSo
 
 Source path: docs/dev/engines/online/chinaso.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/chinaso.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/chinaso.rst
 
 .. \_chinaso engine:
 
@@ -5247,7 +5247,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: CORE
 
 Source path: docs/dev/engines/online/core.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/core.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/core.rst
 
 .. \_core engine:
 
@@ -5260,7 +5260,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Crossref
 
 Source path: docs/dev/engines/online/crossref.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/crossref.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/crossref.rst
 
 .. \_crossref engine:
 
@@ -5273,7 +5273,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Dailymotion
 
 Source path: docs/dev/engines/online/dailymotion.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/dailymotion.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/dailymotion.rst
 
 .. \_dailymotion engine:
 
@@ -5286,7 +5286,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Discourse Forums
 
 Source path: docs/dev/engines/online/discourse.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/discourse.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/discourse.rst
 
 .. \_discourse engine:
 
@@ -5299,7 +5299,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: DuckDuckGo Engines
 
 Source path: docs/dev/engines/online/duckduckgo.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/duckduckgo.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/duckduckgo.rst
 
 .. \_duckduckgo engines:
 
@@ -5321,7 +5321,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Exa API Engine
 
 Source path: docs/dev/engines/online/exaapi.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/exaapi.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/exaapi.rst
 
 .. \_exaapi engine:
 
@@ -5334,7 +5334,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Geizhals
 
 Source path: docs/dev/engines/online/geizhals.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/geizhals.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/geizhals.rst
 
 .. \_gitea geizhals:
 
@@ -5347,7 +5347,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Gitea
 
 Source path: docs/dev/engines/online/gitea.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/gitea.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/gitea.rst
 
 .. \_gitea engine:
 
@@ -5360,7 +5360,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Github Code
 
 Source path: docs/dev/engines/online/github_code.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/github_code.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/github_code.rst
 
 .. \_github code engine:
 
@@ -5373,7 +5373,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: GitLab
 
 Source path: docs/dev/engines/online/gitlab.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/gitlab.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/gitlab.rst
 
 .. \_gitlab engine:
 
@@ -5386,7 +5386,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Google Engines
 
 Source path: docs/dev/engines/online/google.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/google.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/google.rst
 
 .. \_google engines:
 
@@ -5453,7 +5453,7 @@ than other (e.g. \[google news engine]\(#google news engine)).
 # Document: Hugging Face
 
 Source path: docs/dev/engines/online/huggingface.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/huggingface.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/huggingface.rst
 
 .. \_huggingface engine:
 
@@ -5466,7 +5466,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Jina Engine
 
 Source path: docs/dev/engines/online/jina.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/jina.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/jina.rst
 
 .. \_jina engine:
 
@@ -5479,7 +5479,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Kagi Engines
 
 Source path: docs/dev/engines/online/kagi.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/kagi.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/kagi.rst
 
 .. \_kagi engines:
 
@@ -5492,7 +5492,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Lemmy
 
 Source path: docs/dev/engines/online/lemmy.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/lemmy.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/lemmy.rst
 
 .. \_lemmy engine:
 
@@ -5505,7 +5505,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Library of Congress
 
 Source path: docs/dev/engines/online/loc.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/loc.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/loc.rst
 
 .. \_loc engine:
 
@@ -5518,7 +5518,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Marginalia Search
 
 Source path: docs/dev/engines/online/marginalia.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/marginalia.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/marginalia.rst
 
 .. \_marginalia engine:
 
@@ -5531,7 +5531,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Mastodon
 
 Source path: docs/dev/engines/online/mastodon.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/mastodon.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/mastodon.rst
 
 .. \_mastodon engine:
 
@@ -5544,7 +5544,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Moviepilot
 
 Source path: docs/dev/engines/online/moviepilot.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/moviepilot.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/moviepilot.rst
 
 .. \_moviepilot engine:
 
@@ -5557,7 +5557,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Matrix Rooms Search (MRS)
 
 Source path: docs/dev/engines/online/mrs.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/mrs.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/mrs.rst
 
 .. \_mrs engine:
 
@@ -5570,7 +5570,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Mwmbl Engine
 
 Source path: docs/dev/engines/online/mwmbl.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/mwmbl.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/mwmbl.rst
 
 .. \_Mwmbl engine:
 
@@ -5593,7 +5593,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Odysee
 
 Source path: docs/dev/engines/online/odysee.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/odysee.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/odysee.rst
 
 .. \_odysee engine:
 
@@ -5606,7 +5606,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: OpenAlex
 
 Source path: docs/dev/engines/online/openalex.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/openalex.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/openalex.rst
 
 .. \_openalex engine:
 
@@ -5619,7 +5619,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Open Library
 
 Source path: docs/dev/engines/online/openlibrary.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/openlibrary.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/openlibrary.rst
 
 .. \_openlibrary engine:
 
@@ -5632,7 +5632,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Peertube Engines
 
 Source path: docs/dev/engines/online/peertube.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/peertube.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/peertube.rst
 
 .. \_peertube engines:
 
@@ -5656,7 +5656,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Piped
 
 Source path: docs/dev/engines/online/piped.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/piped.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/piped.rst
 
 .. \_piped engine:
 
@@ -5669,7 +5669,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: PubMed
 
 Source path: docs/dev/engines/online/pubmed.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/pubmed.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/pubmed.rst
 
 .. \_pubmed engine:
 
@@ -5682,7 +5682,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Qwant
 
 Source path: docs/dev/engines/online/qwant.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/qwant.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/qwant.rst
 
 .. \_qwant engine:
 
@@ -5695,7 +5695,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: RadioBrowser
 
 Source path: docs/dev/engines/online/radio_browser.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/radio_browser.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/radio_browser.rst
 
 .. \_RadioBrowser engine:
 
@@ -5708,7 +5708,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Recoll Engine
 
 Source path: docs/dev/engines/online/recoll.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/recoll.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/recoll.rst
 
 .. \_engine recoll:
 
@@ -5721,7 +5721,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Repology
 
 Source path: docs/dev/engines/online/repology.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/repology.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/repology.rst
 
 .. \_repology engine:
 
@@ -5734,7 +5734,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Reuters
 
 Source path: docs/dev/engines/online/reuters.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/reuters.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/reuters.rst
 
 .. \_reuters engine:
 
@@ -5747,7 +5747,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Semantic Scholar
 
 Source path: docs/dev/engines/online/semantic_scholar.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/semantic_scholar.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/semantic_scholar.rst
 
 .. \_semantic\_scholar engine:
 
@@ -5760,7 +5760,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Soundcloud
 
 Source path: docs/dev/engines/online/soundcloud.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/soundcloud.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/soundcloud.rst
 
 .. \_soundcloud engine:
 
@@ -5773,7 +5773,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Sourcehut
 
 Source path: docs/dev/engines/online/sourcehut.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/sourcehut.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/sourcehut.rst
 
 .. \_sourcehut engine:
 
@@ -5786,7 +5786,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Springer Nature
 
 Source path: docs/dev/engines/online/springer.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/springer.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/springer.rst
 
 .. \_springer engine:
 
@@ -5799,7 +5799,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Startpage Engines
 
 Source path: docs/dev/engines/online/startpage.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/startpage.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/startpage.rst
 
 .. \_startpage engines:
 
@@ -5812,7 +5812,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Tagesschau API
 
 Source path: docs/dev/engines/online/tagesschau.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/tagesschau.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/tagesschau.rst
 
 .. \_tagesschau engine:
 
@@ -5825,7 +5825,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Torznab WebAPI
 
 Source path: docs/dev/engines/online/torznab.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/torznab.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/torznab.rst
 
 .. \_torznab engine:
 
@@ -5838,7 +5838,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Tube Archivist
 
 Source path: docs/dev/engines/online/tubearchivist.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/tubearchivist.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/tubearchivist.rst
 
 .. \_tubearchivist engine:
 
@@ -5851,7 +5851,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Void Linux binary packages
 
 Source path: docs/dev/engines/online/void.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/void.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/void.rst
 
 .. \_voidlinux engine:
 
@@ -5864,7 +5864,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Wallhaven
 
 Source path: docs/dev/engines/online/wallhaven.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/wallhaven.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/wallhaven.rst
 
 .. \_wallhaven engine:
 
@@ -5877,7 +5877,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Wikimedia
 
 Source path: docs/dev/engines/online/wikipedia.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/wikipedia.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/wikipedia.rst
 
 .. \_wikimedia engines:
 
@@ -5901,7 +5901,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Yacy
 
 Source path: docs/dev/engines/online/yacy.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/yacy.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/yacy.rst
 
 .. \_yacy engine:
 
@@ -5914,7 +5914,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Yahoo Engine
 
 Source path: docs/dev/engines/online/yahoo.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/yahoo.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/yahoo.rst
 
 .. \_yahoo engine:
 
@@ -5927,7 +5927,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Yandex Search API
 
 Source path: docs/dev/engines/online/yandex_api.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/yandex_api.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/yandex_api.rst
 
 .. \_yandex api engine:
 
@@ -5940,7 +5940,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Z-Library
 
 Source path: docs/dev/engines/online/zlibrary.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online/zlibrary.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online/zlibrary.rst
 
 .. \_zlibrary engine:
 
@@ -5953,7 +5953,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Tineye
 
 Source path: docs/dev/engines/online_url_search/tineye.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/online_url_search/tineye.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/online_url_search/tineye.rst
 
 .. \_tineye engine:
 
@@ -5966,7 +5966,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: XPath Engine
 
 Source path: docs/dev/engines/xpath.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/engines/xpath.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/engines/xpath.rst
 
 .. \_xpath engine:
 
@@ -5979,7 +5979,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Extended Types
 
 Source path: docs/dev/extended_types.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/extended_types.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/extended_types.rst
 
 .. \_extended\_types.:
 
@@ -5991,7 +5991,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Developer documentation
 
 Source path: docs/dev/index.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/index.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/index.rst
 
 # Developer documentation
 
@@ -5999,7 +5999,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Makefile & ./manage
 
 Source path: docs/dev/makefile.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/makefile.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/makefile.rst
 
 .. \_makefile:
 
@@ -6329,7 +6329,7 @@ The `./manage go.*` command line can be used to convenient run common `go
 # Document: Built-in Plugins
 
 Source path: docs/dev/plugins/builtins.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/plugins/builtins.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/plugins/builtins.rst
 
 .. \_builtin plugins:
 
@@ -6339,7 +6339,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Calculator
 
 Source path: docs/dev/plugins/calculator.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/plugins/calculator.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/plugins/calculator.rst
 
 .. \_plugins.calculator:
 
@@ -6352,7 +6352,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Plugin Development
 
 Source path: docs/dev/plugins/development.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/plugins/development.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/plugins/development.rst
 
 .. \_dev plugin:
 
@@ -6364,7 +6364,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Hash Values
 
 Source path: docs/dev/plugins/hash_plugin.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/plugins/hash_plugin.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/plugins/hash_plugin.rst
 
 .. \_hash\_plugin plugin:
 
@@ -6377,7 +6377,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Hostnames
 
 Source path: docs/dev/plugins/hostnames.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/plugins/hostnames.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/plugins/hostnames.rst
 
 .. \_hostnames plugin:
 
@@ -6390,7 +6390,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Plugins
 
 Source path: docs/dev/plugins/index.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/plugins/index.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/plugins/index.rst
 
 # Plugins
 
@@ -6398,7 +6398,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Infinite scroll
 
 Source path: docs/dev/plugins/infinite_scroll.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/plugins/infinite_scroll.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/plugins/infinite_scroll.rst
 
 .. \_plugins.infinite\_scroll:
 
@@ -6411,7 +6411,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Self-Info
 
 Source path: docs/dev/plugins/self_info.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/plugins/self_info.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/plugins/self_info.rst
 
 .. \_self\_info plugin:
 
@@ -6424,7 +6424,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Time Zone
 
 Source path: docs/dev/plugins/time_zone.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/plugins/time_zone.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/plugins/time_zone.rst
 
 .. \_time zone plugin:
 
@@ -6437,7 +6437,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Tor check
 
 Source path: docs/dev/plugins/tor_check.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/plugins/tor_check.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/plugins/tor_check.rst
 
 .. \_tor check plugin:
 
@@ -6450,7 +6450,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Unit Converter
 
 Source path: docs/dev/plugins/unit_converter.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/plugins/unit_converter.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/plugins/unit_converter.rst
 
 .. \_unit converter plugin:
 
@@ -6463,7 +6463,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Development Quickstart
 
 Source path: docs/dev/quickstart.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/quickstart.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/quickstart.rst
 
 .. \_devquickstart:
 
@@ -6602,7 +6602,7 @@ make static.build.drop
 # Document: reST primer
 
 Source path: docs/dev/reST.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/reST.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/reST.rst
 
 .. \_reST primer:
 
@@ -8046,7 +8046,7 @@ gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 # Document: Answer Results
 
 Source path: docs/dev/result_types/answer.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/result_types/answer.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/result_types/answer.rst
 
 .. \_result\_types.answer:
 
@@ -8061,7 +8061,7 @@ be displayed.
 # Document: Result
 
 Source path: docs/dev/result_types/base_result.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/result_types/base_result.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/result_types/base_result.rst
 
 # Result
 
@@ -8071,7 +8071,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Correction Results
 
 Source path: docs/dev/result_types/correction.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/result_types/correction.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/result_types/correction.rst
 
 .. \_result\_types.corrections:
 
@@ -8113,7 +8113,7 @@ Not really an URL, its the value to insert in a HTML form for a SearXNG query.
 # Document: Result Types
 
 Source path: docs/dev/result_types/index.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/result_types/index.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/result_types/index.rst
 
 .. \_result types:
 
@@ -8218,7 +8218,7 @@ template.
 # Document: Infobox Results
 
 Source path: docs/dev/result_types/infobox.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/result_types/infobox.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/result_types/infobox.rst
 
 .. \_result\_types.infobox:
 
@@ -8284,7 +8284,7 @@ A list of topics.  An *topic* is a dictionary with keys:
 # Document: Code Results
 
 Source path: docs/dev/result_types/main/code.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/result_types/main/code.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/result_types/main/code.rst
 
 .. \_result\_types.code:
 
@@ -8296,7 +8296,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: File Results
 
 Source path: docs/dev/result_types/main/file.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/result_types/main/file.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/result_types/main/file.rst
 
 .. \_result\_types.file:
 
@@ -8308,7 +8308,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Image Results
 
 Source path: docs/dev/result_types/main/image.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/result_types/main/image.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/result_types/main/image.rst
 
 .. \_result\_types.image:
 
@@ -8320,7 +8320,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Key-Value Results
 
 Source path: docs/dev/result_types/main/keyvalue.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/result_types/main/keyvalue.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/result_types/main/keyvalue.rst
 
 .. \_result\_types.keyvalue:
 
@@ -8332,7 +8332,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Main Results
 
 Source path: docs/dev/result_types/main/mainresult.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/result_types/main/mainresult.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/result_types/main/mainresult.rst
 
 .. \_result\_types.mainresult:
 
@@ -8345,7 +8345,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Paper Results
 
 Source path: docs/dev/result_types/main/paper.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/result_types/main/paper.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/result_types/main/paper.rst
 
 .. \_result\_types.paper:
 
@@ -8357,7 +8357,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Main Search Results
 
 Source path: docs/dev/result_types/main_result.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/result_types/main_result.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/result_types/main_result.rst
 
 .. \_main search results:
 
@@ -8384,7 +8384,7 @@ final typing is complete.
 # Document: Suggestion Results
 
 Source path: docs/dev/result_types/suggestion.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/result_types/suggestion.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/result_types/suggestion.rst
 
 .. \_result\_types.suggestion:
 
@@ -8430,7 +8430,7 @@ Not really an URL, its the value to insert in a HTML form for a SearXNG query.
 # Document: Search API
 
 Source path: docs/dev/search_api.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/search_api.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/search_api.rst
 
 .. \_search API:
 
@@ -8517,7 +8517,7 @@ See the available options in the preferences page of the instance.
 # Document: Tooling box searxngextra
 
 Source path: docs/dev/searxng_extra/index.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/searxng_extra/index.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/searxng_extra/index.rst
 
 .. \_searxng\_extra:
 
@@ -8530,7 +8530,7 @@ developers.
 # Document: searxngextra/update/
 
 Source path: docs/dev/searxng_extra/update.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/searxng_extra/update.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/searxng_extra/update.rst
 
 # `searxng_extra/update/`
 
@@ -8618,7 +8618,7 @@ Scripts to update static data in :origin:`searx/data/`
 # Document: Simple Theme Templates
 
 Source path: docs/dev/templates.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/templates.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/templates.rst
 
 .. \_simple theme templates:
 
@@ -9047,7 +9047,7 @@ See result\_types.infobox
 # Document: Translation
 
 Source path: docs/dev/translation.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/dev/translation.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/dev/translation.rst
 
 .. \_translation:
 
@@ -9121,7 +9121,7 @@ Replace `APIKEY` by your [API key](https://translate.codeberg.org/accounts/profi
 # Document: Welcome to SearXNG
 
 Source path: docs/index.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/index.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/index.rst
 
 # Welcome to SearXNG
 
@@ -9179,7 +9179,7 @@ no cost:
 # Document: Why use a private instance?
 
 Source path: docs/own-instance.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/own-instance.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/own-instance.rst
 
 # Why use a private instance?
 
@@ -9259,7 +9259,7 @@ instance access to a privacy-respecting search service.
 # Document: Source-Code
 
 Source path: docs/src/index.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/src/index.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/src/index.rst
 
 # Source-Code
 
@@ -9271,7 +9271,7 @@ requested.
 # Document: Custom message extractor (i18n)
 
 Source path: docs/src/searx.babel_extract.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/src/searx.babel_extract.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/src/searx.babel_extract.rst
 
 .. \_searx.babel\_extract:
 
@@ -9284,7 +9284,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Bot Detection
 
 Source path: docs/src/searx.botdetection.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/src/searx.botdetection.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/src/searx.botdetection.rst
 
 .. \_botdetection:
 
@@ -9343,7 +9343,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Caches
 
 Source path: docs/src/searx.cache.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/src/searx.cache.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/src/searx.cache.rst
 
 .. \_searx.cache:
 
@@ -9356,7 +9356,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: SearXNG Exceptions
 
 Source path: docs/src/searx.exceptions.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/src/searx.exceptions.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/src/searx.exceptions.rst
 
 .. \_searx.exceptions:
 
@@ -9369,7 +9369,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Favicons (source)
 
 Source path: docs/src/searx.favicons.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/src/searx.favicons.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/src/searx.favicons.rst
 
 .. \_favicons source:
 
@@ -9410,7 +9410,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Online /info
 
 Source path: docs/src/searx.infopage.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/src/searx.infopage.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/src/searx.infopage.rst
 
 .. \_searx.infopage:
 
@@ -9423,7 +9423,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Locales
 
 Source path: docs/src/searx.locales.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/src/searx.locales.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/src/searx.locales.rst
 
 .. \_searx.locales:
 
@@ -9436,7 +9436,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Search processors
 
 Source path: docs/src/searx.search.processors.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/src/searx.search.processors.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/src/searx.search.processors.rst
 
 .. \_searx.search.processors:
 
@@ -9476,7 +9476,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Search
 
 Source path: docs/src/searx.search.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/src/searx.search.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/src/searx.search.rst
 
 .. \_searx.search:
 
@@ -9519,7 +9519,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Settings Loader
 
 Source path: docs/src/searx.settings.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/src/searx.settings.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/src/searx.settings.rst
 
 .. \_searx.settings\_loader:
 
@@ -9532,7 +9532,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: SQLite DB
 
 Source path: docs/src/searx.sqlitedb.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/src/searx.sqlitedb.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/src/searx.sqlitedb.rst
 
 .. \_sqlite db:
 
@@ -9545,7 +9545,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Utility functions for the engines
 
 Source path: docs/src/searx.utils.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/src/searx.utils.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/src/searx.utils.rst
 
 .. \_searx.utils:
 
@@ -9558,7 +9558,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Valkey DB
 
 Source path: docs/src/searx.valkeydb.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/src/searx.valkeydb.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/src/searx.valkeydb.rst
 
 .. \_valkey db:
 
@@ -9571,7 +9571,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Valkey Library
 
 Source path: docs/src/searx.valkeylib.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/src/searx.valkeylib.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/src/searx.valkeylib.rst
 
 .. \_searx.valkey:
 
@@ -9584,7 +9584,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Weather
 
 Source path: docs/src/searx.weather.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/src/searx.weather.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/src/searx.weather.rst
 
 .. \_weather:
 
@@ -9597,7 +9597,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: About SearXNG
 
 Source path: docs/user/about.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/user/about.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/user/about.rst
 
 .. \_about SearXNG:
 
@@ -9694,7 +9694,7 @@ internet is, the more freedom we have!
 # Document: Configured Engines
 
 Source path: docs/user/configured_engines.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/user/configured_engines.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/user/configured_engines.rst
 
 .. \_configured engines:
 
@@ -9774,7 +9774,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: User information
 
 Source path: docs/user/index.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/user/index.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/user/index.rst
 
 # User information
 
@@ -9782,7 +9782,7 @@ Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275
 # Document: Search syntax
 
 Source path: docs/user/search-syntax.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/user/search-syntax.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/user/search-syntax.rst
 
 .. \_search-syntax:
 
@@ -9875,7 +9875,7 @@ In the available page you find keywords for
 # Document: DevOps tooling box
 
 Source path: docs/utils/index.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/utils/index.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/utils/index.rst
 
 .. \_searx\_utils:
 .. \_toolboxing:
@@ -9906,7 +9906,7 @@ $ FORCE_TIMEOUT=0 ./utils/searxng.sh install nginx
 # Document: utils/searxng.sh
 
 Source path: docs/utils/searxng.sh.rst
-Canonical source: https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/utils/searxng.sh.rst
+Canonical source: https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/utils/searxng.sh.rst
 
 .. \_searxng.sh:
 
