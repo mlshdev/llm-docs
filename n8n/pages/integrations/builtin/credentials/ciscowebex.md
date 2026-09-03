@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/builtin/credentials/ciscowebex.md](https://github.com/n8n-io/n8n-docs/blob/e2348a766e0ed24d6420aae246e6f0bccbc2c50e/docs/integrations/builtin/credentials/ciscowebex.md)
+> Commit-pinned source for n8n main: [docs/integrations/builtin/credentials/ciscowebex.md](https://github.com/n8n-io/n8n-docs/blob/191a04ec05b8df3fe1fb96f54726ed40db2518f7/docs/integrations/builtin/credentials/ciscowebex.md)
 
 # Webex by Cisco credentials <a id="webex-by-cisco-credentials"></a>
 

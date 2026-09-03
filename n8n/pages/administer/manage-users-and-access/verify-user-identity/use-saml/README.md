@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/administer/manage-users-and-access/verify-user-identity/use-saml/README.md](https://github.com/n8n-io/n8n-docs/blob/e2348a766e0ed24d6420aae246e6f0bccbc2c50e/docs/administer/manage-users-and-access/verify-user-identity/use-saml/README.md)
+> Commit-pinned source for n8n main: [docs/administer/manage-users-and-access/verify-user-identity/use-saml/README.md](https://github.com/n8n-io/n8n-docs/blob/191a04ec05b8df3fe1fb96f54726ed40db2518f7/docs/administer/manage-users-and-access/verify-user-identity/use-saml/README.md)
 
 # Security Assertion Markup Language (SAML) <a id="security-assertion-markup-language-saml"></a>
 

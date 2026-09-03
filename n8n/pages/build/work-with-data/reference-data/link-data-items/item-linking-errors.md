@@ -1,10 +1,10 @@
-> Commit-pinned source for n8n main: [docs/build/work-with-data/reference-data/link-data-items/item-linking-errors.md](https://github.com/n8n-io/n8n-docs/blob/e2348a766e0ed24d6420aae246e6f0bccbc2c50e/docs/build/work-with-data/reference-data/link-data-items/item-linking-errors.md)
+> Commit-pinned source for n8n main: [docs/build/work-with-data/reference-data/link-data-items/item-linking-errors.md](https://github.com/n8n-io/n8n-docs/blob/191a04ec05b8df3fe1fb96f54726ed40db2518f7/docs/build/work-with-data/reference-data/link-data-items/item-linking-errors.md)
 
 # Item linking errors <a id="item-linking-errors"></a>
 
 In n8n you can reference data from any previous node. This doesn't have to be the node just before: it can be any previous node in the chain. When referencing nodes further back, you use the expression syntax `$(node_name).item`.
 
-![](https://raw.githubusercontent.com/n8n-io/n8n-docs/e2348a766e0ed24d6420aae246e6f0bccbc2c50e/docs/build/.gitbook/assets/item-linking-multiple-lines.png)
+![](https://raw.githubusercontent.com/n8n-io/n8n-docs/191a04ec05b8df3fe1fb96f54726ed40db2518f7/docs/build/.gitbook/assets/item-linking-multiple-lines.png)
 
 <figcaption markdown>Diagram of threads for different items. Due to the item linking, you can get the actor for each movie using `$('Get famous movie actors').item`.</figcaption>
 

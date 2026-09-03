@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/host-n8n/configure-n8n/user-management.md](https://github.com/n8n-io/n8n-docs/blob/e2348a766e0ed24d6420aae246e6f0bccbc2c50e/docs/deploy/host-n8n/configure-n8n/user-management.md)
+> Commit-pinned source for n8n main: [docs/deploy/host-n8n/configure-n8n/user-management.md](https://github.com/n8n-io/n8n-docs/blob/191a04ec05b8df3fe1fb96f54726ed40db2518f7/docs/deploy/host-n8n/configure-n8n/user-management.md)
 
 # Configure self-hosted n8n for user management <a id="configure-self-hosted-n8n-for-user-management"></a>
 

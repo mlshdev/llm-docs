@@ -1,6 +1,6 @@
 # n8n main
 
-> Documentation generated from the latest `main` branch commit of [n8n-io/n8n-docs](https://github.com/n8n-io/n8n-docs) and pinned to immutable source commit `e2348a766e0ed24d6420aae246e6f0bccbc2c50e`.
+> Documentation generated from the latest `main` branch commit of [n8n-io/n8n-docs](https://github.com/n8n-io/n8n-docs) and pinned to immutable source commit `191a04ec05b8df3fe1fb96f54726ed40db2518f7`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for n8n main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
