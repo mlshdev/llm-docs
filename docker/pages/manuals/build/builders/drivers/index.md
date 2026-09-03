@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/build/builders/drivers/_index.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/build/builders/drivers/_index.md)
+> Commit-pinned source for Docker main: [content/manuals/build/builders/drivers/_index.md](https://github.com/docker/docs/blob/d47e43dee68bd9cbd16af81b1aa6aef45023e17c/content/manuals/build/builders/drivers/_index.md)
 
 # Build drivers
 
@@ -8,6 +8,7 @@ Buildx supports the following drivers:
 
 - `docker`: uses the BuildKit library bundled into the Docker daemon.
 - `docker-container`: creates a dedicated BuildKit container using Docker.
+- `cloud`: connects to a managed builder in Docker Build Cloud.
 - `kubernetes`: creates BuildKit pods in a Kubernetes cluster.
 - `remote`: connects directly to a manually managed BuildKit daemon.
 
@@ -18,25 +19,28 @@ provide more flexibility and are better at handling advanced scenarios.
 
 The following table outlines some differences between drivers.
 
-| Feature                      | `docker` | `docker-container` | `kubernetes` |      `remote`      |
-| :--------------------------- | :------: | :----------------: | :----------: | :----------------: |
-| **Automatically load image** |     ✅    |                    |              |                    |
-| **Cache export**             |    ✅\*   |          ✅         |       ✅      |          ✅         |
-| **Tarball output**           |          |          ✅         |       ✅      |          ✅         |
-| **Multi-arch images**        |          |          ✅         |       ✅      |          ✅         |
-| **BuildKit configuration**   |          |          ✅         |       ✅      | Managed externally |
+| Feature                      | `docker` | `docker-container` |      `cloud`      | `kubernetes` |      `remote`      |
+| :--------------------------- | :------: | :----------------: | :---------------: | :----------: | :----------------: |
+| **Automatically load image** |     ✅    |                    |    Conditional    |              |                    |
+| **Cache export**             |    ✅\*   |          ✅         |         ✅         |       ✅      |          ✅         |
+| **Tarball output**           |          |          ✅         |         ✅         |       ✅      |          ✅         |
+| **Multi-arch images**        |          |          ✅         |         ✅         |       ✅      |          ✅         |
+| **BuildKit configuration**   |          |          ✅         | Managed by Docker |       ✅      | Managed externally |
 
 \* *The `docker` driver doesn't support all cache export options.
 See [Cache storage backends](https://docs.docker.com/build/cache/backends/) for more information.*
 
 ## Loading to local image store
 
-Unlike when using the default `docker` driver, images built using other drivers
-aren't automatically loaded into the local image store. If you don't specify an
-output, the build result is exported to the build cache only.
+The `docker` driver automatically loads images into the local image store.
+With Docker Build Cloud, an untagged result remains in the cloud build cache
+when you don't specify an output. Using `--tag` instead automatically loads the
+image when the build targets a single platform and runs on one cloud node. With
+other drivers, the build result remains in the build cache if you don't specify
+an output.
 
-To build an image using a non-default driver and load it to the image store,
-use the `--load` flag with the build command:
+To build an image using a driver that doesn't load results automatically, use
+the `--load` flag with the build command:
 
 ```console
 $ docker buildx build --load -t <image> --builder=container .
@@ -82,5 +86,6 @@ Read about each driver:
 
 - [Docker driver](https://docs.docker.com/build/builders/drivers/docker/)
 - [Docker container driver](https://docs.docker.com/build/builders/drivers/docker-container/)
+- [Cloud driver](https://docs.docker.com/build/builders/drivers/cloud/)
 - [Kubernetes driver](https://docs.docker.com/build/builders/drivers/kubernetes/)
 - [Remote driver](https://docs.docker.com/build/builders/drivers/remote/)

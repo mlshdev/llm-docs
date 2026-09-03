@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/engine/storage/drivers/_index.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/engine/storage/drivers/_index.md)
+> Commit-pinned source for Docker main: [content/manuals/engine/storage/drivers/_index.md](https://github.com/docker/docs/blob/d47e43dee68bd9cbd16af81b1aa6aef45023e17c/content/manuals/engine/storage/drivers/_index.md)
 
 > \[!NOTE]
 > This page describes the classic storage drivers, such as `overlay2`. Docker
@@ -74,7 +74,7 @@ writing new files, modifying existing files, and deleting files, are written to
 this thin writable container layer. The diagram below shows a container based
 on an `ubuntu:15.04` image.
 
-![Layers of a container based on the Ubuntu image](https://raw.githubusercontent.com/docker/docs/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/engine/storage/drivers/images/container-layers.webp?w=450\&h=300)
+![Layers of a container based on the Ubuntu image](https://raw.githubusercontent.com/docker/docs/d47e43dee68bd9cbd16af81b1aa6aef45023e17c/content/manuals/engine/storage/drivers/images/container-layers.webp?w=450\&h=300)
 
 A storage driver handles the details about the way these layers interact with
 each other. Different storage drivers are available, which have advantages
@@ -92,7 +92,7 @@ stored in this container layer, multiple containers can share access to the same
 underlying image and yet have their own data state. The diagram below shows
 multiple containers sharing the same Ubuntu 15.04 image.
 
-![Containers sharing the same image](https://raw.githubusercontent.com/docker/docs/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/engine/storage/drivers/images/sharing-layers.webp?w=600\&h=300)
+![Containers sharing the same image](https://raw.githubusercontent.com/docker/docs/d47e43dee68bd9cbd16af81b1aa6aef45023e17c/content/manuals/engine/storage/drivers/images/sharing-layers.webp?w=600\&h=300)
 
 Docker uses storage drivers to manage the contents of the image layers and the
 writable container layer. Each storage driver handles the implementation

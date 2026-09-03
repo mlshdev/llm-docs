@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/get-started/introduction/get-docker-desktop.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/get-started/introduction/get-docker-desktop.md)
+> Commit-pinned source for Docker main: [content/get-started/introduction/get-docker-desktop.md](https://github.com/docker/docs/blob/d47e43dee68bd9cbd16af81b1aa6aef45023e17c/content/get-started/introduction/get-docker-desktop.md)
 
 # Get Docker Desktop
 
@@ -43,18 +43,18 @@ $ docker run -d -p 8080:80 docker/welcome-to-docker
 
 For this container, the frontend is accessible on port `8080`. To open the website, visit <http://localhost:8080> in your browser.
 
-![Screenshot of the landing page of the Nginx web server, coming from the running container](https://raw.githubusercontent.com/docker/docs/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/get-started/docker-concepts/the-basics/images/access-the-frontend.webp?border=true)
+![Screenshot of the landing page of the Nginx web server, coming from the running container](https://raw.githubusercontent.com/docker/docs/d47e43dee68bd9cbd16af81b1aa6aef45023e17c/content/get-started/docker-concepts/the-basics/images/access-the-frontend.webp?border=true)
 
 ## Manage containers using Docker Desktop
 
 1. Open Docker Desktop and select the **Containers** field on the left sidebar.
 2. You can view information about your container including logs, and files, and even access the shell by selecting the **Exec** tab.
 
-![Screenshot of exec into the running container in Docker Desktop](https://raw.githubusercontent.com/docker/docs/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/get-started/introduction/images/exec-into-docker-container.webp?border=true)
+![Screenshot of exec into the running container in Docker Desktop](https://raw.githubusercontent.com/docker/docs/d47e43dee68bd9cbd16af81b1aa6aef45023e17c/content/get-started/introduction/images/exec-into-docker-container.webp?border=true)
 
 3. Select the **Inspect** field to obtain detailed information about the container. You can perform various actions such as pause, resume, start or stop containers, or explore the **Logs**, **Bind mounts**, **Exec**, **Files**, and **Stats** tabs.
 
-![Screenshot of inspecting the running container in Docker Desktop](https://raw.githubusercontent.com/docker/docs/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/get-started/introduction/images/inspecting-container.webp?border=true)
+![Screenshot of inspecting the running container in Docker Desktop](https://raw.githubusercontent.com/docker/docs/d47e43dee68bd9cbd16af81b1aa6aef45023e17c/content/get-started/introduction/images/inspecting-container.webp?border=true)
 
 Docker Desktop simplifies container management for developers by streamlining the setup, configuration, and compatibility of applications across different environments, thereby addressing the pain points of environment inconsistencies and deployment challenges.
 

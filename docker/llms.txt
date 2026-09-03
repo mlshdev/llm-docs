@@ -1,6 +1,6 @@
 # Docker main
 
-> Documentation generated from the latest `main` branch commit of [docker/docs](https://github.com/docker/docs) and pinned to immutable source commit `fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5`.
+> Documentation generated from the latest `main` branch commit of [docker/docs](https://github.com/docker/docs) and pinned to immutable source commit `d47e43dee68bd9cbd16af81b1aa6aef45023e17c`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Docker main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -425,6 +425,7 @@
 - [Bake standard library functions](pages/manuals/build/bake/stdlib.md): Source `_vendor/github.com/docker/buildx/docs/bake-stdlib.md`.
 - [Bake targets](pages/manuals/build/bake/targets.md): Source `content/manuals/build/bake/targets.md`.
 - [Variables in Bake](pages/manuals/build/bake/variables.md): Source `content/manuals/build/bake/variables.md`.
+- [Cloud driver](pages/manuals/build/builders/drivers/cloud.md): Source `content/manuals/build/builders/drivers/cloud.md`.
 - [Docker container driver](pages/manuals/build/builders/drivers/docker-container.md): Source `content/manuals/build/builders/drivers/docker-container.md`.
 - [Docker driver](pages/manuals/build/builders/drivers/docker.md): Source `content/manuals/build/builders/drivers/docker.md`.
 - [Build drivers](pages/manuals/build/builders/drivers/index.md): Source `content/manuals/build/builders/drivers/_index.md`.

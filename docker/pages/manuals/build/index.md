@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/build/_index.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/build/_index.md)
+> Commit-pinned source for Docker main: [content/manuals/build/_index.md](https://github.com/docker/docs/blob/d47e43dee68bd9cbd16af81b1aa6aef45023e17c/content/manuals/build/_index.md)
 
 # Docker Build
 
@@ -17,6 +17,7 @@ advanced scenarios.
 - [Multi-platform images](https://docs.docker.com/build/building/multi-platform/): Build, push, pull, and run images seamlessly on different computer architectures.
 - [BuildKit](https://docs.docker.com/build/buildkit/): Explore BuildKit, the open source build engine.
 - [Build drivers](https://docs.docker.com/build/builders/drivers/): Configure where and how you run your builds.
+- [Docker Build Cloud](https://docs.docker.com/build-cloud/): Run builds on managed cloud builders with a shared cache.
 - [Exporters](https://docs.docker.com/build/exporters/): Export any artifact you like, not just Docker images.
 - [Build caching](https://docs.docker.com/build/cache/): Avoid unnecessary repetitions of costly operations, such as package installs.
 - [Bake](https://docs.docker.com/build/bake/): Orchestrate your builds with Bake.

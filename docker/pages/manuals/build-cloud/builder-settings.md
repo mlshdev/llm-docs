@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/build-cloud/builder-settings.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/build-cloud/builder-settings.md)
+> Commit-pinned source for Docker main: [content/manuals/build-cloud/builder-settings.md](https://github.com/docker/docs/blob/d47e43dee68bd9cbd16af81b1aa6aef45023e17c/content/manuals/build-cloud/builder-settings.md)
 
 # Builder settings
 
@@ -53,6 +53,14 @@ To get more Build cache space, [upgrade your subscription](https://docs.docker.c
 > leave more space for active builds.
 
 ## Private resource access
+
+> \[!IMPORTANT]
+>
+> Private resource access requires the private Buildx client. The `cloud`
+> driver in standard Buildx doesn't support this feature. If your cloud builder
+> uses private resource access, continue using the
+> [latest private Buildx release](https://github.com/docker/buildx-desktop/releases/latest)
+> until the feature is supported in standard Buildx.
 
 Private resource access lets cloud builders pull images and packages from private resources. This feature is useful when builds rely on self-hosted artifact repositories or private OCI registries.
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/engine/logging/drivers/awslogs.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/engine/logging/drivers/awslogs.md)
+> Commit-pinned source for Docker main: [content/manuals/engine/logging/drivers/awslogs.md](https://github.com/docker/docs/blob/d47e43dee68bd9cbd16af81b1aa6aef45023e17c/content/manuals/engine/logging/drivers/awslogs.md)
 
 The `awslogs` logging driver sends container logs to
 [Amazon CloudWatch Logs](https://aws.amazon.com/cloudwatch/details/#log-monitoring).

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/scout/docker_scout_repo_enable.yaml](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/data/cli/scout/docker_scout_repo_enable.yaml)
+> Commit-pinned source for Docker main: [data/cli/scout/docker_scout_repo_enable.yaml](https://github.com/docker/docs/blob/d47e43dee68bd9cbd16af81b1aa6aef45023e17c/data/cli/scout/docker_scout_repo_enable.yaml)
 
 # docker scout repo enable
 

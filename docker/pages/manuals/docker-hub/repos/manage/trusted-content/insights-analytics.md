@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/docker-hub/repos/manage/trusted-content/insights-analytics.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/docker-hub/repos/manage/trusted-content/insights-analytics.md)
+> Commit-pinned source for Docker main: [content/manuals/docker-hub/repos/manage/trusted-content/insights-analytics.md](https://github.com/docker/docs/blob/d47e43dee68bd9cbd16af81b1aa6aef45023e17c/content/manuals/docker-hub/repos/manage/trusted-content/insights-analytics.md)
 
 # Insights and analytics
 
@@ -318,7 +318,7 @@ To view data in the chart:
 - Select the time interval: 3, 6, or 12 months
 - Select one or more repositories in the list
 
-![Insights and analytics chart visualization](https://raw.githubusercontent.com/docker/docs/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/docker-hub/images/chart.png)
+![Insights and analytics chart visualization](https://raw.githubusercontent.com/docker/docs/d47e43dee68bd9cbd16af81b1aa6aef45023e17c/content/manuals/docker-hub/images/chart.png)
 
 > \[!TIP]
 >
@@ -331,7 +331,7 @@ You can share the visualization with others using the **Share** icon at the top
 of the chart. This is a convenient way to share statistics with others in your
 organization.
 
-![Chart share icon](https://raw.githubusercontent.com/docker/docs/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/docker-hub/images/chart-share-icon.png)
+![Chart share icon](https://raw.githubusercontent.com/docker/docs/d47e43dee68bd9cbd16af81b1aa6aef45023e17c/content/manuals/docker-hub/images/chart-share-icon.png)
 
 Selecting the icon generates a link that's copied to your clipboard. The link
 preserves the display selections you made. When someone follows the link, the
@@ -373,7 +373,7 @@ following these steps:
    The downloadable CSV files for summary and raw data appear on the right-hand
    side.
 
-![Filtering options and download links for analytics data](https://raw.githubusercontent.com/docker/docs/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/docker-hub/images/download-analytics-data.png)
+![Filtering options and download links for analytics data](https://raw.githubusercontent.com/docker/docs/d47e43dee68bd9cbd16af81b1aa6aef45023e17c/content/manuals/docker-hub/images/download-analytics-data.png)
 
 #### Export data using the API
 

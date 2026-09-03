@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/genai-video-bot.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/guides/genai-video-bot.md)
+> Commit-pinned source for Docker main: [content/guides/genai-video-bot.md](https://github.com/docker/docs/blob/d47e43dee68bd9cbd16af81b1aa6aef45023e17c/content/guides/genai-video-bot.md)
 
 # GenAI video transcription and chat
 
@@ -109,7 +109,7 @@ database. The following steps show how to use the service.
    and select **Submit**. The following example uses
    <https://www.youtube.com/watch?v=yaQZFhrW0fU>.
 
-![Submitting a video in the yt-whisper service](https://raw.githubusercontent.com/docker/docs/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/guides/images/genai-video-bot-yt-whisper.webp)
+![Submitting a video in the yt-whisper service](https://raw.githubusercontent.com/docker/docs/d47e43dee68bd9cbd16af81b1aa6aef45023e17c/content/guides/images/genai-video-bot-yt-whisper.webp)
 
 The yt-whisper service downloads the audio of the video, uses Whisper to
 transcribe it into a WebVTT (`*.vtt`) format (which you can download), then
@@ -120,7 +120,7 @@ After processing the video, a video list appears in the web app that informs
 you which videos have been indexed in Pinecone. It also provides a button to
 download the transcript.
 
-![A processed video in the yt-whisper service](https://raw.githubusercontent.com/docker/docs/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/guides/images/genai-video-bot-yt-whisper-2.webp)
+![A processed video in the yt-whisper service](https://raw.githubusercontent.com/docker/docs/d47e43dee68bd9cbd16af81b1aa6aef45023e17c/content/guides/images/genai-video-bot-yt-whisper-2.webp)
 
 You can now access the dockerbot service on port `8504` and ask questions
 about the videos.
@@ -147,7 +147,7 @@ how to use the service.
    example,
    <https://www.youtube.com/watch?v=yaQZFhrW0fU>.
 
-![Asking a question to the Dockerbot](https://raw.githubusercontent.com/docker/docs/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/guides/images/genai-video-bot-bot.webp)
+![Asking a question to the Dockerbot](https://raw.githubusercontent.com/docker/docs/d47e43dee68bd9cbd16af81b1aa6aef45023e17c/content/guides/images/genai-video-bot-bot.webp)
 
 In this example, the Dockerbot answers the question and
 provides links to the video with timestamps, which may contain more
@@ -176,7 +176,7 @@ The following image shows the application's high-level service architecture, whi
 - OpenAI: A remote third-party service.
 - Pinecone: A remote third-party service.
 
-![Application architecture diagram](https://raw.githubusercontent.com/docker/docs/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/guides/images/genai-video-bot-architecture.webp)
+![Application architecture diagram](https://raw.githubusercontent.com/docker/docs/d47e43dee68bd9cbd16af81b1aa6aef45023e17c/content/guides/images/genai-video-bot-architecture.webp)
 
 ## Explore the technologies used and their role
 
@@ -217,7 +217,7 @@ relevance to user input, facilitating efficient search and response generation
 in the application. For more details, see OpenAI's
 [Embeddings](https://platform.openai.com/docs/guides/embeddings) documentation.
 
-![Embedding diagram](https://raw.githubusercontent.com/docker/docs/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/guides/images/genai-video-bot-embeddings.webp)
+![Embedding diagram](https://raw.githubusercontent.com/docker/docs/d47e43dee68bd9cbd16af81b1aa6aef45023e17c/content/guides/images/genai-video-bot-embeddings.webp)
 
 ### Chat completions
 

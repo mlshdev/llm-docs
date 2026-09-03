@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/wiremock.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/guides/wiremock.md)
+> Commit-pinned source for Docker main: [content/guides/wiremock.md](https://github.com/docker/docs/blob/d47e43dee68bd9cbd16af81b1aa6aef45023e17c/content/guides/wiremock.md)
 
 # Mocking API services in development and testing with WireMock
 
@@ -50,13 +50,13 @@ Launch a quick demo of WireMock by using the following steps:
 
    After a moment, the application will be up and running.
 
-![Diagram showing the WireMock container running on Docker Desktop](https://raw.githubusercontent.com/docker/docs/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/guides/images/wiremock-using-docker.webp)
+![Diagram showing the WireMock container running on Docker Desktop](https://raw.githubusercontent.com/docker/docs/d47e43dee68bd9cbd16af81b1aa6aef45023e17c/content/guides/images/wiremock-using-docker.webp)
 
 ```
 You can check the logs by selecting the `wiremock-node-docker` container:
 ```
 
-![Diagram showing the logs of WireMock container running on Docker Desktop](https://raw.githubusercontent.com/docker/docs/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/guides/images/wiremock-logs-docker-desktop.webp)
+![Diagram showing the logs of WireMock container running on Docker Desktop](https://raw.githubusercontent.com/docker/docs/d47e43dee68bd9cbd16af81b1aa6aef45023e17c/content/guides/images/wiremock-logs-docker-desktop.webp)
 
 4. Test the Mock API.
 
@@ -86,7 +86,7 @@ Now that you have tried WireMock, let’s use it in development and testing. In 
 - External AccuWeather API: The real API from which live weather data is fetched.
 - WireMock: The mock server that simulates the API responses during testing. It runs as a Docker container.
 
-![Diagram showing the architecture of WireMock in development](https://raw.githubusercontent.com/docker/docs/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/guides/images/wiremock-arch.webp)
+![Diagram showing the architecture of WireMock in development](https://raw.githubusercontent.com/docker/docs/d47e43dee68bd9cbd16af81b1aa6aef45023e17c/content/guides/images/wiremock-arch.webp)
 
 - In development, the Node.js backend sends a request to WireMock instead of the actual AccuWeather API.
 - In production, it connects directly to the live AccuWeather API for real data.
@@ -206,7 +206,7 @@ To enhance your Node.js application with real-time weather data, you can seamles
 
    Sign up for a free AccuWeather developer account at<https://developer.accuweather.com/>. Within your account, create a new app by selecting `MY APPS` on the top navigation menu to get your unique API key.
 
-![Diagram showing the AccuWeather Dashboard](https://raw.githubusercontent.com/docker/docs/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/guides/images/wiremock-accuweatherapi.webp)
+![Diagram showing the AccuWeather Dashboard](https://raw.githubusercontent.com/docker/docs/d47e43dee68bd9cbd16af81b1aa6aef45023e17c/content/guides/images/wiremock-accuweatherapi.webp)
 
 ```
 [AccuWeather API](https://developer.accuweather.com/) is a web API that provides real-time weather data and forecasts. Developers can use this API to integrate weather information into their applications, websites, or other projects.

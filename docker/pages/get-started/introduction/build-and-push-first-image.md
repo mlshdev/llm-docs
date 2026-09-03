@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/get-started/introduction/build-and-push-first-image.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/get-started/introduction/build-and-push-first-image.md)
+> Commit-pinned source for Docker main: [content/get-started/introduction/build-and-push-first-image.md](https://github.com/docker/docs/blob/d47e43dee68bd9cbd16af81b1aa6aef45023e17c/content/get-started/introduction/build-and-push-first-image.md)
 
 # Build and push your first image
 
@@ -142,15 +142,15 @@ Now that you have a repository, you are ready to build and push your image. An i
 
 1. Open Visual Studio Code. Ensure you have the **Docker extension for VS Code** installed from [Extension Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker).
 
-![Screenshot of VS code extension marketplace](https://raw.githubusercontent.com/docker/docs/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/get-started/introduction/images/install-docker-extension.webp)
+![Screenshot of VS code extension marketplace](https://raw.githubusercontent.com/docker/docs/d47e43dee68bd9cbd16af81b1aa6aef45023e17c/content/get-started/introduction/images/install-docker-extension.webp)
 
 2. In the **File** menu, select **Open Folder**. Choose **Clone Git Repository** and paste this URL: <https://github.com/docker/getting-started-todo-app>
 
-![Screenshot of VS code showing how to clone a repository](https://raw.githubusercontent.com/docker/docs/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/get-started/introduction/images/clone-the-repo.webp?border=true)
+![Screenshot of VS code showing how to clone a repository](https://raw.githubusercontent.com/docker/docs/d47e43dee68bd9cbd16af81b1aa6aef45023e17c/content/get-started/introduction/images/clone-the-repo.webp?border=true)
 
 3. Right-click the `Dockerfile` and select the **Build Image...** menu item.
 
-![Screenshot of VS Code showing the right-click menu and "Build Image" menu item](https://raw.githubusercontent.com/docker/docs/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/get-started/introduction/images/build-vscode-menu-item.webp?border=true)
+![Screenshot of VS Code showing the right-click menu and "Build Image" menu item](https://raw.githubusercontent.com/docker/docs/d47e43dee68bd9cbd16af81b1aa6aef45023e17c/content/get-started/introduction/images/build-vscode-menu-item.webp?border=true)
 
 4. In the dialog that appears, enter a name of `DOCKER_USERNAME/getting-started-todo-app`, replacing `DOCKER_USERNAME` with your Docker username.
 
@@ -164,7 +164,7 @@ Now that you have a repository, you are ready to build and push your image. An i
 
 9. Right-click on the **latest** item and select the **Push...** option.
 
-![Screenshot of the Docker Extension and the right-click menu to push an image](https://raw.githubusercontent.com/docker/docs/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/get-started/introduction/images/build-vscode-push-image.webp)
+![Screenshot of the Docker Extension and the right-click menu to push an image](https://raw.githubusercontent.com/docker/docs/d47e43dee68bd9cbd16af81b1aa6aef45023e17c/content/get-started/introduction/images/build-vscode-push-image.webp)
 
 10. Press **Enter** to confirm and then watch as your image is pushed to Docker Hub. Depending on your upload speeds, it might take a moment to push the image.
 
