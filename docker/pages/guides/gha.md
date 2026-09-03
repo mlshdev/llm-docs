@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/gha.md](https://github.com/docker/docs/blob/0dd94985910d2b70122891c8cf9173087f7460a8/content/guides/gha.md)
+> Commit-pinned source for Docker main: [content/guides/gha.md](https://github.com/docker/docs/blob/b744dd31039efeac59c11e017ac6ab62d9077339/content/guides/gha.md)
 
 # Introduction to GitHub Actions with Docker
 
@@ -37,7 +37,7 @@ that, you must authenticate with your Docker credentials (username and access
 token) as part of the GitHub Actions workflow.
 
 For instructions on how to create a Docker access token, see
-[Create and manage access tokens](https://docs.docker.com/security/access-tokens/).
+[Create and manage access tokens](https://docs.docker.com/security/access-tokens/personal-access-tokens/).
 
 Once you have your Docker credentials ready, add the credentials to your GitHub
 repository so you can use them in GitHub Actions:

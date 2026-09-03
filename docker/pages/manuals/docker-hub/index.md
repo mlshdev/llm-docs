@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/docker-hub/_index.md](https://github.com/docker/docs/blob/0dd94985910d2b70122891c8cf9173087f7460a8/content/manuals/docker-hub/_index.md)
+> Commit-pinned source for Docker main: [content/manuals/docker-hub/_index.md](https://github.com/docker/docs/blob/b744dd31039efeac59c11e017ac6ab62d9077339/content/manuals/docker-hub/_index.md)
 
 # Docker Hub
 
@@ -26,7 +26,7 @@ MCP server](https://docs.docker.com/docker-hub/mcp-server/) for AI agent integra
 - [Library](https://docs.docker.com/docker-hub/image-library/): Explore the content library, featuring millions of images for operating systems, frameworks, databases, and more.
 - [Repositories](https://docs.docker.com/docker-hub/repos/): Create a repository to share your images with your team, customers, or the Docker community.
 - [Settings](https://docs.docker.com/docker-hub/settings/): Learn about settings in Docker Hub.
-- [Organizations](https://docs.docker.com/admin/): Learn about organization administration.
+- [Organizations](https://docs.docker.com/accounts/organization/): Learn about organization administration.
 - [Usage and limits](https://docs.docker.com/docker-hub/usage/): Explore usage limits and how to better utilize Docker Hub.
 - [MCP server](https://docs.docker.com/docker-hub/mcp-server/): Use the Docker Hub MCP server to access image metadata and manage repositories with AI agents.
 - [Release notes](https://docs.docker.com/docker-hub/release-notes/): Find out about new features, improvements, and bug fixes.

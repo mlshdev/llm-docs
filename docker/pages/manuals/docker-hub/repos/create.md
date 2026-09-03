@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/docker-hub/repos/create.md](https://github.com/docker/docs/blob/0dd94985910d2b70122891c8cf9173087f7460a8/content/manuals/docker-hub/repos/create.md)
+> Commit-pinned source for Docker main: [content/manuals/docker-hub/repos/create.md](https://github.com/docker/docs/blob/b744dd31039efeac59c11e017ac6ab62d9077339/content/manuals/docker-hub/repos/create.md)
 
 # Create a repository
 
@@ -38,7 +38,7 @@
      is only accessible to you and collaborators. In addition, if you selected
      an organization's namespace, then the repository is accessible to those
      with applicable roles or permissions. For more details, see [Roles and
-     permissions](https://docs.docker.com/enterprise/security/roles-and-permissions/).
+     permissions](https://docs.docker.com/security/roles-and-permissions/).
 
    > \[!NOTE]
    >

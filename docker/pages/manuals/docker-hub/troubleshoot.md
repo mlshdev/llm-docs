@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/docker-hub/troubleshoot.md](https://github.com/docker/docs/blob/0dd94985910d2b70122891c8cf9173087f7460a8/content/manuals/docker-hub/troubleshoot.md)
+> Commit-pinned source for Docker main: [content/manuals/docker-hub/troubleshoot.md](https://github.com/docker/docs/blob/b744dd31039efeac59c11e017ac6ab62d9077339/content/manuals/docker-hub/troubleshoot.md)
 
 # Troubleshoot Docker Hub
 
@@ -27,7 +27,7 @@ You have reached your pull rate limit. You may increase the limit by authenticat
 You can use one of the following solutions:
 
 - [Authenticate](https://docs.docker.com/docker-hub/usage/pulls/#authentication) or
-  [upgrade](https://docs.docker.com/subscription/plans/docker/) your Docker
+  [upgrade](https://docs.docker.com/subscription-billing/manage/plans/#upgrade-plans) your Docker
   account.
 - [View your pull rate limit](https://docs.docker.com/docker-hub/usage/pulls/#view-hourly-pull-rate-and-limit),
   wait until your pull rate limit decreases, and then try again.

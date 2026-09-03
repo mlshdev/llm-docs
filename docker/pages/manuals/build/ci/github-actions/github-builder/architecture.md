@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/build/ci/github-actions/github-builder/architecture.md](https://github.com/docker/docs/blob/0dd94985910d2b70122891c8cf9173087f7460a8/content/manuals/build/ci/github-actions/github-builder/architecture.md)
+> Commit-pinned source for Docker main: [content/manuals/build/ci/github-actions/github-builder/architecture.md](https://github.com/docker/docs/blob/b744dd31039efeac59c11e017ac6ab62d9077339/content/manuals/build/ci/github-actions/github-builder/architecture.md)
 
 # Docker GitHub Builder architecture
 
@@ -10,7 +10,7 @@ owns the build implementation itself. That split keeps repository workflows
 short while centralizing BuildKit, caching, provenance, SBOM generation,
 signing, and multi-platform assembly in one Docker-maintained path.
 
-![GitHub Builder overview](https://raw.githubusercontent.com/docker/docs/0dd94985910d2b70122891c8cf9173087f7460a8/content/manuals/build/ci/github-actions/github-builder/images/architecture-overview.png)
+![GitHub Builder overview](https://raw.githubusercontent.com/docker/docs/b744dd31039efeac59c11e017ac6ab62d9077339/content/manuals/build/ci/github-actions/github-builder/images/architecture-overview.png)
 
 ## Core architecture
 
@@ -80,7 +80,7 @@ deprecation warnings. Use an explicit runner label or platform mapping instead.
 
 ## Execution path
 
-![GitHub Builder execution flow](https://raw.githubusercontent.com/docker/docs/0dd94985910d2b70122891c8cf9173087f7460a8/content/manuals/build/ci/github-actions/github-builder/images/execution-flow.png)
+![GitHub Builder execution flow](https://raw.githubusercontent.com/docker/docs/b744dd31039efeac59c11e017ac6ab62d9077339/content/manuals/build/ci/github-actions/github-builder/images/execution-flow.png)
 
 The execution path stays short on purpose. The consuming repository calls the
 reusable workflow. The reusable workflow prepares the build, runs the

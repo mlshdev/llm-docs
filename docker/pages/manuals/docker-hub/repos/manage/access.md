@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/docker-hub/repos/manage/access.md](https://github.com/docker/docs/blob/0dd94985910d2b70122891c8cf9173087f7460a8/content/manuals/docker-hub/repos/manage/access.md)
+> Commit-pinned source for Docker main: [content/manuals/docker-hub/repos/manage/access.md](https://github.com/docker/docs/blob/b744dd31039efeac59c11e017ac6ab62d9077339/content/manuals/docker-hub/repos/manage/access.md)
 
 # Access management
 
@@ -92,7 +92,7 @@ repository from that repository's **Settings** page.
 
 Organizations can use roles for individuals, giving them different
 permissions in the organization. For more details, see [Roles and
-permissions](https://docs.docker.com/enterprise/security/roles-and-permissions/).
+permissions](https://docs.docker.com/security/roles-and-permissions/).
 
 ## Organization teams
 
@@ -103,7 +103,7 @@ access.
 
 You must create a team before you are able to configure repository permissions.
 For more details, see [Create and manage a
-team](https://docs.docker.com/admin/organization/manage/manage-a-team/).
+team](https://docs.docker.com/accounts/organization/manage/manage-a-team/).
 
 To configure team repository permissions:
 
@@ -129,7 +129,7 @@ To configure team repository permissions:
 
 Organizations can use OATs. OATs let you assign fine-grained repository access
 permissions to tokens. For more details, see [Organization access
-tokens](https://docs.docker.com/enterprise/security/access-tokens/).
+tokens](https://docs.docker.com/security/access-tokens/organization-access-tokens/).
 
 ## Gated distribution
 
@@ -156,7 +156,7 @@ If you are interested in Gated Distribution contact the <a id="dkr_docs_cs_hub_g
 ### Invite distributor members via API
 
 > \[!NOTE]
-> When you invite members, you assign them a role. See [Roles and permissions](https://docs.docker.com/enterprise/security/roles-and-permissions/) for details about the access permissions for each role.
+> When you invite members, you assign them a role. See [Roles and permissions](https://docs.docker.com/security/roles-and-permissions/) for details about the access permissions for each role.
 
 Distributor members (used for gated distribution) can only be invited using the Docker Hub API. UI-based invitations are not currently supported for this role. To invite distributor members, use the Bulk create invites API endpoint.
 

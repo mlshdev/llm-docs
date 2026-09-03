@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/docker-hub/repos/manage/builds/_index.md](https://github.com/docker/docs/blob/0dd94985910d2b70122891c8cf9173087f7460a8/content/manuals/docker-hub/repos/manage/builds/_index.md)
+> Commit-pinned source for Docker main: [content/manuals/docker-hub/repos/manage/builds/_index.md](https://github.com/docker/docs/blob/b744dd31039efeac59c11e017ac6ab62d9077339/content/manuals/docker-hub/repos/manage/builds/_index.md)
 
 # Automated builds
 
@@ -15,7 +15,7 @@
 Docker Hub can automatically build images from source code in an external
 repository and automatically push the built image to your Docker repositories.
 
-![An automated build dashboard](https://raw.githubusercontent.com/docker/docs/0dd94985910d2b70122891c8cf9173087f7460a8/content/manuals/docker-hub/repos/manage/builds/images/index-dashboard.png)
+![An automated build dashboard](https://raw.githubusercontent.com/docker/docs/b744dd31039efeac59c11e017ac6ab62d9077339/content/manuals/docker-hub/repos/manage/builds/images/index-dashboard.png)
 
 When you set up automated builds, also called autobuilds, you create a list of
 branches and tags that you want to build into Docker images. When you push code

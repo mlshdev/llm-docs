@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/admin-user-management.md](https://github.com/docker/docs/blob/0dd94985910d2b70122891c8cf9173087f7460a8/content/guides/admin-user-management.md)
+> Commit-pinned source for Docker main: [content/guides/admin-user-management.md](https://github.com/docker/docs/blob/b744dd31039efeac59c11e017ac6ab62d9077339/content/guides/admin-user-management.md)
 
 # Mastering user and access management
 
@@ -33,7 +33,7 @@ With the right configurations, you can ensure your developers have easy access t
 
 Before setting up roles and permissions, it's important to have a clear understanding of who in your organization requires Docker access. Focus on gathering a comprehensive view of active users, their roles within projects, and how they interact with Docker resources. This process can be supported by tools like device management software or manual assessments. Encourage all users to update their Docker accounts to use organizational email addresses, ensuring seamless integration with your subscription.
 
-For steps on how you can do this, see [step 1 of onboarding your organization](https://docs.docker.com/admin/organization/setup/onboard/).
+For steps on how you can do this, see [step 1 of onboarding your organization](https://docs.docker.com/accounts/organization/setup/onboard/).
 
 ### Assign roles strategically
 
@@ -45,7 +45,7 @@ Docker's predefined roles offer flexibility for various organizational needs. As
 - Editor: Partial administrative access to the organization. Editors can create, edit, and delete repositories. They can also edit an existing team's access permissions.
 - Owner: Full organization administrative access. Owners can manage organization repositories, teams, members, settings, and billing.
 
-For more information, see [Roles and permissions](https://docs.docker.com/enterprise/security/roles-and-permissions/).
+For more information, see [Roles and permissions](https://docs.docker.com/security/roles-and-permissions/).
 
 #### Enhance with teams
 
@@ -55,7 +55,7 @@ Teams in Docker provide a structured way to manage member access and they provid
 - Assign permissions at the team level rather than individually. For instance, a development team might have "Read & Write" access to certain repositories, while a QA team has "Read-only" access.
 - As teams grow or responsibilities shift, you can easily update permissions or add new members, maintaining consistency without reconfiguring individual settings.
 
-For more information, see [Create and manage a team](https://docs.docker.com/admin/organization/manage/manage-a-team/).
+For more information, see [Create and manage a team](https://docs.docker.com/accounts/organization/manage/manage-a-team/).
 
 #### Example scenarios
 
@@ -76,7 +76,7 @@ This page guides you through onboarding owners and members, and using tools like
 
 When you create a Docker organization, you automatically become its sole owner. While optional, adding additional owners can significantly ease the process of onboarding and managing your organization by distributing administrative responsibilities. It also ensures continuity and prevents blockers if the primary owner is unavailable.
 
-For detailed information on owners, see [Roles and permissions](https://docs.docker.com/enterprise/security/roles-and-permissions/).
+For detailed information on owners, see [Roles and permissions](https://docs.docker.com/security/roles-and-permissions/).
 
 ### Invite members and assign roles
 
@@ -90,7 +90,7 @@ Members are granted controlled access to resources and enjoy enhanced organizati
 - Access to enhanced features: Members benefit from organization-wide perks, such as increased pull limits and access to premium Docker features.
 - Security control: Apply and enforce security settings at an organizational level, reducing risks associated with unmanaged accounts.
 
-For detailed information, see [Manage organization members](https://docs.docker.com/admin/organization/manage/members/).
+For detailed information, see [Manage organization members](https://docs.docker.com/accounts/organization/manage/members/).
 
 ### Future-proof user management
 
@@ -106,11 +106,11 @@ SSO:
 - Reduces password-related vulnerabilities.
 - Simplifies onboarding as it works seamlessly with SCIM and group mapping for automated provisioning.
 
-For more information, see the [SSO documentation](https://docs.docker.com/enterprise/security/single-sign-on/).
+For more information, see the [SSO documentation](https://docs.docker.com/security/authentication/single-sign-on/).
 
 #### Automate onboarding with SCIM and JIT provisioning
 
-Streamline user provisioning and role management with [SCIM](https://docs.docker.com/enterprise/security/provisioning/scim/) and [Just-in-Time (JIT) provisioning](https://docs.docker.com/enterprise/security/provisioning/just-in-time/).
+Streamline user provisioning and role management with [SCIM](https://docs.docker.com/security/provisioning/scim/) and [Just-in-Time (JIT) provisioning](https://docs.docker.com/security/provisioning/just-in-time/).
 
 With SCIM you can:
 
@@ -132,7 +132,7 @@ It also:
 - Ensures consistent access control policies.
 - Help you scale permissions as teams grow or change.
 
-For more information on how it works, see [Group mapping](https://docs.docker.com/enterprise/security/provisioning/scim/group-mapping/).
+For more information on how it works, see [Group mapping](https://docs.docker.com/security/provisioning/scim/group-mapping/).
 
 ## Monitoring and insights
 
@@ -155,7 +155,7 @@ Activity logs are available for Docker Team or Docker Business plans, with data 
 - Team collaboration review: Logs show which team members pushed updates to a critical repository, ensuring accountability during a development sprint.
 - Billing adjustments: Track who added or removed subscription seats to maintain budgetary control and compliance.
 
-For more information, see [Activity logs](https://docs.docker.com/admin/activity-logs/).
+For more information, see [Activity logs](https://docs.docker.com/accounts/organization/activity-logs/).
 
 ### Insights
 
@@ -173,13 +173,13 @@ Insights provide data-driven views of Docker usage to improve team productivity 
 - Build efficiency: Track average build times and success rates to pinpoint bottlenecks in development processes.
 - Container utilization: Analyze container activity across departments to ensure proper resource distribution and cost efficiency.
 
-For more information, see [Insights](https://docs.docker.com/admin/insights/).
+For more information, see [Insights](https://docs.docker.com/accounts/organization/insights/).
 
 ### Next steps
 
 Now that you've mastered user and access management in Docker, you can:
 
-- Review your [activity logs](https://docs.docker.com/admin/activity-logs/) regularly to maintain security awareness
-- Check your [Insights dashboard](https://docs.docker.com/admin/insights/) to identify opportunities for optimization
-- Explore [advanced security features](https://docs.docker.com/enterprise/security/) to further enhance your Docker environment
+- Review your [activity logs](https://docs.docker.com/accounts/organization/activity-logs/) regularly to maintain security awareness
+- Check your [Insights dashboard](https://docs.docker.com/accounts/organization/insights/) to identify opportunities for optimization
+- Explore [advanced security features](https://docs.docker.com/enterprise/security/hardened-desktop/) to further enhance your Docker environment
 - Share best practices with your team to ensure consistent adoption of security policies

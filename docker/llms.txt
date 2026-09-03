@@ -1,6 +1,6 @@
 # Docker main
 
-> Documentation generated from the latest `main` branch commit of [docker/docs](https://github.com/docker/docs) and pinned to immutable source commit `0dd94985910d2b70122891c8cf9173087f7460a8`.
+> Documentation generated from the latest `main` branch commit of [docker/docs](https://github.com/docker/docs) and pinned to immutable source commit `b744dd31039efeac59c11e017ac6ab62d9077339`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Docker main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -141,35 +141,29 @@
 
 ## Accounts
 
-- [Create a Docker account](pages/manuals/accounts/create-account.md): Source `content/manuals/accounts/create-account.md`.
-- [Deactivate a Docker account](pages/manuals/accounts/deactivate-user-account.md): Source `content/manuals/accounts/deactivate-user-account.md`.
-- [Docker account FAQs](pages/manuals/accounts/general-faqs.md): Source `content/manuals/accounts/general-faqs.md`.
-- [Docker accounts](pages/manuals/accounts/index.md): Source `content/manuals/accounts/_index.md`.
-- [Manage a Docker account](pages/manuals/accounts/manage-account.md): Source `content/manuals/accounts/manage-account.md`.
-
-## Admin
-
-- [Activity logs](pages/manuals/admin/activity-logs.md): Source `content/manuals/admin/activity-logs.md`.
-- [Company FAQs](pages/manuals/admin/company/company-faqs.md): Source `content/manuals/admin/company/company-faqs.md`.
-- [Company overview](pages/manuals/admin/company/index.md): Source `content/manuals/admin/company/_index.md`.
-- [Manage your company](pages/manuals/admin/company/manage.md): Source `content/manuals/admin/company/manage.md`.
-- [Create new company](pages/manuals/admin/company/new-company.md): Source `content/manuals/admin/company/new-company.md`.
-- [Administration](pages/manuals/admin/index.md): Source `content/manuals/admin/_index.md`.
-- [Insights](pages/manuals/admin/insights.md): Source `content/manuals/admin/insights.md`.
-- [Deactivate an organization](pages/manuals/admin/organization/deactivate-account.md): Source `content/manuals/admin/organization/deactivate-account.md`.
-- [Docker organization overview](pages/manuals/admin/organization/index.md): Source `content/manuals/admin/organization/_index.md`.
-- [Manage your organization](pages/manuals/admin/organization/manage/index.md): Source `content/manuals/admin/organization/manage/_index.md`.
-- [Create and manage a team](pages/manuals/admin/organization/manage/manage-a-team.md): Source `content/manuals/admin/organization/manage/manage-a-team.md`.
-- [Manage license assignment](pages/manuals/admin/organization/manage/manage-licenses.md): Source `content/manuals/admin/organization/manage/manage-licenses.md`.
-- [Manage usage and access for Docker products](pages/manuals/admin/organization/manage/manage-products.md): Source `content/manuals/admin/organization/manage/manage-products.md`.
-- [Manage subscription seats](pages/manuals/admin/organization/manage/manage-seats.md): Source `content/manuals/admin/organization/manage/manage-seats.md`.
-- [Manage organization members](pages/manuals/admin/organization/manage/members.md): Source `content/manuals/admin/organization/manage/members.md`.
-- [Organization FAQs](pages/manuals/admin/organization/organization-faqs.md): Source `content/manuals/admin/organization/organization-faqs.md`.
-- [Convert an account into an organization](pages/manuals/admin/organization/setup/convert-account.md): Source `content/manuals/admin/organization/setup/convert-account.md`.
-- [Change general organization information](pages/manuals/admin/organization/setup/general-settings.md): Source `content/manuals/admin/organization/setup/general-settings.md`.
-- [Set up your organization](pages/manuals/admin/organization/setup/index.md): Source `content/manuals/admin/organization/setup/_index.md`.
-- [Onboard your organization](pages/manuals/admin/organization/setup/onboard.md): Source `content/manuals/admin/organization/setup/onboard.md`.
-- [Create your organization](pages/manuals/admin/organization/setup/orgs.md): Source `content/manuals/admin/organization/setup/orgs.md`.
+- [Company overview](pages/manuals/accounts/company/index.md): Source `content/manuals/accounts/company/_index.md`.
+- [Manage your company](pages/manuals/accounts/company/manage.md): Source `content/manuals/accounts/company/manage.md`.
+- [Create new company](pages/manuals/accounts/company/new-company.md): Source `content/manuals/accounts/company/new-company.md`.
+- [Accounts](pages/manuals/accounts/index.md): Source `content/manuals/accounts/_index.md`.
+- [Create a Docker account](pages/manuals/accounts/individual/create-account.md): Source `content/manuals/accounts/individual/create-account.md`.
+- [Deactivate a Docker account](pages/manuals/accounts/individual/deactivate-user-account.md): Source `content/manuals/accounts/individual/deactivate-user-account.md`.
+- [Docker individual accounts](pages/manuals/accounts/individual/index.md): Source `content/manuals/accounts/individual/_index.md`.
+- [Manage a Docker account](pages/manuals/accounts/individual/manage-account.md): Source `content/manuals/accounts/individual/manage-account.md`.
+- [Activity logs](pages/manuals/accounts/organization/activity-logs.md): Source `content/manuals/accounts/organization/activity-logs.md`.
+- [Organization accounts](pages/manuals/accounts/organization/index.md): Source `content/manuals/accounts/organization/_index.md`.
+- [Insights](pages/manuals/accounts/organization/insights.md): Source `content/manuals/accounts/organization/insights.md`.
+- [Deactivate an organization](pages/manuals/accounts/organization/manage/deactivate-account.md): Source `content/manuals/accounts/organization/manage/deactivate-account.md`.
+- [Change general organization information](pages/manuals/accounts/organization/manage/general-settings.md): Source `content/manuals/accounts/organization/manage/general-settings.md`.
+- [Manage your organization](pages/manuals/accounts/organization/manage/index.md): Source `content/manuals/accounts/organization/manage/_index.md`.
+- [Create and manage a team](pages/manuals/accounts/organization/manage/manage-a-team.md): Source `content/manuals/accounts/organization/manage/manage-a-team.md`.
+- [Manage license assignment](pages/manuals/accounts/organization/manage/manage-licenses.md): Source `content/manuals/accounts/organization/manage/manage-licenses.md`.
+- [Manage usage and access for Docker products](pages/manuals/accounts/organization/manage/manage-products.md): Source `content/manuals/accounts/organization/manage/manage-products.md`.
+- [Manage subscription seats](pages/manuals/accounts/organization/manage/manage-seats.md): Source `content/manuals/accounts/organization/manage/manage-seats.md`.
+- [Manage organization members](pages/manuals/accounts/organization/manage/members.md): Source `content/manuals/accounts/organization/manage/members.md`.
+- [Convert an account into an organization](pages/manuals/accounts/organization/setup/convert-account.md): Source `content/manuals/accounts/organization/setup/convert-account.md`.
+- [Set up your organization](pages/manuals/accounts/organization/setup/index.md): Source `content/manuals/accounts/organization/setup/_index.md`.
+- [Onboard your organization](pages/manuals/accounts/organization/setup/onboard.md): Source `content/manuals/accounts/organization/setup/onboard.md`.
+- [Create your organization](pages/manuals/accounts/organization/setup/orgs.md): Source `content/manuals/accounts/organization/setup/orgs.md`.
 
 ## Agentic Platform
 
@@ -388,16 +382,6 @@
 - [Develop and test locally](pages/manuals/ai/sandboxes/workflows/development.md): Source `content/manuals/ai/sandboxes/workflows/development.md`.
 - [Use Git with sandboxes](pages/manuals/ai/sandboxes/workflows/git.md): Source `content/manuals/ai/sandboxes/workflows/git.md`.
 - [Workflow patterns](pages/manuals/ai/sandboxes/workflows/index.md): Source `content/manuals/ai/sandboxes/workflows/_index.md`.
-
-## Billing
-
-- [Use 3D Secure authentication for Docker billing](pages/manuals/billing/3d-secure.md): Source `content/manuals/billing/3d-secure.md`.
-- [Update your billing details](pages/manuals/billing/details.md): Source `content/manuals/billing/details.md`.
-- [Billing FAQs](pages/manuals/billing/faqs.md): Source `content/manuals/billing/faqs.md`.
-- [Billing and invoice history](pages/manuals/billing/history.md): Source `content/manuals/billing/history.md`.
-- [Manage billing and payments](pages/manuals/billing/index.md): Source `content/manuals/billing/_index.md`.
-- [Add or update a payment method](pages/manuals/billing/payment-method.md): Source `content/manuals/billing/payment-method.md`.
-- [Sales tax exemption and VAT](pages/manuals/billing/tax-certificate.md): Source `content/manuals/billing/tax-certificate.md`.
 
 ## Build Cloud
 
@@ -896,8 +880,6 @@
 - [PKG installer](pages/manuals/enterprise/enterprise-deployment/pkg-install-and-configure.md): Source `content/manuals/enterprise/enterprise-deployment/pkg-install-and-configure.md`.
 - [Deploy with Intune](pages/manuals/enterprise/enterprise-deployment/use-intune.md): Source `content/manuals/enterprise/enterprise-deployment/use-intune.md`.
 - [Deploy with Jamf Pro](pages/manuals/enterprise/enterprise-deployment/use-jamf-pro.md): Source `content/manuals/enterprise/enterprise-deployment/use-jamf-pro.md`.
-- [Organization access tokens](pages/manuals/enterprise/security/access-tokens.md): Source `content/manuals/enterprise/security/access-tokens.md`.
-- [Add and manage domains](pages/manuals/enterprise/security/domain-management.md): Source `content/manuals/enterprise/security/domain-management.md`.
 - [Enforce sign-in for Docker Desktop](pages/manuals/enterprise/security/enforce-sign-in/index.md): Source `content/manuals/enterprise/security/enforce-sign-in/_index.md`.
 - [Configure sign-in enforcement](pages/manuals/enterprise/security/enforce-sign-in/methods.md): Source `content/manuals/enterprise/security/enforce-sign-in/methods.md`.
 - [Air-gapped containers](pages/manuals/enterprise/security/hardened-desktop/air-gapped-containers.md): Source `content/manuals/enterprise/security/hardened-desktop/air-gapped-containers.md`.
@@ -916,32 +898,6 @@
 - [Settings Management](pages/manuals/enterprise/security/hardened-desktop/settings-management/index.md): Source `content/manuals/enterprise/security/hardened-desktop/settings-management/_index.md`.
 - [Settings reference](pages/manuals/enterprise/security/hardened-desktop/settings-management/settings-reference.md): Source `content/manuals/enterprise/security/hardened-desktop/settings-management/settings-reference.md`.
 - [Security for enterprises](pages/manuals/enterprise/security/index.md): Source `content/manuals/enterprise/security/_index.md`.
-- [Create and manage OIDC connections](pages/manuals/enterprise/security/oidc-connections/create-manage.md): Source `content/manuals/enterprise/security/oidc-connections/create-manage.md`.
-- [OIDC connections overview](pages/manuals/enterprise/security/oidc-connections/index.md): Source `content/manuals/enterprise/security/oidc-connections/_index.md`.
-- [OIDC connections rulesets and subject claims](pages/manuals/enterprise/security/oidc-connections/rulesets-claims.md): Source `content/manuals/enterprise/security/oidc-connections/rulesets-claims.md`.
-- [Auto-provisioning](pages/manuals/enterprise/security/provisioning/auto-provisioning.md): Source `content/manuals/enterprise/security/provisioning/auto-provisioning.md`.
-- [Provision users](pages/manuals/enterprise/security/provisioning/index.md): Source `content/manuals/enterprise/security/provisioning/_index.md`.
-- [Just-in-Time provisioning](pages/manuals/enterprise/security/provisioning/just-in-time.md): Source `content/manuals/enterprise/security/provisioning/just-in-time.md`.
-- [Group mapping](pages/manuals/enterprise/security/provisioning/scim/group-mapping.md): Source `content/manuals/enterprise/security/provisioning/scim/group-mapping.md`.
-- [SCIM overview](pages/manuals/enterprise/security/provisioning/scim/index.md): Source `content/manuals/enterprise/security/provisioning/scim/_index.md`.
-- [Migrate JIT to SCIM](pages/manuals/enterprise/security/provisioning/scim/migrate-scim.md): Source `content/manuals/enterprise/security/provisioning/scim/migrate-scim.md`.
-- [Set up SCIM provisioning](pages/manuals/enterprise/security/provisioning/scim/provision-scim.md): Source `content/manuals/enterprise/security/provisioning/scim/provision-scim.md`.
-- [Troubleshoot provisioning](pages/manuals/enterprise/security/provisioning/troubleshoot-provisioning.md): Source `content/manuals/enterprise/security/provisioning/troubleshoot-provisioning.md`.
-- [Docker core roles and permissions](pages/manuals/enterprise/security/roles-and-permissions/core-roles.md): Source `content/manuals/enterprise/security/roles-and-permissions/core-roles.md`.
-- [Custom roles and permissions overview](pages/manuals/enterprise/security/roles-and-permissions/custom-roles/index.md): Source `content/manuals/enterprise/security/roles-and-permissions/custom-roles/_index.md`.
-- [Manage custom roles in Docker Home](pages/manuals/enterprise/security/roles-and-permissions/custom-roles/manage.md): Source `content/manuals/enterprise/security/roles-and-permissions/custom-roles/manage.md`.
-- [Custom role permissions reference](pages/manuals/enterprise/security/roles-and-permissions/custom-roles/permissions-reference.md): Source `content/manuals/enterprise/security/roles-and-permissions/custom-roles/permissions-reference.md`.
-- [Docker organization roles and permissions](pages/manuals/enterprise/security/roles-and-permissions/index.md): Source `content/manuals/enterprise/security/roles-and-permissions/_index.md`.
-- [SSO domain FAQs](pages/manuals/enterprise/security/single-sign-on/FAQs/domain-faqs.md): Source `content/manuals/enterprise/security/single-sign-on/FAQs/domain-faqs.md`.
-- [SSO enforcement FAQs](pages/manuals/enterprise/security/single-sign-on/FAQs/enforcement-faqs.md): Source `content/manuals/enterprise/security/single-sign-on/FAQs/enforcement-faqs.md`.
-- [General SSO FAQs](pages/manuals/enterprise/security/single-sign-on/FAQs/general.md): Source `content/manuals/enterprise/security/single-sign-on/FAQs/general.md`.
-- [SSO identity provider FAQs](pages/manuals/enterprise/security/single-sign-on/FAQs/idp-faqs.md): Source `content/manuals/enterprise/security/single-sign-on/FAQs/idp-faqs.md`.
-- [Index](pages/manuals/enterprise/security/single-sign-on/FAQs/index.md): Source `content/manuals/enterprise/security/single-sign-on/FAQs/_index.md`.
-- [SSO user management FAQs](pages/manuals/enterprise/security/single-sign-on/FAQs/users-faqs.md): Source `content/manuals/enterprise/security/single-sign-on/FAQs/users-faqs.md`.
-- [Set up single sign-on](pages/manuals/enterprise/security/single-sign-on/connect.md): Source `content/manuals/enterprise/security/single-sign-on/connect.md`.
-- [Single sign-on overview](pages/manuals/enterprise/security/single-sign-on/index.md): Source `content/manuals/enterprise/security/single-sign-on/_index.md`.
-- [Manage SSO domains and connections](pages/manuals/enterprise/security/single-sign-on/manage.md): Source `content/manuals/enterprise/security/single-sign-on/manage.md`.
-- [Troubleshoot single sign-on](pages/manuals/enterprise/security/single-sign-on/troubleshoot-sso.md): Source `content/manuals/enterprise/security/single-sign-on/troubleshoot-sso.md`.
 
 ## Extensions
 
@@ -982,6 +938,14 @@
 - [Non-marketplace extensions](pages/manuals/extensions/non-marketplace.md): Source `content/manuals/extensions/non-marketplace.md`.
 - [Configure a private marketplace for extensions](pages/manuals/extensions/private-marketplace.md): Source `content/manuals/extensions/private-marketplace.md`.
 - [Settings and feedback for Docker Extensions](pages/manuals/extensions/settings-feedback.md): Source `content/manuals/extensions/settings-feedback.md`.
+
+## Faqs
+
+- [Account FAQs](pages/manuals/faqs/accounts.md): Source `content/manuals/faqs/accounts.md`.
+- [FAQs](pages/manuals/faqs/index.md): Source `content/manuals/faqs/_index.md`.
+- [Platform FAQs](pages/manuals/faqs/platform.md): Source `content/manuals/faqs/platform.md`.
+- [Security FAQs](pages/manuals/faqs/security.md): Source `content/manuals/faqs/security.md`.
+- [Subscription and billing FAQs](pages/manuals/faqs/subscription-billing.md): Source `content/manuals/faqs/subscription-billing.md`.
 
 ## Offload
 
@@ -1040,27 +1004,53 @@
 
 ## Security
 
-- [Enable two-factor authentication for your Docker account](pages/manuals/security/2fa/index.md): Source `content/manuals/security/2fa/_index.md`.
-- [Recover your Docker account](pages/manuals/security/2fa/recover-hub-account.md): Source `content/manuals/security/2fa/recover-hub-account.md`.
-- [Personal access tokens](pages/manuals/security/access-tokens.md): Source `content/manuals/security/access-tokens.md`.
-- [Container security FAQs](pages/manuals/security/faqs/containers.md): Source `content/manuals/security/faqs/containers.md`.
-- [General security FAQs](pages/manuals/security/faqs/general.md): Source `content/manuals/security/faqs/general.md`.
-- [Network and VM FAQs](pages/manuals/security/faqs/networking-and-vms.md): Source `content/manuals/security/faqs/networking-and-vms.md`.
-- [Security for developers](pages/manuals/security/index.md): Source `content/manuals/security/_index.md`.
+- [Access tokens](pages/manuals/security/access-tokens/index.md): Source `content/manuals/security/access-tokens/_index.md`.
+- [Organization access tokens](pages/manuals/security/access-tokens/organization-access-tokens.md): Source `content/manuals/security/access-tokens/organization-access-tokens.md`.
+- [Personal access tokens](pages/manuals/security/access-tokens/personal-access-tokens.md): Source `content/manuals/security/access-tokens/personal-access-tokens.md`.
+- [Enable two-factor authentication for your Docker account](pages/manuals/security/authentication/2fa/index.md): Source `content/manuals/security/authentication/2fa/_index.md`.
+- [Recover your Docker account](pages/manuals/security/authentication/2fa/recover-hub-account.md): Source `content/manuals/security/authentication/2fa/recover-hub-account.md`.
+- [Authentication](pages/manuals/security/authentication/index.md): Source `content/manuals/security/authentication/_index.md`.
+- [Create and manage OIDC connections](pages/manuals/security/authentication/oidc-connections/create-manage.md): Source `content/manuals/security/authentication/oidc-connections/create-manage.md`.
+- [OIDC connections overview](pages/manuals/security/authentication/oidc-connections/index.md): Source `content/manuals/security/authentication/oidc-connections/_index.md`.
+- [OIDC connections rulesets and subject claims](pages/manuals/security/authentication/oidc-connections/rulesets-claims.md): Source `content/manuals/security/authentication/oidc-connections/rulesets-claims.md`.
+- [Set up single sign-on](pages/manuals/security/authentication/single-sign-on/connect.md): Source `content/manuals/security/authentication/single-sign-on/connect.md`.
+- [Single sign-on overview](pages/manuals/security/authentication/single-sign-on/index.md): Source `content/manuals/security/authentication/single-sign-on/_index.md`.
+- [Manage SSO domains and connections](pages/manuals/security/authentication/single-sign-on/manage.md): Source `content/manuals/security/authentication/single-sign-on/manage.md`.
+- [Troubleshoot single sign-on](pages/manuals/security/authentication/single-sign-on/troubleshoot-sso.md): Source `content/manuals/security/authentication/single-sign-on/troubleshoot-sso.md`.
+- [Security](pages/manuals/security/index.md): Source `content/manuals/security/_index.md`.
+- [Auto-provisioning](pages/manuals/security/provisioning/auto-provisioning.md): Source `content/manuals/security/provisioning/auto-provisioning.md`.
+- [Add and manage domains](pages/manuals/security/provisioning/domain-management.md): Source `content/manuals/security/provisioning/domain-management.md`.
+- [Provision users](pages/manuals/security/provisioning/index.md): Source `content/manuals/security/provisioning/_index.md`.
+- [Just-in-Time provisioning](pages/manuals/security/provisioning/just-in-time.md): Source `content/manuals/security/provisioning/just-in-time.md`.
+- [Group mapping](pages/manuals/security/provisioning/scim/group-mapping.md): Source `content/manuals/security/provisioning/scim/group-mapping.md`.
+- [SCIM overview](pages/manuals/security/provisioning/scim/index.md): Source `content/manuals/security/provisioning/scim/_index.md`.
+- [Migrate JIT to SCIM](pages/manuals/security/provisioning/scim/migrate-scim.md): Source `content/manuals/security/provisioning/scim/migrate-scim.md`.
+- [Set up SCIM provisioning](pages/manuals/security/provisioning/scim/provision-scim.md): Source `content/manuals/security/provisioning/scim/provision-scim.md`.
+- [Troubleshoot provisioning](pages/manuals/security/provisioning/troubleshoot-provisioning.md): Source `content/manuals/security/provisioning/troubleshoot-provisioning.md`.
+- [Docker core roles and permissions](pages/manuals/security/roles-and-permissions/core-roles.md): Source `content/manuals/security/roles-and-permissions/core-roles.md`.
+- [Custom roles and permissions overview](pages/manuals/security/roles-and-permissions/custom-roles/index.md): Source `content/manuals/security/roles-and-permissions/custom-roles/_index.md`.
+- [Manage custom roles in Docker Home](pages/manuals/security/roles-and-permissions/custom-roles/manage.md): Source `content/manuals/security/roles-and-permissions/custom-roles/manage.md`.
+- [Custom role permissions reference](pages/manuals/security/roles-and-permissions/custom-roles/permissions-reference.md): Source `content/manuals/security/roles-and-permissions/custom-roles/permissions-reference.md`.
+- [Docker organization roles and permissions](pages/manuals/security/roles-and-permissions/index.md): Source `content/manuals/security/roles-and-permissions/_index.md`.
 - [Docker security announcements](pages/manuals/security/security-announcements.md): Source `content/manuals/security/security-announcements.md`.
 
-## Subscription
+## Subscription Billing
 
-- [Docker Desktop license agreement](pages/manuals/subscription/desktop-license.md): Source `content/manuals/subscription/desktop-license.md`.
-- [Plan FAQs](pages/manuals/subscription/faq.md): Source `content/manuals/subscription/faq.md`.
-- [Overview](pages/manuals/subscription/index.md): Source `content/manuals/subscription/_index.md`.
-- [Manage plans](pages/manuals/subscription/manage.md): Source `content/manuals/subscription/manage.md`.
-- [AI Governance plan](pages/manuals/subscription/plans/ai-governance.md): Source `content/manuals/subscription/plans/ai-governance.md`.
-- [DHI plans](pages/manuals/subscription/plans/dhi.md): Source `content/manuals/subscription/plans/dhi.md`.
-- [Docker Verified Publisher plans](pages/manuals/subscription/plans/docker-verified-publisher.md): Source `content/manuals/subscription/plans/docker-verified-publisher.md`.
-- [Docker plans](pages/manuals/subscription/plans/docker.md): Source `content/manuals/subscription/plans/docker.md`.
-- [Gordon plans](pages/manuals/subscription/plans/gordon.md): Source `content/manuals/subscription/plans/gordon.md`.
-- [Plans](pages/manuals/subscription/plans/index.md): Source `content/manuals/subscription/plans/_index.md`.
+- [Docker Desktop license agreement](pages/manuals/subscription-billing/desktop-license.md): Source `content/manuals/subscription-billing/desktop-license.md`.
+- [Subscription and billing](pages/manuals/subscription-billing/index.md): Source `content/manuals/subscription-billing/_index.md`.
+- [Use 3D Secure authentication for Docker billing](pages/manuals/subscription-billing/manage/3d-secure.md): Source `content/manuals/subscription-billing/manage/3d-secure.md`.
+- [Update your billing details](pages/manuals/subscription-billing/manage/details.md): Source `content/manuals/subscription-billing/manage/details.md`.
+- [Billing and invoice history](pages/manuals/subscription-billing/manage/history.md): Source `content/manuals/subscription-billing/manage/history.md`.
+- [Manage billing](pages/manuals/subscription-billing/manage/index.md): Source `content/manuals/subscription-billing/manage/_index.md`.
+- [Add or update a payment method](pages/manuals/subscription-billing/manage/payment-method.md): Source `content/manuals/subscription-billing/manage/payment-method.md`.
+- [Manage plans](pages/manuals/subscription-billing/manage/plans.md): Source `content/manuals/subscription-billing/manage/plans.md`.
+- [Sales tax exemption and VAT](pages/manuals/subscription-billing/manage/tax-certificate.md): Source `content/manuals/subscription-billing/manage/tax-certificate.md`.
+- [AI Governance plan](pages/manuals/subscription-billing/plans/ai-governance.md): Source `content/manuals/subscription-billing/plans/ai-governance.md`.
+- [DHI plans](pages/manuals/subscription-billing/plans/dhi.md): Source `content/manuals/subscription-billing/plans/dhi.md`.
+- [Docker Verified Publisher plans](pages/manuals/subscription-billing/plans/docker-verified-publisher.md): Source `content/manuals/subscription-billing/plans/docker-verified-publisher.md`.
+- [Docker plans](pages/manuals/subscription-billing/plans/docker.md): Source `content/manuals/subscription-billing/plans/docker.md`.
+- [Gordon plans](pages/manuals/subscription-billing/plans/gordon.md): Source `content/manuals/subscription-billing/plans/gordon.md`.
+- [Plans](pages/manuals/subscription-billing/plans/index.md): Source `content/manuals/subscription-billing/plans/_index.md`.
 
 ## Support
 

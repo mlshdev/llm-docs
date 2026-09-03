@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/_index.md](https://github.com/docker/docs/blob/0dd94985910d2b70122891c8cf9173087f7460a8/content/_index.md)
+> Commit-pinned source for Docker main: [content/_index.md](https://github.com/docker/docs/blob/b744dd31039efeac59c11e017ac6ab62d9077339/content/_index.md)
 
 # Home
 
@@ -15,7 +15,7 @@ reference material for everyday development and operations tasks.
 
 - [Reference](https://docs.docker.com/reference/): Browse CLI, API, and file format documentation.
 
-- [Join Docker Verified Publisher through self-service plans](https://docs.docker.com/subscription/plans/docker-verified-publisher/) (Docker Verified Publisher, 2026-08-20): Apply for DVP Starter or Growth, complete checkout after approval, and manage publisher analytics, tracked companies, and billing.
+- [Join Docker Verified Publisher through self-service plans](https://docs.docker.com/subscription-billing/plans/docker-verified-publisher/) (Docker Verified Publisher, 2026-08-20): Apply for DVP Starter or Growth, complete checkout after approval, and manage publisher analytics, tracked companies, and billing.
 
 - [Sign and enforce trusted sandbox kits](https://docs.docker.com/ai/sandboxes/customize/kits/#sign-and-verify-kits) (Docker Sandboxes, 2026-08-20): Sign kits with cosign-compatible Sigstore signatures, verify keyless or key-based signatures, and reject kits outside a trusted-signer policy.
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/build-cloud/ci.md](https://github.com/docker/docs/blob/0dd94985910d2b70122891c8cf9173087f7460a8/content/manuals/build-cloud/ci.md)
+> Commit-pinned source for Docker main: [content/manuals/build-cloud/ci.md](https://github.com/docker/docs/blob/b744dd31039efeac59c11e017ac6ab62d9077339/content/manuals/build-cloud/ci.md)
 
 Using Docker Build Cloud in CI can speed up your build pipelines, which means less time
 spent waiting and context switching. You control your CI workflows as usual,
@@ -30,8 +30,8 @@ eligible tagged images. See
 
 To enable your CI/CD system to build and push images using Docker Build Cloud, provide both an access token and a username. The type of token and the username you use depend on your account type and permissions.
 
-- If you are an organization administrator or have permission to create [organization access tokens (OAT)](https://docs.docker.com/enterprise/security/access-tokens/), use an OAT and set `DOCKER_ACCOUNT` to your Docker Hub organization name.
-- If you do not have permission to create OATs or are using a personal account, use a [personal access token (PAT)](https://docs.docker.com/security/access-tokens/) and set `DOCKER_ACCOUNT` to your Docker Hub username.
+- If you are an organization administrator or have permission to create [organization access tokens (OAT)](https://docs.docker.com/security/access-tokens/organization-access-tokens/), use an OAT and set `DOCKER_ACCOUNT` to your Docker Hub organization name.
+- If you do not have permission to create OATs or are using a personal account, use a [personal access token (PAT)](https://docs.docker.com/security/access-tokens/personal-access-tokens/) and set `DOCKER_ACCOUNT` to your Docker Hub username.
 
 ### Creating access tokens
 
@@ -39,7 +39,7 @@ To enable your CI/CD system to build and push images using Docker Build Cloud, p
 
 If you are an organization administrator:
 
-- Create an [organization access token (OAT)](https://docs.docker.com/enterprise/security/access-tokens/). The token must have these permissions:
+- Create an [organization access token (OAT)](https://docs.docker.com/security/access-tokens/organization-access-tokens/). The token must have these permissions:
   1. **cloud-connect** scope
   2. **Read public repositories** permission
   3. **Repository access** with **Image push** permission for the target repository:
@@ -53,7 +53,7 @@ If you are not an organization administrator:
 
 #### For personal accounts
 
-- Create a [personal access token (PAT)](https://docs.docker.com/security/access-tokens/) with the following permissions:
+- Create a [personal access token (PAT)](https://docs.docker.com/security/access-tokens/personal-access-tokens/) with the following permissions:
   1. **Read & write** access.
      - Note: Building with Docker Build Cloud only requires read access, but you need write access to push images to a Docker Hub repository.
 

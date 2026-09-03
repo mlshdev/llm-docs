@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/agentic-platform/sandboxes.md](https://github.com/docker/docs/blob/0dd94985910d2b70122891c8cf9173087f7460a8/content/manuals/agentic-platform/sandboxes.md)
+> Commit-pinned source for Docker main: [content/manuals/agentic-platform/sandboxes.md](https://github.com/docker/docs/blob/b744dd31039efeac59c11e017ac6ab62d9077339/content/manuals/agentic-platform/sandboxes.md)
 
 # Sandboxes
 
@@ -56,7 +56,7 @@ when the sandbox is created and cannot be changed while it runs.
 
 Docker bills sandbox compute per second while the sandbox runs. Model inference
 uses your external provider credential and is metered by that provider. For
-account, usage, and payment information, see [Docker Billing](https://docs.docker.com/billing/).
+account, usage, and payment information, see [Docker Billing](https://docs.docker.com/subscription-billing/).
 
 ## Check sandbox configuration
 

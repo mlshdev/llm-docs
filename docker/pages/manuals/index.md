@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/_index.md](https://github.com/docker/docs/blob/0dd94985910d2b70122891c8cf9173087f7460a8/content/manuals/_index.md)
+> Commit-pinned source for Docker main: [content/manuals/_index.md](https://github.com/docker/docs/blob/b744dd31039efeac59c11e017ac6ab62d9077339/content/manuals/_index.md)
 
 # Manuals
 
@@ -35,19 +35,20 @@ Security guardrails and image analysis for your software supply chain.
 - [Docker Hardened Images](https://docs.docker.com/dhi/): Secure, minimal images for trusted software delivery.
 - [Docker Scout](https://docs.docker.com/scout/): Image analysis and policy evaluation.
 
-## Platform
+## Accounts and admin
 
-Documentation related to the Docker platform, such as administration and
-subscription management.
+Manage Docker accounts, administration, subscriptions, billing, and security.
 
-- [Administration](https://docs.docker.com/admin/): Centralized observability for companies and organizations.
-- [Billing](https://docs.docker.com/billing/): Manage billing and payment methods.
-- [Accounts](https://docs.docker.com/accounts/): Manage your Docker account.
+- [Accounts](https://docs.docker.com/accounts/): Manage Docker individual and organization accounts.
+- [Subscription and billing](https://docs.docker.com/subscription-billing/): Manage Docker subscriptions, plans, billing, and payments.
 - [Security](https://docs.docker.com/security/): Security guardrails for both administrators and developers.
-- [Subscription](https://docs.docker.com/subscription/): Commercial use licenses for Docker products.
+- [FAQs](https://docs.docker.com/faqs/): Frequently asked questions about Docker accounts, organizations, companies, subscriptions, billing, and security.
+- [Support](https://docs.docker.com/support/): Support options for paid subscriptions and community resources.
+- [Release notes](https://docs.docker.com/platform-release-notes/): Features, bug fixes, and breaking changes for Docker Home, billing, security, and subscriptions.
 
 ## Enterprise
 
 Targeted at IT administrators with help on deploying Docker Desktop at scale with configuration guidance on security related features.
 
 - [Deploy Docker Desktop](https://docs.docker.com/enterprise/enterprise-deployment/): Deploy Docker Desktop at scale within your company
+- [Hardened Docker Desktop](https://docs.docker.com/enterprise/security/hardened-desktop/): Security features that strengthen developer environments.

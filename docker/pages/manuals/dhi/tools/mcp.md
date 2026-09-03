@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/dhi/tools/mcp.md](https://github.com/docker/docs/blob/0dd94985910d2b70122891c8cf9173087f7460a8/content/manuals/dhi/tools/mcp.md)
+> Commit-pinned source for Docker main: [content/manuals/dhi/tools/mcp.md](https://github.com/docker/docs/blob/b744dd31039efeac59c11e017ac6ab62d9077339/content/manuals/dhi/tools/mcp.md)
 
 # Use the DHI MCP server
 
@@ -136,7 +136,7 @@ based on what you ask:
 ## Authenticate for mirror tools
 
 The mirror tools require a Docker Hub username and [personal access token
-(PAT)](https://docs.docker.com/security/access-tokens/) with owner access to the target organization,
+(PAT)](https://docs.docker.com/security/access-tokens/personal-access-tokens/) with owner access to the target organization,
 passed as an HTTP Basic auth header. Generate the value with:
 
 ```console

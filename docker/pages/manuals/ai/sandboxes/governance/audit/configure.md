@@ -1,8 +1,8 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/governance/audit/configure.md](https://github.com/docker/docs/blob/0dd94985910d2b70122891c8cf9173087f7460a8/content/manuals/ai/sandboxes/governance/audit/configure.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/governance/audit/configure.md](https://github.com/docker/docs/blob/b744dd31039efeac59c11e017ac6ab62d9077339/content/manuals/ai/sandboxes/governance/audit/configure.md)
 
 # Configure audit delivery
 
-Organization owners and users with a [custom role](https://docs.docker.com/enterprise/security/roles-and-permissions/custom-roles/) that includes AI Governance audit permissions can configure where Docker writes audit events.
+Organization owners and users with a [custom role](https://docs.docker.com/security/roles-and-permissions/custom-roles/) that includes AI Governance audit permissions can configure where Docker writes audit events.
 Two delivery destinations are available and can be used independently or
 together:
 
@@ -15,9 +15,9 @@ together:
 
 Your organization needs:
 
-- A Docker [AI Governance plan](https://docs.docker.com/subscription/plans/ai-governance/)
+- A Docker [AI Governance plan](https://docs.docker.com/subscription-billing/plans/ai-governance/)
 - An enforced organization governance policy
-- Organization owner access, or a [custom role](https://docs.docker.com/enterprise/security/roles-and-permissions/custom-roles/) with AI Governance audit permissions
+- Organization owner access, or a [custom role](https://docs.docker.com/security/roles-and-permissions/custom-roles/) with AI Governance audit permissions
 
 Only users who have an AI Governance license and are governed by the enforced
 organization policy send Docker Sandboxes audit data.

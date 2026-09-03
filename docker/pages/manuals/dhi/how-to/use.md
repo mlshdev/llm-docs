@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/dhi/how-to/use.md](https://github.com/docker/docs/blob/0dd94985910d2b70122891c8cf9173087f7460a8/content/manuals/dhi/how-to/use.md)
+> Commit-pinned source for Docker main: [content/manuals/dhi/how-to/use.md](https://github.com/docker/docs/blob/b744dd31039efeac59c11e017ac6ab62d9077339/content/manuals/dhi/how-to/use.md)
 
 # Use a Docker Hardened Image
 
@@ -16,12 +16,12 @@ package manager, and may run as a non-root user by default.
 > pull DHI Community images. You can authenticate using either of the following:
 >
 > - **Docker ID and password:** Use your Docker Hub username and password. If
->   you don't have a Docker account, [create one](https://docs.docker.com/accounts/create-account/)
+>   you don't have a Docker account, \[create one]\(../../accounts/individual/create-account.md
 >   for free.
 > - **Access token:** Use a [personal access token
->   (PAT)](https://docs.docker.com/security/access-tokens/) for personal accounts, or an
+>   (PAT)](https://docs.docker.com/security/access-tokens/personal-access-tokens/) for personal accounts, or an
 >   [organization access token
->   (OAT)](https://docs.docker.com/enterprise/security/access-tokens/) with your organization
+>   (OAT)](https://docs.docker.com/security/access-tokens/organization-access-tokens/) with your organization
 >   name as the username.
 >
 > Run `docker login dhi.io` to authenticate.
@@ -103,14 +103,14 @@ attached to Docker Hardened Images. This is particularly useful in CI/CD
 pipelines for supply chain security validation and compliance checks.
 
 For automated workflows, authenticate using an [organization access token
-(OAT)](https://docs.docker.com/enterprise/security/access-tokens/). OATs are owned by the
+(OAT)](https://docs.docker.com/security/access-tokens/organization-access-tokens/). OATs are owned by the
 organization rather than an individual user, making them better suited for CI/CD
 pipelines.
 
 To discover attestations with ORAS:
 
 1. [Generate an organization access
-   token](https://docs.docker.com/enterprise/security/access-tokens/) with **Read public
+   token](https://docs.docker.com/security/access-tokens/organization-access-tokens/) with **Read public
    repositories** scope.
 
    The following example shows how to discover attestations on DHI community
@@ -266,8 +266,8 @@ For the `--docker-server` value:
 #### Using an access token
 
 Create a secret using a [Personal Access Token
-(PAT)](https://docs.docker.com/security/access-tokens/) or [Organization Access Token
-(OAT)](https://docs.docker.com/enterprise/security/access-tokens/). Ensure the token has at
+(PAT)](https://docs.docker.com/security/access-tokens/personal-access-tokens/) or [Organization Access Token
+(OAT)](https://docs.docker.com/security/access-tokens/organization-access-tokens/). Ensure the token has at
 least read-only access to the repositories.
 
 ```console

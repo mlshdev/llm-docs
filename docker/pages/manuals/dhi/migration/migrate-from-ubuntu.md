@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/dhi/migration/migrate-from-ubuntu.md](https://github.com/docker/docs/blob/0dd94985910d2b70122891c8cf9173087f7460a8/content/manuals/dhi/migration/migrate-from-ubuntu.md)
+> Commit-pinned source for Docker main: [content/manuals/dhi/migration/migrate-from-ubuntu.md](https://github.com/docker/docs/blob/b744dd31039efeac59c11e017ac6ab62d9077339/content/manuals/dhi/migration/migrate-from-ubuntu.md)
 
 Docker Hardened Images (DHI) come in [Alpine-based and Debian-based
 variants](https://docs.docker.com/dhi/explore/available/). When migrating from an Ubuntu-based image,
@@ -38,7 +38,7 @@ replaced by the new DHI Debian image.
 > You must authenticate to `dhi.io` before you can pull Docker Hardened Images.
 > Use your Docker ID credentials (the same username and password you use for
 > Docker Hub). If you don't have a Docker account, [create
-> one](https://docs.docker.com/accounts/create-account/) for free.
+> one](https://docs.docker.com/accounts/individual/create-account/) for free.
 >
 > Run `docker login dhi.io` to authenticate.
 

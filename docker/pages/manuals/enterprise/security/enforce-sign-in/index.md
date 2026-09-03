@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/enterprise/security/enforce-sign-in/_index.md](https://github.com/docker/docs/blob/0dd94985910d2b70122891c8cf9173087f7460a8/content/manuals/enterprise/security/enforce-sign-in/_index.md)
+> Commit-pinned source for Docker main: [content/manuals/enterprise/security/enforce-sign-in/_index.md](https://github.com/docker/docs/blob/b744dd31039efeac59c11e017ac6ab62d9077339/content/manuals/enterprise/security/enforce-sign-in/_index.md)
 
 # Enforce sign-in for Docker Desktop
 
@@ -49,7 +49,7 @@ On the next Docker Desktop restart:
 
 ## Enforcing sign-in versus enforcing single sign-on (SSO)
 
-Enforcing Docker Desktop sign-in and [enforcing SSO](https://docs.docker.com/enterprise/security/single-sign-on/connect/#enforce-sso) are different features that serve different purposes:
+Enforcing Docker Desktop sign-in and [enforcing SSO](https://docs.docker.com/security/authentication/single-sign-on/connect/#enforce-sso) are different features that serve different purposes:
 
 | Enforcement                       | Description                                                    | Benefits                                                                                                                                                                                                                                               |
 | :-------------------------------- | :------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -61,4 +61,4 @@ Enforcing Docker Desktop sign-in and [enforcing SSO](https://docs.docker.com/ent
 ## Next steps
 
 - To set up sign-in enforcement, see [Configure sign-in enforcement](https://docs.docker.com/enterprise/security/enforce-sign-in/methods/).
-- To configure SSO enforcement, see [Enforce SSO](https://docs.docker.com/enterprise/security/single-sign-on/connect/).
+- To configure SSO enforcement, see [Enforce SSO](https://docs.docker.com/security/authentication/single-sign-on/connect/).

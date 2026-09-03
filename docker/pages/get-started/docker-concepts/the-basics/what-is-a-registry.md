@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/get-started/docker-concepts/the-basics/what-is-a-registry.md](https://github.com/docker/docs/blob/0dd94985910d2b70122891c8cf9173087f7460a8/content/get-started/docker-concepts/the-basics/what-is-a-registry.md)
+> Commit-pinned source for Docker main: [content/get-started/docker-concepts/the-basics/what-is-a-registry.md](https://github.com/docker/docs/blob/b744dd31039efeac59c11e017ac6ab62d9077339/content/get-started/docker-concepts/the-basics/what-is-a-registry.md)
 
 # What is a registry?
 
@@ -49,7 +49,7 @@ In this hands-on, you will learn how to build and push a Docker image to the Doc
 
 1. If you haven't created one yet, head over to the [Docker Hub](https://hub.docker.com) page to sign up for a new Docker account. Be sure to finish the verification steps sent to your email.
 
-![Screenshot of the official Docker Hub page showing the Sign up page](https://raw.githubusercontent.com/docker/docs/0dd94985910d2b70122891c8cf9173087f7460a8/content/get-started/docker-concepts/the-basics/images/dockerhub-signup.webp?border)
+![Screenshot of the official Docker Hub page showing the Sign up page](https://raw.githubusercontent.com/docker/docs/b744dd31039efeac59c11e017ac6ab62d9077339/content/get-started/docker-concepts/the-basics/images/dockerhub-signup.webp?border)
 
 You can use your Google or GitHub account to authenticate.
 
@@ -59,7 +59,7 @@ You can use your Google or GitHub account to authenticate.
 2. Select the **Create repository** button in the top-right corner.
 3. Select your namespace (most likely your username) and enter `docker-quickstart` as the repository name.
 
-![Screenshot of the Docker Hub page that shows how to create a public repository](https://raw.githubusercontent.com/docker/docs/0dd94985910d2b70122891c8cf9173087f7460a8/content/get-started/docker-concepts/the-basics/images/create-hub-repository.webp?border)
+![Screenshot of the Docker Hub page that shows how to create a public repository](https://raw.githubusercontent.com/docker/docs/b744dd31039efeac59c11e017ac6ab62d9077339/content/get-started/docker-concepts/the-basics/images/create-hub-repository.webp?border)
 
 4. Set the visibility to **Public**.
 5. Select the **Create** button to create the repository.
@@ -136,7 +136,7 @@ Don't worry about the specifics of the Dockerfile, as you'll learn about that in
 
 8. Open [Docker Hub](https://hub.docker.com) and navigate to your repository. Navigate to the **Tags** section and see your newly pushed image.
 
-![Screenshot of the Docker Hub page that displays the newly added image tag](https://raw.githubusercontent.com/docker/docs/0dd94985910d2b70122891c8cf9173087f7460a8/content/get-started/docker-concepts/the-basics/images/dockerhub-tags.webp?border=true)
+![Screenshot of the Docker Hub page that displays the newly added image tag](https://raw.githubusercontent.com/docker/docs/b744dd31039efeac59c11e017ac6ab62d9077339/content/get-started/docker-concepts/the-basics/images/dockerhub-tags.webp?border=true)
 
 In this walkthrough, you signed up for a Docker account, created your first Docker Hub repository, and built, tagged, and pushed a container image to your Docker Hub repository.
 

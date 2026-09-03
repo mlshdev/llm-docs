@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/security/security-announcements.md](https://github.com/docker/docs/blob/0dd94985910d2b70122891c8cf9173087f7460a8/content/manuals/security/security-announcements.md)
+> Commit-pinned source for Docker main: [content/manuals/security/security-announcements.md](https://github.com/docker/docs/blob/b744dd31039efeac59c11e017ac6ab62d9077339/content/manuals/security/security-announcements.md)
 
 # Docker security announcements
 
@@ -109,7 +109,7 @@ We strongly encourage you to update to Docker Desktop [4.34.2](https://docs.dock
 
 *Last updated July, 2024*
 
-When [SSO enforcement](https://docs.docker.com/enterprise/security/single-sign-on/connect/) was first introduced, Docker provided a grace period to continue to let passwords be used on the Docker CLI when authenticating to Docker Hub. This was allowed so organizations could more easily use SSO enforcement. It is recommended that administrators configuring SSO encourage users using the CLI [to switch over to Personal Access Tokens](https://docs.docker.com/enterprise/security/single-sign-on/#prerequisites) in anticipation of this grace period ending.
+When [SSO enforcement](https://docs.docker.com/security/authentication/single-sign-on/connect/) was first introduced, Docker provided a grace period to continue to let passwords be used on the Docker CLI when authenticating to Docker Hub. This was allowed so organizations could more easily use SSO enforcement. It is recommended that administrators configuring SSO encourage users using the CLI [to switch over to Personal Access Tokens](https://docs.docker.com/security/authentication/single-sign-on/#prerequisites) in anticipation of this grace period ending.
 
 On September 16, 2024, the grace period ended and passwords can no longer authenticate to Docker Hub via the Docker CLI when SSO is enforced. Affected users are required to switch over to using PATs to continue signing in.
 

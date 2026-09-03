@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/docker-hub/repos/manage/trusted-content/dvp-program.md](https://github.com/docker/docs/blob/0dd94985910d2b70122891c8cf9173087f7460a8/content/manuals/docker-hub/repos/manage/trusted-content/dvp-program.md)
+> Commit-pinned source for Docker main: [content/manuals/docker-hub/repos/manage/trusted-content/dvp-program.md](https://github.com/docker/docs/blob/b744dd31039efeac59c11e017ac6ab62d9077339/content/manuals/docker-hub/repos/manage/trusted-content/dvp-program.md)
 
 # Docker Verified Publisher Program
 
@@ -60,7 +60,7 @@ benefits from:
 You simply push your images to Docker Hub as usual, and Docker takes care of the
 rest, serving your image to millions of developers worldwide.
 
-![DVP flow in Docker Hub](https://raw.githubusercontent.com/docker/docs/0dd94985910d2b70122891c8cf9173087f7460a8/content/manuals/docker-hub/repos/manage/trusted-content/images/dvp-hub-flow.svg)
+![DVP flow in Docker Hub](https://raw.githubusercontent.com/docker/docs/b744dd31039efeac59c11e017ac6ab62d9077339/content/manuals/docker-hub/repos/manage/trusted-content/images/dvp-hub-flow.svg)
 
 To learn more, see [Availability at
 Docker](https://www.docker.com/trust/availability/).
@@ -72,7 +72,7 @@ it easier for users to identify projects that Docker has verified as
 high-quality commercial publishers.
 
 ![Docker-Sponsored Open Source
-badge](https://raw.githubusercontent.com/docker/docs/0dd94985910d2b70122891c8cf9173087f7460a8/content/manuals/docker-hub/images/verified-publisher-badge.png)
+badge](https://raw.githubusercontent.com/docker/docs/b744dd31039efeac59c11e017ac6ab62d9077339/content/manuals/docker-hub/images/verified-publisher-badge.png)
 
 ### Repository logo
 
@@ -134,16 +134,16 @@ Only a user with an owner or editor role for the organization can change the rep
 
 1. Sign in to [Docker Hub](https://hub.docker.com).
 2. Go to the page of the repository that you want to change the logo for.
-3. Select the upload logo button, represented by a camera icon (![camera icon](https://raw.githubusercontent.com/docker/docs/0dd94985910d2b70122891c8cf9173087f7460a8/content/manuals/docker-hub/images/upload_logo_sm.png)) overlaying the
+3. Select the upload logo button, represented by a camera icon (![camera icon](https://raw.githubusercontent.com/docker/docs/b744dd31039efeac59c11e017ac6ab62d9077339/content/manuals/docker-hub/images/upload_logo_sm.png)) overlaying the
    current repository logo.
 4. In the dialog that opens, select the PNG image that you want to upload to
    set it as the logo for the repository.
 
 ### Remove the logo
 
-Select the **Clear** button (![clear button](https://raw.githubusercontent.com/docker/docs/0dd94985910d2b70122891c8cf9173087f7460a8/content/manuals/docker-hub/images/clear_logo_sm.png)) to remove a logo.
+Select the **Clear** button (![clear button](https://raw.githubusercontent.com/docker/docs/b744dd31039efeac59c11e017ac6ab62d9077339/content/manuals/docker-hub/images/clear_logo_sm.png)) to remove a logo.
 
 Removing the logo makes the repository default to using the organization logo,
 if set, or the following default logo if not.
 
-![Default logo which is a 3D grey cube](https://raw.githubusercontent.com/docker/docs/0dd94985910d2b70122891c8cf9173087f7460a8/content/manuals/docker-hub/images/default_logo_sm.png)
+![Default logo which is a 3D grey cube](https://raw.githubusercontent.com/docker/docs/b744dd31039efeac59c11e017ac6ab62d9077339/content/manuals/docker-hub/images/default_logo_sm.png)

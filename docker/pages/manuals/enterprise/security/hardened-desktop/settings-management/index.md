@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/enterprise/security/hardened-desktop/settings-management/_index.md](https://github.com/docker/docs/blob/0dd94985910d2b70122891c8cf9173087f7460a8/content/manuals/enterprise/security/hardened-desktop/settings-management/_index.md)
+> Commit-pinned source for Docker main: [content/manuals/enterprise/security/hardened-desktop/settings-management/_index.md](https://github.com/docker/docs/blob/b744dd31039efeac59c11e017ac6ab62d9077339/content/manuals/enterprise/security/hardened-desktop/settings-management/_index.md)
 
 # Settings Management
 
@@ -56,7 +56,7 @@ When multiple policies exist, Docker Desktop applies them in this order:
 
 You can create settings management policies at any time, but your organization needs to verify a domain before the policies take effect.
 
-1. Check that you have [added and verified](https://docs.docker.com/enterprise/security/domain-management/#add-and-verify-a-domain) your organization's domain.
+1. Check that you have [added and verified](https://docs.docker.com/security/provisioning/domain-management/#add-and-verify-a-domain) your organization's domain.
 2. [Enforce sign-in](https://docs.docker.com/enterprise/security/enforce-sign-in/) to
    ensure all developers authenticate with your organization.
 3. Choose a configuration method:

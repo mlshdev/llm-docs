@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/offload/configuration.md](https://github.com/docker/docs/blob/0dd94985910d2b70122891c8cf9173087f7460a8/content/manuals/offload/configuration.md)
+> Commit-pinned source for Docker main: [content/manuals/offload/configuration.md](https://github.com/docker/docs/blob/b744dd31039efeac59c11e017ac6ab62d9077339/content/manuals/offload/configuration.md)
 
 # Configure Docker Offload
 
@@ -16,7 +16,7 @@ settings when allowed by their organization.
 
 For organization owners, you can manage Docker Offload settings for all users in
 your organization. For more details, see [Manage Docker
-products](https://docs.docker.com/admin/organization/manage/manage-products/). To view usage for Docker
+products](https://docs.docker.com/accounts/organization/manage/manage-products/). To view usage for Docker
 Offload, see [Docker Offload usage](https://docs.docker.com/offload/usage/).
 
 ## Configure settings in Docker Desktop

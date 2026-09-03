@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/build/ci/github-actions/push-multi-registries.md](https://github.com/docker/docs/blob/0dd94985910d2b70122891c8cf9173087f7460a8/content/manuals/build/ci/github-actions/push-multi-registries.md)
+> Commit-pinned source for Docker main: [content/manuals/build/ci/github-actions/push-multi-registries.md](https://github.com/docker/docs/blob/b744dd31039efeac59c11e017ac6ab62d9077339/content/manuals/build/ci/github-actions/push-multi-registries.md)
 
 # Push to multiple registries with GitHub Actions
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/dhi/tools/api.md](https://github.com/docker/docs/blob/0dd94985910d2b70122891c8cf9173087f7460a8/content/manuals/dhi/tools/api.md)
+> Commit-pinned source for Docker main: [content/manuals/dhi/tools/api.md](https://github.com/docker/docs/blob/b744dd31039efeac59c11e017ac6ab62d9077339/content/manuals/dhi/tools/api.md)
 
 # Use the DHI API
 
@@ -36,7 +36,7 @@ Every query takes a `Context` argument (conventionally named `ctx` in the
 
 ## Authentication
 
-An [organization access token](https://docs.docker.com/enterprise/security/access-tokens/)
+An [organization access token](https://docs.docker.com/security/access-tokens/organization-access-tokens/)
 (OAT) or personal access token (PAT) isn't used directly as the bearer
 token. Exchange it first for an access token:
 
