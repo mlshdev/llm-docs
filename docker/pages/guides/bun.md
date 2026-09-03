@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/bun.md](https://github.com/docker/docs/blob/f6dc902a4d40c625f5f2c23a5c1eb735ffe7b570/content/guides/bun.md)
+> Commit-pinned source for Docker main: [content/guides/bun.md](https://github.com/docker/docs/blob/88c23a1ca40fdf176064bef4dbb7b2495debebb3/content/guides/bun.md)
 
 The Bun getting started guide teaches you how to create a containerized Bun application using Docker.
 

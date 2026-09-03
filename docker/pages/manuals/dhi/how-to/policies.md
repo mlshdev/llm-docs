@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/dhi/how-to/policies.md](https://github.com/docker/docs/blob/f6dc902a4d40c625f5f2c23a5c1eb735ffe7b570/content/manuals/dhi/how-to/policies.md)
+> Commit-pinned source for Docker main: [content/manuals/dhi/how-to/policies.md](https://github.com/docker/docs/blob/88c23a1ca40fdf176064bef4dbb7b2495debebb3/content/manuals/dhi/how-to/policies.md)
 
 Docker publishes the set of security and compliance policies that Docker
 Hardened Images (DHIs) are built to meet, so you can hold your own images to the

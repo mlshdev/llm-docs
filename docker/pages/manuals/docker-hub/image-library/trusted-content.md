@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/docker-hub/image-library/trusted-content.md](https://github.com/docker/docs/blob/f6dc902a4d40c625f5f2c23a5c1eb735ffe7b570/content/manuals/docker-hub/image-library/trusted-content.md)
+> Commit-pinned source for Docker main: [content/manuals/docker-hub/image-library/trusted-content.md](https://github.com/docker/docs/blob/88c23a1ca40fdf176064bef4dbb7b2495debebb3/content/manuals/docker-hub/image-library/trusted-content.md)
 
 # Trusted content
 
@@ -48,7 +48,7 @@ and provide clear documentation to serve as a reference for other Dockerfile aut
 Images that are part of this program have a special badge on Docker Hub making
 it easier for you to identify projects that are part of Docker Official Images.
 
-![Docker official image badge](https://raw.githubusercontent.com/docker/docs/f6dc902a4d40c625f5f2c23a5c1eb735ffe7b570/content/manuals/docker-hub/images/official-image-badge-iso.png)
+![Docker official image badge](https://raw.githubusercontent.com/docker/docs/88c23a1ca40fdf176064bef4dbb7b2495debebb3/content/manuals/docker-hub/images/official-image-badge-iso.png)
 
 ### Supported tags and respective Dockerfile links
 
@@ -57,7 +57,7 @@ The repository description for each Docker Official Image contains a
 current tags with links to the Dockerfiles that created the image with those
 tags. The purpose of this section is to show what image variants are available.
 
-![Example: supported tags for Ubuntu](https://raw.githubusercontent.com/docker/docs/f6dc902a4d40c625f5f2c23a5c1eb735ffe7b570/content/manuals/docker-hub/images/supported_tags.webp)
+![Example: supported tags for Ubuntu](https://raw.githubusercontent.com/docker/docs/88c23a1ca40fdf176064bef4dbb7b2495debebb3/content/manuals/docker-hub/images/supported_tags.webp)
 
 Tags listed on the same line all refer to the same underlying image. Multiple
 tags can point to the same image. For example, in the previous screenshot taken
@@ -173,9 +173,9 @@ signed security metadata such as SBOMs and provenance attestations.
 Image and chart repositories have special badges
 on Docker Hub, making it easier to identify trusted DHI content.
 
-![Docker Hardened Image badge](https://raw.githubusercontent.com/docker/docs/f6dc902a4d40c625f5f2c23a5c1eb735ffe7b570/content/manuals/docker-hub/images/dhi-image-label.png)
+![Docker Hardened Image badge](https://raw.githubusercontent.com/docker/docs/88c23a1ca40fdf176064bef4dbb7b2495debebb3/content/manuals/docker-hub/images/dhi-image-label.png)
 
-![Docker Hardened Chart badge](https://raw.githubusercontent.com/docker/docs/f6dc902a4d40c625f5f2c23a5c1eb735ffe7b570/content/manuals/docker-hub/images/dhi-chart-label.png)
+![Docker Hardened Chart badge](https://raw.githubusercontent.com/docker/docs/88c23a1ca40fdf176064bef4dbb7b2495debebb3/content/manuals/docker-hub/images/dhi-chart-label.png)
 
 To browse available repositories, see the [Docker Hardened Images
 catalog](https://hub.docker.com/hardened-images/catalog). For implementation
@@ -194,7 +194,7 @@ Images that are part of this program have a special badge on Docker Hub making
 it easier for users to identify projects that Docker has verified as
 high-quality commercial publishers.
 
-![Docker-Verified Publisher badge](https://raw.githubusercontent.com/docker/docs/f6dc902a4d40c625f5f2c23a5c1eb735ffe7b570/content/manuals/docker-hub/images/verified-publisher-badge-iso.png)
+![Docker-Verified Publisher badge](https://raw.githubusercontent.com/docker/docs/88c23a1ca40fdf176064bef4dbb7b2495debebb3/content/manuals/docker-hub/images/verified-publisher-badge-iso.png)
 
 ## Docker-Sponsored Open Source Software images
 
@@ -205,4 +205,4 @@ Images that are part of this program have a special badge on Docker Hub making
 it easier for users to identify projects that Docker has verified as trusted,
 secure, and active open-source projects.
 
-![Docker-Sponsored Open Source badge](https://raw.githubusercontent.com/docker/docs/f6dc902a4d40c625f5f2c23a5c1eb735ffe7b570/content/manuals/docker-hub/images/sponsored-badge-iso.png)
+![Docker-Sponsored Open Source badge](https://raw.githubusercontent.com/docker/docs/88c23a1ca40fdf176064bef4dbb7b2495debebb3/content/manuals/docker-hub/images/sponsored-badge-iso.png)

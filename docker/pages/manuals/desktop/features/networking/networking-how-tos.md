@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/desktop/features/networking/networking-how-tos.md](https://github.com/docker/docs/blob/f6dc902a4d40c625f5f2c23a5c1eb735ffe7b570/content/manuals/desktop/features/networking/networking-how-tos.md)
+> Commit-pinned source for Docker main: [content/manuals/desktop/features/networking/networking-how-tos.md](https://github.com/docker/docs/blob/88c23a1ca40fdf176064bef4dbb7b2495debebb3/content/manuals/desktop/features/networking/networking-how-tos.md)
 
 This page explains how to configure and use networking features, connect containers to host services, work behind proxies or VPNs, and troubleshoot common issues.
 

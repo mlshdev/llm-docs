@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/configuration/overview/index.md](https://github.com/docker/docs/blob/f6dc902a4d40c625f5f2c23a5c1eb735ffe7b570/_vendor/github.com/docker/docker-agent/docs/configuration/overview/index.md)
+> Commit-pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/configuration/overview/index.md](https://github.com/docker/docs/blob/88c23a1ca40fdf176064bef4dbb7b2495debebb3/_vendor/github.com/docker/docker-agent/docs/configuration/overview/index.md)
 
 *Docker Agent uses YAML or HCL configuration files to define agents, models, tools, and their relationships.*
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/scout/explore/image-details-view.md](https://github.com/docker/docs/blob/f6dc902a4d40c625f5f2c23a5c1eb735ffe7b570/content/manuals/scout/explore/image-details-view.md)
+> Commit-pinned source for Docker main: [content/manuals/scout/explore/image-details-view.md](https://github.com/docker/docs/blob/88c23a1ca40fdf176064bef4dbb7b2495debebb3/content/manuals/scout/explore/image-details-view.md)
 
 # Image details view
 
@@ -8,7 +8,7 @@ access the image view from the Docker Scout Dashboard, the Docker Desktop
 show a breakdown of the image hierarchy (base images), image layers, packages,
 and vulnerabilities.
 
-![The image details view in Docker Desktop](https://raw.githubusercontent.com/docker/docs/f6dc902a4d40c625f5f2c23a5c1eb735ffe7b570/content/manuals/scout/images/dd-image-view.png)
+![The image details view in Docker Desktop](https://raw.githubusercontent.com/docker/docs/88c23a1ca40fdf176064bef4dbb7b2495debebb3/content/manuals/scout/images/dd-image-view.png)
 
 Docker Desktop first analyzes images locally, where it generates a software bill of materials (SBOM).
 Docker Desktop, Docker Hub, and the Docker Scout Dashboard and CLI all use the [package URL (PURL) links](https://github.com/package-url/purl-spec)
@@ -137,7 +137,7 @@ of `debian` to use. By providing more than one alternative to choose from, you
 can see for yourself how the options compare with each other, and decide which
 one to use.
 
-![Base image recommendations](https://raw.githubusercontent.com/docker/docs/f6dc902a4d40c625f5f2c23a5c1eb735ffe7b570/content/manuals/scout/images/change-base-image.png)
+![Base image recommendations](https://raw.githubusercontent.com/docker/docs/88c23a1ca40fdf176064bef4dbb7b2495debebb3/content/manuals/scout/images/change-base-image.png)
 
 Select a tag recommendation to see further details of the recommendation.
 It shows the benefits and potential disadvantages of the tag, why it's a

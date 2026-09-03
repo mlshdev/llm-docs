@@ -1,6 +1,6 @@
 # Docker main
 
-> Documentation generated from the latest `main` branch commit of [docker/docs](https://github.com/docker/docs) and pinned to immutable source commit `f6dc902a4d40c625f5f2c23a5c1eb735ffe7b570`.
+> Documentation generated from the latest `main` branch commit of [docker/docs](https://github.com/docker/docs) and pinned to immutable source commit `88c23a1ca40fdf176064bef4dbb7b2495debebb3`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Docker main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -738,6 +738,7 @@
 - [Runtime metrics](pages/manuals/engine/containers/runmetrics.md): Source `content/manuals/engine/containers/runmetrics.md`.
 - [Start containers automatically](pages/manuals/engine/containers/start-containers-automatically.md): Source `content/manuals/engine/containers/start-containers-automatically.md`.
 - [Alternative container runtimes](pages/manuals/engine/daemon/alternative-runtimes.md): Source `content/manuals/engine/daemon/alternative-runtimes.md`.
+- [Run containerd in the Docker daemon](pages/manuals/engine/daemon/embedded-containerd.md): Source `content/manuals/engine/daemon/embedded-containerd.md`.
 - [Docker daemon configuration overview](pages/manuals/engine/daemon/index.md): Source `content/manuals/engine/daemon/_index.md`.
 - [Use IPv6 networking](pages/manuals/engine/daemon/ipv6.md): Source `content/manuals/engine/daemon/ipv6.md`.
 - [Live restore](pages/manuals/engine/daemon/live-restore.md): Source `content/manuals/engine/daemon/live-restore.md`.

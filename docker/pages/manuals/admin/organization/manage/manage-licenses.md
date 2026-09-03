@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/admin/organization/manage/manage-licenses.md](https://github.com/docker/docs/blob/f6dc902a4d40c625f5f2c23a5c1eb735ffe7b570/content/manuals/admin/organization/manage/manage-licenses.md)
+> Commit-pinned source for Docker main: [content/manuals/admin/organization/manage/manage-licenses.md](https://github.com/docker/docs/blob/88c23a1ca40fdf176064bef4dbb7b2495debebb3/content/manuals/admin/organization/manage/manage-licenses.md)
 
 # Manage license assignment
 

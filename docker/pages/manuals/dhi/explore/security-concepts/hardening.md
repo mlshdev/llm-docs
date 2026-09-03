@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/dhi/explore/security-concepts/hardening.md](https://github.com/docker/docs/blob/f6dc902a4d40c625f5f2c23a5c1eb735ffe7b570/content/manuals/dhi/explore/security-concepts/hardening.md)
+> Commit-pinned source for Docker main: [content/manuals/dhi/explore/security-concepts/hardening.md](https://github.com/docker/docs/blob/88c23a1ca40fdf176064bef4dbb7b2495debebb3/content/manuals/dhi/explore/security-concepts/hardening.md)
 
 # Base image hardening
 

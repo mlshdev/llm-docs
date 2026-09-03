@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/testcontainers-java-lifecycle.md](https://github.com/docker/docs/blob/f6dc902a4d40c625f5f2c23a5c1eb735ffe7b570/content/guides/testcontainers-java-lifecycle.md)
+> Commit-pinned source for Docker main: [content/guides/testcontainers-java-lifecycle.md](https://github.com/docker/docs/blob/88c23a1ca40fdf176064bef4dbb7b2495debebb3/content/guides/testcontainers-java-lifecycle.md)
 
 # Testcontainers container lifecycle management using JUnit 5
 

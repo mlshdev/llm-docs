@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/build/cache/optimize.md](https://github.com/docker/docs/blob/f6dc902a4d40c625f5f2c23a5c1eb735ffe7b570/content/manuals/build/cache/optimize.md)
+> Commit-pinned source for Docker main: [content/manuals/build/cache/optimize.md](https://github.com/docker/docs/blob/88c23a1ca40fdf176064bef4dbb7b2495debebb3/content/manuals/build/cache/optimize.md)
 
 When building with Docker, a layer is reused from the build cache if the
 instruction and the files it depends on hasn't changed since it was previously

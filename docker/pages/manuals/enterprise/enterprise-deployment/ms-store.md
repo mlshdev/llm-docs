@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/enterprise/enterprise-deployment/ms-store.md](https://github.com/docker/docs/blob/f6dc902a4d40c625f5f2c23a5c1eb735ffe7b570/content/manuals/enterprise/enterprise-deployment/ms-store.md)
+> Commit-pinned source for Docker main: [content/manuals/enterprise/enterprise-deployment/ms-store.md](https://github.com/docker/docs/blob/88c23a1ca40fdf176064bef4dbb7b2495debebb3/content/manuals/enterprise/enterprise-deployment/ms-store.md)
 
 # Install Docker Desktop from the Microsoft Store on Windows
 

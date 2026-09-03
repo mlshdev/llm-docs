@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/ruby.md](https://github.com/docker/docs/blob/f6dc902a4d40c625f5f2c23a5c1eb735ffe7b570/content/guides/ruby.md)
+> Commit-pinned source for Docker main: [content/guides/ruby.md](https://github.com/docker/docs/blob/88c23a1ca40fdf176064bef4dbb7b2495debebb3/content/guides/ruby.md)
 
 The Ruby language-specific guide teaches you how to containerize a Ruby on Rails application using Docker. In this guide, you’ll learn how to:
 

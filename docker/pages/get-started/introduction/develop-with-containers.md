@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/get-started/introduction/develop-with-containers.md](https://github.com/docker/docs/blob/f6dc902a4d40c625f5f2c23a5c1eb735ffe7b570/content/get-started/introduction/develop-with-containers.md)
+> Commit-pinned source for Docker main: [content/get-started/introduction/develop-with-containers.md](https://github.com/docker/docs/blob/88c23a1ca40fdf176064bef4dbb7b2495debebb3/content/get-started/introduction/develop-with-containers.md)
 
 # Develop with containers
 
@@ -42,7 +42,7 @@ In this hands-on guide, you'll learn how to develop with containers.
 
 3. Open your browser to <http://localhost> to see the application up and running. It may take a few minutes for the app to run. The app is a simple to-do application, so feel free to add an item or two, mark some as done, or even delete an item.
 
-![Screenshot of the getting started to-do app after its first launch](https://raw.githubusercontent.com/docker/docs/f6dc902a4d40c625f5f2c23a5c1eb735ffe7b570/content/get-started/introduction/images/develop-getting-started-app-first-launch.webp)
+![Screenshot of the getting started to-do app after its first launch](https://raw.githubusercontent.com/docker/docs/88c23a1ca40fdf176064bef4dbb7b2495debebb3/content/get-started/introduction/images/develop-getting-started-app-first-launch.webp)
 
 ### What's in the environment?
 
@@ -87,7 +87,7 @@ The greeting at the top of the page is populated by an API call at `/api/greetin
 
 3. If you haven't done so yet, save the file. If you refresh your browser, you should see a new greeting. If you keep refreshing, you should see all of the messages appear.
 
-![Screenshot of the to-do app with a new greeting](https://raw.githubusercontent.com/docker/docs/f6dc902a4d40c625f5f2c23a5c1eb735ffe7b570/content/get-started/introduction/images/develop-app-with-greetings.webp)
+![Screenshot of the to-do app with a new greeting](https://raw.githubusercontent.com/docker/docs/88c23a1ca40fdf176064bef4dbb7b2495debebb3/content/get-started/introduction/images/develop-app-with-greetings.webp)
 
 ### Change the placeholder text
 
@@ -111,7 +111,7 @@ When you look at the app, you'll see the placeholder text is simply "New Item". 
 
 3. Save the file and go back to your browser. You should see the change already hot-reloaded into your browser. If you don't like it, feel free to tweak it until it looks just right.
 
-![Screenshot of the to-do app with an updated placeholder in the add item text field"](https://raw.githubusercontent.com/docker/docs/f6dc902a4d40c625f5f2c23a5c1eb735ffe7b570/content/get-started/introduction/images/develop-app-with-updated-placeholder.webp)
+![Screenshot of the to-do app with an updated placeholder in the add item text field"](https://raw.githubusercontent.com/docker/docs/88c23a1ca40fdf176064bef4dbb7b2495debebb3/content/get-started/introduction/images/develop-app-with-updated-placeholder.webp)
 
 ### Change the background color
 
@@ -133,7 +133,7 @@ Before you consider the application finalized, you need to make the colors bette
 
    Each save should let you see the change immediately in the browser. Keep adjusting it until it's the perfect setup for you.
 
-![Screenshot of the to-do app with a new placeholder and background color"](https://raw.githubusercontent.com/docker/docs/f6dc902a4d40c625f5f2c23a5c1eb735ffe7b570/content/get-started/introduction/images/develop-app-with-updated-client.webp)
+![Screenshot of the to-do app with a new placeholder and background color"](https://raw.githubusercontent.com/docker/docs/88c23a1ca40fdf176064bef4dbb7b2495debebb3/content/get-started/introduction/images/develop-app-with-updated-client.webp)
 
 And with that, you're done. Congrats on updating your website.
 

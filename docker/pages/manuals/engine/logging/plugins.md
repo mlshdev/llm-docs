@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/engine/logging/plugins.md](https://github.com/docker/docs/blob/f6dc902a4d40c625f5f2c23a5c1eb735ffe7b570/content/manuals/engine/logging/plugins.md)
+> Commit-pinned source for Docker main: [content/manuals/engine/logging/plugins.md](https://github.com/docker/docs/blob/88c23a1ca40fdf176064bef4dbb7b2495debebb3/content/manuals/engine/logging/plugins.md)
 
 # Use a logging driver plugin
 
