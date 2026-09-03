@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/connect/create-nodes/plan-your-node/node-ui-design.md](https://github.com/n8n-io/n8n-docs/blob/32d4c1af45711af43703671a66f502ef7bd2b932/docs/connect/create-nodes/plan-your-node/node-ui-design.md)
+> Commit-pinned source for n8n main: [docs/connect/create-nodes/plan-your-node/node-ui-design.md](https://github.com/n8n-io/n8n-docs/blob/b732ee99d015bf1b55668862de6e07bbcb573c0c/docs/connect/create-nodes/plan-your-node/node-ui-design.md)
 
 # Design your node's user interface <a id="design-your-nodes-user-interface"></a>
 
@@ -87,7 +87,7 @@ There are five types of help built in to the GUI:
   - Use info boxes for essential information. Don't over-use them. By making them rare, they stand out more and grab the user's attention.
 - Parameter hints: lines of text displayed beneath a user input field. Use this when there's something the user needs to know, but an info box would be excessive.
 - Node hints: provide help in the input panel, output panel, or node details view. Refer to [UI elements | Hints](https://docs.n8n.io/connect/create-nodes/build-your-node/reference/node-ui-elements#hints) for more information.
-- Tooltips: callouts that appear when the user hovers over the tooltip icon ![The tooltip icon: a question mark in a grey circle](https://raw.githubusercontent.com/n8n-io/n8n-docs/32d4c1af45711af43703671a66f502ef7bd2b932/docs/connect/.gitbook/assets/help-tooltip.png). Use tooltips for extra information that the user might need.
+- Tooltips: callouts that appear when the user hovers over the tooltip icon ![The tooltip icon: a question mark in a grey circle](https://raw.githubusercontent.com/n8n-io/n8n-docs/b732ee99d015bf1b55668862de6e07bbcb573c0c/docs/connect/.gitbook/assets/help-tooltip.png). Use tooltips for extra information that the user might need.
   - You don't have to provide a tooltip for every field. Only add one if it contains useful information.
   - When writing tooltips, think about what the user needs. Don't just copy-paste API parameter descriptions. If the description doesn't make sense, or has errors, improve it.
 - Placeholder text: n8n can display placeholder text in a field where the user hasn't entered a value. This can help the user know what's expected in that field.

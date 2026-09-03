@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/code-in-n8n/cookbook/code-node/output-to-the-browser-console.md](https://github.com/n8n-io/n8n-docs/blob/32d4c1af45711af43703671a66f502ef7bd2b932/docs/build/code-in-n8n/cookbook/code-node/output-to-the-browser-console.md)
+> Commit-pinned source for n8n main: [docs/build/code-in-n8n/cookbook/code-node/output-to-the-browser-console.md](https://github.com/n8n-io/n8n-docs/blob/b732ee99d015bf1b55668862de6e07bbcb573c0c/docs/build/code-in-n8n/cookbook/code-node/output-to-the-browser-console.md)
 
 # Output to the browser console with `console.log()` or `print()` in the Code node <a id="output-to-the-browser-console-with-consolelog-or-print-in-the-code-node"></a>
 

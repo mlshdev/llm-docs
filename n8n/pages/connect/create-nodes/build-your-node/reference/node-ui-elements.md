@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/connect/create-nodes/build-your-node/reference/node-ui-elements.md](https://github.com/n8n-io/n8n-docs/blob/32d4c1af45711af43703671a66f502ef7bd2b932/docs/connect/create-nodes/build-your-node/reference/node-ui-elements.md)
+> Commit-pinned source for n8n main: [docs/connect/create-nodes/build-your-node/reference/node-ui-elements.md](https://github.com/n8n-io/n8n-docs/blob/b732ee99d015bf1b55668862de6e07bbcb573c0c/docs/connect/create-nodes/build-your-node/reference/node-ui-elements.md)
 
 # Node UI elements
 
@@ -29,7 +29,7 @@ Basic configuration:
 }
 ```
 
-![String field example: a Name input with Fixed/Expression toggle and the value n8n typed in](https://raw.githubusercontent.com/n8n-io/n8n-docs/32d4c1af45711af43703671a66f502ef7bd2b932/docs/connect/.gitbook/assets/string.png)
+![String field example: a Name input with Fixed/Expression toggle and the value n8n typed in](https://raw.githubusercontent.com/n8n-io/n8n-docs/b732ee99d015bf1b55668862de6e07bbcb573c0c/docs/connect/.gitbook/assets/string.png)
 
 String field for inputting passwords:
 
@@ -57,7 +57,7 @@ String field for inputting passwords:
 }
 ```
 
-![Password field example: a Password input showing masked dots instead of the typed value](https://raw.githubusercontent.com/n8n-io/n8n-docs/32d4c1af45711af43703671a66f502ef7bd2b932/docs/connect/.gitbook/assets/password.png)
+![Password field example: a Password input showing masked dots instead of the typed value](https://raw.githubusercontent.com/n8n-io/n8n-docs/b732ee99d015bf1b55668862de6e07bbcb573c0c/docs/connect/.gitbook/assets/password.png)
 
 String field with more than one row:
 
@@ -85,7 +85,7 @@ String field with more than one row:
 }
 ```
 
-![Multi-row string field example: a Description textarea spanning several lines of text](https://raw.githubusercontent.com/n8n-io/n8n-docs/32d4c1af45711af43703671a66f502ef7bd2b932/docs/connect/.gitbook/assets/multiple-rows.png)
+![Multi-row string field example: a Description textarea spanning several lines of text](https://raw.githubusercontent.com/n8n-io/n8n-docs/b732ee99d015bf1b55668862de6e07bbcb573c0c/docs/connect/.gitbook/assets/multiple-rows.png)
 
 ### Support drag and drop for data keys <a id="support-drag-and-drop-for-data-keys"></a>
 
@@ -128,7 +128,7 @@ Number field with decimal points:
 }
 ```
 
-![Decimal number field example: an Amount input showing the value 10.00](https://raw.githubusercontent.com/n8n-io/n8n-docs/32d4c1af45711af43703671a66f502ef7bd2b932/docs/connect/.gitbook/assets/decimal.png)
+![Decimal number field example: an Amount input showing the value 10.00](https://raw.githubusercontent.com/n8n-io/n8n-docs/b732ee99d015bf1b55668862de6e07bbcb573c0c/docs/connect/.gitbook/assets/decimal.png)
 
 ## Collection <a id="collection"></a>
 
@@ -176,7 +176,7 @@ Use the `collection` type when you need to display optional fields.
 }
 ```
 
-![Collection field example: a Filters group with an optional Type dropdown open, listing Automated, Past, and Upcoming](https://raw.githubusercontent.com/n8n-io/n8n-docs/32d4c1af45711af43703671a66f502ef7bd2b932/docs/connect/.gitbook/assets/collection.png)
+![Collection field example: a Filters group with an optional Type dropdown open, listing Automated, Past, and Upcoming](https://raw.githubusercontent.com/n8n-io/n8n-docs/b732ee99d015bf1b55668862de6e07bbcb573c0c/docs/connect/.gitbook/assets/collection.png)
 
 ## DateTime <a id="datetime"></a>
 
@@ -202,7 +202,7 @@ The `dateTime` type provides a date picker.
 }
 ```
 
-![DateTime field example: a date input opening a calendar picker to choose a date and time](https://raw.githubusercontent.com/n8n-io/n8n-docs/32d4c1af45711af43703671a66f502ef7bd2b932/docs/connect/.gitbook/assets/datetime.png)
+![DateTime field example: a date input opening a calendar picker to choose a date and time](https://raw.githubusercontent.com/n8n-io/n8n-docs/b732ee99d015bf1b55668862de6e07bbcb573c0c/docs/connect/.gitbook/assets/datetime.png)
 
 ## Boolean <a id="boolean"></a>
 
@@ -228,7 +228,7 @@ The `boolean` type adds a toggle for entering true or false.
 }
 ```
 
-![Boolean field example: a Wait for Image toggle switched on](https://raw.githubusercontent.com/n8n-io/n8n-docs/32d4c1af45711af43703671a66f502ef7bd2b932/docs/connect/.gitbook/assets/boolean.png)
+![Boolean field example: a Wait for Image toggle switched on](https://raw.githubusercontent.com/n8n-io/n8n-docs/b732ee99d015bf1b55668862de6e07bbcb573c0c/docs/connect/.gitbook/assets/boolean.png)
 
 ## Color <a id="color"></a>
 
@@ -253,7 +253,7 @@ The `color` type provides a color selector.
 }
 ```
 
-![Color field example: a Background Color input with its picker swatch expanded](https://raw.githubusercontent.com/n8n-io/n8n-docs/32d4c1af45711af43703671a66f502ef7bd2b932/docs/connect/.gitbook/assets/color.png)
+![Color field example: a Background Color input with its picker swatch expanded](https://raw.githubusercontent.com/n8n-io/n8n-docs/b732ee99d015bf1b55668862de6e07bbcb573c0c/docs/connect/.gitbook/assets/color.png)
 
 ## Options <a id="options"></a>
 
@@ -289,7 +289,7 @@ The `options` type adds an options list. Users can select a single value.
 }
 ```
 
-![Options field example: a Resource dropdown open showing single-select choices Image and Template](https://raw.githubusercontent.com/n8n-io/n8n-docs/32d4c1af45711af43703671a66f502ef7bd2b932/docs/connect/.gitbook/assets/options.png)
+![Options field example: a Resource dropdown open showing single-select choices Image and Template](https://raw.githubusercontent.com/n8n-io/n8n-docs/b732ee99d015bf1b55668862de6e07bbcb573c0c/docs/connect/.gitbook/assets/options.png)
 
 ## Multi-options <a id="multi-options"></a>
 
@@ -325,7 +325,7 @@ The `multiOptions` type adds an options list. Users can select more than one val
 }
 ```
 
-![Multi-options field example: an Events field with Plan Created and Plan Deleted both selected as removable tags](https://raw.githubusercontent.com/n8n-io/n8n-docs/32d4c1af45711af43703671a66f502ef7bd2b932/docs/connect/.gitbook/assets/multioptions.png)
+![Multi-options field example: an Events field with Plan Created and Plan Deleted both selected as removable tags](https://raw.githubusercontent.com/n8n-io/n8n-docs/b732ee99d015bf1b55668862de6e07bbcb573c0c/docs/connect/.gitbook/assets/multioptions.png)
 
 ## Filter <a id="filter"></a>
 
@@ -373,7 +373,7 @@ options: [
 },
 ```
 
-![Filter field example: a Conditions builder with two rules joined by OR, using ends with and contains operators](https://raw.githubusercontent.com/n8n-io/n8n-docs/32d4c1af45711af43703671a66f502ef7bd2b932/docs/connect/.gitbook/assets/filter.png)
+![Filter field example: a Conditions builder with two rules joined by OR, using ends with and contains operators](https://raw.githubusercontent.com/n8n-io/n8n-docs/b732ee99d015bf1b55668862de6e07bbcb573c0c/docs/connect/.gitbook/assets/filter.png)
 
 ## Assignment collection (drag and drop) <a id="assignment-collection-drag-and-drop"></a>
 
@@ -390,7 +390,7 @@ Use the drag and drop component when you want users to pre-fill name and value p
 
 You can see an example in n8n's [Edit Fields (Set) node](https://github.com/n8n-io/n8n/tree/0faeab1228e26d69a2a93bdb2f89523cca1e4036/packages/nodes-base/nodes/Set/v2):
 
-![A gif showing the drag and drop action, as well as changing a field to fixed](https://raw.githubusercontent.com/n8n-io/n8n-docs/32d4c1af45711af43703671a66f502ef7bd2b932/docs/connect/.gitbook/assets/drag-drop-fixed-toggle%20\(1\).gif)
+![A gif showing the drag and drop action, as well as changing a field to fixed](https://raw.githubusercontent.com/n8n-io/n8n-docs/b732ee99d015bf1b55668862de6e07bbcb573c0c/docs/connect/.gitbook/assets/drag-drop-fixed-toggle%20\(1\).gif)
 
 ## Fixed collection <a id="fixed-collection"></a>
 
@@ -441,11 +441,11 @@ Use the `fixedCollection` type to group fields that are semantically related.
 }
 ```
 
-![Fixed collection example: a Metadata group with two repeated Name/Value field pairs and an Add Metadata button](https://raw.githubusercontent.com/n8n-io/n8n-docs/32d4c1af45711af43703671a66f502ef7bd2b932/docs/connect/.gitbook/assets/fixed-collection.png)
+![Fixed collection example: a Metadata group with two repeated Name/Value field pairs and an Add Metadata button](https://raw.githubusercontent.com/n8n-io/n8n-docs/b732ee99d015bf1b55668862de6e07bbcb573c0c/docs/connect/.gitbook/assets/fixed-collection.png)
 
 ## Resource locator <a id="resource-locator"></a>
 
-![Resource locator field example: a Card field with its mode dropdown open, offering By ID, By URL, and From list](https://raw.githubusercontent.com/n8n-io/n8n-docs/32d4c1af45711af43703671a66f502ef7bd2b932/docs/connect/.gitbook/assets/resource-locator.png)
+![Resource locator field example: a Card field with its mode dropdown open, offering By ID, By URL, and From list](https://raw.githubusercontent.com/n8n-io/n8n-docs/b732ee99d015bf1b55668862de6e07bbcb573c0c/docs/connect/.gitbook/assets/resource-locator.png)
 
 The resource locator element helps users find a specific resource in an external service, such as a card or label in Trello.
 
@@ -685,7 +685,7 @@ Refer to the [Postgres resource mapping method](https://github.com/n8n-io/n8n/bl
 }
 ```
 
-![JSON field example: a Content (JSON) code editor with syntax-highlighted keys and values](https://raw.githubusercontent.com/n8n-io/n8n-docs/32d4c1af45711af43703671a66f502ef7bd2b932/docs/connect/.gitbook/assets/json.png)
+![JSON field example: a Content (JSON) code editor with syntax-highlighted keys and values](https://raw.githubusercontent.com/n8n-io/n8n-docs/b732ee99d015bf1b55668862de6e07bbcb573c0c/docs/connect/.gitbook/assets/json.png)
 
 ## HTML <a id="html"></a>
 
@@ -720,7 +720,7 @@ Display a yellow box with a hint or extra info. Refer to [Node UI design](https:
 },
 ```
 
-![Notice field example: a pale yellow info box displaying placeholder text](https://raw.githubusercontent.com/n8n-io/n8n-docs/32d4c1af45711af43703671a66f502ef7bd2b932/docs/connect/.gitbook/assets/notice.png)
+![Notice field example: a pale yellow info box displaying placeholder text](https://raw.githubusercontent.com/n8n-io/n8n-docs/b732ee99d015bf1b55668862de6e07bbcb573c0c/docs/connect/.gitbook/assets/notice.png)
 
 ## Hints <a id="hints"></a>
 

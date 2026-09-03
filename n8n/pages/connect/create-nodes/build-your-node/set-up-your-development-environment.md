@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/connect/create-nodes/build-your-node/set-up-your-development-environment.md](https://github.com/n8n-io/n8n-docs/blob/32d4c1af45711af43703671a66f502ef7bd2b932/docs/connect/create-nodes/build-your-node/set-up-your-development-environment.md)
+> Commit-pinned source for n8n main: [docs/connect/create-nodes/build-your-node/set-up-your-development-environment.md](https://github.com/n8n-io/n8n-docs/blob/b732ee99d015bf1b55668862de6e07bbcb573c0c/docs/connect/create-nodes/build-your-node/set-up-your-development-environment.md)
 
 # Set up your development environment <a id="set-up-your-development-environment"></a>
 

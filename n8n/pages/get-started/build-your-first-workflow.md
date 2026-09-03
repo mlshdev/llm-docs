@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/get-started/build-your-first-workflow.md](https://github.com/n8n-io/n8n-docs/blob/32d4c1af45711af43703671a66f502ef7bd2b932/docs/get-started/build-your-first-workflow.md)
+> Commit-pinned source for n8n main: [docs/get-started/build-your-first-workflow.md](https://github.com/n8n-io/n8n-docs/blob/b732ee99d015bf1b55668862de6e07bbcb573c0c/docs/get-started/build-your-first-workflow.md)
 
 # Build your first workflow
 
@@ -12,7 +12,7 @@ This guide will show you how to construct a workflow[^1] in n8n, explaining key 
   - Representing logic in an n8n workflow
   - Using expressions[^3]
 
-![The completed workflow: Schedule Trigger connected to NASA, then an If node branching into two PostBin nodes](https://raw.githubusercontent.com/n8n-io/n8n-docs/32d4c1af45711af43703671a66f502ef7bd2b932/docs/get-started/.gitbook/assets/tutorial-first.png)
+![The completed workflow: Schedule Trigger connected to NASA, then an If node branching into two PostBin nodes](https://raw.githubusercontent.com/n8n-io/n8n-docs/b732ee99d015bf1b55668862de6e07bbcb573c0c/docs/get-started/.gitbook/assets/tutorial-first.png)
 
 This quickstart uses [n8n Cloud](https://docs.n8n.io/deploy/use-n8n-cloud), which is recommended for new users. A free trial is available. If you haven't already, [sign up](https://app.n8n.cloud/register) for an account now.
 
@@ -52,7 +52,7 @@ Credentials are private pieces of information issued by apps and services to aut
 
 </details>
 
-1. Select the **Add node** ![Add node icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/32d4c1af45711af43703671a66f502ef7bd2b932/docs/get-started/.gitbook/assets/add-node-small.png) connector on the Schedule Trigger node.
+1. Select the **Add node** ![Add node icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/b732ee99d015bf1b55668862de6e07bbcb573c0c/docs/get-started/.gitbook/assets/add-node-small.png) connector on the Schedule Trigger node.
 2. Search for **NASA**. n8n shows a list of nodes that match the search.
 3. Select **NASA** to view a list of operations.
 4. Search for and select **Get a DONKI solar flare**. This operation returns a report about recent solar flares. When you select the operation, n8n adds the node to the canvas and opens it.
@@ -67,7 +67,7 @@ Credentials are private pieces of information issued by apps and services to aut
 
    1. Select **Add field**.
    2. Select **Start date**.
-   3. To get a report starting from a week ago, you can use an expression: next to **Start date**, select the **Expression** tab, then select the expand button ![Add node icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/32d4c1af45711af43703671a66f502ef7bd2b932/docs/get-started/.gitbook/assets/open-expression-editor.png) to open the full expressions editor.
+   3. To get a report starting from a week ago, you can use an expression: next to **Start date**, select the **Expression** tab, then select the expand button ![Add node icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/b732ee99d015bf1b55668862de6e07bbcb573c0c/docs/get-started/.gitbook/assets/open-expression-editor.png) to open the full expressions editor.
    4. In the **Expression** field, enter the following expression:
 
    ```js
@@ -76,7 +76,7 @@ Credentials are private pieces of information issued by apps and services to aut
 
    This generates a date in the correct format, seven days before the current date.
 
-![Start Date expression editor, with the Result panel showing a resolved date one week before today](https://raw.githubusercontent.com/n8n-io/n8n-docs/32d4c1af45711af43703671a66f502ef7bd2b932/docs/get-started/.gitbook/assets/tutorial-date.png)
+![Start Date expression editor, with the Result panel showing a resolved date one week before today](https://raw.githubusercontent.com/n8n-io/n8n-docs/b732ee99d015bf1b55668862de6e07bbcb573c0c/docs/get-started/.gitbook/assets/tutorial-date.png)
 7\. Close the **Edit Expression** modal to return to the NASA node.
 8\. You can now check that the node is working and returning the expected date: select **Execute step** to run the node manually. n8n calls the NASA API and displays details of solar flares in the past seven days in the **OUTPUT** section.
 9\. Close the NASA node to return to the workflow canvas.
@@ -87,7 +87,7 @@ n8n supports complex logic in workflows. This tutorial uses the [If node](https:
 
 Add the If node:
 
-1. Select the **Add node** ![Add node icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/32d4c1af45711af43703671a66f502ef7bd2b932/docs/get-started/.gitbook/assets/add-node-small.png) connector on the NASA node.
+1. Select the **Add node** ![Add node icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/b732ee99d015bf1b55668862de6e07bbcb573c0c/docs/get-started/.gitbook/assets/add-node-small.png) connector on the NASA node.
 2. Search for **If**. n8n shows a list of nodes that match the search.
 3. Select **If** to add the node to the canvas. n8n opens the node.
 4. You need to check the value of the `classType` property in the NASA data. To do this:
@@ -111,14 +111,14 @@ Add the If node:
 
 The last step of the workflow is to send the two reports about solar flares. For this example, you'll send data to [Postbin](https://www.toptal.com/developers/postbin/). Postbin is a service that receives data and displays it on a temporary web page.
 
-1. On the If node, select the **Add node** ![Add node icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/32d4c1af45711af43703671a66f502ef7bd2b932/docs/get-started/.gitbook/assets/add-node-small.png) connector labeled **true**.
+1. On the If node, select the **Add node** ![Add node icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/b732ee99d015bf1b55668862de6e07bbcb573c0c/docs/get-started/.gitbook/assets/add-node-small.png) connector labeled **true**.
 2. Search for **PostBin**. n8n shows a list of nodes that match the search.
 3. Select **PostBin**.
 4. Select **Send a request**. n8n adds the node to the canvas and opens it.
 5. Go to [Postbin](https://www.toptal.com/developers/postbin/) and select **Create Bin**. Leave the tab open so you can come back to it when testing the workflow.
 6. Copy the bin ID. It looks like `1651063625300-2016451240051`.
 7. In n8n, paste your Postbin ID into **Bin ID**.
-8. Now, configure the data to send to Postbin. Next to **Bin Content**, select the **Expression** tab (you will need to mouse-over the **Bin Content** for the tab to appear), then select the expand button ![Add node icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/32d4c1af45711af43703671a66f502ef7bd2b932/docs/get-started/.gitbook/assets/open-expression-editor.png) to open the full expressions editor.
+8. Now, configure the data to send to Postbin. Next to **Bin Content**, select the **Expression** tab (you will need to mouse-over the **Bin Content** for the tab to appear), then select the expand button ![Add node icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/b732ee99d015bf1b55668862de6e07bbcb573c0c/docs/get-started/.gitbook/assets/open-expression-editor.png) to open the full expressions editor.
 9. You can now click and drag the correct field from the If node output into the expressions editor to automatically create a reference for this label. In this case, the field you want is `classType`.
 10. Once dropped into the expressions editor it will transform into this reference: `{{$json["classType"]}}`. Add a message to it, so that the full expression is:
 
@@ -126,11 +126,11 @@ The last step of the workflow is to send the two reports about solar flares. For
     There was a solar flare of class {{$json["classType"]}}
     ```
 
-![Expression editor for Bin Content, with the Result panel showing the rendered message text](https://raw.githubusercontent.com/n8n-io/n8n-docs/32d4c1af45711af43703671a66f502ef7bd2b932/docs/get-started/.gitbook/assets/tutorial-expression.png)
+![Expression editor for Bin Content, with the Result panel showing the rendered message text](https://raw.githubusercontent.com/n8n-io/n8n-docs/b732ee99d015bf1b55668862de6e07bbcb573c0c/docs/get-started/.gitbook/assets/tutorial-expression.png)
 11\. Close the expressions editor to return to the node.
 12\. Close the Postbin node to return to the canvas.
 13\. Add another Postbin node, to handle the **false** output path from the If node:
-1\. Hover over the Postbin node, then select **Node context menu** ![Node context menu icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/32d4c1af45711af43703671a66f502ef7bd2b932/docs/get-started/.gitbook/assets/node-context-menu.png) > **Duplicate node** to duplicate the first Postbin node.
+1\. Hover over the Postbin node, then select **Node context menu** ![Node context menu icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/b732ee99d015bf1b55668862de6e07bbcb573c0c/docs/get-started/.gitbook/assets/node-context-menu.png) > **Duplicate node** to duplicate the first Postbin node.
 2\. Drag the **false** connector from the If node to the left side of the new Postbin node.
 
 ## Step six: Test the workflow <a id="step-six-test-the-workflow"></a>

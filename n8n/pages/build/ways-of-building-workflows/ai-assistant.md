@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/ways-of-building-workflows/ai-assistant.md](https://github.com/n8n-io/n8n-docs/blob/32d4c1af45711af43703671a66f502ef7bd2b932/docs/build/ways-of-building-workflows/ai-assistant.md)
+> Commit-pinned source for n8n main: [docs/build/ways-of-building-workflows/ai-assistant.md](https://github.com/n8n-io/n8n-docs/blob/b732ee99d015bf1b55668862de6e07bbcb573c0c/docs/build/ways-of-building-workflows/ai-assistant.md)
 
 # Use AI Assistant
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/administer/manage-users-and-access/set-permissions-and-roles-rbac/organize-work-in-projects.md](https://github.com/n8n-io/n8n-docs/blob/32d4c1af45711af43703671a66f502ef7bd2b932/docs/administer/manage-users-and-access/set-permissions-and-roles-rbac/organize-work-in-projects.md)
+> Commit-pinned source for n8n main: [docs/administer/manage-users-and-access/set-permissions-and-roles-rbac/organize-work-in-projects.md](https://github.com/n8n-io/n8n-docs/blob/b732ee99d015bf1b55668862de6e07bbcb573c0c/docs/administer/manage-users-and-access/set-permissions-and-roles-rbac/organize-work-in-projects.md)
 
 # Organize work in projects
 
@@ -20,7 +20,7 @@ Instance owners and instance admins can create projects.
 
 To create a project:
 
-1. Select ![Plus icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/32d4c1af45711af43703671a66f502ef7bd2b932/docs/administer/.gitbook/assets/plus.png) **Add project**.
+1. Select ![Plus icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/b732ee99d015bf1b55668862de6e07bbcb573c0c/docs/administer/.gitbook/assets/plus.png) **Add project**.
 2. Fill out the project settings.
 3. Select **Save**.
 

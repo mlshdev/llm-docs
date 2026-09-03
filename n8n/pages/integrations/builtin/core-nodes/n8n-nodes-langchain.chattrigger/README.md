@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/README.md](https://github.com/n8n-io/n8n-docs/blob/32d4c1af45711af43703671a66f502ef7bd2b932/docs/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/README.md)
+> Commit-pinned source for n8n main: [docs/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/README.md](https://github.com/n8n-io/n8n-docs/blob/b732ee99d015bf1b55668862de6e07bbcb573c0c/docs/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/README.md)
 
 # Chat Trigger
 
@@ -76,7 +76,7 @@ Enter the text for these elements in the chat interface.
 
 <summary>View screenshot</summary>
 
-![Chat widget preview showing the Input Placeholder, Title, and Subtitle text fields](https://raw.githubusercontent.com/n8n-io/n8n-docs/32d4c1af45711af43703671a66f502ef7bd2b932/docs/integrations/.gitbook/assets/hosted-text-elements.png)
+![Chat widget preview showing the Input Placeholder, Title, and Subtitle text fields](https://raw.githubusercontent.com/n8n-io/n8n-docs/b732ee99d015bf1b55668862de6e07bbcb573c0c/docs/integrations/.gitbook/assets/hosted-text-elements.png)
 
 </details>
 
@@ -90,7 +90,7 @@ If you select any option other than **Off**, you must connect the Chat trigger a
 
 <summary>View screenshot</summary>
 
-![Connect nodes to memory](https://raw.githubusercontent.com/n8n-io/n8n-docs/32d4c1af45711af43703671a66f502ef7bd2b932/docs/integrations/.gitbook/assets/connect-memory.png)
+![Connect nodes to memory](https://raw.githubusercontent.com/n8n-io/n8n-docs/b732ee99d015bf1b55668862de6e07bbcb573c0c/docs/integrations/.gitbook/assets/connect-memory.png)
 
 </details>
 
@@ -112,7 +112,7 @@ Set whether to display a **New Conversation** button on the chat interface (turn
 
 <summary>View screenshot</summary>
 
-![New Conversation button](https://raw.githubusercontent.com/n8n-io/n8n-docs/32d4c1af45711af43703671a66f502ef7bd2b932/docs/integrations/.gitbook/assets/new-conversation-button.png)
+![New Conversation button](https://raw.githubusercontent.com/n8n-io/n8n-docs/b732ee99d015bf1b55668862de6e07bbcb573c0c/docs/integrations/.gitbook/assets/new-conversation-button.png)
 
 </details>
 
@@ -134,7 +134,7 @@ If you select any option other than **Off**, you must connect the Chat trigger a
 
 <summary>View screenshot</summary>
 
-![Connect nodes to memory](https://raw.githubusercontent.com/n8n-io/n8n-docs/32d4c1af45711af43703671a66f502ef7bd2b932/docs/integrations/.gitbook/assets/connect-memory.png)
+![Connect nodes to memory](https://raw.githubusercontent.com/n8n-io/n8n-docs/b732ee99d015bf1b55668862de6e07bbcb573c0c/docs/integrations/.gitbook/assets/connect-memory.png)
 
 </details>
 

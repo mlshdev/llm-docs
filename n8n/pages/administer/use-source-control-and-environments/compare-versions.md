@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/administer/use-source-control-and-environments/compare-versions.md](https://github.com/n8n-io/n8n-docs/blob/32d4c1af45711af43703671a66f502ef7bd2b932/docs/administer/use-source-control-and-environments/compare-versions.md)
+> Commit-pinned source for n8n main: [docs/administer/use-source-control-and-environments/compare-versions.md](https://github.com/n8n-io/n8n-docs/blob/b732ee99d015bf1b55668862de6e07bbcb573c0c/docs/administer/use-source-control-and-environments/compare-versions.md)
 
 # Compare changes with workflow diffs <a id="compare-changes-with-workflow-diffs"></a>
 

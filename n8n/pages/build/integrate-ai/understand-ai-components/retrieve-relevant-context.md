@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/integrate-ai/understand-ai-components/retrieve-relevant-context.md](https://github.com/n8n-io/n8n-docs/blob/32d4c1af45711af43703671a66f502ef7bd2b932/docs/build/integrate-ai/understand-ai-components/retrieve-relevant-context.md)
+> Commit-pinned source for n8n main: [docs/build/integrate-ai/understand-ai-components/retrieve-relevant-context.md](https://github.com/n8n-io/n8n-docs/blob/b732ee99d015bf1b55668862de6e07bbcb573c0c/docs/build/integrate-ai/understand-ai-components/retrieve-relevant-context.md)
 
 # RAG in n8n <a id="rag-in-n8n"></a>
 

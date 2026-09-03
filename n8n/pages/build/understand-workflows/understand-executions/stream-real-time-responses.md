@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/understand-workflows/understand-executions/stream-real-time-responses.md](https://github.com/n8n-io/n8n-docs/blob/32d4c1af45711af43703671a66f502ef7bd2b932/docs/build/understand-workflows/understand-executions/stream-real-time-responses.md)
+> Commit-pinned source for n8n main: [docs/build/understand-workflows/understand-executions/stream-real-time-responses.md](https://github.com/n8n-io/n8n-docs/blob/b732ee99d015bf1b55668862de6e07bbcb573c0c/docs/build/understand-workflows/understand-executions/stream-real-time-responses.md)
 
 # Stream real-time responses
 

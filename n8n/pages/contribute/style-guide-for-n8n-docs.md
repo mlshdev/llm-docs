@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/contribute/style-guide-for-n8n-docs.md](https://github.com/n8n-io/n8n-docs/blob/32d4c1af45711af43703671a66f502ef7bd2b932/docs/contribute/style-guide-for-n8n-docs.md)
+> Commit-pinned source for n8n main: [docs/contribute/style-guide-for-n8n-docs.md](https://github.com/n8n-io/n8n-docs/blob/b732ee99d015bf1b55668862de6e07bbcb573c0c/docs/contribute/style-guide-for-n8n-docs.md)
 
 # Style guide for n8n Docs
 

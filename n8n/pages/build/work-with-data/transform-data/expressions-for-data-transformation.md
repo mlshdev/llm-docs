@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/work-with-data/transform-data/expressions-for-data-transformation.md](https://github.com/n8n-io/n8n-docs/blob/32d4c1af45711af43703671a66f502ef7bd2b932/docs/build/work-with-data/transform-data/expressions-for-data-transformation.md)
+> Commit-pinned source for n8n main: [docs/build/work-with-data/transform-data/expressions-for-data-transformation.md](https://github.com/n8n-io/n8n-docs/blob/b732ee99d015bf1b55668862de6e07bbcb573c0c/docs/build/work-with-data/transform-data/expressions-for-data-transformation.md)
 
 # Expressions for data transformation <a id="expressions-for-data-transformation"></a>
 
@@ -16,7 +16,7 @@ This keeps your workflow organized by separating data transformation from busine
 
 To build an expression in the UI, switch the field to expression mode, then drag a value from the **INPUT** pane into it, or type the expression directly.
 
-![Toggling a field to Expression mode, then dragging a value from the INPUT pane to build the expression](https://raw.githubusercontent.com/n8n-io/n8n-docs/32d4c1af45711af43703671a66f502ef7bd2b932/docs/build/.gitbook/assets/expressionDot.gif)
+![Toggling a field to Expression mode, then dragging a value from the INPUT pane to build the expression](https://raw.githubusercontent.com/n8n-io/n8n-docs/b732ee99d015bf1b55668862de6e07bbcb573c0c/docs/build/.gitbook/assets/expressionDot.gif)
 
 See [Expression reference](https://docs.n8n.io/build/work-with-data/transform-data/expression-reference) for more information and examples.
 

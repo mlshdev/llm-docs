@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/work-with-data/filter-out-unwanted-data.md](https://github.com/n8n-io/n8n-docs/blob/32d4c1af45711af43703671a66f502ef7bd2b932/docs/build/work-with-data/filter-out-unwanted-data.md)
+> Commit-pinned source for n8n main: [docs/build/work-with-data/filter-out-unwanted-data.md](https://github.com/n8n-io/n8n-docs/blob/b732ee99d015bf1b55668862de6e07bbcb573c0c/docs/build/work-with-data/filter-out-unwanted-data.md)
 
 # Filtering data <a id="filtering-data"></a>
 
@@ -18,7 +18,7 @@ Search and filter data in the node **INPUT** and **OUTPUT** panels. Use this to 
 
 To search:
 
-1. In a node, select **Search** ![Search icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/32d4c1af45711af43703671a66f502ef7bd2b932/docs/build/.gitbook/assets/search.png) in the **INPUT** or **OUTPUT** panel.
+1. In a node, select **Search** ![Search icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/b732ee99d015bf1b55668862de6e07bbcb573c0c/docs/build/.gitbook/assets/search.png) in the **INPUT** or **OUTPUT** panel.
 2. Enter your search term.
 
 n8n filters as you type, displaying the objects or rows containing the term.

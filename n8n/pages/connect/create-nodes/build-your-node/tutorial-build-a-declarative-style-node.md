@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/connect/create-nodes/build-your-node/tutorial-build-a-declarative-style-node.md](https://github.com/n8n-io/n8n-docs/blob/32d4c1af45711af43703671a66f502ef7bd2b932/docs/connect/create-nodes/build-your-node/tutorial-build-a-declarative-style-node.md)
+> Commit-pinned source for n8n main: [docs/connect/create-nodes/build-your-node/tutorial-build-a-declarative-style-node.md](https://github.com/n8n-io/n8n-docs/blob/b732ee99d015bf1b55668862de6e07bbcb573c0c/docs/connect/create-nodes/build-your-node/tutorial-build-a-declarative-style-node.md)
 
 # Build a declarative-style node <a id="build-a-declarative-style-node"></a>
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/host-n8n/keep-n8n-running/update-n8n.md](https://github.com/n8n-io/n8n-docs/blob/32d4c1af45711af43703671a66f502ef7bd2b932/docs/deploy/host-n8n/keep-n8n-running/update-n8n.md)
+> Commit-pinned source for n8n main: [docs/deploy/host-n8n/keep-n8n-running/update-n8n.md](https://github.com/n8n-io/n8n-docs/blob/b732ee99d015bf1b55668862de6e07bbcb573c0c/docs/deploy/host-n8n/keep-n8n-running/update-n8n.md)
 
 # Update self-hosted n8n <a id="update-self-hosted-n8n"></a>
 
