@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/azure-pipelines.md](https://github.com/docker/docs/blob/ec568fb193997abb62fc206183b30ba01498291d/content/guides/azure-pipelines.md)
+> Commit-pinned source for Docker main: [content/guides/azure-pipelines.md](https://github.com/docker/docs/blob/fbdfa1488763a18a7fada0ea1fd24134ffe0fcff/content/guides/azure-pipelines.md)
 
 > This guide is a community contribution. Docker would like to thank [Kristiyan Velkov](https://www.linkedin.com/in/kristiyan-velkov-763130b3/) for his valuable contribution.
 

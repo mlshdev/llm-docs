@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/scout/integrations/ci/gitlab.md](https://github.com/docker/docs/blob/ec568fb193997abb62fc206183b30ba01498291d/content/manuals/scout/integrations/ci/gitlab.md)
+> Commit-pinned source for Docker main: [content/manuals/scout/integrations/ci/gitlab.md](https://github.com/docker/docs/blob/fbdfa1488763a18a7fada0ea1fd24134ffe0fcff/content/manuals/scout/integrations/ci/gitlab.md)
 
 # Integrate Docker Scout with GitLab CI/CD
 

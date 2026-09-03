@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/reference/api/extensions-sdk/RequestConfig.md](https://github.com/docker/docs/blob/ec568fb193997abb62fc206183b30ba01498291d/content/reference/api/extensions-sdk/RequestConfig.md)
+> Commit-pinned source for Docker main: [content/reference/api/extensions-sdk/RequestConfig.md](https://github.com/docker/docs/blob/fbdfa1488763a18a7fada0ea1fd24134ffe0fcff/content/reference/api/extensions-sdk/RequestConfig.md)
 
 # Interface: RequestConfig
 

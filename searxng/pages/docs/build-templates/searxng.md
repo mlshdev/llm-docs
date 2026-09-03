@@ -1,4 +1,4 @@
-> Commit-pinned source for SearXNG master: [docs/build-templates/searxng.rst](https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/build-templates/searxng.rst)
+> Commit-pinned source for SearXNG master: [docs/build-templates/searxng.rst](https://github.com/searxng/searxng/blob/a1144dda3e97668c9d445022b7019c224cd4bb1e/docs/build-templates/searxng.rst)
 
 .. template evaluated by: ./utils/searxng.sh searxng.doc.rst
 .. hint: all dollar-names are variables, dollar sign itself is quoted by: \\$

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/mcp-catalog-and-toolkit/_index.md](https://github.com/docker/docs/blob/ec568fb193997abb62fc206183b30ba01498291d/content/manuals/ai/mcp-catalog-and-toolkit/_index.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/mcp-catalog-and-toolkit/_index.md](https://github.com/docker/docs/blob/fbdfa1488763a18a7fada0ea1fd24134ffe0fcff/content/manuals/ai/mcp-catalog-and-toolkit/_index.md)
 
 # Docker MCP Catalog and Toolkit
 
@@ -27,7 +27,7 @@ through centralized management. Instead of configuring each server for every AI
 application separately, you set things up once and connect all your clients to
 it. The workflow centers on three concepts: catalogs, profiles, and clients.
 
-![MCP overview](https://raw.githubusercontent.com/docker/docs/ec568fb193997abb62fc206183b30ba01498291d/content/manuals/ai/mcp-catalog-and-toolkit/images/mcp_toolkit.avif)
+![MCP overview](https://raw.githubusercontent.com/docker/docs/fbdfa1488763a18a7fada0ea1fd24134ffe0fcff/content/manuals/ai/mcp-catalog-and-toolkit/images/mcp_toolkit.avif)
 
 [Catalogs](https://docs.docker.com/ai/mcp-catalog-and-toolkit/catalog/) are curated collections of
 MCP servers. The Docker MCP Catalog provides 300+ verified servers packaged as

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/admin-set-up.md](https://github.com/docker/docs/blob/ec568fb193997abb62fc206183b30ba01498291d/content/guides/admin-set-up.md)
+> Commit-pinned source for Docker main: [content/guides/admin-set-up.md](https://github.com/docker/docs/blob/fbdfa1488763a18a7fada0ea1fd24134ffe0fcff/content/guides/admin-set-up.md)
 
 # Set up your company for success with Docker
 

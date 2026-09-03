@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/get-started/docker-concepts/the-basics/what-is-docker-compose.md](https://github.com/docker/docs/blob/ec568fb193997abb62fc206183b30ba01498291d/content/get-started/docker-concepts/the-basics/what-is-docker-compose.md)
+> Commit-pinned source for Docker main: [content/get-started/docker-concepts/the-basics/what-is-docker-compose.md](https://github.com/docker/docs/blob/fbdfa1488763a18a7fada0ea1fd24134ffe0fcff/content/get-started/docker-concepts/the-basics/what-is-docker-compose.md)
 
 # What is Docker Compose?
 
@@ -77,11 +77,11 @@ Follow the instructions to run the to-do list app on your system.
 
 5. With everything now up and running, you can open <http://localhost:3000> in your browser to see the site. Note that the application may take 10-15 seconds to fully start. If the page doesn't load right away, wait a moment and refresh. Feel free to add items to the list, check them off, and remove them.
 
-![A screenshot of a webpage showing the todo-list application running on port 3000](https://raw.githubusercontent.com/docker/docs/ec568fb193997abb62fc206183b30ba01498291d/content/get-started/docker-concepts/the-basics/images/todo-list-app.webp?border=true\&w=950\&h=400)
+![A screenshot of a webpage showing the todo-list application running on port 3000](https://raw.githubusercontent.com/docker/docs/fbdfa1488763a18a7fada0ea1fd24134ffe0fcff/content/get-started/docker-concepts/the-basics/images/todo-list-app.webp?border=true\&w=950\&h=400)
 
 6. If you look at the Docker Desktop GUI, you can see the containers and dive deeper into their configuration.
 
-![A screenshot of Docker Desktop dashboard showing the list of containers running todo-list app](https://raw.githubusercontent.com/docker/docs/ec568fb193997abb62fc206183b30ba01498291d/content/get-started/docker-concepts/the-basics/images/todo-list-containers.webp?border=true\&w=950\&h=400)
+![A screenshot of Docker Desktop dashboard showing the list of containers running todo-list app](https://raw.githubusercontent.com/docker/docs/fbdfa1488763a18a7fada0ea1fd24134ffe0fcff/content/get-started/docker-concepts/the-basics/images/todo-list-containers.webp?border=true\&w=950\&h=400)
 
 ### Tear it down
 
@@ -116,7 +116,7 @@ Since this application was started using Docker Compose, it's easy to tear it al
 
 2. Alternatively, you can use the Docker Desktop GUI to remove the containers by selecting the application stack and selecting the **Delete** button.
 
-![A screenshot of the Docker Desktop GUI showing the containers view with an arrow pointing to the "Delete" button](https://raw.githubusercontent.com/docker/docs/ec568fb193997abb62fc206183b30ba01498291d/content/get-started/docker-concepts/the-basics/images/todo-list-delete.webp?w=930\&h=400)
+![A screenshot of the Docker Desktop GUI showing the containers view with an arrow pointing to the "Delete" button](https://raw.githubusercontent.com/docker/docs/fbdfa1488763a18a7fada0ea1fd24134ffe0fcff/content/get-started/docker-concepts/the-basics/images/todo-list-delete.webp?w=930\&h=400)
 
 ```
 > **Using the GUI for Compose stacks**

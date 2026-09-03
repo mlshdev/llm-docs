@@ -1,4 +1,4 @@
-> Commit-pinned source for SearXNG master: [docs/admin/installation-nginx.rst](https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/docs/admin/installation-nginx.rst)
+> Commit-pinned source for SearXNG master: [docs/admin/installation-nginx.rst](https://github.com/searxng/searxng/blob/a1144dda3e97668c9d445022b7019c224cd4bb1e/docs/admin/installation-nginx.rst)
 
 .. \_installation nginx:
 

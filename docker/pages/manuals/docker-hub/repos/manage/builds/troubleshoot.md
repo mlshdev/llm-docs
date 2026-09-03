@@ -1,10 +1,11 @@
-> Commit-pinned source for Docker main: [content/manuals/docker-hub/repos/manage/builds/troubleshoot.md](https://github.com/docker/docs/blob/ec568fb193997abb62fc206183b30ba01498291d/content/manuals/docker-hub/repos/manage/builds/troubleshoot.md)
+> Commit-pinned source for Docker main: [content/manuals/docker-hub/repos/manage/builds/troubleshoot.md](https://github.com/docker/docs/blob/fbdfa1488763a18a7fada0ea1fd24134ffe0fcff/content/manuals/docker-hub/repos/manage/builds/troubleshoot.md)
 
 # Troubleshoot your autobuilds
 
 > \[!WARNING]
 > Docker Hub Automated Builds is a deprecated feature.
 > It will be fully retired on April 1, 2027.
+> See the [migration guide](https://docs.docker.com/docker-hub/repos/manage/builds/migrate/) to move to a supported CI/CD workflow.
 
 > \[!NOTE]
 >
@@ -16,7 +17,7 @@
 If a build fails, a **Retry** icon appears next to the build report line on the
 **General** and **Builds** tabs. The **Build report** page and **Timeline logs** also display a **Retry** button.
 
-![Timeline view showing the retry build button](https://raw.githubusercontent.com/docker/docs/ec568fb193997abb62fc206183b30ba01498291d/content/manuals/docker-hub/repos/manage/builds/images/retry-build.png)
+![Timeline view showing the retry build button](https://raw.githubusercontent.com/docker/docs/fbdfa1488763a18a7fada0ea1fd24134ffe0fcff/content/manuals/docker-hub/repos/manage/builds/images/retry-build.png)
 
 > \[!NOTE]
 >

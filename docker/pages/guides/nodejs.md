@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/nodejs.md](https://github.com/docker/docs/blob/ec568fb193997abb62fc206183b30ba01498291d/content/guides/nodejs.md)
+> Commit-pinned source for Docker main: [content/guides/nodejs.md](https://github.com/docker/docs/blob/fbdfa1488763a18a7fada0ea1fd24134ffe0fcff/content/guides/nodejs.md)
 
 [Node.js](https://nodejs.org/en) is a JavaScript runtime for building server-side applications. This guide shows you how to containerize a TypeScript Node.js application using Docker, starting from a simple Express API and progressively adding features like a database.
 

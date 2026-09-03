@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/getting-started/set-up-a-model/index.md](https://github.com/docker/docs/blob/ec568fb193997abb62fc206183b30ba01498291d/_vendor/github.com/docker/docker-agent/docs/getting-started/set-up-a-model/index.md)
+> Commit-pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/getting-started/set-up-a-model/index.md](https://github.com/docker/docs/blob/fbdfa1488763a18a7fada0ea1fd24134ffe0fcff/_vendor/github.com/docker/docker-agent/docs/getting-started/set-up-a-model/index.md)
 
 *Most agents need a model to think with: connect a built-in cloud provider, run a model locally with Docker Model Runner, or register a custom OpenAI-compatible endpoint. This page walks through each path end to end — plus the exception: agents that delegate to the Claude Code CLI on a Claude subscription, which need no model at all.*
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/docker-hub/repos/manage/hub-images/tags.md](https://github.com/docker/docs/blob/ec568fb193997abb62fc206183b30ba01498291d/content/manuals/docker-hub/repos/manage/hub-images/tags.md)
+> Commit-pinned source for Docker main: [content/manuals/docker-hub/repos/manage/hub-images/tags.md](https://github.com/docker/docs/blob/fbdfa1488763a18a7fada0ea1fd24134ffe0fcff/content/manuals/docker-hub/repos/manage/hub-images/tags.md)
 
 # Tags on Docker Hub
 
@@ -46,6 +46,10 @@ You can select a tag's digest to see more details.
 
 Only the repository owner or other team members with granted permissions can
 delete tags.
+
+> \[!NOTE]
+> If your repository has [immutable tags](https://docs.docker.com/docker-hub/repos/manage/hub-images/immutable-tags/) enabled, those
+> tags can't be deleted. Only mutable tags can be deleted.
 
 1. Sign in to [Docker Hub](https://hub.docker.com).
 

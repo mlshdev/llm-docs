@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/build/policies/_index.md](https://github.com/docker/docs/blob/ec568fb193997abb62fc206183b30ba01498291d/content/manuals/build/policies/_index.md)
+> Commit-pinned source for Docker main: [content/manuals/build/policies/_index.md](https://github.com/docker/docs/blob/fbdfa1488763a18a7fada0ea1fd24134ffe0fcff/content/manuals/build/policies/_index.md)
 
 Building with Docker often involves downloading remote resources. These
 external dependencies, such as Docker images, Git repositories, remote files,

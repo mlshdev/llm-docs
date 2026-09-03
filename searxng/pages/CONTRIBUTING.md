@@ -1,4 +1,4 @@
-> Commit-pinned source for SearXNG master: [CONTRIBUTING.rst](https://github.com/searxng/searxng/blob/8f452ee89293d9a752a776f4c33f5a5f124fff97/CONTRIBUTING.rst)
+> Commit-pinned source for SearXNG master: [CONTRIBUTING.rst](https://github.com/searxng/searxng/blob/a1144dda3e97668c9d445022b7019c224cd4bb1e/CONTRIBUTING.rst)
 
 .. SPDX-License-Identifier: AGPL-3.0-or-later
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/mcp/docker_mcp_gateway_run.yaml](https://github.com/docker/docs/blob/ec568fb193997abb62fc206183b30ba01498291d/data/cli/mcp/docker_mcp_gateway_run.yaml)
+> Commit-pinned source for Docker main: [data/cli/mcp/docker_mcp_gateway_run.yaml](https://github.com/docker/docs/blob/fbdfa1488763a18a7fada0ea1fd24134ffe0fcff/data/cli/mcp/docker_mcp_gateway_run.yaml)
 
 # docker mcp gateway run
 

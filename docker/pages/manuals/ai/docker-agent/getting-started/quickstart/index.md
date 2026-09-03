@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/getting-started/quickstart/index.md](https://github.com/docker/docs/blob/ec568fb193997abb62fc206183b30ba01498291d/_vendor/github.com/docker/docker-agent/docs/getting-started/quickstart/index.md)
+> Commit-pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/getting-started/quickstart/index.md](https://github.com/docker/docs/blob/fbdfa1488763a18a7fada0ea1fd24134ffe0fcff/_vendor/github.com/docker/docker-agent/docs/getting-started/quickstart/index.md)
 
 *Get up and running with Docker Agent in under 5 minutes. Pick whichever path suits you best.*
 

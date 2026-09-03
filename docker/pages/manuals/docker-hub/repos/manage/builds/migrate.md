@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/docker-hub/repos/manage/builds/migrate.md](https://github.com/docker/docs/blob/ec568fb193997abb62fc206183b30ba01498291d/content/manuals/docker-hub/repos/manage/builds/migrate.md)
+> Commit-pinned source for Docker main: [content/manuals/docker-hub/repos/manage/builds/migrate.md](https://github.com/docker/docs/blob/fbdfa1488763a18a7fada0ea1fd24134ffe0fcff/content/manuals/docker-hub/repos/manage/builds/migrate.md)
 
 # Migrate from Autobuilds
 
@@ -78,7 +78,7 @@ Docker Hub web interface.
 
 The following image shows an example Autobuilds configuration.
 
-![Example Autobuilds configuration](https://raw.githubusercontent.com/docker/docs/ec568fb193997abb62fc206183b30ba01498291d/content/manuals/docker-hub/repos/manage/builds/images/autobuild-example.png)
+![Example Autobuilds configuration](https://raw.githubusercontent.com/docker/docs/fbdfa1488763a18a7fada0ea1fd24134ffe0fcff/content/manuals/docker-hub/repos/manage/builds/images/autobuild-example.png)
 
 Based on the pictured example, you would note the following items for this
 Autobuilds configuration:

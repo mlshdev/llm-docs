@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/docker-hub/repos/manage/hub-images/manage.md](https://github.com/docker/docs/blob/ec568fb193997abb62fc206183b30ba01498291d/content/manuals/docker-hub/repos/manage/hub-images/manage.md)
+> Commit-pinned source for Docker main: [content/manuals/docker-hub/repos/manage/hub-images/manage.md](https://github.com/docker/docs/blob/fbdfa1488763a18a7fada0ea1fd24134ffe0fcff/content/manuals/docker-hub/repos/manage/hub-images/manage.md)
 
 # Image Management
 
@@ -10,7 +10,7 @@ Images and image indexes are the foundation of container images within a
 repository. The following diagram shows the relationship between images and
 image indexes.
 
-![a pretty wide image](https://raw.githubusercontent.com/docker/docs/ec568fb193997abb62fc206183b30ba01498291d/content/manuals/docker-hub/repos/manage/hub-images/images/image-index.svg)
+![a pretty wide image](https://raw.githubusercontent.com/docker/docs/fbdfa1488763a18a7fada0ea1fd24134ffe0fcff/content/manuals/docker-hub/repos/manage/hub-images/images/image-index.svg)
 
 This structure enables multi-architecture support through a single reference. It
 is important to note that images are not always referenced by an image index.
@@ -27,6 +27,10 @@ The following objects are shown in the diagram.
 Use the following steps to delete one or more items via the graphical user
 interface. To delete in bulk, see the [deletion API
 endpoint](https://docs.docker.com/reference/api/registry/latest/#tag/delete).
+
+> \[!NOTE]
+> Images associated with [immutable tags](https://docs.docker.com/docker-hub/repos/manage/hub-images/immutable-tags/) can't be
+> deleted. Only items associated with mutable tags can be deleted.
 
 1. Sign in to [Docker Hub](https://hub.docker.com).
 
