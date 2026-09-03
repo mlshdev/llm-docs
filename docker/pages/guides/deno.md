@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/deno.md](https://github.com/docker/docs/blob/88c23a1ca40fdf176064bef4dbb7b2495debebb3/content/guides/deno.md)
+> Commit-pinned source for Docker main: [content/guides/deno.md](https://github.com/docker/docs/blob/ec568fb193997abb62fc206183b30ba01498291d/content/guides/deno.md)
 
 The Deno getting started guide teaches you how to create a containerized Deno application using Docker.
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/scout/integrations/ci/azure.md](https://github.com/docker/docs/blob/88c23a1ca40fdf176064bef4dbb7b2495debebb3/content/manuals/scout/integrations/ci/azure.md)
+> Commit-pinned source for Docker main: [content/manuals/scout/integrations/ci/azure.md](https://github.com/docker/docs/blob/ec568fb193997abb62fc206183b30ba01498291d/content/manuals/scout/integrations/ci/azure.md)
 
 # Integrate Docker Scout with Microsoft Azure DevOps Pipelines
 

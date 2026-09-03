@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/buildx/docs/bake-reference.md](https://github.com/docker/docs/blob/88c23a1ca40fdf176064bef4dbb7b2495debebb3/_vendor/github.com/docker/buildx/docs/bake-reference.md)
+> Commit-pinned source for Docker main: [_vendor/github.com/docker/buildx/docs/bake-reference.md](https://github.com/docker/docs/blob/ec568fb193997abb62fc206183b30ba01498291d/_vendor/github.com/docker/buildx/docs/bake-reference.md)
 
 The Bake file is a file for defining workflows that you run using `docker buildx bake`.
 

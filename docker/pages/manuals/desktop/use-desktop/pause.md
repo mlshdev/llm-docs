@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/desktop/use-desktop/pause.md](https://github.com/docker/docs/blob/88c23a1ca40fdf176064bef4dbb7b2495debebb3/content/manuals/desktop/use-desktop/pause.md)
+> Commit-pinned source for Docker main: [content/manuals/desktop/use-desktop/pause.md](https://github.com/docker/docs/blob/ec568fb193997abb62fc206183b30ba01498291d/content/manuals/desktop/use-desktop/pause.md)
 
 # Pause Docker Desktop
 

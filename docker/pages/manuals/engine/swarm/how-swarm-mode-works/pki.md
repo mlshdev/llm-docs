@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/engine/swarm/how-swarm-mode-works/pki.md](https://github.com/docker/docs/blob/88c23a1ca40fdf176064bef4dbb7b2495debebb3/content/manuals/engine/swarm/how-swarm-mode-works/pki.md)
+> Commit-pinned source for Docker main: [content/manuals/engine/swarm/how-swarm-mode-works/pki.md](https://github.com/docker/docs/blob/ec568fb193997abb62fc206183b30ba01498291d/content/manuals/engine/swarm/how-swarm-mode-works/pki.md)
 
 # Manage swarm security with public key infrastructure (PKI)
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/billing/3d-secure.md](https://github.com/docker/docs/blob/88c23a1ca40fdf176064bef4dbb7b2495debebb3/content/manuals/billing/3d-secure.md)
+> Commit-pinned source for Docker main: [content/manuals/billing/3d-secure.md](https://github.com/docker/docs/blob/ec568fb193997abb62fc206183b30ba01498291d/content/manuals/billing/3d-secure.md)
 
 # Use 3D Secure authentication for Docker billing
 

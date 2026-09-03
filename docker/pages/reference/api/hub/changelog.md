@@ -1,9 +1,22 @@
-> Commit-pinned source for Docker main: [content/reference/api/hub/changelog.md](https://github.com/docker/docs/blob/88c23a1ca40fdf176064bef4dbb7b2495debebb3/content/reference/api/hub/changelog.md)
+> Commit-pinned source for Docker main: [content/reference/api/hub/changelog.md](https://github.com/docker/docs/blob/ec568fb193997abb62fc206183b30ba01498291d/content/reference/api/hub/changelog.md)
 
 # Docker Hub API changelog
 
 Here you can learn about the latest changes, new features, bug fixes, and known
 issues for Docker Service APIs.
+
+***
+
+## 2026-09-01
+
+### Updates
+
+- Document that [Update org member (role)](https://docs.docker.com/reference/api/hub/latest/#tag/orgs)
+  accepts a custom role name in `role`.
+- Document the `role` field on
+  [Update some details for an organization group](https://docs.docker.com/reference/api/hub/latest/#tag/groups).
+- Add `Editor` to `org_member.role` on
+  [organization members](https://docs.docker.com/reference/api/hub/latest/#tag/orgs).
 
 ***
 

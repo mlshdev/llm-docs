@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/security/2fa/recover-hub-account.md](https://github.com/docker/docs/blob/88c23a1ca40fdf176064bef4dbb7b2495debebb3/content/manuals/security/2fa/recover-hub-account.md)
+> Commit-pinned source for Docker main: [content/manuals/security/2fa/recover-hub-account.md](https://github.com/docker/docs/blob/ec568fb193997abb62fc206183b30ba01498291d/content/manuals/security/2fa/recover-hub-account.md)
 
 # Recover your Docker account
 
