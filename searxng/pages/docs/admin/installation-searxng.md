@@ -1,4 +1,4 @@
-> Commit-pinned source for SearXNG master: [docs/admin/installation-searxng.rst](https://github.com/searxng/searxng/blob/05cd77f71b466b7674658429d834a8db3b26811f/docs/admin/installation-searxng.rst)
+> Commit-pinned source for SearXNG master: [docs/admin/installation-searxng.rst](https://github.com/searxng/searxng/blob/745d5b6fc506da30b3f275a80497de5d509df540/docs/admin/installation-searxng.rst)
 
 .. \_installation basic:
 

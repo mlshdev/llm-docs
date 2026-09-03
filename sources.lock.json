@@ -89,8 +89,8 @@
     "searxng": {
       "tag": "master",
       "branch": "master",
-      "sourceCommit": "05cd77f71b466b7674658429d834a8db3b26811f",
-      "sourceCommittedAt": "2026-09-02T14:52:59Z"
+      "sourceCommit": "745d5b6fc506da30b3f275a80497de5d509df540",
+      "sourceCommittedAt": "2026-09-03T05:52:31Z"
     },
     "bun": {
       "tag": "bun-v1.4.0",
