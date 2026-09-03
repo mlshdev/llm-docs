@@ -1,8 +1,10 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_bridge_transformations.yaml](https://github.com/docker/docs/blob/fbdfa1488763a18a7fada0ea1fd24134ffe0fcff/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_bridge_transformations.yaml)
+> Commit-pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_bridge_transformations.yaml](https://github.com/docker/docs/blob/0dd94985910d2b70122891c8cf9173087f7460a8/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_bridge_transformations.yaml)
 
 # docker compose bridge transformations
 
 Manage transformation images
+
+**Usage:** `docker compose bridge transformations CMD [OPTIONS]`
 
 ## Description
 

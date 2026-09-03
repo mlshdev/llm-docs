@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/postgresql.md](https://github.com/docker/docs/blob/fbdfa1488763a18a7fada0ea1fd24134ffe0fcff/content/guides/postgresql.md)
+> Commit-pinned source for Docker main: [content/guides/postgresql.md](https://github.com/docker/docs/blob/0dd94985910d2b70122891c8cf9173087f7460a8/content/guides/postgresql.md)
 
 ## Immediate setup & data persistence
 

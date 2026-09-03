@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/builtin/core-nodes/n8n-nodes-base.code/keyboard-shortcuts.md](https://github.com/n8n-io/n8n-docs/blob/191a04ec05b8df3fe1fb96f54726ed40db2518f7/docs/integrations/builtin/core-nodes/n8n-nodes-base.code/keyboard-shortcuts.md)
+> Commit-pinned source for n8n main: [docs/integrations/builtin/core-nodes/n8n-nodes-base.code/keyboard-shortcuts.md](https://github.com/n8n-io/n8n-docs/blob/6f4b48e69e3ab9acbf023f18020c40c125c16d45/docs/integrations/builtin/core-nodes/n8n-nodes-base.code/keyboard-shortcuts.md)
 
 # Keyboard shortcuts when using the Code editor <a id="keyboard-shortcuts-when-using-the-code-editor"></a>
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_up.yaml](https://github.com/docker/docs/blob/fbdfa1488763a18a7fada0ea1fd24134ffe0fcff/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_up.yaml)
+> Commit-pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_up.yaml](https://github.com/docker/docs/blob/0dd94985910d2b70122891c8cf9173087f7460a8/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_up.yaml)
 
 # docker compose up
 
@@ -27,6 +27,19 @@ If you want to force Compose to stop and recreate all containers, use the `--for
 
 If the process encounters an error, the exit code for this command is `1`.
 If the process is interrupted using `SIGINT` (ctrl + C) or `SIGTERM`, the containers are stopped, and the exit code is `0`.
+
+### Pre-start hook failures
+
+When a `pre_start` lifecycle hook exits with a non-zero code, Compose stops the service startup and retains the
+hook’s container so you can inspect what went wrong:
+
+```console
+$ docker ps -a --filter label=com.docker.compose.hook=pre_start
+$ docker logs <container-id>
+```
+
+On the next `compose up`, any retained hook containers for the same service are cleaned up automatically before the
+hook runs again. Running `compose down` also removes them.
 
 ## Options
 

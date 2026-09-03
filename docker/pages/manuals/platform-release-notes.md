@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/platform-release-notes.md](https://github.com/docker/docs/blob/fbdfa1488763a18a7fada0ea1fd24134ffe0fcff/content/manuals/platform-release-notes.md)
+> Commit-pinned source for Docker main: [content/manuals/platform-release-notes.md](https://github.com/docker/docs/blob/0dd94985910d2b70122891c8cf9173087f7460a8/content/manuals/platform-release-notes.md)
 
 # Release notes for Docker Home, the Admin Console, billing, security, and subscription features
 

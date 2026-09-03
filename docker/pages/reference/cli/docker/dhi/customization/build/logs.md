@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/dhi/docker_dhi_customization_build_logs.yaml](https://github.com/docker/docs/blob/fbdfa1488763a18a7fada0ea1fd24134ffe0fcff/data/cli/dhi/docker_dhi_customization_build_logs.yaml)
+> Commit-pinned source for Docker main: [data/cli/dhi/docker_dhi_customization_build_logs.yaml](https://github.com/docker/docs/blob/0dd94985910d2b70122891c8cf9173087f7460a8/data/cli/dhi/docker_dhi_customization_build_logs.yaml)
 
 # docker dhi customization build logs
 

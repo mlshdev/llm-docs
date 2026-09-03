@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/enterprise/security/hardened-desktop/enhanced-container-isolation/limitations.md](https://github.com/docker/docs/blob/fbdfa1488763a18a7fada0ea1fd24134ffe0fcff/content/manuals/enterprise/security/hardened-desktop/enhanced-container-isolation/limitations.md)
+> Commit-pinned source for Docker main: [content/manuals/enterprise/security/hardened-desktop/enhanced-container-isolation/limitations.md](https://github.com/docker/docs/blob/0dd94985910d2b70122891c8cf9173087f7460a8/content/manuals/enterprise/security/hardened-desktop/enhanced-container-isolation/limitations.md)
 
 # Enhanced Container Isolation limitations
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/ways-of-building-workflows/connect-to-n8n-mcp-server.md](https://github.com/n8n-io/n8n-docs/blob/191a04ec05b8df3fe1fb96f54726ed40db2518f7/docs/build/ways-of-building-workflows/connect-to-n8n-mcp-server.md)
+> Commit-pinned source for n8n main: [docs/build/ways-of-building-workflows/connect-to-n8n-mcp-server.md](https://github.com/n8n-io/n8n-docs/blob/6f4b48e69e3ab9acbf023f18020c40c125c16d45/docs/build/ways-of-building-workflows/connect-to-n8n-mcp-server.md)
 
 # Build with MCP
 
@@ -23,7 +23,7 @@ Model Context Protocol (MCP) is an open standard for connecting AI applications 
 
 When you connect an AI tool to n8n's MCP server, your n8n instance becomes a place that tool can build in directly. Instead of you dragging nodes onto the canvas and wiring them together by hand, you describe the workflow you want in plain language to your favorite AI tool, which then builds it in n8n for you.
 
-![Describing a workflow to build in n8n to Claude](https://raw.githubusercontent.com/n8n-io/n8n-docs/191a04ec05b8df3fe1fb96f54726ed40db2518f7/docs/build/.gitbook/assets/build-n8n-workflow-claude.png)
+![Describing a workflow to build in n8n to Claude](https://raw.githubusercontent.com/n8n-io/n8n-docs/6f4b48e69e3ab9acbf023f18020c40c125c16d45/docs/build/.gitbook/assets/build-n8n-workflow-claude.png)
 
 - **Create new workflows** from a description, and **edit existing ones** (n8n 2.13 onward).
 - **Build and manage data tables** to store and reuse data across your workflows.
