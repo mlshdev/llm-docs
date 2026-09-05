@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/bundler/fullstack.mdx](https://bun.com/docs/bundler/fullstack)
+> Release-pinned source for Bun bun-v1.4.2: [docs/bundler/fullstack.mdx](https://bun.com/docs/bundler/fullstack)
 
 To get started, import HTML files and pass them to the `routes` option in `Bun.serve()`.
 

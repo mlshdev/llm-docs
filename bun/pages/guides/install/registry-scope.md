@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/install/registry-scope.mdx](https://bun.com/docs/guides/install/registry-scope)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/install/registry-scope.mdx](https://bun.com/docs/guides/install/registry-scope)
 
 You can configure private registries in [`.npmrc`](https://bun.com/docs/pm/npmrc) or [`bunfig.toml`](https://bun.com/docs/runtime/bunfig#install-registry). Both work; we recommend `bunfig.toml` for its Bun-specific options.
 

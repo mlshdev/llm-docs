@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/typescript.mdx](https://bun.com/docs/typescript)
+> Release-pinned source for Bun bun-v1.4.2: [docs/typescript.mdx](https://bun.com/docs/typescript)
 
 # TypeScript
 

@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/self-hosting/deploy/devcontainer.mdx](https://zitadel.com/docs/self-hosting/deploy/devcontainer)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/self-hosting/deploy/devcontainer.mdx](https://zitadel.com/docs/self-hosting/deploy/devcontainer)
 
 Dev containers provide a convenient way to set up a development environment for ZITADEL with all the necessary dependencies pre-configured. This allows you to start contributing or working on ZITADEL locally with minimal setup.
 

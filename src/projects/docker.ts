@@ -12,12 +12,8 @@ import {
   rewriteMarkdownLinks,
   titleCase,
 } from "../markdown.ts";
-import type {
-  Document,
-  LockedSource,
-  ProjectBuild,
-  SourceProject,
-} from "../types.ts";
+import { DocumentCollector } from "../quarantine.ts";
+import type { LockedSource, ProjectBuild, SourceProject } from "../types.ts";
 
 interface DockerPage {
   readonly sourcePath: string;
@@ -67,6 +63,7 @@ export async function buildDocker(
       if (!isRecord(hugo) || !isRecord(hugo.params)) {
         throw new Error("Docker hugo.yaml has no site params");
       }
+      const siteParams = hugo.params;
       const summaries = parseYaml(await readUtf8(root, "data/summary.yaml"));
       if (!isRecord(summaries)) {
         throw new Error("Docker data/summary.yaml is not a mapping");
@@ -79,76 +76,80 @@ export async function buildDocker(
       if (!isRecord(glossary)) {
         throw new Error("Docker data/glossary.yaml is not a mapping");
       }
-      const documents: Document[] = [];
+      const documents = new DocumentCollector(project.id);
       for (const page of [...pages.values()].sort((left, right) =>
         compareCodePoints(left.virtualPath, right.virtualPath),
       )) {
-        if (!rendersAsDocument(page)) {
-          continue;
-        }
-        const context: DockerContext = {
-          root,
-          files: fileSet,
-          page,
-          pages,
-          siteParams: hugo.params,
-          summaries,
-          whatsNew,
-          glossary,
-          samples,
-        };
-        const expanded = await expandDockerMarkdown(page.body, context);
-        let body = rewriteMarkdownLinks(
-          cleanMarkdown(dropDockerBlockAttributes(expanded)),
-          (url, kind) =>
-            resolveDockerLink(
-              url,
-              kind,
-              page,
+        await documents.collect(page.sourcePath, async () => {
+          if (!rendersAsDocument(page)) {
+            return undefined;
+          }
+          const context: DockerContext = {
+            root,
+            files: fileSet,
+            page,
+            pages,
+            siteParams,
+            summaries,
+            whatsNew,
+            glossary,
+            samples,
+          };
+          const expanded = await expandDockerMarkdown(page.body, context);
+          let body = rewriteMarkdownLinks(
+            cleanMarkdown(dropDockerBlockAttributes(expanded)),
+            (url, kind) =>
+              resolveDockerLink(
+                url,
+                kind,
+                page,
+                project.repository,
+                lock.sourceCommit,
+                archiveFiles,
+              ),
+          );
+          const title = documentTitle(body, page.attributes, page.virtualPath);
+          if (!/^#\s+/m.test(body)) {
+            body = normalizeSpacing(`# ${title}\n\n${body}`);
+          }
+          assertDockerMarkdownResolved(page.sourcePath, body);
+          return {
+            sourcePath: page.sourcePath,
+            outputPath: outputPathFor(page.virtualPath),
+            title,
+            body,
+            canonicalUrl: githubBlobUrl(
               project.repository,
               lock.sourceCommit,
-              archiveFiles,
+              page.sourcePath,
             ),
-        );
-        const title = documentTitle(body, page.attributes, page.virtualPath);
-        if (!/^#\s+/m.test(body)) {
-          body = normalizeSpacing(`# ${title}\n\n${body}`);
-        }
-        assertDockerMarkdownResolved(page.sourcePath, body);
-        documents.push({
-          sourcePath: page.sourcePath,
-          outputPath: outputPathFor(page.virtualPath),
-          title,
-          body,
-          canonicalUrl: githubBlobUrl(
-            project.repository,
-            lock.sourceCommit,
-            page.sourcePath,
-          ),
-          section: sectionFor(page.virtualPath),
+            section: sectionFor(page.virtualPath),
+          };
         });
       }
       for (const cli of await loadCliPages(root, files)) {
-        documents.push({
-          sourcePath: cli.sourcePath,
-          outputPath: `pages/reference/cli/${cli.command.replaceAll(" ", "/")}.md`,
-          title: cli.command,
-          body: renderCliPage(cli),
-          canonicalUrl: githubBlobUrl(
-            project.repository,
-            lock.sourceCommit,
-            cli.sourcePath,
-          ),
-          section: "CLI reference",
+        await documents.collect(cli.sourcePath, async () => {
+          return {
+            sourcePath: cli.sourcePath,
+            outputPath: `pages/reference/cli/${cli.command.replaceAll(" ", "/")}.md`,
+            title: cli.command,
+            body: renderCliPage(cli),
+            canonicalUrl: githubBlobUrl(
+              project.repository,
+              lock.sourceCommit,
+              cli.sourcePath,
+            ),
+            section: "CLI reference",
+          };
         });
       }
-      documents.sort((left, right) =>
-        compareCodePoints(left.outputPath, right.outputPath),
-      );
       return {
         project,
         lock,
-        documents,
+        documents: [...documents.documents].sort((left, right) =>
+          compareCodePoints(left.outputPath, right.outputPath),
+        ),
+        quarantined: documents.quarantined,
         notes: [
           "Docker tracks the latest main-branch commit because docker/docs does not publish current releases.",
           "Hugo content and vendored Markdown mounts are normalized without executing Hugo; includes and documentation shortcodes are expanded into plain Markdown.",

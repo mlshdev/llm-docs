@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/pm/cli/add.mdx](https://bun.com/docs/pm/cli/add)
+> Release-pinned source for Bun bun-v1.4.2: [docs/pm/cli/add.mdx](https://bun.com/docs/pm/cli/add)
 
 To add a particular package:
 

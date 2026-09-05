@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/compose/how-tos/profiles.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/compose/how-tos/profiles.md)
+> Commit-pinned source for Docker main: [content/manuals/compose/how-tos/profiles.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/compose/how-tos/profiles.md)
 
 Profiles help you adjust your Compose application for different environments or use cases by selectively activating services. Services can be assigned to one or more profiles; unassigned services start/stop by default, while assigned ones only start/stop when their profile is active. This setup means specific services, like those for debugging or development, to be included in a single `compose.yml` file and activated only as needed.
 

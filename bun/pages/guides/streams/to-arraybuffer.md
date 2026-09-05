@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/streams/to-arraybuffer.mdx](https://bun.com/docs/guides/streams/to-arraybuffer)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/streams/to-arraybuffer.mdx](https://bun.com/docs/guides/streams/to-arraybuffer)
 
 # Convert a ReadableStream to an ArrayBuffer
 

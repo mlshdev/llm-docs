@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/changelog/release-notes-2.x.md](https://github.com/n8n-io/n8n-docs/blob/32d4c1af45711af43703671a66f502ef7bd2b932/docs/changelog/release-notes-2.x.md)
+> Commit-pinned source for n8n main: [docs/changelog/release-notes-2.x.md](https://github.com/n8n-io/n8n-docs/blob/3317373ce39c3ce2406c8e3d99bb2da7f7180321/docs/changelog/release-notes-2.x.md)
 
 # Release notes 2.x
 
@@ -16,8 +16,8 @@ New features and bug fixes for n8n.
 >
 > n8n releases a new minor version most weeks. The `stable` version is for production use. `beta` is the most recent release. The `beta` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
 >
-> Current `stable`: 2.37.7
-> Current `beta`: 2.38.2
+> Current `stable`: 2.37.10
+> Current `beta`: 2.38.3
 
 ## How to update n8n
 
@@ -499,7 +499,7 @@ This release contains bug fixes and features.
 >
 > ### Connect to MCP servers with less setup <a id="connect-to-mcp-servers-with-less-setup"></a>
 >
-> Connect your agent to select MCP servers without setting up an [MCP Client node](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-langchain.mcpClient) and credential by hand. Pick a server from the nodes panel, sign in, and it's available to your agent.
+> Connect your agent to select MCP servers without setting up an [MCP Client node](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-langchain.mcpclient) and credential by hand. Pick a server from the nodes panel, sign in, and it's available to your agent.
 >
 > <br>
 >
@@ -507,7 +507,7 @@ This release contains bug fixes and features.
 >
 > <br>
 >
-> If you need to connect to an MCP server that isn't in the list, you can still use the [MCP Client node](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-langchain.mcpClient) with manual configuration.
+> If you need to connect to an MCP server that isn't in the list, you can still use the [MCP Client node](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-langchain.mcpclient) with manual configuration.
 
 ### Contributors <a id="contributors"></a>
 
@@ -700,7 +700,7 @@ This release contains bug fixes and features.
 >
 > The [Microsoft Agent 365 Trigger node](https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.microsoftagent365trigger) lets you build n8n agents that show up as members of your team inside Microsoft 365 apps. Once deployed, your agent gets its own identity in your Microsoft tenant, with an email address you can @mention in Teams, send email to, or grant permissions to a SharePoint site, just like a teammate.
 >
-> ![A Microsoft Agent 365 Trigger node with a chat model, memory, and tools across Zendesk, Salesforce, PagerDuty, Datadog, and a sub-workflow.](https://raw.githubusercontent.com/n8n-io/n8n-docs/32d4c1af45711af43703671a66f502ef7bd2b932/docs/changelog/.gitbook/assets/microsoft_agent_365.png)
+> ![A Microsoft Agent 365 Trigger node with a chat model, memory, and tools across Zendesk, Salesforce, PagerDuty, Datadog, and a sub-workflow.](https://raw.githubusercontent.com/n8n-io/n8n-docs/3317373ce39c3ce2406c8e3d99bb2da7f7180321/docs/changelog/.gitbook/assets/microsoft_agent_365.png)
 >
 > #### How it works <a id="how-it-works"></a>
 >
@@ -1460,13 +1460,13 @@ This release contains a bug fix and features.
 >
 > Personal space policies are available on n8n Enterprise.
 >
-> ![The new Security & policies settings section.](https://raw.githubusercontent.com/n8n-io/n8n-docs/32d4c1af45711af43703671a66f502ef7bd2b932/docs/changelog/.gitbook/assets/personal_space_policies.png)
+> ![The new Security & policies settings section.](https://raw.githubusercontent.com/n8n-io/n8n-docs/3317373ce39c3ce2406c8e3d99bb2da7f7180321/docs/changelog/.gitbook/assets/personal_space_policies.png)
 >
 > ### Custom roles: improved discoverability and permission visibility (Enterprise) <a id="custom-roles-improved-discoverability-and-permission-visibility-enterprise"></a>
 >
 > The project role selector now separates built-in system roles and custom roles into distinct sections, making it easier to find and choose the right role. Hovering over a role shows a summary of its configured permissions, with an option to view the full permission details.
 >
-> ![System roles and custom roles are now displayed in separate sections.](https://raw.githubusercontent.com/n8n-io/n8n-docs/32d4c1af45711af43703671a66f502ef7bd2b932/docs/changelog/.gitbook/assets/custom_roles_selector.png)
+> ![System roles and custom roles are now displayed in separate sections.](https://raw.githubusercontent.com/n8n-io/n8n-docs/3317373ce39c3ce2406c8e3d99bb2da7f7180321/docs/changelog/.gitbook/assets/custom_roles_selector.png)
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 
@@ -1989,7 +1989,7 @@ This release contains bug fixes.
 >
 > This change makes it easier to align access controls with internal processes where building workflows and publishing them are handled by different users or teams.<br>
 >
-> ![Custom Project Roles](https://raw.githubusercontent.com/n8n-io/n8n-docs/32d4c1af45711af43703671a66f502ef7bd2b932/docs/changelog/.gitbook/assets/WorkflowEditor.png)<br>
+> ![Custom Project Roles](https://raw.githubusercontent.com/n8n-io/n8n-docs/3317373ce39c3ce2406c8e3d99bb2da7f7180321/docs/changelog/.gitbook/assets/WorkflowEditor.png)<br>
 >
 > ### Log streaming: More audit events for improved observability <a id="log-streaming-more-audit-events-for-improved-observability"></a>
 >
@@ -2046,11 +2046,11 @@ With this release you can now:
 
 The new Time Saved node provides increased accuracy for complex workflows where different execution paths save different amounts of time.
 
-![Workflow branching by lead score, with a Time Saved node on each branch set to a different time-saved value](https://raw.githubusercontent.com/n8n-io/n8n-docs/32d4c1af45711af43703671a66f502ef7bd2b932/docs/changelog/.gitbook/assets/time_saved_node_1.png)
+![Workflow branching by lead score, with a Time Saved node on each branch set to a different time-saved value](https://raw.githubusercontent.com/n8n-io/n8n-docs/3317373ce39c3ce2406c8e3d99bb2da7f7180321/docs/changelog/.gitbook/assets/time_saved_node_1.png)
 
 n8n automatically totals the time from all Time Saved nodes executed during each workflow run and reports it within the insights dashboard.
 
-![Insights dashboard with the Time saved metric card highlighted alongside execution and run-time stats](https://raw.githubusercontent.com/n8n-io/n8n-docs/32d4c1af45711af43703671a66f502ef7bd2b932/docs/changelog/.gitbook/assets/time_saved_node_2.png)
+![Insights dashboard with the Time saved metric card highlighted alongside execution and run-time stats](https://raw.githubusercontent.com/n8n-io/n8n-docs/3317373ce39c3ce2406c8e3d99bb2da7f7180321/docs/changelog/.gitbook/assets/time_saved_node_2.png)
 
 ### Contributors <a id="contributors"></a>
 

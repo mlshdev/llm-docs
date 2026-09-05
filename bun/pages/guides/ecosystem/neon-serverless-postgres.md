@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/ecosystem/neon-serverless-postgres.mdx](https://bun.com/docs/guides/ecosystem/neon-serverless-postgres)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/ecosystem/neon-serverless-postgres.mdx](https://bun.com/docs/guides/ecosystem/neon-serverless-postgres)
 
 # Use Neon's Serverless Postgres with Bun
 

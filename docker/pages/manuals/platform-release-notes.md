@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/platform-release-notes.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/platform-release-notes.md)
+> Commit-pinned source for Docker main: [content/manuals/platform-release-notes.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/platform-release-notes.md)
 
 # Release notes for Docker Home, the Admin Console, billing, security, and subscription features
 
@@ -59,7 +59,7 @@ This page provides details on new features, enhancements, known issues, and bug 
 
 ### New
 
-- [Personal access tokens](https://docs.docker.com/security/access-tokens/) (PATs) now support expiration dates.
+- [Personal access tokens](https://docs.docker.com/security/access-tokens/personal-access-tokens/) (PATs) now support expiration dates.
 
 ## 2024-10-15
 
@@ -78,7 +78,7 @@ This page provides details on new features, enhancements, known issues, and bug 
 
 ### New
 
-- Administrators can now view [organization Insights](https://docs.docker.com/admin/insights/).
+- Administrators can now view [organization Insights](https://docs.docker.com/accounts/organization/insights/).
 
 ## 2024-07-17
 

@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/migrate/sources/keycloak.mdx](https://zitadel.com/docs/guides/migrate/sources/keycloak)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/guides/migrate/sources/keycloak.mdx](https://zitadel.com/docs/guides/migrate/sources/keycloak)
 
 ## 1. Introduction
 

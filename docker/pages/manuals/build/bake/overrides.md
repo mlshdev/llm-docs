@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/build/bake/overrides.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/build/bake/overrides.md)
+> Commit-pinned source for Docker main: [content/manuals/build/bake/overrides.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/build/bake/overrides.md)
 
 Bake supports loading build definitions from files, but sometimes you need even
 more flexibility to configure these definitions. For example, you might want to

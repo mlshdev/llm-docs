@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/connect/create-nodes/plan-your-node/choose-a-node-type.md](https://github.com/n8n-io/n8n-docs/blob/32d4c1af45711af43703671a66f502ef7bd2b932/docs/connect/create-nodes/plan-your-node/choose-a-node-type.md)
+> Commit-pinned source for n8n main: [docs/connect/create-nodes/plan-your-node/choose-a-node-type.md](https://github.com/n8n-io/n8n-docs/blob/3317373ce39c3ce2406c8e3d99bb2da7f7180321/docs/connect/create-nodes/plan-your-node/choose-a-node-type.md)
 
 # Node types: Trigger and Action <a id="node-types-trigger-and-action"></a>
 

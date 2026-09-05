@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/governance/access-controls/organization.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/ai/sandboxes/governance/access-controls/organization.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/governance/access-controls/organization.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/ai/sandboxes/governance/access-controls/organization.md)
 
 # Organization policies
 
@@ -16,10 +16,10 @@ programmatic management of network and filesystem policies, use the
 [Governance API](https://docs.docker.com/reference/api/ai-governance/).
 
 By default, only organization
-[owners](https://docs.docker.com/enterprise/security/roles-and-permissions/core-roles/) can
+[owners](https://docs.docker.com/security/roles-and-permissions/core-roles/) can
 view and manage AI Governance policies. To let someone other than an owner
 manage policies, create a
-[custom role](https://docs.docker.com/enterprise/security/roles-and-permissions/custom-roles/)
+[custom role](https://docs.docker.com/security/roles-and-permissions/custom-roles/)
 with the **Governance** permissions and assign it to a user or team.
 
 > \[!NOTE]
@@ -101,13 +101,13 @@ it only to members of the teams you select.
 ### Before you start
 
 Team scoping targets your organization's existing
-[teams](https://docs.docker.com/admin/organization/manage/manage-a-team/), so a team must
+[teams](https://docs.docker.com/accounts/organization/manage/manage-a-team/), so a team must
 exist before you can scope a policy to it. Create teams and manage their members
 in one of two ways:
 
 - Manually, in Docker Home.
 - Automatically, by using
-  [group mapping](https://docs.docker.com/enterprise/security/provisioning/scim/group-mapping/)
+  [group mapping](https://docs.docker.com/security/provisioning/scim/group-mapping/)
   to synchronize your identity provider's groups with the teams in your
   organization. Group mapping creates teams that don't already exist and keeps
   their membership in step with your IdP groups.

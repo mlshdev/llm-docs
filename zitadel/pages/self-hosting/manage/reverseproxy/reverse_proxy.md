@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/self-hosting/manage/reverseproxy/reverse_proxy.mdx](https://zitadel.com/docs/self-hosting/manage/reverseproxy/reverse_proxy)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/self-hosting/manage/reverseproxy/reverse_proxy.mdx](https://zitadel.com/docs/self-hosting/manage/reverseproxy/reverse_proxy)
 
 ZITADEL exposes a single HTTP/2 port (default `8080`) that serves both gRPC and HTTP APIs, as well as the management console.
 Running a reverse proxy in front of ZITADEL is the recommended approach for production deployments because it:

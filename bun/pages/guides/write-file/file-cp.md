@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/write-file/file-cp.mdx](https://bun.com/docs/guides/write-file/file-cp)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/write-file/file-cp.mdx](https://bun.com/docs/guides/write-file/file-cp)
 
 # Copy a file to another location
 

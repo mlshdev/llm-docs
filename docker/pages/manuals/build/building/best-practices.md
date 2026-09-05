@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/build/building/best-practices.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/build/building/best-practices.md)
+> Commit-pinned source for Docker main: [content/manuals/build/building/best-practices.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/build/building/best-practices.md)
 
 ## Use multi-stage builds
 
@@ -46,7 +46,7 @@ it small.
 When you pick your base image, look out for the badges indicating that the
 image is part of these programs.
 
-![Docker Hub Official and Verified Publisher images](https://raw.githubusercontent.com/docker/docs/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/build/images/hub-official-images.webp)
+![Docker Hub Official and Verified Publisher images](https://raw.githubusercontent.com/docker/docs/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/build/images/hub-official-images.webp)
 
 When building your own image from a Dockerfile, ensure you choose a minimal base
 image that matches your requirements. A smaller base image not only offers
@@ -236,8 +236,8 @@ to look up and include the image digest for base image versions manually each
 time you want to update it. And you're opting out of automated security fixes,
 which is likely something you want to get.
 
-Docker Scout's default [**Up-to-Date Base Images**
-policy](https://docs.docker.com/scout/policy/#up-to-date-base-images) checks whether the
+Docker Scout's default [**No outdated base images**
+policy](https://docs.docker.com/scout/policy/#no-outdated-base-images) checks whether the
 base image version you're using is in fact the latest version. This policy also
 checks if pinned digests in your Dockerfile correspond to the correct version.
 If a publisher updates an image that you've pinned, the policy evaluation

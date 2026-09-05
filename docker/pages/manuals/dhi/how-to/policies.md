@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/dhi/how-to/policies.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/dhi/how-to/policies.md)
+> Commit-pinned source for Docker main: [content/manuals/dhi/how-to/policies.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/dhi/how-to/policies.md)
 
 Docker publishes the set of security and compliance policies that Docker
 Hardened Images (DHIs) are built to meet, so you can hold your own images to the
@@ -209,7 +209,7 @@ jobs:
 
 The `docker/login-action` step authenticates with Docker Hub so the runner can
 pull the DHI base image and the `dhi/policies` bundle. Store your Docker Hub
-username and a [personal access token](https://docs.docker.com/security/access-tokens/) as the
+username and a [personal access token](https://docs.docker.com/security/access-tokens/personal-access-tokens/) as the
 `DOCKER_USER` and `DOCKER_PAT` repository secrets.
 
 Set `exit-code: true` to fail the step when any policy isn't met. The

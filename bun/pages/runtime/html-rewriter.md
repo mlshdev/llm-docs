@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/runtime/html-rewriter.mdx](https://bun.com/docs/runtime/html-rewriter)
+> Release-pinned source for Bun bun-v1.4.2: [docs/runtime/html-rewriter.mdx](https://bun.com/docs/runtime/html-rewriter)
 
 # HTMLRewriter
 

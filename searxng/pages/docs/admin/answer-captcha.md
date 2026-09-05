@@ -1,4 +1,4 @@
-> Commit-pinned source for SearXNG master: [docs/admin/answer-captcha.rst](https://github.com/searxng/searxng/blob/05cd77f71b466b7674658429d834a8db3b26811f/docs/admin/answer-captcha.rst)
+> Commit-pinned source for SearXNG master: [docs/admin/answer-captcha.rst](https://github.com/searxng/searxng/blob/22056605a6e0ed41a0aa91a2bf300a361fd16b92/docs/admin/answer-captcha.rst)
 
 # Answer CAPTCHA from server's IP
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/enterprise/security/hardened-desktop/air-gapped-containers.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/enterprise/security/hardened-desktop/air-gapped-containers.md)
+> Commit-pinned source for Docker main: [content/manuals/enterprise/security/hardened-desktop/air-gapped-containers.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/enterprise/security/hardened-desktop/air-gapped-containers.md)
 
 **Air-gapped containers requirements**
 
@@ -136,10 +136,10 @@ function FindProxyForURL(url, host) {
 ### General considerations
 
 - `FindProxyForURL` function URL parameter format is `http://host_or_ip:port` or `https://host_or_ip:port`
-- If you have an internal container trying to access `https://docs.docker.com/enterprise/security/hardened-desktop/air-gapped-containers` the Docker proxy service will submit docs.docker.com for the host value and <https://docs.docker.com:443> for the url value to `FindProxyForURL`, if you are using `shExpMatch` function in your PAC file as follows:
+- If you have an internal container trying to access `https://docs.docker.com/enterprise/security/hardened-desktop/air-gapped-containers` the Docker proxy service will submit docs.docker.com for the host value and <https://docs.docker.com:443> for the URL value to `FindProxyForURL`, if you are using `shExpMatch` function in your PAC file as follows:
 
   ```console
-  if(shExpMatch(url, "https://docs.docker.com:443/enterprise/security/*")) return "DIRECT";
+  if(shExpMatch(url, "https://docs.docker.com:443/enterprise/security/hardened-desktop/*")) return "DIRECT";
   ```
 
   `shExpMatch` function will fail, instead use:

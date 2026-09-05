@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/read-file/mime.mdx](https://bun.com/docs/guides/read-file/mime)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/read-file/mime.mdx](https://bun.com/docs/guides/read-file/mime)
 
 # Get the MIME type of a file
 

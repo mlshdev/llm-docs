@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/runtime/shell.mdx](https://bun.com/docs/guides/runtime/shell)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/runtime/shell.mdx](https://bun.com/docs/guides/runtime/shell)
 
 # Run a Shell Command
 

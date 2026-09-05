@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/compose/how-tos/environment-variables/envvars-precedence.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/compose/how-tos/environment-variables/envvars-precedence.md)
+> Commit-pinned source for Docker main: [content/manuals/compose/how-tos/environment-variables/envvars-precedence.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/compose/how-tos/environment-variables/envvars-precedence.md)
 
 # Environment variables precedence in Docker Compose
 

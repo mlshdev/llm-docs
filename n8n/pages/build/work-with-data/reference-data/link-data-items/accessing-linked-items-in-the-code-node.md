@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/work-with-data/reference-data/link-data-items/accessing-linked-items-in-the-code-node.md](https://github.com/n8n-io/n8n-docs/blob/32d4c1af45711af43703671a66f502ef7bd2b932/docs/build/work-with-data/reference-data/link-data-items/accessing-linked-items-in-the-code-node.md)
+> Commit-pinned source for n8n main: [docs/build/work-with-data/reference-data/link-data-items/accessing-linked-items-in-the-code-node.md](https://github.com/n8n-io/n8n-docs/blob/3317373ce39c3ce2406c8e3d99bb2da7f7180321/docs/build/work-with-data/reference-data/link-data-items/accessing-linked-items-in-the-code-node.md)
 
 # Accessing linked items in the Code node <a id="accessing-linked-items-in-the-code-node"></a>
 

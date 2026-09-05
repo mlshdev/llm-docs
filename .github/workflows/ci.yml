@@ -21,9 +21,20 @@ jobs:
       - name: Set up Bun
         uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2.2.0
         with:
-          bun-version: "1.4.0"
+          bun-version: "1.4.2"
       - name: Install dependencies
-        run: bun ci
+        shell: bash
+        run: |
+          set -euo pipefail
+          for attempt in 1 2 3; do
+            if bun ci; then
+              exit 0
+            fi
+            echo "Dependency install failed on attempt ${attempt}; retrying."
+            sleep $((attempt * 10))
+          done
+          echo "::error::Could not install dependencies after 3 attempts."
+          exit 1
       - name: Check generator and outputs
         run: bun run check
       - name: Rebuild pinned documentation

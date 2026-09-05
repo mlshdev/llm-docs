@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/dhi/how-to/verify.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/dhi/how-to/verify.md)
+> Commit-pinned source for Docker main: [content/manuals/dhi/how-to/verify.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/dhi/how-to/verify.md)
 
 # Verify a Docker Hardened Image or chart
 
@@ -23,7 +23,7 @@ attestation infrastructure.
 > You must authenticate to the Docker Hardened Images registry (`dhi.io`) to
 > pull images. Use your Docker ID credentials (the same username and password
 > you use for Docker Hub) when signing in. If you don't have a Docker account,
-> [create one](https://docs.docker.com/accounts/create-account/) for free.
+> [create one](https://docs.docker.com/accounts/individual/create-account/) for free.
 >
 > Run `docker login dhi.io` to authenticate.
 
@@ -56,11 +56,11 @@ This command shows all available attestations, including SBOMs, provenance, vuln
 
 First, authenticate to both registries. This example authenticates as your
 Docker organization using an [organization access token
-(OAT)](https://docs.docker.com/enterprise/security/access-tokens/). The OAT must have at least
+(OAT)](https://docs.docker.com/security/access-tokens/organization-access-tokens/). The OAT must have at least
 pull access to the DHI repositories you want to verify. Only repositories in
 the token's scope are accessible. Alternatively, you can authenticate as a
 Docker Hub user with a [personal access token
-(PAT)](https://docs.docker.com/security/access-tokens/) that has `read only` access.
+(PAT)](https://docs.docker.com/security/access-tokens/personal-access-tokens/) that has `read only` access.
 
 > \[!WARNING]
 >

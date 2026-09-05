@@ -1,3 +1,5 @@
+import type { QuarantinedDocument } from "./quarantine.ts";
+
 export const projectIds = [
   "traefik",
   "netbird",
@@ -15,6 +17,7 @@ export const projectIds = [
   "yt-dlp",
   "searxng",
   "bun",
+  "trigger-dev",
 ] as const;
 
 export type ProjectId = (typeof projectIds)[number];
@@ -80,6 +83,7 @@ export interface ProjectBuild {
   readonly project: SourceProject;
   readonly lock: LockedSource;
   readonly documents: readonly Document[];
+  readonly quarantined: readonly QuarantinedDocument[];
   readonly notes: readonly string[];
   readonly licenseText: string;
 }

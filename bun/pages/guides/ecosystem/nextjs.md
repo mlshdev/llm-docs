@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/ecosystem/nextjs.mdx](https://bun.com/docs/guides/ecosystem/nextjs)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/ecosystem/nextjs.mdx](https://bun.com/docs/guides/ecosystem/nextjs)
 
 # Build an app with Next.js and Bun
 

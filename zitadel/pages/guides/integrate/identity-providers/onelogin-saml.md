@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/integrate/identity-providers/onelogin-saml.mdx](https://zitadel.com/docs/guides/integrate/identity-providers/onelogin-saml)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/guides/integrate/identity-providers/onelogin-saml.mdx](https://zitadel.com/docs/guides/integrate/identity-providers/onelogin-saml)
 
 This guides shows you how to connect OneLogin as an identity provider in ZITADEL.
 
@@ -28,7 +28,7 @@ After the ZITADEL SAML provider exists, we’ll return to OneLogin and finish th
    - Any optional icon or description you like.
 6. Click **Save** to create the application.
 
-![Image: OneLogin Add Apps screen showing SAML connector selection](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/onelogin-add-apps.png)
+![Image: OneLogin Add Apps screen showing SAML connector selection](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/guides/onelogin-add-apps.png)
 
 ### Export OneLogin IdP metadata
 
@@ -57,7 +57,7 @@ Go to the settings page of your instance or organization and choose "Identity Pr
 In the table you can see all the providers you have configured.
 Also, you see all provider templates that are available.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/zitadel_identity_provider_overview.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/guides/zitadel_identity_provider_overview.png)
 
 Select the SAML Provider template.
 
@@ -76,7 +76,7 @@ Account linking allowed: This setting determines if account linking is allowed. 
 >
 > Either account creation or account linking have to be enabled. Otherwise, the provider can't be used.
 
-![SAML Provider](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/zitadel_saml_create_provider.png)
+![SAML Provider](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/guides/zitadel_saml_create_provider.png)
 
 After saving, open the newly created **OneLogin SAML provider** in ZITADEL.
 In the details view you will find the **ZITADEL Service Provider** URLs, such as:
@@ -116,7 +116,7 @@ Now that ZITADEL is configured, return to OneLogin and finish the SAML configura
    - **ACS (Consumer) URL Validator** (if present)
      For testing, you can use a permissive value like `.*`, then tighten it later to match the exact ACS URL.
 
-![Image: OneLogin SAML configuration with ZITADEL URLs](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/onelogin-configuration.png)
+![Image: OneLogin SAML configuration with ZITADEL URLs](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/guides/onelogin-configuration.png)
 
 4. Save your changes.
 
@@ -163,7 +163,7 @@ The provider can also be activated via API. As the identity providers are sub-re
 - [Activate Default Identity Provider](https://zitadel.com/docs/reference/api/admin/zitadel.admin.v1.AdminService.AddIDPToLoginPolicy)
 - [Activate Organization Identity Provider](https://zitadel.com/docs/reference/api/management/zitadel.management.v1.ManagementService.AddIDPToLoginPolicy)
 
-![Activate OneLogin SAML provider in ZITADEL](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/zitadel-activate-onelogin-saml.png)
+![Activate OneLogin SAML provider in ZITADEL](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/guides/zitadel-activate-onelogin-saml.png)
 
 ### Ensure your Login Policy allows External IdPs
 
@@ -178,7 +178,7 @@ You can also change the settings through the API directly either in the default 
 - [Update Default Login Settings](https://zitadel.com/docs/reference/api/admin/zitadel.admin.v1.AdminService.UpdateLoginPolicy)
 - [Update Organization Login Settings](https://zitadel.com/docs/reference/api/management/zitadel.management.v1.ManagementService.UpdateCustomLoginPolicy)
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/zitadel_allow_external_idp.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/guides/zitadel_allow_external_idp.png)
 
 ## Configure an action to autofill user data
 
@@ -368,4 +368,4 @@ The organization scope looks like this: `urn:zitadel:iam:org:id:{id}`.
 You can [read more about the reserved scopes](https://zitadel.com/docs/apis/openidoauth/scopes#reserved-scopes)
 or [use the ZITADEL OIDC Playground](https://zitadel.com/playgrounds/oidc) to see what happens with the login when you send different scopes.
 
-![Image: OneLogin button on ZITADEL login](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/zitadel-login-onelogin-button.png)
+![Image: OneLogin button on ZITADEL login](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/guides/zitadel-login-onelogin-button.png)

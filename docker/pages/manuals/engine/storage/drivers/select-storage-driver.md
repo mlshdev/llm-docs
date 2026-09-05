@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/engine/storage/drivers/select-storage-driver.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/engine/storage/drivers/select-storage-driver.md)
+> Commit-pinned source for Docker main: [content/manuals/engine/storage/drivers/select-storage-driver.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/engine/storage/drivers/select-storage-driver.md)
 
 # Select a storage driver
 
@@ -40,7 +40,7 @@ The Docker Engine provides the following storage backends on Linux:
 The Docker Engine has a prioritized list of which storage driver to use if no
 storage driver is explicitly configured, assuming that the storage driver meets
 the prerequisites, and automatically selects a compatible storage driver. You
-can see the order in the [source code for Docker Engine 29.7.2](https://github.com/moby/moby/blob/docker-v29.7.2/daemon/graphdriver/driver_linux.go).
+can see the order in the [source code for Docker Engine 29.8.0](https://github.com/moby/moby/blob/docker-v29.8.0/daemon/graphdriver/driver_linux.go).
 { #storage-driver-order }
 
 Some storage drivers require you to use a specific format for the backing filesystem.

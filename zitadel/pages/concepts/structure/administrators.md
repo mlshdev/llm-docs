@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/concepts/structure/administrators.mdx](https://zitadel.com/docs/concepts/structure/administrators)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/concepts/structure/administrators.mdx](https://zitadel.com/docs/concepts/structure/administrators)
 
 > **Terminology update**
 >

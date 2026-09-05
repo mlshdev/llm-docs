@@ -1,6 +1,6 @@
 # FFmpeg master
 
-> Documentation generated from the latest `master` branch commit of [FFmpeg/FFmpeg](https://github.com/FFmpeg/FFmpeg) and pinned to immutable source commit `9fc8c785e2747c87121ec28f8f10ceab0562384b`.
+> Documentation generated from the latest `master` branch commit of [FFmpeg/FFmpeg](https://github.com/FFmpeg/FFmpeg) and pinned to immutable source commit `9997fd060680d427bcc0c0715d163346da7ebd6f`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for FFmpeg master.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.

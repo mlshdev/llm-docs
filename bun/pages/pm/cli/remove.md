@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/pm/cli/remove.mdx](https://bun.com/docs/pm/cli/remove)
+> Release-pinned source for Bun bun-v1.4.2: [docs/pm/cli/remove.mdx](https://bun.com/docs/pm/cli/remove)
 
 # bun remove
 

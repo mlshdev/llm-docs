@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/binary/blob-to-arraybuffer.mdx](https://bun.com/docs/guides/binary/blob-to-arraybuffer)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/binary/blob-to-arraybuffer.mdx](https://bun.com/docs/guides/binary/blob-to-arraybuffer)
 
 # Convert a Blob to an ArrayBuffer
 

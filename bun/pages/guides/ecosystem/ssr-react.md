@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/ecosystem/ssr-react.mdx](https://bun.com/docs/guides/ecosystem/ssr-react)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/ecosystem/ssr-react.mdx](https://bun.com/docs/guides/ecosystem/ssr-react)
 
 Install `react` and `react-dom`:
 

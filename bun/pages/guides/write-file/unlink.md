@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/write-file/unlink.mdx](https://bun.com/docs/guides/write-file/unlink)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/write-file/unlink.mdx](https://bun.com/docs/guides/write-file/unlink)
 
 # Delete a file
 

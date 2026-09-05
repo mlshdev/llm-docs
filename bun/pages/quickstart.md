@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/quickstart.mdx](https://bun.com/docs/quickstart)
+> Release-pinned source for Bun bun-v1.4.2: [docs/quickstart.mdx](https://bun.com/docs/quickstart)
 
 # Quickstart
 

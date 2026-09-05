@@ -552,6 +552,11 @@ function rewriteJsx(
     );
   }
   if (name === "a") {
+    // An anchor carrying neither a target nor prose marks a deep-link
+    // destination the rendered page reaches by fragment, not a link.
+    if (props.href === undefined && children.length === 0) {
+      return [];
+    }
     return phrasingForMode(
       [
         {
@@ -756,7 +761,14 @@ function inlinePartial(
     context.options,
     new Set([...context.stack, partial.sourcePath]),
   );
-  nested.constants.set("props", staticProps(node.attributes ?? [], context));
+  // A partial reads the attributes it was rendered with both as `props` and,
+  // as Mintlify snippets are written, as plain identifiers; its own bindings
+  // shadow them as the body is traversed.
+  const properties = staticProps(node.attributes ?? [], context);
+  nested.constants.set("props", properties);
+  for (const [name, value] of Object.entries(properties)) {
+    nested.constants.set(name, value);
+  }
   return groupListItems(
     rewriteChildren(
       parseBody(parseFrontmatter(partial.source).body),

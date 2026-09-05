@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/binary/typedarray-to-readablestream.mdx](https://bun.com/docs/guides/binary/typedarray-to-readablestream)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/binary/typedarray-to-readablestream.mdx](https://bun.com/docs/guides/binary/typedarray-to-readablestream)
 
 # Convert a Uint8Array to a ReadableStream
 

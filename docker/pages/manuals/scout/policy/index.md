@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/scout/policy/_index.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/scout/policy/_index.md)
+> Commit-pinned source for Docker main: [content/manuals/scout/policy/_index.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/scout/policy/_index.md)
 
 # Policy Evaluation
 
@@ -24,8 +24,8 @@ package, it's non-compliant with that policy.
 Docker Scout includes the following built-in policy types:
 
 - [Severity-Based Vulnerability](#severity-based-vulnerability)
-- [Compliant Licenses](#compliant-licenses)
-- [Up-to-Date Base Images](#up-to-date-base-images)
+- [No copyleft licenses](#no-copyleft-licenses)
+- [No outdated base images](#no-outdated-base-images)
 - [High-Profile Vulnerabilities](#high-profile-vulnerabilities)
 - [Supply Chain Attestations](#supply-chain-attestations)
 - [Default Non-Root User](#default-non-root-user)
@@ -43,15 +43,15 @@ severity vulnerabilities where a fix version is available.
 Configurable parameters include severity levels, a grace period for newly
 disclosed CVEs, fixable-only filtering, and package type filtering.
 
-### Compliant Licenses
+### No copyleft licenses
 
-The **Compliant Licenses** policy type checks whether your images contain
+The **No copyleft licenses** policy type checks whether your images contain
 packages distributed under an inappropriate license. You can configure the
 list of licenses to flag and add package-level exceptions.
 
-### Up-to-Date Base Images
+### No outdated base images
 
-The **Up-to-Date Base Images** policy type checks whether the base images you
+The **No outdated base images** policy type checks whether the base images you
 use are current. Images are non-compliant if the tag you built from points to
 a different digest than what you're using.
 
@@ -100,7 +100,7 @@ successfully. For more information, see [No base image data](#no-base-image-data
 
 ## No base image data
 
-The **Up-to-Date Base Images** and **Approved Base Images** policies require
+The **No outdated base images** and **Approved Base Images** policies require
 provenance attestations to determine the base image used in your build. Without
 them, these policies report **No data**.
 

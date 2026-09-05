@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/reference/api/engine/_index.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/reference/api/engine/_index.md)
+> Commit-pinned source for Docker main: [content/reference/api/engine/_index.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/reference/api/engine/_index.md)
 
 # Docker Engine API
 
@@ -15,7 +15,7 @@ The Docker Engine API is a RESTful API accessed by an HTTP client such as `wget`
 ## View the API reference
 
 You can
-[view the reference for the latest version of the API](https://docs.docker.com/reference/api/engine/version/v1.55)
+[view the reference for the latest version of the API](https://docs.docker.com/reference/api/engine/version/v1.56)
 or [choose a specific version](https://docs.docker.com/reference/api/engine/#api-version-matrix).
 
 ## Versioned API and SDK
@@ -48,14 +48,14 @@ support, use `docker version`:
 ```console
 $ docker version
 Client: Docker Engine - Community
- Version:           29.7.2
- API version:       1.55
+ Version:           29.8.0
+ API version:       1.56
  ...
 
 Server: Docker Engine - Community
  Engine:
-  Version:          29.7.2
-  API version:      1.55 (minimum version 1.40)
+  Version:          29.8.0
+  API version:      1.56 (minimum version 1.40)
   ...
 ```
 
@@ -66,14 +66,14 @@ You can specify the API version to use in any of the following ways:
 
 - When using `curl` directly, specify the version as the first part of the URL.
   For instance, if the endpoint is `/containers/` you can use
-  `/v1.55/containers/`.
+  `/v1.56/containers/`.
 
 - To force the Docker CLI or the Docker Engine SDKs to use an older version
   of the API than the version reported by `docker version`, set the
   environment variable `DOCKER_API_VERSION` to the correct version. This works
   on Linux, Windows, and macOS clients.
 
-  1.54
+  1.55
 
   While the environment variable is set, that version of the API is used, even
   if the Docker daemon supports a newer version. This environment variable
@@ -110,6 +110,7 @@ to provide full compatibility, some functionality may not be available.
 
 | Docker version | Maximum API version                                                 | Minimum API version                                                 | Change log                                                                                |
 | :------------- | :------------------------------------------------------------------ | :------------------------------------------------------------------ | :---------------------------------------------------------------------------------------- |
+| 29.8           | [1.55](https://docs.docker.com/reference/api/engine/version/v1.56/) | [1.40](https://docs.docker.com/reference/api/engine/version/v1.40/) | [changes](https://docs.docker.com/reference/api/engine/version-history/#v156-api-changes) |
 | 29.7           | [1.55](https://docs.docker.com/reference/api/engine/version/v1.55/) | [1.40](https://docs.docker.com/reference/api/engine/version/v1.40/) | [changes](https://docs.docker.com/reference/api/engine/version-history/#v155-api-changes) |
 | 29.6           | [1.55](https://docs.docker.com/reference/api/engine/version/v1.55/) | [1.40](https://docs.docker.com/reference/api/engine/version/v1.40/) | [changes](https://docs.docker.com/reference/api/engine/version-history/#v155-api-changes) |
 | 29.5           | [1.54](https://docs.docker.com/reference/api/engine/version/v1.54/) | [1.40](https://docs.docker.com/reference/api/engine/version/v1.40/) | [changes](https://docs.docker.com/reference/api/engine/version-history/#v154-api-changes) |
@@ -142,7 +143,7 @@ to provide full compatibility, some functionality may not be available.
 
 API versions before v1.40 are deprecated and no longer supported by current
 versions of the Docker Engine and CLI. You can find archived documentation
-for deprecated versions of the API [in the code repository on GitHub](https://github.com/moby/moby/tree/docker-v29.7.2/api/docs):
+for deprecated versions of the API [in the code repository on GitHub](https://github.com/moby/moby/tree/docker-v29.8.0/api/docs):
 
 | Docker version | Maximum API version | Minimum API version | Change log                                                                                |
 | :------------- | :------------------ | :------------------ | :---------------------------------------------------------------------------------------- |

@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/apis/actions/customize-samlresponse.mdx](https://zitadel.com/docs/apis/actions/customize-samlresponse)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/apis/actions/customize-samlresponse.mdx](https://zitadel.com/docs/apis/actions/customize-samlresponse)
 
 This flow is executed before the return of the SAML Response.
 

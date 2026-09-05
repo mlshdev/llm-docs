@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/self-hosting/deploy/compose.mdx](https://zitadel.com/docs/self-hosting/deploy/compose)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/self-hosting/deploy/compose.mdx](https://zitadel.com/docs/self-hosting/deploy/compose)
 
 This guide takes you from zero to a running ZITADEL instance in minutes and then shows you how to harden it for a homelab or semi-production deployment.
 

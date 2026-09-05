@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/pm/cli/link.mdx](https://bun.com/docs/pm/cli/link)
+> Release-pinned source for Bun bun-v1.4.2: [docs/pm/cli/link.mdx](https://bun.com/docs/pm/cli/link)
 
 Use `bun link` in a local directory to register the current package as a "linkable" package.
 

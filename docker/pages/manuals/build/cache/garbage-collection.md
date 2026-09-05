@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/build/cache/garbage-collection.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/build/cache/garbage-collection.md)
+> Commit-pinned source for Docker main: [content/manuals/build/cache/garbage-collection.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/build/cache/garbage-collection.md)
 
 While [`docker builder prune`](https://docs.docker.com/reference/cli/docker/builder/prune/)
 or [`docker buildx prune`](https://docs.docker.com/reference/cli/docker/buildx/prune/)
@@ -41,8 +41,9 @@ you have 11GB worth of build cache, where:
 - 7GB of which is "stale" cache
 - 4GB is other, more valuable cache
 
-A GC sweep would delete 5GB of stale cache as part of the 1st policy, with a
-remainder of 6GB, meaning the 2nd policy does not need to clear any more cache.
+A GC sweep would delete 2GB of stale cache as part of the 1st policy, leaving
+9GB of cache in total, meaning the 2nd policy does not need to clear any more
+cache.
 
 The default GC policies are (approximately):
 

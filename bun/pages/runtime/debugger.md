@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/runtime/debugger.mdx](https://bun.com/docs/runtime/debugger)
+> Release-pinned source for Bun bun-v1.4.2: [docs/runtime/debugger.mdx](https://bun.com/docs/runtime/debugger)
 
 # Debugging
 

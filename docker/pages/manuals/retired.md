@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/retired.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/retired.md)
+> Commit-pinned source for Docker main: [content/manuals/retired.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/retired.md)
 
 # Deprecated and retired Docker products and features
 
@@ -138,7 +138,7 @@ Enhanced Service Account add-ons provided tiered pull rate limits for automated
 workflows and service accounts accessing Docker Hub.
 
 Docker recommends transitioning to [Organization Access Tokens
-(OATs)](https://docs.docker.com/enterprise/security/access-tokens/), which provide secure,
+(OATs)](https://docs.docker.com/security/access-tokens/organization-access-tokens/), which provide secure,
 programmatic access to Docker Hub with granular repository permissions, token
 expiration, and better security auditing. OATs are included with Docker Team
 and Business subscriptions and offer similar functionality without requiring

@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/integrate-ai/ai-examples/call-apis.md](https://github.com/n8n-io/n8n-docs/blob/32d4c1af45711af43703671a66f502ef7bd2b932/docs/build/integrate-ai/ai-examples/call-apis.md)
+> Commit-pinned source for n8n main: [docs/build/integrate-ai/ai-examples/call-apis.md](https://github.com/n8n-io/n8n-docs/blob/3317373ce39c3ce2406c8e3d99bb2da7f7180321/docs/build/integrate-ai/ai-examples/call-apis.md)
 
 # Call APIs
 
@@ -481,7 +481,7 @@ To load the template into your n8n instance:
 
 1. Download the workflow JSON file.
 2. Open a new workflow in your n8n instance.
-3. Copy in the JSON, or select **Workflow menu** ![Workflow menu icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/32d4c1af45711af43703671a66f502ef7bd2b932/docs/reusable-content/.gitbook/assets/three-dots-horizontal.png) > **Import from file...**.
+3. Copy in the JSON, or select **Workflow menu** ![Workflow menu icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/3317373ce39c3ce2406c8e3d99bb2da7f7180321/docs/reusable-content/.gitbook/assets/three-dots-horizontal.png) > **Import from file...**.
 
 The example workflows use Sticky Notes to guide you:
 

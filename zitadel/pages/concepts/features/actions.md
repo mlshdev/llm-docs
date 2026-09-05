@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/concepts/features/actions.mdx](https://zitadel.com/docs/concepts/features/actions)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/concepts/features/actions.mdx](https://zitadel.com/docs/concepts/features/actions)
 
 By using ZITADEL actions, you can manipulate ZITADELs behavior on specific Events.
 This is useful when you have special business requirements that ZITADEL doesn't support out-of-the-box.

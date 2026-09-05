@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/http/fetch.mdx](https://bun.com/docs/guides/http/fetch)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/http/fetch.mdx](https://bun.com/docs/guides/http/fetch)
 
 # Send an HTTP request using fetch
 

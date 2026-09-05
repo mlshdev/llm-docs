@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/solution-scenarios/restrict-console.mdx](https://zitadel.com/docs/guides/solution-scenarios/restrict-console)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/guides/solution-scenarios/restrict-console.mdx](https://zitadel.com/docs/guides/solution-scenarios/restrict-console)
 
 ZITADEL includes a Management Console that allows administrators to configure all resources. By default, all users, including end users, can view and manage their profile information.
 In some cases, you may want to prevent users from accessing the Management Console. Common reasons include:
@@ -37,19 +37,19 @@ By default, this setting is disabled, so all users can access the project.
 >
 > Before a user can be authenticated, it is verified that their affiliated organization has been granted access to this project. Authentication is not permitted for users from unauthorized organizations.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/solution-scenarios/console-check-project-auth.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/guides/solution-scenarios/console-check-project-auth.png)
 
 Start by granting the organization of your administrators access to the ZITADEL project (default project):
 
 1. 1. Go to the **ZITADEL** project, select **Project Grants**, and click **New**.
-      ![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/solution-scenarios/console-zitadel-project-grants.png)
+      ![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/guides/solution-scenarios/console-zitadel-project-grants.png)
 2. Select the organization you want to grant access to.
-   ![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/solution-scenarios/console-create-project-grant-org.png)
+   ![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/guides/solution-scenarios/console-create-project-grant-org.png)
 3. You can skip the role selection and click **Save**.
 4. Ensure the grant appears in the overview and is marked as **Active**.
 
 To avoid accidental lockout, the [default project](https://zitadel.com/docs/guides/manage/console/projects-overview#the-default-project) hides the "**Authentication is restricted to users from organizations that have been granted access to this project**" checkbox in the Management Console:
-![Default Project](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/solution-scenarios/console-default-project.png)
+![Default Project](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/guides/solution-scenarios/console-default-project.png)
 
 You need to use the [Update Project API](https://zitadel.com/docs/reference/api/management/zitadel.management.v1.ManagementService.UpdateProject) to configure this setting on the project.
 
@@ -88,4 +88,4 @@ Where:
 You should now be able to log in with users of the organization that have the Project Grant (in this example, users of the organization "Customer-A").
 All other users should see the following error message after authentication:
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/solution-scenarios/console-access-restricted.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/guides/solution-scenarios/console-access-restricted.png)

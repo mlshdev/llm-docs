@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/runtime/templating/create.mdx](https://bun.com/docs/runtime/templating/create)
+> Release-pinned source for Bun bun-v1.4.2: [docs/runtime/templating/create.mdx](https://bun.com/docs/runtime/templating/create)
 
 > **Note**
 >

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_bridge_convert.yaml](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_bridge_convert.yaml)
+> Commit-pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_bridge_convert.yaml](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_bridge_convert.yaml)
 
 # docker compose bridge convert
 
@@ -17,6 +17,7 @@ Convert compose files to Kubernetes manifests, Helm charts, or another model
 | `-o`, `--output` | `out` | The output directory for the Kubernetes resources |
 | `--templates` |  | Directory containing transformation templates |
 | `-t`, `--transformation` |  | Transformation to apply to compose model (default: docker/compose-bridge-kubernetes) |
+| `-y`, `--yes` |  | Assume "yes" to the output directory overwrite prompt. For scripts/CI, where no interactive confirmation is possible |
 
 ## Global options
 

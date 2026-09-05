@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/agentic-platform/faq.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/agentic-platform/faq.md)
+> Commit-pinned source for Docker main: [content/manuals/agentic-platform/faq.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/agentic-platform/faq.md)
 
 # Docker Agentic Platform FAQ
 
@@ -47,7 +47,7 @@ also shows the equivalent hourly rate.
 
 Model inference is billed separately. The sandbox uses your credential for an
 external model provider, which meters and bills inference under that provider
-account. See [Docker Billing](https://docs.docker.com/billing/) for account, usage, and payment
+account. See [Docker Billing](https://docs.docker.com/subscription-billing/) for account, usage, and payment
 information.
 
 ## How long are logs, telemetry, and snapshots retained?

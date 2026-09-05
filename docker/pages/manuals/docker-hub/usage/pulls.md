@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/docker-hub/usage/pulls.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/docker-hub/usage/pulls.md)
+> Commit-pinned source for Docker main: [content/manuals/docker-hub/usage/pulls.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/docker-hub/usage/pulls.md)
 
 # Docker Hub pull usage and limits
 
@@ -34,7 +34,7 @@ A pull is defined as the following:
 ## Pull attribution
 
 Pulls from authenticated users can be attributed to either a personal or an
-[organization namespace](https://docs.docker.com/accounts/general-faqs/#whats-an-organization-name-or-namespace).
+[organization namespace](https://docs.docker.com/faqs/accounts/#whats-an-organization-name-or-namespace).
 
 Attribution is based on the following:
 
@@ -44,11 +44,11 @@ Attribution is based on the following:
   determined based on domain affiliation and organization membership.
 - Verified domain ownership: When pulling an image from an account linked to a
   verified domain, the attribution is set to be the owner of that
-  [domain](https://docs.docker.com/enterprise/security/single-sign-on/faqs/domain-faqs/).
+  [domain](https://docs.docker.com/faqs/security/).
 - Single organization membership:
   - If the owner of the verified domain is a company and the user is part of
     only one organization within that
-    [company](https://docs.docker.com/admin/company/company-faqs/),
+    [company](https://docs.docker.com/faqs/accounts/),
     the pull is attributed to that specific organization.
   - If the user is part of only one organization, the pull is attributed to
     that specific organization.

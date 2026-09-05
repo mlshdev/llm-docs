@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/docker-hub/repos/manage/export.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/docker-hub/repos/manage/export.md)
+> Commit-pinned source for Docker main: [content/manuals/docker-hub/repos/manage/export.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/docker-hub/repos/manage/export.md)
 
 # Export organization repositories to CSV
 
@@ -22,7 +22,7 @@ Before you begin, ensure you have:
 
 ## Create a personal access token
 
-[Create a personal access token](https://docs.docker.com/security/access-tokens/) from
+[Create a personal access token](https://docs.docker.com/security/access-tokens/personal-access-tokens/) from
 a user account that has access to the organization's repositories. When creating
 the token, select at minimum **Read-only** access permissions to list
 repositories.

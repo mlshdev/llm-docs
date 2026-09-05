@@ -1,4 +1,4 @@
-> Commit-pinned source for FFmpeg master: [doc/ffmpeg-protocols.texi](https://github.com/FFmpeg/FFmpeg/blob/9fc8c785e2747c87121ec28f8f10ceab0562384b/doc/ffmpeg-protocols.texi)
+> Commit-pinned source for FFmpeg master: [doc/ffmpeg-protocols.texi](https://github.com/FFmpeg/FFmpeg/blob/9997fd060680d427bcc0c0715d163346da7ebd6f/doc/ffmpeg-protocols.texi)
 
 # Description
 
@@ -1146,9 +1146,18 @@ The libcurl protocol accepts the following options.
   the implementation will continue using requests as usual. Disabled (set to 0)
   by default.
 
+Note that if enabling this option, it's strongly recommended to also set
+`short_seek_size` to the same value or higher, otherwise the HTTP
+connection may be closed and recreated for each subsequent initial request.
+
 - max\_retries
   Maximum number of retries after a recoverable error on a seekable transfer.
   Default is `5`.
+
+- short\_seek\_size
+  Set the threshold, in bytes, for when a readahead should be preferred over a seek and
+  new HTTP request. This is useful, for example, to make sure the same connection
+  is used for reading large video packets with small audio packets in between.
 
 For more information see: <https://curl.se/libcurl/>.
 

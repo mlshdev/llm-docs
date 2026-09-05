@@ -1,6 +1,15 @@
-> Commit-pinned source for Docker main: [content/manuals/agentic-platform/release-notes.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/agentic-platform/release-notes.md)
+> Commit-pinned source for Docker main: [content/manuals/agentic-platform/release-notes.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/agentic-platform/release-notes.md)
 
 # Docker Agentic Platform release notes
+
+## September 1, 2026
+
+- Added inline credential saving and credential selection for sandbox launches.
+
+## August 28, 2026
+
+- Fixed **Usage & billing** to show the active billing cycle and accrued
+  compute costs for plans that renew mid-month.
 
 ## August 27, 2026
 

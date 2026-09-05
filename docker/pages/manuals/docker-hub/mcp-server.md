@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/docker-hub/mcp-server.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/docker-hub/mcp-server.md)
+> Commit-pinned source for Docker main: [content/manuals/docker-hub/mcp-server.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/docker-hub/mcp-server.md)
 
 The Docker Hub MCP Server is a Model Context Protocol (MCP) server that
 interfaces with Docker Hub APIs to make rich image metadata accessible to LLMs,

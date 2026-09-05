@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/runtime/import-xml.mdx](https://bun.com/docs/guides/runtime/import-xml)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/runtime/import-xml.mdx](https://bun.com/docs/guides/runtime/import-xml)
 
 # Import an XML file
 

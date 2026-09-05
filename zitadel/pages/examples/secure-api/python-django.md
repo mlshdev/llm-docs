@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/examples/secure-api/python-django.mdx](https://zitadel.com/docs/examples/secure-api/python-django)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/examples/secure-api/python-django.mdx](https://zitadel.com/docs/examples/secure-api/python-django)
 
 This integration guide demonstrates the recommended way to incorporate ZITADEL into your Django Python application.
 It explains how to check the token validity in the API and how to check for permissions.
@@ -17,43 +17,43 @@ Before we can start building our application, we have to do a few setup steps in
 
 1. Go to your Project and click on the **New** button as shown below.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/examples/secure-api/app-jwt/1.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/examples/secure-api/app-jwt/1.png)
 
 2. Give a name to your application (Test API is the name given below) and select type **API**.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/examples/secure-api/app-jwt/2.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/examples/secure-api/app-jwt/2.png)
 
 3. Select **JWT** as the authentication method and click **Continue**.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/examples/secure-api/app-jwt/3.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/examples/secure-api/app-jwt/3.png)
 
 4. Now review your settings and click **Create**.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/examples/secure-api/app-jwt/4.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/examples/secure-api/app-jwt/4.png)
 
 5. You will now see the API’s **Client ID**. You will not see a Client Secret because we are using a private JWT key.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/examples/secure-api/app-jwt/5.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/examples/secure-api/app-jwt/5.png)
 
 6. Next, we must create the key pairs. Click on **New**.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/examples/secure-api/app-jwt/6.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/examples/secure-api/app-jwt/6.png)
 
 7. Select **JSON** as the type of key. You can also set an expiration time for the key or leave it empty. Click on **Add**.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/examples/secure-api/app-jwt/7.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/examples/secure-api/app-jwt/7.png)
 
 8. Download the created key by clicking the **Download** button and then click **Close**.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/examples/secure-api/app-jwt/8.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/examples/secure-api/app-jwt/8.png)
 
 9. The key will be downloaded.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/examples/secure-api/app-jwt/9.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/examples/secure-api/app-jwt/9.png)
 
 10. When you click on URLs on the left, you will see the relevant OIDC URLs. Note down the **issuer** URL, **token\_endpoint** and **introspection\_endpoint**.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/examples/secure-api/app-jwt/10.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/examples/secure-api/app-jwt/10.png)
 
 11. The key that you downloaded will be of the following format.
 
@@ -69,41 +69,41 @@ Before we can start building our application, we have to do a few setup steps in
 
 12. Also note down the **Project ID** of your project.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/examples/secure-api/app-jwt/11.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/examples/secure-api/app-jwt/11.png)
 
 ### Create Service Account
 
 1. Go to the **Users** tab in your organization as shown below and click on the **Service Accounts** tab.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/examples/secure-api/service-account-jwt/1.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/examples/secure-api/service-account-jwt/1.png)
 
 2. To add a service account, click on the **New** button.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/examples/secure-api/service-account-jwt/2.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/examples/secure-api/service-account-jwt/2.png)
 
 3. Next, add the details of the service account and select either **Bearer** or **JWT** for **Access Token Type** and click on **Create**. For this example, we will select **JWT**.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/examples/secure-api/service-account-jwt/3.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/examples/secure-api/service-account-jwt/3.png)
 
 4. Now you will see the saved details.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/examples/secure-api/service-account-jwt/4.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/examples/secure-api/service-account-jwt/4.png)
 
 5. Next,  we need to generate a private-public key pair in ZITADEL and you must get the private key to sign your JWT.  Go to **Keys** and click on **New**.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/examples/secure-api/service-account-jwt/5.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/examples/secure-api/service-account-jwt/5.png)
 
 6. Select type **JSON** and click **Add**.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/examples/secure-api/service-account-jwt/6.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/examples/secure-api/service-account-jwt/6.png)
 
 7. Download the key by clicking **Download**. After the download, click **Close**.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/examples/secure-api/service-account-jwt/7.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/examples/secure-api/service-account-jwt/7.png)
 
 8. You will see the following screen afterward.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/examples/secure-api/service-account-jwt/8.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/examples/secure-api/service-account-jwt/8.png)
 
 9. The downloaded key will be of the following format:
 
@@ -122,38 +122,38 @@ In order to access this route, you must create the role `read:messages` in your 
 
 1. Go to your project and select **Roles**. Click **New**.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/examples/secure-api/service-account-jwt/scopes/1.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/examples/secure-api/service-account-jwt/scopes/1.png)
 
 2. Add the `read:messages` role as shown below and click **Save**.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/examples/secure-api/service-account-jwt/scopes/2.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/examples/secure-api/service-account-jwt/scopes/2.png)
 
 3. You will see the created role listed.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/examples/secure-api/service-account-jwt/scopes/3.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/examples/secure-api/service-account-jwt/scopes/3.png)
 
 4. To assign this role to a user, click on **Role Assignments**.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/examples/secure-api/service-account-jwt/scopes/4.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/examples/secure-api/service-account-jwt/scopes/4.png)
 
 5. Select the user you want to assign the role to.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/examples/secure-api/service-account-jwt/scopes/5.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/examples/secure-api/service-account-jwt/scopes/5.png)
 
 6. Select the project where this role assignment is applicable.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/examples/secure-api/service-account-jwt/scopes/6.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/examples/secure-api/service-account-jwt/scopes/6.png)
 7\. Click **Continue**.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/examples/secure-api/service-account-jwt/scopes/7.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/examples/secure-api/service-account-jwt/scopes/7.png)
 
 8. Select the role **read:messages** and click **Save**.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/examples/secure-api/service-account-jwt/scopes/8.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/examples/secure-api/service-account-jwt/scopes/8.png)
 
 9. You will now see the service account has been assigned the role **read:messages**.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/examples/secure-api/service-account-jwt/scopes/9.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/examples/secure-api/service-account-jwt/scopes/9.png)
 
 ### Prerequisites
 

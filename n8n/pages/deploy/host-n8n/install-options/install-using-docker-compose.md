@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/host-n8n/install-options/install-using-docker-compose.md](https://github.com/n8n-io/n8n-docs/blob/32d4c1af45711af43703671a66f502ef7bd2b932/docs/deploy/host-n8n/install-options/install-using-docker-compose.md)
+> Commit-pinned source for n8n main: [docs/deploy/host-n8n/install-options/install-using-docker-compose.md](https://github.com/n8n-io/n8n-docs/blob/3317373ce39c3ce2406c8e3d99bb2da7f7180321/docs/deploy/host-n8n/install-options/install-using-docker-compose.md)
 
 # Install using Docker Compose
 
@@ -40,7 +40,7 @@ SEARXNG_SECRET=change-me-searxng-secret
 N8N_INSTANCE_AI_SEARXNG_URL=http://searxng:8080
 ```
 
-You don't need an AI provider key yet; see [Turn on the AI Assistant](#optional-turn-on-the-ai-assistant) below once everything's running.
+You don't need an AI provider key yet; see [Turn on the AI Assistant](https://docs.n8n.io/deploy/host-n8n/install-options/install-using-docker-compose#optional-turn-on-the-ai-assistant) below once everything's running.
 
 ## Step 3: Create `searxng-settings.yml`
 
@@ -58,102 +58,6 @@ search:
 
 This defines every service you're setting up: n8n itself, the sandbox stack that lets the AI Assistant safely run code, and SearXNG for web search.
 
-```yaml
-volumes:
-  sandbox-tls:
-
-services:
-  sandbox-certs:
-    image: ghcr.io/n8n-io/n8n-sandbox-service-api:latest
-    user: '0:0'
-    entrypoint: ['sh', '-c']
-    command:
-      - >
-        bootstrap-mtls.sh --out-dir /tls --api-san sandbox-api
-        --control-san-prefix sandbox-runner &&
-        chown -R sandbox-api:sandbox-api /tls/api
-    environment:
-      NUM_RUNNERS: '1'
-    volumes:
-      - sandbox-tls:/tls
-
-  sandbox-api:
-    image: ghcr.io/n8n-io/n8n-sandbox-service-api:latest
-    depends_on:
-      sandbox-certs:
-        condition: service_completed_successfully
-    environment:
-      SANDBOX_API_KEYS: ${SANDBOX_API_KEYS}
-      SANDBOX_API_RUNNER_REGISTRATION_TOKEN: ${SANDBOX_API_RUNNER_REGISTRATION_TOKEN}
-      SANDBOX_API_RUNNER_API_KEY: ${SANDBOX_API_RUNNER_API_KEY}
-      SANDBOX_API_GRPC_TLS_CERT_FILE: /tls/api/grpc-server.crt
-      SANDBOX_API_GRPC_TLS_KEY_FILE: /tls/api/grpc-server.key
-      SANDBOX_API_GRPC_TLS_CLIENT_CA_FILE: /tls/api/ca.crt
-      SANDBOX_API_RUNNER_CONTROL_GRPC_TLS_CA_FILE: /tls/api/ca.crt
-      SANDBOX_API_RUNNER_CONTROL_GRPC_TLS_CERT_FILE: /tls/api/control-grpc-api-client.crt
-      SANDBOX_API_RUNNER_CONTROL_GRPC_TLS_KEY_FILE: /tls/api/control-grpc-api-client.key
-      SANDBOX_API_RUNNER_CONTROL_GRPC_TLS_SERVER_NAME: sandbox-runner-1
-    volumes:
-      - sandbox-tls:/tls:ro
-    healthcheck:
-      test: ["CMD", "wget", "-qO-", "http://localhost:8080/healthz"]
-      interval: 5s
-      timeout: 3s
-      retries: 5
-      start_period: 10s
-    # Never publish 8080/9090 to the host on an internet-facing server.
-    # n8n reaches this container by service name over the default Compose network.
-
-  sandbox-runner-1:
-    image: ghcr.io/n8n-io/n8n-sandbox-service-runner-dind:latest
-    privileged: true
-    depends_on:
-      sandbox-api:
-        condition: service_healthy
-    environment:
-      SANDBOX_RUNNER_API_KEYS: ${SANDBOX_API_RUNNER_API_KEY}
-      SANDBOX_RUNNER_REGISTRATION_TOKEN: ${SANDBOX_API_RUNNER_REGISTRATION_TOKEN}
-      SANDBOX_RUNNER_API_GRPC_ADDR: sandbox-api:9090
-      SANDBOX_RUNNER_HTTP_BASE_URL: http://sandbox-runner-1:8080
-      SANDBOX_RUNNER_CONTROL_GRPC_LISTEN_ADDR: ':9091'
-      SANDBOX_RUNNER_CONTROL_GRPC_ADVERTISE_ADDR: sandbox-runner-1:9091
-      SANDBOX_RUNNER_ID: runner-1
-      SANDBOX_RUNNER_DOCKER_SANDBOX_IMAGE: ghcr.io/n8n-io/n8n-sandbox-service-sandbox:latest
-      SANDBOX_RUNNER_REGISTRATION_GRPC_CA_FILE: /tls/runner/ca.crt
-      SANDBOX_RUNNER_REGISTRATION_GRPC_CERT_FILE: /tls/runner/grpc-client.crt
-      SANDBOX_RUNNER_REGISTRATION_GRPC_KEY_FILE: /tls/runner/grpc-client.key
-      SANDBOX_RUNNER_REGISTRATION_GRPC_SERVER_NAME: sandbox-api
-      SANDBOX_RUNNER_CONTROL_GRPC_TLS_CERT_FILE: /tls/runner/control-grpc-server.crt
-      SANDBOX_RUNNER_CONTROL_GRPC_TLS_KEY_FILE: /tls/runner/control-grpc-server.key
-      SANDBOX_RUNNER_CONTROL_GRPC_TLS_CLIENT_CA_FILE: /tls/runner/ca.crt
-    volumes:
-      - sandbox-tls:/tls:ro
-    # Never expose this container's ports publicly — it runs privileged Docker-in-Docker.
-
-  searxng:
-    image: ghcr.io/searxng/searxng:latest
-    environment:
-      SEARXNG_SECRET: ${SEARXNG_SECRET}
-    volumes:
-      - ./searxng-settings.yml:/etc/searxng/settings.yml:ro
-    # Internal-only: n8n reaches it by service name. Never publish its port.
-
-  n8n:
-    image: n8nio/n8n
-    depends_on:
-      sandbox-api:
-        condition: service_healthy
-    ports:
-      - "5678:5678"     # The only port that should be internet-facing
-    env_file: .env
-    environment:
-      N8N_ENABLED_MODULES: instance-ai
-      N8N_INSTANCE_AI_MODEL: anthropic/claude-opus-4-8
-      N8N_INSTANCE_AI_SANDBOX_ENABLED: 'true'
-      N8N_INSTANCE_AI_SANDBOX_IMAGE: ghcr.io/n8n-io/n8n-sandbox-service-sandbox:latest
-      N8N_SANDBOX_SERVICE_URL: http://sandbox-api:8080
-```
-
 ## What you've just set up
 
 | Component            | What it's for                                                                                      |
@@ -166,7 +70,7 @@ services:
 
 This bundles n8n's own sandbox (`n8n-sandbox`), which is a good fit for local development and testing. For a production instance, n8n currently recommends Daytona as the sandbox provider instead. See [Set up the AI Assistant](https://docs.n8n.io/deploy/host-n8n/configure-n8n/set-up-ai-assistant) for how to configure a Daytona sandbox.
 
-There's no database service defined here. n8n falls back to its built-in SQLite database, stored inside the container unless you mount a volume for it. For a production instance, swap in Postgres. See [Use PostgreSQL instead of SQLite](#optional-use-postgresql-instead-of-sqlite) below.
+There's no database service defined here. n8n falls back to its built-in SQLite database, stored inside the container unless you mount a volume for it. For a production instance, swap in Postgres. See [Use PostgreSQL instead of SQLite](https://docs.n8n.io/deploy/host-n8n/install-options/install-using-docker-compose#optional-use-postgresql-instead-of-sqlite) below.
 
 ## Step 5: Start everything
 
@@ -201,7 +105,6 @@ Everything above runs the full sandbox stack, but the AI Assistant itself stays 
    ```
    N8N_INSTANCE_AI_MODEL_API_KEY=sk-ant-xxx
    ```
-
 2. Restart n8n so it picks up the change:
 
    ```bash
@@ -227,7 +130,6 @@ SQLite is fine for trying things out, but for a production instance that must ha
    POSTGRES_PASSWORD=change-me-password
    POSTGRES_DB=n8n
    ```
-
 2. Add a `postgres` service to `compose.yml`, and a volume for its data:
 
    ```yaml
@@ -252,12 +154,11 @@ SQLite is fine for trying things out, but for a production instance that must ha
          retries: 10
    ```
 
-> **Warning**
-> Postgres 18 changed where it stores data by default. Setting `PGDATA` keeps it in the same folder as earlier versions, so the volume mount stays the same. Don't remove that line: without it, Postgres 18 writes somewhere the volume doesn't cover and your database starts empty.
+   > **Warning**
+   > Postgres 18 changed where it stores data by default. Setting `PGDATA` keeps it in the same folder as earlier versions, so the volume mount stays the same. Don't remove that line: without it, Postgres 18 writes somewhere the volume doesn't cover and your database starts empty.
 
-> **Warning**
-> Already running an older Postgres? Moving straight to 18 is a major version upgrade, and Postgres can't open a data directory written by an older major. Bumping the image tag on an existing setup fails with `database files are incompatible with server`. Your data stays intact. Back up first with `pg_dumpall`, then follow the official [PostgreSQL upgrade guide](https://www.postgresql.org/docs/18/upgrading.html).
-
+   > **Warning**
+   > Already running an older Postgres? Moving straight to 18 is a major version upgrade, and Postgres can't open a data directory written by an older major. Bumping the image tag on an existing setup fails with `database files are incompatible with server`. Your data stays intact. Back up first with `pg_dumpall`, then follow the official [PostgreSQL upgrade guide](https://www.postgresql.org/docs/18/upgrading.html).
 3. Point n8n at it by adding these to the n8n service's environment block, and making it wait on Postgres too:
 
    ```yaml
@@ -275,7 +176,6 @@ SQLite is fine for trying things out, but for a production instance that must ha
        postgres:
          condition: service_healthy
    ```
-
 4. Restart everything:
 
    ```bash
@@ -284,8 +184,8 @@ SQLite is fine for trying things out, but for a production instance that must ha
 
    n8n migrates itself to the new Postgres database on startup. Existing SQLite data doesn't carry over automatically. This setup is for a fresh instance, not an in-place migration.
 
-> **Info**
-> For a more hardened setup, such as a dedicated non-root Postgres user and an external task runner, see the [`withPostgres` example](https://github.com/n8n-io/n8n-hosting/tree/main/docker-compose/withPostgres) in the n8n hosting repository.
+   > **Info**
+   > For a more hardened setup, such as a dedicated non-root Postgres user and an external task runner, see the [`withPostgres` example](https://github.com/n8n-io/n8n-hosting/tree/main/docker-compose/withPostgres) in the n8n hosting repository.
 
 ## Troubleshooting
 

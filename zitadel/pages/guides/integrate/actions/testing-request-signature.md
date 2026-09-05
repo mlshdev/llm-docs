@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/integrate/actions/testing-request-signature.mdx](https://zitadel.com/docs/guides/integrate/actions/testing-request-signature)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/guides/integrate/actions/testing-request-signature.mdx](https://zitadel.com/docs/guides/integrate/actions/testing-request-signature)
 
 This guide shows you how to verify the integrity of the received data on your target.
 There are three options available, which will be demonstrated in the following sections.

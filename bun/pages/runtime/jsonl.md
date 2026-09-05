@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/runtime/jsonl.mdx](https://bun.com/docs/runtime/jsonl)
+> Release-pinned source for Bun bun-v1.4.2: [docs/runtime/jsonl.mdx](https://bun.com/docs/runtime/jsonl)
 
 # JSONL
 

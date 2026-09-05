@@ -1,6 +1,6 @@
 # n8n main
 
-> Documentation generated from the latest `main` branch commit of [n8n-io/n8n-docs](https://github.com/n8n-io/n8n-docs) and pinned to immutable source commit `32d4c1af45711af43703671a66f502ef7bd2b932`.
+> Documentation generated from the latest `main` branch commit of [n8n-io/n8n-docs](https://github.com/n8n-io/n8n-docs) and pinned to immutable source commit `3317373ce39c3ce2406c8e3d99bb2da7f7180321`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for n8n main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -1327,10 +1327,9 @@
 
 ## Privacy And Security
 
-- [Privacy](pages/privacy-and-security/privacy.md): Source `docs/privacy-and-security/privacy.md`.
+- [Privacy](pages/privacy-and-security/README.md): Source `docs/privacy-and-security/README.md`.
 - [Incident response](pages/privacy-and-security/incident-response.md): Source `docs/privacy-and-security/incident-response.md`.
 - [What you can do](pages/privacy-and-security/what-you-can-do.md): Source `docs/privacy-and-security/what-you-can-do.md`.
-- [Sustainable Use License](pages/privacy-and-security/sustainable-use-license.md): Source `docs/privacy-and-security/sustainable-use-license.md`.
 
 ## Changelog
 

@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/runtime/networking/fetch.mdx](https://bun.com/docs/runtime/networking/fetch)
+> Release-pinned source for Bun bun-v1.4.2: [docs/runtime/networking/fetch.mdx](https://bun.com/docs/runtime/networking/fetch)
 
 # Fetch
 

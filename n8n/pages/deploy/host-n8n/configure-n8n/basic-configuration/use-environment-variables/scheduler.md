@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/host-n8n/configure-n8n/basic-configuration/use-environment-variables/scheduler.md](https://github.com/n8n-io/n8n-docs/blob/32d4c1af45711af43703671a66f502ef7bd2b932/docs/deploy/host-n8n/configure-n8n/basic-configuration/use-environment-variables/scheduler.md)
+> Commit-pinned source for n8n main: [docs/deploy/host-n8n/configure-n8n/basic-configuration/use-environment-variables/scheduler.md](https://github.com/n8n-io/n8n-docs/blob/3317373ce39c3ce2406c8e3d99bb2da7f7180321/docs/deploy/host-n8n/configure-n8n/basic-configuration/use-environment-variables/scheduler.md)
 
 # Scheduler environment variables <a id="scheduler-environment-variables"></a>
 
@@ -73,6 +73,24 @@ Controls how long the scheduler keeps finished runs as history and how often it 
 | `N8N_SCHEDULER_FAILED_RETENTION`   | Number | `604800` | How long, in seconds, the scheduler keeps runs that went wrong (a failure, or a missed run) before deleting them. Defaults to seven days. Keep it longer than `N8N_SCHEDULER_RETENTION` so there's time to debug; the scheduler warns if you set it lower. Must be greater than 0. |
 | `N8N_SCHEDULER_RETENTION_INTERVAL` | Number | `3600`   | How often, in seconds, the scheduler deletes finished runs older than the retention windows. Defaults to one hour. Must be greater than 0.                                                                                                                                         |
 | `N8N_SCHEDULER_RETENTION_TIMEOUT`  | Number | `300`    | How long, in seconds, a single cleanup pass may run before it's abandoned and retried on the next interval. Defaults to five minutes. Must be greater than 0.                                                                                                                      |
+
+## Owner reconciliation
+
+Controls the sweep that retires schedules whose owner no longer exists, such as a workflow that's no longer published. The sweep stops them right away and deletes them after a grace period. See [How the durable scheduler works](https://docs.n8n.io/deploy/host-n8n/configure-n8n/durable-scheduler#how-it-works).
+
+> **Info**
+> **Feature availability**
+>
+> Owner reconciliation is available from n8n 2.39.0.
+
+| Variable                                        | Type    | Default | Description                                                                                                                                                                                                                                                    |
+| :---------------------------------------------- | :------ | :------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `N8N_SCHEDULER_OWNER_RECONCILIATION_ENABLED`    | Boolean | `true`  | Whether the scheduler periodically checks that every schedule's owner still exists and retires the schedules whose owner is missing. Turning it off leaves those schedules in place.                                                                           |
+| `N8N_SCHEDULER_OWNER_RECONCILIATION_INTERVAL`   | Number  | `900`   | How often, in seconds, the sweep runs. Defaults to 15 minutes. It's a safety net rather than the usual cleanup path, so a long interval is fine. Must be greater than 0.                                                                                       |
+| `N8N_SCHEDULER_OWNER_RECONCILIATION_TIMEOUT`    | Number  | `300`   | How long, in seconds, a single sweep may run before it's abandoned and retried on the next interval. Defaults to five minutes. Must be greater than 0.                                                                                                         |
+| `N8N_SCHEDULER_OWNER_RECONCILIATION_BATCH_SIZE` | Number  | `500`   | How many owners the sweep checks per database query. Larger batches finish a sweep in fewer queries; smaller ones keep each query light. Must be between 1 and 1000.                                                                                           |
+| `N8N_SCHEDULER_OWNER_QUARANTINE_GRACE`          | Number  | `86400` | How long, in seconds, the sweep keeps a stopped schedule before deleting it. Defaults to one day. The schedule stops firing as soon as the sweep finds it, so this only delays the delete. Must be greater than 0.                                             |
+| `N8N_SCHEDULER_OWNER_SETTLE_PERIOD`             | Number  | `300`   | How old, in seconds, a schedule must be before the sweep considers it. Defaults to five minutes. n8n can write a schedule a moment before its owner, so this stops the sweep from mistaking a brand-new schedule for an abandoned one. Must be greater than 0. |
 
 ## Coordination across instances <a id="coordination-vars"></a>
 

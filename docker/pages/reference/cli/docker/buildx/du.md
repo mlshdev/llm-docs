@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/buildx/docker_buildx_du.yaml](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/data/cli/buildx/docker_buildx_du.yaml)
+> Commit-pinned source for Docker main: [data/cli/buildx/docker_buildx_du.yaml](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/data/cli/buildx/docker_buildx_du.yaml)
 
 # docker buildx du
 

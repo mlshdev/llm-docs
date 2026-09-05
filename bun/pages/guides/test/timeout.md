@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/test/timeout.mdx](https://bun.com/docs/guides/test/timeout)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/test/timeout.mdx](https://bun.com/docs/guides/test/timeout)
 
 # Set a per-test timeout with the Bun test runner
 

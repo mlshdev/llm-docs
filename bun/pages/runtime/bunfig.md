@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/runtime/bunfig.mdx](https://bun.com/docs/runtime/bunfig)
+> Release-pinned source for Bun bun-v1.4.2: [docs/runtime/bunfig.mdx](https://bun.com/docs/runtime/bunfig)
 
 `bunfig.toml` is Bun's configuration file.
 
@@ -505,11 +505,20 @@ prefer = "online"
 
 Valid values are:
 
-| Value       | Description                                                                                        |
-| ----------- | -------------------------------------------------------------------------------------------------- |
-| `"online"`  | Default. Check the registry for stale packages as needed.                                          |
-| `"offline"` | Skip staleness checks and resolve packages from the local cache. Equivalent to `--prefer-offline`. |
-| `"latest"`  | Always check npm for the latest matching versions. Equivalent to `--prefer-latest`.                |
+| Value       | Description                                                                                                                         |
+| ----------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| `"online"`  | Default. Check the registry for stale packages as needed.                                                                           |
+| `"offline"` | Skip staleness checks and resolve packages from the local cache. Equivalent to `--prefer-offline` (also honoured by `bun install`). |
+| `"latest"`  | Always check npm for the latest matching versions. Equivalent to `--prefer-latest`.                                                 |
+
+### `install.offline`
+
+When `true`, `bun install` never touches the network: package metadata and tarballs must already be in the cache, and anything missing is an error. Default `false`. Equivalent to `bun install --offline`. For the softer "use the cache when possible" behaviour see `install.prefer = "offline"` / `--prefer-offline`.
+
+```toml title="bunfig.toml" icon="settings"
+[install]
+offline = true
+```
 
 ### `install.frozenLockfile`
 
@@ -859,7 +868,7 @@ bun run --silent dev
 
 ### `run.elide-lines` - truncate filtered output
 
-The number of lines of script output shown per script when using `--filter`. Default `10`. Set to `0` to show all lines. Equivalent to the `--elide-lines` flag.
+Truncate each script's output to its last N lines when using `--filter` in a terminal. Default `0` (show all lines). Equivalent to the `--elide-lines` flag.
 
 ```toml title="bunfig.toml" icon="settings"
 [run]

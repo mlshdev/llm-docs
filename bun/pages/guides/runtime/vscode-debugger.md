@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/runtime/vscode-debugger.mdx](https://bun.com/docs/guides/runtime/vscode-debugger)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/runtime/vscode-debugger.mdx](https://bun.com/docs/guides/runtime/vscode-debugger)
 
 # Debugging Bun with the VS Code extension
 

@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/ecosystem/astro.mdx](https://bun.com/docs/guides/ecosystem/astro)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/ecosystem/astro.mdx](https://bun.com/docs/guides/ecosystem/astro)
 
 # Build an app with Astro and Bun
 

@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/manage/console/applications-overview.mdx](https://zitadel.com/docs/guides/manage/console/applications-overview)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/guides/manage/console/applications-overview.mdx](https://zitadel.com/docs/guides/manage/console/applications-overview)
 
 ## What is an application?
 
@@ -9,13 +9,13 @@ All applications within a project share the same **Roles** and **Role Assignment
 
 To access your applications, navigate to your Project in the Management Console and select your application.
 
-![Granted project](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/console/applications.png)
+![Granted project](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/guides/console/applications.png)
 
 ## Create an Application
 
 To add an application to your project, click on the **New** button and select your application type.
 
-![Add application](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/console/addapplication.png)
+![Add application](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/guides/console/addapplication.png)
 
 ## Application Types
 
@@ -89,14 +89,14 @@ App Types with user interaction (Web, Native, and User Agent) require Redirect U
 - **Security:** ZITADEL strictly checks these URIs during the login process. They must match exactly what is defined in your application code.
 - **Protocols:** Native applications can use custom protocols (e.g., `myapp://`) instead of `http/https`.
 
-![Redirect URIs](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/console/redirecturis.png)
+![Redirect URIs](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/guides/console/redirecturis.png)
 
 ### Development Mode
 
 If you are developing locally or need to redirect users to a non-secure protocol (other than `https://`), you must enable **Development mode**.
 When disabled, ZITADEL enforces strict security and only allows `https`.
 
-![Development mode](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/console/developmentmode.png)
+![Development mode](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/guides/console/developmentmode.png)
 
 **Glob Patterns:**
 Development mode allows the use of glob patterns in Redirect URIs for flexibility:
@@ -131,7 +131,7 @@ After creating an application, you can modify its settings.
 >
 > You **cannot** change the Application Type (e.g., from Web to Native) after creation. You must delete and recreate the application.
 
-![Application Settings](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/console/application.png)
+![Application Settings](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/guides/console/application.png)
 
 ### Use New Login UI
 
@@ -172,13 +172,13 @@ In the **Token Settings** section, you can customize the tokens issued for this 
 - **Content:** Check options to include User Roles and User Information inside the ID Token.
 - **ClockSkew:** Optionally set a time buffer added to the expiration time of the issued token to handle server time differences.
 
-![Token settings](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/console/app-token-settings.png)
+![Token settings](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/guides/console/app-token-settings.png)
 
 ### Additional Origins
 
 If your application makes requests from domains other than the Redirect URI (e.g., a Javascript app fetching data from an API on a different domain), you can specify them here to configure CORS (Cross-Origin Resource Sharing).
 
-![Additional origins](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/console/additional-origins.png)
+![Additional origins](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/guides/console/additional-origins.png)
 
 ## Security Considerations
 

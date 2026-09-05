@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/engine/daemon/_index.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/engine/daemon/_index.md)
+> Commit-pinned source for Docker main: [content/manuals/engine/daemon/_index.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/engine/daemon/_index.md)
 
 # Docker daemon configuration overview
 
@@ -144,6 +144,7 @@ Many specific configuration options are discussed throughout the Docker
 documentation. Some places to go next include:
 
 - [Automatically start containers](https://docs.docker.com/engine/containers/start-containers-automatically/)
+- [Run containerd in the Docker daemon](https://docs.docker.com/engine/daemon/embedded-containerd/)
 - [Limit a container's resources](https://docs.docker.com/engine/containers/resource_constraints/)
 - [Configure storage drivers](https://docs.docker.com/engine/storage/drivers/select-storage-driver/)
 - [Container security](https://docs.docker.com/engine/security/)

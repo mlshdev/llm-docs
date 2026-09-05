@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/runtime/import-yaml.mdx](https://bun.com/docs/guides/runtime/import-yaml)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/runtime/import-yaml.mdx](https://bun.com/docs/guides/runtime/import-yaml)
 
 # Import a YAML file
 

@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/legal/policies/privacy-policy.mdx](https://zitadel.com/docs/legal/policies/privacy-policy)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/legal/policies/privacy-policy.mdx](https://zitadel.com/docs/legal/policies/privacy-policy)
 
 Last updated on October 23, 2025.
 

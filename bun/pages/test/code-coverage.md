@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/test/code-coverage.mdx](https://bun.com/docs/test/code-coverage)
+> Release-pinned source for Bun bun-v1.4.2: [docs/test/code-coverage.mdx](https://bun.com/docs/test/code-coverage)
 
 Bun's test runner has built-in code coverage reporting. Use it to see how much of your codebase your tests cover and to find untested code.
 

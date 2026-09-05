@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/install/jfrog-artifactory.mdx](https://bun.com/docs/guides/install/jfrog-artifactory)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/install/jfrog-artifactory.mdx](https://bun.com/docs/guides/install/jfrog-artifactory)
 
 [JFrog Artifactory](https://jfrog.com/artifactory/) is a package management system for npm, Docker, Maven, NuGet, Ruby, Helm, and more. You can use it to host your own private npm registry, along with other types of packages.
 

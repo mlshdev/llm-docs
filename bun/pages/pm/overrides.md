@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/pm/overrides.mdx](https://bun.com/docs/pm/overrides)
+> Release-pinned source for Bun bun-v1.4.2: [docs/pm/overrides.mdx](https://bun.com/docs/pm/overrides)
 
 # Overrides and resolutions
 

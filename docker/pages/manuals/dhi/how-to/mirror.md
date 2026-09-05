@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/dhi/how-to/mirror.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/dhi/how-to/mirror.md)
+> Commit-pinned source for Docker main: [content/manuals/dhi/how-to/mirror.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/dhi/how-to/mirror.md)
 
 **Docker Hardened Images requirements**
 
@@ -30,10 +30,10 @@ repositories:
 
 ## Mirror a DHI repository to your organization
 
-Organization owners, editors, and members with a [custom role](https://docs.docker.com/enterprise/security/roles-and-permissions/custom-roles/)
+Organization owners, editors, and members with a [custom role](https://docs.docker.com/security/roles-and-permissions/custom-roles/)
 that includes the DHI mirroring permission can create, view, and manage mirrors.
 When using the CLI or Terraform, you can also mirror using an [organization
-access token (OAT)](https://docs.docker.com/enterprise/security/access-tokens/) with the
+access token (OAT)](https://docs.docker.com/security/access-tokens/organization-access-tokens/) with the
 appropriate permission scopes, without requiring role-based access.
 
 When a member with a custom role that includes the DHI mirroring permission
@@ -77,9 +77,9 @@ It may take a few minutes for all the tags to finish mirroring.
 **CLI**
 
 Authenticate with `docker login` using your Docker credentials, a [personal
-access token (PAT)](https://docs.docker.com/security/access-tokens/) with **Read & Write**
+access token (PAT)](https://docs.docker.com/security/access-tokens/personal-access-tokens/) with **Read & Write**
 permissions, or an [organization access token
-(OAT)](https://docs.docker.com/enterprise/security/access-tokens/). When using an OAT, the
+(OAT)](https://docs.docker.com/security/access-tokens/organization-access-tokens/). When using an OAT, the
 available operations depend on the token's permission scope:
 
 - To list mirrored repositories, the OAT must have read (pull) access to the
@@ -188,9 +188,9 @@ updates. You can still use the last images or charts that were mirrored.
 **CLI**
 
 Authenticate with `docker login` using your Docker credentials, a [personal
-access token (PAT)](https://docs.docker.com/security/access-tokens/) with **Read & Write**
+access token (PAT)](https://docs.docker.com/security/access-tokens/personal-access-tokens/) with **Read & Write**
 permissions, or an [organization access token
-(OAT)](https://docs.docker.com/enterprise/security/access-tokens/) with push access to the
+(OAT)](https://docs.docker.com/security/access-tokens/organization-access-tokens/) with push access to the
 relevant repository.
 
 Use the [`docker dhi mirror`](https://docs.docker.com/reference/cli/docker/dhi/mirror/) command:
@@ -287,11 +287,11 @@ same steps to a non-mirrored image by updating the `SRC_ATT_REPO` and
 
    In this example, you authenticate as your Docker organization using an
    [organization access token
-   (OAT)](https://docs.docker.com/enterprise/security/access-tokens/). The OAT must have at
+   (OAT)](https://docs.docker.com/security/access-tokens/organization-access-tokens/). The OAT must have at
    least pull access to every DHI repository you want to mirror. Only
    repositories in the token's scope are accessible. Alternatively, you can
    authenticate as a Docker Hub user with a [personal access token
-   (PAT)](https://docs.docker.com/security/access-tokens/) that has `read only` access.
+   (PAT)](https://docs.docker.com/security/access-tokens/personal-access-tokens/) that has `read only` access.
 
    > \[!WARNING]
    >

@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/ecosystem/elysia.mdx](https://bun.com/docs/guides/ecosystem/elysia)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/ecosystem/elysia.mdx](https://bun.com/docs/guides/ecosystem/elysia)
 
 # Build an HTTP server using Elysia and Bun
 

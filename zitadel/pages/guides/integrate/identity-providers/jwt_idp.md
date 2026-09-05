@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/integrate/identity-providers/jwt_idp.mdx](https://zitadel.com/docs/guides/integrate/identity-providers/jwt_idp)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/guides/integrate/identity-providers/jwt_idp.mdx](https://zitadel.com/docs/guides/integrate/identity-providers/jwt_idp)
 
 ## In simple terms
 
@@ -8,7 +8,7 @@ authentication itself, but relies on the trustworthiness and validity of the pro
 
 ### Step-by-Step Process
 
-![JWT-idp flow steps](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/jwt_idp.png)
+![JWT-idp flow steps](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/guides/jwt_idp.png)
 
 1. User opens new application
 2. New app initiates an authorization code flow via ZITADEL

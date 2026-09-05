@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/docker-hub/release-notes.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/docker-hub/release-notes.md)
+> Commit-pinned source for Docker main: [content/manuals/docker-hub/release-notes.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/docker-hub/release-notes.md)
 
 # Docker Hub release notes
 
@@ -101,7 +101,7 @@ known issues for each Docker Hub release.
 
 ### New
 
-- Organizations can assign the [editor role](https://docs.docker.com/enterprise/security/roles-and-permissions/) to members to grant additional permissions without full administrative access.
+- Organizations can assign the [editor role](https://docs.docker.com/security/roles-and-permissions/) to members to grant additional permissions without full administrative access.
 
 ## 2023-05-09
 
@@ -137,7 +137,7 @@ known issues for each Docker Hub release.
 
 ### Bug fixes and enhancements
 
-- You can now [export a CSV file of members](https://docs.docker.com/admin/organization/manage/members/#export-members-csv-file) from organizations that you own.
+- You can now [export a CSV file of members](https://docs.docker.com/accounts/organization/manage/members/#export-members-csv-file) from organizations that you own.
 
 ## 2022-07-22
 
@@ -173,7 +173,7 @@ known issues for each Docker Hub release.
 
 ### New
 
-- You can now purchase or upgrade to a Docker Business subscription using a credit card. To learn more, see [Upgrade your subscription](https://docs.docker.com/subscription/plans/docker/).
+- You can now purchase or upgrade to a Docker Business subscription using a credit card. To learn more, see [Upgrade your subscription](https://docs.docker.com/subscription-billing/plans/docker/).
 
 ## 2021-08-31
 
@@ -190,7 +190,7 @@ The updated [Docker Subscription Service Agreement](https://www.docker.com/legal
 - The existing Docker Free subscription has been renamed **Docker Personal**.
 - **No changes** to Docker Engine or any other upstream **open source** Docker or Moby project.
 
-  To understand how these changes affect you, read the [FAQs](https://www.docker.com/pricing/faq). For more information, see [Docker subscription overview](https://docs.docker.com/subscription/).
+  To understand how these changes affect you, read the [FAQs](https://www.docker.com/pricing/faq). For more information, see [Docker subscription overview](https://docs.docker.com/subscription-billing/).
 
 ## 2021-05-05
 
@@ -214,7 +214,7 @@ You can now specify any email address to receive billing-related emails for your
 
 To change the email address receiving billing-related emails, log into Docker Hub and navigate to the **Billing** tab of your organization. Select **Payment Methods** > **Billing Information**. Enter the new email address that you'd like to use in the **Email** field. Click **Update** for the changes to take effect.
 
-For details on how to update your billing information, see [Update billing information](https://docs.docker.com/billing/).
+For details on how to update your billing information, see [Update billing information](https://docs.docker.com/subscription-billing/).
 
 ## 2021-03-22
 
@@ -230,7 +230,7 @@ Docker introduces the Advanced Image Management dashboard that enables you to vi
 
 Docker introduces Audit logs, a new feature that allows team owners to view a list of activities that occur at organization and repository levels. This feature begins tracking the activities from the release date, that is, **from 25 January 2021**.
 
-For more information about this feature and for instructions on how to use it, see [Activity logs](https://docs.docker.com/admin/activity-logs/).
+For more information about this feature and for instructions on how to use it, see [Activity logs](https://docs.docker.com/accounts/organization/activity-logs/).
 
 ## 2020-11-10
 
@@ -248,7 +248,7 @@ Docker introduces Hub Vulnerability Scanning which enables you to automatically 
 
 ### New features
 
-- Docker has announced a new, per-seat pricing model to accelerate developer workflows for cloud-native development. The previous private repository/concurrent autobuild-based plans have been replaced with new **Pro** and **Team** plans that include unlimited private repositories. For more information, see [Docker subscription](https://docs.docker.com/subscription/).
+- Docker has announced a new, per-seat pricing model to accelerate developer workflows for cloud-native development. The previous private repository/concurrent autobuild-based plans have been replaced with new **Pro** and **Team** plans that include unlimited private repositories. For more information, see [Docker subscription](https://docs.docker.com/subscription-billing/).
 
 - Docker has enabled download rate limits for downloads and pull requests on Docker Hub. This caps the number of objects that users can download within a specified timeframe. For more information, see [Usage and limits](https://docs.docker.com/docker-hub/usage/).
 
@@ -309,7 +309,7 @@ Docker introduces Hub Vulnerability Scanning which enables you to automatically 
 
 ### New features
 
-- You can now [create personal access tokens](https://docs.docker.com/security/access-tokens/) in Docker Hub and use them to authenticate from the Docker CLI. Find them in your account settings, under the new **[Security](https://hub.docker.com/settings/security)** section.
+- You can now [create personal access tokens](https://docs.docker.com/security/access-tokens/personal-access-tokens/) in Docker Hub and use them to authenticate from the Docker CLI. Find them in your account settings, under the new **[Security](https://hub.docker.com/settings/security)** section.
 
 ### Known Issues
 
@@ -319,7 +319,7 @@ Docker introduces Hub Vulnerability Scanning which enables you to automatically 
 
 ### Enhancements
 
-- The [billing page](https://docs.docker.com/subscription/plans/docker/) for personal accounts has been updated. You can access the page at its new URL: <https://hub.docker.com/billing/plan>.
+- The [billing page](https://docs.docker.com/subscription-billing/plans/docker/) for personal accounts has been updated. You can access the page at its new URL: <https://hub.docker.com/billing/plan>.
 
 ### Known Issues
 

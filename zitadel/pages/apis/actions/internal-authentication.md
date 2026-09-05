@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/apis/actions/internal-authentication.mdx](https://zitadel.com/docs/apis/actions/internal-authentication)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/apis/actions/internal-authentication.mdx](https://zitadel.com/docs/apis/actions/internal-authentication)
 
 This flow is executed if the user logs in using the login UI hosted by ZITADEL.
 

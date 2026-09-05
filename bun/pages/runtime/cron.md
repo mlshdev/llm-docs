@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/runtime/cron.mdx](https://bun.com/docs/runtime/cron)
+> Release-pinned source for Bun bun-v1.4.2: [docs/runtime/cron.mdx](https://bun.com/docs/runtime/cron)
 
 Bun has built-in support for cron — parse expressions, run a callback on a schedule inside your process, or register OS-level jobs that survive restarts.
 

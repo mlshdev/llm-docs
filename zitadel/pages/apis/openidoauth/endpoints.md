@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/apis/openidoauth/endpoints.mdx](https://zitadel.com/docs/apis/openidoauth/endpoints)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/apis/openidoauth/endpoints.mdx](https://zitadel.com/docs/apis/openidoauth/endpoints)
 
 ## OpenID Connect 1.0 Discovery
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/dhi/migration/migrate-from-wolfi.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/dhi/migration/migrate-from-wolfi.md)
+> Commit-pinned source for Docker main: [content/manuals/dhi/migration/migrate-from-wolfi.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/dhi/migration/migrate-from-wolfi.md)
 
 This guide helps you migrate from Wolfi-based images to Docker Hardened
 Images (DHI). Generally, the migration process is straightforward since Wolfi is
@@ -29,7 +29,7 @@ replaced by the new hardened image.
 > You must authenticate to `dhi.io` before you can pull Docker Hardened Images.
 > Use your Docker ID credentials (the same username and password you use for
 > Docker Hub). If you don't have a Docker account, [create
-> one](https://docs.docker.com/accounts/create-account/) for free.
+> one](https://docs.docker.com/accounts/individual/create-account/) for free.
 >
 > Run `docker login dhi.io` to authenticate.
 

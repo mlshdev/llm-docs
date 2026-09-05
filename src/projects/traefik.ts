@@ -15,12 +15,8 @@ import {
   parseFrontmatter,
   rewriteMarkdownLinks,
 } from "../markdown.ts";
-import type {
-  Document,
-  LockedSource,
-  ProjectBuild,
-  SourceProject,
-} from "../types.ts";
+import { DocumentCollector } from "../quarantine.ts";
+import type { LockedSource, ProjectBuild, SourceProject } from "../types.ts";
 
 interface NavPage {
   readonly label: string;
@@ -40,51 +36,56 @@ export async function buildTraefik(
         nav?: unknown;
       };
       const pages = uniquePages(flattenNav(mkdocs.nav));
-      const documents: Document[] = [];
+      const documents = new DocumentCollector(project.id);
       for (const page of pages) {
-        const sourcePath = `docs/content/${page.sourcePath}`;
-        if (!(await exists(path.join(root, sourcePath)))) {
-          throw new Error(`Traefik nav references missing page: ${sourcePath}`);
-        }
-        const raw = await readUtf8(root, sourcePath);
-        const frontmatter = parseFrontmatter(raw);
-        const expanded = await expandIncludes(
-          root,
-          sourcePath,
-          frontmatter.body,
-          new Set([sourcePath]),
-        );
-        const body = rewriteMarkdownLinks(
-          cleanMarkdown(expanded),
-          (url, kind) =>
-            resolveTraefikLink(
-              url,
-              kind,
-              sourcePath,
-              project.repository,
-              lock,
-              archiveFiles,
-            ),
-        );
-        documents.push({
-          sourcePath,
-          outputPath: `pages/${page.sourcePath}`,
-          title:
-            documentTitle(body, frontmatter.attributes, sourcePath) ||
-            page.label,
-          body,
-          canonicalUrl: githubBlobUrl(
-            project.repository,
-            lock.sourceCommit,
+        await documents.collect(`docs/content/${page.sourcePath}`, async () => {
+          const sourcePath = `docs/content/${page.sourcePath}`;
+          if (!(await exists(path.join(root, sourcePath)))) {
+            throw new Error(
+              `Traefik nav references missing page: ${sourcePath}`,
+            );
+          }
+          const raw = await readUtf8(root, sourcePath);
+          const frontmatter = parseFrontmatter(raw);
+          const expanded = await expandIncludes(
+            root,
             sourcePath,
-          ),
-          ...(page.section ? { section: page.section } : {}),
+            frontmatter.body,
+            new Set([sourcePath]),
+          );
+          const body = rewriteMarkdownLinks(
+            cleanMarkdown(expanded),
+            (url, kind) =>
+              resolveTraefikLink(
+                url,
+                kind,
+                sourcePath,
+                project.repository,
+                lock,
+                archiveFiles,
+              ),
+          );
+          return {
+            sourcePath,
+            outputPath: `pages/${page.sourcePath}`,
+            title:
+              documentTitle(body, frontmatter.attributes, sourcePath) ||
+              page.label,
+            body,
+            canonicalUrl: githubBlobUrl(
+              project.repository,
+              lock.sourceCommit,
+              sourcePath,
+            ),
+            ...(page.section ? { section: page.section } : {}),
+          };
         });
       }
       return {
         project,
         lock,
-        documents,
+        documents: documents.documents,
+        quarantined: documents.quarantined,
         notes: [
           "Pages follow docs/mkdocs.yml navigation order from the immutable release tag.",
           "MkDocs include fragments are expanded; repeated commercial callouts and non-text assets are omitted.",

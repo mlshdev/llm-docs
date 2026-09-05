@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/ecosystem/nuxt.mdx](https://bun.com/docs/guides/ecosystem/nuxt)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/ecosystem/nuxt.mdx](https://bun.com/docs/guides/ecosystem/nuxt)
 
 # Build an app with Nuxt and Bun
 

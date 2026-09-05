@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/solution-scenarios/b2b.mdx](https://zitadel.com/docs/guides/solution-scenarios/b2b)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/guides/solution-scenarios/b2b.mdx](https://zitadel.com/docs/guides/solution-scenarios/b2b)
 
 ## Business to Business
 

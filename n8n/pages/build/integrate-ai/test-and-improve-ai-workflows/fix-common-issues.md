@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/integrate-ai/test-and-improve-ai-workflows/fix-common-issues.md](https://github.com/n8n-io/n8n-docs/blob/32d4c1af45711af43703671a66f502ef7bd2b932/docs/build/integrate-ai/test-and-improve-ai-workflows/fix-common-issues.md)
+> Commit-pinned source for n8n main: [docs/build/integrate-ai/test-and-improve-ai-workflows/fix-common-issues.md](https://github.com/n8n-io/n8n-docs/blob/3317373ce39c3ce2406c8e3d99bb2da7f7180321/docs/build/integrate-ai/test-and-improve-ai-workflows/fix-common-issues.md)
 
 # Tips and common issues <a id="tips-and-common-issues"></a>
 
@@ -6,7 +6,7 @@
 
 If you have another trigger in the workflow already, you have two potential starting points: that trigger and the [evaluation trigger](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.evaluationtrigger). To make sure your workflow works as expected no matter which trigger executes, you will need to merge these branches together.
 
-![](https://raw.githubusercontent.com/n8n-io/n8n-docs/32d4c1af45711af43703671a66f502ef7bd2b932/docs/build/.gitbook/assets/merging-trigger-branches.png)
+![](https://raw.githubusercontent.com/n8n-io/n8n-docs/3317373ce39c3ce2406c8e3d99bb2da7f7180321/docs/build/.gitbook/assets/merging-trigger-branches.png)
 *Logic to merge two trigger branches together so that they have the same data format and can be referenced from a single node.*
 
 To do so:
@@ -29,7 +29,7 @@ To do so:
 
 n8n's internal chat reads the output data of the last executed node in the workflow. After adding an evaluation node with the ['set outputs' operation](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.evaluation#set-outputs), this data may not be in the expected format, or even contain the chat response.
 
-![Agent node with a second output branch wired to a No-op node, positioned to execute last](https://raw.githubusercontent.com/n8n-io/n8n-docs/32d4c1af45711af43703671a66f502ef7bd2b932/docs/build/.gitbook/assets/add-second-output-branch.png)
+![Agent node with a second output branch wired to a No-op node, positioned to execute last](https://raw.githubusercontent.com/n8n-io/n8n-docs/3317373ce39c3ce2406c8e3d99bb2da7f7180321/docs/build/.gitbook/assets/add-second-output-branch.png)
 
 The solution is to add an extra branch coming out of your agent. [Lower branches execute later](https://docs.n8n.io/build/flow-logic/understand-execution-order) in n8n, which means any node you attach to this branch will execute last. You can use a no-op node here since it only needs to pass the agent output through.
 
@@ -37,7 +37,7 @@ The solution is to add an extra branch coming out of your agent. [Lower branches
 
 Sometimes you need to know what happened in executed sub-nodes of an agent, for example to check whether it executed a tool. You can't reference these nodes directly with expressions, but you can enable the **Return intermediate steps** option in the agent. This will add an extra output field called `intermediateSteps` which you can use in later nodes:
 
-![Enable return intermediate steps](https://raw.githubusercontent.com/n8n-io/n8n-docs/32d4c1af45711af43703671a66f502ef7bd2b932/docs/build/.gitbook/assets/enable-return-intermediate-steps.png)
+![Enable return intermediate steps](https://raw.githubusercontent.com/n8n-io/n8n-docs/3317373ce39c3ce2406c8e3d99bb2da7f7180321/docs/build/.gitbook/assets/enable-return-intermediate-steps.png)
 
 ## Multiple evaluations in the same workflow <a id="multiple-evaluations-in-the-same-workflow"></a>
 

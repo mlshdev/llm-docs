@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/ecosystem/qwik.mdx](https://bun.com/docs/guides/ecosystem/qwik)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/ecosystem/qwik.mdx](https://bun.com/docs/guides/ecosystem/qwik)
 
 # Build an app with Qwik and Bun
 

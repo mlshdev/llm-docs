@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/installation.mdx](https://bun.com/docs/installation)
+> Release-pinned source for Bun bun-v1.4.2: [docs/installation.mdx](https://bun.com/docs/installation)
 
 ## Overview
 
@@ -184,16 +184,13 @@ To download Bun binaries directly, visit the [releases page on GitHub](https://g
 
 - [Linux x64](https://github.com/oven-sh/bun/releases/latest/download/bun-linux-x64.zip)
 
-  Standard Linux x64 binary
-- [Linux x64 Baseline](https://github.com/oven-sh/bun/releases/latest/download/bun-linux-x64-baseline.zip)
+  glibc, Nehalem or newer
+- [Linux ARM64](https://github.com/oven-sh/bun/releases/latest/download/bun-linux-aarch64.zip)
 
-  For older CPUs without AVX2
+  ARM64 Linux systems
 - [Windows x64](https://github.com/oven-sh/bun/releases/latest/download/bun-windows-x64.zip)
 
-  Standard Windows binary
-- [Windows x64 Baseline](https://github.com/oven-sh/bun/releases/latest/download/bun-windows-x64-baseline.zip)
-
-  For older CPUs without AVX2
+  Nehalem or newer
 - [Windows ARM64](https://github.com/oven-sh/bun/releases/latest/download/bun-windows-aarch64.zip)
 
   Windows on ARM (Snapdragon, etc.)
@@ -203,16 +200,12 @@ To download Bun binaries directly, visit the [releases page on GitHub](https://g
 - [macOS x64](https://github.com/oven-sh/bun/releases/latest/download/bun-darwin-x64.zip)
 
   Intel Macs
-- [Linux ARM64](https://github.com/oven-sh/bun/releases/latest/download/bun-linux-aarch64.zip)
-
-  ARM64 Linux systems
 
 ### Musl Binaries
 
 For distributions without `glibc` (Alpine Linux, Void Linux):
 
 - [Linux x64 musl](https://github.com/oven-sh/bun/releases/latest/download/bun-linux-x64-musl.zip)
-- [Linux x64 musl baseline](https://github.com/oven-sh/bun/releases/latest/download/bun-linux-x64-musl-baseline.zip)
 - [Linux ARM64 musl](https://github.com/oven-sh/bun/releases/latest/download/bun-linux-aarch64-musl.zip)
 
 > **Note**
@@ -225,29 +218,18 @@ For distributions without `glibc` (Alpine Linux, Void Linux):
 
 ## CPU Requirements
 
-CPU requirements depend on which binary you're using:
-
-**x64 binaries** target the Haswell CPU architecture (AVX and AVX2 instructions required)
+Bun ships a single x64 binary per platform. It targets the Nehalem microarchitecture (SSE4.2) and selects AVX2/AVX-512
+code paths at runtime when the CPU supports them, so there is no separate "baseline" download to choose.
 
 | Platform | Intel Requirement               | AMD Requirement    |
 | -------- | ------------------------------- | ------------------ |
-| x64      | Haswell (4th gen Core) or newer | Excavator or newer |
-
-**x64-baseline binaries** target the Nehalem architecture for older CPUs
-
-| Platform     | Intel Requirement               | AMD Requirement    |
-| ------------ | ------------------------------- | ------------------ |
-| x64-baseline | Nehalem (1st gen Core) or newer | Bulldozer or newer |
-
-> **Warning**
->
-> Baseline builds are slower than regular builds. Use them only if you encounter an "Illegal
-> Instruction" error.
+| x64      | Nehalem (1st gen Core) or newer | Bulldozer or newer |
 
 > **Note**
 >
-> Bun does not support CPUs older than the baseline target, which requires the SSE4.2 extension. Bun requires macOS 13.0
-> or later.
+> Bun does not support x64 CPUs without the SSE4.2 extension. Bun requires macOS 13.0 or later. The `-baseline` release
+> assets and `@oven/bun-*-x64-baseline` npm packages are kept as aliases of the single x64 binary for backward
+> compatibility with older install scripts.
 
 ***
 

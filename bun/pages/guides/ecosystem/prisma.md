@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/ecosystem/prisma.mdx](https://bun.com/docs/guides/ecosystem/prisma)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/ecosystem/prisma.mdx](https://bun.com/docs/guides/ecosystem/prisma)
 
 # Use Prisma with Bun
 

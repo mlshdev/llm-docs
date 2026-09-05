@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/solution-scenarios/index.mdx](https://zitadel.com/docs/guides/solution-scenarios)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/guides/solution-scenarios/index.mdx](https://zitadel.com/docs/guides/solution-scenarios)
 
 Learn how to use ZITADEL for different scenarios.
 

@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/binary/buffer-to-blob.mdx](https://bun.com/docs/guides/binary/buffer-to-blob)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/binary/buffer-to-blob.mdx](https://bun.com/docs/guides/binary/buffer-to-blob)
 
 # Convert a Buffer to a blob
 

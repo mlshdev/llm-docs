@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/http/fetch-unix.mdx](https://bun.com/docs/guides/http/fetch-unix)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/http/fetch-unix.mdx](https://bun.com/docs/guides/http/fetch-unix)
 
 # fetch with unix domain sockets in Bun
 

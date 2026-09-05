@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/scout/policy/local.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/scout/policy/local.md)
+> Commit-pinned source for Docker main: [content/manuals/scout/policy/local.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/scout/policy/local.md)
 
 **Evaluate policies requirements**
 
@@ -159,7 +159,7 @@ policy's Rego metadata, or override it per policy in the policy-config file:
 {
   "policies": [
     {
-      "name": "no-copyleft-licenses",
+      "name": "copyleft-license",
       "weight": 0
     }
   ]

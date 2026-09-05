@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/http/sse.mdx](https://bun.com/docs/guides/http/sse)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/http/sse.mdx](https://bun.com/docs/guides/http/sse)
 
 # Server-Sent Events (SSE) with Bun
 

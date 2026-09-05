@@ -1,8 +1,8 @@
-# Bun bun-v1.4.0: full documentation
+# Bun bun-v1.4.2: full documentation
 
 Source repository: https://github.com/oven-sh/bun
-Release tag: bun-v1.4.0
-Source commit: 34cbb9a40b4bd1bd767d134a7065e66c2432a676
+Release tag: bun-v1.4.2
+Source commit: 744846f844374847c902b5e7fd59b4342a51ef99
 
 # Document: Bytecode Caching
 
@@ -51,6 +51,20 @@ The resulting executable contains both the code and the bytecode.
 ESM bytecode requires `--compile` because Bun embeds module metadata (import/export information) in the compiled binary. With this metadata, the JavaScript engine skips parsing entirely at runtime.
 
 Without `--compile`, ESM bytecode would still require parsing the source to analyze module dependencies, which defeats the purpose of bytecode caching.
+
+### Limiting bytecode depth
+
+By default, Bun compiles every function in the bundle to bytecode, including functions nested inside other functions. Use `--bytecode-depth` (a non-negative integer) to compile only the top `N` levels of nesting. Functions past that limit are compiled from source when they are first called.
+
+```bash terminal icon="terminal"
+# Only the top-level code of each module, no nested functions
+bun build ./index.ts --target=bun --bytecode --bytecode-depth=0 --outdir=./dist
+
+# Top-level code and the functions it declares directly
+bun build ./index.ts --target=bun --bytecode --bytecode-depth=1 --outdir=./dist
+```
+
+A lower depth makes the `.jsc` file smaller. The trade-off is that deeply nested functions are parsed at runtime instead of ahead of time. The same option is available as `bytecodeDepth` in `Bun.build`.
 
 ### Combining with other optimizations
 
@@ -1567,7 +1581,7 @@ In Bun's CLI, boolean flags like `--minify` take no argument. Flags that take on
 | `--sourcefile`         | n/a                        | Not supported. Bun does not support stdin input.                                                                                                                                                                                                                                                                                      |
 | `--sources-content`    | n/a                        | Not supported                                                                                                                                                                                                                                                                                                                         |
 | `--supported`          | n/a                        | Not supported                                                                                                                                                                                                                                                                                                                         |
-| `--tree-shaking`       | n/a                        | Always true                                                                                                                                                                                                                                                                                                                           |
+| `--tree-shaking`       | n/a                        | Always true. Bun also tree-shakes the exports of `import()` / `require()` targets down to the names the importing code reads (see [splitting](https://bun.com/docs/bundler#splitting)); esbuild keeps every export of a dynamically imported module.                                                                                  |
 | `--tsconfig`           | `--tsconfig-override`      |                                                                                                                                                                                                                                                                                                                                       |
 | `--version`            | n/a                        | Run `bun --version` to see the version of Bun.                                                                                                                                                                                                                                                                                        |
 
@@ -1790,39 +1804,13 @@ To build for Linux x64 (most servers):
 
 ```bash icon="terminal" terminal
 bun build --compile --target=bun-linux-x64 ./index.ts --outfile myapp
-
-# To support CPUs from before 2013, use the baseline version (nehalem)
-bun build --compile --target=bun-linux-x64-baseline ./index.ts --outfile myapp
-
-# To explicitly only support CPUs from 2013 and later, use the modern version (haswell)
-# modern is faster, but baseline is more compatible.
-bun build --compile --target=bun-linux-x64-modern ./index.ts --outfile myapp
 ```
 
 ```ts build.ts icon="/icons/typescript.svg"
-// Standard Linux x64
 await Bun.build({
   entrypoints: ["./index.ts"],
   compile: {
     target: "bun-linux-x64",
-    outfile: "./myapp",
-  },
-});
-
-// Baseline (pre-2013 CPUs)
-await Bun.build({
-  entrypoints: ["./index.ts"],
-  compile: {
-    target: "bun-linux-x64-baseline",
-    outfile: "./myapp",
-  },
-});
-
-// Modern (2013+ CPUs, faster)
-await Bun.build({
-  entrypoints: ["./index.ts"],
-  compile: {
-    target: "bun-linux-x64-modern",
     outfile: "./myapp",
   },
 });
@@ -1850,31 +1838,15 @@ To build for Windows x64:
 ```bash icon="terminal" terminal
 bun build --compile --target=bun-windows-x64 ./path/to/my/app.ts --outfile myapp
 
-# To support CPUs from before 2013, use the baseline version (nehalem)
-bun build --compile --target=bun-windows-x64-baseline ./path/to/my/app.ts --outfile myapp
-
-# To explicitly only support CPUs from 2013 and later, use the modern version (haswell)
-bun build --compile --target=bun-windows-x64-modern ./path/to/my/app.ts --outfile myapp
-
 # note: if no .exe extension is provided, Bun adds it automatically for Windows executables
 ```
 
 ```ts build.ts icon="/icons/typescript.svg"
-// Standard Windows x64
 await Bun.build({
   entrypoints: ["./path/to/my/app.ts"],
   compile: {
     target: "bun-windows-x64",
     outfile: "./myapp", // .exe added automatically
-  },
-});
-
-// Baseline or modern variants
-await Bun.build({
-  entrypoints: ["./path/to/my/app.ts"],
-  compile: {
-    target: "bun-windows-x64-baseline",
-    outfile: "./myapp",
   },
 });
 ```
@@ -1933,23 +1905,22 @@ await Bun.build({
 
 The segments of the `--target` value can appear in any order, as long as they're delimited by `-`.
 
-| --target             | Operating System | Architecture | Modern | Baseline | Libc  |
-| -------------------- | ---------------- | ------------ | ------ | -------- | ----- |
-| bun-linux-x64        | Linux            | x64          | ✅      | ✅        | glibc |
-| bun-linux-arm64      | Linux            | arm64        | ✅      | N/A      | glibc |
-| bun-windows-x64      | Windows          | x64          | ✅      | ✅        | -     |
-| bun-windows-arm64    | Windows          | arm64        | ✅      | N/A      | -     |
-| bun-darwin-x64       | macOS            | x64          | ✅      | ✅        | -     |
-| bun-darwin-arm64     | macOS            | arm64        | ✅      | N/A      | -     |
-| bun-linux-x64-musl   | Linux            | x64          | ✅      | ✅        | musl  |
-| bun-linux-arm64-musl | Linux            | arm64        | ✅      | N/A      | musl  |
+| --target             | Operating System | Architecture | Libc  |
+| -------------------- | ---------------- | ------------ | ----- |
+| bun-linux-x64        | Linux            | x64          | glibc |
+| bun-linux-arm64      | Linux            | arm64        | glibc |
+| bun-windows-x64      | Windows          | x64          | -     |
+| bun-windows-arm64    | Windows          | arm64        | -     |
+| bun-darwin-x64       | macOS            | x64          | -     |
+| bun-darwin-arm64     | macOS            | arm64        | -     |
+| bun-linux-x64-musl   | Linux            | x64          | musl  |
+| bun-linux-arm64-musl | Linux            | arm64        | musl  |
 
-> **Warning**
+> **Note**
 >
-> On x64 platforms, Bun uses SIMD optimizations that require a CPU with AVX2 instructions. The `-baseline` build of Bun
-> is for older CPUs without them. The Bun installer detects which version to use, but when cross-compiling you might not
-> know the target CPU. This mostly matters on Windows x64 and Linux x64, rarely on Darwin x64. If you or your users see
-> `"Illegal instruction"` errors, you might need to use the baseline version.
+> On x64, Bun ships a single binary that targets Nehalem (SSE4.2) and selects AVX2/AVX-512 code paths at runtime. The
+> `-baseline` and `-modern` target suffixes are still accepted for backward compatibility and resolve to the same
+> binary; you do not need to pick one based on the destination CPU.
 
 ***
 
@@ -2487,6 +2458,19 @@ const wasmModule = await WebAssembly.instantiate(wasmBytes);
 const fontData = await file(fontPath).bytes();
 ```
 
+### Embed text as a string
+
+Use the `text` loader when you want the contents of a file as a string. `.txt` files use it by default. For other extensions, add `with { type: "text" }` or pass `--loader .md:text`.
+
+```ts index.ts icon="/icons/typescript.svg"
+import notes from "./notes.txt";
+import readme from "./README.md" with { type: "text" };
+
+console.log(notes); // the contents of notes.txt
+```
+
+In a compiled executable the text is stored once, in the form the JavaScript engine uses for strings (one byte per character for ASCII text, UTF-16 otherwise). The runtime hands the string back without a copy, so a large text import costs its size in the binary and no extra copy on the heap. A text import is a module, not a file: `Bun.embeddedFiles` does not list it. Use `with { type: "file" }` when you need a file path instead.
+
 ### Embed SQLite databases
 
 To embed a SQLite database into the compiled executable, set `type: "sqlite"` in the import attribute and the `embed` attribute to `"true"`.
@@ -2931,24 +2915,23 @@ compile: {
 }
 ```
 
+Without `outfile`, the executable is named after the entrypoint and written to `outdir`, or to the current working directory when there is no `outdir`. This matches `bun build --compile`.
+
 ### Supported targets
 
 ```ts title="Bun.Build.CompileTarget" icon="/icons/typescript.svg"
 type CompileTarget =
   | "bun-darwin-x64"
-  | "bun-darwin-x64-baseline"
   | "bun-darwin-arm64"
   | "bun-linux-x64"
-  | "bun-linux-x64-baseline"
-  | "bun-linux-x64-modern"
   | "bun-linux-arm64"
   | "bun-linux-x64-musl"
   | "bun-linux-x64-baseline-musl"
   | "bun-linux-arm64-musl"
   | "bun-windows-x64"
-  | "bun-windows-x64-baseline"
-  | "bun-windows-x64-modern"
   | "bun-windows-arm64";
+// The "-baseline" and "-modern" suffixes are accepted for backward
+// compatibility and resolve to the same x64 binary.
 ```
 
 ### Complete example
@@ -4808,7 +4791,7 @@ bun build ./index.tsx --outdir ./build
 
 It's fast. The following numbers are from esbuild's [three.js benchmark](https://github.com/oven-sh/bun/tree/main/bench/bundle).
 
-![](https://raw.githubusercontent.com/oven-sh/bun/34cbb9a40b4bd1bd767d134a7065e66c2432a676/docs/images/bundler-speed.png)
+![](https://raw.githubusercontent.com/oven-sh/bun/744846f844374847c902b5e7fd59b4342a51ef99/docs/images/bundler-speed.png)
 
 ## Why bundle?
 
@@ -5276,6 +5259,66 @@ Running this build with the JavaScript API results in the following files:
 The generated `chunk-dqmx6gc8.js` file contains the shared code. To avoid collisions, the file name includes a content hash by default. The `bun build` CLI names this chunk `entry-a-t268ez5g.js` instead of `chunk-<hash>.js`. Customize this with [`naming`](#naming).
 
 Each `import()` of a bundled JavaScript module also becomes its own chunk. Tree shaking applies to these chunks too: if every `import()` of a module lives in code that tree shaking removes — for example inside a function that is only called behind a [`define`](#define) or [`features`](#features) gate that evaluates to `false` — and nothing else in the live output imports the module, its chunk is not written and the module is absent from the [metafile](#metafile)'s `inputs` and `outputs`. Setting `treeShaking: false` keeps every `import()` chunk. This differs from esbuild, which emits a chunk for every reachable `import()` target.
+
+With `target: "bun"`, a `require()` of a bundled ES module becomes a chunk of its own as well. The call is emitted as `import.meta.require("./chunk-<hash>.js")` and stays synchronous — Bun evaluates the chunk when the call runs — so a `require()` inside a function that never runs keeps its module out of the startup working set entirely. Tree shaking treats these chunks like `import()` chunks. `require()` of a CommonJS module is unaffected and keeps returning `module.exports`. A `require()` cycle between such chunks follows Bun's runtime `require()` of an ES module: a module required again while its chunk is still being loaded sees the partially initialized CommonJS placeholder (`{}`) rather than the live bindings the in-chunk wrapper provides. For other targets — and with `splitRequire: false` (`--no-split-require`) — the required module is inlined into the calling chunk behind a lazy wrapper instead, because the call must return synchronously.
+
+#### Tree-shaking `import()` and `require()` results
+
+When the result of a string-literal `import()` or `require()` of an ES module is only ever used to read specific exports, the exports nobody reads are dropped from that module — and whatever only they depended on tree-shakes with them. This applies with and without `splitting`; the module is still loaded lazily, exactly where the call is written.
+
+```ts title="entry.ts" icon="/icons/typescript.svg"
+const { render } = await import("./markdown"); // keeps `render`
+import("./telemetry").then(t => t.init()); // keeps `init`
+const { parse } = require("./yaml"); // keeps `parse` (ES module targets only)
+await import("./polyfill"); // keeps only side effects
+```
+
+Recognized uses: destructuring (`const { a, b: c, ...rest } = await import(x)`, also `let`/`var` and `export const { a } = …`), property access on the awaited value or on a local holding it (`(await import(x)).a`, `const ns = await import(x); ns.a; const { b } = ns`), `.then(({ a }) => …)` / `.then(ns => ns.a)` with an arrow function, per-element destructuring of `await Promise.all([import(x), import(y)])`, the same shapes for `require()`, and a bare `import(x);` / `await import(x);` / `require(x);` statement (nothing observed).
+
+The module keeps every export as soon as one use can't be followed: the namespace is passed, returned, stored, spread or iterated (`() => import(x)`, `fn(ns)`, `{ ...ns }`, `Object.keys(ns)`), accessed with a computed key (or `?.` directly on the `await import(x)` expression), handed to a non-arrow `.then` callback, reached via `import * as ns` elsewhere, or read under a direct `eval`. CommonJS targets always keep everything. The imported module itself is always evaluated; only with `"sideEffects": false` can a module it merely re-exports from be skipped when none of those re-exports are observed.
+
+```ts title="build.ts" icon="/icons/typescript.svg"
+await Bun.build({
+  entrypoints: ["./index.tsx"],
+  outdir: "./out",
+  target: "bun",
+  splitting: true,
+  splitRequire: false, // keep require()'d modules in the calling chunk
+});
+```
+
+```bash title="Terminal" icon="terminal"
+bun build ./index.tsx --outdir ./out --target bun --splitting --no-split-require
+```
+
+### minChunkSize
+
+With `splitting`, also fold small side-effect-free chunks into a chunk that more entrypoints load.
+
+```ts title="build.ts" icon="/icons/typescript.svg"
+await Bun.build({
+  entrypoints: ['./index.tsx'],
+  outdir: './out',
+  splitting: true,
+  minChunkSize: 16 * 1024, // default 0 (off)
+})
+```
+
+```bash terminal icon="terminal"
+bun build ./index.tsx --outdir ./out --splitting --min-chunk-size=16384
+```
+
+Code splitting gives each distinct set of importers its own chunk, then folds chunks that are always loaded together: a module that `index.tsx` imports and that a lazily `import()`ed module also imports lives in `index.js`, and the lazy chunk imports it from there, because the lazy module can only load after `index.tsx` has run. That fold never makes an entrypoint load more code, so it is always on.
+
+`minChunkSize` goes further for chunks whose source files add up to fewer than this many bytes and whose modules run nothing at the top level: only declarations, `"sideEffects": false` in their `package.json`, a lazily initialized CommonJS/ESM wrapper, or an import of a CommonJS module (such as `react`) that is already initialized wherever the chunk's code ends up. Such a chunk folds into a chunk loaded by a superset of its importers. Everything it imports must already be loaded whenever that target is, or be side-effect free as well. The extra entrypoints then carry some unused definitions, capped at about 1.5% of what each entrypoint loaded to begin with. No side effect runs earlier than before and nothing lazy becomes eager. Because these rules bound what an entrypoint can end up loading, a large `minChunkSize` is reasonable.
+
+For `target: "browser"`, where every chunk is a request, 16 KiB is a good starting point.
+
+A chunk that absorbs other chunks exports the symbols those chunks' importers need. An entrypoint that has exports of its own never absorbs one, so its module namespace stays as written; an entrypoint without exports can. With `--compile`, nothing folds into the entrypoint's own chunk.
+
+### modulePreload
+
+With `splitting` and `target: "browser"`, the browser would otherwise discover a chunk's own imports only after downloading and parsing it, one level per round trip. Bun writes a `<link rel="modulepreload">` into HTML entrypoints for every chunk the page's script statically imports, and every `import()` first inserts one for each chunk its target statically imports (transitively), so the whole dependency chain downloads in parallel. Outside a document (workers, server-side) the `import()` helper does nothing. Inserted links copy the nonce from a `<meta property="csp-nonce" nonce="...">` tag if the page has one. Enabled by default; set `modulePreload: false` (`--no-module-preload`) to emit plain `import()` calls and no links.
 
 ### plugins
 
@@ -5918,6 +5961,57 @@ The bundler always loads `export *` re-exports (it never defers them) to avoid c
 
 **Plugins:** Resolve and load plugins work with barrel optimization. Deferred submodules go through the plugin pipeline when they are eventually loaded.
 
+### Re-exported namespaces
+
+Property reads on an import that turns out to be a module namespace are linked straight to the export they name, the same as a named import. This covers namespaces reached indirectly:
+
+Each of these shapes of `lib.ts` qualifies:
+
+```ts icon="/icons/typescript.svg"
+// import { z } from "./lib";  z.object()
+import * as z from "./external";
+export { z };
+```
+
+```ts icon="/icons/typescript.svg"
+// import z from "./lib";  z.object()
+import * as z from "./external";
+export default z;
+```
+
+```ts icon="/icons/typescript.svg"
+// import { ns } from "./lib";  ns.object()
+export * as ns from "./external";
+```
+
+```ts icon="/icons/typescript.svg"
+// import lib from "./lib";  lib.object()
+export function object() {}
+export * as default from "./lib";
+```
+
+In each case the member access compiles to a direct reference to `object`, the `exports` object for `./external` is not created unless something else uses the namespace as a value (`Object.keys(z)`, `{ ...z }`, passing `z` around), and the exports you don't touch are tree-shaken. One level is resolved (`ns.a.b` binds `a`). Calling a function this way passes `undefined` as `this`, as with `import * as ns; ns.fn()`.
+
+Assignments (`z.x = 1`), optional chains, and non-literal computed keys (`z[key]`) are left as property accesses; `z["object"]` is treated like `z.object`. `export default someImport` is followed only when it ends at a namespace; a default that snapshots a `let` export keeps snapshot semantics.
+
+The same applies to the default import of a CommonJS module whose `exports.x = ...` assignments the bundler lifted to ES module exports, such as `react` and `scheduler`. The default import of a CommonJS module is its `module.exports`, which is that module's namespace, so `import React from "react"; React.useState()` compiles to a direct call of the lifted `useState` binding. The namespace object is created only when `React` itself is used as a value, and it lists the exports in assignment order, like `module.exports` does. A write through it, `React.useLayoutEffect = React.useEffect`, assigns the lifted binding, so every importer sees the new value, the same as a write to `module.exports`. `React.default`, and `ns.default` on `import * as ns`, is the lifted `default` export when the module has one, and otherwise the namespace itself, as `module.exports` is in Node. A module that sets both `exports.__esModule` and `exports.default` keeps its CommonJS wrapper when the importer is not an ES module by type (`.mjs`, `.mts`, or `"type": "module"`), because the default import then depends on that flag at run time. An `import()` of a module that does not set both resolves to that same namespace object as `default`, with or without code splitting.
+
+### deprecatedNamespaceObjectSetters
+
+Default `true`. When a namespace object does have to be created, each property currently gets a getter and a setter; the setter accepts `ns.foo = value` without throwing (reads still return the module's binding). Set this to `false` to emit getter-only namespace objects, which is what a future Bun release will do unconditionally. The namespace of a lifted CommonJS module is not affected: it stands in for `module.exports`, so its setters assign the lifted bindings either way.
+
+```ts title="build.ts" icon="/icons/typescript.svg"
+await Bun.build({
+  entrypoints: ['./index.tsx'],
+  outdir: './out',
+  deprecatedNamespaceObjectSetters: false,
+})
+```
+
+```bash terminal icon="terminal"
+bun build ./index.tsx --outdir ./out --no-deprecated-namespace-object-setters
+```
+
 ### metafile
 
 Generate metadata about the build in a structured format. The metafile describes every input and output file: sizes, imports, and exports. Use it for:
@@ -6132,6 +6226,8 @@ The `bytecode: boolean` option generates bytecode for any JavaScript/TypeScript 
 
 Without an explicit `format`, bytecode defaults to CommonJS.
 
+The `bytecodeDepth: number` option (a non-negative integer) limits how many levels of nested functions are compiled ahead of time (`0` = only each module's top-level code). Functions past the limit are compiled from source when first called. Defaults to all.
+
 ```ts title="build.ts" icon="/icons/typescript.svg"
 // CommonJS bytecode (generates .jsc files)
 await Bun.build({
@@ -6271,6 +6367,9 @@ interface BuildConfig {
       };
   root?: string; // project root
   splitting?: boolean; // default false, enable code splitting
+  splitRequire?: boolean; // default true, with splitting and target "bun": require() of an ES module is a chunk too
+  minChunkSize?: number; // default 0, also fold side-effect-free chunks smaller than this many source bytes
+  modulePreload?: boolean; // default true, with splitting and target "browser": <link rel=modulepreload> the chunks an entrypoint or import() depends on
   plugins?: BunPlugin[];
   external?: string[];
   packages?: "bundle" | "external";
@@ -6315,6 +6414,12 @@ interface BuildConfig {
    * Force emitting @__PURE__ annotations even if minify.whitespace is true.
    */
   emitDCEAnnotations?: boolean;
+  /**
+   * Emit a setter per property on bundled module namespace objects (default).
+   * @deprecated set to `false` for getter-only namespace objects; this becomes
+   * the only behavior in a future release.
+   */
+  deprecatedNamespaceObjectSetters?: boolean;
 
   /**
    * Generate bytecode for the output. This can dramatically improve cold
@@ -6330,6 +6435,13 @@ interface BuildConfig {
    * @default false
    */
   bytecode?: boolean;
+  /**
+   * How many levels of nested functions to compile to bytecode ahead of time
+   * (a non-negative integer; `0` = only each module's top-level code).
+   * Only used when `bytecode: true`.
+   * @default undefined (all nested functions)
+   */
+  bytecodeDepth?: number;
   /**
    * Add a banner to the bundled code such as "use client";
    */
@@ -6441,6 +6553,10 @@ Set `NODE_ENV=production` and enable minification
 
 Use a bytecode cache when compiling
 
+**Property (type: number)**
+
+How many levels of nested functions to compile to bytecode ahead of time (a non-negative integer). Defaults to all
+
 **Property (type: string)**
 
 Intended execution environment for the bundle. One of `browser`, `bun`, or `node`
@@ -6513,6 +6629,16 @@ Root directory used when bundling multiple entry points
 
 Enable code splitting for shared modules
 
+**Property (type: number)**
+
+With `--splitting`, also fold side-effect-free chunks smaller than this many source bytes into a chunk loaded by a
+superset of their importers
+
+**Property (type: boolean)**
+
+With `--splitting` and `--target browser`, don't emit `<link rel="modulepreload">` for the chunks an entrypoint or
+`import()` depends on
+
 **Property (type: string)**
 
 Prefix the bundler adds to import paths in bundled code
@@ -6547,6 +6673,11 @@ Chunk CSS files together to reduce duplication (only when multiple entry points 
 **Property (type: boolean)**
 
 Re-emit Dead Code Elimination annotations. Disabled when `--minify-whitespace` is used
+
+**Property (type: boolean)**
+
+Emit getter-only module namespace objects (assigning to a property throws, like a real namespace). This becomes the
+default in a future release
 
 **Property (type: boolean)**
 
@@ -6707,6 +6838,12 @@ import my_toml from "./my_file" with { type: "toml" };
 // or with dynamic imports
 const { default: my_toml } = await import("./my_file", { with: { type: "toml" } });
 ```
+
+> **Note**
+>
+> With TypeScript 7.1 or newer, `@types/bun` types these imports from the `type` attribute: a `type: "text"` import is a
+> `string`, a `type: "sqlite"` import is a `Database`. Older TypeScript versions type the import from the file extension
+> alone.
 
 ## Built-in loaders
 
@@ -10300,27 +10437,27 @@ This guide deploys a Bun HTTP server to AWS Lambda using a `Dockerfile`.
    >
    > .
 
-   ![Create Function](https://raw.githubusercontent.com/oven-sh/bun/34cbb9a40b4bd1bd767d134a7065e66c2432a676/docs/images/guides/lambda1.png)
+   ![Create Function](https://raw.githubusercontent.com/oven-sh/bun/744846f844374847c902b5e7fd59b4342a51ef99/docs/images/guides/lambda1.png)
 
    Give the function a name, like `my-bun-function`.
 7. Go to the **Container image URI** section and click **Browse images**. Select the image you pushed to the ECR repository.
 
-   ![Select Container Repository](https://raw.githubusercontent.com/oven-sh/bun/34cbb9a40b4bd1bd767d134a7065e66c2432a676/docs/images/guides/lambda2.png)
+   ![Select Container Repository](https://raw.githubusercontent.com/oven-sh/bun/744846f844374847c902b5e7fd59b4342a51ef99/docs/images/guides/lambda2.png)
 
    Then, select the `latest` image and click **Select image**.
 
-   ![Select Container Image](https://raw.githubusercontent.com/oven-sh/bun/34cbb9a40b4bd1bd767d134a7065e66c2432a676/docs/images/guides/lambda3.png)
+   ![Select Container Image](https://raw.githubusercontent.com/oven-sh/bun/744846f844374847c902b5e7fd59b4342a51ef99/docs/images/guides/lambda3.png)
 8. To get a public URL for the function, go to **Additional configurations** > **Networking** > **Function URL**.
 
    Set this to **Enable**, with Auth Type **NONE**.
 
-   ![Set the Function URL](https://raw.githubusercontent.com/oven-sh/bun/34cbb9a40b4bd1bd767d134a7065e66c2432a676/docs/images/guides/lambda4.png)
+   ![Set the Function URL](https://raw.githubusercontent.com/oven-sh/bun/744846f844374847c902b5e7fd59b4342a51ef99/docs/images/guides/lambda4.png)
 9. Click **Create function** at the bottom of the page.
 
-   ![Create Function](https://raw.githubusercontent.com/oven-sh/bun/34cbb9a40b4bd1bd767d134a7065e66c2432a676/docs/images/guides/lambda6.png)
+   ![Create Function](https://raw.githubusercontent.com/oven-sh/bun/744846f844374847c902b5e7fd59b4342a51ef99/docs/images/guides/lambda6.png)
 10. Once the function is created, you're redirected to its page. The function URL is in the **"Function URL"** section.
 
-    ![Function URL](https://raw.githubusercontent.com/oven-sh/bun/34cbb9a40b4bd1bd767d134a7065e66c2432a676/docs/images/guides/lambda5.png)
+    ![Function URL](https://raw.githubusercontent.com/oven-sh/bun/744846f844374847c902b5e7fd59b4342a51ef99/docs/images/guides/lambda5.png)
 11. Your app is now live. To test the function, either go to the **Test** tab or call the function URL directly.
 
     ```bash terminal icon="terminal"
@@ -10358,7 +10495,7 @@ This guide deploys a Bun HTTP server to DigitalOcean using a `Dockerfile`.
 
    In the DigitalOcean dashboard, go to [**Container Registry**](https://cloud.digitalocean.com/registry), and enter the details for the new registry.
 
-   ![DigitalOcean registry dashboard](https://raw.githubusercontent.com/oven-sh/bun/34cbb9a40b4bd1bd767d134a7065e66c2432a676/docs/images/guides/digitalocean-7.png)
+   ![DigitalOcean registry dashboard](https://raw.githubusercontent.com/oven-sh/bun/744846f844374847c902b5e7fd59b4342a51ef99/docs/images/guides/digitalocean-7.png)
 
    Make sure the details are correct, then click **Create Registry**.
 
@@ -10373,7 +10510,7 @@ This guide deploys a Bun HTTP server to DigitalOcean using a `Dockerfile`.
 
    You should see the new registry in the [**DigitalOcean registry dashboard**](https://cloud.digitalocean.com/registry):
 
-   ![DigitalOcean registry dashboard](https://raw.githubusercontent.com/oven-sh/bun/34cbb9a40b4bd1bd767d134a7065e66c2432a676/docs/images/guides/digitalocean-1.png)
+   ![DigitalOcean registry dashboard](https://raw.githubusercontent.com/oven-sh/bun/744846f844374847c902b5e7fd59b4342a51ef99/docs/images/guides/digitalocean-1.png)
 2. Create a new `Dockerfile` in the root of your project. This file contains the instructions to initialize the container, copy your local project files into it, install dependencies, and start the application.
 
    ```docker Dockerfile icon="docker"
@@ -10445,21 +10582,21 @@ This guide deploys a Bun HTTP server to DigitalOcean using a `Dockerfile`.
 
    Once the image is pushed, you should see it in the [**DigitalOcean registry dashboard**](https://cloud.digitalocean.com/registry):
 
-   ![DigitalOcean registry dashboard](https://raw.githubusercontent.com/oven-sh/bun/34cbb9a40b4bd1bd767d134a7065e66c2432a676/docs/images/guides/digitalocean-2.png)
+   ![DigitalOcean registry dashboard](https://raw.githubusercontent.com/oven-sh/bun/744846f844374847c902b5e7fd59b4342a51ef99/docs/images/guides/digitalocean-2.png)
 5. In the DigitalOcean dashboard, go to [**App Platform**](https://cloud.digitalocean.com/apps) > **Create App**. You can create a project directly from the container image.
 
-   ![DigitalOcean App Platform project dashboard](https://raw.githubusercontent.com/oven-sh/bun/34cbb9a40b4bd1bd767d134a7065e66c2432a676/docs/images/guides/digitalocean-3.png)
+   ![DigitalOcean App Platform project dashboard](https://raw.githubusercontent.com/oven-sh/bun/744846f844374847c902b5e7fd59b4342a51ef99/docs/images/guides/digitalocean-3.png)
 
    Make sure the details are correct, then click **Next**.
 
-   ![DigitalOcean App Platform service dashboard](https://raw.githubusercontent.com/oven-sh/bun/34cbb9a40b4bd1bd767d134a7065e66c2432a676/docs/images/guides/digitalocean-4.png)
+   ![DigitalOcean App Platform service dashboard](https://raw.githubusercontent.com/oven-sh/bun/744846f844374847c902b5e7fd59b4342a51ef99/docs/images/guides/digitalocean-4.png)
 
    Review and configure resource settings, then click **Create app**.
 
-   ![DigitalOcean App Platform service dashboard](https://raw.githubusercontent.com/oven-sh/bun/34cbb9a40b4bd1bd767d134a7065e66c2432a676/docs/images/guides/digitalocean-6.png)
+   ![DigitalOcean App Platform service dashboard](https://raw.githubusercontent.com/oven-sh/bun/744846f844374847c902b5e7fd59b4342a51ef99/docs/images/guides/digitalocean-6.png)
 6. Your app is now live. Once the app is created, you should see it in the App Platform dashboard with its public URL.
 
-   ![DigitalOcean App Platform app dashboard](https://raw.githubusercontent.com/oven-sh/bun/34cbb9a40b4bd1bd767d134a7065e66c2432a676/docs/images/guides/digitalocean-5.png)
+   ![DigitalOcean App Platform app dashboard](https://raw.githubusercontent.com/oven-sh/bun/744846f844374847c902b5e7fd59b4342a51ef99/docs/images/guides/digitalocean-5.png)
 
 
 # Document: Deploy a Bun application on Google Cloud Run
@@ -10827,8 +10964,8 @@ Canonical source: https://bun.com/docs/guides/deployment/vercel
 
 > **Warning**
 >
-> The Bun runtime on Vercel is in Beta. Automatic source maps, bytecode caching, and request metrics for `node:http` and
-> `node:https` are not supported yet (request metrics for `fetch` are). See [feature
+> Automatic source maps, bytecode caching, and request metrics for `node:http` and `node:https` are not supported on the
+> Bun runtime (request metrics for `fetch` are). See [feature
 > support](https://vercel.com/docs/functions/runtimes/bun#feature-support) in the Vercel documentation.
 
 ***
@@ -10837,11 +10974,11 @@ Canonical source: https://bun.com/docs/guides/deployment/vercel
 
    ```json vercel.json icon="file-json"
    {
-   	"bunVersion": "1.x" // [!code ++]
+   	"bunVersion": "1.4.x" // [!code ++]
    }
    ```
 
-   The value must be `"1.x"`; Vercel manages the minor and patch versions.
+   Vercel manages the patch version.
 
    For best results, match your local Bun version with the version Vercel uses.
 2. Choose how requests reach your code.
@@ -10931,7 +11068,7 @@ Canonical source: https://bun.com/docs/guides/deployment/vercel
    ```
 
    ```txt
-   runtime 1.3.14
+   runtime 1.4.0
    ```
 
    [See the Vercel Bun Runtime documentation for feature support →](https://vercel.com/docs/functions/runtimes/bun#feature-support)
@@ -14334,7 +14471,7 @@ Canonical source: https://bun.com/docs/guides/ecosystem/upstash
 
    The database page displays two connection methods: HTTP and TLS. For Bun's Redis client, you need the **TLS** connection details; the URL starts with `rediss://`.
 
-   ![Upstash Redis database page](https://raw.githubusercontent.com/oven-sh/bun/34cbb9a40b4bd1bd767d134a7065e66c2432a676/docs/images/guides/upstash-1.png)
+   ![Upstash Redis database page](https://raw.githubusercontent.com/oven-sh/bun/744846f844374847c902b5e7fd59b4342a51ef99/docs/images/guides/upstash-1.png)
 3. Set the `REDIS_URL` environment variable in your `.env` file using the Redis endpoint (not the REST URL):
 
    ```ini .env icon="settings"
@@ -15862,7 +15999,7 @@ bun pm ls
 ```
 
 ```txt
-my-pkg node_modules (781)
+my-pkg node_modules (781 installed)
 ├── @types/node@20.16.5
 ├── @types/react@18.3.8
 ├── @types/react-dom@18.3.0
@@ -17585,7 +17722,7 @@ To view V8 heap snapshots in Chrome DevTools:
 3. Click the "Load" button (folder icon)
 4. Select your `.heapsnapshot` file
 
-![Chrome DevTools Memory Tab](https://raw.githubusercontent.com/oven-sh/bun/34cbb9a40b4bd1bd767d134a7065e66c2432a676/docs/images/chrome-devtools-memory.png)
+![Chrome DevTools Memory Tab](https://raw.githubusercontent.com/oven-sh/bun/744846f844374847c902b5e7fd59b4342a51ef99/docs/images/chrome-devtools-memory.png)
 
 
 # Document: Import a HTML file as text
@@ -21383,16 +21520,13 @@ To download Bun binaries directly, visit the [releases page on GitHub](https://g
 
 - [Linux x64](https://github.com/oven-sh/bun/releases/latest/download/bun-linux-x64.zip)
 
-  Standard Linux x64 binary
-- [Linux x64 Baseline](https://github.com/oven-sh/bun/releases/latest/download/bun-linux-x64-baseline.zip)
+  glibc, Nehalem or newer
+- [Linux ARM64](https://github.com/oven-sh/bun/releases/latest/download/bun-linux-aarch64.zip)
 
-  For older CPUs without AVX2
+  ARM64 Linux systems
 - [Windows x64](https://github.com/oven-sh/bun/releases/latest/download/bun-windows-x64.zip)
 
-  Standard Windows binary
-- [Windows x64 Baseline](https://github.com/oven-sh/bun/releases/latest/download/bun-windows-x64-baseline.zip)
-
-  For older CPUs without AVX2
+  Nehalem or newer
 - [Windows ARM64](https://github.com/oven-sh/bun/releases/latest/download/bun-windows-aarch64.zip)
 
   Windows on ARM (Snapdragon, etc.)
@@ -21402,16 +21536,12 @@ To download Bun binaries directly, visit the [releases page on GitHub](https://g
 - [macOS x64](https://github.com/oven-sh/bun/releases/latest/download/bun-darwin-x64.zip)
 
   Intel Macs
-- [Linux ARM64](https://github.com/oven-sh/bun/releases/latest/download/bun-linux-aarch64.zip)
-
-  ARM64 Linux systems
 
 ### Musl Binaries
 
 For distributions without `glibc` (Alpine Linux, Void Linux):
 
 - [Linux x64 musl](https://github.com/oven-sh/bun/releases/latest/download/bun-linux-x64-musl.zip)
-- [Linux x64 musl baseline](https://github.com/oven-sh/bun/releases/latest/download/bun-linux-x64-musl-baseline.zip)
 - [Linux ARM64 musl](https://github.com/oven-sh/bun/releases/latest/download/bun-linux-aarch64-musl.zip)
 
 > **Note**
@@ -21424,29 +21554,18 @@ For distributions without `glibc` (Alpine Linux, Void Linux):
 
 ## CPU Requirements
 
-CPU requirements depend on which binary you're using:
-
-**x64 binaries** target the Haswell CPU architecture (AVX and AVX2 instructions required)
+Bun ships a single x64 binary per platform. It targets the Nehalem microarchitecture (SSE4.2) and selects AVX2/AVX-512
+code paths at runtime when the CPU supports them, so there is no separate "baseline" download to choose.
 
 | Platform | Intel Requirement               | AMD Requirement    |
 | -------- | ------------------------------- | ------------------ |
-| x64      | Haswell (4th gen Core) or newer | Excavator or newer |
-
-**x64-baseline binaries** target the Nehalem architecture for older CPUs
-
-| Platform     | Intel Requirement               | AMD Requirement    |
-| ------------ | ------------------------------- | ------------------ |
-| x64-baseline | Nehalem (1st gen Core) or newer | Bulldozer or newer |
-
-> **Warning**
->
-> Baseline builds are slower than regular builds. Use them only if you encounter an "Illegal
-> Instruction" error.
+| x64      | Nehalem (1st gen Core) or newer | Bulldozer or newer |
 
 > **Note**
 >
-> Bun does not support CPUs older than the baseline target, which requires the SSE4.2 extension. Bun requires macOS 13.0
-> or later.
+> Bun does not support x64 CPUs without the SSE4.2 extension. Bun requires macOS 13.0 or later. The `-baseline` release
+> assets and `@oven/bun-*-x64-baseline` npm packages are kept as aliases of the single x64 binary for backward
+> compatibility with older install scripts.
 
 ***
 
@@ -22537,7 +22656,7 @@ bun dedupe v1.4.0 (abc12345)
 ↳ esbuild 0.15.10 → 0.15.11
 ↳ react 18.2.0 → 18.3.1
 
-2 duplicate versions removed, 3 packages installed (checked 5 packages) [12.00ms]
+2 duplicate versions removed, 3 packages installed (checked 5 packages in bun.lock) [12.00ms]
 ```
 
 Each row is a version Bun removed and the version its dependents now use.
@@ -22558,7 +22677,7 @@ bun dedupe v1.4.0 (abc12345)
 ↳ esbuild 0.15.10 → 0.15.11
 ↳ react 18.2.0 → 18.3.1
 
-2 duplicate versions can be removed (checked 5 packages) [9.00ms]
+2 duplicate versions can be removed (checked 5 packages in bun.lock) [9.00ms]
   bun dedupe
 ```
 
@@ -22821,6 +22940,20 @@ Bun does not enable `--frozen-lockfile` automatically in CI; pass the flag or us
 `--frozen-lockfile` works on a pruned monorepo checkout (e.g. `turbo prune` output, or a Docker context with only some workspace folders copied in). If a workspace listed in `bun.lock` is missing its `package.json` on disk, Bun skips it with a `note:` and does not install its exclusive dependencies. If a remaining workspace depends on a skipped one, the install fails.
 
 To validate the lockfile without installing, use `bun install --frozen-lockfile --dry-run`.
+
+### Offline installs
+
+With a warm cache, `bun install` can run without the network:
+
+```bash terminal icon="terminal"
+# Use cached package metadata regardless of age; only fetch what is missing from the cache
+bun install --prefer-offline
+
+# Never touch the network (registry, tarball URLs, git); a required dependency that is not cached is an error
+bun install --offline
+```
+
+`--prefer-offline` is also what `install.prefer = "offline"` in `bunfig.toml` selects; `install.offline = true` is the config form of `--offline`. With a complete restored cache, `--offline --frozen-lockfile` makes a CI install fully deterministic and network-free; `--prefer-offline` still fetches whatever the cache is missing.
 
 See [lockfile](https://bun.com/docs/pm/lockfile) for more on `bun.lock`.
 
@@ -24331,7 +24464,7 @@ bun list
 ```
 
 ```txt
-/path/to/project node_modules (135)
+/path/to/project node_modules (135 installed)
 ├── eslint@8.38.0
 ├── react@18.2.0
 ├── react-dom@18.2.0
@@ -24348,7 +24481,7 @@ bun list --all
 ```
 
 ```txt
-/path/to/project node_modules (135)
+/path/to/project node_modules (135 installed)
 ├── @eslint-community/eslint-utils@4.4.0
 ├── @eslint-community/regexpp@4.5.0
 ├── @eslint/eslintrc@2.0.2
@@ -24372,7 +24505,7 @@ bun list --trusted
 ```
 
 ```txt
-/path/to/project node_modules (135)
+/path/to/project node_modules (135 installed)
 └── esbuild@0.21.5
 ```
 
@@ -24387,6 +24520,8 @@ bun pm licenses ls
 ```
 
 ```txt
+bun pm licenses v1.3.0 (a4b2f86f)
+
 MIT (2)
 ├── path-parse@1.0.6
 └── resolve@1.9.0
@@ -24396,6 +24531,8 @@ Unknown (4)
 ├── no-deps@1.0.0
 ├── no-deps@1.0.1
 └── one-dep@1.0.0
+
+6 packages across 2 licenses (checked 6 packages in bun.lock) [4.00ms]
 ```
 
 | Flag                           | Description                                                                                         |
@@ -24690,7 +24827,7 @@ bun prune v1.4.0 (abc12345)
 
 - @types/node@20.11.5
 - left-pad@1.3.0
-2 packages removed (checked 948) [22.00ms]
+2 packages removed (checked 948 installed packages) [22.00ms]
 ```
 
 Packages removed from a workspace or nested `node_modules` folder show the folder in parentheses, e.g. `- typescript@5.4.0 (packages/app/node_modules)`.
@@ -24721,7 +24858,7 @@ bun prune --production --dry-run
 bun prune v1.4.0 (abc12345)
 
 - typescript@5.4.0
-1 package can be removed (checked 948) [9.00ms]
+1 package can be removed (checked 948 installed packages) [9.00ms]
   bun prune --production
 ```
 
@@ -24737,7 +24874,7 @@ bun prune --production --filter app
 
 - Always runs from the workspace root and covers every workspace's `node_modules`, even when invoked inside a workspace package.
 - Requires `bun.lock` to match `package.json`. If you edited dependencies since the last install, run `bun install` first.
-- Uses the same linker as `bun install` would. If `node_modules` was created with the other linker, `bun prune` refuses to run. Pass the matching `--linker`, or run `bun install`.
+- Detects whether `node_modules` was laid out by the hoisted or the isolated linker and prunes it as it is. If the folders hold both layouts (for example after a switch of linkers without a clean install), Bun uses the linker `bun install` would use. Pass `--linker` to choose.
 - Matches packages by name. If a package is at the wrong version, Bun leaves it for `bun install` to replace. Bun only removes a nested copy (`node_modules/a/node_modules/b`) once the correct version is installed above it; otherwise Bun keeps it and prints a warning.
 - Never removes workspace folders, `.bin` entries still in use, dot-directories like `.cache`, plain files, or anything outside `node_modules`.
 - Removes packages disabled for the current `os`/`cpu`. Pass `--os`/`--cpu` to prune for another platform.
@@ -27159,6 +27296,42 @@ Workspaces have a few major benefits.
 - **Split code into logical parts.** If one package relies on another, add it as a dependency in `package.json`. If package `b` depends on `a`, `bun install` installs your local `packages/a` directory into `node_modules` instead of downloading it from the npm registry.
 - **Bun can de-duplicate dependencies.** If `a` and `b` share a common dependency, Bun *hoists* it to the root `node_modules` directory. This saves disk space and minimizes the "dependency hell" of multiple versions of a package installed at once.
 - **Run scripts in multiple packages.** Use the [`--filter` flag](https://bun.com/docs/pm/filter) to run `package.json` scripts in several packages at once, or `--workspaces` to run scripts across all workspaces.
+
+## Self-contained workspaces
+
+With the hoisted linker, dependencies shared by several workspaces are hoisted to the root
+`node_modules`. Some tools cannot follow that: Electron packagers and serverless bundlers walk,
+prune and repackage *one workspace's* `node_modules` and expect every dependency to be physically
+present under it. Mark such a workspace as self-contained, either in its own `package.json`
+(the same key Yarn uses; only the `"workspaces"` value changes the layout):
+
+```json title="apps/desktop/package.json" icon="file-json"
+{
+  "name": "desktop",
+  "installConfig": { "hoistingLimits": "workspaces" }
+}
+```
+
+or from the root `package.json`, next to the workspace globs:
+
+```json title="package.json" icon="file-json"
+{
+  "workspaces": {
+    "packages": ["apps/*", "packages/*"],
+    "selfContained": ["apps/desktop"]
+  }
+}
+```
+
+(entries are workspace paths or package names)
+
+For that workspace `bun install` then behaves as a hoisting barrier — nothing it depends on,
+directly or transitively (including through other workspaces it depends on), is placed above
+`apps/desktop/node_modules`, so that directory is a complete tree — and materializes those
+packages as real copies instead of hardlinks / clones from the cache, so tools that rewrite them
+cannot affect the cache or other projects. All other workspaces keep hoisting to the root as usual. The lockfile does not record the setting. Bun reads it from `package.json` on every install, `--frozen-lockfile` included, so the lockfile is the same with and without it.
+This setting has no effect with the isolated linker, where every package already resolves only its
+own dependencies.
 
 ## Share versions with Catalogs
 
@@ -30660,11 +30833,20 @@ prefer = "online"
 
 Valid values are:
 
-| Value       | Description                                                                                        |
-| ----------- | -------------------------------------------------------------------------------------------------- |
-| `"online"`  | Default. Check the registry for stale packages as needed.                                          |
-| `"offline"` | Skip staleness checks and resolve packages from the local cache. Equivalent to `--prefer-offline`. |
-| `"latest"`  | Always check npm for the latest matching versions. Equivalent to `--prefer-latest`.                |
+| Value       | Description                                                                                                                         |
+| ----------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| `"online"`  | Default. Check the registry for stale packages as needed.                                                                           |
+| `"offline"` | Skip staleness checks and resolve packages from the local cache. Equivalent to `--prefer-offline` (also honoured by `bun install`). |
+| `"latest"`  | Always check npm for the latest matching versions. Equivalent to `--prefer-latest`.                                                 |
+
+### `install.offline`
+
+When `true`, `bun install` never touches the network: package metadata and tarballs must already be in the cache, and anything missing is an error. Default `false`. Equivalent to `bun install --offline`. For the softer "use the cache when possible" behaviour see `install.prefer = "offline"` / `--prefer-offline`.
+
+```toml title="bunfig.toml" icon="settings"
+[install]
+offline = true
+```
 
 ### `install.frozenLockfile`
 
@@ -31014,7 +31196,7 @@ bun run --silent dev
 
 ### `run.elide-lines` - truncate filtered output
 
-The number of lines of script output shown per script when using `--filter`. Default `10`. Set to `0` to show all lines. Equivalent to the `--elide-lines` flag.
+Truncate each script's output to its last N lines when using `--filter` in a terminal. Default `0` (show all lines). Equivalent to the `--elide-lines` flag.
 
 ```toml title="bunfig.toml" icon="settings"
 [run]
@@ -31240,6 +31422,16 @@ cc({
   },
 });
 ```
+
+### Disabling `cc`
+
+Pass `--no-ffi-cc` to disable the C compiler for a process. Any call to `cc()` then throws an error with the code `ERR_FFI_CC_DISABLED`. The `--no-addons` flag also disables `cc()`, in addition to `process.dlopen`.
+
+```sh
+bun --no-ffi-cc ./app.ts
+```
+
+Workers inherit the setting from their parent. A Worker can also set it for itself with `execArgv: ["--no-ffi-cc"]`. Standalone executables can bake it in with `bun build --compile --compile-exec-argv="--no-ffi-cc"`.
 
 
 # Document: Spawn
@@ -33797,6 +33989,16 @@ bun --env-file=.env.1 src/index.ts
 bun --env-file=.env.abc --env-file=.env.def run build
 ```
 
+The path does not have to be a regular file. Bun reads a pipe, a FIFO, or a device until the end of the input, so secrets can reach the process without a file on disk:
+
+```sh
+bun --env-file=<(./fetch-secrets.sh) src/index.ts
+
+echo "API_KEY=..." | bun --env-file=/dev/stdin src/index.ts
+```
+
+A pipe can be read only once. Bun reads it when the process starts, and `Worker` threads and `bun test --parallel` workers reuse the values. A process that starts again with the same arguments reads the path again: a `--watch` reload, and children of `child_process.fork()` or `cluster.fork()`, which inherit `execArgv`. A pipe is then empty and a FIFO waits for a new writer, the same as with Node.js.
+
 ## Disabling automatic `.env` loading
 
 Use `--no-env-file` to disable Bun's automatic `.env` file loading, for example in production or CI/CD pipelines where you want to rely solely on system environment variables.
@@ -34007,7 +34209,7 @@ console.log(`SQLite 3 version: ${sqlite3_libversion()}`);
 
 According to [our benchmark](https://github.com/oven-sh/bun/tree/main/bench/ffi), `bun:ffi` is roughly 2-6x faster than Node.js FFI through `Node-API`.
 
-![](https://raw.githubusercontent.com/oven-sh/bun/34cbb9a40b4bd1bd767d134a7065e66c2432a676/docs/images/ffi.png)
+![](https://raw.githubusercontent.com/oven-sh/bun/744846f844374847c902b5e7fd59b4342a51ef99/docs/images/ffi.png)
 
 Bun's JavaScript engine (JavaScriptCore) implements `dlopen`, `linkSymbols`, `CFunction`, and `JSCallback` natively. Argument conversion, arity handling, and result boxing happen in-engine. Hot call sites compile down through the DFG/FTL JIT tiers into direct native calls with no per-argument JavaScript shim. Bun embeds [TinyCC](https://github.com/TinyCC/tinycc), a small and fast C compiler, only for [`cc()`](https://bun.com/docs/runtime/c-compiler), which compiles C source you provide at runtime.
 
@@ -34806,7 +35008,7 @@ bun ./cat.ts ./path-to-file
 
 It runs 2x faster than GNU `cat` for large files on Linux.
 
-![Cat screenshot](https://raw.githubusercontent.com/oven-sh/bun/34cbb9a40b4bd1bd767d134a7065e66c2432a676/docs/images/cat.jpg)
+![Cat screenshot](https://raw.githubusercontent.com/oven-sh/bun/744846f844374847c902b5e7fd59b4342a51ef99/docs/images/cat.jpg)
 
 ***
 
@@ -34993,6 +35195,12 @@ import my_toml from "./my_file" with { type: "toml" };
 // or with dynamic imports
 const { default: my_toml } = await import("./my_file", { with: { type: "toml" } });
 ```
+
+> **Note**
+>
+> With TypeScript 7.1 or newer, `@types/bun` types these imports from the `type` attribute: a `type: "text"` import is a
+> `string`, a `type: "sqlite"` import is a `Database`. Older TypeScript versions type the import from the file extension
+> alone.
 
 ***
 
@@ -36568,20 +36776,25 @@ Canonical source: https://bun.com/docs/runtime/http/error-handling
 
 # Error Handling
 
-To activate development mode, set `development: true`.
+`Bun.serve()` runs in development mode by default. It is turned off when `NODE_ENV=production` is set, when Bun is run with `--production`, or when you pass `development: false`.
 
 ```ts title="server.ts" icon="/icons/typescript.svg"
 Bun.serve({
-  development: true, // [!code ++]
+  development: false, // [!code ++]
   fetch(req) {
     throw new Error("woops!");
   },
 });
 ```
 
-In development mode, Bun surfaces errors in-browser with a built-in error page.
+In development mode, when a request handler throws and no `error` handler returns a response, Bun responds with a built-in error page that includes the error message, stack trace, source code around each frame, and file paths. This is meant for debugging locally.
 
-![Bun's built-in 500 page](https://raw.githubusercontent.com/oven-sh/bun/34cbb9a40b4bd1bd767d134a7065e66c2432a676/docs/images/exception_page.png)
+![Bun's built-in 500 page](https://raw.githubusercontent.com/oven-sh/bun/744846f844374847c902b5e7fd59b4342a51ef99/docs/images/exception_page.png)
+
+> **Warning**
+>
+> The development error page sends source code and file paths to whoever made the request. Set `NODE_ENV=production` (or
+> `development: false`) when deploying so uncaught errors return a plain `500` instead.
 
 ### `error` callback
 
@@ -37193,7 +37406,47 @@ Bun.serve({
 
 > **Note**
 >
-> `http3` is not supported with unix domain sockets: QUIC requires a UDP port. `http1: false` requires `http3: true`.
+> `http3` is not supported with unix domain sockets: QUIC requires a UDP port. `http1: false` requires `http2: true` or
+> `http3: true`.
+
+***
+
+## HTTP/2
+
+> **Note**
+>
+> HTTP/2 support in&#x20;
+>
+> `Bun.serve`
+>
+> &#x20;is&#x20;
+>
+> **experimental**
+>
+> &#x20;and may change in future releases.
+
+Set `http2: true` to serve HTTP/2 on the same port and with the same routes and `fetch` handler as HTTP/1.1.
+
+```ts
+Bun.serve({
+  tls: {
+    key: Bun.file("./key.pem"),
+    cert: Bun.file("./cert.pem"),
+  },
+  http2: true, // [!code ++]
+  fetch(req) {
+    return new Response("Hello over HTTP/2!");
+  },
+});
+```
+
+With `tls`, Bun picks the protocol per connection using ALPN. Clients that offer `h2` (browsers, `curl`, `node:http2`) get HTTP/2. Everyone else gets HTTP/1.1.
+
+Without `tls`, Bun serves HTTP/2 to connections that open with the HTTP/2 preface ("prior knowledge"), such as `curl --http2-prior-knowledge` or `http2.connect("http://...")` from `node:http2`. Other connections get HTTP/1.1.
+
+Set `http1: false` to refuse HTTP/1.x clients. Over TLS, clients that offer ALPN without `h2` fail the handshake; clients that send no ALPN at all, and cleartext connections that don't start with the preface, receive `505 HTTP Version Not Supported`. With `http1: false` the server cannot accept WebSocket connections, since `server.upgrade()` is HTTP/1.1-only.
+
+`server.upgrade()` only works on HTTP/1.1 requests. WebSockets over HTTP/2, server push, and response trailers (needed by gRPC) are not supported.
 
 ***
 
@@ -37357,7 +37610,7 @@ const server = Bun.serve({
 });
 ```
 
-Use `server.timeout(req, 0)` to keep a long-lived streaming response (like Server-Sent Events) alive without raising the global `idleTimeout` for every request:
+Use `server.timeout(req, 0)` to keep a long-lived streaming response (like Server-Sent Events) alive without raising the global `idleTimeout` for every request. Over HTTP/2 the timeout belongs to the connection, so the most permissive value among its open requests applies:
 
 ```ts
 Bun.serve({
@@ -38150,6 +38403,24 @@ socket.addEventListener("close", event => {});
 socket.addEventListener("error", event => {});
 ```
 
+### Backpressure
+
+The browser `WebSocket` API has no way to slow down a peer that sends faster than you consume: incoming messages are buffered in memory without bound. Bun adds `pause()` and `resume()`, which stop and restart reads from the underlying socket so the sender sees TCP backpressure instead. This is a Bun-specific extension. *It does not work in browsers.*
+
+```ts
+const socket = new WebSocket("ws://localhost:3000");
+
+socket.addEventListener("message", event => {
+  if (!file.write(event.data)) {
+    // The file's buffer is full: stop reading until it drains.
+    socket.pause();
+    file.once("drain", () => socket.resume());
+  }
+});
+```
+
+`pause()` and `resume()` return `true` when they took effect (or will, once a connecting socket opens) and `false` when there is no socket to act on; `socket.isPaused` reports the current state. Messages already decoded when `pause()` is called may still be delivered. The `ws` package's `pause()`, `resume()`, and `isPaused` map to the same methods.
+
 ***
 
 ## Reference
@@ -38697,7 +38968,7 @@ Display this menu and exit. Alias: `-h`
 
 **Property (type: number)**
 
-Number of lines of script output shown when using --filter (default: 10). Set to 0 to show all lines
+Truncate each script's output to its last N lines when using --filter. Default 0 shows all lines
 
 **Property (type: string)**
 
@@ -38762,7 +39033,12 @@ Force `Buffer.allocUnsafe(size)` to be zero-filled
 
 **Property (type: boolean)**
 
-Throw an error if `process.dlopen` is called, and disable export condition `node-addons`
+Throw an error if `process.dlopen` or `bun:ffi` `cc()` is called, and disable export
+condition `node-addons`
+
+**Property (type: boolean)**
+
+Throw an error if `bun:ffi` `cc()` is called (disables the C compiler)
 
 **Property (type: string)**
 
@@ -43065,7 +43341,7 @@ Production servers often read, upload, and write files to S3-compatible object s
 
 ### Bun's S3 API is fast
 
-![Bun's S3 API is fast](https://raw.githubusercontent.com/oven-sh/bun/34cbb9a40b4bd1bd767d134a7065e66c2432a676/docs/images/bun-s3-node.gif)
+![Bun's S3 API is fast](https://raw.githubusercontent.com/oven-sh/bun/744846f844374847c902b5e7fd59b4342a51ef99/docs/images/bun-s3-node.gif)
 
 Bun provides fast, native bindings for interacting with S3-compatible object storage services. Its S3 API resembles fetch's `Response` and `Blob` APIs (like Bun's local filesystem APIs).
 
@@ -44324,7 +44600,7 @@ semver.satisfies("1.0.0", "1.0.0 - 2.0.0"); // true
 semver.satisfies("1.0.0", "1.0.0 - 1.0.1"); // true
 ```
 
-If `range` or `version` is invalid, it returns `false`.
+`satisfies` returns `false` if `version` is invalid, or if either argument contains a non-ASCII character. Bun ignores the parts of `range` that it cannot parse. A `range` with no parseable part behaves like `*`.
 
 ## `Bun.semver.order(versionA: string, versionB: string): 0 | 1 | -1`
 
@@ -46323,6 +46599,8 @@ Bun converts MySQL types to JavaScript types:
 
 `DATETIME` and `TIMESTAMP` values have no timezone on the wire, so Bun reads them back as **UTC**. The `Date` you get has the same UTC wall-clock that was stored, regardless of the machine's timezone. Reading as UTC matches how Bun writes values (a bound `Date` stores its UTC components). The same applies to PostgreSQL's `timestamp` (without time zone); `timestamptz` carries an explicit offset and is unaffected.
 
+Bun also sets `time_zone = '+00:00'` on every MySQL connection it opens. The server converts `TIMESTAMP` columns through the session time zone, so this keeps the stored instant equal to the `Date` you bound, and it makes server-side time functions such as `NOW()` and `CURRENT_TIMESTAMP` evaluate in UTC. There is no option to pick a different session time zone yet: a manual `SET time_zone = ...` reaches only the one pooled connection that runs it ([#40254](https://github.com/oven-sh/bun/issues/40254) tracks a per-connection option).
+
 #### Differences from PostgreSQL
 
 The API is unified, but behavior differs:
@@ -47304,6 +47582,19 @@ const response = new Response({
 });
 
 await response.text(); // "helloworld"
+```
+
+The body contains the yielded values only. As with `for await`, the generator's return value is not part of the body.
+
+```ts
+const response = new Response(
+  (async function* () {
+    yield "hello";
+    return "ignored";
+  })(),
+);
+
+await response.text(); // "hello"
 ```
 
 For more control over the stream, `yield` returns the direct `ReadableStream` controller.
@@ -48779,7 +49070,7 @@ Escapes the following characters from an input string:
 - `<` becomes `&lt;`
 - `>` becomes `&gt;`
 
-This function is optimized for large input. On an M1X, it processes 480 MB/s -
+This function is optimized for large input. On an M1 Max, it processes 480 MB/s -
 20 GB/s, depending on how much data is being escaped and whether there is non-ASCII
 text. Bun converts non-string types to a string before escaping.
 
@@ -49722,7 +50013,7 @@ const view = new Bun.WebView({
 
 The constructor is synchronous — it returns immediately and spawns the browser subprocess in the background. The first operation you `await` (such as `navigate()` or `evaluate()`) waits for the browser to be ready.
 
-If you pass `url`, the view begins navigating before the constructor returns. Passing `url` is equivalent to calling `view.navigate(url)` on the next line.
+If you pass `url`, the view begins navigating before the constructor returns, the same way `view.navigate(url)` on the next line would. One difference: the constructor keeps the navigation's promise internal, so a failure never surfaces as a rejection. Set `onNavigationFailed` to observe it.
 
 ### Automatic cleanup with `using`
 
@@ -50191,7 +50482,7 @@ On the WebKit backend, `cdp()` throws `ERR_METHOD_NOT_IMPLEMENTED` — there is 
 view.close();
 ```
 
-Closing is synchronous and idempotent. It destroys the page's renderer process, rejects any pending promises on the view with `Error("WebView closed")`, and makes every subsequent method call throw `ERR_INVALID_STATE`.
+Closing is synchronous and idempotent. It destroys the page's renderer process, rejects any pending promises on the view with `Error("WebView closed")`, and makes every subsequent method call throw `ERR_INVALID_STATE`. The rejections are marked as handled: a promise you hold still rejects catchably, but a pending operation nothing holds never triggers `unhandledRejection`.
 
 `view[Symbol.dispose]` and `view[Symbol.asyncDispose]` both point to `close()`, so `using` / `await using` work.
 
@@ -52119,7 +52410,7 @@ coverageThreshold = 0.8
 coverageThreshold = { lines = 0.9, functions = 0.8 }
 ```
 
-Setting a threshold makes `bun test` exit with code 1 when coverage is enabled and any file's line or function coverage is below it. Bun accepts the `statements` key but does not currently enforce it. Outside `--parallel`, the check only runs when the `text` reporter is enabled (the default); a run with only the `lcov` reporter currently exits 0 regardless of the threshold.
+Setting a threshold makes `bun test` exit with code 1 when coverage is enabled and any file's line or function coverage is below it. Bun accepts the `statements` key but does not currently enforce it. The check applies with any coverage reporter.
 
 #### Threshold Examples
 
@@ -53168,7 +53459,7 @@ Every shard must read the *same set* of timings files for the shards to add up t
 
 Bun's test runner is fast.
 
-![Running 266 React SSR tests faster than Jest can print its version number.](https://raw.githubusercontent.com/oven-sh/bun/34cbb9a40b4bd1bd767d134a7065e66c2432a676/docs/images/buntest.jpeg)
+![Running 266 React SSR tests faster than Jest can print its version number.](https://raw.githubusercontent.com/oven-sh/bun/744846f844374847c902b5e7fd59b4342a51ef99/docs/images/buntest.jpeg)
 
 ## AI Agent Integration
 

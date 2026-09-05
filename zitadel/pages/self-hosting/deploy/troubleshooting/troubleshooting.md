@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/self-hosting/deploy/troubleshooting/troubleshooting.mdx](https://zitadel.com/docs/self-hosting/deploy/troubleshooting/troubleshooting)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/self-hosting/deploy/troubleshooting/troubleshooting.mdx](https://zitadel.com/docs/self-hosting/deploy/troubleshooting/troubleshooting)
 
 ## Instance not found
 

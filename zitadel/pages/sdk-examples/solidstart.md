@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/sdk-examples/solidstart.mdx](https://zitadel.com/docs/sdk-examples/solidstart)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/sdk-examples/solidstart.mdx](https://zitadel.com/docs/sdk-examples/solidstart)
 
 ## Overview
 

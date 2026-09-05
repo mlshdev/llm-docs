@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/util/import-meta-file.mdx](https://bun.com/docs/guides/util/import-meta-file)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/util/import-meta-file.mdx](https://bun.com/docs/guides/util/import-meta-file)
 
 # Get the file name of the current file
 

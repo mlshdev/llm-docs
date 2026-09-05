@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/test/happy-dom.mdx](https://bun.com/docs/guides/test/happy-dom)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/test/happy-dom.mdx](https://bun.com/docs/guides/test/happy-dom)
 
 # Write browser DOM tests with Bun and happy-dom
 

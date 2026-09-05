@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/pm/cli/patch.mdx](https://bun.com/docs/pm/cli/patch)
+> Release-pinned source for Bun bun-v1.4.2: [docs/pm/cli/patch.mdx](https://bun.com/docs/pm/cli/patch)
 
 `bun patch` persistently patches packages in `node_modules` in a maintainable, git-friendly way.
 

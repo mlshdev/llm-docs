@@ -1,9 +1,18 @@
-import { cp, lstat, mkdir, readdir, readFile, rm } from "node:fs/promises";
+import {
+  cp,
+  lstat,
+  mkdir,
+  readdir,
+  readFile,
+  rename,
+  rm,
+} from "node:fs/promises";
 import path from "node:path";
 import { rootDirectory } from "./config.ts";
 import { exists, listFiles, writeUtf8 } from "./files.ts";
 import { normalizeSpacing } from "./markdown.ts";
 import { projectIds } from "./types.ts";
+import type { QuarantinedDocument } from "./quarantine.ts";
 import type {
   BranchLockedSource,
   CompleteSourcesLock,
@@ -13,10 +22,6 @@ import type {
   ProjectId,
   SourceProject,
 } from "./types.ts";
-
-const hugoShortcode = /\{\{[<%]\s*\/?\s*[a-zA-Z_]|^\{(?:width|class|style)="/m;
-// The plugin README carries Hugo build directives for the site that renders it.
-const hugoFrontmatterBlock = /^(?:build|sitemap):\s*$/m;
 
 interface ProjectManifest {
   readonly schemaVersion: 1;
@@ -31,13 +36,32 @@ interface ProjectManifest {
   readonly sourceCommit: string;
   readonly docsCommit?: string;
   readonly documentCount: number;
+  readonly quarantined?: readonly QuarantinedDocument[];
   readonly notes: readonly string[];
 }
 
+// Generated into a staging directory and swapped in only once complete, so a
+// failure part-way through leaves the previously published snapshot intact for
+// the caller to keep serving.
 export async function writeProject(build: ProjectBuild): Promise<void> {
   const destination = path.join(rootDirectory, build.project.id);
+  const staging = `${destination}.staging`;
+  await rm(staging, { recursive: true, force: true });
+  await mkdir(staging, { recursive: true });
+  try {
+    await stageProject(build, staging);
+  } catch (error) {
+    await rm(staging, { recursive: true, force: true });
+    throw error;
+  }
   await rm(destination, { recursive: true, force: true });
-  await mkdir(destination, { recursive: true });
+  await rename(staging, destination);
+}
+
+async function stageProject(
+  build: ProjectBuild,
+  destination: string,
+): Promise<void> {
   const outputPaths = new Set<string>();
   for (const document of build.documents) {
     validateDocument(build.project.id, document);
@@ -83,6 +107,7 @@ export async function writeProject(build: ProjectBuild): Promise<void> {
     sourceCommit: build.lock.sourceCommit,
     ...(build.lock.docsCommit ? { docsCommit: build.lock.docsCommit } : {}),
     documentCount: build.documents.length,
+    ...(build.quarantined.length > 0 ? { quarantined: build.quarantined } : {}),
     notes: build.notes,
   };
   await writeUtf8(
@@ -168,6 +193,28 @@ export async function buildSite(
   await writeUtf8(path.join(destination, ".nojekyll"), "");
 }
 
+// Whether the snapshot currently on disk is the one this pin describes. The
+// fallback path uses it to tell "the previous snapshot is still published" from
+// "this run already overwrote it", which decides whether retaining the previous
+// pin needs a rebuild.
+export async function snapshotMatchesPin(
+  projectId: ProjectId,
+  expected: LockedSource,
+): Promise<boolean> {
+  const manifestPath = path.join(rootDirectory, projectId, "manifest.json");
+  if (!(await exists(manifestPath))) {
+    return false;
+  }
+  const manifest = JSON.parse(
+    await readFile(manifestPath, "utf8"),
+  ) as Partial<ProjectManifest>;
+  return (
+    manifest.tag === expected.tag &&
+    manifest.sourceCommit === expected.sourceCommit &&
+    manifest.docsCommit === expected.docsCommit
+  );
+}
+
 export async function verifyOutputs(
   projects: readonly SourceProject[],
   lock: CompleteSourcesLock,
@@ -237,6 +284,9 @@ function renderDocument(
   );
 }
 
+// Path safety is an invariant of this generator rather than a property of the
+// upstream source, so it stays fatal. Source-syntax rejection is handled while
+// documents are collected, where it can quarantine a single page.
 function validateDocument(
   projectId: SourceProject["id"],
   document: Document,
@@ -251,56 +301,6 @@ function validateDocument(
       `Unsafe generated path for ${projectId}: ${document.outputPath}`,
     );
   }
-  const unresolved: Record<SourceProject["id"], RegExp> = {
-    traefik:
-      /{%\s*include-markdown|--8<--|\{:[^{}]+\}|(?:^|\n)\s*(?:>\s*)*(?:!!!|\?\?\?\+?)|```[^\n]*\btab=["']/m,
-    netbird:
-      /<\/?(?:Note|Warning|Success|Property|Properties|CodeGroup|Tiles|Button|YouTube|Badge|Guides|Resources)\b|\{\{\s*(?:title|tag|className|anchor)\s*:/,
-    podman:
-      /@@(?:option|include)|<<(?:subcommand|fullsubcommand|pod|container| if )/,
-    docker: /\{\{[<%]\s*\/?\s*[a-zA-Z_]|\{\{\s*\$[a-zA-Z_]/,
-    n8n: /\{%\s*[a-zA-Z-]+/,
-    grafana: /\{\{[<%]\s*\/?\s*[a-zA-Z_]|\]\(ref:|<GRAFANA[_ ]VERSION>/,
-    victoriametrics: hugoShortcode,
-    victorialogs: hugoShortcode,
-    "victoriametrics-datasource": hugoFrontmatterBlock,
-    "victorialogs-datasource": hugoFrontmatterBlock,
-    vmestimator: hugoShortcode,
-    zitadel:
-      /<\/?(?:Admonition|ApiCard|Callout|Cards?|Column|DocCardList|DynamicCodeBlock|FrameworkSelector|GithubCodeBlock|Steps?|Tabs?)\b/,
-    ffmpeg: /@(?:chapter|section|subsection|include|item|table|example|end)\b/,
-    "yt-dlp": /(?!)/,
-    searxng: /(?!)/,
-    bun: /<\/?(?:Accordion|Card|CodeGroup|Frame|Note|Step|Tab|Tip|Warning)\b/,
-  };
-  const source =
-    projectId === "searxng" && document.sourcePath === "docs/dev/reST.rst"
-      ? ""
-      : projectId === "docker" || projectId === "n8n"
-        ? withoutFencedCode(document.body)
-        : document.body;
-  if (unresolved[projectId].test(source)) {
-    throw new Error(
-      `Unresolved ${projectId} source syntax in ${document.sourcePath}`,
-    );
-  }
-}
-
-function withoutFencedCode(source: string): string {
-  const lines: string[] = [];
-  let fence: "```" | "~~~" | undefined;
-  for (const line of source.split("\n")) {
-    const marker = line.match(/^\s*(?:>\s*)*(```|~~~)/)?.[1] as
-      | "```"
-      | "~~~"
-      | undefined;
-    if (marker) {
-      fence = fence === marker ? undefined : marker;
-    } else if (!fence) {
-      lines.push(line);
-    }
-  }
-  return lines.join("\n");
 }
 
 function renderProjectIndex(build: ProjectBuild): string {
@@ -314,6 +314,11 @@ function renderProjectIndex(build: ProjectBuild): string {
   ];
   for (const note of build.notes) {
     lines.push(`- ${note}`);
+  }
+  if (build.quarantined.length > 0) {
+    lines.push(
+      `- Quarantined sources (${build.quarantined.length}): upstream pages using constructs this generator cannot convert yet are omitted and listed in \`manifest.json\`.`,
+    );
   }
   const sections = groupBySection(build.documents);
   for (const [section, documents] of sections) {

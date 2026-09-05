@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/pm/cli/info.mdx](https://bun.com/docs/pm/cli/info)
+> Release-pinned source for Bun bun-v1.4.2: [docs/pm/cli/info.mdx](https://bun.com/docs/pm/cli/info)
 
 `bun info` displays package metadata from the npm registry.
 

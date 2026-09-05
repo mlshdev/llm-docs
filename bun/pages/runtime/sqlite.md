@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/runtime/sqlite.mdx](https://bun.com/docs/runtime/sqlite)
+> Release-pinned source for Bun bun-v1.4.2: [docs/runtime/sqlite.mdx](https://bun.com/docs/runtime/sqlite)
 
 # SQLite
 

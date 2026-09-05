@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/process/ctrl-c.mdx](https://bun.com/docs/guides/process/ctrl-c)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/process/ctrl-c.mdx](https://bun.com/docs/guides/process/ctrl-c)
 
 # Listen for CTRL+C
 

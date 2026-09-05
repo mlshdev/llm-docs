@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/engine/install/fedora.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/engine/install/fedora.md)
+> Commit-pinned source for Docker main: [content/manuals/engine/install/fedora.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/engine/install/fedora.md)
 
 # Install Docker Engine on Fedora
 
@@ -99,8 +99,8 @@ the repository:
 ```console
 $ dnf list docker-ce --showduplicates | sort -r
 
+docker-ce.x86_64    3:29.8.0-1.fc41    docker-ce-stable
 docker-ce.x86_64    3:29.7.2-1.fc41    docker-ce-stable
-docker-ce.x86_64    3:29.7.1-1.fc41    docker-ce-stable
 <...>
 ```
 
@@ -109,7 +109,7 @@ to your version of Fedora (indicated by the `.fc40` suffix in this example).
 
 Install a specific version by its fully qualified package name, which is
 the package name (`docker-ce`) plus the version string (2nd column),
-separated by a hyphen (`-`). For example, `docker-ce-3:29.7.2-1.fc41`.
+separated by a hyphen (`-`). For example, `docker-ce-3:29.8.0-1.fc41`.
 
 Replace `<VERSION_STRING>` with the desired version and then run the following
 command to install:

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/engine/security/rootless/troubleshoot.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/engine/security/rootless/troubleshoot.md)
+> Commit-pinned source for Docker main: [content/manuals/engine/security/rootless/troubleshoot.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/engine/security/rootless/troubleshoot.md)
 
 ### Distribution-specific hint
 
@@ -243,6 +243,7 @@ the configurations supported by RootlessKit, and how they compare:
 | `gvisor-tap-vsock` | `gvisor-tap-vsock` | Slow           | Slow            | ❌                     | ✅       | Not recommended. Use `builtin` port driver instead.                          |
 | `slirp4netns`      | `slirp4netns`      | Slow           | Slow            | ✅                     | ✅       |                                                                              |
 | `pasta`            | `implicit`         | Slow           | Fast ✅          | ✅                     | ✅       | Experimental; Needs pasta version 2023\_12\_04 or later                      |
+| `pasta`            | `pesto`            | —              | —               | —                     | —       | IPv4 only; needs Docker Engine 29.8+                                         |
 | `lxc-user-nic`     | `builtin`          | Fast ✅         | Fast ✅          | ✅ (\*)                | ❌       | Experimental                                                                 |
 | `bypass4netns`     | `bypass4netns`     | Fast ✅         | Fast ✅          | ✅                     | ✅       | **Note:** Not integrated to RootlessKit as it needs a custom seccomp profile |
 

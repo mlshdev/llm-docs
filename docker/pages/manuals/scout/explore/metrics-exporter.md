@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/scout/explore/metrics-exporter.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/scout/explore/metrics-exporter.md)
+> Commit-pinned source for Docker main: [content/manuals/scout/explore/metrics-exporter.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/scout/explore/metrics-exporter.md)
 
 # Docker Scout metrics exporter
 
@@ -34,7 +34,7 @@ To export metrics from your organization, first make sure your organization is e
 Then, create a Personal Access Token (PAT) - a secret token that allows the exporter to authenticate with the Docker Scout API.
 
 The PAT does not require any specific permissions, but it must be created by a user who is an owner of the Docker organization.
-To create a PAT, follow the steps in [Create an access token](https://docs.docker.com/security/access-tokens/).
+To create a PAT, follow the steps in [Create an access token](https://docs.docker.com/security/access-tokens/personal-access-tokens/).
 
 Once you have created the PAT, store it in a secure location.
 You will need to provide this token to the exporter when scraping metrics.
@@ -102,7 +102,7 @@ alongside Grafana with a pre-configured dashboard to visualize the vulnerability
    $ cd scout-metrics-exporter/prometheus
    ```
 
-2. [Create a Docker access token](https://docs.docker.com/security/access-tokens/)
+2. [Create a Docker access token](https://docs.docker.com/security/access-tokens/personal-access-tokens/)
    and store it in a plain text file at `/prometheus/prometheus/token` under the template directory.
 
    ```plaintext {title=token}
@@ -152,16 +152,16 @@ The Prometheus server runs in a Docker container and is accessible on port 9090.
 After a few seconds, you should see the metrics endpoint as a target in the
 Prometheus UI at <http://localhost:9090/targets>.
 
-![Docker Scout metrics exporter Prometheus target](https://raw.githubusercontent.com/docker/docs/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/scout/images/scout-metrics-prom-target.png "Docker Scout metrics exporter Prometheus target")
+![Docker Scout metrics exporter Prometheus target](https://raw.githubusercontent.com/docker/docs/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/scout/images/scout-metrics-prom-target.png "Docker Scout metrics exporter Prometheus target")
 
 ### Viewing the metrics in Grafana
 
 To view the Grafana dashboards, go to <http://localhost:3000/dashboards>,
 and sign in using the credentials defined in the Docker Compose file (username: `admin`, password: `grafana`).
 
-![Vulnerability dashboard in Grafana](https://raw.githubusercontent.com/docker/docs/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/scout/images/scout-metrics-grafana-vulns.png "Vulnerability dashboard in Grafana")
+![Vulnerability dashboard in Grafana](https://raw.githubusercontent.com/docker/docs/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/scout/images/scout-metrics-grafana-vulns.png "Vulnerability dashboard in Grafana")
 
-![Policy dashboard in Grafana](https://raw.githubusercontent.com/docker/docs/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/scout/images/scout-metrics-grafana-policy.png "Policy dashboard in Grafana")
+![Policy dashboard in Grafana](https://raw.githubusercontent.com/docker/docs/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/scout/images/scout-metrics-grafana-policy.png "Policy dashboard in Grafana")
 
 The dashboards are pre-configured to visualize the vulnerability and policy metrics scraped by Prometheus.
 
@@ -235,7 +235,7 @@ and a Datadog site.
    $ cd scout-metrics-exporter/datadog
    ```
 
-2. [Create a Docker access token](https://docs.docker.com/security/access-tokens/)
+2. [Create a Docker access token](https://docs.docker.com/security/access-tokens/personal-access-tokens/)
    and store it in a plain text file at `/datadog/token` under the template directory.
 
    ```plaintext {title=token}
@@ -311,13 +311,13 @@ to see the metrics collected from this example. This configuration will collect
 all exposed metrics starting with `scout_` under the namespace
 `scout_metrics_exporter`.
 
-![datadog\_metrics\_summary](https://raw.githubusercontent.com/docker/docs/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/scout/images/datadog_metrics_summary.png)
+![datadog\_metrics\_summary](https://raw.githubusercontent.com/docker/docs/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/scout/images/datadog_metrics_summary.png)
 
 The following screenshots show examples of a Datadog dashboard containing
 graphs about vulnerability and policy compliance for a specific stream.
 
-![datadog\_dashboard\_1](https://raw.githubusercontent.com/docker/docs/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/scout/images/datadog_dashboard_1.png)
-![datadog\_dashboard\_2](https://raw.githubusercontent.com/docker/docs/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/scout/images/datadog_dashboard_2.png)
+![datadog\_dashboard\_1](https://raw.githubusercontent.com/docker/docs/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/scout/images/datadog_dashboard_1.png)
+![datadog\_dashboard\_2](https://raw.githubusercontent.com/docker/docs/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/scout/images/datadog_dashboard_2.png)
 
 > The reason why the lines in the graphs look flat is due to the own nature of
 > vulnerabilities (they don't change too often) and the short time interval
@@ -341,7 +341,7 @@ To change the scrape interval:
 ## Revoke an access token
 
 If you suspect that your PAT has been compromised or is no longer needed, you can revoke it at any time.
-To revoke a PAT, follow the steps in the [Create and manage access tokens](https://docs.docker.com/security/access-tokens/).
+To revoke a PAT, follow the steps in the [Create and manage access tokens](https://docs.docker.com/security/access-tokens/personal-access-tokens/).
 
 Revoking a PAT immediately invalidates the token, and prevents Prometheus from scraping metrics using that token.
 You will need to create a new PAT and update the Prometheus configuration to use the new token.

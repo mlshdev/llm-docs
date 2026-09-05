@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/integrate/login-ui/session-validation.mdx](https://zitadel.com/docs/guides/integrate/login-ui/session-validation)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/guides/integrate/login-ui/session-validation.mdx](https://zitadel.com/docs/guides/integrate/login-ui/session-validation)
 
 Sessions represent the state of a user session in ZITADEL. They can be aggregated and updated over time to reflect
 the changes.

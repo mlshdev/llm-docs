@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/concepts/architecture/secrets.mdx](https://zitadel.com/docs/concepts/architecture/secrets)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/concepts/architecture/secrets.mdx](https://zitadel.com/docs/concepts/architecture/secrets)
 
 In this chapter you can find information of how ZITADEL processes and stores secrets and credentials in a secure fashion.
 

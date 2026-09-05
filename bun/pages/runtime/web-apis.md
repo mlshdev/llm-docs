@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/runtime/web-apis.mdx](https://bun.com/docs/runtime/web-apis)
+> Release-pinned source for Bun bun-v1.4.2: [docs/runtime/web-apis.mdx](https://bun.com/docs/runtime/web-apis)
 
 # Web APIs
 

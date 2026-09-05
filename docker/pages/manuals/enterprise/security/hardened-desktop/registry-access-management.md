@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/enterprise/security/hardened-desktop/registry-access-management.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/enterprise/security/hardened-desktop/registry-access-management.md)
+> Commit-pinned source for Docker main: [content/manuals/enterprise/security/hardened-desktop/registry-access-management.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/enterprise/security/hardened-desktop/registry-access-management.md)
 
 **Registry access management requirements**
 
@@ -33,7 +33,7 @@ Before configuring Registry Access Management, you must:
   Registry Access Management only takes effect when users are signed in to
   Docker Desktop with organization credentials.
 - Use
-  [Organization access tokens (OATs)](https://docs.docker.com/enterprise/security/access-tokens/)
+  [Organization access tokens (OATs)](https://docs.docker.com/security/access-tokens/organization-access-tokens/)
   for authentication
 - Have a Docker Business subscription
 

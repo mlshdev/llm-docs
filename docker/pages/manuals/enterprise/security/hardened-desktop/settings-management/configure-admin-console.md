@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/enterprise/security/hardened-desktop/settings-management/configure-admin-console.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/enterprise/security/hardened-desktop/settings-management/configure-admin-console.md)
+> Commit-pinned source for Docker main: [content/manuals/enterprise/security/hardened-desktop/settings-management/configure-admin-console.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/enterprise/security/hardened-desktop/settings-management/configure-admin-console.md)
 
 # Configure Settings Management in Docker Home
 
@@ -14,7 +14,7 @@ Use Docker Home to create and manage settings policies for Docker Desktop across
 Before you begin, make sure you have:
 
 - [Docker Desktop](https://docs.docker.com/desktop/release-notes/) installed
-- [A verified domain](https://docs.docker.com/enterprise/security/single-sign-on/connect/#step-1-add-a-domain)
+- [A verified domain](https://docs.docker.com/security/authentication/single-sign-on/connect/#step-1-add-a-domain)
 - [Enforced sign-in](https://docs.docker.com/enterprise/security/enforce-sign-in/) for your organization
 - A Docker Business subscription
 

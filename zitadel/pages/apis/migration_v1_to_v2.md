@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/apis/migration_v1_to_v2.mdx](https://zitadel.com/docs/apis/migration_v1_to_v2)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/apis/migration_v1_to_v2.mdx](https://zitadel.com/docs/apis/migration_v1_to_v2)
 
 This guide helps you migrate from our v1 APIs to v2 APIs.
 Use v2 where the required resource is available, and keep using v1 for capabilities that are not yet migrated.

@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/integrate/index.mdx](https://zitadel.com/docs/guides/integrate)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/guides/integrate/index.mdx](https://zitadel.com/docs/guides/integrate)
 
 - [OIDC & OAuth Flows](https://zitadel.com/docs/guides/integrate/login/oidc)
 - [SCIM](https://zitadel.com/docs/guides/manage/user/scim2)

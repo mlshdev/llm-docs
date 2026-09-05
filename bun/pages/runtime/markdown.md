@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/runtime/markdown.mdx](https://bun.com/docs/runtime/markdown)
+> Release-pinned source for Bun bun-v1.4.2: [docs/runtime/markdown.mdx](https://bun.com/docs/runtime/markdown)
 
 # Markdown
 

@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/legal/policies/brand-trademark-policy.mdx](https://zitadel.com/docs/legal/policies/brand-trademark-policy)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/legal/policies/brand-trademark-policy.mdx](https://zitadel.com/docs/legal/policies/brand-trademark-policy)
 
 Last updated on November 15, 2023
 

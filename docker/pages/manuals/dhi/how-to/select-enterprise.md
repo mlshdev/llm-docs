@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/dhi/how-to/select-enterprise.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/dhi/how-to/select-enterprise.md)
+> Commit-pinned source for Docker main: [content/manuals/dhi/how-to/select-enterprise.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/dhi/how-to/select-enterprise.md)
 
 # Get started with DHI Select and Enterprise
 
@@ -19,7 +19,7 @@ To use this workflow, you need:
 - One of the following:
   - A DHI Select or Enterprise subscription. [Contact Docker
     sales](https://www.docker.com/products/hardened-images/#compare) to purchase DHI Enterprise
-    or [learn more about DHI plans](https://docs.docker.com/subscription/plans/dhi/).
+    or [learn more about DHI plans](https://docs.docker.com/subscription-billing/plans/dhi/).
   - An active DHI trial. [Start a free DHI
     trial](https://hub.docker.com/hardened-images/start-free-trial).
 - [Docker Desktop](https://docs.docker.com/desktop/release-notes/) 4.65 or later to use the

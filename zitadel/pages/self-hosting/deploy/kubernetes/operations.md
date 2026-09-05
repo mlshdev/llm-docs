@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/self-hosting/deploy/kubernetes/operations.mdx](https://zitadel.com/docs/self-hosting/deploy/kubernetes/operations)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/self-hosting/deploy/kubernetes/operations.mdx](https://zitadel.com/docs/self-hosting/deploy/kubernetes/operations)
 
 This guide covers day-2 operations for Zitadel on Kubernetes.
 

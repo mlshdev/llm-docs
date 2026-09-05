@@ -1,0 +1,31 @@
+> Commit-pinned source for Docker main: [content/manuals/accounts/organization/setup/_index.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/accounts/organization/setup/_index.md)
+
+# Set up your organization
+
+Before you manage members and access, set up your Docker organization. You can
+create an organization, onboard and secure it, or convert an existing user
+account into an organization.
+
+## Setting up your organization
+
+You set up your organization from [Docker Home](https://app.docker.com) and
+must be assigned the
+[organization owner role](https://docs.docker.com/security/roles-and-permissions/).
+Setting up an organization happens in broad phases:
+
+1. You can create a new organization, or convert an existing user account
+   into one. Choose the option that fits how you already use Docker. You
+   don't need both.
+2. After creating your organization, you must onboard it by inviting members,
+   securing authentication, and enforcing sign-in. These steps build on each
+   other, so follow them in order.
+
+## Next steps
+
+Explore the following sections to set up your organization.
+
+- [Create your organization](https://docs.docker.com/accounts/organization/setup/orgs/): Create an organization to group teams and members and assign access.
+- [Onboard your organization](https://docs.docker.com/accounts/organization/setup/onboard/): Onboard and secure your Docker Team or Business organization.
+- [Convert account](https://docs.docker.com/accounts/organization/setup/convert-account/): Convert an existing Docker user account into an organization.
+- [Manage your organization](https://docs.docker.com/accounts/organization/manage/): Add members, teams, licenses, and seats after setup.
+- [Security](https://docs.docker.com/security/): Configure single sign-on, provisioning, and access management.

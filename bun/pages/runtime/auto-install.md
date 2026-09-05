@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/runtime/auto-install.mdx](https://bun.com/docs/runtime/auto-install)
+> Release-pinned source for Bun bun-v1.4.2: [docs/runtime/auto-install.mdx](https://bun.com/docs/runtime/auto-install)
 
 # Auto-install
 

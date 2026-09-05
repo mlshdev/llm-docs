@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/deployment/digital-ocean.mdx](https://bun.com/docs/guides/deployment/digital-ocean)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/deployment/digital-ocean.mdx](https://bun.com/docs/guides/deployment/digital-ocean)
 
 # Deploy a Bun application on DigitalOcean
 
@@ -21,7 +21,7 @@ This guide deploys a Bun HTTP server to DigitalOcean using a `Dockerfile`.
 
    In the DigitalOcean dashboard, go to [**Container Registry**](https://cloud.digitalocean.com/registry), and enter the details for the new registry.
 
-   ![DigitalOcean registry dashboard](https://raw.githubusercontent.com/oven-sh/bun/34cbb9a40b4bd1bd767d134a7065e66c2432a676/docs/images/guides/digitalocean-7.png)
+   ![DigitalOcean registry dashboard](https://raw.githubusercontent.com/oven-sh/bun/744846f844374847c902b5e7fd59b4342a51ef99/docs/images/guides/digitalocean-7.png)
 
    Make sure the details are correct, then click **Create Registry**.
 
@@ -36,7 +36,7 @@ This guide deploys a Bun HTTP server to DigitalOcean using a `Dockerfile`.
 
    You should see the new registry in the [**DigitalOcean registry dashboard**](https://cloud.digitalocean.com/registry):
 
-   ![DigitalOcean registry dashboard](https://raw.githubusercontent.com/oven-sh/bun/34cbb9a40b4bd1bd767d134a7065e66c2432a676/docs/images/guides/digitalocean-1.png)
+   ![DigitalOcean registry dashboard](https://raw.githubusercontent.com/oven-sh/bun/744846f844374847c902b5e7fd59b4342a51ef99/docs/images/guides/digitalocean-1.png)
 2. Create a new `Dockerfile` in the root of your project. This file contains the instructions to initialize the container, copy your local project files into it, install dependencies, and start the application.
 
    ```docker Dockerfile icon="docker"
@@ -108,18 +108,18 @@ This guide deploys a Bun HTTP server to DigitalOcean using a `Dockerfile`.
 
    Once the image is pushed, you should see it in the [**DigitalOcean registry dashboard**](https://cloud.digitalocean.com/registry):
 
-   ![DigitalOcean registry dashboard](https://raw.githubusercontent.com/oven-sh/bun/34cbb9a40b4bd1bd767d134a7065e66c2432a676/docs/images/guides/digitalocean-2.png)
+   ![DigitalOcean registry dashboard](https://raw.githubusercontent.com/oven-sh/bun/744846f844374847c902b5e7fd59b4342a51ef99/docs/images/guides/digitalocean-2.png)
 5. In the DigitalOcean dashboard, go to [**App Platform**](https://cloud.digitalocean.com/apps) > **Create App**. You can create a project directly from the container image.
 
-   ![DigitalOcean App Platform project dashboard](https://raw.githubusercontent.com/oven-sh/bun/34cbb9a40b4bd1bd767d134a7065e66c2432a676/docs/images/guides/digitalocean-3.png)
+   ![DigitalOcean App Platform project dashboard](https://raw.githubusercontent.com/oven-sh/bun/744846f844374847c902b5e7fd59b4342a51ef99/docs/images/guides/digitalocean-3.png)
 
    Make sure the details are correct, then click **Next**.
 
-   ![DigitalOcean App Platform service dashboard](https://raw.githubusercontent.com/oven-sh/bun/34cbb9a40b4bd1bd767d134a7065e66c2432a676/docs/images/guides/digitalocean-4.png)
+   ![DigitalOcean App Platform service dashboard](https://raw.githubusercontent.com/oven-sh/bun/744846f844374847c902b5e7fd59b4342a51ef99/docs/images/guides/digitalocean-4.png)
 
    Review and configure resource settings, then click **Create app**.
 
-   ![DigitalOcean App Platform service dashboard](https://raw.githubusercontent.com/oven-sh/bun/34cbb9a40b4bd1bd767d134a7065e66c2432a676/docs/images/guides/digitalocean-6.png)
+   ![DigitalOcean App Platform service dashboard](https://raw.githubusercontent.com/oven-sh/bun/744846f844374847c902b5e7fd59b4342a51ef99/docs/images/guides/digitalocean-6.png)
 6. Your app is now live. Once the app is created, you should see it in the App Platform dashboard with its public URL.
 
-   ![DigitalOcean App Platform app dashboard](https://raw.githubusercontent.com/oven-sh/bun/34cbb9a40b4bd1bd767d134a7065e66c2432a676/docs/images/guides/digitalocean-5.png)
+   ![DigitalOcean App Platform app dashboard](https://raw.githubusercontent.com/oven-sh/bun/744846f844374847c902b5e7fd59b4342a51ef99/docs/images/guides/digitalocean-5.png)

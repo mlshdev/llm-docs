@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/util/upgrade.mdx](https://bun.com/docs/guides/util/upgrade)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/util/upgrade.mdx](https://bun.com/docs/guides/util/upgrade)
 
 Bun upgrades itself with the built-in `bun upgrade` command.
 

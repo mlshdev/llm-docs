@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/http/stream-file.mdx](https://bun.com/docs/guides/http/stream-file)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/http/stream-file.mdx](https://bun.com/docs/guides/http/stream-file)
 
 # Stream a file as an HTTP Response
 

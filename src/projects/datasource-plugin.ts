@@ -6,12 +6,8 @@ import {
   githubRawUrl,
   rewriteMarkdownLinks,
 } from "../markdown.ts";
-import type {
-  Document,
-  LockedSource,
-  ProjectBuild,
-  SourceProject,
-} from "../types.ts";
+import { DocumentCollector } from "../quarantine.ts";
+import type { LockedSource, ProjectBuild, SourceProject } from "../types.ts";
 
 interface PageSpec {
   readonly sourcePath: string;
@@ -51,37 +47,40 @@ export function buildDatasourcePlugin(
     project.repository,
     lock.sourceCommit,
     async (root, archiveFiles) => {
-      const documents: Document[] = [];
+      const documents = new DocumentCollector(project.id);
       for (const page of pages) {
-        const body = rewriteMarkdownLinks(
-          cleanMarkdown(await readUtf8(root, page.sourcePath)),
-          (url, kind) =>
-            resolvePluginLink(
-              url,
-              kind,
-              page.sourcePath,
+        await documents.collect(page.sourcePath, async () => {
+          const body = rewriteMarkdownLinks(
+            cleanMarkdown(await readUtf8(root, page.sourcePath)),
+            (url, kind) =>
+              resolvePluginLink(
+                url,
+                kind,
+                page.sourcePath,
+                project.repository,
+                lock.sourceCommit,
+                archiveFiles,
+              ),
+          );
+          return {
+            sourcePath: page.sourcePath,
+            outputPath: page.outputPath,
+            title: page.title(project),
+            body,
+            canonicalUrl: githubBlobUrl(
               project.repository,
               lock.sourceCommit,
-              archiveFiles,
+              page.sourcePath,
             ),
-        );
-        documents.push({
-          sourcePath: page.sourcePath,
-          outputPath: page.outputPath,
-          title: page.title(project),
-          body,
-          canonicalUrl: githubBlobUrl(
-            project.repository,
-            lock.sourceCommit,
-            page.sourcePath,
-          ),
-          section: page.section,
+            section: page.section,
+          };
         });
       }
       return {
         project,
         lock,
-        documents,
+        documents: documents.documents,
+        quarantined: documents.quarantined,
         notes: [
           "Pages are the plugin catalog documentation, the repository guide, and the changelog at the immutable release tag.",
           "Links and screenshots that upstream pins to a branch are rewritten to the released commit.",

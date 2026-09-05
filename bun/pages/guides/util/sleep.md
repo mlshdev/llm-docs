@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/util/sleep.mdx](https://bun.com/docs/guides/util/sleep)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/util/sleep.mdx](https://bun.com/docs/guides/util/sleep)
 
 # Sleep for a fixed number of milliseconds
 

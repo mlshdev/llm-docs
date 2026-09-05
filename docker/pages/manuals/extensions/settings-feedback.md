@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/extensions/settings-feedback.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/extensions/settings-feedback.md)
+> Commit-pinned source for Docker main: [content/manuals/extensions/settings-feedback.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/extensions/settings-feedback.md)
 
 # Settings and feedback for Docker Extensions
 
@@ -15,7 +15,7 @@ Docker Extensions is switched off by default. To change your settings:
 
 > \[!NOTE]
 >
-> If you are an [organization owner](https://docs.docker.com/admin/organization/manage/manage-a-team/#what-is-an-organization-owner), you can turn off extensions for your users. Open the `settings-store.json` file, and set `"extensionsEnabled"` to `false`.
+> If you are an [organization owner](https://docs.docker.com/accounts/organization/manage/manage-a-team/#what-is-an-organization-owner), you can turn off extensions for your users. Open the `settings-store.json` file, and set `"extensionsEnabled"` to `false`.
 > The `settings-store.json` file is located at:
 >
 > - `~/Library/Group Containers/group.com.docker/settings-store.json` on Mac

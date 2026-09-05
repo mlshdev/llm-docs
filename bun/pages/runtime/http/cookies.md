@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/runtime/http/cookies.mdx](https://bun.com/docs/runtime/http/cookies)
+> Release-pinned source for Bun bun-v1.4.2: [docs/runtime/http/cookies.mdx](https://bun.com/docs/runtime/http/cookies)
 
 # Cookies
 

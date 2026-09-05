@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/html-rewriter/extract-links.mdx](https://bun.com/docs/guides/html-rewriter/extract-links)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/html-rewriter/extract-links.mdx](https://bun.com/docs/guides/html-rewriter/extract-links)
 
 # Extract links from a webpage using HTMLRewriter
 

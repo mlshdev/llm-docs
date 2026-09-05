@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/runtime/environment-variables.mdx](https://bun.com/docs/runtime/environment-variables)
+> Release-pinned source for Bun bun-v1.4.2: [docs/runtime/environment-variables.mdx](https://bun.com/docs/runtime/environment-variables)
 
 Bun reads your `.env` files automatically and provides idiomatic ways to read and write your environment variables programmatically. You can also configure parts of Bun's runtime behavior with Bun-specific environment variables.
 
@@ -61,6 +61,16 @@ bun --env-file=.env.1 src/index.ts
 
 bun --env-file=.env.abc --env-file=.env.def run build
 ```
+
+The path does not have to be a regular file. Bun reads a pipe, a FIFO, or a device until the end of the input, so secrets can reach the process without a file on disk:
+
+```sh
+bun --env-file=<(./fetch-secrets.sh) src/index.ts
+
+echo "API_KEY=..." | bun --env-file=/dev/stdin src/index.ts
+```
+
+A pipe can be read only once. Bun reads it when the process starts, and `Worker` threads and `bun test --parallel` workers reuse the values. A process that starts again with the same arguments reads the path again: a `--watch` reload, and children of `child_process.fork()` or `cluster.fork()`, which inherit `execArgv`. A pipe is then empty and a FIFO waits for a new writer, the same as with Node.js.
 
 ## Disabling automatic `.env` loading
 

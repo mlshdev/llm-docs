@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/test/reporters.mdx](https://bun.com/docs/test/reporters)
+> Release-pinned source for Bun bun-v1.4.2: [docs/test/reporters.mdx](https://bun.com/docs/test/reporters)
 
 # Test Reporters
 

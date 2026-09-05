@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/concepts/agents/index.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/_vendor/github.com/docker/docker-agent/docs/concepts/agents/index.md)
+> Commit-pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/concepts/agents/index.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/_vendor/github.com/docker/docker-agent/docs/concepts/agents/index.md)
 
 *Agents are the core building blocks of Docker Agent. Each agent is an AI-powered entity with a model, instructions, tools, and optional sub-agents.*
 

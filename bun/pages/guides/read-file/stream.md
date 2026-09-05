@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/read-file/stream.mdx](https://bun.com/docs/guides/read-file/stream)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/read-file/stream.mdx](https://bun.com/docs/guides/read-file/stream)
 
 # Read a file as a ReadableStream
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/enterprise/security/hardened-desktop/image-access-management.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/enterprise/security/hardened-desktop/image-access-management.md)
+> Commit-pinned source for Docker main: [content/manuals/enterprise/security/hardened-desktop/image-access-management.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/enterprise/security/hardened-desktop/image-access-management.md)
 
 **Hardened Docker Desktop requirements**
 
@@ -38,7 +38,7 @@ Use the repository allowlist when you need to:
 Before configuring Image Access Management, you must:
 
 - [Enforce sign-in](https://docs.docker.com/enterprise/security/enforce-sign-in/). Image Access Management only takes effect when users are signed in to Docker Desktop with organization credentials.
-- Use [personal access tokens (PATs)](https://docs.docker.com/security/access-tokens/) for authentication (Organization access tokens aren't supported)
+- Use [personal access tokens (PATs)](https://docs.docker.com/security/access-tokens/personal-access-tokens/) for authentication (Organization access tokens aren't supported)
 - Have a Docker Business subscription
 
 ## Configure image access

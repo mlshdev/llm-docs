@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/offload/quickstart.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/offload/quickstart.md)
+> Commit-pinned source for Docker main: [content/manuals/offload/quickstart.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/offload/quickstart.md)
 
 # Docker Offload quickstart
 
@@ -18,7 +18,7 @@ This quickstart covers the steps developers need to get started with Docker Offl
 >
 > If you're an organization owner, to get started you must <a id="dkr_docs_cs_offload_quickstart"></a>contact sales and subscribe your
 > organization to use Docker Offload. After subscribing, see [Manage Docker
-> products](https://docs.docker.com/admin/organization/manage/manage-products/) to learn how to manage
+> products](https://docs.docker.com/accounts/organization/manage/manage-products/) to learn how to manage
 > access for the developers in your organization.
 
 ## Prerequisites
@@ -37,7 +37,7 @@ the Docker Offload toggle appears in the Docker Desktop Dashboard header.
 1. Start Docker Desktop and sign in.
 2. In the Docker Desktop Dashboard header, look for the Docker Offload toggle.
 
-![Offload toggle](https://raw.githubusercontent.com/docker/docs/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/offload/images/offload-toggle.png)
+![Offload toggle](https://raw.githubusercontent.com/docker/docs/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/offload/images/offload-toggle.png)
 
 If you see the Docker Offload toggle, you have access to Docker Offload and can
 proceed to the next step. If you don't see the Docker Offload toggle, check if
@@ -69,7 +69,7 @@ CLI.
    Offload, you have the option to select a profile. Your usage will be
    associated with the organization of the selected profile.
 
-When Docker Offload is started, you'll see a cloud icon (![Offload mode icon](https://raw.githubusercontent.com/docker/docs/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/offload/images/cloud-mode.png)) in the Docker Desktop
+When Docker Offload is started, you'll see a cloud icon (![Offload mode icon](https://raw.githubusercontent.com/docker/docs/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/offload/images/cloud-mode.png)) in the Docker Desktop
 Dashboard header, and the Docker Desktop Dashboard appears purple. You can run
 `docker offload status` in a terminal to check the status of Docker Offload.
 
@@ -91,7 +91,7 @@ If Docker Offload is working, you'll see `Hello from Docker!` in the terminal ou
 
 When Docker Offload is started and you have started session (for example, you've
 ran a container), then you can see current session duration estimate in the
-Docker Desktop Dashboard footer next to the hourglass icon (![Offload session duration](https://raw.githubusercontent.com/docker/docs/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/offload/images/hourglass-icon.png)).
+Docker Desktop Dashboard footer next to the hourglass icon (![Offload session duration](https://raw.githubusercontent.com/docker/docs/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/offload/images/hourglass-icon.png)).
 
 Also, when Docker Offload is started, you can view detailed session information
 by selecting **Docker Offload** > **Insights** in the left navigation of the

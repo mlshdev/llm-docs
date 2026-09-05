@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/manage-workflows/tag-workflows.md](https://github.com/n8n-io/n8n-docs/blob/32d4c1af45711af43703671a66f502ef7bd2b932/docs/build/manage-workflows/tag-workflows.md)
+> Commit-pinned source for n8n main: [docs/build/manage-workflows/tag-workflows.md](https://github.com/n8n-io/n8n-docs/blob/3317373ce39c3ce2406c8e3d99bb2da7f7180321/docs/build/manage-workflows/tag-workflows.md)
 
 # Tags <a id="tags"></a>
 
@@ -30,7 +30,7 @@ You can edit existing tags. Instance owners can delete tags.
 
 1. Select **Manage tags**. This is available from **Filters** > **Tags** on the **Workflows** page, or in the **+ Add tag** modal in your workflow.
 2. Hover over the tag you want to change.
-3. Select **Edit** ![Add node icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/32d4c1af45711af43703671a66f502ef7bd2b932/docs/build/.gitbook/assets/edit.png) to rename it, or **Delete** ![Add node icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/32d4c1af45711af43703671a66f502ef7bd2b932/docs/build/.gitbook/assets/delete.png) to delete it.
+3. Select **Edit** ![Add node icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/3317373ce39c3ce2406c8e3d99bb2da7f7180321/docs/build/.gitbook/assets/edit.png) to rename it, or **Delete** ![Add node icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/3317373ce39c3ce2406c8e3d99bb2da7f7180321/docs/build/.gitbook/assets/delete.png) to delete it.
 
 > **Warning**
 > **Global tags**

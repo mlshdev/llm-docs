@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/apis/benchmarks/v4/user_info/index.mdx](https://zitadel.com/docs/apis/benchmarks/v4/user_info)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/apis/benchmarks/v4/user_info/index.mdx](https://zitadel.com/docs/apis/benchmarks/v4/user_info)
 
 Benchmark results of v4 release of Zitadel.
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/scout/integrations/registry.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/scout/integrations/registry.md)
+> Commit-pinned source for Docker main: [content/manuals/scout/integrations/registry.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/scout/integrations/registry.md)
 
 # Integrate Docker Scout with a container registry
 
@@ -74,7 +74,7 @@ see [Data handling](https://docs.docker.com/scout/deep-dive/data-handling/).
 4. Set up your Scout credentials.
 
    1. Generate an organization access token. For more details, see
-      [Create an organization access token](https://docs.docker.com/enterprise/security/access-tokens/#create-an-organization-access-token).
+      [Create an organization access token](https://docs.docker.com/security/access-tokens/organization-access-tokens/#create-an-organization-access-token).
 
    2. Sign in to Docker using the organization access token.
 

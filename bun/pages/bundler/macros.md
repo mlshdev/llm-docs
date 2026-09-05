@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/bundler/macros.mdx](https://bun.com/docs/bundler/macros)
+> Release-pinned source for Bun bun-v1.4.2: [docs/bundler/macros.mdx](https://bun.com/docs/bundler/macros)
 
 # Macros
 

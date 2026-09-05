@@ -9,12 +9,8 @@ import {
 } from "../markdown.ts";
 import { convertMdx } from "../mdx.ts";
 import type { MdxImport } from "../mdx.ts";
-import type {
-  Document,
-  LockedSource,
-  ProjectBuild,
-  SourceProject,
-} from "../types.ts";
+import { DocumentCollector } from "../quarantine.ts";
+import type { LockedSource, ProjectBuild, SourceProject } from "../types.ts";
 
 const contentRoot = "apps/docs/content";
 const siteBase = "https://zitadel.com/docs";
@@ -55,40 +51,43 @@ export async function buildZitadel(
       }
       const pages = files.filter(isPage);
       const routes = new Set(pages.map(pageRoute));
-      const documents: Document[] = [];
+      const documents = new DocumentCollector(project.id);
       for (const sourcePath of pages) {
-        const source = sources.get(sourcePath);
-        if (source === undefined) {
-          throw new Error(`Unread ZITADEL page ${sourcePath}`);
-        }
-        const converted = convertMdx(source, sourcePath, {
-          resolveImport: (specifier, fromPath) =>
-            resolveImport(specifier, fromPath, sources),
-        });
-        const body = rewriteMarkdownLinks(converted.body, (url, kind) =>
-          resolveLink(
-            url,
-            kind,
+        await documents.collect(sourcePath, async () => {
+          const source = sources.get(sourcePath);
+          if (source === undefined) {
+            throw new Error(`Unread ZITADEL page ${sourcePath}`);
+          }
+          const converted = convertMdx(source, sourcePath, {
+            resolveImport: (specifier, fromPath) =>
+              resolveImport(specifier, fromPath, sources),
+          });
+          const body = rewriteMarkdownLinks(converted.body, (url, kind) =>
+            resolveLink(
+              url,
+              kind,
+              sourcePath,
+              routes,
+              archiveFiles,
+              project.repository,
+              lock.sourceCommit,
+            ),
+          );
+          return {
             sourcePath,
-            routes,
-            archiveFiles,
-            project.repository,
-            lock.sourceCommit,
-          ),
-        );
-        documents.push({
-          sourcePath,
-          outputPath: `pages/${pageRoute(sourcePath) || "index"}.md`,
-          title: converted.title ?? documentTitle(body, {}, sourcePath),
-          body,
-          canonicalUrl: `${siteBase}/${pageRoute(sourcePath)}`,
-          section: pageSection(sourcePath),
+            outputPath: `pages/${pageRoute(sourcePath) || "index"}.md`,
+            title: converted.title ?? documentTitle(body, {}, sourcePath),
+            body,
+            canonicalUrl: `${siteBase}/${pageRoute(sourcePath)}`,
+            section: pageSection(sourcePath),
+          };
         });
       }
       return {
         project,
         lock,
-        documents,
+        documents: documents.documents,
+        quarantined: documents.quarantined,
         notes: [
           "Pages come from the Fumadocs content tree in apps/docs/content; underscore-prefixed partials are inlined into the pages that import them.",
           "Interactive elements the site renders from JavaScript - framework pickers, benchmark charts, permission and PII tables, and React partials such as the quick start console walkthroughs - are omitted because they carry no static prose.",

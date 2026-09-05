@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/ecosystem/solidstart.mdx](https://bun.com/docs/guides/ecosystem/solidstart)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/ecosystem/solidstart.mdx](https://bun.com/docs/guides/ecosystem/solidstart)
 
 # Build an app with SolidStart and Bun
 

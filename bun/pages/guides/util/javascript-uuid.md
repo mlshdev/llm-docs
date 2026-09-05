@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/util/javascript-uuid.mdx](https://bun.com/docs/guides/util/javascript-uuid)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/util/javascript-uuid.mdx](https://bun.com/docs/guides/util/javascript-uuid)
 
 # Generate a UUID
 

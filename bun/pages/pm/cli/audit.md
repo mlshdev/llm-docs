@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/pm/cli/audit.mdx](https://bun.com/docs/pm/cli/audit)
+> Release-pinned source for Bun bun-v1.4.2: [docs/pm/cli/audit.mdx](https://bun.com/docs/pm/cli/audit)
 
 # bun audit
 

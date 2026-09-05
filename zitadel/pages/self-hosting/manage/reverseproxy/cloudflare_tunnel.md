@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/self-hosting/manage/reverseproxy/cloudflare_tunnel/index.mdx](https://zitadel.com/docs/self-hosting/manage/reverseproxy/cloudflare_tunnel)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/self-hosting/manage/reverseproxy/cloudflare_tunnel/index.mdx](https://zitadel.com/docs/self-hosting/manage/reverseproxy/cloudflare_tunnel)
 
 > **Warning**
 >

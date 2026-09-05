@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/engine/install/raspberry-pi-os.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/engine/install/raspberry-pi-os.md)
+> Commit-pinned source for Docker main: [content/manuals/engine/install/raspberry-pi-os.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/engine/install/raspberry-pi-os.md)
 
 > \[!WARNING]
 >
@@ -161,15 +161,15 @@ available versions in the repository:
 # List the available versions:
 $ apt-cache madison docker-ce | awk '{ print $3 }'
 
+5:29.8.0-1~raspbian.12~bookworm
 5:29.7.2-1~raspbian.12~bookworm
-5:29.7.1-1~raspbian.12~bookworm
 ...
 ```
 
 Select the desired version and install:
 
 ```console
-$ VERSION_STRING=5:29.7.2-1~raspbian.12~bookworm
+$ VERSION_STRING=5:29.8.0-1~raspbian.12~bookworm
 $ sudo apt-get install docker-ce=$VERSION_STRING docker-ce-cli=$VERSION_STRING containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 

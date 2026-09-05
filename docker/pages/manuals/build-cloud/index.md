@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/build-cloud/_index.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/build-cloud/_index.md)
+> Commit-pinned source for Docker main: [content/manuals/build-cloud/_index.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/build-cloud/_index.md)
 
 # Docker Build Cloud
 
@@ -45,7 +45,7 @@ data between cloud builders.
 ## Get Docker Build Cloud
 
 To get started with Docker Build Cloud,
-[create a Docker account](https://docs.docker.com/accounts/create-account/). There are two options
+[create a Docker account](https://docs.docker.com/accounts/individual/create-account/). There are two options
 to get access to Docker Build Cloud:
 
 - Users with a free Personal account can opt-in to a 7-day free trial, with the option
@@ -57,4 +57,4 @@ Once you've signed up and created a builder, continue by
 [setting up the builder in your local environment](https://docs.docker.com/build-cloud/setup/).
 
 For information about roles and permissions related to Docker Build Cloud, see
-[Roles and Permissions](https://docs.docker.com/enterprise/security/roles-and-permissions/core-roles/#docker-build-cloud).
+[Roles and Permissions](https://docs.docker.com/security/roles-and-permissions/core-roles/#docker-build-cloud).

@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/runtime/ffi.mdx](https://bun.com/docs/runtime/ffi)
+> Release-pinned source for Bun bun-v1.4.2: [docs/runtime/ffi.mdx](https://bun.com/docs/runtime/ffi)
 
 > **Warning**
 >
@@ -44,7 +44,7 @@ console.log(`SQLite 3 version: ${sqlite3_libversion()}`);
 
 According to [our benchmark](https://github.com/oven-sh/bun/tree/main/bench/ffi), `bun:ffi` is roughly 2-6x faster than Node.js FFI through `Node-API`.
 
-![](https://raw.githubusercontent.com/oven-sh/bun/34cbb9a40b4bd1bd767d134a7065e66c2432a676/docs/images/ffi.png)
+![](https://raw.githubusercontent.com/oven-sh/bun/744846f844374847c902b5e7fd59b4342a51ef99/docs/images/ffi.png)
 
 Bun's JavaScript engine (JavaScriptCore) implements `dlopen`, `linkSymbols`, `CFunction`, and `JSCallback` natively. Argument conversion, arity handling, and result boxing happen in-engine. Hot call sites compile down through the DFG/FTL JIT tiers into direct native calls with no per-argument JavaScript shim. Bun embeds [TinyCC](https://github.com/TinyCC/tinycc), a small and fast C compiler, only for [`cc()`](https://bun.com/docs/runtime/c-compiler), which compiles C source you provide at runtime.
 

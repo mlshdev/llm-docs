@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/extensions/extensions-sdk/architecture/_index.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/extensions/extensions-sdk/architecture/_index.md)
+> Commit-pinned source for Docker main: [content/manuals/extensions/extensions-sdk/architecture/_index.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/extensions/extensions-sdk/architecture/_index.md)
 
 # Extension architecture
 
@@ -12,7 +12,7 @@ Extensions can be composed of three (optional) components:
 - A backend: One or many containerized services running in the Docker Desktop VM
 - Executables: Shell scripts or binaries that Docker Desktop copies on the host when installing the extension
 
-![Overview of the three components of an extension](https://raw.githubusercontent.com/docker/docs/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/extensions/extensions-sdk/architecture/images/extensions-architecture.png?w=600h=400)
+![Overview of the three components of an extension](https://raw.githubusercontent.com/docker/docs/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/extensions/extensions-sdk/architecture/images/extensions-architecture.png?w=600h=400)
 
 An extension doesn't necessarily need to have all these components, but at least one of them depending on the extension features.
 To configure and run those components, Docker Desktop uses a `metadata.json` file. See the
@@ -77,7 +77,7 @@ or named pipe, depending on the operating system. If the backend was listening t
 prevent collision with other applications running on the host or in a container already. Also, some users are
 running Docker Desktop in constrained environments where they can't open ports on their machines.
 
-![Backend and frontend communication](https://raw.githubusercontent.com/docker/docs/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/extensions/extensions-sdk/architecture/images/extensions-arch-2.png?w=500h=300)
+![Backend and frontend communication](https://raw.githubusercontent.com/docker/docs/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/extensions/extensions-sdk/architecture/images/extensions-arch-2.png?w=500h=300)
 
 Finally, the backend can be built with any technology, as long as it can run in a container and listen on a socket.
 
@@ -95,7 +95,7 @@ the users' machine.
 When Docker Desktop installs the extension, it copies the executables on the host as defined by the `host` section in
 the `metadata.json`. See the [`host` metadata section](https://docs.docker.com/extensions/extensions-sdk/architecture/metadata/#host-section) for more details.
 
-![Executable and frontend communication](https://raw.githubusercontent.com/docker/docs/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/extensions/extensions-sdk/architecture/images/extensions-arch-3.png?w=250h=300)
+![Executable and frontend communication](https://raw.githubusercontent.com/docker/docs/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/extensions/extensions-sdk/architecture/images/extensions-arch-3.png?w=250h=300)
 
 However, since they're executed on the users' machine, they have to be available to the platform they're running on.
 For example, if you want to ship the `kubectl` executable, you need to provide a different version for Windows, Mac,

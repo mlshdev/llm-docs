@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/examples/introduction/index.mdx](https://zitadel.com/docs/examples/introduction)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/examples/introduction/index.mdx](https://zitadel.com/docs/examples/introduction)
 
 - [Frontend (SPA)](https://zitadel.com/docs/examples/introduction/frontend)
 - [Mobile & Native](https://zitadel.com/docs/examples/introduction/mobile)

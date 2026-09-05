@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/self-hosting/manage/adopt-login-v2.mdx](https://zitadel.com/docs/self-hosting/manage/adopt-login-v2)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/self-hosting/manage/adopt-login-v2.mdx](https://zitadel.com/docs/self-hosting/manage/adopt-login-v2)
 
 ## Who this is for
 

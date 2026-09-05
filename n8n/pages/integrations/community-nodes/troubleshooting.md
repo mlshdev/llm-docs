@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/community-nodes/troubleshooting.md](https://github.com/n8n-io/n8n-docs/blob/32d4c1af45711af43703671a66f502ef7bd2b932/docs/integrations/community-nodes/troubleshooting.md)
+> Commit-pinned source for n8n main: [docs/integrations/community-nodes/troubleshooting.md](https://github.com/n8n-io/n8n-docs/blob/3317373ce39c3ce2406c8e3d99bb2da7f7180321/docs/integrations/community-nodes/troubleshooting.md)
 
 # Troubleshooting and errors <a id="troubleshooting-and-errors"></a>
 

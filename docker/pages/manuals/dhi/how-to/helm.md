@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/dhi/how-to/helm.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/dhi/how-to/helm.md)
+> Commit-pinned source for Docker main: [content/manuals/dhi/how-to/helm.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/dhi/how-to/helm.md)
 
 # Use a Docker Hardened Image chart
 
@@ -49,8 +49,8 @@ registry, you still need to create this secret if the registry requires
 authentication.
 
 1. For `dhi.io` or Docker Hub, create a [personal access token
-   (PAT)](https://docs.docker.com/security/access-tokens/) using your Docker account or an
-   [organization access token (OAT)](https://docs.docker.com/enterprise/security/access-tokens/).
+   (PAT)](https://docs.docker.com/security/access-tokens/personal-access-tokens/) using your Docker account or an
+   [organization access token (OAT)](https://docs.docker.com/security/access-tokens/organization-access-tokens/).
    Ensure the token has at least read-only access to the Docker Hardened Image
    repositories.
 2. Create a secret in Kubernetes using the following command. Replace `<your-secret-name>`, `<your-username>`,

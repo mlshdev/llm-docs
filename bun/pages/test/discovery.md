@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/test/discovery.mdx](https://bun.com/docs/test/discovery)
+> Release-pinned source for Bun bun-v1.4.2: [docs/test/discovery.mdx](https://bun.com/docs/test/discovery)
 
 `bun test` decides which files to run as tests by matching their paths against a set of patterns.
 

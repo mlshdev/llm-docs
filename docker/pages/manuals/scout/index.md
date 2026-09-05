@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/scout/_index.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/scout/_index.md)
+> Commit-pinned source for Docker main: [content/manuals/scout/_index.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/scout/_index.md)
 
 # Docker Scout
 
@@ -24,4 +24,4 @@ using Docker Hub, the Docker CLI, and the Docker Scout Dashboard.
 
 - [Policy](https://docs.docker.com/scout/policy/): Ensure that your artifacts align with supply chain best practices.
 
-- [Upgrade](https://docs.docker.com/subscription/change/): A Personal subscription includes up to 1 repository. Upgrade for more.
+- [Upgrade](https://docs.docker.com/subscription-billing/manage/plans/): A Personal subscription includes up to 1 repository. Upgrade for more.

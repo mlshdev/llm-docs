@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/integrate/identity-providers/apple.mdx](https://zitadel.com/docs/guides/integrate/identity-providers/apple)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/guides/integrate/identity-providers/apple.mdx](https://zitadel.com/docs/guides/integrate/identity-providers/apple)
 
 This guides shows you how to connect Apple as an identity provider in ZITADEL.
 
@@ -15,7 +15,7 @@ Go to the settings page of your instance or organization and choose "Identity Pr
 In the table you can see all the providers you have configured.
 Also, you see all provider templates that are available.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/zitadel_identity_provider_overview.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/guides/zitadel_identity_provider_overview.png)
 
 Select the Apple Provider template.
 
@@ -28,7 +28,7 @@ You will have to paste it in the Apple service later.
 >
 > For V2, use the standard callback URL `${CUSTOM_DOMAIN}/idps/callback`, which already accepts POST requests.
 
-![Apple Provider](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/zitadel_apple_create_provider.png)
+![Apple Provider](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/guides/zitadel_apple_create_provider.png)
 
 ## Apple Configuration
 
@@ -54,7 +54,7 @@ You will have to paste it in the Apple service later.
 
 8. [Paste the ZITADEL Callback URL you copied before](#open-the-apple-identity-provider-template) to the Return URLs
 
-![Apple Service](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/apple_service_create.png)
+![Apple Service](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/guides/apple_service_create.png)
 
 ### Register a new key
 
@@ -100,7 +100,7 @@ The provider can also be activated via API. As the identity providers are sub-re
 - [Activate Default Identity Provider](https://zitadel.com/docs/reference/api/admin/zitadel.admin.v1.AdminService.AddIDPToLoginPolicy)
 - [Activate Organization Identity Provider](https://zitadel.com/docs/reference/api/management/zitadel.management.v1.ManagementService.AddIDPToLoginPolicy)
 
-![Activate the Apple Provider](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/zitadel_activate_apple.png)
+![Activate the Apple Provider](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/guides/zitadel_activate_apple.png)
 
 ### Ensure your Login Policy allows External IDPs
 
@@ -115,7 +115,7 @@ You can also change the settings through the API directly either in the default 
 - [Update Default Login Settings](https://zitadel.com/docs/reference/api/admin/zitadel.admin.v1.AdminService.UpdateLoginPolicy)
 - [Update Organization Login Settings](https://zitadel.com/docs/reference/api/management/zitadel.management.v1.ManagementService.UpdateCustomLoginPolicy)
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/zitadel_allow_external_idp.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/guides/zitadel_allow_external_idp.png)
 
 ## Test the setup
 
@@ -129,6 +129,6 @@ The organization scope looks like this: `urn:zitadel:iam:org:id:{id}`.
 You can [read more about the reserved scopes](https://zitadel.com/docs/apis/openidoauth/scopes#reserved-scopes)
 or [use the ZITADEL OIDC Playground](https://zitadel.com/playgrounds/oidc) to see what happens with the login when you send different scopes.
 
-![Apple Button](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/zitadel_login_apple.png)
+![Apple Button](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/guides/zitadel_login_apple.png)
 
-![Apple Login](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/apple_login.png)
+![Apple Login](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/guides/apple_login.png)

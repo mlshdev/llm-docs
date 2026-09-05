@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/util/which-path-to-executable-bin.mdx](https://bun.com/docs/guides/util/which-path-to-executable-bin)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/util/which-path-to-executable-bin.mdx](https://bun.com/docs/guides/util/which-path-to-executable-bin)
 
 # Get the path to an executable bin file
 

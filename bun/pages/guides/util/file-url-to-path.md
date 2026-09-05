@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/util/file-url-to-path.mdx](https://bun.com/docs/guides/util/file-url-to-path)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/util/file-url-to-path.mdx](https://bun.com/docs/guides/util/file-url-to-path)
 
 # Convert a file URL to an absolute path
 

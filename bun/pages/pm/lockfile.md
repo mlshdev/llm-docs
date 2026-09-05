@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/pm/lockfile.mdx](https://bun.com/docs/pm/lockfile)
+> Release-pinned source for Bun bun-v1.4.2: [docs/pm/lockfile.mdx](https://bun.com/docs/pm/lockfile)
 
 `bun install` creates a lockfile called `bun.lock`.
 

@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/runtime/networking/tcp.mdx](https://bun.com/docs/runtime/networking/tcp)
+> Release-pinned source for Bun bun-v1.4.2: [docs/runtime/networking/tcp.mdx](https://bun.com/docs/runtime/networking/tcp)
 
 # TCP
 

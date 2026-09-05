@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/binary/blob-to-dataview.mdx](https://bun.com/docs/guides/binary/blob-to-dataview)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/binary/blob-to-dataview.mdx](https://bun.com/docs/guides/binary/blob-to-dataview)
 
 # Convert a Blob to a DataView
 

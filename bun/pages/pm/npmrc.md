@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/pm/npmrc.mdx](https://bun.com/docs/pm/npmrc)
+> Release-pinned source for Bun bun-v1.4.2: [docs/pm/npmrc.mdx](https://bun.com/docs/pm/npmrc)
 
 Bun loads configuration options from [`.npmrc`](https://docs.npmjs.com/cli/v10/configuring-npm/npmrc) files, so you can reuse your existing registry and scope configuration.
 

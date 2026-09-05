@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/test/watch-mode.mdx](https://bun.com/docs/guides/test/watch-mode)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/test/watch-mode.mdx](https://bun.com/docs/guides/test/watch-mode)
 
 # Run tests in watch mode with Bun
 

@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/runtime/index.mdx](https://bun.com/docs/runtime)
+> Release-pinned source for Bun bun-v1.4.2: [docs/runtime/index.mdx](https://bun.com/docs/runtime)
 
 The Bun Runtime is designed to start fast and run fast.
 
@@ -253,7 +253,7 @@ Display this menu and exit. Alias: `-h`
 
 **Property (type: number)**
 
-Number of lines of script output shown when using --filter (default: 10). Set to 0 to show all lines
+Truncate each script's output to its last N lines when using --filter. Default 0 shows all lines
 
 **Property (type: string)**
 
@@ -318,7 +318,12 @@ Force `Buffer.allocUnsafe(size)` to be zero-filled
 
 **Property (type: boolean)**
 
-Throw an error if `process.dlopen` is called, and disable export condition `node-addons`
+Throw an error if `process.dlopen` or `bun:ffi` `cc()` is called, and disable export
+condition `node-addons`
+
+**Property (type: boolean)**
+
+Throw an error if `bun:ffi` `cc()` is called (disables the C compiler)
 
 **Property (type: string)**
 

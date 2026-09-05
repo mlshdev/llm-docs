@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_image_history.yaml](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/data/cli/engine/docker_image_history.yaml)
+> Commit-pinned source for Docker main: [data/cli/engine/docker_image_history.yaml](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/data/cli/engine/docker_image_history.yaml)
 
 # docker image history
 
@@ -102,7 +102,7 @@ and shows its history.
 $ docker image pull --quiet --platform=linux/riscv64 alpine
 docker.io/library/alpine:latest
 
-$ docker image history --platform=linux/s390x alpine
+$ docker image history --platform=linux/riscv64 alpine
 IMAGE          CREATED       CREATED BY                                      SIZE      COMMENT
 beefdbd8a1da   3 weeks ago   /bin/sh -c #(nop)  CMD ["/bin/sh"]              0B
 <missing>      3 weeks ago   /bin/sh -c #(nop) ADD file:ba2637314e600db5a…   8.46MB

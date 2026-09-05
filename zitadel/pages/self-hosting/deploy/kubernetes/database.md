@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/self-hosting/deploy/kubernetes/database.mdx](https://zitadel.com/docs/self-hosting/deploy/kubernetes/database)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/self-hosting/deploy/kubernetes/database.mdx](https://zitadel.com/docs/self-hosting/deploy/kubernetes/database)
 
 ## PostgreSQL
 

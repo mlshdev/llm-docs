@@ -20,6 +20,9 @@ jobs:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     timeout-minutes: 45
+    permissions:
+      contents: read
+      issues: write
     outputs:
       changed: ${{ steps.changes.outputs.changed }}
       publish: ${{ steps.publish.outputs.publish }}
@@ -32,9 +35,20 @@ jobs:
       - name: Set up Bun
         uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2.2.0
         with:
-          bun-version: "1.4.0"
+          bun-version: "1.4.2"
       - name: Install dependencies
-        run: bun ci
+        shell: bash
+        run: |
+          set -euo pipefail
+          for attempt in 1 2 3; do
+            if bun ci; then
+              exit 0
+            fi
+            echo "Dependency install failed on attempt ${attempt}; retrying."
+            sleep $((attempt * 10))
+          done
+          echo "::error::Could not install dependencies after 3 attempts."
+          exit 1
       - name: Reconcile stable releases
         env:
           GITHUB_TOKEN: ${{ github.token }}
@@ -42,6 +56,57 @@ jobs:
       - name: Rebuild pinned documentation after repository changes
         if: github.event_name != 'schedule'
         run: bun run build
+      # Upstream drift never fails this workflow: `bun run update` keeps the
+      # previous pin for a project it cannot convert and quarantines individual
+      # pages it cannot render, so publication continues. The drift is escalated
+      # into a single tracking issue instead, rewritten only when the set of
+      # problems changes and closed once every source converts cleanly again.
+      - name: Escalate upstream conversion drift
+        id: drift
+        if: ${{ !cancelled() }}
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_TITLE: "Documentation pipeline: upstream conversion drift"
+        run: |
+          set -euo pipefail
+          if [[ ! -f build-report.json ]]; then
+            echo "::warning::Reconciliation produced no health report; nothing to escalate."
+            exit 0
+          fi
+          healthy="$(jq -r '.healthy' build-report.json)"
+          existing="$(gh issue list --state open --label pipeline-health --limit 1 --json number --jq '.[0].number // empty')"
+
+          if [[ "${healthy}" == "true" ]]; then
+            if [[ -n "${existing}" ]]; then
+              gh issue close "${existing}" --comment "Every source converts cleanly again; closed automatically."
+            fi
+            exit 0
+          fi
+
+          bun run src/cli.ts report > issue-body.md
+          fingerprint="$(grep -o 'pipeline-fingerprint: [0-9a-f]*' issue-body.md | head -1)"
+
+          if [[ -z "${existing}" ]]; then
+            gh label create pipeline-health --color "d93f0b" --description "Upstream documentation the generator cannot convert yet" --force
+            gh issue create --title "${ISSUE_TITLE}" --label pipeline-health --body-file issue-body.md
+            exit 0
+          fi
+
+          if gh issue view "${existing}" --json body --jq '.body' | grep -qF "${fingerprint}"; then
+            echo "Tracking issue #${existing} already describes this drift."
+            exit 0
+          fi
+          gh issue edit "${existing}" --body-file issue-body.md
+          gh issue comment "${existing}" --body "The set of unconvertible sources changed; the issue body above was updated."
+      - name: Upload pipeline health report
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: "pipeline-health-report"
+          path: "build-report.json"
+          if-no-files-found: ignore
+          retention-days: "7"
       - name: Detect generated changes
         id: changes
         shell: bash

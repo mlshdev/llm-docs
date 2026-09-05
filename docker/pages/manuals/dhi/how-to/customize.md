@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/dhi/how-to/customize.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/dhi/how-to/customize.md)
+> Commit-pinned source for Docker main: [content/manuals/dhi/how-to/customize.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/dhi/how-to/customize.md)
 
 **Docker Hardened Images requirements**
 
@@ -160,9 +160,9 @@ You can create customizations using either the DHI CLI or the Docker Hub web int
 **CLI**
 
 Authenticate with `docker login` using your Docker credentials or a [personal
-access token (PAT)](https://docs.docker.com/security/access-tokens/) with **Read & Write**
+access token (PAT)](https://docs.docker.com/security/access-tokens/personal-access-tokens/) with **Read & Write**
 permissions, or an [organization access token
-(OAT)](https://docs.docker.com/enterprise/security/access-tokens/). When using an OAT, the
+(OAT)](https://docs.docker.com/security/access-tokens/organization-access-tokens/). When using an OAT, the
 available operations depend on the token's permission scope:
 
 - To list or get customizations, or to view build logs, the OAT must have read

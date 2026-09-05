@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/install/from-npm-install-to-bun-install.mdx](https://bun.com/docs/guides/install/from-npm-install-to-bun-install)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/install/from-npm-install-to-bun-install.mdx](https://bun.com/docs/guides/install/from-npm-install-to-bun-install)
 
 `bun install` is a fast, Node.js-compatible npm client.
 
@@ -151,7 +151,7 @@ bun pm ls
 ```
 
 ```txt
-my-pkg node_modules (781)
+my-pkg node_modules (781 installed)
 ├── @types/node@20.16.5
 ├── @types/react@18.3.8
 ├── @types/react-dom@18.3.0

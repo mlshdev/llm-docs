@@ -101,6 +101,12 @@
       "title": "Bun",
       "repository": "oven-sh/bun",
       "homepage": "https://bun.com/docs"
+    },
+    {
+      "id": "trigger-dev",
+      "title": "Trigger.dev",
+      "repository": "triggerdotdev/trigger.dev",
+      "homepage": "https://trigger.dev/docs"
     }
   ]
 }

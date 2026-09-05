@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/pm/lifecycle.mdx](https://bun.com/docs/pm/lifecycle)
+> Release-pinned source for Bun bun-v1.4.2: [docs/pm/lifecycle.mdx](https://bun.com/docs/pm/lifecycle)
 
 # Lifecycle scripts
 

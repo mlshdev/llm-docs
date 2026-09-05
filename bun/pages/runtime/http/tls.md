@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/runtime/http/tls.mdx](https://bun.com/docs/runtime/http/tls)
+> Release-pinned source for Bun bun-v1.4.2: [docs/runtime/http/tls.mdx](https://bun.com/docs/runtime/http/tls)
 
 # TLS
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/governance/audit/_index.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/ai/sandboxes/governance/audit/_index.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/governance/audit/_index.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/ai/sandboxes/governance/audit/_index.md)
 
 # AI Governance Audit Logs
 
@@ -28,10 +28,10 @@ don't send audit data to audit logs.
 
 To use AI Governance Audit Logs, your organization needs:
 
-- A Docker [AI Governance plan](https://docs.docker.com/subscription/plans/ai-governance/)
+- A Docker [AI Governance plan](https://docs.docker.com/subscription-billing/plans/ai-governance/)
 - An enforced organization governance policy
 - A Docker organization account
-- An organization owner, or a user with a [custom role](https://docs.docker.com/enterprise/security/roles-and-permissions/custom-roles/) that includes AI Governance audit permissions, to configure delivery and view hosted events
+- An organization owner, or a user with a [custom role](https://docs.docker.com/security/roles-and-permissions/custom-roles/) that includes AI Governance audit permissions, to configure delivery and view hosted events
 
 > \[!NOTE]
 > Other Docker subscriptions are not sufficient on their own to use AI Governance
@@ -57,7 +57,7 @@ Docker supports two delivery modes for audit records:
   app.docker.com. Cloud delivery is on by default when AI Governance is enabled.
   Organization owners can disable it in [audit delivery settings](https://docs.docker.com/ai/sandboxes/governance/audit/configure/).
 
-Organization owners and users with a [custom role](https://docs.docker.com/enterprise/security/roles-and-permissions/custom-roles/) that includes AI Governance audit permissions can configure local disk, Docker Cloud, or both.
+Organization owners and users with a [custom role](https://docs.docker.com/security/roles-and-permissions/custom-roles/) that includes AI Governance audit permissions can configure local disk, Docker Cloud, or both.
 
 The hosted audit log view, CSV export, and SIEM forwarding all require Docker Cloud delivery to be enabled. Local delivery alone does not power these features.
 

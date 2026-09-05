@@ -1,0 +1,286 @@
+> Release-pinned source for Trigger.dev v4.5.16: [docs/guides/frameworks/sequin.mdx](https://trigger.dev/docs/guides/frameworks/sequin)
+
+# Sequin database triggers
+
+This guide will show you how to trigger tasks from database changes using Sequin
+
+[Sequin](https://sequinstream.com) allows you to trigger tasks from database changes. Sequin captures every insert, update, and delete on a table and then ensures a task is triggered for each change.
+
+Often, task runs coincide with database changes. For instance, you might want to use a Trigger.dev task to generate an embedding for each post in your database:
+
+![Sequin and Trigger.dev Overview](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/images/sequin-intro.png)
+
+In this guide, you'll learn how to use Sequin to trigger Trigger.dev tasks from database changes.
+
+## Prerequisites
+
+You are about to create a [regular Trigger.dev task](https://trigger.dev/docs/tasks-regular) that you will execute when ever a post is inserted or updated in your database. Sequin will detect all the changes on the `posts` table and then send the payload of the post to an API endpoint that will call `tasks.trigger()` to create the embedding and update the database.
+
+As long as you create an HTTP endpoint that Sequin can deliver webhooks to, you can use any web framework or edge function (e.g. Supabase Edge Functions, Vercel Functions, Cloudflare Workers, etc.) to invoke your Trigger.dev task. In this guide, we'll show you how to setup Trigger.dev tasks using Next.js API Routes.
+
+You'll need the following to follow this guide:
+
+- A Next.js project with [Trigger.dev](https://trigger.dev) installed
+  > **Note**
+  >
+  > If you don't have one already, follow [Trigger.dev's Next.js setup
+  > guide](https://trigger.dev/docs/guides/frameworks/nextjs) to setup your project. You can return to this guide when
+  > you're ready to write your first Trigger.dev task.
+- A [Sequin](https://console.sequinstream.com/register) account
+- A Postgres database (Sequin works with any Postgres database version 12 and up) with a `posts` table.
+
+## Create a Trigger.dev task
+
+Start by creating a new Trigger.dev task that takes in a Sequin change event as a payload, creates an embedding, and then inserts the embedding into the database:
+
+1. In your `src/trigger/tasks` directory, create a new file called `create-embedding-for-post.ts` and add the following code:
+
+   ```ts trigger/create-embedding-for-post.ts
+   import { task } from "@trigger.dev/sdk";
+   import { OpenAI } from "openai";
+   import { upsertEmbedding } from "../util";
+
+   const openai = new OpenAI({
+     apiKey: process.env.OPENAI_API_KEY,
+   });
+
+   export const createEmbeddingForPost = task({
+     id: "create-embedding-for-post",
+     run: async (payload: {
+       record: {
+         id: number;
+         title: string;
+         body: string;
+         author: string;
+         createdAt: string;
+         embedding: string | null;
+       },
+       metadata: {
+         table_schema: string,
+         table_name: string,
+         consumer: {
+           id: string;
+           name: string;
+         };
+       };
+     }) => {
+       // Create an embedding using the title and body of payload.record
+       const content = `${payload.record.title}\n\n${payload.record.body}`;
+       const embedding = (await openai.embeddings.create({
+         model: "text-embedding-ada-002",
+         input: content,
+       })).data[0].embedding;
+
+       // Upsert the embedding in the database. See utils.ts for the implementation -> ->
+       await upsertEmbedding(embedding, payload.record.id);
+
+       // Return the updated record
+       return {
+         ...payload.record,
+         embedding: JSON.stringify(embedding),
+       };
+     }
+   });
+   ```
+
+   ```ts utils.ts
+   import pg from "pg";
+
+   export async function upsertEmbedding(embedding: number[], id: number) {
+     const client = new pg.Client({
+       connectionString: process.env.DATABASE_URL,
+     });
+     await client.connect();
+
+     try {
+       const query = `
+         INSERT INTO post_embeddings (id, embedding)
+         VALUES ($2, $1)
+         ON CONFLICT (id)
+         DO UPDATE SET embedding = $1
+       `;
+       const values = [JSON.stringify(embedding), id];
+
+       const result = await client.query(query, values);
+       console.log(`Updated record in database. Rows affected: ${result.rowCount}`);
+
+       return result.rowCount;
+     } catch (error) {
+       console.error("Error updating record in database:", error);
+       throw error;
+     } finally {
+       await client.end();
+     }
+   }
+   ```
+
+   This task takes in a Sequin record event, creates an embedding, and then upserts the embedding into a `post_embeddings` table.
+2. Register the `create-embedding-for-post` task to your Trigger.dev cloud project by running the following command:
+
+   ```bash
+   npx trigger.dev@latest dev
+   ```
+
+   In the Trigger.dev dashboard, you should now see the `create-embedding-for-post` task:
+
+   ![Task added](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/images/sequin-register-task.png)
+
+> **Success**
+>
+> You've successfully created a Trigger.dev task that will create an embedding for each post in your
+> database. In the next step, you'll create an API endpoint that Sequin can deliver records to.
+
+## Setup API route
+
+You'll now create an API endpoint that will receive posts from Sequin and then trigger the `create-embedding-for-post` task.
+
+> **Note**
+>
+> This guide covers how to setup an API endpoint using the Next.js App Router. You can find examples
+> for Next.js Server Actions and Pages Router in the [Trigger.dev
+> documentation](https://trigger.dev/docs/guides/frameworks/nextjs).
+
+1. Add a route handler by creating a new `route.ts` file in a `/app/api/create-embedding-for-post` directory:
+
+   ```ts app/api/create-embedding-for-post/route.ts
+   import type { createEmbeddingForPost } from "@/trigger/create-embedding-for-post";
+   import { tasks } from "@trigger.dev/sdk";
+   import { NextResponse } from "next/server";
+
+   export async function POST(req: Request) {
+     const authHeader = req.headers.get("authorization");
+     if (!authHeader || authHeader !== `Bearer ${process.env.SEQUIN_WEBHOOK_SECRET}`) {
+       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+     }
+     const payload = await req.json();
+     const handle = await tasks.trigger<typeof createEmbeddingForPost>(
+       "create-embedding-for-post",
+       payload
+     );
+
+     return NextResponse.json(handle);
+   }
+   ```
+
+   This route handler will receive records from Sequin, parse them, and then trigger the `create-embedding-for-post` task.
+2. You'll need to set four secret keys in a `.env.local` file:
+
+   ```bash
+   SEQUIN_WEBHOOK_SECRET=your-secret-key
+   TRIGGER_SECRET_KEY=secret-from-trigger-dev
+   OPENAI_API_KEY=sk-proj-asdfasdfasdf
+   DATABASE_URL=postgresql://
+   ```
+
+   The `SEQUIN_WEBHOOK_SECRET` ensures that only Sequin can access your API endpoint.
+
+   The `TRIGGER_SECRET_KEY` is used to authenticate requests to Trigger.dev and can be found in the **API keys** tab of the Trigger.dev dashboard.
+
+   The `OPENAI_API_KEY` and `DATABASE_URL` are used to create an embedding using OpenAI and connect to your database. Be sure to add these as [environment variables](https://trigger.dev/docs/deploy-environment-variables) in Trigger.dev as well.
+
+> **Success**
+>
+> You've successfully created an API endpoint that can receive record payloads from Sequin and
+> trigger a Trigger.dev task. In the next step, you'll setup Sequin to trigger the endpoint.
+
+## Create Sequin consumer
+
+You'll now configure Sequin to send every row in your `posts` table to your Trigger.dev task.
+
+1. 1. Login to your Sequin account and click the **Add New Database** button.
+   2. Enter the connection details for your Postgres database.
+
+   > **Note**
+   >
+   > If you need to connect to a local dev database, flip the **use localhost** switch and follow the instructions to create a tunnel using the [Sequin CLI](https://sequinstream.com/docs/cli).
+
+   3. Follow the instructions to create a publication and a replication slot by running two SQL commands in your database:
+
+   ```sql
+   create publication sequin_pub for all tables;
+   select pg_create_logical_replication_slot('sequin_slot', 'pgoutput');
+   ```
+
+   4. Name your database and click the **Connect Database** button.
+
+   Sequin will connect to your database and ensure that it's configured properly.
+
+   > **Note**
+   >
+   > If you need step-by-step connection instructions to connect Sequin to your database, check out our [quickstart guide](https://sequinstream.com/docs/quickstart).
+2. Now, create a tunnel to your local endpoint so Sequin can deliver change payloads to your local API:
+
+   1. In the Sequin console, open the **HTTP Endpoint** tab and click the **Create HTTP Endpoint** button.
+   2. Enter a name for your endpoint (i.e. `local_endpoint`) and flip the **Use localhost** switch. Follow the instructions in the Sequin console to [install the Sequin CLI](https://sequinstream.com/docs/cli), then run:
+
+   ```bash
+   sequin tunnel --ports=3001:local_endpoint
+   ```
+
+   3. Now, click **Add encryption header** and set the key to `Authorization` and the value to `Bearer SEQUIN_WEBHOOK_SECRET`.
+   4. Click **Create HTTP Endpoint**.
+3. Create a push consumer that will capture posts from your database and deliver them to your local endpoint:
+
+   1. Navigate to the **Consumers** tab and click the **Create Consumer** button.
+   2. Select your `posts` table (i.e `public.posts`).
+   3. You want to ensure that every post receives an embedding - and that embeddings are updated as posts are updated. To do this, select to process **Rows** and click **Continue**.
+
+   > **Note**
+   >
+   > You can also use **changes** for this particular use case, but **rows** comes with some nice replay and backfill features.
+
+   4. You'll now set the sort and filter for the consumer. For this guide, we'll sort by `updated_at` and start at the beginning of the table. We won't apply any filters:
+
+   ![Consumer Sort and Filter](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/images/sequin-sort-and-filter.png)
+
+   5. On the next screen, select **Push** to have Sequin send the events to your webhook URL. Click **Continue**.
+   6. Now, give your consumer a name (i.e. `posts_push_consumer`) and in the **HTTP Endpoint** section select the `local_endpoint` you created above. Add the exact API route you created in the previous step (i.e. `/api/create-embedding-for-post`):
+
+   ![Consumer Endpoint](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/images/sequin-consumer-config.png)
+
+   7. Click the **Create Consumer** button.
+
+> **Success**
+>
+> Your Sequin consumer is now created and ready to send events to your API endpoint.
+
+## Test end-to-end
+
+1. 1. The Next.js app is running: `npm run dev`
+   2. The Trigger.dev dev server is running `npx trigger.dev@latest dev`
+   3. The Sequin tunnel is running: `sequin tunnel --ports=3001:local_endpoint`
+2. ```sql
+   insert into
+   posts (title, body, author)
+   values
+     (
+       'The Future of AI',
+       'An insightful look into how artificial intelligence is shaping the future of technology and society.',
+       'Alice H Johnson'
+     );
+   ```
+3. In the Sequin console, navigate to the [**Trace**](https://console.sequinstream.com/trace) tab and confirm that Sequin delivered the event to your local endpoint:
+
+   ![Trace Event](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/images/sequin-trace.png)
+4. In your local terminal, you should see a `200` response in your Next.js app:
+
+   ```bash
+   POST /api/create-embedding-for-post 200 in 262ms
+   ```
+5. Finally, in the [**Trigger.dev dashboard**](https://cloud.trigger.dev/), navigate to the Runs page and confirm that the task run completed successfully:
+
+   ![Task run](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/images/sequin-final-run.png)
+
+> **Success**
+>
+> Every time a post is created or updated, Sequin will deliver the row payload to your API endpoint
+> and Trigger.dev will run the `create-embedding-for-post` task.
+
+## Next steps
+
+With Sequin and Trigger.dev, every post in your database will now have an embedding. This is a simple example of how you can trigger long-running tasks on database changes.
+
+From here, add error handling and deploy to production:
+
+- Add [retries](https://trigger.dev/docs/errors-retrying) to your Trigger.dev task to ensure that any errors are captured and logged.
+- Deploy to [production](https://trigger.dev/docs/guides/frameworks/nextjs#deploying-your-task-to-trigger-dev) and update your Sequin consumer to point to your production database and endpoint.

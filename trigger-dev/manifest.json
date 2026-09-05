@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "project": "trigger-dev",
+  "title": "Trigger.dev",
+  "repository": "triggerdotdev/trigger.dev",
+  "tag": "v4.5.16",
+  "releaseId": 381460886,
+  "releasePublishedAt": "2026-09-02T17:47:49Z",
+  "sourceCommit": "ee34a4b13710742ae26d94831547fa2b6cddc9bd",
+  "documentCount": 313,
+  "quarantined": [
+    {
+      "sourcePath": "config/extensions/puppeteer.mdx",
+      "reason": "Unable to convert Trigger.dev page config/extensions/puppeteer.mdx: Unhandled MDX component <ScrapingWarning> in config/extensions/puppeteer.mdx"
+    },
+    {
+      "sourcePath": "guides/community/sveltekit.mdx",
+      "reason": "Unable to convert Trigger.dev page guides/community/sveltekit.mdx: Unhandled MDX component <UsefulNextSteps> in guides/community/sveltekit.mdx"
+    },
+    {
+      "sourcePath": "limits.mdx",
+      "reason": "Unable to convert Trigger.dev page limits.mdx: Unhandled MDX component <SoftLimit> in limits.mdx"
+    }
+  ],
+  "notes": [
+    "Pages follow the navigation declared in docs/docs.json at the immutable release tag; snippets are inlined into the pages that import them rather than published separately.",
+    "API reference pages are rendered from the OpenAPI specification the page names in its `openapi` frontmatter, since the upstream page carries no prose of its own.",
+    "Static MDX cards, tabs, accordions, steps, callouts, and parameter fields are normalized to Markdown without executing JavaScript.",
+    "Published page links resolve to https://trigger.dev/docs; source assets point at the immutable release commit."
+  ]
+}

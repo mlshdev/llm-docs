@@ -1,4 +1,4 @@
-> Commit-pinned source for SearXNG master: [docs/dev/engines/engine_overview.rst](https://github.com/searxng/searxng/blob/05cd77f71b466b7674658429d834a8db3b26811f/docs/dev/engines/engine_overview.rst)
+> Commit-pinned source for SearXNG master: [docs/dev/engines/engine_overview.rst](https://github.com/searxng/searxng/blob/22056605a6e0ed41a0aa91a2bf300a361fd16b92/docs/dev/engines/engine_overview.rst)
 
 .. \_engines-dev:
 
@@ -134,7 +134,7 @@ headers                dict           `{}`
 data                   dict           `{}`
 cookies                dict           `{}`
 verify                 bool           `True`
-headers.User-Agent     str            a random User-Agent
+headers.User-Agent     str            `''`
 category               str            current category, like `'general'`
 safesearch             int            `0`, between `0` and `2` (normal, moderate, strict)
 time\_range             Optional\[str]  `None`, can be `day`, `week`, `month`, `year`
@@ -219,6 +219,8 @@ allow_redirects     bool        Follow redirects
 max_redirects       int         maximum redirects, hard limit
 soft_max_redirects  int         maximum redirects, soft limit. Record an error but don't stop the engine
 raise_for_httperror bool        True by default: raise an exception if the HTTP code of response is >= 300
+impersonate         str         curl_cffi impersonate target (default: chrome, none to disable)
+curl_options        dict        Any extra libcurl options for the request
 =================== =========== ==========================================================================
 
 ```

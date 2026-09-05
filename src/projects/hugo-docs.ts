@@ -10,12 +10,8 @@ import {
   rewriteMarkdownLinks,
 } from "../markdown.ts";
 import { isRecord } from "../config.ts";
-import type {
-  Document,
-  LockedSource,
-  ProjectBuild,
-  SourceProject,
-} from "../types.ts";
+import { DocumentCollector } from "../quarantine.ts";
+import type { LockedSource, ProjectBuild, SourceProject } from "../types.ts";
 
 // The VictoriaMetrics projects publish their documentation from a Hugo `docs/`
 // tree that declares navigation through `menu.docs` and shares fragments
@@ -78,59 +74,62 @@ export async function buildHugoDocs(
           `${options.docsSite}${sitePath(page)}`,
         ]),
       );
-      const documents: Document[] = [];
+      const documents = new DocumentCollector(project.id);
       for (const { page, section } of orderPages(
         rendered,
         navigation,
         options.label,
       )) {
-        const context: ShortcodeContext = {
-          label: options.label,
-          sourcePath: page.sourcePath,
-          navigation,
-          siteUrls,
-        };
-        const expanded = expandShortcodes(
-          expandContentIncludes(
-            page,
-            pages,
-            new Set([page.sourcePath]),
-            options.label,
-          ),
-          context,
-        );
-        const body = rewriteMarkdownLinks(
-          cleanMarkdown(dropPresentationMarkup(expanded)),
-          (url, kind) =>
-            resolveHugoLink(
-              url,
-              kind,
-              page.sourcePath,
+        await documents.collect(page.sourcePath, async () => {
+          const context: ShortcodeContext = {
+            label: options.label,
+            sourcePath: page.sourcePath,
+            navigation,
+            siteUrls,
+          };
+          const expanded = expandShortcodes(
+            expandContentIncludes(
+              page,
+              pages,
+              new Set([page.sourcePath]),
+              options.label,
+            ),
+            context,
+          );
+          const body = rewriteMarkdownLinks(
+            cleanMarkdown(dropPresentationMarkup(expanded)),
+            (url, kind) =>
+              resolveHugoLink(
+                url,
+                kind,
+                page.sourcePath,
+                project.repository,
+                lock.sourceCommit,
+                archiveFiles,
+                siteUrls,
+                options.docsSite,
+              ),
+          );
+          assertResolvedReferences(options.label, page.sourcePath, body);
+          return {
+            sourcePath: page.sourcePath,
+            outputPath: outputPath(page.sourcePath),
+            title: documentTitle(body, page.attributes, page.sourcePath),
+            body,
+            canonicalUrl: githubBlobUrl(
               project.repository,
               lock.sourceCommit,
-              archiveFiles,
-              siteUrls,
-              options.docsSite,
+              page.sourcePath,
             ),
-        );
-        assertResolvedReferences(options.label, page.sourcePath, body);
-        documents.push({
-          sourcePath: page.sourcePath,
-          outputPath: outputPath(page.sourcePath),
-          title: documentTitle(body, page.attributes, page.sourcePath),
-          body,
-          canonicalUrl: githubBlobUrl(
-            project.repository,
-            lock.sourceCommit,
-            page.sourcePath,
-          ),
-          section,
+            section,
+          };
         });
       }
       return {
         project,
         lock,
-        documents,
+        documents: documents.documents,
+        quarantined: documents.quarantined,
         notes: options.notes,
         licenseText: await readUtf8(root, "LICENSE"),
       };

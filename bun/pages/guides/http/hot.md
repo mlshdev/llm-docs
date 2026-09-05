@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/http/hot.mdx](https://bun.com/docs/guides/http/hot)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/http/hot.mdx](https://bun.com/docs/guides/http/hot)
 
 # Hot reload an HTTP server
 

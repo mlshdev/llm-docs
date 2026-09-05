@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_ps.yaml](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_ps.yaml)
+> Commit-pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_ps.yaml](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_ps.yaml)
 
 # docker compose ps
 
@@ -31,7 +31,7 @@ example-bar-1   alpine    "/entrypoint.…"   bar        4 seconds ago   exited 
 | --- | --- | --- |
 | `-a`, `--all` |  | Show all stopped containers (including those created by the run command) |
 | `--filter` |  | Filter services by a property (supported filters: status) |
-| `--format` | `table` | Format output using a custom template: 'table': Print output in table format with column headers (default) 'table TEMPLATE': Print output in table format using the given Go template 'json': Print in JSON format 'TEMPLATE': Print output using the given Go template. Refer to https://docs.docker.com/go/formatting/ for more information about formatting output with templates |
+| `--format` |  | Format output using a custom template: 'table': Print output in table format with column headers (default) 'table TEMPLATE': Print output in table format using the given Go template 'json': Print in JSON format 'TEMPLATE': Print output using the given Go template. Refer to https://docs.docker.com/go/formatting/ for more information about formatting output with templates |
 | `--no-trunc` |  | Don't truncate output |
 | `--orphans` | `true` | Include orphaned services (not declared by project) |
 | `-q`, `--quiet` |  | Only display IDs |

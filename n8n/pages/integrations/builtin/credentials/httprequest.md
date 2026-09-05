@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/builtin/credentials/httprequest.md](https://github.com/n8n-io/n8n-docs/blob/32d4c1af45711af43703671a66f502ef7bd2b932/docs/integrations/builtin/credentials/httprequest.md)
+> Commit-pinned source for n8n main: [docs/integrations/builtin/credentials/httprequest.md](https://github.com/n8n-io/n8n-docs/blob/3317373ce39c3ce2406c8e3d99bb2da7f7180321/docs/integrations/builtin/credentials/httprequest.md)
 
 # HTTP Request credentials
 
@@ -38,7 +38,7 @@ Refer to [HTTP authentication](https://developer.mozilla.org/en-US/docs/Web/HTTP
 
 To use a predefined credential type:
 
-1. Open your HTTP Request node, or add a new one to your workflow.
+1. Open your HTTP Request or GraphQL node, or add a new one to your workflow.
 2. In **Authentication**, select **Predefined Credential Type**.
 3. In **Credential Type**, select the API you want to use.
 4. In **Credential for `<API name>`**, you can:

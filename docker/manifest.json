@@ -5,9 +5,9 @@
   "repository": "docker/docs",
   "tag": "main",
   "branch": "main",
-  "sourceCommittedAt": "2026-09-02T17:41:00Z",
-  "sourceCommit": "fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5",
-  "documentCount": 1632,
+  "sourceCommittedAt": "2026-09-04T19:49:55Z",
+  "sourceCommit": "034d46977dac45d2a9493f2465b08108ac3cf87b",
+  "documentCount": 1628,
   "notes": [
     "Docker tracks the latest main-branch commit because docker/docs does not publish current releases.",
     "Hugo content and vendored Markdown mounts are normalized without executing Hugo; includes and documentation shortcodes are expanded into plain Markdown.",

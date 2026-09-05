@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/integrate/services/auth0-saml.mdx](https://zitadel.com/docs/guides/integrate/services/auth0-saml)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/guides/integrate/services/auth0-saml.mdx](https://zitadel.com/docs/guides/integrate/services/auth0-saml)
 
 This guide shows how to enable login with ZITADEL on Auth0.
 
@@ -20,12 +20,12 @@ Prerequisites:
 ## **Auth0**: Create a new connection
 
 In Authentication -> Enterprise
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/saml/auth0/auth_enterprise.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/saml/auth0/auth_enterprise.png)
 
 1. Press the "+" button right to "SAML"
-   ![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/saml/auth0/enterprise_connections.png)
+   ![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/saml/auth0/enterprise_connections.png)
 2. Fill out the fields as follows in the SAML Connection:
-   ![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/saml/auth0/connection.png)
+   ![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/saml/auth0/connection.png)
 
 This includes:
 
@@ -54,14 +54,14 @@ be <https://example.auth0.com/samlp/metadata?connection=SAML-ZITADEL>.
 In your existing project:
 
 1. Press the "+"-button to add an application
-   ![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/saml/zitadel/project.png)
+   ![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/saml/zitadel/project.png)
 2. Fill in a name for the application and chose the SAML type, then click "Continue".
-   ![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/saml/zitadel/application_saml.png)
+   ![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/saml/zitadel/application_saml.png)
 3. Either fill in the URL where ZITADEL can read the metadata from, or upload the metadata XML directly, then click "
    Continue".
-   ![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/saml/zitadel/application_saml_metadata.png)
+   ![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/saml/zitadel/application_saml_metadata.png)
 4. Check your application, if everything is correct, press "Create".
-   ![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/saml/zitadel/application_saml_create.png)
+   ![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/saml/zitadel/application_saml_create.png)
 
 Everything on the side of ZITADEL is done if the application is correctly created.
 
@@ -70,7 +70,7 @@ Everything on the side of ZITADEL is done if the application is correctly create
 To then test the connection you only have to press "Try" on the created connection in the Authentication → Enterprise
 screen.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/saml/auth0/auth_enterprise_try.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/saml/auth0/auth_enterprise_try.png)
 
 To further customize the requests you can also customize the SAML communication as
 described [here](https://auth0.com/docs/authenticate/protocols/saml/saml-configuration/customize-saml-assertions)

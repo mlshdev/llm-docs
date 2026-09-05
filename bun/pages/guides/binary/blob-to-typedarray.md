@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/binary/blob-to-typedarray.mdx](https://bun.com/docs/guides/binary/blob-to-typedarray)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/binary/blob-to-typedarray.mdx](https://bun.com/docs/guides/binary/blob-to-typedarray)
 
 # Convert a Blob to a Uint8Array
 

@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/bundler/loaders.mdx](https://bun.com/docs/bundler/loaders)
+> Release-pinned source for Bun bun-v1.4.2: [docs/bundler/loaders.mdx](https://bun.com/docs/bundler/loaders)
 
 The Bun bundler has a set of built-in loaders.
 
@@ -15,6 +15,12 @@ import my_toml from "./my_file" with { type: "toml" };
 // or with dynamic imports
 const { default: my_toml } = await import("./my_file", { with: { type: "toml" } });
 ```
+
+> **Note**
+>
+> With TypeScript 7.1 or newer, `@types/bun` types these imports from the `type` attribute: a `type: "text"` import is a
+> `string`, a `type: "sqlite"` import is a `Database`. Older TypeScript versions type the import from the file extension
+> alone.
 
 ## Built-in loaders
 

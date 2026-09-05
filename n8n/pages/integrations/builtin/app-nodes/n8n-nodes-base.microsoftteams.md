@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/builtin/app-nodes/n8n-nodes-base.microsoftteams.md](https://github.com/n8n-io/n8n-docs/blob/32d4c1af45711af43703671a66f502ef7bd2b932/docs/integrations/builtin/app-nodes/n8n-nodes-base.microsoftteams.md)
+> Commit-pinned source for n8n main: [docs/integrations/builtin/app-nodes/n8n-nodes-base.microsoftteams.md](https://github.com/n8n-io/n8n-docs/blob/3317373ce39c3ce2406c8e3d99bb2da7f7180321/docs/integrations/builtin/app-nodes/n8n-nodes-base.microsoftteams.md)
 
 # Microsoft Teams node <a id="microsoft-teams-node"></a>
 
@@ -36,7 +36,10 @@ On this page, you'll find a list of operations the Microsoft Teams node supports
   - Update
 - Channel Message
   - Create
+  - Get
   - Get Many
+  - Get Many Replies
+  - Reply
 - Chat Message
   - Create
   - Get
@@ -48,6 +51,13 @@ On this page, you'll find a list of operations the Microsoft Teams node supports
   - Get
   - Get Many
   - Update
+
+> **Info**
+> **Channel messages with Service Principal credentials**
+>
+> The **Create** and **Reply** operations for channel messages are not available with the Microsoft Entra Service Principal credentials. App-only Microsoft Graph supports only migration import for channel messages. Use an OAuth2 credential to send channel messages.
+>
+> The read operations stay available with the Service Principal credentials: **Get**, **Get Many**, and **Get Many Replies**.
 
 ## Waiting for a response <a id="waiting-for-a-response"></a>
 

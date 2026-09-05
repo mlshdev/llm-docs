@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/legal/policies/feature-development-policy.mdx](https://zitadel.com/docs/legal/policies/feature-development-policy)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/legal/policies/feature-development-policy.mdx](https://zitadel.com/docs/legal/policies/feature-development-policy)
 
 Last updated on September 25, 2023
 

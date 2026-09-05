@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/docker-hub/repos/manage/builds/migrate.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/docker-hub/repos/manage/builds/migrate.md)
+> Commit-pinned source for Docker main: [content/manuals/docker-hub/repos/manage/builds/migrate.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/docker-hub/repos/manage/builds/migrate.md)
 
 # Migrate from Autobuilds
 
@@ -17,11 +17,11 @@ To grant your CI workflows the ability to pull and push images to and from
 Docker Hub, you first need to create access tokens:
 
 - For a personal repository: Create a [Personal
-  Access Token](https://docs.docker.com/security/access-tokens/) with **Read & Write**
+  Access Token](https://docs.docker.com/security/access-tokens/personal-access-tokens/) with **Read & Write**
   permissions.
 
 - For an organization repository: Create an [Organization Access
-  Token](https://docs.docker.com/enterprise/security/access-tokens/) with the following
+  Token](https://docs.docker.com/security/access-tokens/organization-access-tokens/) with the following
   permissions:
   - **Read public repositories**
   - **Image Pull** on any private repositories that the build needs to pull from
@@ -78,7 +78,7 @@ Docker Hub web interface.
 
 The following image shows an example Autobuilds configuration.
 
-![Example Autobuilds configuration](https://raw.githubusercontent.com/docker/docs/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/docker-hub/repos/manage/builds/images/autobuild-example.png)
+![Example Autobuilds configuration](https://raw.githubusercontent.com/docker/docs/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/docker-hub/repos/manage/builds/images/autobuild-example.png)
 
 Based on the pictured example, you would note the following items for this
 Autobuilds configuration:

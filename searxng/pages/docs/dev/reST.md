@@ -1,4 +1,4 @@
-> Commit-pinned source for SearXNG master: [docs/dev/reST.rst](https://github.com/searxng/searxng/blob/05cd77f71b466b7674658429d834a8db3b26811f/docs/dev/reST.rst)
+> Commit-pinned source for SearXNG master: [docs/dev/reST.rst](https://github.com/searxng/searxng/blob/22056605a6e0ed41a0aa91a2bf300a361fd16b92/docs/dev/reST.rst)
 
 .. \_reST primer:
 
@@ -274,7 +274,7 @@ project's wiki article     :wiki:`Offline-engines`            ``:wiki:`Offline-e
    files & folders origin     :origin:`docs/dev/reST.rst`        ``:origin:`docs/dev/reST.rst```
    pull request               :pull:`4`                          ``:pull:`4```
 patch                      :patch:`af2cae6`                   ``:patch:`af2cae6```
-   PyPi package               :pypi:`httpx`                      ``:pypi:`httpx```
+   PyPi package               :pypi:`curl_cffi`                  ``:pypi:`curl_cffi```
    manual page man            :man:`bash`                        ``:man:`bash\`\`\`
 
 ## intersphinx\_

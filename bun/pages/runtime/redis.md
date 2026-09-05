@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/runtime/redis.mdx](https://bun.com/docs/runtime/redis)
+> Release-pinned source for Bun bun-v1.4.2: [docs/runtime/redis.mdx](https://bun.com/docs/runtime/redis)
 
 # Redis
 

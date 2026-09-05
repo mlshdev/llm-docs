@@ -7,12 +7,8 @@ import {
   githubRawUrl,
   rewriteMarkdownLinks,
 } from "../markdown.ts";
-import type {
-  Document,
-  LockedSource,
-  ProjectBuild,
-  SourceProject,
-} from "../types.ts";
+import { DocumentCollector } from "../quarantine.ts";
+import type { LockedSource, ProjectBuild, SourceProject } from "../types.ts";
 
 const documentationFiles = [
   "README.md",
@@ -30,37 +26,40 @@ export async function buildYtDlp(
     project.repository,
     lock.sourceCommit,
     async (root, archiveFiles) => {
-      const documents: Document[] = [];
+      const documents = new DocumentCollector(project.id);
       for (const sourcePath of documentationFiles) {
-        const body = rewriteMarkdownLinks(
-          cleanMarkdown(await readUtf8(root, sourcePath)),
-          (url, kind) =>
-            resolveLink(
-              url,
-              kind,
-              sourcePath,
-              archiveFiles,
+        await documents.collect(sourcePath, async () => {
+          const body = rewriteMarkdownLinks(
+            cleanMarkdown(await readUtf8(root, sourcePath)),
+            (url, kind) =>
+              resolveLink(
+                url,
+                kind,
+                sourcePath,
+                archiveFiles,
+                project.repository,
+                lock.sourceCommit,
+              ),
+          );
+          return {
+            sourcePath,
+            outputPath: `pages/${sourcePath}`,
+            title: documentTitle(body, {}, sourcePath),
+            body,
+            canonicalUrl: githubBlobUrl(
               project.repository,
               lock.sourceCommit,
+              sourcePath,
             ),
-        );
-        documents.push({
-          sourcePath,
-          outputPath: `pages/${sourcePath}`,
-          title: documentTitle(body, {}, sourcePath),
-          body,
-          canonicalUrl: githubBlobUrl(
-            project.repository,
-            lock.sourceCommit,
-            sourcePath,
-          ),
-          section: sourcePath === "README.md" ? "Manual" : "Reference",
+            section: sourcePath === "README.md" ? "Manual" : "Reference",
+          };
         });
       }
       return {
         project,
         lock,
-        documents,
+        documents: documents.documents,
+        quarantined: documents.quarantined,
         notes: [
           "Release-authored Markdown is normalized directly; generated binaries, man pages, and shell completions are omitted.",
           "The supported-site catalog is retained as a separate reference page.",

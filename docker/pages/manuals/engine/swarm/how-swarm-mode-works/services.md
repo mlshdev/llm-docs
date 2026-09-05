@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/engine/swarm/how-swarm-mode-works/services.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/engine/swarm/how-swarm-mode-works/services.md)
+> Commit-pinned source for Docker main: [content/manuals/engine/swarm/how-swarm-mode-works/services.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/engine/swarm/how-swarm-mode-works/services.md)
 
 # How services work
 
@@ -29,7 +29,7 @@ For example, imagine you want to load balance between three instances of an HTTP
 listener. The diagram below shows an HTTP listener service with three replicas.
 Each of the three instances of the listener is a task in the swarm.
 
-![HTTP listener service with three replicas](https://raw.githubusercontent.com/docker/docs/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/engine/swarm/images/services-diagram.webp?w=550)
+![HTTP listener service with three replicas](https://raw.githubusercontent.com/docker/docs/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/engine/swarm/images/services-diagram.webp?w=550)
 
 A container is an isolated process. In the Swarm mode model, each task invokes
 exactly one container. A task is analogous to a “slot” where the scheduler
@@ -63,7 +63,7 @@ scheduler and orchestrator are agnostic about the type of the task. However, Doc
 The diagram below shows how Swarm mode accepts service create requests and
 schedules tasks to worker nodes.
 
-![Services flow](https://raw.githubusercontent.com/docker/docs/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/engine/swarm/images/service-lifecycle.webp?w=700)
+![Services flow](https://raw.githubusercontent.com/docker/docs/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/engine/swarm/images/service-lifecycle.webp?w=700)
 
 ### Pending services
 
@@ -113,7 +113,7 @@ or other types of containers that you want to run on every node in the swarm.
 The diagram below shows a three-service replica in gray and a global service
 in black.
 
-![Global vs replicated services](https://raw.githubusercontent.com/docker/docs/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/engine/swarm/images/replicated-vs-global.webp?w=450)
+![Global vs replicated services](https://raw.githubusercontent.com/docker/docs/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/engine/swarm/images/replicated-vs-global.webp?w=450)
 
 ## Learn more
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/integrate-ai/ai-examples/use-ai-for-parameters.md](https://github.com/n8n-io/n8n-docs/blob/32d4c1af45711af43703671a66f502ef7bd2b932/docs/build/integrate-ai/ai-examples/use-ai-for-parameters.md)
+> Commit-pinned source for n8n main: [docs/build/integrate-ai/ai-examples/use-ai-for-parameters.md](https://github.com/n8n-io/n8n-docs/blob/3317373ce39c3ce2406c8e3d99bb2da7f7180321/docs/build/integrate-ai/ai-examples/use-ai-for-parameters.md)
 
 # Let AI specify the tool parameters <a id="let-ai-specify-the-tool-parameters"></a>
 
@@ -10,7 +10,7 @@ There are two ways to do this, and you can switch between them.
 
 Each appropriate parameter field in the tool's editing dialog has an extra button at the end:
 
-![A star icon button at the end of a parameter field, used to let the AI Agent fill in that value automatically](https://raw.githubusercontent.com/n8n-io/n8n-docs/32d4c1af45711af43703671a66f502ef7bd2b932/docs/build/.gitbook/assets/ai-stars.png)
+![A star icon button at the end of a parameter field, used to let the AI Agent fill in that value automatically](https://raw.githubusercontent.com/n8n-io/n8n-docs/3317373ce39c3ce2406c8e3d99bb2da7f7180321/docs/build/.gitbook/assets/ai-stars.png)
 
 On activating this button, the AI Agent[^2] will fill in the expression for you, with no need for any further user input.
 The field itself is filled in with a message indicating that the parameter has been defined automatically by the model.

@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/install/add-optional.mdx](https://bun.com/docs/guides/install/add-optional)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/install/add-optional.mdx](https://bun.com/docs/guides/install/add-optional)
 
 # Add an optional dependency
 

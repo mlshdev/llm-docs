@@ -1,10 +1,11 @@
-> Commit-pinned source for Docker main: [content/manuals/docker-hub/repos/manage/builds/automated-testing.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/docker-hub/repos/manage/builds/automated-testing.md)
+> Commit-pinned source for Docker main: [content/manuals/docker-hub/repos/manage/builds/automated-testing.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/docker-hub/repos/manage/builds/automated-testing.md)
 
 # Automated repository tests
 
 > \[!WARNING]
 > Docker Hub Automated Builds is a deprecated feature.
 > It will be fully retired on April 1, 2027.
+> See the [migration guide](https://docs.docker.com/docker-hub/repos/manage/builds/migrate/) to move to a supported CI/CD workflow.
 
 > \[!NOTE]
 >

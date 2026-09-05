@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/admin-set-up.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/guides/admin-set-up.md)
+> Commit-pinned source for Docker main: [content/guides/admin-set-up.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/guides/admin-set-up.md)
 
 # Set up your company for success with Docker
 
@@ -37,7 +37,7 @@ policies.
 
 This guide covers the following Docker features:
 
-- [Organizations](https://docs.docker.com/admin/organization/): The core structure
+- [Organizations](https://docs.docker.com/accounts/organization/): The core structure
   for managing your Docker environment, grouping users, teams, and image
   repositories. Your organization was created with your subscription and is
   managed by one or more owners. Users signed into the organization are
@@ -46,7 +46,7 @@ This guide covers the following Docker features:
   By default, Docker Desktop doesn't require sign-in. You can configure
   settings to enforce this and ensure your developers sign in to your
   Docker organization.
-- [SSO](https://docs.docker.com/enterprise/security/single-sign-on/): Without SSO,
+- [SSO](https://docs.docker.com/security/authentication/single-sign-on/): Without SSO,
   user management in a Docker organization is manual. Setting
   up an SSO connection between your identity provider and Docker ensures
   compliance with your security policy and automates user provisioning. Adding
@@ -116,7 +116,7 @@ files to be distributed to developer machines. Use MDM tools to deploy these con
 ### Identify Docker organizations
 
 Some companies may have more than one
-[Docker organization](https://docs.docker.com/admin/organization/) created. These
+[Docker organization](https://docs.docker.com/accounts/organization/) created. These
 organizations may have been created for specific purposes, or may not be
 needed anymore.
 
@@ -171,8 +171,8 @@ settings, along with your chosen method for [enforcing sign-in](https://docs.doc
 ### Manage your organizations
 
 If you have more than one organization, consider either [consolidating them
-into one organization](https://docs.docker.com/admin/organization/setup/orgs/) or creating a
-[Docker company](https://docs.docker.com/admin/company/) to manage multiple
+into one organization](https://docs.docker.com/accounts/organization/setup/orgs/) or creating a
+[Docker company](https://docs.docker.com/accounts/company/) to manage multiple
 organizations.
 
 ### Begin setup
@@ -182,9 +182,9 @@ organizations.
 Single sign-on (SSO) lets developers authenticate using their identity
 providers (IdPs) to access Docker. SSO is available for a whole company and all associated organizations, or an individual organization that has a Docker
 Business subscription. For more information, see the
-[documentation](https://docs.docker.com/enterprise/security/single-sign-on/).
+[documentation](https://docs.docker.com/security/authentication/single-sign-on/).
 
-You can also enable [SCIM](https://docs.docker.com/enterprise/security/provisioning/scim/)
+You can also enable [SCIM](https://docs.docker.com/security/provisioning/scim/)
 for further automation of provisioning and deprovisioning of users.
 
 #### Set up Docker product entitlements included in the subscription
@@ -238,7 +238,7 @@ SSO and SCIM setup.
 > \[!IMPORTANT]
 >
 > Some users may need CLI based logins to Docker Hub, and for this they will
-> need a [personal access token (PAT)](https://docs.docker.com/security/access-tokens/).
+> need a [personal access token (PAT)](https://docs.docker.com/security/access-tokens/personal-access-tokens/).
 
 ### Test Registry Access Management and Image Access Management
 
@@ -298,7 +298,7 @@ that matches your verified domain must sign in using your SSO connection. Make
 sure the Identity provider groups associated with your SSO connection cover all
 the developer groups that you want to have access to the Docker subscription.
 
-For instructions on how to enforce SSO, see [Enforce SSO](https://docs.docker.com/enterprise/security/single-sign-on/connect/).
+For instructions on how to enforce SSO, see [Enforce SSO](https://docs.docker.com/security/authentication/single-sign-on/connect/).
 
 ### Deploy configuration settings and enforce sign-in to users
 
@@ -311,6 +311,6 @@ for Docker.
 
 To continue optimizing your Docker environment:
 
-- Review your [organization's usage data](https://docs.docker.com/admin/insights/) to track adoption
+- Review your [organization's usage data](https://docs.docker.com/accounts/organization/insights/) to track adoption
 - Monitor [Docker Scout findings](https://docs.docker.com/scout/explore/analysis/) for security insights
-- Explore [additional security features](https://docs.docker.com/enterprise/security/) to enhance your configuration
+- Explore [additional security features](https://docs.docker.com/enterprise/security/hardened-desktop/) to enhance your configuration

@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/legal/index.mdx](https://zitadel.com/docs/legal)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/legal/index.mdx](https://zitadel.com/docs/legal)
 
 - [Terms Of Service](https://zitadel.com/docs/legal/terms-of-service)
 - [Data Processing Agreement](https://zitadel.com/docs/legal/data-processing-agreement)

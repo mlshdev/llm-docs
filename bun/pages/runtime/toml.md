@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/runtime/toml.mdx](https://bun.com/docs/runtime/toml)
+> Release-pinned source for Bun bun-v1.4.2: [docs/runtime/toml.mdx](https://bun.com/docs/runtime/toml)
 
 In Bun, TOML is a first-class citizen alongside JSON, JSON5, and YAML. You can:
 

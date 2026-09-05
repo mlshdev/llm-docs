@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/self-hosting/manage/metrics/prometheus.mdx](https://zitadel.com/docs/self-hosting/manage/metrics/prometheus)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/self-hosting/manage/metrics/prometheus.mdx](https://zitadel.com/docs/self-hosting/manage/metrics/prometheus)
 
 ## Prometheus
 

@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/test/update-snapshots.mdx](https://bun.com/docs/guides/test/update-snapshots)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/test/update-snapshots.mdx](https://bun.com/docs/guides/test/update-snapshots)
 
 # Update snapshots in `bun test`
 

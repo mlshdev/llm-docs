@@ -1,28 +1,45 @@
-> Commit-pinned source for Docker main: [content/manuals/security/_index.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/security/_index.md)
+> Commit-pinned source for Docker main: [content/manuals/security/_index.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/security/_index.md)
 
-# Security for developers
+# Security
 
-Docker helps you protect your local environments, infrastructure, and networks
-with its developer-level security features.
+Security helps individual users and organization owners secure their
+accounts, manage access, and control membership. You configure these
+settings in [Docker Home](https://app.docker.com/).
 
-Use tools like two-factor authentication (2FA), personal access tokens, and
-Docker Scout to manage access and detect vulnerabilities early in your workflow.
-You can also integrate secrets securely into your development stack using Docker Compose,
-or enhance your software supply security with Docker Hardened Images.
+## Individual accounts
 
-Explore the following sections to learn more.
+You sign in with your individual account.
 
-## For developers
+- [Two-factor authentication](https://docs.docker.com/security/authentication/2fa/)
+  (2FA) adds a time-based one-time password (TOTP) from an authenticator
+  app to your password.
+- A [personal access token](https://docs.docker.com/security/access-tokens/personal-access-tokens/)
+  (PAT) authenticates the Docker CLI and tools without your password, and
+  is required for CLI sign-in when 2FA is on or single sign-on (SSO) is
+  enforced.
 
-- [Set up two-factor authentication](https://docs.docker.com/security/2fa/): Add an extra layer of authentication to your Docker account.
-- [Manage access tokens](https://docs.docker.com/security/access-tokens/): Create personal access tokens as an alternative to your password.
-- [Static vulnerability scanning](https://docs.docker.com/docker-hub/repos/manage/vulnerability-scanning/): Automatically run a point-in-time scan on your Docker images for vulnerabilities.
-- [Docker Engine security](https://docs.docker.com/engine/security/): Understand how to keep Docker Engine secure.
-- [Secrets in Docker Compose](https://docs.docker.com/compose/how-tos/use-secrets/): Learn how to use secrets in Docker Compose.
+## Organization accounts
 
-## More resources
+Organization and company owners set up how members sign in, add them to
+the organization, configure automation, and control what members can do.
 
-- [Security FAQs](https://docs.docker.com/faq/security/general/): Explore common security FAQs.
-- [Security best practices](https://docs.docker.com/develop/security-best-practices/): Understand the steps you can take to improve the security of your container.
-- [Suppress CVEs with VEX](https://docs.docker.com/scout/guides/vex/): Learn how to suppress non-applicable or fixed vulnerabilities found in your images.
-- [Docker Hardened Images](https://docs.docker.com/dhi/): Learn how to use Docker Hardened Images to enhance your software supply security.
+- [Single sign-on](https://docs.docker.com/security/authentication/single-sign-on/)
+  (SSO) federates sign-in through your identity provider, which can cover
+  one organization or every organization in a company.
+- [Provisioning](https://docs.docker.com/security/provisioning/) adds users with
+  System for Cross-domain Identity Management (SCIM), Just-in-Time (JIT)
+  provisioning, auto-provisioning, or domain matching.
+- An [organization access token](https://docs.docker.com/security/access-tokens/organization-access-tokens/)
+  (OAT) stays with the organization when membership changes.
+- [OIDC connections](https://docs.docker.com/security/authentication/oidc-connections/)
+  use OpenID Connect to authenticate GitHub Actions with short-lived
+  tokens, as an alternative to a long-lived OAT.
+- [Roles and permissions](https://docs.docker.com/security/roles-and-permissions/)
+  control what members can do after they join.
+
+## Next steps
+
+- [Authentication](https://docs.docker.com/security/authentication/): Two-factor authentication, single sign-on, and OIDC connections.
+- [Access tokens](https://docs.docker.com/security/access-tokens/): Personal and organization access tokens for the Docker CLI and automation.
+- [Provisioning](https://docs.docker.com/security/provisioning/): Add users with SCIM, JIT, auto-provisioning, and domain management.
+- [Roles and permissions](https://docs.docker.com/security/roles-and-permissions/): Assign core or custom roles to control access in your organization.

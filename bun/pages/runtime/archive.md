@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/runtime/archive.mdx](https://bun.com/docs/runtime/archive)
+> Release-pinned source for Bun bun-v1.4.2: [docs/runtime/archive.mdx](https://bun.com/docs/runtime/archive)
 
 # Archive
 

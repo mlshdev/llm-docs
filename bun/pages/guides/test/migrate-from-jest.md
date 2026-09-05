@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/test/migrate-from-jest.mdx](https://bun.com/docs/guides/test/migrate-from-jest)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/test/migrate-from-jest.mdx](https://bun.com/docs/guides/test/migrate-from-jest)
 
 # Migrate from Jest to Bun's test runner
 

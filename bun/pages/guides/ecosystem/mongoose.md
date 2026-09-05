@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/ecosystem/mongoose.mdx](https://bun.com/docs/guides/ecosystem/mongoose)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/ecosystem/mongoose.mdx](https://bun.com/docs/guides/ecosystem/mongoose)
 
 # Read and write data to MongoDB using Mongoose and Bun
 

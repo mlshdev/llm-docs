@@ -1,34 +1,27 @@
-> Commit-pinned source for Docker main: [content/manuals/accounts/_index.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/accounts/_index.md)
+> Commit-pinned source for Docker main: [content/manuals/accounts/_index.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/accounts/_index.md)
 
-# Docker accounts
+# Accounts
 
-A Docker account is how Docker identifies you. Use it to access products like
-Docker Hub and Docker Desktop, manage settings, and join organizations.
+A Docker account identifies you and lets you access Docker products. You
+manage it in [Docker Home](https://app.docker.com/). Docker has two
+primary account types: individual and organization. A company groups
+multiple organizations.
 
-Docker has two primary account types: individual and organization. You create
-and administer organizations with your individual account. For organization
-accounts, see [Organizations](https://docs.docker.com/admin/organization/). For
-organizations and companies, see [Administration](https://docs.docker.com/admin/).
+| Account type | What it is                                                                | Who it's for                     |
+| ------------ | ------------------------------------------------------------------------- | -------------------------------- |
+| Individual   | A Docker ID with personal settings, Hub repositories, and sign-in methods | A person                         |
+| Organization | A shared workspace for members, teams, and repositories                   | Teams on Docker Team or Business |
+| Company      | Multiple organizations under centralized administration                   | Docker Business subscribers      |
 
-## Docker ID, email, and sign-in
-
-When you create an account, you choose a Docker ID and a sign-in method.
-Docker also ties a verified email to the account.
-
-- Docker account: Associates your plans, Hub repositories, and account
-  settings.
-- Docker ID: A unique username that identifies you.
-- Email: How Docker contacts you for notifications and security-related
-  communications.
-- Sign-in method: Email and password,
-  [single sign-on (SSO)](https://docs.docker.com/enterprise/security/single-sign-on/),
-  Google, or GitHub.
+You always sign in with your individual account, then work in the
+organizations you own or belong to. Those organizations sit under a
+company when you administer more than one.
 
 ## Next steps
 
-- [Create an account](https://docs.docker.com/accounts/create-account/): Get started with Docker and create an account.
-- [Manage account](https://docs.docker.com/accounts/manage-account/): Learn how to manage the settings for your account.
-- [Personal access tokens](https://docs.docker.com/security/access-tokens/): Learn how to create and manage access tokens for your account.
-- [Set up two-factor authentication](https://docs.docker.com/security/2fa/): Add an extra layer of authentication to your Docker account.
-- [Organization overview](https://docs.docker.com/admin/organization/): Learn how to create and manage Docker organizations.
-- [Account FAQs](https://docs.docker.com/accounts/general-faqs/): Explore frequently asked questions about Docker accounts.
+- [Docker individual accounts](https://docs.docker.com/accounts/individual/): Create and manage your Docker ID, email, and sign-in methods.
+- [Organization accounts](https://docs.docker.com/accounts/organization/): Manage members, teams, and organization settings.
+- [Company accounts](https://docs.docker.com/accounts/company/): Group multiple organizations for centralized administration.
+- [Security](https://docs.docker.com/security/): Authentication, tokens, and roles for accounts and organizations.
+- [Subscription and billing](https://docs.docker.com/subscription-billing/): Plans, payments, and invoices for your account or organization.
+- [FAQs](https://docs.docker.com/faqs/): Common questions about accounts, billing, and security.

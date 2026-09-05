@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/integrate/services/index.mdx](https://zitadel.com/docs/guides/integrate/services)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/guides/integrate/services/index.mdx](https://zitadel.com/docs/guides/integrate/services)
 
 - [Google Workspace](https://zitadel.com/docs/guides/integrate/services/google-workspace)
 - [Aws Saml](https://zitadel.com/docs/guides/integrate/services/aws-saml)

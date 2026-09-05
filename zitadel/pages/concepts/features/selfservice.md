@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/concepts/features/selfservice.mdx](https://zitadel.com/docs/concepts/features/selfservice)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/concepts/features/selfservice.mdx](https://zitadel.com/docs/concepts/features/selfservice)
 
 ZITADEL allows users to perform many tasks themselves.
 For these tasks we either provide a user interface, or the tasks can be initiated or completed through ZITADEL's APIs.

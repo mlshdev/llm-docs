@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/enterprise/security/hardened-desktop/settings-management/compliance-reporting.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/enterprise/security/hardened-desktop/settings-management/compliance-reporting.md)
+> Commit-pinned source for Docker main: [content/manuals/enterprise/security/hardened-desktop/settings-management/compliance-reporting.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/enterprise/security/hardened-desktop/settings-management/compliance-reporting.md)
 
 # Desktop settings reporting
 
@@ -16,7 +16,7 @@ Desktop settings reporting tracks user compliance with Docker Desktop settings p
 Before you can use Docker Desktop settings reporting, make sure you have:
 
 - [Docker Desktop](https://docs.docker.com/desktop/release-notes/) installed across your organization
-- [A verified domain](https://docs.docker.com/enterprise/security/single-sign-on/connect/)
+- [A verified domain](https://docs.docker.com/security/authentication/single-sign-on/connect/)
 - [Enforced sign-in](https://docs.docker.com/enterprise/security/enforce-sign-in/) for your organization
 - A Docker Business subscription
 - At least one settings policy configured

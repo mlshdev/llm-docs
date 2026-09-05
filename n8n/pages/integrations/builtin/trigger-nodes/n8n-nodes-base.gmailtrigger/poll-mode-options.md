@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/builtin/trigger-nodes/n8n-nodes-base.gmailtrigger/poll-mode-options.md](https://github.com/n8n-io/n8n-docs/blob/32d4c1af45711af43703671a66f502ef7bd2b932/docs/integrations/builtin/trigger-nodes/n8n-nodes-base.gmailtrigger/poll-mode-options.md)
+> Commit-pinned source for n8n main: [docs/integrations/builtin/trigger-nodes/n8n-nodes-base.gmailtrigger/poll-mode-options.md](https://github.com/n8n-io/n8n-docs/blob/3317373ce39c3ce2406c8e3d99bb2da7f7180321/docs/integrations/builtin/trigger-nodes/n8n-nodes-base.gmailtrigger/poll-mode-options.md)
 
 # Gmail Trigger node Poll Mode options <a id="gmail-trigger-node-poll-mode-options"></a>
 

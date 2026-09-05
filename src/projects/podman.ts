@@ -14,6 +14,7 @@ import {
   normalizeSpacing,
   rewriteMarkdownLinks,
 } from "../markdown.ts";
+import { DocumentCollector } from "../quarantine.ts";
 import type {
   Document,
   LockedSource,
@@ -71,46 +72,48 @@ export async function buildPodman(
       selected.delete("docs/source/markdown/podman-rootless.7.md");
       selected.delete("docs/source/markdown/podman-troubleshooting.7.md");
 
-      const documents: Document[] = [];
+      const documents = new DocumentCollector(project.id);
       for (const sourcePath of [...selected].sort(compareCodePoints)) {
-        const raw = sourcePath.endsWith(".md.in")
-          ? await preprocessPodmanTemplate(root, sourcePath)
-          : await readUtf8(root, sourcePath);
-        const normalized = sourcePath.endsWith(".rst")
-          ? convertRst(
-              await expandRstIncludes(
-                root,
-                sourcePath,
-                raw,
-                new Set([sourcePath]),
-              ),
-            )
-          : cleanMarkdown(repairPodmanFences(normalizeManPage(raw)));
-        const body = rewriteMarkdownLinks(normalized, (url, kind) =>
-          resolvePodmanLink(
-            url,
-            kind,
+        await documents.collect(sourcePath, async () => {
+          const raw = sourcePath.endsWith(".md.in")
+            ? await preprocessPodmanTemplate(root, sourcePath)
+            : await readUtf8(root, sourcePath);
+          const normalized = sourcePath.endsWith(".rst")
+            ? convertRst(
+                await expandRstIncludes(
+                  root,
+                  sourcePath,
+                  raw,
+                  new Set([sourcePath]),
+                ),
+              )
+            : cleanMarkdown(repairPodmanFences(normalizeManPage(raw)));
+          const body = rewriteMarkdownLinks(normalized, (url, kind) =>
+            resolvePodmanLink(
+              url,
+              kind,
+              sourcePath,
+              project.repository,
+              lock.sourceCommit,
+              archiveFiles,
+            ),
+          );
+          return {
             sourcePath,
-            project.repository,
-            lock.sourceCommit,
-            archiveFiles,
-          ),
-        );
-        documents.push({
-          sourcePath,
-          outputPath: outputPathFor(sourcePath),
-          title: documentTitle(body, {}, sourcePath),
-          body,
-          canonicalUrl: githubBlobUrl(
-            project.repository,
-            lock.sourceCommit,
-            sourcePath,
-          ),
-          section: sectionFor(sourcePath),
+            outputPath: outputPathFor(sourcePath),
+            title: documentTitle(body, {}, sourcePath),
+            body,
+            canonicalUrl: githubBlobUrl(
+              project.repository,
+              lock.sourceCommit,
+              sourcePath,
+            ),
+            section: sectionFor(sourcePath),
+          };
         });
       }
-      documents.push(
-        await buildPodmanApiReference(
+      await documents.collect("pkg/api/server", () =>
+        buildPodmanApiReference(
           root,
           files,
           project.repository,
@@ -120,7 +123,8 @@ export async function buildPodman(
       return {
         project,
         lock,
-        documents,
+        documents: documents.documents,
+        quarantined: documents.quarantined,
         notes: [
           "Podman man-page templates are expanded by a non-executing implementation of the tagged repository's documented preprocessing rules.",
           "Generated aliases, duplicate rootless/troubleshooting pages, translations, assets, and vendored code are omitted.",

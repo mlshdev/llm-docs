@@ -1,4 +1,4 @@
-> Commit-pinned source for FFmpeg master: [doc/ffmpeg-resampler.texi](https://github.com/FFmpeg/FFmpeg/blob/9fc8c785e2747c87121ec28f8f10ceab0562384b/doc/ffmpeg-resampler.texi)
+> Commit-pinned source for FFmpeg master: [doc/ffmpeg-resampler.texi](https://github.com/FFmpeg/FFmpeg/blob/9997fd060680d427bcc0c0715d163346da7ebd6f/doc/ffmpeg-resampler.texi)
 
 # Description
 

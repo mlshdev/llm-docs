@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/integrate/identity-providers/introduction.mdx](https://zitadel.com/docs/guides/integrate/identity-providers/introduction)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/guides/integrate/identity-providers/introduction.mdx](https://zitadel.com/docs/guides/integrate/identity-providers/introduction)
 
 ## External Identity Providers and SSO authentication
 
@@ -67,7 +67,7 @@ Once in the settings:
 
 - Access the **Login Behavior and Security** section to modify your login policy. Here, ensure you enable the option for **External IDP Allowed**.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/zitadel_allow_external_idp.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/guides/zitadel_allow_external_idp.png)
 
 ### Setting up IdP Providers
 
@@ -75,7 +75,7 @@ Access the settings page of your instance or the specific organization and selec
 
 The ZITADEL Management Console will display a list of all the IdPs you've set up, along with available provider templates. Selecting any listed IdP will guide you through the process of setting up that specific Identity Provider.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/zitadel_identity_provider_overview.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/guides/zitadel_identity_provider_overview.png)
 
 ## Available guides
 
@@ -88,7 +88,7 @@ In the guides below, some of which utilize the Generic OIDC or SAML templates fo
 - [GitLab](https://zitadel.com/docs/guides/integrate/identity-providers/gitlab)
 - [Apple](https://zitadel.com/docs/guides/integrate/identity-providers/apple)
 - [LDAP](https://zitadel.com/docs/guides/integrate/identity-providers/ldap)
-- [Local OpenLDAP](https://github.com/zitadel/zitadel/blob/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/content/guides/integrate/identity-providers/openldap.mdx)
+- [Local OpenLDAP](https://github.com/zitadel/zitadel/blob/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/content/guides/integrate/identity-providers/openldap.mdx)
 - [OKTA generic OIDC](https://zitadel.com/docs/guides/integrate/identity-providers/okta-oidc)
 - [OKTA SAML](https://zitadel.com/docs/guides/integrate/identity-providers/okta_saml)
 - [Keycloak generic OIDC](https://zitadel.com/docs/guides/integrate/identity-providers/keycloak)

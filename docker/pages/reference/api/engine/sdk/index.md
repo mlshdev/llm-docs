@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/reference/api/engine/sdk/_index.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/reference/api/engine/sdk/_index.md)
+> Commit-pinned source for Docker main: [content/reference/api/engine/sdk/_index.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/reference/api/engine/sdk/_index.md)
 
 # Develop with Docker Engine SDKs
 
@@ -148,15 +148,15 @@ print(client.containers.run("alpine", ["echo", "hello", "world"]))
 ```console
 $ curl --unix-socket /var/run/docker.sock -H "Content-Type: application/json" \
   -d '{"Image": "alpine", "Cmd": ["echo", "hello world"]}' \
-  -X POST http://localhost/v1.55/containers/create
+  -X POST http://localhost/v1.56/containers/create
 {"Id":"1c6594faf5","Warnings":null}
 
-$ curl --unix-socket /var/run/docker.sock -X POST http://localhost/v1.55/containers/1c6594faf5/start
+$ curl --unix-socket /var/run/docker.sock -X POST http://localhost/v1.56/containers/1c6594faf5/start
 
-$ curl --unix-socket /var/run/docker.sock -X POST http://localhost/v1.55/containers/1c6594faf5/wait
+$ curl --unix-socket /var/run/docker.sock -X POST http://localhost/v1.56/containers/1c6594faf5/wait
 {"StatusCode":0}
 
-$ curl --unix-socket /var/run/docker.sock "http://localhost/v1.55/containers/1c6594faf5/logs?stdout=1"
+$ curl --unix-socket /var/run/docker.sock "http://localhost/v1.56/containers/1c6594faf5/logs?stdout=1"
 hello world
 ```
 
@@ -170,7 +170,7 @@ examples use `localhost`, but any hostname would work.
 > when using a socket connection.
 >
 > If you're' using an older version of cURL, use `http:/<API version>/` instead,
-> for example: `http:/v1.55/containers/1c6594faf5/start`.
+> for example: `http:/v1.56/containers/1c6594faf5/start`.
 
 For more examples, take a look at the [SDK examples](https://docs.docker.com/reference/api/engine/sdk/examples/).
 

@@ -14,12 +14,8 @@ import {
   normalizeSpacing,
   rewriteMarkdownLinks,
 } from "../markdown.ts";
-import type {
-  Document,
-  LockedSource,
-  ProjectBuild,
-  SourceProject,
-} from "../types.ts";
+import { DocumentCollector } from "../quarantine.ts";
+import type { LockedSource, ProjectBuild, SourceProject } from "../types.ts";
 
 const rootDocuments = [
   "README.rst",
@@ -49,43 +45,46 @@ export async function buildSearxng(
             ) || /^docs\/.*\.rst$/.test(sourcePath),
         )
         .sort(compareCodePoints);
-      const documents: Document[] = [];
+      const documents = new DocumentCollector(project.id);
       for (const sourcePath of pages) {
-        const source = await expandIncludes(
-          root,
-          sourcePath,
-          new Set([sourcePath]),
-        );
-        const converted = sourcePath.endsWith(".rst")
-          ? convertRst(normalizeSphinx(source))
-          : cleanMarkdown(source);
-        const body = rewriteMarkdownLinks(converted, (url, kind) =>
-          resolveLink(
-            url,
-            kind,
+        await documents.collect(sourcePath, async () => {
+          const source = await expandIncludes(
+            root,
             sourcePath,
-            archiveFiles,
-            project.repository,
-            lock.sourceCommit,
-          ),
-        );
-        documents.push({
-          sourcePath,
-          outputPath: `pages/${sourcePath.replace(/\.rst$/, ".md")}`,
-          title: documentTitle(body, {}, sourcePath),
-          body,
-          canonicalUrl: githubBlobUrl(
-            project.repository,
-            lock.sourceCommit,
+            new Set([sourcePath]),
+          );
+          const converted = sourcePath.endsWith(".rst")
+            ? convertRst(normalizeSphinx(source))
+            : cleanMarkdown(source);
+          const body = rewriteMarkdownLinks(converted, (url, kind) =>
+            resolveLink(
+              url,
+              kind,
+              sourcePath,
+              archiveFiles,
+              project.repository,
+              lock.sourceCommit,
+            ),
+          );
+          return {
             sourcePath,
-          ),
-          section: sectionFor(sourcePath),
+            outputPath: `pages/${sourcePath.replace(/\.rst$/, ".md")}`,
+            title: documentTitle(body, {}, sourcePath),
+            body,
+            canonicalUrl: githubBlobUrl(
+              project.repository,
+              lock.sourceCommit,
+              sourcePath,
+            ),
+            section: sectionFor(sourcePath),
+          };
         });
       }
       return {
         project,
         lock,
-        documents,
+        documents: documents.documents,
+        quarantined: documents.quarantined,
         notes: [
           "SearXNG tracks master because the repository publishes neither GitHub releases nor release tags.",
           "Checked-in RST and Markdown includes are expanded without executing Sphinx, Jinja, or imported Python modules.",

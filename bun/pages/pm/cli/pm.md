@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/pm/cli/pm.mdx](https://bun.com/docs/pm/cli/pm)
+> Release-pinned source for Bun bun-v1.4.2: [docs/pm/cli/pm.mdx](https://bun.com/docs/pm/cli/pm)
 
 The `bun pm` command group is a set of utilities for working with Bun's package manager.
 
@@ -115,7 +115,7 @@ bun list
 ```
 
 ```txt
-/path/to/project node_modules (135)
+/path/to/project node_modules (135 installed)
 ├── eslint@8.38.0
 ├── react@18.2.0
 ├── react-dom@18.2.0
@@ -132,7 +132,7 @@ bun list --all
 ```
 
 ```txt
-/path/to/project node_modules (135)
+/path/to/project node_modules (135 installed)
 ├── @eslint-community/eslint-utils@4.4.0
 ├── @eslint-community/regexpp@4.5.0
 ├── @eslint/eslintrc@2.0.2
@@ -156,7 +156,7 @@ bun list --trusted
 ```
 
 ```txt
-/path/to/project node_modules (135)
+/path/to/project node_modules (135 installed)
 └── esbuild@0.21.5
 ```
 
@@ -171,6 +171,8 @@ bun pm licenses ls
 ```
 
 ```txt
+bun pm licenses v1.3.0 (a4b2f86f)
+
 MIT (2)
 ├── path-parse@1.0.6
 └── resolve@1.9.0
@@ -180,6 +182,8 @@ Unknown (4)
 ├── no-deps@1.0.0
 ├── no-deps@1.0.1
 └── one-dep@1.0.0
+
+6 packages across 2 licenses (checked 6 packages in bun.lock) [4.00ms]
 ```
 
 | Flag                           | Description                                                                                         |

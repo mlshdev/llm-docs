@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/integrate/login-ui/index.mdx](https://zitadel.com/docs/guides/integrate/login-ui)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/guides/integrate/login-ui/index.mdx](https://zitadel.com/docs/guides/integrate/login-ui)
 
 - [Session Validation](https://zitadel.com/docs/guides/integrate/login-ui/session-validation)
 - [Username Password](https://zitadel.com/docs/guides/integrate/login-ui/username-password)

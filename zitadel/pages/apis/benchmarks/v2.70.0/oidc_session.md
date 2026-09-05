@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/apis/benchmarks/v2.70.0/oidc_session/index.mdx](https://zitadel.com/docs/apis/benchmarks/v2.70.0/oidc_session)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/apis/benchmarks/v2.70.0/oidc_session/index.mdx](https://zitadel.com/docs/apis/benchmarks/v2.70.0/oidc_session)
 
 The test implements [Support for (OIDC) Standard in a Custom Login UI flow](https://zitadel.com/docs/guides/integrate/login-ui/oidc-standard).
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/governance/concepts.md](https://github.com/docker/docs/blob/fd5e73c9183cc2e1600a747a52aaf3d8ea0ce3b5/content/manuals/ai/sandboxes/governance/concepts.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/governance/concepts.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/ai/sandboxes/governance/concepts.md)
 
 # Policy concepts
 
@@ -44,7 +44,7 @@ to specific teams:
 - Team-scoped: with one or more teams assigned, the policy applies only to
   members of those teams.
 
-Teams are the same [teams](https://docs.docker.com/admin/organization/manage/manage-a-team/)
+Teams are the same [teams](https://docs.docker.com/accounts/organization/manage/manage-a-team/)
 you manage for your organization; Docker matches a policy's teams against each
 user's team membership. Because an organization can mix org-wide and team-scoped
 policies, a single user is often subject to several at once. The policies that

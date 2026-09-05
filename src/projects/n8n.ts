@@ -10,12 +10,8 @@ import {
   rewriteMarkdownLinks,
   titleCase,
 } from "../markdown.ts";
-import type {
-  Document,
-  LockedSource,
-  ProjectBuild,
-  SourceProject,
-} from "../types.ts";
+import { DocumentCollector } from "../quarantine.ts";
+import type { LockedSource, ProjectBuild, SourceProject } from "../types.ts";
 
 interface N8nPage {
   readonly label: string;
@@ -71,41 +67,44 @@ export async function buildN8n(
         reusableBlocks,
       };
       const pages = await loadNavigation(root, spaceFolders, files);
-      const documents: Document[] = [];
+      const documents = new DocumentCollector(project.id);
       for (const page of pages) {
-        const raw = await readUtf8(root, page.sourcePath);
-        const frontmatter = parseFrontmatter(raw);
-        let body = await renderN8nMarkdown(
-          frontmatter.body,
-          page.sourcePath,
-          context,
-          new Set([page.sourcePath]),
-        );
-        const title = documentTitle(
-          body,
-          frontmatter.attributes,
-          page.sourcePath,
-        );
-        if (!/^#\s+/m.test(body)) {
-          body = normalizeSpacing(`# ${title || page.label}\n\n${body}`);
-        }
-        documents.push({
-          sourcePath: page.sourcePath,
-          outputPath: `pages/${page.sourcePath.slice("docs/".length)}`,
-          title: title || page.label,
-          body,
-          canonicalUrl: githubBlobUrl(
-            project.repository,
-            lock.sourceCommit,
+        await documents.collect(page.sourcePath, async () => {
+          const raw = await readUtf8(root, page.sourcePath);
+          const frontmatter = parseFrontmatter(raw);
+          let body = await renderN8nMarkdown(
+            frontmatter.body,
             page.sourcePath,
-          ),
-          section: page.section,
+            context,
+            new Set([page.sourcePath]),
+          );
+          const title = documentTitle(
+            body,
+            frontmatter.attributes,
+            page.sourcePath,
+          );
+          if (!/^#\s+/m.test(body)) {
+            body = normalizeSpacing(`# ${title || page.label}\n\n${body}`);
+          }
+          return {
+            sourcePath: page.sourcePath,
+            outputPath: `pages/${page.sourcePath.slice("docs/".length)}`,
+            title: title || page.label,
+            body,
+            canonicalUrl: githubBlobUrl(
+              project.repository,
+              lock.sourceCommit,
+              page.sourcePath,
+            ),
+            section: page.section,
+          };
         });
       }
       return {
         project,
         lock,
-        documents,
+        documents: documents.documents,
+        quarantined: documents.quarantined,
         notes: [
           "n8n tracks the latest main-branch commit because n8n-docs does not publish releases or tags.",
           "Pages follow each GitBook space's SUMMARY.md navigation; unpublished pages, utility spaces, and reusable fragments are omitted as standalone documents.",
@@ -527,6 +526,20 @@ export function transformGitBook(source: string, sourcePath: string): string {
         tag,
       )
     ) {
+      continue;
+    }
+    // GitBook custom blocks (`{% @namespace/block %}`) render an interactive
+    // widget whose payload lives in GitBook's own store rather than in the
+    // Markdown. Keep the reference when the block carries a URL; otherwise the
+    // block has no textual content to preserve.
+    const customBlock = tag.match(
+      /^\{%\s*@[\w.-]+\/[\w.-]+(?:\s+([^%]*?))?\s*%\}$/,
+    );
+    if (customBlock) {
+      const url = customBlock[1] ? attribute(customBlock[1], "url") : undefined;
+      if (url) {
+        emit(`[Embedded content](${url})`);
+      }
       continue;
     }
     if (/^\{%/.test(tag)) {
