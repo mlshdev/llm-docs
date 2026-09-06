@@ -1,4 +1,4 @@
-> Commit-pinned source for FFmpeg master: [doc/rate_distortion.txt](https://github.com/FFmpeg/FFmpeg/blob/c6e28adabac09745f3406ffbf3833b8ac7f3f46a/doc/rate_distortion.txt)
+> Commit-pinned source for FFmpeg master: [doc/rate_distortion.txt](https://github.com/FFmpeg/FFmpeg/blob/f93cd72dde3056c2efb39e11589745d78cd24409/doc/rate_distortion.txt)
 
 A Quick Description Of Rate Distortion Theory.
 
