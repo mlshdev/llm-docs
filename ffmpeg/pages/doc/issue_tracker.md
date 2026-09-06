@@ -1,4 +1,4 @@
-> Commit-pinned source for FFmpeg master: [doc/issue_tracker.txt](https://github.com/FFmpeg/FFmpeg/blob/f93cd72dde3056c2efb39e11589745d78cd24409/doc/issue_tracker.txt)
+> Commit-pinned source for FFmpeg master: [doc/issue_tracker.txt](https://github.com/FFmpeg/FFmpeg/blob/f5f7959dac76e19d1a080030c09ee407b1c56c73/doc/issue_tracker.txt)
 
 # FFmpeg's bug/feature request tracker manual
 
