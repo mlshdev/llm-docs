@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/streams/node-readable-to-arraybuffer.mdx](https://bun.com/docs/guides/streams/node-readable-to-arraybuffer)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/streams/node-readable-to-arraybuffer.mdx](https://bun.com/docs/guides/streams/node-readable-to-arraybuffer)
 
 # Convert a Node.js Readable to an ArrayBuffer
 

@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/http/stream-node-streams-in-bun.mdx](https://bun.com/docs/guides/http/stream-node-streams-in-bun)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/http/stream-node-streams-in-bun.mdx](https://bun.com/docs/guides/http/stream-node-streams-in-bun)
 
 # Streaming HTTP Server with Node.js Streams
 

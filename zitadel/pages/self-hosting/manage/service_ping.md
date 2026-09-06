@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/self-hosting/manage/service_ping.mdx](https://zitadel.com/docs/self-hosting/manage/service_ping)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/self-hosting/manage/service_ping.mdx](https://zitadel.com/docs/self-hosting/manage/service_ping)
 
 Service Ping is a feature that periodically sends anonymized analytics and usage data from your ZITADEL system to a central endpoint.
 This data helps improve ZITADEL by providing insights into its usage patterns.

@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/runtime/import-json.mdx](https://bun.com/docs/guides/runtime/import-json)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/runtime/import-json.mdx](https://bun.com/docs/guides/runtime/import-json)
 
 # Import a JSON file
 

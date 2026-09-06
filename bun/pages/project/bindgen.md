@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/project/bindgen.mdx](https://bun.com/docs/project/bindgen)
+> Release-pinned source for Bun bun-v1.4.2: [docs/project/bindgen.mdx](https://bun.com/docs/project/bindgen)
 
 # Bindgen
 

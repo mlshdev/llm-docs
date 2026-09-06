@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/desktop/features/wsl/use-wsl.md](https://github.com/docker/docs/blob/b744dd31039efeac59c11e017ac6ab62d9077339/content/manuals/desktop/features/wsl/use-wsl.md)
+> Commit-pinned source for Docker main: [content/manuals/desktop/features/wsl/use-wsl.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/desktop/features/wsl/use-wsl.md)
 
 # Develop with Docker Desktop using WSL 2 on Windows
 

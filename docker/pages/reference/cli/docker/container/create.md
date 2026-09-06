@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_container_create.yaml](https://github.com/docker/docs/blob/b744dd31039efeac59c11e017ac6ab62d9077339/data/cli/engine/docker_container_create.yaml)
+> Commit-pinned source for Docker main: [data/cli/engine/docker_container_create.yaml](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/data/cli/engine/docker_container_create.yaml)
 
 # docker container create
 
@@ -122,6 +122,7 @@ for details on the available flags and options.
 | `--tmpfs` |  | Mount a tmpfs directory |
 | `-t`, `--tty` |  | Allocate a pseudo-TTY |
 | `--ulimit` |  | Ulimit options |
+| `--umask` | `<nil>` | Set umask for the container (API 1.56+) |
 | `--use-api-socket` |  | Bind mount Docker API socket and required auth (Experimental) |
 | `-u`, `--user` |  | Username or UID (format: <name\|uid>[:<group\|gid>]) |
 | `--userns` |  | User namespace to use |

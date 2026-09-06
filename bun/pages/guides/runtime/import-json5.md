@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/runtime/import-json5.mdx](https://bun.com/docs/guides/runtime/import-json5)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/runtime/import-json5.mdx](https://bun.com/docs/guides/runtime/import-json5)
 
 # Import a JSON5 file
 

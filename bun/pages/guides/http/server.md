@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/http/server.mdx](https://bun.com/docs/guides/http/server)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/http/server.mdx](https://bun.com/docs/guides/http/server)
 
 # Common HTTP server usage
 

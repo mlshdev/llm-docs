@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/apis/openidoauth/authn-methods.mdx](https://zitadel.com/docs/apis/openidoauth/authn-methods)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/apis/openidoauth/authn-methods.mdx](https://zitadel.com/docs/apis/openidoauth/authn-methods)
 
 ## Client Secret Basic
 

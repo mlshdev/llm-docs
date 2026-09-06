@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/read-file/json.mdx](https://bun.com/docs/guides/read-file/json)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/read-file/json.mdx](https://bun.com/docs/guides/read-file/json)
 
 # Read a JSON file
 

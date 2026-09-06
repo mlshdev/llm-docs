@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/integrate/zitadel-apis/event-api.mdx](https://zitadel.com/docs/guides/integrate/zitadel-apis/event-api)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/guides/integrate/zitadel-apis/event-api.mdx](https://zitadel.com/docs/guides/integrate/zitadel-apis/event-api)
 
 ZITADEL leverages the power of eventsourcing, meaning every action and change within the system generates a corresponding event that is stored in the database.
 To provide you with greater flexibility and access to these events, ZITADEL has introduced an Event API.

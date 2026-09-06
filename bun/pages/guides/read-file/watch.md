@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/read-file/watch.mdx](https://bun.com/docs/guides/read-file/watch)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/read-file/watch.mdx](https://bun.com/docs/guides/read-file/watch)
 
 # Watch a directory for changes
 

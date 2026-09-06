@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/runtime/file-io.mdx](https://bun.com/docs/runtime/file-io)
+> Release-pinned source for Bun bun-v1.4.2: [docs/runtime/file-io.mdx](https://bun.com/docs/runtime/file-io)
 
 # File I/O
 
@@ -256,7 +256,7 @@ bun ./cat.ts ./path-to-file
 
 It runs 2x faster than GNU `cat` for large files on Linux.
 
-![Cat screenshot](https://raw.githubusercontent.com/oven-sh/bun/34cbb9a40b4bd1bd767d134a7065e66c2432a676/docs/images/cat.jpg)
+![Cat screenshot](https://raw.githubusercontent.com/oven-sh/bun/744846f844374847c902b5e7fd59b4342a51ef99/docs/images/cat.jpg)
 
 ***
 

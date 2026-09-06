@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/binary/buffer-to-typedarray.mdx](https://bun.com/docs/guides/binary/buffer-to-typedarray)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/binary/buffer-to-typedarray.mdx](https://bun.com/docs/guides/binary/buffer-to-typedarray)
 
 # Convert a Buffer to a Uint8Array
 

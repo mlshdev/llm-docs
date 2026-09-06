@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/engine/storage/containerd.md](https://github.com/docker/docs/blob/b744dd31039efeac59c11e017ac6ab62d9077339/content/manuals/engine/storage/containerd.md)
+> Commit-pinned source for Docker main: [content/manuals/engine/storage/containerd.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/engine/storage/containerd.md)
 
 # containerd image store with Docker Engine
 
@@ -132,7 +132,8 @@ To enable automatic migration, add the `containerd-migration` feature to your
 
 You can also set the `DOCKER_MIGRATE_SNAPSHOTTER_THRESHOLD` environment
 variable to make the daemon switch automatically if you have no containers and
-your image count is at or below the threshold. For systemd:
+the total size of all image layers is at or below the threshold. The value is a
+human-readable size (for example, `200M` or `1G`). For systemd:
 
 ```console
 $ sudo systemctl edit docker.service
@@ -142,11 +143,12 @@ Add:
 
 ```ini
 [Service]
-Environment="DOCKER_MIGRATE_SNAPSHOTTER_THRESHOLD=5"
+Environment="DOCKER_MIGRATE_SNAPSHOTTER_THRESHOLD=200M"
 ```
 
-If you have no running or stopped containers and 5 or fewer images, the daemon
-switches to the containerd image store on restart. Your overlay2 data remains
+If you have no running or stopped containers and the total size of all image
+layers is 200M or less, the daemon switches to the containerd image store on
+restart. Your overlay2 data remains
 on disk but becomes hidden.
 
 ## Additional resources

@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/integrate/services/gitlab-saml.mdx](https://zitadel.com/docs/guides/integrate/services/gitlab-saml)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/guides/integrate/services/gitlab-saml.mdx](https://zitadel.com/docs/guides/integrate/services/gitlab-saml)
 
 This guide shows how to enable login with ZITADEL on Gitlab.
 
@@ -26,23 +26,23 @@ The following instructions give you a quick overview of the most important steps
 [Open the group](https://gitlab.com/dashboard/groups) to which you want to add the SSO settings.
 Select on the menu Settings and then SAML SSO.
 Copy `GitLab metadata URL` for the next step.
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/saml/gitlab/gitlab-01.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/saml/gitlab/gitlab-01.png)
 
 ## **ZITADEL**: Create the application
 
 In your existing project:
 
 Press the "+"-button to add an application
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/saml/zitadel/project.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/saml/zitadel/project.png)
 
 Fill in a name for the application and chose the SAML type, then click "Continue".
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/saml/zitadel/application_saml.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/saml/zitadel/application_saml.png)
 
 Enter the URL from before, then click "Continue".
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/saml/zitadel/application_saml_metadata.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/saml/zitadel/application_saml_metadata.png)
 
 Check your application, if everything is correct, press "Create".
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/saml/zitadel/application_saml_create.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/saml/zitadel/application_saml_create.png)
 
 ## **Gitlab**: Setup
 
@@ -53,7 +53,7 @@ Complete the setup as follows:
 
 Save the changes.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/saml/gitlab/gitlab-02.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/saml/gitlab/gitlab-02.png)
 
 ## **Gitlab**: Verify SAML setup
 
@@ -62,4 +62,4 @@ Once you saved the changes, click on the button "Verify SAML settings".
 You should be redirected to ZITADEL.
 Login with your user.
 After that you should be redirected back to GitLab and you can inspect the Response Output.
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/saml/gitlab/gitlab-03.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/saml/gitlab/gitlab-03.png)

@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/test/concurrent-test-glob.mdx](https://bun.com/docs/guides/test/concurrent-test-glob)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/test/concurrent-test-glob.mdx](https://bun.com/docs/guides/test/concurrent-test-glob)
 
 The `concurrentTestGlob` option in `bunfig.toml` runs tests concurrently in files whose names match a glob pattern.
 

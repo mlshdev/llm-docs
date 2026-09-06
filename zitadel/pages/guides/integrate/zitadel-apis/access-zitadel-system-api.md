@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/integrate/zitadel-apis/access-zitadel-system-api.mdx](https://zitadel.com/docs/guides/integrate/zitadel-apis/access-zitadel-system-api)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/guides/integrate/zitadel-apis/access-zitadel-system-api.mdx](https://zitadel.com/docs/guides/integrate/zitadel-apis/access-zitadel-system-api)
 
 > **Note**
 >

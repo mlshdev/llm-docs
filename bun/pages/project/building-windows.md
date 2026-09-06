@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/project/building-windows.mdx](https://bun.com/docs/project/building-windows)
+> Release-pinned source for Bun bun-v1.4.2: [docs/project/building-windows.mdx](https://bun.com/docs/project/building-windows)
 
 Use [PowerShell 7 (`pwsh.exe`)](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.4) instead of the default `powershell.exe`. If you run into problems, ask in the [#contributing channel on our Discord](http://bun.com/discord).
 

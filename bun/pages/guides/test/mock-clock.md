@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/test/mock-clock.mdx](https://bun.com/docs/guides/test/mock-clock)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/test/mock-clock.mdx](https://bun.com/docs/guides/test/mock-clock)
 
 # Set the system time in Bun's test runner
 

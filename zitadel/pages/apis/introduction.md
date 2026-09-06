@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/apis/introduction.mdx](https://zitadel.com/docs/apis/introduction)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/apis/introduction.mdx](https://zitadel.com/docs/apis/introduction)
 
 ZITADEL exposes all features via different gRPC and REST APIs and provides SDKs for popular languages and frameworks.
 

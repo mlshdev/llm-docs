@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/self-hosting/manage/reverseproxy/cloudflare/index.mdx](https://zitadel.com/docs/self-hosting/manage/reverseproxy/cloudflare)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/self-hosting/manage/reverseproxy/cloudflare/index.mdx](https://zitadel.com/docs/self-hosting/manage/reverseproxy/cloudflare)
 
 ## Settings
 

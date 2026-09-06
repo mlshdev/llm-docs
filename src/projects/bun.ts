@@ -9,12 +9,8 @@ import {
 } from "../markdown.ts";
 import { convertMdx } from "../mdx.ts";
 import type { MdxImport } from "../mdx.ts";
-import type {
-  Document,
-  LockedSource,
-  ProjectBuild,
-  SourceProject,
-} from "../types.ts";
+import { DocumentCollector } from "../quarantine.ts";
+import type { LockedSource, ProjectBuild, SourceProject } from "../types.ts";
 
 const siteBase = "https://bun.com/docs";
 
@@ -33,51 +29,54 @@ export async function buildBun(
       }
       const pages = files.filter(isPage).sort(compareCodePoints);
       const routes = new Set(pages.map(pageRoute));
-      const documents: Document[] = [];
+      const documents = new DocumentCollector(project.id);
       for (const sourcePath of pages) {
-        const source = sources.get(sourcePath);
-        if (source === undefined) {
-          throw new Error(`Unread Bun page ${sourcePath}`);
-        }
-        let converted: ReturnType<typeof convertMdx>;
-        try {
-          converted = convertMdx(normalizeBunMdx(source), sourcePath, {
-            resolveImport: (specifier, fromPath) =>
-              resolveImport(specifier, fromPath, sources),
-          });
-        } catch (error) {
-          throw new Error(`Unable to convert Bun MDX page ${sourcePath}`, {
-            cause: error,
-          });
-        }
-        let body = rewriteMarkdownLinks(converted.body, (url, kind) =>
-          resolveLink(
-            url,
-            kind,
+        await documents.collect(sourcePath, async () => {
+          const source = sources.get(sourcePath);
+          if (source === undefined) {
+            throw new Error(`Unread Bun page ${sourcePath}`);
+          }
+          let converted: ReturnType<typeof convertMdx>;
+          try {
+            converted = convertMdx(normalizeBunMdx(source), sourcePath, {
+              resolveImport: (specifier, fromPath) =>
+                resolveImport(specifier, fromPath, sources),
+            });
+          } catch (error) {
+            throw new Error(`Unable to convert Bun MDX page ${sourcePath}`, {
+              cause: error,
+            });
+          }
+          let body = rewriteMarkdownLinks(converted.body, (url, kind) =>
+            resolveLink(
+              url,
+              kind,
+              sourcePath,
+              routes,
+              archiveFiles,
+              project.repository,
+              lock.sourceCommit,
+            ),
+          );
+          const title = converted.title ?? documentTitle(body, {}, sourcePath);
+          if (!/^#\s+/m.test(body)) {
+            body = normalizeSpacing(`# ${title}\n\n${body}`);
+          }
+          return {
             sourcePath,
-            routes,
-            archiveFiles,
-            project.repository,
-            lock.sourceCommit,
-          ),
-        );
-        const title = converted.title ?? documentTitle(body, {}, sourcePath);
-        if (!/^#\s+/m.test(body)) {
-          body = normalizeSpacing(`# ${title}\n\n${body}`);
-        }
-        documents.push({
-          sourcePath,
-          outputPath: `pages/${pageRoute(sourcePath) || "index"}.md`,
-          title,
-          body,
-          canonicalUrl: `${siteBase}/${pageRoute(sourcePath)}`,
-          section: sectionFor(sourcePath),
+            outputPath: `pages/${pageRoute(sourcePath) || "index"}.md`,
+            title,
+            body,
+            canonicalUrl: `${siteBase}/${pageRoute(sourcePath)}`,
+            section: sectionFor(sourcePath),
+          };
         });
       }
       return {
         project,
         lock,
-        documents,
+        documents: documents.documents,
+        quarantined: documents.quarantined,
         notes: [
           "Pages come from the release-tagged Mintlify documentation tree under docs; snippets are inlined rather than published as duplicate pages.",
           "Static MDX cards, tabs, accordions, steps, callouts, and media frames are normalized to Markdown without executing JavaScript.",

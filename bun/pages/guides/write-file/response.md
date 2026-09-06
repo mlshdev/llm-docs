@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/write-file/response.mdx](https://bun.com/docs/guides/write-file/response)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/write-file/response.mdx](https://bun.com/docs/guides/write-file/response)
 
 # Write a Response to a file
 

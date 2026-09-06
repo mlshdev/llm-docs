@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/binary/dataview-to-string.mdx](https://bun.com/docs/guides/binary/dataview-to-string)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/binary/dataview-to-string.mdx](https://bun.com/docs/guides/binary/dataview-to-string)
 
 # Convert a DataView to a string
 

@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/test/mocks.mdx](https://bun.com/docs/test/mocks)
+> Release-pinned source for Bun bun-v1.4.2: [docs/test/mocks.mdx](https://bun.com/docs/test/mocks)
 
 Mocking replaces a dependency with a controlled implementation. Bun supports function mocks, spies, and module mocks.
 

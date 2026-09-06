@@ -14,12 +14,8 @@ import {
   assertResolvedReferences,
   dropPresentationMarkup,
 } from "./hugo-docs.ts";
-import type {
-  Document,
-  LockedSource,
-  ProjectBuild,
-  SourceProject,
-} from "../types.ts";
+import { DocumentCollector } from "../quarantine.ts";
+import type { LockedSource, ProjectBuild, SourceProject } from "../types.ts";
 
 const docsRoot = "docs/sources";
 const sharedRoot = `${docsRoot}/shared`;
@@ -67,50 +63,53 @@ export async function buildGrafana(
       }
       const tree = buildTree(pages);
       const versions = productVersions(tree.root, version);
-      const documents: Document[] = [];
+      const documents = new DocumentCollector(project.id);
       for (const { page, section } of orderPages(tree)) {
-        const expanded = substituteVersions(
-          expandPage({
-            pages,
-            tree,
-            version,
-            page,
-            stack: new Set([page.sourcePath]),
-          }),
-          versions,
-        );
-        const body = rewriteMarkdownLinks(
-          cleanMarkdown(dropPresentationMarkup(expanded)),
-          (url, kind) =>
-            resolveGrafanaLink(
-              url,
-              kind,
-              page,
-              version,
+        await documents.collect(page.sourcePath, async () => {
+          const expanded = substituteVersions(
+            expandPage({
               pages,
+              tree,
+              version,
+              page,
+              stack: new Set([page.sourcePath]),
+            }),
+            versions,
+          );
+          const body = rewriteMarkdownLinks(
+            cleanMarkdown(dropPresentationMarkup(expanded)),
+            (url, kind) =>
+              resolveGrafanaLink(
+                url,
+                kind,
+                page,
+                version,
+                pages,
+                project.repository,
+                lock.sourceCommit,
+                archiveFiles,
+              ),
+          );
+          assertResolvedReferences(label, page.sourcePath, body);
+          return {
+            sourcePath: page.sourcePath,
+            outputPath: outputPath(page.sourcePath),
+            title: documentTitle(body, page.attributes, page.sourcePath),
+            body,
+            canonicalUrl: githubBlobUrl(
               project.repository,
               lock.sourceCommit,
-              archiveFiles,
+              page.sourcePath,
             ),
-        );
-        assertResolvedReferences(label, page.sourcePath, body);
-        documents.push({
-          sourcePath: page.sourcePath,
-          outputPath: outputPath(page.sourcePath),
-          title: documentTitle(body, page.attributes, page.sourcePath),
-          body,
-          canonicalUrl: githubBlobUrl(
-            project.repository,
-            lock.sourceCommit,
-            page.sourcePath,
-          ),
-          section,
+            section,
+          };
         });
       }
       return {
         project,
         lock,
-        documents,
+        documents: documents.documents,
+        quarantined: documents.quarantined,
         notes: [
           `Page order, sections, and cross-references follow the Hugo weights of docs/sources at the release tag, resolved against ${site}/docs/grafana/${version}/.`,
           "Shared fragments referenced by `docs/shared` and `shared-snippet` are inlined into the pages that render them and are not published separately.",

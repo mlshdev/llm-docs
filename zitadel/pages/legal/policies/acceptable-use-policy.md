@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/legal/policies/acceptable-use-policy.mdx](https://zitadel.com/docs/legal/policies/acceptable-use-policy)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/legal/policies/acceptable-use-policy.mdx](https://zitadel.com/docs/legal/policies/acceptable-use-policy)
 
 Last updated on November 15, 2023
 

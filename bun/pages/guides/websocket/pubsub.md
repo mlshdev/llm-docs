@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/websocket/pubsub.mdx](https://bun.com/docs/guides/websocket/pubsub)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/websocket/pubsub.mdx](https://bun.com/docs/guides/websocket/pubsub)
 
 # Build a publish-subscribe WebSocket server
 

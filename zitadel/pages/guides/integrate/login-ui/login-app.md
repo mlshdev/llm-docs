@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/integrate/login-ui/login-app.mdx](https://zitadel.com/docs/guides/integrate/login-ui/login-app)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/guides/integrate/login-ui/login-app.mdx](https://zitadel.com/docs/guides/integrate/login-ui/login-app)
 
 To replace the old embedded Login built with Golang and to showcase the use of our session and OIDC APIs, we've created the new [Login app](https://github.com/zitadel/zitadel/blob/main/CONTRIBUTING.md#contribute-to-login).
 
@@ -28,7 +28,7 @@ The cookie consists of an id and a token and is bound to a session which is upda
 
 The following illustration shows the architecture of the Login app and a potential authentication code flow starting from an application which implements the OIDC specification respectively.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/typescript-login-architecture.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/typescript-login-architecture.png)
 
 *Note that the illustration is just a representation of the architecture and may not specify actual endpoints.*
 
@@ -142,4 +142,4 @@ If you want to enforce users to have their email verified, you can set the optio
 By default, verification codes are not automatically submitted on page load. This protects against enterprise email link scanners that pre-fetch URLs and could inadvertently consume one-time codes before users click them.
 If you want to enable automatic code submission (e.g. for a smoother UX when link scanners are not a concern), set `NEXT_PUBLIC_AUTO_SUBMIT_CODE` to `true`.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/deploy-to-vercel.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/deploy-to-vercel.png)

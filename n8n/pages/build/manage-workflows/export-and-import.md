@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/manage-workflows/export-and-import.md](https://github.com/n8n-io/n8n-docs/blob/6f4b48e69e3ab9acbf023f18020c40c125c16d45/docs/build/manage-workflows/export-and-import.md)
+> Commit-pinned source for n8n main: [docs/build/manage-workflows/export-and-import.md](https://github.com/n8n-io/n8n-docs/blob/3317373ce39c3ce2406c8e3d99bb2da7f7180321/docs/build/manage-workflows/export-and-import.md)
 
 # Export and import
 
@@ -13,7 +13,7 @@ n8n saves workflows in JSON format. You can export your workflows as JSON files 
 
 You can copy and paste a workflow or parts of it by selecting the nodes you want to copy to the clipboard (`Ctrl + c` or `cmd +c`) and pasting it (`Ctrl + v` or `cmd + v`) into the Editor UI.
 
-To select all nodes or a group of nodes, click and drag: ![Select a group of nodes](https://raw.githubusercontent.com/n8n-io/n8n-docs/6f4b48e69e3ab9acbf023f18020c40c125c16d45/docs/build/.gitbook/assets/selectingnodes.gif)
+To select all nodes or a group of nodes, click and drag: ![Select a group of nodes](https://raw.githubusercontent.com/n8n-io/n8n-docs/3317373ce39c3ce2406c8e3d99bb2da7f7180321/docs/build/.gitbook/assets/selectingnodes.gif)
 
 ## From the Editor UI menu <a id="from-the-editor-ui-menu"></a>
 

@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/test/lifecycle.mdx](https://bun.com/docs/test/lifecycle)
+> Release-pinned source for Bun bun-v1.4.2: [docs/test/lifecycle.mdx](https://bun.com/docs/test/lifecycle)
 
 # Lifecycle hooks
 

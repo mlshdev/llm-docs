@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/integrate/login-ui/fork-and-deploy-login-app.mdx](https://zitadel.com/docs/guides/integrate/login-ui/fork-and-deploy-login-app)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/guides/integrate/login-ui/fork-and-deploy-login-app.mdx](https://zitadel.com/docs/guides/integrate/login-ui/fork-and-deploy-login-app)
 
 The ZITADEL Login UI is an MIT-licensed Next.js application maintained in the [ZITADEL monorepo](https://github.com/zitadel/zitadel). You can customize and deploy it independently, but your fork becomes an application that your team must build, test, secure, monitor, and update.
 

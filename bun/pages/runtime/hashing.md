@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/runtime/hashing.mdx](https://bun.com/docs/runtime/hashing)
+> Release-pinned source for Bun bun-v1.4.2: [docs/runtime/hashing.mdx](https://bun.com/docs/runtime/hashing)
 
 # Hashing
 

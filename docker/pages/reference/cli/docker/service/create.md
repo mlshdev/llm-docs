@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_service_create.yaml](https://github.com/docker/docs/blob/b744dd31039efeac59c11e017ac6ab62d9077339/data/cli/engine/docker_service_create.yaml)
+> Commit-pinned source for Docker main: [data/cli/engine/docker_service_create.yaml](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/data/cli/engine/docker_service_create.yaml)
 
 # docker service create
 
@@ -671,7 +671,9 @@ $ docker service create \
 
 The service mode determines whether this is a _replicated_ service or a _global_
 service. A replicated service runs as many tasks as specified, while a global
-service runs on each active node in the swarm.
+service runs one task on each active node in the swarm. Placement
+`--constraint` expressions still apply: a global service only schedules
+that task on nodes that match, not on every node.
 
 The following command creates a global service:
 
@@ -685,7 +687,8 @@ $ docker service create \
 ### Specify service constraints (--constraint) {#constraint}
 
 You can limit the set of nodes where a task can be scheduled by defining
-constraint expressions. Constraint expressions can either use a _match_ (`==`)
+constraint expressions. They apply to both replicated and global services
+(and to jobs). Constraint expressions can either use a _match_ (`==`)
 or _exclude_ (`!=`) rule. Multiple constraints find nodes that satisfy every
 expression (AND match). Constraints can match node or Docker Engine labels as
 follows:

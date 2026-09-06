@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/examples/secure-api/go.mdx](https://zitadel.com/docs/examples/secure-api/go)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/examples/secure-api/go.mdx](https://zitadel.com/docs/examples/secure-api/go)
 
 This integration guide shows you how to integrate **ZITADEL** into your Go API. It demonstrates how to secure your API using
 OAuth 2 Token Introspection.
@@ -23,51 +23,51 @@ You'll need to provide some information about your app. We recommend creating a 
 
 Starting from the homepage of your management console, click on Create Application
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/go/api-create_application.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/go/api-create_application.png)
 
 Select a project from the dropdown and select *Other* as framework, then continue.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/go/api-select_framework.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/go/api-select_framework.png)
 
 Add your app name and select *API* as application type, then continue.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/go/api-app_details.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/go/api-app_details.png)
 
 We recommend that you use JWT Profile for authenticating at the Introspection Endpoint. So select *JWT* as authentication method
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/go/api-select_jwt.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/go/api-select_jwt.png)
 
 You then need to create a new JSON key.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/go/api-new_key.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/go/api-new_key.png)
 
 Select an expiration date that suits you.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/go/api-expiration_date.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/go/api-expiration_date.png)
 
 And make sure to download it, as you won't be able to retrieve it again.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/go/api-download_key.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/go/api-download_key.png)
 
 Now we need to create a *Personal Access Token* to authenticate the application requests.
 
 On the user view, switch to *Service Accounts* and create a new one.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/go/api-service_user_panel.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/go/api-service_user_panel.png)
 
 Give the service account a name and a username. Select `Bearer` as *Access Token Type*.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/go/api-create_service_user.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/go/api-create_service_user.png)
 
 ### Create a service account and a personal access token (PAT)
 
 Once done, from the left panel of the user management, click on Personal Access Token and create a new one.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/go/api-PAT_view.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/go/api-PAT_view.png)
 
 Set an expiration date and then copy the PAT generated to somewhere safe. We will need it later.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/go/api-PAT_creation.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/go/api-PAT_creation.png)
 
 ## Go Setup
 
@@ -203,13 +203,13 @@ So let's create the role and grant it to the user. To do so, go to your project 
 and create the role by selecting `Roles` in the navigation and then clicking on the `New Role` button.
 Finally, create the role as shown below:
 
-![Create project role in management console](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/go/api-project-role.png)
+![Create project role in management console](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/go/api-project-role.png)
 
 After you have created the role, let's grant it to the user who requested the tasks.
 Click on `Role Assignments` in the navigation and create a new one by selecting the user and the `admin` role.
 After successful creation, it should look like:
 
-![Created role assignment in management console](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/go/api-project-auth.png)
+![Created role assignment in management console](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/go/api-project-auth.png)
 
 So you should now be able to add a new task:
 

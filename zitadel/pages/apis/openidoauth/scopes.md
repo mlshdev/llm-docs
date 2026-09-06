@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/apis/openidoauth/scopes.mdx](https://zitadel.com/docs/apis/openidoauth/scopes)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/apis/openidoauth/scopes.mdx](https://zitadel.com/docs/apis/openidoauth/scopes)
 
 ZITADEL supports the usage of scopes as way of requesting information from the instance and also instruct ZITADEL to do certain operations.
 

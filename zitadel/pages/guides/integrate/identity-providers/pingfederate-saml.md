@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/integrate/identity-providers/pingfederate-saml.mdx](https://zitadel.com/docs/guides/integrate/identity-providers/pingfederate-saml)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/guides/integrate/identity-providers/pingfederate-saml.mdx](https://zitadel.com/docs/guides/integrate/identity-providers/pingfederate-saml)
 
 This guides shows you how to connect PingFederate as an identity provider in ZITADEL.
 
@@ -65,7 +65,7 @@ Go to the settings page of your instance or organization and choose "Identity Pr
 In the table you can see all the providers you have configured.
 Also, you see all provider templates that are available.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/zitadel_identity_provider_overview.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/guides/zitadel_identity_provider_overview.png)
 
 Select the SAML Provider template.
 
@@ -84,7 +84,7 @@ Account linking allowed: This setting determines if account linking is allowed. 
 >
 > Either account creation or account linking have to be enabled. Otherwise, the provider can't be used.
 
-![SAML Provider](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/zitadel_saml_create_provider.png)
+![SAML Provider](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/guides/zitadel_saml_create_provider.png)
 
 After saving, open the newly created PingFederate SAML provider in ZITADEL.
 In the details view you will find the **ZITADEL Service Provider** URLs, such as:
@@ -177,7 +177,7 @@ The provider can also be activated via API. As the identity providers are sub-re
 - [Activate Default Identity Provider](https://zitadel.com/docs/reference/api/admin/zitadel.admin.v1.AdminService.AddIDPToLoginPolicy)
 - [Activate Organization Identity Provider](https://zitadel.com/docs/reference/api/management/zitadel.management.v1.ManagementService.AddIDPToLoginPolicy)
 
-![Activate PingFederate SAML provider in ZITADEL](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/zitadel-activate-pingfederate-saml.png)
+![Activate PingFederate SAML provider in ZITADEL](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/guides/zitadel-activate-pingfederate-saml.png)
 
 ### Ensure your Login Policy allows External IdPs
 
@@ -192,7 +192,7 @@ You can also change the settings through the API directly either in the default 
 - [Update Default Login Settings](https://zitadel.com/docs/reference/api/admin/zitadel.admin.v1.AdminService.UpdateLoginPolicy)
 - [Update Organization Login Settings](https://zitadel.com/docs/reference/api/management/zitadel.management.v1.ManagementService.UpdateCustomLoginPolicy)
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/zitadel_allow_external_idp.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/guides/zitadel_allow_external_idp.png)
 
 ## Configure an action to autofill user data
 
@@ -383,4 +383,4 @@ The organization scope looks like this: `urn:zitadel:iam:org:id:{id}`.
 You can [read more about the reserved scopes](https://zitadel.com/docs/apis/openidoauth/scopes#reserved-scopes)
 or [use the ZITADEL OIDC Playground](https://zitadel.com/playgrounds/oidc) to see what happens with the login when you send different scopes.
 
-![Image: PingFederate button on ZITADEL login](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/zitadel-login-pingfederate-button.png)
+![Image: PingFederate button on ZITADEL login](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/guides/zitadel-login-pingfederate-button.png)

@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/self-hosting/manage/production.mdx](https://zitadel.com/docs/self-hosting/manage/production)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/self-hosting/manage/production.mdx](https://zitadel.com/docs/self-hosting/manage/production)
 
 As soon as you successfully deployed ZITADEL as a proof of concept using one of our [deployment guides](https://zitadel.com/docs/self-hosting/deploy/overview),
 you are ready to configure ZITADEL for production usage.

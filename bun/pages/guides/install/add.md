@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/install/add.mdx](https://bun.com/docs/guides/install/add)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/install/add.mdx](https://bun.com/docs/guides/install/add)
 
 # Add a dependency
 

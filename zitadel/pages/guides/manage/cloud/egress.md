@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/manage/cloud/egress.mdx](https://zitadel.com/docs/guides/manage/cloud/egress)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/guides/manage/cloud/egress.mdx](https://zitadel.com/docs/guides/manage/cloud/egress)
 
 When configuring your firewall or network security groups, you may need to allow traffic **from** ZITADEL Cloud to your internal infrastructure.
 

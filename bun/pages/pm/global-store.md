@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/pm/global-store.mdx](https://bun.com/docs/pm/global-store)
+> Release-pinned source for Bun bun-v1.4.2: [docs/pm/global-store.mdx](https://bun.com/docs/pm/global-store)
 
 # Global virtual store
 

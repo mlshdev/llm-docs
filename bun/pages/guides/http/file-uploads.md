@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/http/file-uploads.mdx](https://bun.com/docs/guides/http/file-uploads)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/http/file-uploads.mdx](https://bun.com/docs/guides/http/file-uploads)
 
 # Upload files via HTTP using FormData
 

@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/pm/catalogs.mdx](https://bun.com/docs/pm/catalogs)
+> Release-pinned source for Bun bun-v1.4.2: [docs/pm/catalogs.mdx](https://bun.com/docs/pm/catalogs)
 
 # Catalogs
 

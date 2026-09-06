@@ -1,4 +1,4 @@
-> Commit-pinned source for FFmpeg master: [doc/mailing-list-faq.texi](https://github.com/FFmpeg/FFmpeg/blob/0a59c39dad3da0e530836a7e7d1901134a0b592e/doc/mailing-list-faq.texi)
+> Commit-pinned source for FFmpeg master: [doc/mailing-list-faq.texi](https://github.com/FFmpeg/FFmpeg/blob/9997fd060680d427bcc0c0715d163346da7ebd6f/doc/mailing-list-faq.texi)
 
 # General Questions
 

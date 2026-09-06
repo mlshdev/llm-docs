@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/websocket/context.mdx](https://bun.com/docs/guides/websocket/context)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/websocket/context.mdx](https://bun.com/docs/guides/websocket/context)
 
 # Set per-socket contextual data on a WebSocket
 

@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/process/stdin.mdx](https://bun.com/docs/guides/process/stdin)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/process/stdin.mdx](https://bun.com/docs/guides/process/stdin)
 
 # Read from stdin
 

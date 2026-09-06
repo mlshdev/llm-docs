@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/install/git-diff-bun-lockfile.mdx](https://bun.com/docs/guides/install/git-diff-bun-lockfile)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/install/git-diff-bun-lockfile.mdx](https://bun.com/docs/guides/install/git-diff-bun-lockfile)
 
 # Configure git to diff Bun's lockb lockfile
 

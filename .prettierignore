@@ -17,8 +17,10 @@ ffmpeg/
 yt-dlp/
 searxng/
 bun/
+trigger-dev/
 llms.txt
 llms-full.txt
 bun.lock
 session-*.md
 resume.txt
+build-report.json

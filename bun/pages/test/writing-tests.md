@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/test/writing-tests.mdx](https://bun.com/docs/test/writing-tests)
+> Release-pinned source for Bun bun-v1.4.2: [docs/test/writing-tests.mdx](https://bun.com/docs/test/writing-tests)
 
 # Writing tests
 

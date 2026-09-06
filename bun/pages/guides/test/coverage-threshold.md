@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/test/coverage-threshold.mdx](https://bun.com/docs/guides/test/coverage-threshold)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/test/coverage-threshold.mdx](https://bun.com/docs/guides/test/coverage-threshold)
 
 Bun's test runner has built-in code coverage reporting. Enable it with the `--coverage` flag.
 

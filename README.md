@@ -20,6 +20,7 @@ This repository converts documentation from immutable upstream commits into dete
 - [yt-dlp](https://github.com/yt-dlp/yt-dlp)
 - [SearXNG](https://github.com/searxng/searxng)
 - [Bun](https://github.com/oven-sh/bun)
+- [Trigger.dev](https://github.com/triggerdotdev/trigger.dev)
 
 ## Release policy
 
@@ -31,6 +32,39 @@ This repository converts documentation from immutable upstream commits into dete
 - FFmpeg and SearXNG track their latest `master` commits because they do not publish stable GitHub releases.
 - NetBird public documentation is maintained in the separate, untagged `netbirdio/docs` repository. A NetBird update is accepted only after that repository contains the exact `Update API pages with <tag>` commit. Until then, the previous complete product/docs pair remains published.
 - Generated files are committed so GitHub, raw-content clients, and local tools all expose the same corpus. The same files are published through GitHub Pages.
+
+## Upstream drift policy
+
+Upstream projects change their documentation source continuously, so the
+generator treats an unconvertible construct as an expected event rather than an
+outage. Conversion stays fail-closed — nothing unconverted is ever passed
+through into the corpus — but failure is contained to the smallest possible
+scope and always reported.
+
+- **A page the generator cannot convert is quarantined.** It is omitted from the
+  project, recorded with its reason in `manifest.json`, and counted in the
+  project `llms.txt`. Quarantine is deterministic, so a rebuild from the same
+  pins reproduces the same corpus and the same quarantine list.
+- **Systemic drift fails the project instead.** Once quarantine exceeds 5% of a
+  project's pages, or it would publish an empty corpus, the project build fails
+  as a whole; publishing a gutted manual is worse than publishing yesterday's.
+- **A project that fails keeps its previous pin and snapshot.** `bun run update`
+  retains the last pin it successfully converted, continues with every other
+  project, and publishes them. The corpus never regresses and never goes stale
+  everywhere because one upstream changed.
+- **A source that cannot be reconciled keeps its previous pin.** Unreachable
+  repositories, retired releases, and moved tags are isolated per project.
+- **Transport faults are retried.** GitHub API reads and archive downloads retry
+  with backoff and honor primary and secondary rate-limit headers.
+- **Everything held back is escalated.** `bun run update` writes
+  `build-report.json`; the scheduled workflow turns it into a single tracking
+  issue labelled `pipeline-health`, rewrites it only when the set of problems
+  changes, and closes it once every source converts cleanly again.
+
+The result is that upstream drift never breaks publication and never requires a
+manual repair to restore the schedule. Adding the missing handler is normal
+follow-up work, driven by the tracking issue, and the affected project rejoins
+the current pin on the next scheduled run.
 
 ## Output layout
 
@@ -62,6 +96,7 @@ Project directories are named after the identifiers in `config/sources.json`: `t
 - yt-dlp publishes its release-authored Markdown manuals, supported-site catalog, changelog, and contributor documentation.
 - SearXNG expands checked-in Sphinx includes and converts its RST documentation tree to Markdown without executing Sphinx or imported Python modules.
 - Bun follows the checked-in Mintlify MDX documentation tree, inlines documentation partials, converts presentation components to Markdown, and resolves published links to `https://bun.com/docs`.
+- Trigger.dev publishes the pages its `docs/docs.json` navigation declares, renders each API reference page from the OpenAPI operation the page names in front matter, inlines snippets with the attributes they are rendered with, and resolves published links to `https://trigger.dev/docs`.
 
 ## Local commands
 
@@ -72,11 +107,11 @@ bun run check
 bun run site
 ```
 
-`bun run update` contacts the GitHub API and downloads source archives only when stable pins change. `bun run build` rebuilds every project from `sources.lock.json`.
+`bun run update` contacts the GitHub API and downloads source archives only when stable pins change, and writes `build-report.json` describing anything it had to hold back. `bun run build` rebuilds every project from `sources.lock.json`. `bun run src/cli.ts report` renders the last report as the tracking-issue body.
 
 ## Adding a project
 
-Add project metadata to `config/sources.json`, extend the `ProjectId` type, and implement a source-specific adapter under `src/projects/`. Adapters must select authoritative source files, exclude generated duplicates and assets, preserve upstream licensing, and fail rather than silently discard unsupported source constructs.
+Add project metadata to `config/sources.json`, extend the `ProjectId` type, and implement a source-specific adapter under `src/projects/`. Adapters must select authoritative source files, exclude generated duplicates and assets, preserve upstream licensing, and fail rather than silently discard unsupported source constructs. Collect documents through `DocumentCollector` so that a page the adapter cannot convert is quarantined and reported instead of failing the whole project, and add the project's expected-to-be-resolved source syntax to `unresolvedSyntax` in `src/quarantine.ts`.
 
 ## License
 

@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/manage/customize/notification-providers.mdx](https://zitadel.com/docs/guides/manage/customize/notification-providers)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/guides/manage/customize/notification-providers.mdx](https://zitadel.com/docs/guides/manage/customize/notification-providers)
 
 ZITADEL can send messages to users via different notification providers, such as SMS, SMTP, or Webhook (HTTP Provider).
 While you can add multiple providers to different channels, messages will only be delivered via the active provider.

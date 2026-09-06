@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/runtime/codesign-macos-executable.mdx](https://bun.com/docs/guides/runtime/codesign-macos-executable)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/runtime/codesign-macos-executable.mdx](https://bun.com/docs/guides/runtime/codesign-macos-executable)
 
 # Codesign a single-file JavaScript executable on macOS
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_trust_signer_add.yaml](https://github.com/docker/docs/blob/b744dd31039efeac59c11e017ac6ab62d9077339/data/cli/engine/docker_trust_signer_add.yaml)
+> Commit-pinned source for Docker main: [data/cli/engine/docker_trust_signer_add.yaml](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/data/cli/engine/docker_trust_signer_add.yaml)
 
 # docker trust signer add
 

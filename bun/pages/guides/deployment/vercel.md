@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/deployment/vercel.mdx](https://bun.com/docs/guides/deployment/vercel)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/deployment/vercel.mdx](https://bun.com/docs/guides/deployment/vercel)
 
 # Deploy a Bun application on Vercel
 
@@ -6,8 +6,8 @@
 
 > **Warning**
 >
-> The Bun runtime on Vercel is in Beta. Automatic source maps, bytecode caching, and request metrics for `node:http` and
-> `node:https` are not supported yet (request metrics for `fetch` are). See [feature
+> Automatic source maps, bytecode caching, and request metrics for `node:http` and `node:https` are not supported on the
+> Bun runtime (request metrics for `fetch` are). See [feature
 > support](https://vercel.com/docs/functions/runtimes/bun#feature-support) in the Vercel documentation.
 
 ***
@@ -16,11 +16,11 @@
 
    ```json vercel.json icon="file-json"
    {
-   	"bunVersion": "1.x" // [!code ++]
+   	"bunVersion": "1.4.x" // [!code ++]
    }
    ```
 
-   The value must be `"1.x"`; Vercel manages the minor and patch versions.
+   Vercel manages the patch version.
 
    For best results, match your local Bun version with the version Vercel uses.
 2. Choose how requests reach your code.
@@ -110,7 +110,7 @@
    ```
 
    ```txt
-   runtime 1.3.14
+   runtime 1.4.0
    ```
 
    [See the Vercel Bun Runtime documentation for feature support →](https://vercel.com/docs/functions/runtimes/bun#feature-support)

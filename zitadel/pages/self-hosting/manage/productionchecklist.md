@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/self-hosting/manage/productionchecklist.mdx](https://zitadel.com/docs/self-hosting/manage/productionchecklist)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/self-hosting/manage/productionchecklist.mdx](https://zitadel.com/docs/self-hosting/manage/productionchecklist)
 
 To apply best practices to your production setup we created a step by step checklist you may wish to follow.
 

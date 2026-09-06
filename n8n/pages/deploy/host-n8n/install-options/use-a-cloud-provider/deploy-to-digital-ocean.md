@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-digital-ocean.md](https://github.com/n8n-io/n8n-docs/blob/6f4b48e69e3ab9acbf023f18020c40c125c16d45/docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-digital-ocean.md)
+> Commit-pinned source for n8n main: [docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-digital-ocean.md](https://github.com/n8n-io/n8n-docs/blob/3317373ce39c3ce2406c8e3d99bb2da7f7180321/docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-digital-ocean.md)
 
 # Hosting n8n on DigitalOcean <a id="hosting-n8n-on-digitalocean"></a>
 
@@ -26,7 +26,7 @@ Once n8n is up and running, an optional last section covers adding the AI Assist
 >
 > n8n releases a new minor version most weeks. The `stable` version is for production use. `beta` is the most recent release. The `beta` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
 >
-> Current `stable`: 2.37.9
+> Current `stable`: 2.37.10
 > Current `beta`: 2.38.3
 
 ## Create a Droplet <a id="create-a-droplet"></a>

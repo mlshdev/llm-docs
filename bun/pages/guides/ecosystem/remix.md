@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/ecosystem/remix.mdx](https://bun.com/docs/guides/ecosystem/remix)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/ecosystem/remix.mdx](https://bun.com/docs/guides/ecosystem/remix)
 
 # Build an app with Remix and Bun
 

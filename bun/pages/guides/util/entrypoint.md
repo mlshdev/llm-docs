@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/util/entrypoint.mdx](https://bun.com/docs/guides/util/entrypoint)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/util/entrypoint.mdx](https://bun.com/docs/guides/util/entrypoint)
 
 # Check if the current file is the entrypoint
 

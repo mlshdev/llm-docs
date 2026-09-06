@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/legal/terms-of-service.mdx](https://zitadel.com/docs/legal/terms-of-service)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/legal/terms-of-service.mdx](https://zitadel.com/docs/legal/terms-of-service)
 
 Last updated on November 15, 2023
 

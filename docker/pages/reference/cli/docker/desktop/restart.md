@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/desktop/docker_desktop_restart.yaml](https://github.com/docker/docs/blob/b744dd31039efeac59c11e017ac6ab62d9077339/data/cli/desktop/docker_desktop_restart.yaml)
+> Commit-pinned source for Docker main: [data/cli/desktop/docker_desktop_restart.yaml](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/data/cli/desktop/docker_desktop_restart.yaml)
 
 # docker desktop restart
 

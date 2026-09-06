@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/test/rerun-each.mdx](https://bun.com/docs/guides/test/rerun-each)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/test/rerun-each.mdx](https://bun.com/docs/guides/test/rerun-each)
 
 The `--rerun-each` flag runs every test multiple times. Use it to find flaky or non-deterministic tests.
 

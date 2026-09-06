@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/test/coverage.mdx](https://bun.com/docs/guides/test/coverage)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/test/coverage.mdx](https://bun.com/docs/guides/test/coverage)
 
 # Generate code coverage reports with the Bun test runner
 

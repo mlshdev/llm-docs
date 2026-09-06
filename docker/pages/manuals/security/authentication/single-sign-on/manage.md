@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/security/authentication/single-sign-on/manage.md](https://github.com/docker/docs/blob/b744dd31039efeac59c11e017ac6ab62d9077339/content/manuals/security/authentication/single-sign-on/manage.md)
+> Commit-pinned source for Docker main: [content/manuals/security/authentication/single-sign-on/manage.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/security/authentication/single-sign-on/manage.md)
 
 # Manage SSO domains and connections
 

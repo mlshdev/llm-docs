@@ -1,6 +1,16 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/moby/moby/api/docs/CHANGELOG.md](https://github.com/docker/docs/blob/b744dd31039efeac59c11e017ac6ab62d9077339/_vendor/github.com/moby/moby/api/docs/CHANGELOG.md)
+> Commit-pinned source for Docker main: [_vendor/github.com/moby/moby/api/docs/CHANGELOG.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/_vendor/github.com/moby/moby/api/docs/CHANGELOG.md)
 
 # Engine API version history
+
+## v1.56 API changes
+
+- `GET /containers/json` now supports an `annotation` filter to filter
+  containers by annotation, either by key (`annotation=key`) or by key and
+  value (`annotation="key=value"`), similar to the existing `label` filter.
+- `POST /containers/create` now supports `HostConfig.Umask` to set the initial
+  umask for a Unix container. When set, the daemon includes the value in the OCI
+  process configuration for the container's entrypoint, exec processes, and
+  healthchecks. When omitted, the runtime's default behavior applies.
 
 ## v1.55 API changes
 

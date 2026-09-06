@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/ecosystem/express.mdx](https://bun.com/docs/guides/ecosystem/express)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/ecosystem/express.mdx](https://bun.com/docs/guides/ecosystem/express)
 
 # Build an HTTP server using Express and Bun
 

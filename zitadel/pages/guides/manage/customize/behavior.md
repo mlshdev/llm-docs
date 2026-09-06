@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/manage/customize/behavior.mdx](https://zitadel.com/docs/guides/manage/customize/behavior)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/guides/manage/customize/behavior.mdx](https://zitadel.com/docs/guides/manage/customize/behavior)
 
 In this guide, you will create a [ZITADEL action](https://zitadel.com/docs/concepts/features/actions).
 After users register using an external identity provider, the action assigns them a role.

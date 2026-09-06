@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/runtime/streams.mdx](https://bun.com/docs/runtime/streams)
+> Release-pinned source for Bun bun-v1.4.2: [docs/runtime/streams.mdx](https://bun.com/docs/runtime/streams)
 
 # Streams
 
@@ -117,6 +117,19 @@ const response = new Response({
 });
 
 await response.text(); // "helloworld"
+```
+
+The body contains the yielded values only. As with `for await`, the generator's return value is not part of the body.
+
+```ts
+const response = new Response(
+  (async function* () {
+    yield "hello";
+    return "ignored";
+  })(),
+);
+
+await response.text(); // "hello"
 ```
 
 For more control over the stream, `yield` returns the direct `ReadableStream` controller.

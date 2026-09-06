@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/legal/service-description/service-level-description.mdx](https://zitadel.com/docs/legal/service-description/service-level-description)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/legal/service-description/service-level-description.mdx](https://zitadel.com/docs/legal/service-description/service-level-description)
 
 Last updated on November 15, 2023
 

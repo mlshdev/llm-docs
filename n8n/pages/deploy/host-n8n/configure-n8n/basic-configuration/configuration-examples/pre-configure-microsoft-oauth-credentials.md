@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/host-n8n/configure-n8n/basic-configuration/configuration-examples/pre-configure-microsoft-oauth-credentials.md](https://github.com/n8n-io/n8n-docs/blob/6f4b48e69e3ab9acbf023f18020c40c125c16d45/docs/deploy/host-n8n/configure-n8n/basic-configuration/configuration-examples/pre-configure-microsoft-oauth-credentials.md)
+> Commit-pinned source for n8n main: [docs/deploy/host-n8n/configure-n8n/basic-configuration/configuration-examples/pre-configure-microsoft-oauth-credentials.md](https://github.com/n8n-io/n8n-docs/blob/3317373ce39c3ce2406c8e3d99bb2da7f7180321/docs/deploy/host-n8n/configure-n8n/basic-configuration/configuration-examples/pre-configure-microsoft-oauth-credentials.md)
 
 # Pre-configure Microsoft OAuth credentials <a id="pre-configure-microsoft-oauth-credentials"></a>
 
@@ -88,7 +88,7 @@ docker compose up -d
 
 After n8n starts, have a user create a new credential for one of the pre-configured services (for example, Microsoft Outlook). They should see a **Managed OAuth2 (recommended)** option in the credential selection.
 
-![Microsoft Entra credentials screen](https://raw.githubusercontent.com/n8n-io/n8n-docs/6f4b48e69e3ab9acbf023f18020c40c125c16d45/docs/deploy/.gitbook/assets/microsoft-entra-oauth.png)
+![Microsoft Entra credentials screen](https://raw.githubusercontent.com/n8n-io/n8n-docs/3317373ce39c3ce2406c8e3d99bb2da7f7180321/docs/deploy/.gitbook/assets/microsoft-entra-oauth.png)
 
 The user can click **Connect to Microsoft Outlook**, with no auth required. An **Account connected** message should appear
 

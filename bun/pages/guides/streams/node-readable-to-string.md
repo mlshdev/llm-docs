@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/streams/node-readable-to-string.mdx](https://bun.com/docs/guides/streams/node-readable-to-string)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/streams/node-readable-to-string.mdx](https://bun.com/docs/guides/streams/node-readable-to-string)
 
 # Convert a Node.js Readable to a string
 

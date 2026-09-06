@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/test/todo-tests.mdx](https://bun.com/docs/guides/test/todo-tests)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/test/todo-tests.mdx](https://bun.com/docs/guides/test/todo-tests)
 
 # Mark a test as a "todo" with the Bun test runner
 

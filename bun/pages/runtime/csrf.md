@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/runtime/csrf.mdx](https://bun.com/docs/runtime/csrf)
+> Release-pinned source for Bun bun-v1.4.2: [docs/runtime/csrf.mdx](https://bun.com/docs/runtime/csrf)
 
 # CSRF Protection
 

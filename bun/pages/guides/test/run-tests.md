@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/test/run-tests.mdx](https://bun.com/docs/guides/test/run-tests)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/test/run-tests.mdx](https://bun.com/docs/guides/test/run-tests)
 
 # Run your tests with the Bun test runner
 

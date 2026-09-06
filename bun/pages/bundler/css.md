@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/bundler/css.mdx](https://bun.com/docs/bundler/css)
+> Release-pinned source for Bun bun-v1.4.2: [docs/bundler/css.mdx](https://bun.com/docs/bundler/css)
 
 # CSS
 

@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/runtime/module-resolution.mdx](https://bun.com/docs/runtime/module-resolution)
+> Release-pinned source for Bun bun-v1.4.2: [docs/runtime/module-resolution.mdx](https://bun.com/docs/runtime/module-resolution)
 
 The JavaScript ecosystem is in a years-long transition from CommonJS modules to native ES modules (ESM). Different runtimes and build tools have historically disagreed on how import specifiers map to files on disk. Bun aims to provide a consistent and predictable module resolution system that works without configuration.
 

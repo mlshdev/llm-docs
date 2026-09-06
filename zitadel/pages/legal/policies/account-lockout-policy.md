@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/legal/policies/account-lockout-policy.mdx](https://zitadel.com/docs/legal/policies/account-lockout-policy)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/legal/policies/account-lockout-policy.mdx](https://zitadel.com/docs/legal/policies/account-lockout-policy)
 
 Last updated on June 25, 2025
 

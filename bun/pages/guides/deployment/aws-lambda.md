@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/deployment/aws-lambda.mdx](https://bun.com/docs/guides/deployment/aws-lambda)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/deployment/aws-lambda.mdx](https://bun.com/docs/guides/deployment/aws-lambda)
 
 # Deploy a Bun application on AWS Lambda
 
@@ -138,27 +138,27 @@ This guide deploys a Bun HTTP server to AWS Lambda using a `Dockerfile`.
    >
    > .
 
-   ![Create Function](https://raw.githubusercontent.com/oven-sh/bun/34cbb9a40b4bd1bd767d134a7065e66c2432a676/docs/images/guides/lambda1.png)
+   ![Create Function](https://raw.githubusercontent.com/oven-sh/bun/744846f844374847c902b5e7fd59b4342a51ef99/docs/images/guides/lambda1.png)
 
    Give the function a name, like `my-bun-function`.
 7. Go to the **Container image URI** section and click **Browse images**. Select the image you pushed to the ECR repository.
 
-   ![Select Container Repository](https://raw.githubusercontent.com/oven-sh/bun/34cbb9a40b4bd1bd767d134a7065e66c2432a676/docs/images/guides/lambda2.png)
+   ![Select Container Repository](https://raw.githubusercontent.com/oven-sh/bun/744846f844374847c902b5e7fd59b4342a51ef99/docs/images/guides/lambda2.png)
 
    Then, select the `latest` image and click **Select image**.
 
-   ![Select Container Image](https://raw.githubusercontent.com/oven-sh/bun/34cbb9a40b4bd1bd767d134a7065e66c2432a676/docs/images/guides/lambda3.png)
+   ![Select Container Image](https://raw.githubusercontent.com/oven-sh/bun/744846f844374847c902b5e7fd59b4342a51ef99/docs/images/guides/lambda3.png)
 8. To get a public URL for the function, go to **Additional configurations** > **Networking** > **Function URL**.
 
    Set this to **Enable**, with Auth Type **NONE**.
 
-   ![Set the Function URL](https://raw.githubusercontent.com/oven-sh/bun/34cbb9a40b4bd1bd767d134a7065e66c2432a676/docs/images/guides/lambda4.png)
+   ![Set the Function URL](https://raw.githubusercontent.com/oven-sh/bun/744846f844374847c902b5e7fd59b4342a51ef99/docs/images/guides/lambda4.png)
 9. Click **Create function** at the bottom of the page.
 
-   ![Create Function](https://raw.githubusercontent.com/oven-sh/bun/34cbb9a40b4bd1bd767d134a7065e66c2432a676/docs/images/guides/lambda6.png)
+   ![Create Function](https://raw.githubusercontent.com/oven-sh/bun/744846f844374847c902b5e7fd59b4342a51ef99/docs/images/guides/lambda6.png)
 10. Once the function is created, you're redirected to its page. The function URL is in the **"Function URL"** section.
 
-    ![Function URL](https://raw.githubusercontent.com/oven-sh/bun/34cbb9a40b4bd1bd767d134a7065e66c2432a676/docs/images/guides/lambda5.png)
+    ![Function URL](https://raw.githubusercontent.com/oven-sh/bun/744846f844374847c902b5e7fd59b4342a51ef99/docs/images/guides/lambda5.png)
 11. Your app is now live. To test the function, either go to the **Test** tab or call the function URL directly.
 
     ```bash terminal icon="terminal"

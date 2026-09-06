@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/runtime/typescript.mdx](https://bun.com/docs/guides/runtime/typescript)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/runtime/typescript.mdx](https://bun.com/docs/guides/runtime/typescript)
 
 # Install TypeScript declarations for Bun
 

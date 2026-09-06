@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/sdk-examples/expressjs.mdx](https://zitadel.com/docs/sdk-examples/expressjs)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/sdk-examples/expressjs.mdx](https://zitadel.com/docs/sdk-examples/expressjs)
 
 ## Overview
 

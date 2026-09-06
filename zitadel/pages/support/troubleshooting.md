@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/support/troubleshooting.mdx](https://zitadel.com/docs/support/troubleshooting)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/support/troubleshooting.mdx](https://zitadel.com/docs/support/troubleshooting)
 
 You will find some possible error messages here, what the problem is and what some possible solutions can be.
 
@@ -20,10 +20,10 @@ To make sure, that your new settings will trigger, please restart your mobile ph
 
 **Settings > Safari > Advanced > Experimental Features > disable: "SameSite strict enforcement (ITP)"**
 
-![Same Site Strict Enforcement](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/manuals/errors/same-site-strict.png)
+![Same Site Strict Enforcement](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/manuals/errors/same-site-strict.png)
 
 **Settings > Safari > disable: "Block All cookies"**
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/manuals/errors/block-cookies.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/manuals/errors/block-cookies.png)
 
 Do you still face this issue? Please contact us, and we will help you find out what the problem is.
 
@@ -73,7 +73,7 @@ The requirements and a set-up guide is detailed in the [Tailscale documentation]
 
 ## Login not possible. The organization of the user must be granted to the project
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/support/login_not_possible_error.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/support/login_not_possible_error.png)
 
 ZITADEL is not only capable of handling authentication but also authorization.
 This error message tells you, that a project grant is missing from the owner organization to the organization of the authenticating user.
@@ -81,7 +81,7 @@ This error message tells you, that a project grant is missing from the owner org
 You do have two organizations, an owner (Organization A) and a customer (Organization B).
 The Organization A owns a Project, and has to grant it to Organization B, so users are allowed to authenticate.
 The error message is shown to users of Organization B that the permission is required, but the project is not granted to Organization B.
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/support/project_grant_missing.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/support/project_grant_missing.png)
 
 You do have two possibilities.
 
@@ -94,7 +94,7 @@ You do have two possibilities.
 2. Navigate to the general settings of the needed project
 3. Disable "Check for Project on Authentication"
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/support/check_for_project_on_authentication.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/support/check_for_project_on_authentication.png)
 
 ### Give the needed permission to the organization
 
@@ -105,4 +105,4 @@ You do have two possibilities.
 5. Select the roles you want to grant
 6. Click save
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/support/project_grant_for_customer_b.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/support/project_grant_for_customer_b.png)

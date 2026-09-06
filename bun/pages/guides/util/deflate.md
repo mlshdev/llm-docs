@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/util/deflate.mdx](https://bun.com/docs/guides/util/deflate)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/util/deflate.mdx](https://bun.com/docs/guides/util/deflate)
 
 # Compress and decompress data with DEFLATE
 

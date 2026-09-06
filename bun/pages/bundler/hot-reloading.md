@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/bundler/hot-reloading.mdx](https://bun.com/docs/bundler/hot-reloading)
+> Release-pinned source for Bun bun-v1.4.2: [docs/bundler/hot-reloading.mdx](https://bun.com/docs/bundler/hot-reloading)
 
 # Hot reloading
 

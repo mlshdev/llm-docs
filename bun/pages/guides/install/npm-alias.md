@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/install/npm-alias.mdx](https://bun.com/docs/guides/install/npm-alias)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/install/npm-alias.mdx](https://bun.com/docs/guides/install/npm-alias)
 
 # Install a package under a different name
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for FFmpeg master: [doc/ffmpeg-codecs.texi](https://github.com/FFmpeg/FFmpeg/blob/0a59c39dad3da0e530836a7e7d1901134a0b592e/doc/ffmpeg-codecs.texi)
+> Commit-pinned source for FFmpeg master: [doc/ffmpeg-codecs.texi](https://github.com/FFmpeg/FFmpeg/blob/9997fd060680d427bcc0c0715d163346da7ebd6f/doc/ffmpeg-codecs.texi)
 
 # Description
 
@@ -836,13 +836,22 @@ Possible values:
 
 - skip\_idct        *integer* (*decoding,video*)
 
+- skip\_pred        *integer* (*decoding,video*)
+
 - skip\_frame       *integer* (*decoding,video*)
 
 Make decoder discard processing depending on the frame type selected
 by the option value.
 
 `skip_loop_filter` skips frame loop filtering, `skip_idct`
-skips frame IDCT/dequantization, `skip_frame` skips decoding.
+skips frame IDCT/dequantization, `skip_pred` skips prediction
+(intra prediction and motion compensation), `skip_frame` skips
+decoding.
+
+With both `skip_pred` and `skip_idct` set to `all`
+the decoder may skip all pixel operations and output frames with
+undefined pixels but valid metadata, such as timestamps and frame
+types.
 
 Possible values:
 

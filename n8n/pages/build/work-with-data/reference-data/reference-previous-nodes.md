@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/work-with-data/reference-data/reference-previous-nodes.md](https://github.com/n8n-io/n8n-docs/blob/6f4b48e69e3ab9acbf023f18020c40c125c16d45/docs/build/work-with-data/reference-data/reference-previous-nodes.md)
+> Commit-pinned source for n8n main: [docs/build/work-with-data/reference-data/reference-previous-nodes.md](https://github.com/n8n-io/n8n-docs/blob/3317373ce39c3ce2406c8e3d99bb2da7f7180321/docs/build/work-with-data/reference-data/reference-previous-nodes.md)
 
 # Referencing previous nodes <a id="referencing-previous-nodes"></a>
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/build/ci/github-actions/build-summary.md](https://github.com/docker/docs/blob/b744dd31039efeac59c11e017ac6ab62d9077339/content/manuals/build/ci/github-actions/build-summary.md)
+> Commit-pinned source for Docker main: [content/manuals/build/ci/github-actions/build-summary.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/build/ci/github-actions/build-summary.md)
 
 # GitHub Actions build summary
 
@@ -9,7 +9,7 @@ for your build that outlines the execution and materials used:
 - Inputs for the build, such as build arguments, tags, labels, and build contexts
 - For builds with [Bake](https://docs.docker.com/build/bake/), the full bake definition for the build
 
-![A GitHub Actions build summary](https://raw.githubusercontent.com/docker/docs/b744dd31039efeac59c11e017ac6ab62d9077339/content/manuals/build/ci/images/gha_build_summary.png)
+![A GitHub Actions build summary](https://raw.githubusercontent.com/docker/docs/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/build/ci/images/gha_build_summary.png)
 
 Job summaries for Docker builds appear automatically if you use the following
 versions of the [Build and push Docker images](https://github.com/marketplace/actions/build-and-push-docker-images)
@@ -24,7 +24,7 @@ job has finished. The summary is available for both failed and successful
 builds. In the case of a failed build, the summary also displays the error
 message that caused the build to fail:
 
-![Builds summary error message](https://raw.githubusercontent.com/docker/docs/b744dd31039efeac59c11e017ac6ab62d9077339/content/manuals/build/ci/images/build_summary_error.png)
+![Builds summary error message](https://raw.githubusercontent.com/docker/docs/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/build/ci/images/build_summary_error.png)
 
 ## Import build records to Docker Desktop
 

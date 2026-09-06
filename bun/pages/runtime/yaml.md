@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/runtime/yaml.mdx](https://bun.com/docs/runtime/yaml)
+> Release-pinned source for Bun bun-v1.4.2: [docs/runtime/yaml.mdx](https://bun.com/docs/runtime/yaml)
 
 In Bun, YAML is a first-class citizen alongside JSON and TOML. You can:
 

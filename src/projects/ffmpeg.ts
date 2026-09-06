@@ -8,6 +8,7 @@ import {
   normalizeSpacing,
   rewriteMarkdownLinks,
 } from "../markdown.ts";
+import { DocumentCollector } from "../quarantine.ts";
 import type {
   Document,
   LockedSource,
@@ -65,48 +66,57 @@ export async function buildFfmpeg(
     project.repository,
     lock.sourceCommit,
     async (root, archiveFiles) => {
-      const documents: Document[] = [];
+      const documents = new DocumentCollector(project.id);
       for (const sourcePath of texinfoManuals) {
-        const expanded = await expandTexinfo(
-          root,
-          sourcePath,
-          new Set([sourcePath]),
-        );
-        const body = rewriteMarkdownLinks(
-          convertTexinfo(expanded, sourcePath),
-          (url, kind) =>
-            resolveLink(
-              url,
-              kind,
-              sourcePath,
-              archiveFiles,
-              project.repository,
-              lock.sourceCommit,
-            ),
-        );
-        documents.push(document(project, lock, sourcePath, body, "Manuals"));
+        await documents.collect(sourcePath, async () => {
+          const expanded = await expandTexinfo(
+            root,
+            sourcePath,
+            new Set([sourcePath]),
+          );
+          const body = rewriteMarkdownLinks(
+            convertTexinfo(expanded, sourcePath),
+            (url, kind) =>
+              resolveLink(
+                url,
+                kind,
+                sourcePath,
+                archiveFiles,
+                project.repository,
+                lock.sourceCommit,
+              ),
+          );
+          return document(project, lock, sourcePath, body, "Manuals");
+        });
       }
       for (const sourcePath of markdownAndText) {
-        const body = rewriteMarkdownLinks(
-          cleanMarkdown(await readUtf8(root, sourcePath)),
-          (url, kind) =>
-            resolveLink(
-              url,
-              kind,
-              sourcePath,
-              archiveFiles,
-              project.repository,
-              lock.sourceCommit,
-            ),
-        );
-        documents.push(
-          document(project, lock, sourcePath, body, "Development reference"),
-        );
+        await documents.collect(sourcePath, async () => {
+          const body = rewriteMarkdownLinks(
+            cleanMarkdown(await readUtf8(root, sourcePath)),
+            (url, kind) =>
+              resolveLink(
+                url,
+                kind,
+                sourcePath,
+                archiveFiles,
+                project.repository,
+                lock.sourceCommit,
+              ),
+          );
+          return document(
+            project,
+            lock,
+            sourcePath,
+            body,
+            "Development reference",
+          );
+        });
       }
       return {
         project,
         lock,
-        documents,
+        documents: documents.documents,
+        quarantined: documents.quarantined,
         notes: [
           "FFmpeg tracks master because its GitHub mirror does not publish GitHub releases.",
           "Primary Texinfo manuals and their checked-in includes are converted without executing Make, Texinfo, or FFmpeg binaries.",

@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/builtin/core-nodes/n8n-nodes-base.merge.md](https://github.com/n8n-io/n8n-docs/blob/6f4b48e69e3ab9acbf023f18020c40c125c16d45/docs/integrations/builtin/core-nodes/n8n-nodes-base.merge.md)
+> Commit-pinned source for n8n main: [docs/integrations/builtin/core-nodes/n8n-nodes-base.merge.md](https://github.com/n8n-io/n8n-docs/blob/3317373ce39c3ce2406c8e3d99bb2da7f7180321/docs/integrations/builtin/core-nodes/n8n-nodes-base.merge.md)
 
 # Merge <a id="merge"></a>
 
@@ -19,7 +19,7 @@ You can specify how the Merge node should combine data from different data strea
 
 Keep data from all inputs. Choose a **Number of Inputs** to output items of each input, one after another. The node waits for the execution of all connected inputs.
 
-![](https://raw.githubusercontent.com/n8n-io/n8n-docs/6f4b48e69e3ab9acbf023f18020c40c125c16d45/docs/integrations/.gitbook/assets/append-diagram.png)
+![](https://raw.githubusercontent.com/n8n-io/n8n-docs/3317373ce39c3ce2406c8e3d99bb2da7f7180321/docs/integrations/.gitbook/assets/append-diagram.png)
 *Append mode inputs and output*
 
 ### Combine <a id="combine"></a>
@@ -38,21 +38,21 @@ n8n's default behavior is to keep matching items. You can change this using the 
 - **Enrich Input 1**: Keep all data from Input 1, and add matching data from Input 2. This is like a left join.
 - **Enrich Input 2**: Keep all data from Input 2, and add matching data from Input 1. This is like a right join.
 
-![](https://raw.githubusercontent.com/n8n-io/n8n-docs/6f4b48e69e3ab9acbf023f18020c40c125c16d45/docs/integrations/.gitbook/assets/merge-by-field-diagram.png)
+![](https://raw.githubusercontent.com/n8n-io/n8n-docs/3317373ce39c3ce2406c8e3d99bb2da7f7180321/docs/integrations/.gitbook/assets/merge-by-field-diagram.png)
 *Combine by Matching Fields mode inputs and output*
 
 #### Position <a id="position"></a>
 
 Combine items based on their order. The item at index 0 in Input 1 merges with the item at index 0 in Input 2, and so on.
 
-![](https://raw.githubusercontent.com/n8n-io/n8n-docs/6f4b48e69e3ab9acbf023f18020c40c125c16d45/docs/integrations/.gitbook/assets/merge-by-position-diagram.png)
+![](https://raw.githubusercontent.com/n8n-io/n8n-docs/3317373ce39c3ce2406c8e3d99bb2da7f7180321/docs/integrations/.gitbook/assets/merge-by-position-diagram.png)
 *Combine by Position mode inputs and output*
 
 #### All Possible Combinations <a id="all-possible-combinations"></a>
 
 Output all possible item combinations, while merging fields with the same name.
 
-![](https://raw.githubusercontent.com/n8n-io/n8n-docs/6f4b48e69e3ab9acbf023f18020c40c125c16d45/docs/integrations/.gitbook/assets/multiplex-diagram.png)
+![](https://raw.githubusercontent.com/n8n-io/n8n-docs/3317373ce39c3ce2406c8e3d99bb2da7f7180321/docs/integrations/.gitbook/assets/multiplex-diagram.png)
 *Combine by All Possible Combinations mode inputs and output*
 
 #### Combine mode options <a id="combine-mode-options"></a>
@@ -152,7 +152,7 @@ One data stream triggers the Merge node, which then goes and executes the other 
 
 For example, in the screenshot below there's a workflow containing an Edit Fields node, If node, and Merge node. The standard If node behavior is to execute one data stream (in the screenshot, this is the **true** output). However, due to the Merge node, both data streams execute, despite the If node not sending any data down the **false** data stream.
 
-![A workflow with an Edit Fields node, an If node, and a Merge node connected in sequence](https://raw.githubusercontent.com/n8n-io/n8n-docs/6f4b48e69e3ab9acbf023f18020c40c125c16d45/docs/reusable-content/.gitbook/assets/if-merge-node.png)
+![A workflow with an Edit Fields node, an If node, and a Merge node connected in sequence](https://raw.githubusercontent.com/n8n-io/n8n-docs/3317373ce39c3ce2406c8e3d99bb2da7f7180321/docs/reusable-content/.gitbook/assets/if-merge-node.png)
 
 ## Try it out: A step by step example <a id="try-it-out-a-step-by-step-example"></a>
 

@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/process/spawn-stdout.mdx](https://bun.com/docs/guides/process/spawn-stdout)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/process/spawn-stdout.mdx](https://bun.com/docs/guides/process/spawn-stdout)
 
 # Read stdout from a child process
 

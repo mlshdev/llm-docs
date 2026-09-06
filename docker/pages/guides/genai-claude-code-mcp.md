@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/genai-claude-code-mcp.md](https://github.com/docker/docs/blob/b744dd31039efeac59c11e017ac6ab62d9077339/content/guides/genai-claude-code-mcp.md)
+> Commit-pinned source for Docker main: [content/guides/genai-claude-code-mcp.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/guides/genai-claude-code-mcp.md)
 
 # Generate Docker Compose Files with Claude Code and Docker MCP Toolkit
 
@@ -63,11 +63,11 @@ Make sure you have:
 8. [Create a read-only personal access token](https://docs.docker.com/security/access-tokens/personal-access-tokens/#create-a-personal-access-token) and enter your access token under **Secrets**
 9. Save the configuration
 
-![Docker Hub](https://raw.githubusercontent.com/docker/docs/b744dd31039efeac59c11e017ac6ab62d9077339/content/guides/images/genai-claude-code-mcp-catalog-docker-hub.avif "Docker Hub")
+![Docker Hub](https://raw.githubusercontent.com/docker/docs/034d46977dac45d2a9493f2465b08108ac3cf87b/content/guides/images/genai-claude-code-mcp-catalog-docker-hub.avif "Docker Hub")
 
 Public images work without credentials. For private repositories, you can add your Docker Hub username and token later.
 
-![Docker Hub Secrets](https://raw.githubusercontent.com/docker/docs/b744dd31039efeac59c11e017ac6ab62d9077339/content/guides/images/genai-claude-code-mcp-dockerhub-secrets.avif "Docker Hub Secrets")
+![Docker Hub Secrets](https://raw.githubusercontent.com/docker/docs/034d46977dac45d2a9493f2465b08108ac3cf87b/content/guides/images/genai-claude-code-mcp-dockerhub-secrets.avif "Docker Hub Secrets")
 
 ***
 
@@ -82,7 +82,7 @@ You can connect from Docker Desktop or using the CLI.
 3. Locate Claude Code
 4. Select **Connect**
 
-![Docker Connection](https://raw.githubusercontent.com/docker/docs/b744dd31039efeac59c11e017ac6ab62d9077339/content/guides/images/genai-claude-code-mcp-docker-connect-claude.avif)
+![Docker Connection](https://raw.githubusercontent.com/docker/docs/034d46977dac45d2a9493f2465b08108ac3cf87b/content/guides/images/genai-claude-code-mcp-docker-connect-claude.avif)
 
 ### Option B. Connect using the CLI
 
@@ -117,7 +117,7 @@ You should now see:
 - The MCP gateway (for example `MCP_DOCKER`)
 - Tools provided by the Docker Hub MCP server
 
-![mcp-docker](https://raw.githubusercontent.com/docker/docs/b744dd31039efeac59c11e017ac6ab62d9077339/content/guides/images/genai-claude-code-mcp-mcp-servers.avif)
+![mcp-docker](https://raw.githubusercontent.com/docker/docs/034d46977dac45d2a9493f2465b08108ac3cf87b/content/guides/images/genai-claude-code-mcp-mcp-servers.avif)
 
 If not, restart Claude Code or check Docker Desktop to confirm the connection.
 
@@ -258,7 +258,7 @@ Open your browser:
 http://localhost:3000
 ```
 
-![Local Host](https://raw.githubusercontent.com/docker/docs/b744dd31039efeac59c11e017ac6ab62d9077339/content/guides/images/genai-claude-code-mcp-localhost.avif)
+![Local Host](https://raw.githubusercontent.com/docker/docs/034d46977dac45d2a9493f2465b08108ac3cf87b/content/guides/images/genai-claude-code-mcp-localhost.avif)
 
 Your Node.js app should now be running.
 

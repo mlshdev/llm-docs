@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/websocket/compression.mdx](https://bun.com/docs/guides/websocket/compression)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/websocket/compression.mdx](https://bun.com/docs/guides/websocket/compression)
 
 # Enable compression for WebSocket messages
 

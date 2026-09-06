@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/feedback.mdx](https://bun.com/docs/feedback)
+> Release-pinned source for Bun bun-v1.4.2: [docs/feedback.mdx](https://bun.com/docs/feedback)
 
 # Feedback
 

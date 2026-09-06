@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/examples/secure-api/java-spring.mdx](https://zitadel.com/docs/examples/secure-api/java-spring)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/examples/secure-api/java-spring.mdx](https://zitadel.com/docs/examples/secure-api/java-spring)
 
 This integration guide shows you how to integrate **ZITADEL** into your Java Spring Boot API. It demonstrates how to secure your API using
 OAuth 2 Token Introspection.
@@ -16,15 +16,15 @@ Before we begin developing our API, we need to perform a few setup steps in the 
 You'll need to provide some information about your app. We recommend creating a new app to start from scratch. Navigate to your Project, then add a new application at the top of the page.
 Select the **API** application type and continue.
 
-![Create app in management console](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/java-spring/api-create.png)
+![Create app in management console](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/java-spring/api-create.png)
 
 Select Basic Auth for authenticating at the Introspection Endpoint.
 
-![Create app in management console](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/java-spring/api-create-auth.png)
+![Create app in management console](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/java-spring/api-create-auth.png)
 
 After successful creation of the app, a pop-up will appear displaying the app's client ID. Copy the client ID and secret, as you will need it to configure your Java application.
 
-![Create api key in management console](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/java-spring/api-create-clientid-secret.png)
+![Create api key in management console](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/java-spring/api-create-clientid-secret.png)
 
 ## Spring Setup
 
@@ -216,13 +216,13 @@ So let's create the role and grant it to the user. To do so, go to your project 
 and create the role by selecting `Roles` in the navigation and then clicking on the `New Role` button.
 Finally, create the role as shown below:
 
-![Create project role in management console](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/java-spring/api-project-role.png)
+![Create project role in management console](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/java-spring/api-project-role.png)
 
 After you have created the role, let's grant it to the user who requested the tasks.
 Click on `Role Assignments` in the navigation and create a new one by selecting the user and the `admin` role.
 After successful creation, it should look like:
 
-![Created role assignment in management console](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/java-spring/api-project-auth.png)
+![Created role assignment in management console](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/java-spring/api-project-auth.png)
 
 So you should now be able to add a new task:
 

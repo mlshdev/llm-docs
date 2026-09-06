@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/runtime/child-process.mdx](https://bun.com/docs/runtime/child-process)
+> Release-pinned source for Bun bun-v1.4.2: [docs/runtime/child-process.mdx](https://bun.com/docs/runtime/child-process)
 
 # Spawn
 

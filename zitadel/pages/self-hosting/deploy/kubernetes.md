@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/self-hosting/deploy/kubernetes/index.mdx](https://zitadel.com/docs/self-hosting/deploy/kubernetes)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/self-hosting/deploy/kubernetes/index.mdx](https://zitadel.com/docs/self-hosting/deploy/kubernetes)
 
 This guide takes you from zero to a running ZITADEL instance on Kubernetes and then shows you how to harden it for production.
 

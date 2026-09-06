@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/util/gzip.mdx](https://bun.com/docs/guides/util/gzip)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/util/gzip.mdx](https://bun.com/docs/guides/util/gzip)
 
 # Compress and decompress data with gzip
 

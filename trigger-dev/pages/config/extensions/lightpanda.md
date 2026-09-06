@@ -1,0 +1,53 @@
+> Release-pinned source for Trigger.dev v4.5.16: [docs/config/extensions/lightpanda.mdx](https://trigger.dev/docs/config/extensions/lightpanda)
+
+# Lightpanda build extension
+
+Use the lightpanda build extension to add Lightpanda browser to your project
+
+To use the Lightpanda browser in your project, add the extension to your `trigger.config.ts` file:
+
+```ts trigger.config.ts
+import { defineConfig } from "@trigger.dev/sdk";
+import { lightpanda } from "@trigger.dev/build/extensions/lightpanda";
+
+export default defineConfig({
+  project: "<project ref>",
+  build: {
+    extensions: [lightpanda()],
+  },
+});
+```
+
+## Options
+
+- `version`: The version of the browser to install. Default: `"latest"`.
+- `disableTelemetry`: Whether to disable telemetry. Default: `false`.
+
+For example:
+
+```ts trigger.config.ts
+import { defineConfig } from "@trigger.dev/sdk";
+import { lightpanda } from "@trigger.dev/build/extensions/lightpanda";
+
+export default defineConfig({
+  project: "<project ref>",
+  build: {
+    extensions: [
+      lightpanda({
+        version: "nightly",
+        disableTelemetry: true,
+      }),
+    ],
+  },
+});
+```
+
+## Development
+
+When running in dev, you will first have to download the Lightpanda browser binary and make sure it's in your `PATH`. See [Lightpanda's installation guide](https://lightpanda.io/docs/getting-started/installation).
+
+## Next steps
+
+- [Lightpanda](https://trigger.dev/docs/guides/examples/lightpanda)
+
+  Learn how to use Lightpanda in your project.

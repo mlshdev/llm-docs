@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/builtin/custom-api-actions-for-existing-nodes.md](https://github.com/n8n-io/n8n-docs/blob/6f4b48e69e3ab9acbf023f18020c40c125c16d45/docs/integrations/builtin/custom-api-actions-for-existing-nodes.md)
+> Commit-pinned source for n8n main: [docs/integrations/builtin/custom-api-actions-for-existing-nodes.md](https://github.com/n8n-io/n8n-docs/blob/3317373ce39c3ce2406c8e3d99bb2da7f7180321/docs/integrations/builtin/custom-api-actions-for-existing-nodes.md)
 
 # Custom API operations <a id="custom-api-operations"></a>
 
@@ -9,7 +9,7 @@ One of the most complex parts of setting up [API](https://docs.n8n.io/get-starte
 
 ## Predefined credential types <a id="predefined-credential-types"></a>
 
-A predefined credential type is a credential that already exists in n8n. You can use predefined credential types instead of generic credentials in the HTTP Request node.
+A predefined credential type is a credential that already exists in n8n. You can use predefined credential types instead of generic credentials in the HTTP Request and GraphQL nodes.
 
 For example: you create an Asana credential, for use with the Asana node. Later, you want to perform an operation that isn't supported by the Asana node, using Asana's API. You can use your existing Asana credential in the HTTP Request node to perform the operation, without additional authentication setup.
 
@@ -17,7 +17,7 @@ For example: you create an Asana credential, for use with the Asana node. Later,
 
 To use a predefined credential type:
 
-1. Open your HTTP Request node, or add a new one to your workflow.
+1. Open your HTTP Request or GraphQL node, or add a new one to your workflow.
 2. In **Authentication**, select **Predefined Credential Type**.
 3. In **Credential Type**, select the API you want to use.
 4. In **Credential for `<API name>`**, you can:
@@ -30,4 +30,4 @@ Some existing credential types have specific scopes: the parts of the API they c
 
 For example, follow the steps in [Using predefined credential types](#using-predefined-credential-types), and select **Google Calendar OAuth2 API** as your **Credential Type**. n8n displays a box listing the two scopes this credential type covers: `calendar` and `calendar.events`.
 
-![Scopes notice for the Google Calendar OAuth2 API credential type](https://raw.githubusercontent.com/n8n-io/n8n-docs/6f4b48e69e3ab9acbf023f18020c40c125c16d45/docs/integrations/.gitbook/assets/scopes.png)
+![Scopes notice for the Google Calendar OAuth2 API credential type](https://raw.githubusercontent.com/n8n-io/n8n-docs/3317373ce39c3ce2406c8e3d99bb2da7f7180321/docs/integrations/.gitbook/assets/scopes.png)

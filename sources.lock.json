@@ -23,14 +23,14 @@
     "docker": {
       "tag": "main",
       "branch": "main",
-      "sourceCommit": "b744dd31039efeac59c11e017ac6ab62d9077339",
-      "sourceCommittedAt": "2026-09-03T16:26:12Z"
+      "sourceCommit": "034d46977dac45d2a9493f2465b08108ac3cf87b",
+      "sourceCommittedAt": "2026-09-04T19:49:55Z"
     },
     "n8n": {
       "tag": "main",
       "branch": "main",
-      "sourceCommit": "6f4b48e69e3ab9acbf023f18020c40c125c16d45",
-      "sourceCommittedAt": "2026-09-03T16:02:31Z"
+      "sourceCommit": "3317373ce39c3ce2406c8e3d99bb2da7f7180321",
+      "sourceCommittedAt": "2026-09-04T13:16:40Z"
     },
     "grafana": {
       "tag": "v13.2.1",
@@ -69,16 +69,16 @@
       "sourceCommit": "e10898e3c321067feeb951ef3eb5581a1b80f124"
     },
     "zitadel": {
-      "tag": "v4.17.2",
-      "releaseId": 379625648,
-      "releasePublishedAt": "2026-08-31T09:04:57Z",
-      "sourceCommit": "35aa213863395a73ee18dbfeae9a9ef41d6fff77"
+      "tag": "v4.17.3",
+      "releaseId": 382525855,
+      "releasePublishedAt": "2026-09-04T06:44:05Z",
+      "sourceCommit": "41b11149c6997eddd7e38390912e12ff5f918a73"
     },
     "ffmpeg": {
       "tag": "master",
       "branch": "master",
-      "sourceCommit": "0a59c39dad3da0e530836a7e7d1901134a0b592e",
-      "sourceCommittedAt": "2026-08-31T16:05:27Z"
+      "sourceCommit": "9997fd060680d427bcc0c0715d163346da7ebd6f",
+      "sourceCommittedAt": "2026-08-27T00:35:13Z"
     },
     "yt-dlp": {
       "tag": "2026.08.19",
@@ -89,14 +89,20 @@
     "searxng": {
       "tag": "master",
       "branch": "master",
-      "sourceCommit": "a1144dda3e97668c9d445022b7019c224cd4bb1e",
-      "sourceCommittedAt": "2026-07-29T15:56:20Z"
+      "sourceCommit": "22056605a6e0ed41a0aa91a2bf300a361fd16b92",
+      "sourceCommittedAt": "2026-09-04T17:43:28Z"
     },
     "bun": {
-      "tag": "bun-v1.4.0",
-      "releaseId": 373437831,
-      "releasePublishedAt": "2026-08-20T14:07:21Z",
-      "sourceCommit": "34cbb9a40b4bd1bd767d134a7065e66c2432a676"
+      "tag": "bun-v1.4.2",
+      "releaseId": 383114065,
+      "releasePublishedAt": "2026-09-05T05:55:48Z",
+      "sourceCommit": "744846f844374847c902b5e7fd59b4342a51ef99"
+    },
+    "trigger-dev": {
+      "tag": "v4.5.16",
+      "releaseId": 381460886,
+      "releasePublishedAt": "2026-09-02T17:47:49Z",
+      "sourceCommit": "ee34a4b13710742ae26d94831547fa2b6cddc9bd"
     }
   }
 }

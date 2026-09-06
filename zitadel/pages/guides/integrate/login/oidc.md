@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/integrate/login/oidc/index.mdx](https://zitadel.com/docs/guides/integrate/login/oidc)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/guides/integrate/login/oidc/index.mdx](https://zitadel.com/docs/guides/integrate/login/oidc)
 
 - [Oauth Recommended Flows](https://zitadel.com/docs/guides/integrate/login/oidc/oauth-recommended-flows)
 - [Login Users](https://zitadel.com/docs/guides/integrate/login/oidc/login-users)

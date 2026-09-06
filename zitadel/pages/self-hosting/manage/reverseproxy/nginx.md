@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/self-hosting/manage/reverseproxy/nginx/index.mdx](https://zitadel.com/docs/self-hosting/manage/reverseproxy/nginx)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/self-hosting/manage/reverseproxy/nginx/index.mdx](https://zitadel.com/docs/self-hosting/manage/reverseproxy/nginx)
 
 With these examples, you create and run a minimal  configuration for Zitadel with [Docker Compose](https://docs.docker.com/compose).
 Whereas the guide focuses on the configuration for NGINX, you can inspect the settings for the Zitadel API, the Zitadel login and the database in the base Docker Compose file.

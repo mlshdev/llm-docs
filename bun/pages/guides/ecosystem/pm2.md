@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/ecosystem/pm2.mdx](https://bun.com/docs/guides/ecosystem/pm2)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/ecosystem/pm2.mdx](https://bun.com/docs/guides/ecosystem/pm2)
 
 # Run Bun as a daemon with PM2
 

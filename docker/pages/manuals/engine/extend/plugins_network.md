@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/cli/docs/extend/plugins_network.md](https://github.com/docker/docs/blob/b744dd31039efeac59c11e017ac6ab62d9077339/_vendor/github.com/docker/cli/docs/extend/plugins_network.md)
+> Commit-pinned source for Docker main: [_vendor/github.com/docker/cli/docs/extend/plugins_network.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/_vendor/github.com/docker/cli/docs/extend/plugins_network.md)
 
 # Docker network driver plugins
 

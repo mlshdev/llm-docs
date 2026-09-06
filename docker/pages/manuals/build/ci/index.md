@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/build/ci/_index.md](https://github.com/docker/docs/blob/b744dd31039efeac59c11e017ac6ab62d9077339/content/manuals/build/ci/_index.md)
+> Commit-pinned source for Docker main: [content/manuals/build/ci/_index.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/build/ci/_index.md)
 
 # Continuous integration with Docker
 
@@ -7,7 +7,7 @@ looking to get your code changes merged with the main branch of the project. At
 this point, development teams run tests and builds to vet that the code changes
 don't cause any unwanted or unexpected behaviors.
 
-![Git branches about to get merged](https://raw.githubusercontent.com/docker/docs/b744dd31039efeac59c11e017ac6ab62d9077339/content/manuals/build/ci/images/continuous-integration.svg)
+![Git branches about to get merged](https://raw.githubusercontent.com/docker/docs/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/build/ci/images/continuous-integration.svg)
 
 There are several uses for Docker at this stage of development, even if you
 don't end up packaging your application as a container image.

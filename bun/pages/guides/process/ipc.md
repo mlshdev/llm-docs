@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/process/ipc.mdx](https://bun.com/docs/guides/process/ipc)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/process/ipc.mdx](https://bun.com/docs/guides/process/ipc)
 
 # Spawn a child process and communicate using IPC
 

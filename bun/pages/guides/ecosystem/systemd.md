@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/ecosystem/systemd.mdx](https://bun.com/docs/guides/ecosystem/systemd)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/ecosystem/systemd.mdx](https://bun.com/docs/guides/ecosystem/systemd)
 
 [systemd](https://systemd.io) is an init system and service manager for Linux. It manages the startup and control of system processes and services.
 

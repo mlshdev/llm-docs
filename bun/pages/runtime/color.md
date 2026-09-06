@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/runtime/color.mdx](https://bun.com/docs/runtime/color)
+> Release-pinned source for Bun bun-v1.4.2: [docs/runtime/color.mdx](https://bun.com/docs/runtime/color)
 
 # Color
 

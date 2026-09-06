@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/pm/scopes-registries.mdx](https://bun.com/docs/pm/scopes-registries)
+> Release-pinned source for Bun bun-v1.4.2: [docs/pm/scopes-registries.mdx](https://bun.com/docs/pm/scopes-registries)
 
 The default registry is `registry.npmjs.org`. To change it globally, set it in `bunfig.toml`:
 

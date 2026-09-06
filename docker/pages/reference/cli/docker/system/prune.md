@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_system_prune.yaml](https://github.com/docker/docs/blob/b744dd31039efeac59c11e017ac6ab62d9077339/data/cli/engine/docker_system_prune.yaml)
+> Commit-pinned source for Docker main: [data/cli/engine/docker_system_prune.yaml](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/data/cli/engine/docker_system_prune.yaml)
 
 # docker system prune
 
@@ -9,7 +9,13 @@ Remove unused data
 ## Description
 
 Remove all unused containers, networks, images (both dangling and unused),
-and optionally, volumes.
+unused [build cache](/build/cache/), and optionally,
+volumes.
+
+Build cache is always eligible for pruning with this command (including BuildKit
+cache mounts created with `RUN --mount=type=cache`). Use
+[`docker builder prune`](/reference/cli/docker/builder/prune/) if you only want to reclaim build
+cache without removing containers, networks, or images.
 
 ## Options
 

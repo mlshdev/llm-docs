@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/compose/gettingstarted.md](https://github.com/docker/docs/blob/b744dd31039efeac59c11e017ac6ab62d9077339/content/manuals/compose/gettingstarted.md)
+> Commit-pinned source for Docker main: [content/manuals/compose/gettingstarted.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/compose/gettingstarted.md)
 
 # Docker Compose Quickstart
 

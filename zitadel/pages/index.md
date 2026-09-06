@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/index.mdx](https://zitadel.com/docs/)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/index.mdx](https://zitadel.com/docs/)
 
 **ZITADEL is the Identity Infrastructure for Developers.**
 

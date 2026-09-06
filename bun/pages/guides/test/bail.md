@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/test/bail.mdx](https://bun.com/docs/guides/test/bail)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/test/bail.mdx](https://bun.com/docs/guides/test/bail)
 
 Use the `--bail` flag to abort a test run after the first failure, so a continuous integration run fails as early as possible.
 

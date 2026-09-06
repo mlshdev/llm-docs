@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/integrate/login/oidc/native-app-links.mdx](https://zitadel.com/docs/guides/integrate/login/oidc/native-app-links)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/guides/integrate/login/oidc/native-app-links.mdx](https://zitadel.com/docs/guides/integrate/login/oidc/native-app-links)
 
 Native mobile apps that create or use passkeys with platform WebAuthn APIs need the issuer domain to publish OS trust association files.
 ZITADEL serves those files from your instance based on iOS and Android settings on OIDC applications.

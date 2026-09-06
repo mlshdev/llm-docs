@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/legal/service-description/cloud-service-description.mdx](https://zitadel.com/docs/legal/service-description/cloud-service-description)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/legal/service-description/cloud-service-description.mdx](https://zitadel.com/docs/legal/service-description/cloud-service-description)
 
 Last updated on April 5, 2024
 

@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/ecosystem/docker.mdx](https://bun.com/docs/guides/ecosystem/docker)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/ecosystem/docker.mdx](https://bun.com/docs/guides/ecosystem/docker)
 
 > **Note**
 >

@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/http/cluster.mdx](https://bun.com/docs/guides/http/cluster)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/http/cluster.mdx](https://bun.com/docs/guides/http/cluster)
 
 # Start a cluster of HTTP servers
 

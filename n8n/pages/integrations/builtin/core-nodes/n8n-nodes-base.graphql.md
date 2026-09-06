@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/builtin/core-nodes/n8n-nodes-base.graphql.md](https://github.com/n8n-io/n8n-docs/blob/6f4b48e69e3ab9acbf023f18020c40c125c16d45/docs/integrations/builtin/core-nodes/n8n-nodes-base.graphql.md)
+> Commit-pinned source for n8n main: [docs/integrations/builtin/core-nodes/n8n-nodes-base.graphql.md](https://github.com/n8n-io/n8n-docs/blob/3317373ce39c3ce2406c8e3d99bb2da7f7180321/docs/integrations/builtin/core-nodes/n8n-nodes-base.graphql.md)
 
 # GraphQL <a id="graphql"></a>
 
@@ -13,9 +13,11 @@
 
 ### Authentication <a id="authentication"></a>
 
-Select the type of authentication to use.
+Select the type of authentication to use. n8n recommends using **Predefined Credential Type** when it's available for the service you want to connect to. It offers an easier way to set up and manage credentials, compared to configuring generic credentials manually.
 
-If you select anything other than **None**, the **Credential for <selected-auth-type>** parameter appears for you to select an existing or create a new authentication credential for that authentication type.
+If you select **Predefined Credential Type**, a **Credential Type** parameter appears. Select the app or service you want to use, then select an existing credential for it or create a new one. Refer to [Custom API operations](https://docs.n8n.io/integrations/builtin/custom-api-actions-for-existing-nodes) for more information.
+
+If you select any other authentication method except **None**, a **Credential for <selected-auth-type>** parameter appears for you to select an existing or create a new authentication credential for that authentication type.
 
 ### HTTP Request Method <a id="http-request-method"></a>
 

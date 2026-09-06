@@ -1,6 +1,6 @@
 # Docker main
 
-> Documentation generated from the latest `main` branch commit of [docker/docs](https://github.com/docker/docs) and pinned to immutable source commit `b744dd31039efeac59c11e017ac6ab62d9077339`.
+> Documentation generated from the latest `main` branch commit of [docker/docs](https://github.com/docker/docs) and pinned to immutable source commit `034d46977dac45d2a9493f2465b08108ac3cf87b`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Docker main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -1086,6 +1086,7 @@
 - [Docker Engine API v1.53 reference](pages/reference/api/engine/version/v1.53.md): Source `content/reference/api/engine/version/v1.53.md`.
 - [Docker Engine API v1.54 reference](pages/reference/api/engine/version/v1.54.md): Source `content/reference/api/engine/version/v1.54.md`.
 - [Docker Engine API v1.55 reference](pages/reference/api/engine/version/v1.55.md): Source `content/reference/api/engine/version/v1.55.md`.
+- [Docker Engine API v1.56 reference](pages/reference/api/engine/version/v1.56.md): Source `content/reference/api/engine/version/v1.56.md`.
 - [Interface: BackendV0](pages/reference/api/extensions-sdk/BackendV0.md): Source `content/reference/api/extensions-sdk/BackendV0.md`.
 - [Interface: DesktopUI](pages/reference/api/extensions-sdk/DesktopUI.md): Source `content/reference/api/extensions-sdk/DesktopUI.md`.
 - [Interface: Dialog](pages/reference/api/extensions-sdk/Dialog.md): Source `content/reference/api/extensions-sdk/Dialog.md`.

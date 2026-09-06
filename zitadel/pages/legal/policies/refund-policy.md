@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/legal/policies/refund-policy.mdx](https://zitadel.com/docs/legal/policies/refund-policy)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/legal/policies/refund-policy.mdx](https://zitadel.com/docs/legal/policies/refund-policy)
 
 Last updated on August 11, 2026
 

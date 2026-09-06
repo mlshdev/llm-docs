@@ -17,3 +17,7 @@ _generated/
 *.pfx
 id_rsa
 id_ed25519
+
+# Pipeline health report emitted by `bun run update`.
+build-report.json
+*.staging/

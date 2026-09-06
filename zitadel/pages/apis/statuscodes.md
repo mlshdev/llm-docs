@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/apis/statuscodes.mdx](https://zitadel.com/docs/apis/statuscodes)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/apis/statuscodes.mdx](https://zitadel.com/docs/apis/statuscodes)
 
 | GRPC Number | GRPC Code            | HTTP Status Code | HTTP Status Text    | Description                                                                                                                                                                                                                 |
 | :---------- | :------------------- | ---------------- | ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

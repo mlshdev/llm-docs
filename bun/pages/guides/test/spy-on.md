@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/test/spy-on.mdx](https://bun.com/docs/guides/test/spy-on)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/test/spy-on.mdx](https://bun.com/docs/guides/test/spy-on)
 
 # Spy on methods in `bun test`
 

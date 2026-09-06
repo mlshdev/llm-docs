@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/read-file/arraybuffer.mdx](https://bun.com/docs/guides/read-file/arraybuffer)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/read-file/arraybuffer.mdx](https://bun.com/docs/guides/read-file/arraybuffer)
 
 # Read a file to an ArrayBuffer
 

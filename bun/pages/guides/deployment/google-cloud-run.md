@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/deployment/google-cloud-run.mdx](https://bun.com/docs/guides/deployment/google-cloud-run)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/deployment/google-cloud-run.mdx](https://bun.com/docs/guides/deployment/google-cloud-run)
 
 # Deploy a Bun application on Google Cloud Run
 

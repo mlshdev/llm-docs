@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/runtime/binary-data.mdx](https://bun.com/docs/runtime/binary-data)
+> Release-pinned source for Bun bun-v1.4.2: [docs/runtime/binary-data.mdx](https://bun.com/docs/runtime/binary-data)
 
 # Binary Data
 

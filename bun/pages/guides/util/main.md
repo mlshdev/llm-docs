@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/util/main.mdx](https://bun.com/docs/guides/util/main)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/util/main.mdx](https://bun.com/docs/guides/util/main)
 
 # Get the absolute path to the current entrypoint
 

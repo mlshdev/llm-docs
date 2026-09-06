@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/read-file/uint8array.mdx](https://bun.com/docs/guides/read-file/uint8array)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/read-file/uint8array.mdx](https://bun.com/docs/guides/read-file/uint8array)
 
 # Read a file to a Uint8Array
 

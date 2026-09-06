@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/pm/global-cache.mdx](https://bun.com/docs/pm/global-cache)
+> Release-pinned source for Bun bun-v1.4.2: [docs/pm/global-cache.mdx](https://bun.com/docs/pm/global-cache)
 
 Bun stores every package downloaded from the registry in a global cache at `~/.bun/install/cache`, or the path set by the `BUN_INSTALL_CACHE_DIR` environment variable. Packages live in subdirectories named like `${name}@${version}`, so Bun can cache multiple versions of a package.
 

@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/runtime/image.mdx](https://bun.com/docs/runtime/image)
+> Release-pinned source for Bun bun-v1.4.2: [docs/runtime/image.mdx](https://bun.com/docs/runtime/image)
 
 # Image
 

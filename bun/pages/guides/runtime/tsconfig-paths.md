@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/runtime/tsconfig-paths.mdx](https://bun.com/docs/guides/runtime/tsconfig-paths)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/runtime/tsconfig-paths.mdx](https://bun.com/docs/guides/runtime/tsconfig-paths)
 
 # Re-map import paths
 

@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/runtime/c-compiler.mdx](https://bun.com/docs/runtime/c-compiler)
+> Release-pinned source for Bun bun-v1.4.2: [docs/runtime/c-compiler.mdx](https://bun.com/docs/runtime/c-compiler)
 
 # C Compiler
 
@@ -200,3 +200,13 @@ cc({
   },
 });
 ```
+
+### Disabling `cc`
+
+Pass `--no-ffi-cc` to disable the C compiler for a process. Any call to `cc()` then throws an error with the code `ERR_FFI_CC_DISABLED`. The `--no-addons` flag also disables `cc()`, in addition to `process.dlopen`.
+
+```sh
+bun --no-ffi-cc ./app.ts
+```
+
+Workers inherit the setting from their parent. A Worker can also set it for itself with `execArgv: ["--no-ffi-cc"]`. Standalone executables can bake it in with `bun build --compile --compile-exec-argv="--no-ffi-cc"`.

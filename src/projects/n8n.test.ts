@@ -75,6 +75,23 @@ Use JS.
     );
   });
 
+  test("drops GitBook custom blocks and keeps the ones carrying a URL", () => {
+    const source = `Before.
+
+{% @github-files/github-code-block %}
+
+{% @mailchimp/mailchimp-embed url="https://example.invalid/form" %}
+
+After.`;
+    expect(transformGitBook(source, "docs/deploy/page.md")).toBe(
+      `Before.
+
+[Embedded content](https://example.invalid/form)
+
+After.\n`,
+    );
+  });
+
   test("leaves GitBook examples inside fences untouched", () => {
     const source = `\`\`\`markdown
 {% hint style="info" %}

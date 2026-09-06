@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/apis/benchmarks/v2.65.0/machine_jwt_profile_grant/index.mdx](https://zitadel.com/docs/apis/benchmarks/v2.65.0/machine_jwt_profile_grant)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/apis/benchmarks/v2.65.0/machine_jwt_profile_grant/index.mdx](https://zitadel.com/docs/apis/benchmarks/v2.65.0/machine_jwt_profile_grant)
 
 Tests are halted after this test run because of too many [client read events](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/wait-event.clientread.html) on the database.
 

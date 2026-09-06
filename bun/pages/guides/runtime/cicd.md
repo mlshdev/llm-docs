@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/runtime/cicd.mdx](https://bun.com/docs/guides/runtime/cicd)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/runtime/cicd.mdx](https://bun.com/docs/guides/runtime/cicd)
 
 # Install and run Bun in GitHub Actions
 

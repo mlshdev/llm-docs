@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/docker-build-cloud.md](https://github.com/docker/docs/blob/b744dd31039efeac59c11e017ac6ab62d9077339/content/guides/docker-build-cloud.md)
+> Commit-pinned source for Docker main: [content/guides/docker-build-cloud.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/guides/docker-build-cloud.md)
 
 # Docker Build Cloud: Reclaim your time with fast, multi-architecture builds
 

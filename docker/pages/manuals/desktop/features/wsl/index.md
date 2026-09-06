@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/desktop/features/wsl/_index.md](https://github.com/docker/docs/blob/b744dd31039efeac59c11e017ac6ab62d9077339/content/manuals/desktop/features/wsl/_index.md)
+> Commit-pinned source for Docker main: [content/manuals/desktop/features/wsl/_index.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/desktop/features/wsl/_index.md)
 
 # Docker Desktop WSL 2 backend on Windows
 
@@ -24,8 +24,8 @@ Before you turn on the Docker Desktop WSL 2 feature, ensure you have:
 Before installing Docker Desktop, uninstall any version of Docker Engine or the Docker CLI
 that was installed directly inside a WSL Linux distribution. Running both can cause conflicts.
 
-1. Download and install the latest version of [Docker Desktop for Windows](https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe?utm_source=docker\&utm_medium=webreferral\&utm_campaign=docs-driven-download-windows).
-2. Follow the usual installation instructions to install Docker Desktop. Depending on which version of Windows you are using, Docker Desktop may prompt you to turn on WSL 2 during installation. Read the information displayed on the screen and turn on the WSL 2 feature to continue.
+1. [Install Docker Desktop for Windows](https://docs.docker.com/desktop/setup/install/windows-install/).
+2. During installation, Docker Desktop may prompt you to turn on WSL 2. Read the information displayed on the screen and turn on the WSL 2 feature to continue.
 3. Start Docker Desktop from the **Windows Start** menu.
 4. Navigate to **Settings**.
 5. From the **General** tab, select **Use WSL 2 based engine**.

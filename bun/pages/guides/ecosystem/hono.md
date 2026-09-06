@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/ecosystem/hono.mdx](https://bun.com/docs/guides/ecosystem/hono)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/ecosystem/hono.mdx](https://bun.com/docs/guides/ecosystem/hono)
 
 # Build an HTTP server using Hono and Bun
 

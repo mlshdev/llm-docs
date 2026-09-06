@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/integrate/zitadel-apis/access-zitadel-apis.mdx](https://zitadel.com/docs/guides/integrate/zitadel-apis/access-zitadel-apis)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/guides/integrate/zitadel-apis/access-zitadel-apis.mdx](https://zitadel.com/docs/guides/integrate/zitadel-apis/access-zitadel-apis)
 
 This guide explains what ZITADEL APIs are and how to access ZITADEL APIs using a service account to manage all types of resources and settings.
 
@@ -77,7 +77,7 @@ To be able to access the ZITADEL APIs, your service account needs permissions to
 3. Search for your service account
 4. Give the user the role you need — for example, we choose Org Owner (More about [ZITADEL Permissions](https://zitadel.com/docs/guides/manage/console/administrators))
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/console_org_owner_add.gif)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/console_org_owner_add.gif)
 
 ## 3. Authenticate service account and request token
 
@@ -148,7 +148,7 @@ Get the client id and client secret by
 2. Open **Actions** in the top right corner and click on **Generate Client Secret**
 3. Copy the **ClientID** and **ClientSecret** from the dialog
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/console_serviceaccounts_secret.gif)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/console_serviceaccounts_secret.gif)
 
 With the ClientId and ClientSecret from the prior step, you will need to craft a POST request to ZITADEL's token endpoint.
 

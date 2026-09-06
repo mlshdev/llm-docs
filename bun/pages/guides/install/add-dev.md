@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/install/add-dev.mdx](https://bun.com/docs/guides/install/add-dev)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/install/add-dev.mdx](https://bun.com/docs/guides/install/add-dev)
 
 # Add a development dependency
 

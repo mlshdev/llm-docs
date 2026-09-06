@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/integrate/actions/testing-response.mdx](https://zitadel.com/docs/guides/integrate/actions/testing-response)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/guides/integrate/actions/testing-response.mdx](https://zitadel.com/docs/guides/integrate/actions/testing-response)
 
 This guide shows you how to leverage the ZITADEL actions feature to react to API responses in your ZITADEL instance.
 You can use the actions feature to create a target that will be called when a specific API response occurs.

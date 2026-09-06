@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/engine/containers/multi-service_container.md](https://github.com/docker/docs/blob/b744dd31039efeac59c11e017ac6ab62d9077339/content/manuals/engine/containers/multi-service_container.md)
+> Commit-pinned source for Docker main: [content/manuals/engine/containers/multi-service_container.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/engine/containers/multi-service_container.md)
 
 A container's main running process is the `ENTRYPOINT` and/or `CMD` at the
 end of the `Dockerfile`. It's best practice to separate areas of concern by

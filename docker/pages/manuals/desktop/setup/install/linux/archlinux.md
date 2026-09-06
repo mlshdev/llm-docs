@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/desktop/setup/install/linux/archlinux.md](https://github.com/docker/docs/blob/b744dd31039efeac59c11e017ac6ab62d9077339/content/manuals/desktop/setup/install/linux/archlinux.md)
+> Commit-pinned source for Docker main: [content/manuals/desktop/setup/install/linux/archlinux.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/desktop/setup/install/linux/archlinux.md)
 
 # Install Docker Desktop on Arch-based distributions
 
@@ -23,7 +23,7 @@ To install Docker Desktop successfully, you must meet the [general system requir
 1. [Install the Docker client binary on Linux](https://docs.docker.com/engine/install/binaries/#install-daemon-and-client-binaries-on-linux). Static binaries for the Docker client are available for Linux as `docker`. You can use:
 
    ```console
-   $ wget https://download.docker.com/linux/static/stable/x86_64/docker-29.7.2.tgz -qO- | tar xvfz - docker/docker --strip-components=1
+   $ wget https://download.docker.com/linux/static/stable/x86_64/docker-29.8.0.tgz -qO- | tar xvfz - docker/docker --strip-components=1
    $ sudo cp -rp ./docker /usr/local/bin/ && rm -r ./docker
    ```
 

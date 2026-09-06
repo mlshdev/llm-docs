@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/ecosystem/sveltekit.mdx](https://bun.com/docs/guides/ecosystem/sveltekit)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/ecosystem/sveltekit.mdx](https://bun.com/docs/guides/ecosystem/sveltekit)
 
 # Build an app with SvelteKit and Bun
 

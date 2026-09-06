@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/self-hosting/manage/upgrade-v3-to-v4.mdx](https://zitadel.com/docs/self-hosting/manage/upgrade-v3-to-v4)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/self-hosting/manage/upgrade-v3-to-v4.mdx](https://zitadel.com/docs/self-hosting/manage/upgrade-v3-to-v4)
 
 ## Summary
 

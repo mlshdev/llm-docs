@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/bundler/bytecode.mdx](https://bun.com/docs/bundler/bytecode)
+> Release-pinned source for Bun bun-v1.4.2: [docs/bundler/bytecode.mdx](https://bun.com/docs/bundler/bytecode)
 
 Bytecode caching is a build-time optimization that improves startup time by pre-compiling your JavaScript to bytecode. For example, when compiling TypeScript's `tsc` with bytecode enabled, startup time improves by **2x**.
 
@@ -42,6 +42,20 @@ The resulting executable contains both the code and the bytecode.
 ESM bytecode requires `--compile` because Bun embeds module metadata (import/export information) in the compiled binary. With this metadata, the JavaScript engine skips parsing entirely at runtime.
 
 Without `--compile`, ESM bytecode would still require parsing the source to analyze module dependencies, which defeats the purpose of bytecode caching.
+
+### Limiting bytecode depth
+
+By default, Bun compiles every function in the bundle to bytecode, including functions nested inside other functions. Use `--bytecode-depth` (a non-negative integer) to compile only the top `N` levels of nesting. Functions past that limit are compiled from source when they are first called.
+
+```bash terminal icon="terminal"
+# Only the top-level code of each module, no nested functions
+bun build ./index.ts --target=bun --bytecode --bytecode-depth=0 --outdir=./dist
+
+# Top-level code and the functions it declares directly
+bun build ./index.ts --target=bun --bytecode --bytecode-depth=1 --outdir=./dist
+```
+
+A lower depth makes the `.jsc` file smaller. The trade-off is that deeply nested functions are parsed at runtime instead of ahead of time. The same option is available as `bytecodeDepth` in `Bun.build`.
 
 ### Combining with other optimizations
 

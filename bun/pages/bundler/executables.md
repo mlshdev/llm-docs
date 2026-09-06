@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/bundler/executables.mdx](https://bun.com/docs/bundler/executables)
+> Release-pinned source for Bun bun-v1.4.2: [docs/bundler/executables.mdx](https://bun.com/docs/bundler/executables)
 
 Bun's bundler implements a `--compile` flag for generating a standalone binary from a TypeScript or JavaScript file.
 
@@ -41,39 +41,13 @@ To build for Linux x64 (most servers):
 
 ```bash icon="terminal" terminal
 bun build --compile --target=bun-linux-x64 ./index.ts --outfile myapp
-
-# To support CPUs from before 2013, use the baseline version (nehalem)
-bun build --compile --target=bun-linux-x64-baseline ./index.ts --outfile myapp
-
-# To explicitly only support CPUs from 2013 and later, use the modern version (haswell)
-# modern is faster, but baseline is more compatible.
-bun build --compile --target=bun-linux-x64-modern ./index.ts --outfile myapp
 ```
 
 ```ts build.ts icon="/icons/typescript.svg"
-// Standard Linux x64
 await Bun.build({
   entrypoints: ["./index.ts"],
   compile: {
     target: "bun-linux-x64",
-    outfile: "./myapp",
-  },
-});
-
-// Baseline (pre-2013 CPUs)
-await Bun.build({
-  entrypoints: ["./index.ts"],
-  compile: {
-    target: "bun-linux-x64-baseline",
-    outfile: "./myapp",
-  },
-});
-
-// Modern (2013+ CPUs, faster)
-await Bun.build({
-  entrypoints: ["./index.ts"],
-  compile: {
-    target: "bun-linux-x64-modern",
     outfile: "./myapp",
   },
 });
@@ -101,31 +75,15 @@ To build for Windows x64:
 ```bash icon="terminal" terminal
 bun build --compile --target=bun-windows-x64 ./path/to/my/app.ts --outfile myapp
 
-# To support CPUs from before 2013, use the baseline version (nehalem)
-bun build --compile --target=bun-windows-x64-baseline ./path/to/my/app.ts --outfile myapp
-
-# To explicitly only support CPUs from 2013 and later, use the modern version (haswell)
-bun build --compile --target=bun-windows-x64-modern ./path/to/my/app.ts --outfile myapp
-
 # note: if no .exe extension is provided, Bun adds it automatically for Windows executables
 ```
 
 ```ts build.ts icon="/icons/typescript.svg"
-// Standard Windows x64
 await Bun.build({
   entrypoints: ["./path/to/my/app.ts"],
   compile: {
     target: "bun-windows-x64",
     outfile: "./myapp", // .exe added automatically
-  },
-});
-
-// Baseline or modern variants
-await Bun.build({
-  entrypoints: ["./path/to/my/app.ts"],
-  compile: {
-    target: "bun-windows-x64-baseline",
-    outfile: "./myapp",
   },
 });
 ```
@@ -184,23 +142,22 @@ await Bun.build({
 
 The segments of the `--target` value can appear in any order, as long as they're delimited by `-`.
 
-| --target             | Operating System | Architecture | Modern | Baseline | Libc  |
-| -------------------- | ---------------- | ------------ | ------ | -------- | ----- |
-| bun-linux-x64        | Linux            | x64          | ✅      | ✅        | glibc |
-| bun-linux-arm64      | Linux            | arm64        | ✅      | N/A      | glibc |
-| bun-windows-x64      | Windows          | x64          | ✅      | ✅        | -     |
-| bun-windows-arm64    | Windows          | arm64        | ✅      | N/A      | -     |
-| bun-darwin-x64       | macOS            | x64          | ✅      | ✅        | -     |
-| bun-darwin-arm64     | macOS            | arm64        | ✅      | N/A      | -     |
-| bun-linux-x64-musl   | Linux            | x64          | ✅      | ✅        | musl  |
-| bun-linux-arm64-musl | Linux            | arm64        | ✅      | N/A      | musl  |
+| --target             | Operating System | Architecture | Libc  |
+| -------------------- | ---------------- | ------------ | ----- |
+| bun-linux-x64        | Linux            | x64          | glibc |
+| bun-linux-arm64      | Linux            | arm64        | glibc |
+| bun-windows-x64      | Windows          | x64          | -     |
+| bun-windows-arm64    | Windows          | arm64        | -     |
+| bun-darwin-x64       | macOS            | x64          | -     |
+| bun-darwin-arm64     | macOS            | arm64        | -     |
+| bun-linux-x64-musl   | Linux            | x64          | musl  |
+| bun-linux-arm64-musl | Linux            | arm64        | musl  |
 
-> **Warning**
+> **Note**
 >
-> On x64 platforms, Bun uses SIMD optimizations that require a CPU with AVX2 instructions. The `-baseline` build of Bun
-> is for older CPUs without them. The Bun installer detects which version to use, but when cross-compiling you might not
-> know the target CPU. This mostly matters on Windows x64 and Linux x64, rarely on Darwin x64. If you or your users see
-> `"Illegal instruction"` errors, you might need to use the baseline version.
+> On x64, Bun ships a single binary that targets Nehalem (SSE4.2) and selects AVX2/AVX-512 code paths at runtime. The
+> `-baseline` and `-modern` target suffixes are still accepted for backward compatibility and resolve to the same
+> binary; you do not need to pick one based on the destination CPU.
 
 ***
 
@@ -738,6 +695,19 @@ const wasmModule = await WebAssembly.instantiate(wasmBytes);
 const fontData = await file(fontPath).bytes();
 ```
 
+### Embed text as a string
+
+Use the `text` loader when you want the contents of a file as a string. `.txt` files use it by default. For other extensions, add `with { type: "text" }` or pass `--loader .md:text`.
+
+```ts index.ts icon="/icons/typescript.svg"
+import notes from "./notes.txt";
+import readme from "./README.md" with { type: "text" };
+
+console.log(notes); // the contents of notes.txt
+```
+
+In a compiled executable the text is stored once, in the form the JavaScript engine uses for strings (one byte per character for ASCII text, UTF-16 otherwise). The runtime hands the string back without a copy, so a large text import costs its size in the binary and no extra copy on the heap. A text import is a module, not a file: `Bun.embeddedFiles` does not list it. Use `with { type: "file" }` when you need a file path instead.
+
 ### Embed SQLite databases
 
 To embed a SQLite database into the compiled executable, set `type: "sqlite"` in the import attribute and the `embed` attribute to `"true"`.
@@ -1182,24 +1152,23 @@ compile: {
 }
 ```
 
+Without `outfile`, the executable is named after the entrypoint and written to `outdir`, or to the current working directory when there is no `outdir`. This matches `bun build --compile`.
+
 ### Supported targets
 
 ```ts title="Bun.Build.CompileTarget" icon="/icons/typescript.svg"
 type CompileTarget =
   | "bun-darwin-x64"
-  | "bun-darwin-x64-baseline"
   | "bun-darwin-arm64"
   | "bun-linux-x64"
-  | "bun-linux-x64-baseline"
-  | "bun-linux-x64-modern"
   | "bun-linux-arm64"
   | "bun-linux-x64-musl"
   | "bun-linux-x64-baseline-musl"
   | "bun-linux-arm64-musl"
   | "bun-windows-x64"
-  | "bun-windows-x64-baseline"
-  | "bun-windows-x64-modern"
   | "bun-windows-arm64";
+// The "-baseline" and "-modern" suffixes are accepted for backward
+// compatibility and resolve to the same x64 binary.
 ```
 
 ### Complete example

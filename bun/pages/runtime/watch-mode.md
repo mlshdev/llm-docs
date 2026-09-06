@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/runtime/watch-mode.mdx](https://bun.com/docs/runtime/watch-mode)
+> Release-pinned source for Bun bun-v1.4.2: [docs/runtime/watch-mode.mdx](https://bun.com/docs/runtime/watch-mode)
 
 # Watch Mode
 

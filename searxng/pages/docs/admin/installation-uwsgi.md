@@ -1,4 +1,4 @@
-> Commit-pinned source for SearXNG master: [docs/admin/installation-uwsgi.rst](https://github.com/searxng/searxng/blob/a1144dda3e97668c9d445022b7019c224cd4bb1e/docs/admin/installation-uwsgi.rst)
+> Commit-pinned source for SearXNG master: [docs/admin/installation-uwsgi.rst](https://github.com/searxng/searxng/blob/22056605a6e0ed41a0aa91a2bf300a361fd16b92/docs/admin/installation-uwsgi.rst)
 
 .. \_searxng uwsgi:
 

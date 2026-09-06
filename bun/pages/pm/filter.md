@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/pm/filter.mdx](https://bun.com/docs/pm/filter)
+> Release-pinned source for Bun bun-v1.4.2: [docs/pm/filter.mdx](https://bun.com/docs/pm/filter)
 
 The `--filter` (or `-F`) flag selects packages in a monorepo by pattern. A pattern is a package name glob, a `./path` glob, a `{dir}` directory selector, or a `...` dependency relation.
 

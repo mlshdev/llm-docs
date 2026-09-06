@@ -1,10 +1,10 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/manage/console/default-settings.mdx](https://zitadel.com/docs/guides/manage/console/default-settings)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/guides/manage/console/default-settings.mdx](https://zitadel.com/docs/guides/manage/console/default-settings)
 
 Default settings work as default or fallback settings for your organizational settings. Most of the time you only have to set default settings for the cases where you don't need specific behavior in the organizations themselves or you only have one organization.
 
 To access default settings, use the settings page at `{instanceDomain}/ui/console/settings` or click at the default settings button on the **top-right** of the page and then navigate to settings in the navigation.
 
-![Instance Button](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/console/instancebutton.png)
+![Instance Button](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/guides/console/instancebutton.png)
 
 When you configure your default settings, you can set the following:
 
@@ -31,7 +31,7 @@ Feature Settings let you try out new features before they become generally avail
 The Page lets you choose between the settings `Enabled`, `Disabled` or `Inherit`.
 If a feature is set to `Inherit`, it becomes available once its enabled per default.
 
-![Feature page](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/console_feature_settings.png)
+![Feature page](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/console_feature_settings.png)
 
 Features can range from UI changes in the management console, to new APIs or performance improvements.
 
@@ -43,7 +43,7 @@ Features can range from UI changes in the management console, to new APIs or per
 
 We recommend setting your Branding and SMTP settings initially as it will comfort your customers having a familiar UI for login and receiving notifications from your domain and mail addresses.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/console_private_labeling.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/console_private_labeling.png)
 
 In the Branding settings, you can upload you Logo for the login interface, set your own colors for buttons, background, links, and choose between multiple behaviors. You don't need to be an expert as those settings can all be set without any knowledge of CSS.
 
@@ -68,7 +68,7 @@ At the moment Twilio is available as SMS provider.
 
 You can configure on which changes the users will be notified. The text of the message can be changed in the [Message texts](#message-texts)
 
-![Notification](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/console/notification.png)
+![Notification](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/guides/console/notification.png)
 
 ### SMTP
 
@@ -98,22 +98,22 @@ To configure your custom SMTP please fill the following fields:
 - User
 - SMTP Password
 
-![SMTP](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/console/smtp.png)
+![SMTP](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/guides/console/smtp.png)
 
 While you create/update a SMTP provider you have the chance to test your SMTP settings
 
-![SMTP](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/console/smtp_test.png)
+![SMTP](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/guides/console/smtp_test.png)
 
 In the SMTP providers table you can hover on a provider row to show buttons that allow you to activate/deactivate a provider, test your smtp settings and delete a provider
 
-![SMTP](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/console/smtp_table.png)
+![SMTP](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/guides/console/smtp_table.png)
 
 ### SMS
 
 No default provider is configured to send some SMS to your users. If you like to validate the phone numbers of your users make sure to add your twilio settings by adding your Sid, Token and either a Sender Number or a Verification Service Sid.
 Setting a Verification Service Sid allows using the Twilio Verify Service instead of the Messages Service for verification.
 
-![Twilio](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/console/twilio.png)
+![Twilio](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/guides/console/twilio.png)
 
 ## Login Behavior and Security
 
@@ -130,7 +130,7 @@ The Login Policy defines how the login process should look like and which authen
 | Disable login with email address | By default users can additionally [login with the email attribute](https://zitadel.com/docs/guides/solution-scenarios/configurations#use-an-email-address-as-username) of their user. Check this option to disable.                                                                                                                                                                                                                                      |
 | Disable login with phone number  | By default users can additionally [login with the phonenumber attribute](https://zitadel.com/docs/guides/solution-scenarios/configurations#use-a-phone-number-as-username) of their user. Check this option to disable.                                                                                                                                                                                                                                  |
 
-![Login Behavior and Access](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/console/loginpolicy.png)
+![Login Behavior and Access](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/guides/console/loginpolicy.png)
 
 ### Default Redirect URI
 
@@ -148,7 +148,7 @@ We recommend setting your own default redirect URI, if you do not want end users
 
 Change default redirect url of instance: `https://${CUSTOM_DOMAIN}/ui/console/instance?id=login`
 
-![Login Policy Advanced Setting: Default Redirect URL](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/solution-scenarios/console-default-redirect.png)
+![Login Policy Advanced Setting: Default Redirect URL](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/guides/solution-scenarios/console-default-redirect.png)
 
 ### Passkeys
 
@@ -209,7 +209,7 @@ The following properties can be set:
 - Has Number
 - Has Symbol (Everything that is not a number or letter)
 
-![Password Complexity](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/console/complexity.png)
+![Password Complexity](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/guides/console/complexity.png)
 
 ## Password Expiry
 
@@ -223,7 +223,7 @@ The following properties can be set:
 - Maximum validity in days
 - Expiration warning after days
 
-![Password Expiry Policy](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/console/expiry.png)
+![Password Expiry Policy](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/guides/console/expiry.png)
 
 ## Lockout
 
@@ -236,7 +236,7 @@ The following settings are available:
 
 If an account is locked, the administrator has to unlock it in the ZITADEL Management Console
 
-![Lockout](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/console/lockout.png)
+![Lockout](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/guides/console/lockout.png)
 
 ## Domain settings
 
@@ -279,11 +279,11 @@ When focused on an input field you can see the language attribute, which can the
 Example:
 `https://demo.com/tos-{{.Lang}}`
 
-![External Links](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/console/external_links_1.png)
+![External Links](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/guides/console/external_links_1.png)
 
 Also you can set the link associated to the Documentation button in the console. Set an empty text if you don't want to show a Documentation button in your console. If you need a custom button to be shown in the management console you can set the button text and the link associated to the button (if the button text is button no text will be shown).
 
-![Custom button](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/console/external_links_2.png)
+![Custom button](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/guides/console/external_links_2.png)
 
 ## Message texts
 
@@ -300,13 +300,13 @@ These are the texts for your notification mails. Available for change are:
 
 You can set the locale of the translations on the right.
 
-![Message texts](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/console/messagetexts.png)
+![Message texts](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/guides/console/messagetexts.png)
 
 ## Login interface texts
 
 These are the texts for the login. Just like for message texts, you can select the locale on the right.
 
-![Login texts](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/console/logintexts.png)
+![Login texts](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/guides/console/logintexts.png)
 
 ## Languages
 
@@ -314,7 +314,7 @@ Drag allowed languages to the left column. Languages in the right column are not
 
 Choose a default language which acts as a fallback, if no language header is set.
 
-![Languages](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/console_languages.png)
+![Languages](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/console_languages.png)
 
 ## OIDC token lifetimes and expiration
 
@@ -326,7 +326,7 @@ You can set the following times:
 - Refresh Token Expiration
 - Refresh Token Idle Expiration
 
-![OIDC Token Lifetimes](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/console/oidcsettings.png)
+![OIDC Token Lifetimes](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/guides/console/oidcsettings.png)
 
 ## Secret generator
 
@@ -344,6 +344,6 @@ The following secrets can be specified:
 - One Time Password (OTP) - Email
 - Invite Code
 
-![Secret generator](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/console/secretappearance.png)
+![Secret generator](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/guides/console/secretappearance.png)
 
 If your done with your default settings, you can proceed setting up your organizations. Again, make sure you get an understanding on how your project is structured and then continue.

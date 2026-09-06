@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/websocket/simple.mdx](https://bun.com/docs/guides/websocket/simple)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/websocket/simple.mdx](https://bun.com/docs/guides/websocket/simple)
 
 # Build a simple WebSocket server
 

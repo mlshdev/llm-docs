@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/integrate/zitadel-apis/example-zitadel-api-with-go.mdx](https://zitadel.com/docs/guides/integrate/zitadel-apis/example-zitadel-api-with-go)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/guides/integrate/zitadel-apis/example-zitadel-api-with-go.mdx](https://zitadel.com/docs/guides/integrate/zitadel-apis/example-zitadel-api-with-go)
 
 This integration guide shows you how to integrate **ZITADEL** into your Go application.
 It demonstrates how to fetch some data from the ZITADEL management API.

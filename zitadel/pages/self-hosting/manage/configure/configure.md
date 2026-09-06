@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/self-hosting/manage/configure/configure.mdx](https://zitadel.com/docs/self-hosting/manage/configure/configure)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/self-hosting/manage/configure/configure.mdx](https://zitadel.com/docs/self-hosting/manage/configure/configure)
 
 This guide assumes you are familiar with [running ZITADEL using the least amount of configuration possible](https://zitadel.com/docs/self-hosting/deploy/overview).
 

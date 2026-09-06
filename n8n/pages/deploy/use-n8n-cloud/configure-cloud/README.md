@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/use-n8n-cloud/configure-cloud/README.md](https://github.com/n8n-io/n8n-docs/blob/6f4b48e69e3ab9acbf023f18020c40c125c16d45/docs/deploy/use-n8n-cloud/configure-cloud/README.md)
+> Commit-pinned source for n8n main: [docs/deploy/use-n8n-cloud/configure-cloud/README.md](https://github.com/n8n-io/n8n-docs/blob/3317373ce39c3ce2406c8e3d99bb2da7f7180321/docs/deploy/use-n8n-cloud/configure-cloud/README.md)
 
 # Configure Cloud <a id="configure-cloud"></a>
 

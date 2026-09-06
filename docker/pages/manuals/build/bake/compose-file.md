@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/build/bake/compose-file.md](https://github.com/docker/docs/blob/b744dd31039efeac59c11e017ac6ab62d9077339/content/manuals/build/bake/compose-file.md)
+> Commit-pinned source for Docker main: [content/manuals/build/bake/compose-file.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/build/bake/compose-file.md)
 
 Bake supports the [Compose file format](https://docs.docker.com/reference/compose-file/)
 to parse a Compose file and translate each service to a [target](https://docs.docker.com/build/bake/reference/#target).

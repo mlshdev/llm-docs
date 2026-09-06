@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/dhi/migration/examples/python.md](https://github.com/docker/docs/blob/b744dd31039efeac59c11e017ac6ab62d9077339/content/manuals/dhi/migration/examples/python.md)
+> Commit-pinned source for Docker main: [content/manuals/dhi/migration/examples/python.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/dhi/migration/examples/python.md)
 
 This example shows how to migrate a Python application to Docker Hardened Images.
 

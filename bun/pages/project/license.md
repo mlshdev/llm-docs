@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/project/license.mdx](https://bun.com/docs/project/license)
+> Release-pinned source for Bun bun-v1.4.2: [docs/project/license.mdx](https://bun.com/docs/project/license)
 
 # License
 

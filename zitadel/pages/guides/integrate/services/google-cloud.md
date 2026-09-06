@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/integrate/services/google-cloud.mdx](https://zitadel.com/docs/guides/integrate/services/google-cloud)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/guides/integrate/services/google-cloud.mdx](https://zitadel.com/docs/guides/integrate/services/google-cloud)
 
 This guide shows how to login users and assign roles with [Workforce Identity Federation to Google Cloud](https://cloud.google.com/iam/docs/workforce-identity-federation).
 
@@ -45,11 +45,11 @@ Create a new application and click on "I'm a pro. Skip this wizard."
 >
 > You need to add the redirect URL and configure token settings after creating the application.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/integrate/services/google-cloud-create-app.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/guides/integrate/services/google-cloud-create-app.png)
 
 ## **ZITADEL**: Redirect url
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/integrate/services/google-cloud-redirect-url.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/guides/integrate/services/google-cloud-redirect-url.png)
 
 After creating, go to the application settings "Redirect settings" and add the redirect url from Googles configuration guide.
 It looks something like `https://auth.cloud.google/signin-callback/locations/global/workforcePools/WORKFORCE_POOL_ID/providers/WORKFORCE_PROVIDER_ID`.
@@ -62,7 +62,7 @@ Save the settings.
 
 ## **ZITADEL**: Token settings
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/integrate/services/google-cloud-token-settings.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/guides/integrate/services/google-cloud-token-settings.png)
 
 After creating, go to the application settings "Token settings" and configure as follows:
 
@@ -106,7 +106,7 @@ function googleGroups(ctx, api) {
 
 ```
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/integrate/services/google-cloud-action-code.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/guides/integrate/services/google-cloud-action-code.png)
 
 > **Warning**
 >
@@ -118,7 +118,7 @@ And add the the Action Script to the following Flow and Trigger:
 - **Trigger Type**: Pre access token creation
 - **Actions**: googleGroups
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/integrate/services/google-cloud-action-flow.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/guides/integrate/services/google-cloud-action-flow.png)
 
 ## **Google Cloud**: Create a WIP provider
 

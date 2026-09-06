@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/ecosystem/react.mdx](https://bun.com/docs/guides/ecosystem/react)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/ecosystem/react.mdx](https://bun.com/docs/guides/ecosystem/react)
 
 Bun has built-in support for `.jsx` and `.tsx` files. React works with Bun.
 

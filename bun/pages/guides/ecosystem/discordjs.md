@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/ecosystem/discordjs.mdx](https://bun.com/docs/guides/ecosystem/discordjs)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/ecosystem/discordjs.mdx](https://bun.com/docs/guides/ecosystem/discordjs)
 
 # Create a Discord bot
 

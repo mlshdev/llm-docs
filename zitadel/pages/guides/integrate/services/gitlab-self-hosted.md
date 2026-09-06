@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/integrate/services/gitlab-self-hosted.mdx](https://zitadel.com/docs/guides/integrate/services/gitlab-self-hosted)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/guides/integrate/services/gitlab-self-hosted.mdx](https://zitadel.com/docs/guides/integrate/services/gitlab-self-hosted)
 
 This guide shows how to enable login with ZITADEL on self-hosted Gitlab instances.
 

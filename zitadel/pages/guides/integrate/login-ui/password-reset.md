@@ -1,10 +1,10 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/guides/integrate/login-ui/password-reset.mdx](https://zitadel.com/docs/guides/integrate/login-ui/password-reset)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/guides/integrate/login-ui/password-reset.mdx](https://zitadel.com/docs/guides/integrate/login-ui/password-reset)
 
 When a user is on the password screen and has forgotten the password you will probably want them to be able to reset it by themselves.
 
 ## Flow
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/35aa213863395a73ee18dbfeae9a9ef41d6fff77/apps/docs/public/img/guides/login-ui/password-reset-flow.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/public/img/guides/login-ui/password-reset-flow.png)
 
 ## Request Password Reset
 

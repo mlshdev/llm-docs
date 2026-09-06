@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/ecosystem/tanstack-start.mdx](https://bun.com/docs/guides/ecosystem/tanstack-start)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/ecosystem/tanstack-start.mdx](https://bun.com/docs/guides/ecosystem/tanstack-start)
 
 # Use TanStack Start with Bun
 

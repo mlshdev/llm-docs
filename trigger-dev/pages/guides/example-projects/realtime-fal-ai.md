@@ -1,0 +1,36 @@
+> Release-pinned source for Trigger.dev v4.5.16: [docs/guides/example-projects/realtime-fal-ai.mdx](https://trigger.dev/docs/guides/example-projects/realtime-fal-ai)
+
+# Image generation with Fal.ai and Trigger.dev Realtime
+
+This example Next.js project generates an image from a prompt using Fal.ai and shows the progress of the task on the frontend using Trigger.dev Realtime.
+
+## Overview
+
+This full stack Next.js project showcases the following:
+
+- A Trigger.dev task which [generates an image from a prompt using Fal.ai](https://github.com/triggerdotdev/examples/blob/main/realtime-fal-ai-image-generation/src/trigger/realtime-generate-image.ts)
+- When a [form is submitted](https://github.com/triggerdotdev/examples/blob/main/realtime-fal-ai-image-generation/src/app/page.tsx) in the UI, triggering the task using a [server action](https://github.com/triggerdotdev/examples/blob/main/realtime-fal-ai-image-generation/src/app/actions/process-image.ts)
+- Showing the [progress of the task](https://github.com/triggerdotdev/examples/blob/main/realtime-fal-ai-image-generation/src/app/processing/%5Bid%5D/ProcessingContent.tsx) on the frontend using Trigger.dev Realtime. This also includes error handling and a fallback UI
+- Once the task is completed, showing the generated image on the frontend next to the original image
+
+## GitHub repo
+
+- [View the project on GitHub](https://github.com/triggerdotdev/examples/tree/main/realtime-fal-ai-image-generation)
+
+  Click here to view the full code for this project in our examples repository on GitHub. You can
+  fork it and use it as a starting point for your own project.
+
+## Walkthrough video
+
+This video walks through the process of creating this task in a Next.js project.
+
+[Open the embedded media](https://www.youtube.com/embed/BWZqYfUaigg?si=XpqVUEIf1j4bsYZ4)
+
+## Learn more about Trigger.dev Realtime
+
+To learn more, take a look at the following resources:
+
+- [Trigger.dev Realtime](https://trigger.dev/docs/realtime) - learn more about how to subscribe to runs and get real-time updates
+- [Realtime streaming](https://trigger.dev/docs/realtime/react-hooks/streams) - learn more about streaming data from your tasks
+- [Batch Triggering](https://trigger.dev/docs/triggering#tasks-batchtrigger) - learn more about how to trigger tasks in batches
+- [React hooks](https://trigger.dev/docs/realtime/react-hooks) - learn more about using React hooks to interact with the Trigger.dev API

@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/project/roadmap.mdx](https://bun.com/docs/project/roadmap)
+> Release-pinned source for Bun bun-v1.4.2: [docs/project/roadmap.mdx](https://bun.com/docs/project/roadmap)
 
 # Roadmap
 

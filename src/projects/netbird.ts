@@ -9,12 +9,8 @@ import {
   rewriteMarkdownLinks,
 } from "../markdown.ts";
 import { convertMdx } from "../mdx.ts";
-import type {
-  Document,
-  LockedSource,
-  ProjectBuild,
-  SourceProject,
-} from "../types.ts";
+import { DocumentCollector } from "../quarantine.ts";
+import type { LockedSource, ProjectBuild, SourceProject } from "../types.ts";
 
 export async function buildNetbird(
   project: SourceProject,
@@ -32,39 +28,42 @@ export async function buildNetbird(
     lock.sourceCommit,
     async (root, archiveFiles) => {
       const files = await listFiles(root);
-      const documents: Document[] = [];
+      const documents = new DocumentCollector(project.id);
       for (const sourcePath of files.filter(
         (file) =>
           file === "agent-network/README.md" ||
           /^docs\/agent-networks\/.*\.md$/.test(file),
       )) {
-        const raw = await readUtf8(root, sourcePath);
-        const frontmatter = parseFrontmatter(raw);
-        const body = rewriteMarkdownLinks(cleanMarkdown(raw), (url, kind) =>
-          resolveRepositoryLink(
-            url,
-            kind,
+        await documents.collect(sourcePath, async () => {
+          const raw = await readUtf8(root, sourcePath);
+          const frontmatter = parseFrontmatter(raw);
+          const body = rewriteMarkdownLinks(cleanMarkdown(raw), (url, kind) =>
+            resolveRepositoryLink(
+              url,
+              kind,
+              sourcePath,
+              project.repository,
+              lock.sourceCommit,
+              archiveFiles,
+            ),
+          );
+          return {
             sourcePath,
-            project.repository,
-            lock.sourceCommit,
-            archiveFiles,
-          ),
-        );
-        documents.push({
-          sourcePath,
-          outputPath: `pages/release/${sourcePath}`,
-          title: documentTitle(body, frontmatter.attributes, sourcePath),
-          body,
-          canonicalUrl: githubBlobUrl(
-            project.repository,
-            lock.sourceCommit,
-            sourcePath,
-          ),
-          section: "Release technical architecture",
+            outputPath: `pages/release/${sourcePath}`,
+            title: documentTitle(body, frontmatter.attributes, sourcePath),
+            body,
+            canonicalUrl: githubBlobUrl(
+              project.repository,
+              lock.sourceCommit,
+              sourcePath,
+            ),
+            section: "Release technical architecture",
+          };
         });
       }
       return {
-        documents,
+        documents: documents.documents,
+        quarantined: documents.quarantined,
         licenseText: await readUtf8(root, "LICENSE"),
       };
     },
@@ -79,36 +78,41 @@ export async function buildNetbird(
     docsCommit,
     async (root, archiveFiles) => {
       const files = await listFiles(root);
-      const documents: Document[] = [];
+      const documents = new DocumentCollector(project.id);
       for (const sourcePath of files.filter(
         (file) =>
           /^src\/pages\/.*\.mdx$/.test(file) &&
           !/^src\/pages\/(?:_app|_document|404)\.mdx$/.test(file),
       )) {
-        const converted = convertMdx(
-          await readUtf8(root, sourcePath),
-          sourcePath,
-        );
-        const body = rewriteMarkdownLinks(converted.body, (url, kind) =>
-          resolveNetbirdPublicLink(
-            url,
-            kind,
+        await documents.collect(sourcePath, async () => {
+          const converted = convertMdx(
+            await readUtf8(root, sourcePath),
             sourcePath,
-            docsRepository,
-            docsCommit,
-            archiveFiles,
-          ),
-        );
-        documents.push({
-          sourcePath: `${docsRepository}@${docsCommit}:${sourcePath}`,
-          outputPath: netbirdOutputPath(sourcePath),
-          title: converted.title ?? documentTitle(body, {}, sourcePath),
-          body,
-          canonicalUrl: githubBlobUrl(docsRepository, docsCommit, sourcePath),
-          section: netbirdSection(sourcePath),
+          );
+          const body = rewriteMarkdownLinks(converted.body, (url, kind) =>
+            resolveNetbirdPublicLink(
+              url,
+              kind,
+              sourcePath,
+              docsRepository,
+              docsCommit,
+              archiveFiles,
+            ),
+          );
+          return {
+            sourcePath: `${docsRepository}@${docsCommit}:${sourcePath}`,
+            outputPath: netbirdOutputPath(sourcePath),
+            title: converted.title ?? documentTitle(body, {}, sourcePath),
+            body,
+            canonicalUrl: githubBlobUrl(docsRepository, docsCommit, sourcePath),
+            section: netbirdSection(sourcePath),
+          };
         });
       }
-      return documents;
+      return {
+        documents: documents.documents,
+        quarantined: documents.quarantined,
+      };
     },
     (sourcePath) => /^src\/pages\/.*\.mdx$/.test(sourcePath),
   );
@@ -116,7 +120,8 @@ export async function buildNetbird(
   return {
     project,
     lock,
-    documents: [...publicDocuments, ...product.documents],
+    documents: [...publicDocuments.documents, ...product.documents],
+    quarantined: [...publicDocuments.quarantined, ...product.quarantined],
     notes: [
       `Public docs are pinned to netbirdio/docs commit ${docsCommit}; its commit message matches ${lock.tag} and it changes generated API resource pages.`,
       "NetBird does not tag its public docs repository; non-API pages are an evergreen snapshot at that exact commit, not a formally versioned manual.",

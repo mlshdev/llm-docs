@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/runtime/glob.mdx](https://bun.com/docs/runtime/glob)
+> Release-pinned source for Bun bun-v1.4.2: [docs/runtime/glob.mdx](https://bun.com/docs/runtime/glob)
 
 # Glob
 

@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/bundler/plugins.mdx](https://bun.com/docs/bundler/plugins)
+> Release-pinned source for Bun bun-v1.4.2: [docs/bundler/plugins.mdx](https://bun.com/docs/bundler/plugins)
 
 # Plugins
 

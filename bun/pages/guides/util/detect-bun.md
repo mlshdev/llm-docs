@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/util/detect-bun.mdx](https://bun.com/docs/guides/util/detect-bun)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/util/detect-bun.mdx](https://bun.com/docs/guides/util/detect-bun)
 
 # Detect when code is executed with Bun
 

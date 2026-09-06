@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/runtime/import-toml.mdx](https://bun.com/docs/guides/runtime/import-toml)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/runtime/import-toml.mdx](https://bun.com/docs/guides/runtime/import-toml)
 
 # Import a TOML file
 

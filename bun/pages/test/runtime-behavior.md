@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/test/runtime-behavior.mdx](https://bun.com/docs/test/runtime-behavior)
+> Release-pinned source for Bun bun-v1.4.2: [docs/test/runtime-behavior.mdx](https://bun.com/docs/test/runtime-behavior)
 
 `bun test` is deeply integrated with Bun's runtime. This integration is part of what makes `bun test` fast.
 

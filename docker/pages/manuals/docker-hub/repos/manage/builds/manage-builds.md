@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/docker-hub/repos/manage/builds/manage-builds.md](https://github.com/docker/docs/blob/b744dd31039efeac59c11e017ac6ab62d9077339/content/manuals/docker-hub/repos/manage/builds/manage-builds.md)
+> Commit-pinned source for Docker main: [content/manuals/docker-hub/repos/manage/builds/manage-builds.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/docker-hub/repos/manage/builds/manage-builds.md)
 
 # Manage autobuilds
 
@@ -18,7 +18,7 @@ report link on the **General** tab and on the **Builds** tab. You can also selec
 **Cancel** on the **Build report** page, or from the **Timeline** tab's logs
 display for the build.
 
-![List of builds showing the cancel icon](https://raw.githubusercontent.com/docker/docs/b744dd31039efeac59c11e017ac6ab62d9077339/content/manuals/docker-hub/repos/manage/builds/images/build-cancelicon.png)
+![List of builds showing the cancel icon](https://raw.githubusercontent.com/docker/docs/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/docker-hub/repos/manage/builds/images/build-cancelicon.png)
 
 ## Check your active builds
 
@@ -28,7 +28,7 @@ bar chart of the build queue times and durations. Both views display the
 pending, in progress, successful, and failed builds for any tag of the
 repository.
 
-![Active builds](https://raw.githubusercontent.com/docker/docs/b744dd31039efeac59c11e017ac6ab62d9077339/content/manuals/docker-hub/repos/manage/builds/images/index-active.png)
+![Active builds](https://raw.githubusercontent.com/docker/docs/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/docker-hub/repos/manage/builds/images/index-active.png)
 
 From either location, you can select a build job to view its build report. The
 build report shows information about the build job. This includes the source
@@ -38,7 +38,7 @@ repository and branch, or tag, the build logs, the build duration, creation time
 >
 > You can now view the progress of your builds every 30 seconds when you refresh the **Builds** page. With the in-progress build logs, you can debug your builds before they're finished.
 
-![Build report](https://raw.githubusercontent.com/docker/docs/b744dd31039efeac59c11e017ac6ab62d9077339/content/manuals/docker-hub/repos/manage/builds/images/index-report.png)
+![Build report](https://raw.githubusercontent.com/docker/docs/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/docker-hub/repos/manage/builds/images/index-report.png)
 
 ## Disable an automated build
 

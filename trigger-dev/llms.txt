@@ -1,0 +1,438 @@
+# Trigger.dev v4.5.16
+
+> Documentation generated from the latest stable release of [triggerdotdev/trigger.dev](https://github.com/triggerdotdev/trigger.dev) and pinned to immutable source commit `ee34a4b13710742ae26d94831547fa2b6cddc9bd`.
+
+- [Full documentation](llms-full.txt): Complete normalized corpus for Trigger.dev v4.5.16.
+- [Provenance manifest](manifest.json): Release, commit, document count, and generation notes.
+- Pages follow the navigation declared in docs/docs.json at the immutable release tag; snippets are inlined into the pages that import them rather than published separately.
+- API reference pages are rendered from the OpenAPI specification the page names in its `openapi` frontmatter, since the upstream page carries no prose of its own.
+- Static MDX cards, tabs, accordions, steps, callouts, and parameter fields are normalized to Markdown without executing JavaScript.
+- Published page links resolve to https://trigger.dev/docs; source assets point at the immutable release commit.
+- Quarantined sources (3): upstream pages using constructs this generator cannot convert yet are omitted and listed in `manifest.json`.
+
+## Getting started
+
+- [Welcome to the Trigger.dev docs](pages/introduction.md): Source `docs/introduction.mdx`.
+- [Quick start: add Trigger.dev to your project](pages/quick-start.md): Source `docs/quick-start.mdx`.
+- [Manual setup](pages/manual-setup.md): Source `docs/manual-setup.mdx`.
+- [Video walkthrough](pages/video-walkthrough.md): Source `docs/video-walkthrough.mdx`.
+- [How Trigger.dev works](pages/how-it-works.md): Source `docs/how-it-works.mdx`.
+- [Migrating from v3](pages/migrating-from-v3.md): Source `docs/migrating-from-v3.mdx`.
+
+## Fundamentals
+
+- [Tasks: Overview](pages/tasks/overview.md): Source `docs/tasks/overview.mdx`.
+- [schemaTask](pages/tasks/schemaTask.md): Source `docs/tasks/schemaTask.mdx`.
+- [Scheduled tasks (cron)](pages/tasks/scheduled.md): Source `docs/tasks/scheduled.mdx`.
+- [Triggering](pages/triggering.md): Source `docs/triggering.mdx`.
+- [Runs](pages/runs.md): Source `docs/runs.mdx`.
+- [API keys](pages/apikeys.md): Source `docs/apikeys.mdx`.
+
+## Building with AI
+
+- [Building with AI: overview](pages/building-with-ai.md): Source `docs/building-with-ai.mdx`.
+- [MCP Introduction](pages/mcp-introduction.md): Source `docs/mcp-introduction.mdx`.
+- [MCP Tools](pages/mcp-tools.md): Source `docs/mcp-tools.mdx`.
+- [Skills](pages/skills.md): Source `docs/skills.mdx`.
+- [Agent rules](pages/mcp-agent-rules.md): Source `docs/mcp-agent-rules.mdx`.
+
+## Writing tasks
+
+- [Writing tasks: Overview](pages/writing-tasks-introduction.md): Source `docs/writing-tasks-introduction.mdx`.
+- [Logging, tracing & metrics](pages/logging.md): Source `docs/logging.mdx`.
+- [Errors & Retrying](pages/errors-retrying.md): Source `docs/errors-retrying.mdx`.
+- [Wait: Overview](pages/wait.md): Source `docs/wait.mdx`.
+- [Wait for](pages/wait-for.md): Source `docs/wait-for.mdx`.
+- [Wait until](pages/wait-until.md): Source `docs/wait-until.mdx`.
+- [Wait for token](pages/wait-for-token.md): Source `docs/wait-for-token.mdx`.
+- [Concurrency & Queues](pages/queue-concurrency.md): Source `docs/queue-concurrency.mdx`.
+- [Versioning](pages/versioning.md): Source `docs/versioning.mdx`.
+- [Machines](pages/machines.md): Source `docs/machines.mdx`.
+- [Idempotency](pages/idempotency.md): Source `docs/idempotency.mdx`.
+- [Max duration](pages/runs/max-duration.md): Source `docs/runs/max-duration.mdx`.
+- [Heartbeats](pages/runs/heartbeats.md): Source `docs/runs/heartbeats.mdx`.
+- [Tags](pages/tags.md): Source `docs/tags.mdx`.
+- [Run metadata](pages/runs/metadata.md): Source `docs/runs/metadata.mdx`.
+- [Streaming data from tasks](pages/tasks/streams.md): Source `docs/tasks/streams.mdx`.
+- [Usage](pages/run-usage.md): Source `docs/run-usage.mdx`.
+- [Context](pages/context.md): Source `docs/context.mdx`.
+- [Priority](pages/runs/priority.md): Source `docs/runs/priority.mdx`.
+- [Hidden tasks](pages/hidden-tasks.md): Source `docs/hidden-tasks.mdx`.
+- [Bulk actions with the SDK](pages/runs/bulk-actions.md): Source `docs/runs/bulk-actions.mdx`.
+
+## Agents
+
+- [AI Agents](pages/ai-chat/overview.md): Source `docs/ai-chat/overview.mdx`.
+- [Quick Start](pages/ai-chat/quick-start.md): Source `docs/ai-chat/quick-start.mdx`.
+- [Migrate from an AI SDK route handler](pages/ai-chat/migrating-from-a-route-handler.md): Source `docs/ai-chat/migrating-from-a-route-handler.mdx`.
+- [Anatomy of an agent](pages/ai-chat/anatomy.md): Source `docs/ai-chat/anatomy.mdx`.
+- [Backend](pages/ai-chat/backend.md): Source `docs/ai-chat/backend.mdx`.
+- [Lifecycle hooks](pages/ai-chat/lifecycle-hooks.md): Source `docs/ai-chat/lifecycle-hooks.mdx`.
+- [Tools](pages/ai-chat/tools.md): Source `docs/ai-chat/tools.mdx`.
+- [Frontend](pages/ai-chat/frontend.md): Source `docs/ai-chat/frontend.mdx`.
+- [Server-Side Chat](pages/ai-chat/server-chat.md): Source `docs/ai-chat/server-chat.mdx`.
+- [Sessions](pages/ai-chat/sessions.md): Source `docs/ai-chat/sessions.mdx`.
+- [Side channels](pages/ai-chat/side-channels.md): Source `docs/ai-chat/side-channels.mdx`.
+- [chat.local](pages/ai-chat/chat-local.md): Source `docs/ai-chat/chat-local.mdx`.
+- [Types](pages/ai-chat/types.md): Source `docs/ai-chat/types.mdx`.
+- [Custom agents](pages/ai-chat/custom-agents.md): Source `docs/ai-chat/custom-agents.mdx`.
+- [How the AI Agents SDK works](pages/ai-chat/how-it-works.md): Source `docs/ai-chat/how-it-works.mdx`.
+- [Prompts](pages/ai/prompts.md): Source `docs/ai/prompts.mdx`.
+- [LLM observability](pages/ai/observability.md): Source `docs/ai/observability.mdx`.
+- [Fast starts](pages/ai-chat/fast-starts.md): Source `docs/ai-chat/fast-starts.mdx`.
+- [Compaction](pages/ai-chat/compaction.md): Source `docs/ai-chat/compaction.mdx`.
+- [Prompt caching](pages/ai-chat/prompt-caching.md): Source `docs/ai-chat/prompt-caching.mdx`.
+- [Pending Messages](pages/ai-chat/pending-messages.md): Source `docs/ai-chat/pending-messages.mdx`.
+- [Background injection](pages/ai-chat/background-injection.md): Source `docs/ai-chat/background-injection.mdx`.
+- [Actions](pages/ai-chat/actions.md): Source `docs/ai-chat/actions.mdx`.
+- [Error handling](pages/ai-chat/error-handling.md): Source `docs/ai-chat/error-handling.mdx`.
+- [Sub-Agents](pages/ai-chat/patterns/sub-agents.md): Source `docs/ai-chat/patterns/sub-agents.mdx`.
+- [Version upgrades](pages/ai-chat/patterns/version-upgrades.md): Source `docs/ai-chat/patterns/version-upgrades.mdx`.
+- [Database persistence for chat](pages/ai-chat/patterns/database-persistence.md): Source `docs/ai-chat/patterns/database-persistence.mdx`.
+- [Persistence and replay](pages/ai-chat/patterns/persistence-and-replay.md): Source `docs/ai-chat/patterns/persistence-and-replay.mdx`.
+- [Branching conversations](pages/ai-chat/patterns/branching-conversations.md): Source `docs/ai-chat/patterns/branching-conversations.mdx`.
+- [Code execution sandbox](pages/ai-chat/patterns/code-sandbox.md): Source `docs/ai-chat/patterns/code-sandbox.mdx`.
+- [Human-in-the-loop](pages/ai-chat/patterns/human-in-the-loop.md): Source `docs/ai-chat/patterns/human-in-the-loop.mdx`.
+- [Tool result auditing](pages/ai-chat/patterns/tool-result-auditing.md): Source `docs/ai-chat/patterns/tool-result-auditing.mdx`.
+- [Large payloads in chat.agent](pages/ai-chat/patterns/large-payloads.md): Source `docs/ai-chat/patterns/large-payloads.mdx`.
+- [Agent Skills](pages/ai-chat/patterns/skills.md): Source `docs/ai-chat/patterns/skills.mdx`.
+- [OOM resilience](pages/ai-chat/patterns/oom-resilience.md): Source `docs/ai-chat/patterns/oom-resilience.mdx`.
+- [Recovery boot](pages/ai-chat/patterns/recovery-boot.md): Source `docs/ai-chat/patterns/recovery-boot.mdx`.
+- [Trusted edge signals](pages/ai-chat/patterns/trusted-edge-signals.md): Source `docs/ai-chat/patterns/trusted-edge-signals.mdx`.
+- [API Reference](pages/ai-chat/reference.md): Source `docs/ai-chat/reference.mdx`.
+- [Client Protocol](pages/ai-chat/client-protocol.md): Source `docs/ai-chat/client-protocol.mdx`.
+- [Testing](pages/ai-chat/testing.md): Source `docs/ai-chat/testing.mdx`.
+- [MCP Server](pages/ai-chat/mcp.md): Source `docs/ai-chat/mcp.mdx`.
+- [Upgrade Guide: prerelease → Sessions-as-run-manager](pages/ai-chat/upgrade-guide.md): Source `docs/ai-chat/upgrade-guide.mdx`.
+- [AI Agents SDK changelog](pages/ai-chat/changelog.md): Source `docs/ai-chat/changelog.mdx`.
+
+## Configuration
+
+- [The trigger.config.ts file](pages/config/config-file.md): Source `docs/config/config-file.mdx`.
+- [Build extensions](pages/config/extensions/overview.md): Source `docs/config/extensions/overview.mdx`.
+- [Prisma](pages/config/extensions/prismaExtension.md): Source `docs/config/extensions/prismaExtension.mdx`.
+- [Python](pages/config/extensions/pythonExtension.md): Source `docs/config/extensions/pythonExtension.mdx`.
+- [Playwright](pages/config/extensions/playwright.md): Source `docs/config/extensions/playwright.mdx`.
+- [Lightpanda build extension](pages/config/extensions/lightpanda.md): Source `docs/config/extensions/lightpanda.mdx`.
+- [FFmpeg](pages/config/extensions/ffmpeg.md): Source `docs/config/extensions/ffmpeg.mdx`.
+- [apt-get](pages/config/extensions/aptGet.md): Source `docs/config/extensions/aptGet.mdx`.
+- [Additional Files](pages/config/extensions/additionalFiles.md): Source `docs/config/extensions/additionalFiles.mdx`.
+- [Additional Packages](pages/config/extensions/additionalPackages.md): Source `docs/config/extensions/additionalPackages.mdx`.
+- [Sync env vars](pages/config/extensions/syncEnvVars.md): Source `docs/config/extensions/syncEnvVars.mdx`.
+- [esbuild Plugin](pages/config/extensions/esbuildPlugin.md): Source `docs/config/extensions/esbuildPlugin.mdx`.
+- [Emit Decorator Metadata](pages/config/extensions/emitDecoratorMetadata.md): Source `docs/config/extensions/emitDecoratorMetadata.mdx`.
+- [Audio Waveform](pages/config/extensions/audioWaveform.md): Source `docs/config/extensions/audioWaveform.mdx`.
+- [Custom build extensions](pages/config/extensions/custom.md): Source `docs/config/extensions/custom.mdx`.
+
+## Deployment
+
+- [Deployment](pages/deployment/overview.md): Source `docs/deployment/overview.mdx`.
+- [Environment Variables](pages/deploy-environment-variables.md): Source `docs/deploy-environment-variables.mdx`.
+- [CI / GitHub Actions](pages/github-actions.md): Source `docs/github-actions.mdx`.
+- [Preview branches](pages/deployment/preview-branches.md): Source `docs/deployment/preview-branches.mdx`.
+- [Development branches](pages/deployment/dev-branches.md): Source `docs/deployment/dev-branches.mdx`.
+- [Version skew protection](pages/deployment/version-skew-protection.md): Source `docs/deployment/version-skew-protection.mdx`.
+- [Atomic deploys](pages/deployment/atomic-deployment.md): Source `docs/deployment/atomic-deployment.mdx`.
+- [GitHub integration](pages/github-integration.md): Source `docs/github-integration.mdx`.
+- [Vercel integration](pages/vercel-integration.md): Source `docs/vercel-integration.mdx`.
+
+## Private networking
+
+- [Private networking](pages/private-networking/overview.md): Source `docs/private-networking/overview.mdx`.
+- [Setting up PrivateLink in the AWS Console](pages/private-networking/aws-console-setup.md): Source `docs/private-networking/aws-console-setup.mdx`.
+- [Troubleshooting private networking](pages/private-networking/troubleshooting.md): Source `docs/private-networking/troubleshooting.mdx`.
+
+## Realtime
+
+- [Realtime overview](pages/realtime/overview.md): Source `docs/realtime/overview.mdx`.
+- [How Realtime works](pages/realtime/how-it-works.md): Source `docs/realtime/how-it-works.mdx`.
+- [The run object](pages/realtime/run-object.md): Source `docs/realtime/run-object.mdx`.
+- [Realtime authentication](pages/realtime/auth.md): Source `docs/realtime/auth.mdx`.
+- [React hooks for real-time task updates](pages/realtime/react-hooks/overview.md): Source `docs/realtime/react-hooks/overview.mdx`.
+- [Trigger tasks from React](pages/realtime/react-hooks/triggering.md): Source `docs/realtime/react-hooks/triggering.mdx`.
+- [Run updates in React](pages/realtime/react-hooks/subscribe.md): Source `docs/realtime/react-hooks/subscribe.mdx`.
+- [Stream data to React (AI, files, progress)](pages/realtime/react-hooks/streams.md): Source `docs/realtime/react-hooks/streams.mdx`.
+- [Read a session channel in React](pages/realtime/react-hooks/session-stream.md): Source `docs/realtime/react-hooks/session-stream.mdx`.
+- [SWR hooks](pages/realtime/react-hooks/swr.md): Source `docs/realtime/react-hooks/swr.mdx`.
+- [useWaitToken](pages/realtime/react-hooks/use-wait-token.md): Source `docs/realtime/react-hooks/use-wait-token.mdx`.
+- [Subscribe to tasks from your backend](pages/realtime/backend/overview.md): Source `docs/realtime/backend/overview.mdx`.
+- [Run updates (backend)](pages/realtime/backend/subscribe.md): Source `docs/realtime/backend/subscribe.mdx`.
+- [Stream data to your backend (AI, files)](pages/realtime/backend/streams.md): Source `docs/realtime/backend/streams.mdx`.
+
+## CLI
+
+- [Introduction](pages/cli-introduction.md): Source `docs/cli-introduction.mdx`.
+- [CLI deploy command](pages/cli-deploy-commands.md): Source `docs/cli-deploy-commands.mdx`.
+- [CLI dev command](pages/cli-dev-commands.md): Source `docs/cli-dev-commands.mdx`.
+- [CLI init command](pages/cli-init-commands.md): Source `docs/cli-init-commands.mdx`.
+- [CLI list-profiles command](pages/cli-list-profiles-commands.md): Source `docs/cli-list-profiles-commands.mdx`.
+- [CLI login command](pages/cli-login-commands.md): Source `docs/cli-login-commands.mdx`.
+- [CLI logout command](pages/cli-logout-commands.md): Source `docs/cli-logout-commands.mdx`.
+- [CLI preview archive command](pages/cli-preview-archive.md): Source `docs/cli-preview-archive.mdx`.
+- [CLI promote command](pages/cli-promote-commands.md): Source `docs/cli-promote-commands.mdx`.
+- [CLI switch command](pages/cli-switch.md): Source `docs/cli-switch.mdx`.
+- [CLI update command](pages/cli-update-commands.md): Source `docs/cli-update-commands.mdx`.
+- [CLI whoami command](pages/cli-whoami-commands.md): Source `docs/cli-whoami-commands.mdx`.
+
+## Observability
+
+- [Query](pages/observability/query.md): Source `docs/observability/query.mdx`.
+- [Dashboards](pages/observability/dashboards.md): Source `docs/observability/dashboards.mdx`.
+
+## Using the Dashboard
+
+- [Run tests](pages/run-tests.md): Source `docs/run-tests.mdx`.
+- [Alerts](pages/troubleshooting-alerts.md): Source `docs/troubleshooting-alerts.mdx`.
+- [Billing limits and alerts](pages/billing-limits.md): Source `docs/billing-limits.mdx`.
+- [Replaying](pages/replaying.md): Source `docs/replaying.mdx`.
+- [Bulk actions in the dashboard](pages/bulk-actions.md): Source `docs/bulk-actions.mdx`.
+
+## Troubleshooting
+
+- [Common problems](pages/troubleshooting.md): Source `docs/troubleshooting.mdx`.
+- [Database connections](pages/database-connections.md): Source `docs/database-connections.mdx`.
+- [How to reduce your spend](pages/how-to-reduce-your-spend.md): Source `docs/how-to-reduce-your-spend.mdx`.
+- [Debugging in VS Code](pages/troubleshooting-debugging-in-vscode.md): Source `docs/troubleshooting-debugging-in-vscode.mdx`.
+- [How to upgrade the Trigger.dev packages](pages/upgrading-packages.md): Source `docs/upgrading-packages.mdx`.
+- [Uptime Status](pages/troubleshooting-uptime-status.md): Source `docs/troubleshooting-uptime-status.mdx`.
+- [GitHub Issues](pages/troubleshooting-github-issues.md): Source `docs/troubleshooting-github-issues.mdx`.
+- [Request a feature](pages/request-feature.md): Source `docs/request-feature.mdx`.
+
+## Self-hosting
+
+- [Self-hosting overview](pages/self-hosting/overview.md): Source `docs/self-hosting/overview.mdx`.
+- [Docker compose](pages/self-hosting/docker.md): Source `docs/self-hosting/docker.mdx`.
+- [Kubernetes](pages/self-hosting/kubernetes.md): Source `docs/self-hosting/kubernetes.mdx`.
+- [Security & vulnerability reporting](pages/self-hosting/security.md): Source `docs/self-hosting/security.mdx`.
+- [Webapp](pages/self-hosting/env/webapp.md): Source `docs/self-hosting/env/webapp.mdx`.
+- [Supervisor](pages/self-hosting/env/supervisor.md): Source `docs/self-hosting/env/supervisor.mdx`.
+
+## Open source
+
+- [Contributing](pages/open-source-contributing.md): Source `docs/open-source-contributing.mdx`.
+- [GitHub repo](pages/github-repo.md): Source `docs/github-repo.mdx`.
+- [Changelog](pages/changelog.md): Source `docs/changelog.mdx`.
+- [Roadmap](pages/roadmap.md): Source `docs/roadmap.mdx`.
+
+## Help
+
+- [Discord Community](pages/community.md): Source `docs/community.mdx`.
+- [Slack support](pages/help-slack.md): Source `docs/help-slack.mdx`.
+- [Email us](pages/help-email.md): Source `docs/help-email.mdx`.
+
+## API reference
+
+- [Management API overview](pages/management/overview.md): Source `docs/management/overview.mdx`.
+- [Authentication](pages/management/authentication.md): Source `docs/management/authentication.mdx`.
+- [Multiple SDK clients](pages/management/multiple-clients.md): Source `docs/management/multiple-clients.mdx`.
+- [Errors and retries](pages/management/errors-and-retries.md): Source `docs/management/errors-and-retries.mdx`.
+- [Auto-pagination](pages/management/auto-pagination.md): Source `docs/management/auto-pagination.mdx`.
+- [Advanced usage](pages/management/advanced-usage.md): Source `docs/management/advanced-usage.mdx`.
+
+## Tasks API
+
+- [Trigger](pages/management/tasks/trigger.md): Source `docs/management/tasks/trigger.mdx`.
+- [Batch trigger](pages/management/tasks/batch-trigger.md): Source `docs/management/tasks/batch-trigger.mdx`.
+- [Trigger task batch](pages/management/tasks/trigger-batch.md): Source `docs/management/tasks/trigger-batch.mdx`.
+
+## Batches API
+
+- [Create batch](pages/management/batches/create.md): Source `docs/management/batches/create.mdx`.
+- [Retrieve a batch](pages/management/batches/retrieve.md): Source `docs/management/batches/retrieve.mdx`.
+- [Retrieve batch results](pages/management/batches/retrieve-results.md): Source `docs/management/batches/retrieve-results.mdx`.
+- [Stream batch items](pages/management/batches/stream-items.md): Source `docs/management/batches/stream-items.mdx`.
+
+## Runs API
+
+- [List runs](pages/management/runs/list.md): Source `docs/management/runs/list.mdx`.
+- [Retrieve run](pages/management/runs/retrieve.md): Source `docs/management/runs/retrieve.mdx`.
+- [Replay run](pages/management/runs/replay.md): Source `docs/management/runs/replay.mdx`.
+- [Cancel run](pages/management/runs/cancel.md): Source `docs/management/runs/cancel.mdx`.
+- [Reschedule run](pages/management/runs/reschedule.md): Source `docs/management/runs/reschedule.mdx`.
+- [Update metadata](pages/management/runs/update-metadata.md): Source `docs/management/runs/update-metadata.mdx`.
+- [Add tags to a run](pages/management/runs/add-tags.md): Source `docs/management/runs/add-tags.mdx`.
+- [Retrieve run events](pages/management/runs/retrieve-events.md): Source `docs/management/runs/retrieve-events.mdx`.
+- [Retrieve run trace](pages/management/runs/retrieve-trace.md): Source `docs/management/runs/retrieve-trace.mdx`.
+- [Retrieve run result](pages/management/runs/retrieve-result.md): Source `docs/management/runs/retrieve-result.mdx`.
+
+## Bulk actions API
+
+- [Create bulk action](pages/management/bulk-actions/create.md): Source `docs/management/bulk-actions/create.mdx`.
+- [List bulk actions](pages/management/bulk-actions/list.md): Source `docs/management/bulk-actions/list.mdx`.
+- [Retrieve bulk action](pages/management/bulk-actions/retrieve.md): Source `docs/management/bulk-actions/retrieve.mdx`.
+- [Abort bulk action](pages/management/bulk-actions/abort.md): Source `docs/management/bulk-actions/abort.mdx`.
+
+## Errors API
+
+- [List errors](pages/management/errors/list.md): Source `docs/management/errors/list.mdx`.
+- [Retrieve an error](pages/management/errors/retrieve.md): Source `docs/management/errors/retrieve.mdx`.
+- [Resolve an error](pages/management/errors/resolve.md): Source `docs/management/errors/resolve.mdx`.
+- [Ignore an error](pages/management/errors/ignore.md): Source `docs/management/errors/ignore.mdx`.
+- [Unresolve an error](pages/management/errors/unresolve.md): Source `docs/management/errors/unresolve.mdx`.
+
+## Queues API
+
+- [List Queues](pages/management/queues/list.md): Source `docs/management/queues/list.mdx`.
+- [Retrieve Queue](pages/management/queues/retrieve.md): Source `docs/management/queues/retrieve.mdx`.
+- [Pause or Resume Queue](pages/management/queues/pause.md): Source `docs/management/queues/pause.mdx`.
+- [Override Concurrency Limit](pages/management/queues/concurrency-override.md): Source `docs/management/queues/concurrency-override.mdx`.
+- [Reset Concurrency Limit](pages/management/queues/concurrency-reset.md): Source `docs/management/queues/concurrency-reset.mdx`.
+
+## Schedules API
+
+- [List Schedules](pages/management/schedules/list.md): Source `docs/management/schedules/list.mdx`.
+- [Create Schedule](pages/management/schedules/create.md): Source `docs/management/schedules/create.mdx`.
+- [Retrieve Schedule](pages/management/schedules/retrieve.md): Source `docs/management/schedules/retrieve.mdx`.
+- [Update Schedule](pages/management/schedules/update.md): Source `docs/management/schedules/update.mdx`.
+- [Delete Schedule](pages/management/schedules/delete.md): Source `docs/management/schedules/delete.mdx`.
+- [Deactivate Schedule](pages/management/schedules/deactivate.md): Source `docs/management/schedules/deactivate.mdx`.
+- [Activate Schedule](pages/management/schedules/activate.md): Source `docs/management/schedules/activate.mdx`.
+- [Get timezones](pages/management/schedules/timezones.md): Source `docs/management/schedules/timezones.mdx`.
+
+## Env Vars API
+
+- [List Env Vars](pages/management/envvars/list.md): Source `docs/management/envvars/list.mdx`.
+- [Import Env Vars](pages/management/envvars/import.md): Source `docs/management/envvars/import.mdx`.
+- [Create Env Var](pages/management/envvars/create.md): Source `docs/management/envvars/create.mdx`.
+- [Retrieve Env Var](pages/management/envvars/retrieve.md): Source `docs/management/envvars/retrieve.mdx`.
+- [Update Env Var](pages/management/envvars/update.md): Source `docs/management/envvars/update.mdx`.
+- [Delete Env Var](pages/management/envvars/delete.md): Source `docs/management/envvars/delete.mdx`.
+
+## Deployments API
+
+- [List deployments](pages/management/deployments/list.md): Source `docs/management/deployments/list.mdx`.
+- [Get deployment](pages/management/deployments/retrieve.md): Source `docs/management/deployments/retrieve.mdx`.
+- [Get latest deployment](pages/management/deployments/get-latest.md): Source `docs/management/deployments/get-latest.mdx`.
+- [Promote deployment](pages/management/deployments/promote.md): Source `docs/management/deployments/promote.mdx`.
+
+## Waitpoints API
+
+- [Create a waitpoint token](pages/management/waitpoints/create.md): Source `docs/management/waitpoints/create.mdx`.
+- [List waitpoint tokens](pages/management/waitpoints/list.md): Source `docs/management/waitpoints/list.mdx`.
+- [Retrieve a waitpoint token](pages/management/waitpoints/retrieve.md): Source `docs/management/waitpoints/retrieve.mdx`.
+- [Complete a waitpoint token](pages/management/waitpoints/complete.md): Source `docs/management/waitpoints/complete.mdx`.
+- [Complete a waitpoint token via HTTP callback](pages/management/waitpoints/complete-callback.md): Source `docs/management/waitpoints/complete-callback.mdx`.
+
+## Sessions API
+
+- [Create session](pages/management/sessions/create.md): Source `docs/management/sessions/create.mdx`.
+- [List sessions](pages/management/sessions/list.md): Source `docs/management/sessions/list.mdx`.
+- [Retrieve session](pages/management/sessions/retrieve.md): Source `docs/management/sessions/retrieve.mdx`.
+- [Update session](pages/management/sessions/update.md): Source `docs/management/sessions/update.mdx`.
+- [Close session](pages/management/sessions/close.md): Source `docs/management/sessions/close.mdx`.
+- [Session channels](pages/management/sessions/channels.md): Source `docs/management/sessions/channels.mdx`.
+
+## Query API
+
+- [Execute a query](pages/management/query/execute.md): Source `docs/management/query/execute.mdx`.
+- [Get query schema](pages/management/query/schema.md): Source `docs/management/query/schema.mdx`.
+- [List dashboards](pages/management/query/dashboards.md): Source `docs/management/query/dashboards.mdx`.
+
+## Introduction
+
+- [Frameworks, guides and examples](pages/guides/introduction.md): Source `docs/guides/introduction.mdx`.
+
+## Frameworks
+
+- [Bun guide](pages/guides/frameworks/bun.md): Source `docs/guides/frameworks/bun.mdx`.
+- [Next.js setup guide](pages/guides/frameworks/nextjs.md): Source `docs/guides/frameworks/nextjs.mdx`.
+- [Node.js setup guide](pages/guides/frameworks/nodejs.md): Source `docs/guides/frameworks/nodejs.mdx`.
+- [Remix setup guide](pages/guides/frameworks/remix.md): Source `docs/guides/frameworks/remix.mdx`.
+
+## Guides
+
+- [AI agents overview](pages/guides/ai-agents/overview.md): Source `docs/guides/ai-agents/overview.mdx`.
+- [Build a chat agent](pages/guides/ai-agents/chat-agent.md): Source `docs/guides/ai-agents/chat-agent.mdx`.
+- [Generate and translate copy](pages/guides/ai-agents/generate-translate-copy.md): Source `docs/guides/ai-agents/generate-translate-copy.mdx`.
+- [Route a question to a different AI model](pages/guides/ai-agents/route-question.md): Source `docs/guides/ai-agents/route-question.mdx`.
+- [Respond to customer inquiry and check for inappropriate content](pages/guides/ai-agents/respond-and-check-content.md): Source `docs/guides/ai-agents/respond-and-check-content.mdx`.
+- [Translate text and refine it based on feedback](pages/guides/ai-agents/translate-and-refine.md): Source `docs/guides/ai-agents/translate-and-refine.mdx`.
+- [Verify a news article](pages/guides/ai-agents/verify-news-article.md): Source `docs/guides/ai-agents/verify-news-article.mdx`.
+- [Claude Agent SDK setup guide](pages/guides/ai-agents/claude-code-trigger.md): Source `docs/guides/ai-agents/claude-code-trigger.mdx`.
+- [Drizzle setup guide](pages/guides/frameworks/drizzle.md): Source `docs/guides/frameworks/drizzle.mdx`.
+- [Prisma setup guide](pages/guides/frameworks/prisma.md): Source `docs/guides/frameworks/prisma.mdx`.
+- [Nango OAuth with Trigger.dev](pages/guides/frameworks/nango.md): Source `docs/guides/frameworks/nango.mdx`.
+- [Sequin database triggers](pages/guides/frameworks/sequin.md): Source `docs/guides/frameworks/sequin.mdx`.
+- [Supabase overview](pages/guides/frameworks/supabase-guides-overview.md): Source `docs/guides/frameworks/supabase-guides-overview.mdx`.
+- [Triggering tasks from Supabase edge functions](pages/guides/frameworks/supabase-edge-functions-basic.md): Source `docs/guides/frameworks/supabase-edge-functions-basic.mdx`.
+- [Triggering tasks from Supabase Database Webhooks](pages/guides/frameworks/supabase-edge-functions-database-webhooks.md): Source `docs/guides/frameworks/supabase-edge-functions-database-webhooks.mdx`.
+- [Authenticating Supabase tasks: JWTs and service roles](pages/guides/frameworks/supabase-authentication.md): Source `docs/guides/frameworks/supabase-authentication.mdx`.
+- [Using webhooks with Trigger.dev](pages/guides/frameworks/webhooks-guides-overview.md): Source `docs/guides/frameworks/webhooks-guides-overview.mdx`.
+- [Triggering tasks with webhooks in Next.js](pages/guides/frameworks/nextjs-webhooks.md): Source `docs/guides/frameworks/nextjs-webhooks.mdx`.
+- [Triggering tasks with webhooks in Remix](pages/guides/frameworks/remix-webhooks.md): Source `docs/guides/frameworks/remix-webhooks.mdx`.
+- [Trigger a task from Stripe webhook events](pages/guides/examples/stripe-webhook.md): Source `docs/guides/examples/stripe-webhook.mdx`.
+- [Trigger tasks from Hookdeck webhooks](pages/guides/examples/hookdeck-webhook.md): Source `docs/guides/examples/hookdeck-webhook.mdx`.
+
+## Migration guides
+
+- [Migrating from Mergent](pages/migration-mergent.md): Source `docs/migration-mergent.mdx`.
+- [Migrating from n8n](pages/migration-n8n.md): Source `docs/migration-n8n.mdx`.
+
+## Use cases
+
+- [Use cases](pages/guides/use-cases/overview.md): Source `docs/guides/use-cases/overview.mdx`.
+- [Data processing & ETL workflows](pages/guides/use-cases/data-processing-etl.md): Source `docs/guides/use-cases/data-processing-etl.mdx`.
+- [AI media generation workflows](pages/guides/use-cases/media-generation.md): Source `docs/guides/use-cases/media-generation.mdx`.
+- [Media processing workflows](pages/guides/use-cases/media-processing.md): Source `docs/guides/use-cases/media-processing.mdx`.
+- [Marketing workflows](pages/guides/use-cases/marketing.md): Source `docs/guides/use-cases/marketing.mdx`.
+
+## Example projects
+
+- [Automated website monitoring with Anchor Browser](pages/guides/example-projects/anchor-browser-web-scraper.md): Source `docs/guides/example-projects/anchor-browser-web-scraper.mdx`.
+- [Next.js Batch LLM Evaluator](pages/guides/example-projects/batch-llm-evaluator.md): Source `docs/guides/example-projects/batch-llm-evaluator.mdx`.
+- [Changelog generator using Claude Agent SDK](pages/guides/example-projects/claude-changelog-generator.md): Source `docs/guides/example-projects/claude-changelog-generator.mdx`.
+- [Claude GitHub wiki](pages/guides/example-projects/claude-github-wiki.md): Source `docs/guides/example-projects/claude-github-wiki.mdx`.
+- [Claude 3.7 thinking chatbot](pages/guides/example-projects/claude-thinking-chatbot.md): Source `docs/guides/example-projects/claude-thinking-chatbot.mdx`.
+- [ClickHouse chat agent](pages/guides/example-projects/clickhouse-chat-agent.md): Source `docs/guides/example-projects/clickhouse-chat-agent.mdx`.
+- [Background Cursor agent using the Cursor CLI](pages/guides/example-projects/cursor-background-agent.md): Source `docs/guides/example-projects/cursor-background-agent.mdx`.
+- [Human-in-the-loop workflow with ReactFlow and Trigger.dev waitpoint tokens](pages/guides/example-projects/human-in-the-loop-workflow.md): Source `docs/guides/example-projects/human-in-the-loop-workflow.mdx`.
+- [Mastra agents with memory sharing + Trigger.dev task orchestration](pages/guides/example-projects/mastra-agents-with-memory.md): Source `docs/guides/example-projects/mastra-agents-with-memory.mdx`.
+- [Meme generator with human-in-the-loop approval](pages/guides/example-projects/meme-generator-human-in-the-loop.md): Source `docs/guides/example-projects/meme-generator-human-in-the-loop.mdx`.
+- [OpenAI Agents SDK for Typescript + Trigger.dev playground](pages/guides/example-projects/openai-agents-sdk-typescript-playground.md): Source `docs/guides/example-projects/openai-agents-sdk-typescript-playground.mdx`.
+- [Product image generator using Replicate and Trigger.dev](pages/guides/example-projects/product-image-generator.md): Source `docs/guides/example-projects/product-image-generator.mdx`.
+- [Next.js Realtime CSV Importer](pages/guides/example-projects/realtime-csv-importer.md): Source `docs/guides/example-projects/realtime-csv-importer.mdx`.
+- [Image generation with Fal.ai and Trigger.dev Realtime](pages/guides/example-projects/realtime-fal-ai.md): Source `docs/guides/example-projects/realtime-fal-ai.mdx`.
+- [Smart Spreadsheet](pages/guides/example-projects/smart-spreadsheet.md): Source `docs/guides/example-projects/smart-spreadsheet.mdx`.
+- [Turborepo monorepo with Prisma](pages/guides/example-projects/turborepo-monorepo-prisma.md): Source `docs/guides/example-projects/turborepo-monorepo-prisma.mdx`.
+- [Deep research agent using Vercel's AI SDK](pages/guides/example-projects/vercel-ai-sdk-deep-research.md): Source `docs/guides/example-projects/vercel-ai-sdk-deep-research.mdx`.
+- [Vercel AI SDK image generator](pages/guides/example-projects/vercel-ai-sdk-image-generator.md): Source `docs/guides/example-projects/vercel-ai-sdk-image-generator.mdx`.
+
+## Python guides
+
+- [OpenAI Agents SDK for Python guardrails](pages/guides/example-projects/openai-agent-sdk-guardrails.md): Source `docs/guides/example-projects/openai-agent-sdk-guardrails.mdx`.
+- [Python image processing example](pages/guides/python/python-image-processing.md): Source `docs/guides/python/python-image-processing.mdx`.
+- [Convert documents to markdown using Python and MarkItDown](pages/guides/python/python-doc-to-markdown.md): Source `docs/guides/python/python-doc-to-markdown.mdx`.
+- [Python headless browser web crawler example](pages/guides/python/python-crawl4ai.md): Source `docs/guides/python/python-crawl4ai.mdx`.
+- [Python PDF form extractor example](pages/guides/python/python-pdf-form-extractor.md): Source `docs/guides/python/python-pdf-form-extractor.mdx`.
+
+## Example tasks
+
+- [Generate an image using DALL·E 3](pages/guides/examples/dall-e3-generate-image.md): Source `docs/guides/examples/dall-e3-generate-image.mdx`.
+- [Transcribe audio using Deepgram](pages/guides/examples/deepgram-transcribe-audio.md): Source `docs/guides/examples/deepgram-transcribe-audio.mdx`.
+- [Convert an image to a cartoon using Fal.ai](pages/guides/examples/fal-ai-image-to-cartoon.md): Source `docs/guides/examples/fal-ai-image-to-cartoon.mdx`.
+- [Generate an image from a prompt using Fal.ai and Trigger.dev Realtime](pages/guides/examples/fal-ai-realtime.md): Source `docs/guides/examples/fal-ai-realtime.mdx`.
+- [Video processing with FFmpeg](pages/guides/examples/ffmpeg-video-processing.md): Source `docs/guides/examples/ffmpeg-video-processing.mdx`.
+- [Crawl a URL using Firecrawl](pages/guides/examples/firecrawl-url-crawl.md): Source `docs/guides/examples/firecrawl-url-crawl.mdx`.
+- [Lightpanda examples with Trigger.dev](pages/guides/examples/lightpanda.md): Source `docs/guides/examples/lightpanda.mdx`.
+- [Convert documents to PDF using LibreOffice](pages/guides/examples/libreoffice-pdf-conversion.md): Source `docs/guides/examples/libreoffice-pdf-conversion.mdx`.
+- [Call OpenAI with retrying](pages/guides/examples/open-ai-with-retrying.md): Source `docs/guides/examples/open-ai-with-retrying.mdx`.
+- [Turn a PDF into an image using MuPDF](pages/guides/examples/pdf-to-image.md): Source `docs/guides/examples/pdf-to-image.mdx`.
+- [Puppeteer examples with Trigger.dev](pages/guides/examples/puppeteer.md): Source `docs/guides/examples/puppeteer.mdx`.
+- [Generate a PDF using react-pdf and save it to R2](pages/guides/examples/react-pdf.md): Source `docs/guides/examples/react-pdf.mdx`.
+- [Send emails using React Email](pages/guides/examples/react-email.md): Source `docs/guides/examples/react-email.mdx`.
+- [Image-to-image generation using Replicate and nano-banana](pages/guides/examples/replicate-image-generation.md): Source `docs/guides/examples/replicate-image-generation.mdx`.
+- [Send a sequence of emails using Resend](pages/guides/examples/resend-email-sequence.md): Source `docs/guides/examples/resend-email-sequence.mdx`.
+- [Generate OG Images using Satori](pages/guides/examples/satori.md): Source `docs/guides/examples/satori.mdx`.
+- [Scrape the top 3 articles from Hacker News and email yourself a summary every weekday](pages/guides/examples/scrape-hacker-news.md): Source `docs/guides/examples/scrape-hacker-news.mdx`.
+- [Track errors with Sentry](pages/guides/examples/sentry-error-tracking.md): Source `docs/guides/examples/sentry-error-tracking.mdx`.
+- [Process images using Sharp](pages/guides/examples/sharp-image-processing.md): Source `docs/guides/examples/sharp-image-processing.mdx`.
+- [Supabase database operations using Trigger.dev](pages/guides/examples/supabase-database-operations.md): Source `docs/guides/examples/supabase-database-operations.mdx`.
+- [Uploading files to Supabase Storage](pages/guides/examples/supabase-storage-upload.md): Source `docs/guides/examples/supabase-storage-upload.mdx`.
+- [Using the Vercel AI SDK](pages/guides/examples/vercel-ai-sdk.md): Source `docs/guides/examples/vercel-ai-sdk.mdx`.
+- [Syncing environment variables from your Vercel projects](pages/guides/examples/vercel-sync-env-vars.md): Source `docs/guides/examples/vercel-sync-env-vars.mdx`.
+
+## Community packages
+
+- [dotenvx](pages/guides/community/dotenvx.md): Source `docs/guides/community/dotenvx.mdx`.
+- [Fatima](pages/guides/community/fatima.md): Source `docs/guides/community/fatima.mdx`.
+- [Rate limiter](pages/guides/community/rate-limiter.md): Source `docs/guides/community/rate-limiter.mdx`.

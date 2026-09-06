@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/guides/write-file/basic.mdx](https://bun.com/docs/guides/write-file/basic)
+> Release-pinned source for Bun bun-v1.4.2: [docs/guides/write-file/basic.mdx](https://bun.com/docs/guides/write-file/basic)
 
 # Write a string to a file
 

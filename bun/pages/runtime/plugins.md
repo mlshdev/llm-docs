@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/runtime/plugins.mdx](https://bun.com/docs/runtime/plugins)
+> Release-pinned source for Bun bun-v1.4.2: [docs/runtime/plugins.mdx](https://bun.com/docs/runtime/plugins)
 
 # Plugins
 

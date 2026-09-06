@@ -1,4 +1,4 @@
-> Release-pinned source for Bun bun-v1.4.0: [docs/runtime/shell.mdx](https://bun.com/docs/runtime/shell)
+> Release-pinned source for Bun bun-v1.4.2: [docs/runtime/shell.mdx](https://bun.com/docs/runtime/shell)
 
 # Shell
 

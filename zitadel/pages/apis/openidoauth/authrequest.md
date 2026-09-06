@@ -1,4 +1,4 @@
-> Release-pinned source for ZITADEL v4.17.2: [apps/docs/content/apis/openidoauth/authrequest.mdx](https://zitadel.com/docs/apis/openidoauth/authrequest)
+> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/apis/openidoauth/authrequest.mdx](https://zitadel.com/docs/apis/openidoauth/authrequest)
 
 The OIDC Playground is for testing OpenID Authentication Requests, giving you more insight how OpenID Connect works and how you can customize ZITADEL behavior with different parameters.
 
