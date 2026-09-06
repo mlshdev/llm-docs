@@ -112,7 +112,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          git add -- sources.lock.json llms.txt llms-full.txt traefik netbird podman docker n8n grafana victoriametrics victorialogs victoriametrics-datasource victorialogs-datasource vmestimator zitadel ffmpeg yt-dlp searxng bun
+          git add -- sources.lock.json llms.txt llms-full.txt traefik netbird podman docker n8n grafana victoriametrics victorialogs victoriametrics-datasource victorialogs-datasource vmestimator zitadel ffmpeg yt-dlp searxng bun trigger-dev aria2
           if git diff --cached --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
@@ -143,6 +143,8 @@ jobs:
             yt-dlp
             searxng
             bun
+            trigger-dev
+            aria2
           if-no-files-found: error
           retention-days: "1"
       - name: Decide whether to publish Pages
@@ -203,7 +205,7 @@ jobs:
             git fetch --quiet origin main
             git reset --quiet --hard FETCH_HEAD
 
-            rm -rf traefik netbird podman docker n8n grafana victoriametrics victorialogs victoriametrics-datasource victorialogs-datasource vmestimator zitadel ffmpeg yt-dlp searxng bun
+            rm -rf traefik netbird podman docker n8n grafana victoriametrics victorialogs victoriametrics-datasource victorialogs-datasource vmestimator zitadel ffmpeg yt-dlp searxng bun trigger-dev aria2
             cp _generated/sources.lock.json sources.lock.json
             cp _generated/llms.txt llms.txt
             cp _generated/llms-full.txt llms-full.txt
@@ -223,8 +225,10 @@ jobs:
             cp -R _generated/yt-dlp yt-dlp
             cp -R _generated/searxng searxng
             cp -R _generated/bun bun
+            cp -R _generated/trigger-dev trigger-dev
+            cp -R _generated/aria2 aria2
 
-            git add -- sources.lock.json llms.txt llms-full.txt traefik netbird podman docker n8n grafana victoriametrics victorialogs victoriametrics-datasource victorialogs-datasource vmestimator zitadel ffmpeg yt-dlp searxng bun
+            git add -- sources.lock.json llms.txt llms-full.txt traefik netbird podman docker n8n grafana victoriametrics victorialogs victoriametrics-datasource victorialogs-datasource vmestimator zitadel ffmpeg yt-dlp searxng bun trigger-dev aria2
             if git diff --cached --quiet; then
               echo "main already carries these snapshots; nothing to commit."
               exit 0

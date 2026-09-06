@@ -1,0 +1,25 @@
+# aria2 release-1.37.0
+
+> Documentation generated from the latest stable release of [aria2/aria2](https://github.com/aria2/aria2) and pinned to immutable source commit `02f2d0d8472b3c38c29b4dba8c75ebd5fdd2899a`.
+
+- [Full documentation](llms-full.txt): Complete normalized corpus for aria2 release-1.37.0.
+- [Provenance manifest](manifest.json): Release, commit, document count, and generation notes.
+- The release-pinned English Sphinx sources are converted without executing Sphinx or upstream Python.
+- The libaria2 API reference is generated deterministically from the release-pinned public C++ header without executing its Python generator.
+- Translations, generated man pages, shell completions, and vendored documentation are omitted.
+
+## Project guide
+
+- [aria2 - The ultra fast download utility](pages/README.md): Source `README.rst`.
+
+## Manual
+
+- [aria2c(1)](pages/aria2c.md): Source `doc/manual-src/en/aria2c.rst`.
+
+## Library
+
+- [libaria2: C++ library interface to aria2](pages/libaria2.md): Source `doc/manual-src/en/libaria2.rst`.
+
+## Technical reference
+
+- [Technical Notes](pages/technical-notes.md): Source `doc/manual-src/en/technical-notes.rst`.

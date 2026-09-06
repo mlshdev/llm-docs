@@ -21,6 +21,7 @@ This repository converts documentation from immutable upstream commits into dete
 - [SearXNG](https://github.com/searxng/searxng)
 - [Bun](https://github.com/oven-sh/bun)
 - [Trigger.dev](https://github.com/triggerdotdev/trigger.dev)
+- [aria2](https://github.com/aria2/aria2)
 
 ## Release policy
 
@@ -79,7 +80,7 @@ llms-full.txt
   pages/
 ```
 
-Project directories are named after the identifiers in `config/sources.json`: `traefik`, `netbird`, `podman`, `docker`, `n8n`, `grafana`, `victoriametrics`, `victorialogs`, `victoriametrics-datasource`, `victorialogs-datasource`, `vmestimator`, `zitadel`, `ffmpeg`, `yt-dlp`, `searxng`, and `bun`.
+Project directories are named after the identifiers in `config/sources.json`: `traefik`, `netbird`, `podman`, `docker`, `n8n`, `grafana`, `victoriametrics`, `victorialogs`, `victoriametrics-datasource`, `victorialogs-datasource`, `vmestimator`, `zitadel`, `ffmpeg`, `yt-dlp`, `searxng`, `bun`, `trigger-dev`, and `aria2`.
 
 ## Source-specific conversion
 
@@ -97,6 +98,7 @@ Project directories are named after the identifiers in `config/sources.json`: `t
 - SearXNG expands checked-in Sphinx includes and converts its RST documentation tree to Markdown without executing Sphinx or imported Python modules.
 - Bun follows the checked-in Mintlify MDX documentation tree, inlines documentation partials, converts presentation components to Markdown, and resolves published links to `https://bun.com/docs`.
 - Trigger.dev publishes the pages its `docs/docs.json` navigation declares, renders each API reference page from the OpenAPI operation the page names in front matter, inlines snippets with the attributes they are rendered with, and resolves published links to `https://trigger.dev/docs`.
+- aria2 converts the release-pinned English Sphinx sources for the aria2c manual, project guide, libaria2 reference, and technical notes without executing Sphinx or upstream Python. The libaria2 API is generated deterministically from the pinned public C++ header.
 
 ## Local commands
 

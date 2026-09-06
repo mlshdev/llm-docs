@@ -18,6 +18,7 @@ yt-dlp/
 searxng/
 bun/
 trigger-dev/
+aria2/
 llms.txt
 llms-full.txt
 bun.lock

@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "project": "aria2",
+  "title": "aria2",
+  "repository": "aria2/aria2",
+  "tag": "release-1.37.0",
+  "releaseId": 129534349,
+  "releasePublishedAt": "2023-11-15T12:07:32Z",
+  "sourceCommit": "02f2d0d8472b3c38c29b4dba8c75ebd5fdd2899a",
+  "documentCount": 4,
+  "notes": [
+    "The release-pinned English Sphinx sources are converted without executing Sphinx or upstream Python.",
+    "The libaria2 API reference is generated deterministically from the release-pinned public C++ header without executing its Python generator.",
+    "Translations, generated man pages, shell completions, and vendored documentation are omitted."
+  ]
+}

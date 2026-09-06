@@ -21,6 +21,7 @@
 - [SearXNG master](searxng/llms.txt): [full corpus](searxng/llms-full.txt), [manifest](searxng/manifest.json)
 - [Bun bun-v1.4.2](bun/llms.txt): [full corpus](bun/llms-full.txt), [manifest](bun/manifest.json)
 - [Trigger.dev v4.5.16](trigger-dev/llms.txt): [full corpus](trigger-dev/llms-full.txt), [manifest](trigger-dev/manifest.json)
+- [aria2 release-1.37.0](aria2/llms.txt): [full corpus](aria2/llms-full.txt), [manifest](aria2/manifest.json)
 
 ## Update policy
 

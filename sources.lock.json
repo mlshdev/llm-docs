@@ -103,6 +103,12 @@
       "releaseId": 381460886,
       "releasePublishedAt": "2026-09-02T17:47:49Z",
       "sourceCommit": "ee34a4b13710742ae26d94831547fa2b6cddc9bd"
+    },
+    "aria2": {
+      "tag": "release-1.37.0",
+      "releaseId": 129534349,
+      "releasePublishedAt": "2023-11-15T12:07:32Z",
+      "sourceCommit": "02f2d0d8472b3c38c29b4dba8c75ebd5fdd2899a"
     }
   }
 }

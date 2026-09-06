@@ -18,6 +18,7 @@ export const projectIds = [
   "searxng",
   "bun",
   "trigger-dev",
+  "aria2",
 ] as const;
 
 export type ProjectId = (typeof projectIds)[number];

@@ -107,6 +107,12 @@
       "title": "Trigger.dev",
       "repository": "triggerdotdev/trigger.dev",
       "homepage": "https://trigger.dev/docs"
+    },
+    {
+      "id": "aria2",
+      "title": "aria2",
+      "repository": "aria2/aria2",
+      "homepage": "https://aria2.github.io/manual/en/html/"
     }
   ]
 }

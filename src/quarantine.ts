@@ -54,6 +54,8 @@ const unresolvedSyntax: Record<ProjectId, RegExp> = {
   bun: /<\/?(?:Accordion|Card|CodeGroup|Frame|Note|Step|Tab|Tip|Warning)\b/,
   "trigger-dev":
     /<\/?(?:Accordion|Card|CardGroup|CodeGroup|Expandable|Frame|Info|Note|ParamField|ResponseField|Step|Steps|Tab|Tabs|Tip|Update|Warning)\b/,
+  aria2:
+    /^\s*\.\.\s+[a-zA-Z][\w:-]*::|:[a-zA-Z][\w:-]*:`|`[^`\n]+`_|^\s*=+(?:\s+=+)+\s*$/m,
 };
 
 // A project that cannot be built at all: the caller falls back to the pins and

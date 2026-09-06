@@ -1,3 +1,4 @@
+import { buildAria2 } from "./aria2.ts";
 import { buildDatasourcePlugin } from "./datasource-plugin.ts";
 import { buildBun } from "./bun.ts";
 import { buildDocker } from "./docker.ts";
@@ -76,5 +77,7 @@ function runAdapter(
       return buildBun(project, lock);
     case "trigger-dev":
       return buildTriggerDev(project, lock);
+    case "aria2":
+      return buildAria2(project, lock);
   }
 }

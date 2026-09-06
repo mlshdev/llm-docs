@@ -254,7 +254,7 @@ function validateNetbirdDocsCommit(commit: GithubCommit): void {
   }
 }
 
-function compareVersions(left: string, right: string): number {
+export function compareVersions(left: string, right: string): number {
   const leftVersion = semanticVersion(left);
   const rightVersion = semanticVersion(right);
   if (!leftVersion || !rightVersion) {
@@ -272,7 +272,7 @@ function compareVersions(left: string, right: string): number {
 function semanticVersion(
   value: string,
 ): readonly [number, number, number] | undefined {
-  const match = value.match(/^v?(\d+)\.(\d+)\.(\d+)$/);
+  const match = value.match(/^(?:release-|v)?(\d+)\.(\d+)\.(\d+)$/);
   if (!match) {
     return undefined;
   }
