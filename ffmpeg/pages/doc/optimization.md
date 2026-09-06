@@ -1,4 +1,4 @@
-> Commit-pinned source for FFmpeg master: [doc/optimization.txt](https://github.com/FFmpeg/FFmpeg/blob/f5f7959dac76e19d1a080030c09ee407b1c56c73/doc/optimization.txt)
+> Commit-pinned source for FFmpeg master: [doc/optimization.txt](https://github.com/FFmpeg/FFmpeg/blob/ef533ef3a3ea063eb72edbf510d006684f260f7f/doc/optimization.txt)
 
 # optimization Tips (for libavcodec):
 
