@@ -5,9 +5,9 @@
   "repository": "searxng/searxng",
   "tag": "master",
   "branch": "master",
-  "sourceCommittedAt": "2026-09-04T17:43:28Z",
-  "sourceCommit": "22056605a6e0ed41a0aa91a2bf300a361fd16b92",
-  "documentCount": 178,
+  "sourceCommittedAt": "2026-09-05T20:57:09Z",
+  "sourceCommit": "c7f3080aac5de13b619c4a5ab36590a2c5165e1c",
+  "documentCount": 177,
   "notes": [
     "SearXNG tracks master because the repository publishes neither GitHub releases nor release tags.",
     "Checked-in RST and Markdown includes are expanded without executing Sphinx, Jinja, or imported Python modules.",

@@ -1,4 +1,4 @@
-> Commit-pinned source for FFmpeg master: [doc/general.texi](https://github.com/FFmpeg/FFmpeg/blob/9997fd060680d427bcc0c0715d163346da7ebd6f/doc/general.texi)
+> Commit-pinned source for FFmpeg master: [doc/general.texi](https://github.com/FFmpeg/FFmpeg/blob/c6e28adabac09745f3406ffbf3833b8ac7f3f46a/doc/general.texi)
 
 # External libraries
 
@@ -1347,7 +1347,7 @@ following image formats are supported:
   \|  Used in Origin's Wing Commander IV AVI files.
 - DPCM Xilam DERF         |       |   X
 - DSD (Direct Stream Digital), least significant bit first   |    |   X
-- DSD (Direct Stream Digital), most significant bit first    |    |   X
+- DSD (Direct Stream Digital), most significant bit first    |   X   |   X
 - DSD (Direct Stream Digital), least significant bit first, planar   |    |   X
 - DSD (Direct Stream Digital), most significant bit first, planar    |    |   X
 - DSP Group TrueSpeech    |       |   X
