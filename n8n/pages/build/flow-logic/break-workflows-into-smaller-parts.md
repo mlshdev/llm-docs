@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/flow-logic/break-workflows-into-smaller-parts.md](https://github.com/n8n-io/n8n-docs/blob/4ccd858d79f4bd25f580432b08de2ecf6b88f8f6/docs/build/flow-logic/break-workflows-into-smaller-parts.md)
+> Commit-pinned source for n8n main: [docs/build/flow-logic/break-workflows-into-smaller-parts.md](https://github.com/n8n-io/n8n-docs/blob/895c888b78634f5877156b7df5ff8828f020a60f/docs/build/flow-logic/break-workflows-into-smaller-parts.md)
 
 # Sub-workflows <a id="sub-workflows"></a>
 
@@ -22,7 +22,7 @@ This section walks through setting up both the parent workflow and sub-workflow.
    > You can also extract selected nodes directly using [Sub-workflow conversion](https://docs.n8n.io/build/flow-logic/convert-to-sub-workflows) in the context menu.
 
 2. **Optional**: configure which workflows can call the sub-workflow:
-   1. Select the **Options** ![Options menu](https://raw.githubusercontent.com/n8n-io/n8n-docs/4ccd858d79f4bd25f580432b08de2ecf6b88f8f6/docs/reusable-content/.gitbook/assets/three-dot-options-menu.png) menu > **Settings**. n8n opens the **Workflow settings** modal.
+   1. Select the **Options** ![Options menu](https://raw.githubusercontent.com/n8n-io/n8n-docs/895c888b78634f5877156b7df5ff8828f020a60f/docs/reusable-content/.gitbook/assets/three-dot-options-menu.png) menu > **Settings**. n8n opens the **Workflow settings** modal.
    2. Change the **This workflow can be called by** setting.	Refer to [Workflow settings](https://docs.n8n.io/build/manage-workflows/configure-workflow-settings) for more information on configuring your workflows.
 
 3. Add the **Execute Sub-workflow** trigger node (if you are searching under trigger nodes, this is also titled **When Executed by Another Workflow**).

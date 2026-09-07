@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-hetzner.md](https://github.com/n8n-io/n8n-docs/blob/4ccd858d79f4bd25f580432b08de2ecf6b88f8f6/docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-hetzner.md)
+> Commit-pinned source for n8n main: [docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-hetzner.md](https://github.com/n8n-io/n8n-docs/blob/895c888b78634f5877156b7df5ff8828f020a60f/docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-hetzner.md)
 
 # Hosting n8n on Hetzner cloud <a id="hosting-n8n-on-hetzner-cloud"></a>
 
@@ -27,7 +27,7 @@ Once n8n is up and running, an optional last section covers adding the AI Assist
 > n8n releases a new minor version most weeks. The `stable` version is for production use. `beta` is the most recent release. The `beta` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
 >
 > Current `stable`: 2.37.10
-> Current `beta`: 2.38.3
+> Current `beta`: 2.38.4
 
 ## Create a server <a id="create-a-server"></a>
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/connect/create-nodes/plan-your-node/choose-a-node-building-style.md](https://github.com/n8n-io/n8n-docs/blob/4ccd858d79f4bd25f580432b08de2ecf6b88f8f6/docs/connect/create-nodes/plan-your-node/choose-a-node-building-style.md)
+> Commit-pinned source for n8n main: [docs/connect/create-nodes/plan-your-node/choose-a-node-building-style.md](https://github.com/n8n-io/n8n-docs/blob/895c888b78634f5877156b7df5ff8828f020a60f/docs/connect/create-nodes/plan-your-node/choose-a-node-building-style.md)
 
 # Choose your node building approach <a id="choose-your-node-building-approach"></a>
 

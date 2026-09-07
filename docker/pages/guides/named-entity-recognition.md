@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/named-entity-recognition.md](https://github.com/docker/docs/blob/42a44992f49bda99e0caf2b015f0cfb0bb0c488c/content/guides/named-entity-recognition.md)
+> Commit-pinned source for Docker main: [content/guides/named-entity-recognition.md](https://github.com/docker/docs/blob/389c95117e11ce9c45348290463964caaca3c75b/content/guides/named-entity-recognition.md)
 
 # Build a named entity recognition app
 

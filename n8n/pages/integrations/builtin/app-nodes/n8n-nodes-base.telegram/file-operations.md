@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/builtin/app-nodes/n8n-nodes-base.telegram/file-operations.md](https://github.com/n8n-io/n8n-docs/blob/4ccd858d79f4bd25f580432b08de2ecf6b88f8f6/docs/integrations/builtin/app-nodes/n8n-nodes-base.telegram/file-operations.md)
+> Commit-pinned source for n8n main: [docs/integrations/builtin/app-nodes/n8n-nodes-base.telegram/file-operations.md](https://github.com/n8n-io/n8n-docs/blob/895c888b78634f5877156b7df5ff8828f020a60f/docs/integrations/builtin/app-nodes/n8n-nodes-base.telegram/file-operations.md)
 
 # Telegram node File operations <a id="telegram-node-file-operations"></a>
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/extensions/extensions-sdk/extensions/share.md](https://github.com/docker/docs/blob/42a44992f49bda99e0caf2b015f0cfb0bb0c488c/content/manuals/extensions/extensions-sdk/extensions/share.md)
+> Commit-pinned source for Docker main: [content/manuals/extensions/extensions-sdk/extensions/share.md](https://github.com/docker/docs/blob/389c95117e11ce9c45348290463964caaca3c75b/content/manuals/extensions/extensions-sdk/extensions/share.md)
 
 # Share your extension
 
@@ -14,7 +14,7 @@ Docker lets you share your extensions using a URL.
 
 When people navigate to this URL, it opens Docker Desktop and displays a preview of your extension in the same way as an extension in the Marketplace. From the preview, users can then select **Install**.
 
-![Navigate to extension link](https://raw.githubusercontent.com/docker/docs/42a44992f49bda99e0caf2b015f0cfb0bb0c488c/content/manuals/extensions/extensions-sdk/extensions/images/open-share.png)
+![Navigate to extension link](https://raw.githubusercontent.com/docker/docs/389c95117e11ce9c45348290463964caaca3c75b/content/manuals/extensions/extensions-sdk/extensions/images/open-share.png)
 
 To generate this link you can either:
 
@@ -26,7 +26,7 @@ To generate this link you can either:
 
 - Once you have installed your extension locally, navigate to the **Manage** tab and select **Share**.
 
-![Share button](https://raw.githubusercontent.com/docker/docs/42a44992f49bda99e0caf2b015f0cfb0bb0c488c/content/manuals/extensions/extensions-sdk/extensions/images/list-preview.png)
+![Share button](https://raw.githubusercontent.com/docker/docs/389c95117e11ce9c45348290463964caaca3c75b/content/manuals/extensions/extensions-sdk/extensions/images/list-preview.png)
 
 > \[!NOTE]
 >

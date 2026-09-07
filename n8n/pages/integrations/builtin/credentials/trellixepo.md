@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/builtin/credentials/trellixepo.md](https://github.com/n8n-io/n8n-docs/blob/4ccd858d79f4bd25f580432b08de2ecf6b88f8f6/docs/integrations/builtin/credentials/trellixepo.md)
+> Commit-pinned source for n8n main: [docs/integrations/builtin/credentials/trellixepo.md](https://github.com/n8n-io/n8n-docs/blob/895c888b78634f5877156b7df5ff8828f020a60f/docs/integrations/builtin/credentials/trellixepo.md)
 
 # Trellix ePO credentials <a id="trellix-epo-credentials"></a>
 
