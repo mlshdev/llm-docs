@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/engine/swarm/services.md](https://github.com/docker/docs/blob/9adf4bad79fbdb239706ba723e51ee9c6473bcbc/content/manuals/engine/swarm/services.md)
+> Commit-pinned source for Docker main: [content/manuals/engine/swarm/services.md](https://github.com/docker/docs/blob/b98c400647c70f3e2177d513802d5d785aef232e/content/manuals/engine/swarm/services.md)
 
 # Deploy services to a swarm
 
@@ -791,7 +791,7 @@ possible to fulfill.
 
 This diagram illustrates how placement preferences work:
 
-![How placement preferences work](https://raw.githubusercontent.com/docker/docs/9adf4bad79fbdb239706ba723e51ee9c6473bcbc/content/manuals/engine/swarm/images/placement_prefs.png)
+![How placement preferences work](https://raw.githubusercontent.com/docker/docs/b98c400647c70f3e2177d513802d5d785aef232e/content/manuals/engine/swarm/images/placement_prefs.png)
 
 When updating a service with `docker service update`, `--placement-pref-add`
 appends a new placement preference after all existing placement preferences.

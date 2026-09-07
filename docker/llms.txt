@@ -1,6 +1,6 @@
 # Docker main
 
-> Documentation generated from the latest `main` branch commit of [docker/docs](https://github.com/docker/docs) and pinned to immutable source commit `9adf4bad79fbdb239706ba723e51ee9c6473bcbc`.
+> Documentation generated from the latest `main` branch commit of [docker/docs](https://github.com/docker/docs) and pinned to immutable source commit `b98c400647c70f3e2177d513802d5d785aef232e`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Docker main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -8,6 +8,7 @@
 - Hugo content and vendored Markdown mounts are normalized without executing Hugo; includes and documentation shortcodes are expanded into plain Markdown.
 - Docker and sbx CLI references, OpenAPI endpoints, glossary entries, and sample indexes are generated from data pinned in the same source archive.
 - Non-rendered stubs, redirects, assets, and include-only fragments are omitted.
+- Quarantined sources (1): upstream pages using constructs this generator cannot convert yet are omitted and listed in `manifest.json`.
 
 ## Get Started
 
@@ -28,13 +29,9 @@
 - [What is Docker Compose?](pages/get-started/docker-concepts/the-basics/what-is-docker-compose.md): Source `content/get-started/docker-concepts/the-basics/what-is-docker-compose.md`.
 - [What is Docker?](pages/get-started/docker-overview.md): Source `content/get-started/docker-overview.md`.
 - [Get Docker](pages/get-started/get-docker.md): Source `content/get-started/get-docker.md`.
-- [Get started](pages/get-started/index.md): Source `content/get-started/_index.md`.
-- [Build and push your first image](pages/get-started/introduction/build-and-push-first-image.md): Source `content/get-started/introduction/build-and-push-first-image.md`.
-- [Develop with containers](pages/get-started/introduction/develop-with-containers.md): Source `content/get-started/introduction/develop-with-containers.md`.
-- [Get Docker Desktop](pages/get-started/introduction/get-docker-desktop.md): Source `content/get-started/introduction/get-docker-desktop.md`.
-- [Introduction](pages/get-started/introduction/index.md): Source `content/get-started/introduction/_index.md`.
-- [What's next](pages/get-started/introduction/whats-next.md): Source `content/get-started/introduction/whats-next.md`.
 - [Educational resources](pages/get-started/resources.md): Source `content/get-started/resources.md`.
+- [Roll out Docker to a pilot group](pages/get-started/tutorials/admin-set-up.md): Source `content/get-started/tutorials/admin-set-up.md`.
+- [Build and share a containerized application](pages/get-started/tutorials/run-an-app.md): Source `content/get-started/tutorials/run-an-app.md`.
 
 ## Guides
 
@@ -321,6 +318,7 @@
 - [Codex](pages/manuals/ai/sandboxes/agents/codex.md): Source `content/manuals/ai/sandboxes/agents/codex.md`.
 - [Copilot](pages/manuals/ai/sandboxes/agents/copilot.md): Source `content/manuals/ai/sandboxes/agents/copilot.md`.
 - [Cursor](pages/manuals/ai/sandboxes/agents/cursor.md): Source `content/manuals/ai/sandboxes/agents/cursor.md`.
+- [Devin](pages/manuals/ai/sandboxes/agents/devin.md): Source `content/manuals/ai/sandboxes/agents/devin.md`.
 - [Docker Agent](pages/manuals/ai/sandboxes/agents/docker-agent.md): Source `content/manuals/ai/sandboxes/agents/docker-agent.md`.
 - [Droid](pages/manuals/ai/sandboxes/agents/droid.md): Source `content/manuals/ai/sandboxes/agents/droid.md`.
 - [Gemini](pages/manuals/ai/sandboxes/agents/gemini.md): Source `content/manuals/ai/sandboxes/agents/gemini.md`.

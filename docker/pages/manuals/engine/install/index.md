@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/engine/install/_index.md](https://github.com/docker/docs/blob/9adf4bad79fbdb239706ba723e51ee9c6473bcbc/content/manuals/engine/install/_index.md)
+> Commit-pinned source for Docker main: [content/manuals/engine/install/_index.md](https://github.com/docker/docs/blob/b98c400647c70f3e2177d513802d5d785aef232e/content/manuals/engine/install/_index.md)
 
 # Install Docker Engine
 
@@ -91,4 +91,4 @@ Security reports are greatly appreciated, and Docker will publicly thank you for
 ## Get started
 
 After setting up Docker, you can learn the basics with
-[Getting started with Docker](https://docs.docker.com/get-started/introduction/).
+[Build and share a containerized application](https://docs.docker.com/get-started/tutorials/run-an-app/).

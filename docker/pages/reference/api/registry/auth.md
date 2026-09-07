@@ -1,10 +1,10 @@
-> Commit-pinned source for Docker main: [content/reference/api/registry/auth.md](https://github.com/docker/docs/blob/9adf4bad79fbdb239706ba723e51ee9c6473bcbc/content/reference/api/registry/auth.md)
+> Commit-pinned source for Docker main: [content/reference/api/registry/auth.md](https://github.com/docker/docs/blob/b98c400647c70f3e2177d513802d5d785aef232e/content/reference/api/registry/auth.md)
 
 # Registry authentication
 
 This document outlines the registry authentication scheme:
 
-![v2 registry auth](https://raw.githubusercontent.com/docker/docs/9adf4bad79fbdb239706ba723e51ee9c6473bcbc/content/reference/api/registry/images/v2-registry-auth.png)
+![v2 registry auth](https://raw.githubusercontent.com/docker/docs/b98c400647c70f3e2177d513802d5d785aef232e/content/reference/api/registry/images/v2-registry-auth.png)
 
 1. Attempt to begin a push/pull operation with the registry.
 2. If the registry requires authorization it will return a `401 Unauthorized`

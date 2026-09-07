@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/mcp-gateway.md](https://github.com/docker/docs/blob/9adf4bad79fbdb239706ba723e51ee9c6473bcbc/content/manuals/ai/sandboxes/mcp-gateway.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/mcp-gateway.md](https://github.com/docker/docs/blob/b98c400647c70f3e2177d513802d5d785aef232e/content/manuals/ai/sandboxes/mcp-gateway.md)
 
 # MCP gateway
 
@@ -23,7 +23,7 @@ loading, live updates, and organization governance.
 
 - Sign in with `sbx login`.
 - Use an agent integration that configures MCP at startup: Claude Code, Codex,
-  Gemini, Kiro, or OpenCode.
+  Devin, Gemini, Kiro, or OpenCode.
 - For remote servers that require OAuth without Dynamic Client Registration,
   register an OAuth client with the server provider.
 - For `--local --url` registrations that resolve to OCI packages, use a host

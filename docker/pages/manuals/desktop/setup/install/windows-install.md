@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/desktop/setup/install/windows-install.md](https://github.com/docker/docs/blob/9adf4bad79fbdb239706ba723e51ee9c6473bcbc/content/manuals/desktop/setup/install/windows-install.md)
+> Commit-pinned source for Docker main: [content/manuals/desktop/setup/install/windows-install.md](https://github.com/docker/docs/blob/b98c400647c70f3e2177d513802d5d785aef232e/content/manuals/desktop/setup/install/windows-install.md)
 
 > **Docker Desktop terms**
 >
@@ -198,7 +198,7 @@ Docker Desktop does not start automatically after installation. To start Docker 
 
 1. Search for Docker, and select **Docker Desktop** in the search results.
 
-2. The Docker menu (![whale menu](https://raw.githubusercontent.com/docker/docs/9adf4bad79fbdb239706ba723e51ee9c6473bcbc/content/manuals/desktop/setup/install/images/whale-x.svg)) displays the Docker Subscription Service Agreement.
+2. The Docker menu (![whale menu](https://raw.githubusercontent.com/docker/docs/b98c400647c70f3e2177d513802d5d785aef232e/content/manuals/desktop/setup/install/images/whale-x.svg)) displays the Docker Subscription Service Agreement.
 
    Here’s a summary of the key points:
 
@@ -361,7 +361,7 @@ again when you switch back.
 ## Where to go next
 
 - Explore [Docker's subscriptions](https://www.docker.com/pricing?ref=Docs\&refAction=DocsDesktopWindowsInstall) to see what Docker can offer you.
-- [Get started with Docker](https://docs.docker.com/get-started/introduction/).
+- [Build and share a containerized application](https://docs.docker.com/get-started/tutorials/run-an-app/).
 - [Explore Docker Desktop](https://docs.docker.com/desktop/use-desktop/) and all its features.
 - [Troubleshooting](https://docs.docker.com/desktop/troubleshoot-and-support/troubleshoot/) describes common problems, workarounds, and
   how to get support.

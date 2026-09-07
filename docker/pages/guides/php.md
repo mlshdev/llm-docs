@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/php.md](https://github.com/docker/docs/blob/9adf4bad79fbdb239706ba723e51ee9c6473bcbc/content/guides/php.md)
+> Commit-pinned source for Docker main: [content/guides/php.md](https://github.com/docker/docs/blob/b98c400647c70f3e2177d513802d5d785aef232e/content/guides/php.md)
 
 The PHP language-specific guide teaches you how to create a containerized PHP application using Docker. In this guide, you'll learn how to:
 

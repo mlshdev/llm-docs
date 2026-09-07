@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/testcontainers-java-micronaut-wiremock.md](https://github.com/docker/docs/blob/9adf4bad79fbdb239706ba723e51ee9c6473bcbc/content/guides/testcontainers-java-micronaut-wiremock.md)
+> Commit-pinned source for Docker main: [content/guides/testcontainers-java-micronaut-wiremock.md](https://github.com/docker/docs/blob/b98c400647c70f3e2177d513802d5d785aef232e/content/guides/testcontainers-java-micronaut-wiremock.md)
 
 # Testing REST API integrations in Micronaut apps using WireMock
 

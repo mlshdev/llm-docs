@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/desktop/setup/install/linux/fedora.md](https://github.com/docker/docs/blob/9adf4bad79fbdb239706ba723e51ee9c6473bcbc/content/manuals/desktop/setup/install/linux/fedora.md)
+> Commit-pinned source for Docker main: [content/manuals/desktop/setup/install/linux/fedora.md](https://github.com/docker/docs/blob/b98c400647c70f3e2177d513802d5d785aef232e/content/manuals/desktop/setup/install/linux/fedora.md)
 
 # Install Docker Desktop on Fedora
 
@@ -130,7 +130,7 @@ $ sudo dnf install ./docker-desktop-x86_64.rpm
 ## Next steps
 
 - Explore [Docker's subscriptions](https://www.docker.com/pricing?ref=Docs\&refAction=DocsDesktopFedoraInstall) to see what Docker can offer you.
-- Take a look at [Get started with Docker](https://docs.docker.com/get-started/introduction/) to learn how to build an image and run it as a containerized application.
+- Take a look at [Get started with Docker](https://docs.docker.com/get-started/tutorials/run-an-app/) to learn how to build an image and run it as a containerized application.
 - [Explore Docker Desktop](https://docs.docker.com/desktop/use-desktop/) and all its features.
 - [Troubleshooting](https://docs.docker.com/desktop/troubleshoot-and-support/troubleshoot/) describes common problems, workarounds, how to run and submit diagnostics, and submit issues.
 - [FAQs](https://docs.docker.com/desktop/troubleshoot-and-support/faqs/general/) provide answers to frequently asked questions.

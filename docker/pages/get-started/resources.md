@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/get-started/resources.md](https://github.com/docker/docs/blob/9adf4bad79fbdb239706ba723e51ee9c6473bcbc/content/get-started/resources.md)
+> Commit-pinned source for Docker main: [content/get-started/resources.md](https://github.com/docker/docs/blob/b98c400647c70f3e2177d513802d5d785aef232e/content/get-started/resources.md)
 
 # Educational resources
 
@@ -6,7 +6,9 @@ Docker and the broader community of Docker experts have put together many differ
 
 ## Docker Training
 
-Learn Docker and containerization fundamentals through self-paced, [hands-on training courses](https://docs.docker.com/get-started/introduction/) created by Docker experts.
+Start with the [containerization tutorial](https://docs.docker.com/get-started/tutorials/run-an-app/)
+for a guided introduction to running, building, and sharing containerized
+applications.
 
 ## Books
 

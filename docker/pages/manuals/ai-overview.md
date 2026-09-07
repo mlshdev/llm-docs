@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/ai-overview.md](https://github.com/docker/docs/blob/9adf4bad79fbdb239706ba723e51ee9c6473bcbc/content/manuals/ai-overview.md)
+> Commit-pinned source for Docker main: [content/manuals/ai-overview.md](https://github.com/docker/docs/blob/b98c400647c70f3e2177d513802d5d785aef232e/content/manuals/ai-overview.md)
 
 # Docker AI overview
 
@@ -28,7 +28,7 @@ not specific to Docker tasks.
 
 **Docker Sandboxes** provides isolated microVM environments for running coding
 agents. It supports multiple agents including Claude Code, Codex, Copilot,
-Gemini, and Docker Agent. Sandboxes is the isolation layer — the agents
+Devin, Gemini, and Docker Agent. Sandboxes is the isolation layer — the agents
 themselves are separate tools.
 
 **Model Runner** lets you run LLMs locally. Other tools like Docker Agent can

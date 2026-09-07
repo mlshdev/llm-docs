@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/features/code-mode/index.md](https://github.com/docker/docs/blob/9adf4bad79fbdb239706ba723e51ee9c6473bcbc/_vendor/github.com/docker/docker-agent/docs/features/code-mode/index.md)
+> Commit-pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/features/code-mode/index.md](https://github.com/docker/docs/blob/b98c400647c70f3e2177d513802d5d785aef232e/_vendor/github.com/docker/docker-agent/docs/features/code-mode/index.md)
 
 *Let an agent write JavaScript that orchestrates several tool calls in one turn instead of calling tools one at a time.*
 

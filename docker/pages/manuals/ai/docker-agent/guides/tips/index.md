@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/guides/tips/index.md](https://github.com/docker/docs/blob/9adf4bad79fbdb239706ba723e51ee9c6473bcbc/_vendor/github.com/docker/docker-agent/docs/guides/tips/index.md)
+> Commit-pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/guides/tips/index.md](https://github.com/docker/docs/blob/b98c400647c70f3e2177d513802d5d785aef232e/_vendor/github.com/docker/docker-agent/docs/guides/tips/index.md)
 
 *Expert guidance for building effective, efficient, and secure agents.*
 

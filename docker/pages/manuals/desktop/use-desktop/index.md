@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/desktop/use-desktop/_index.md](https://github.com/docker/docs/blob/9adf4bad79fbdb239706ba723e51ee9c6473bcbc/content/manuals/desktop/use-desktop/_index.md)
+> Commit-pinned source for Docker main: [content/manuals/desktop/use-desktop/_index.md](https://github.com/docker/docs/blob/b98c400647c70f3e2177d513802d5d785aef232e/content/manuals/desktop/use-desktop/_index.md)
 
 # Explore Docker Desktop
 
@@ -14,7 +14,8 @@ In addition, the Docker Desktop Dashboard lets you:
 - Be notified of new releases, installation progress updates, and more in the **Notifications center**. Select the bell icon in the bottom-right corner of the Docker Desktop Dashboard to access the notification center.
 - Access the **Learning center** from the Dashboard header. It helps you get started with quick in-app walkthroughs and provides other resources for learning about Docker.
 
-  For a more detailed guide about getting started, see [Get started](https://docs.docker.com/get-started/introduction/).
+  For a guided introduction, see
+  [Build and share a containerized application](https://docs.docker.com/get-started/tutorials/run-an-app/).
 - Access [Docker Hub](https://docs.docker.com/docker-hub/) to search, browse, pull, run, or view details
   of images.
 - Navigate to [Docker Extensions](https://docs.docker.com/extensions/) if you have enabled it.

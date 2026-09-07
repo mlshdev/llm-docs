@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/features/skills/index.md](https://github.com/docker/docs/blob/9adf4bad79fbdb239706ba723e51ee9c6473bcbc/_vendor/github.com/docker/docker-agent/docs/features/skills/index.md)
+> Commit-pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/features/skills/index.md](https://github.com/docker/docs/blob/b98c400647c70f3e2177d513802d5d785aef232e/_vendor/github.com/docker/docker-agent/docs/features/skills/index.md)
 
 *Skills provide specialized instructions that agents can load on demand when a task matches a skill's description.*
 

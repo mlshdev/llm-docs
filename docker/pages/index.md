@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/_index.md](https://github.com/docker/docs/blob/9adf4bad79fbdb239706ba723e51ee9c6473bcbc/content/_index.md)
+> Commit-pinned source for Docker main: [content/_index.md](https://github.com/docker/docs/blob/b98c400647c70f3e2177d513802d5d785aef232e/content/_index.md)
 
 # Home
 
@@ -7,7 +7,8 @@ reference material for everyday development and operations tasks.
 
 ## Browse docs by area
 
-- [Get started](https://docs.docker.com/get-started/): Learn Docker basics and core concepts.
+- [Get started](https://docs.docker.com/get-started/): Run an application, sandbox an AI agent, or
+  roll out Docker.
 
 - [Guides](https://docs.docker.com/guides/): Follow task-focused walkthroughs for common workflows.
 
@@ -45,8 +46,8 @@ reference material for everyday development and operations tasks.
 
 ## Common questions
 
-- [How do I get started with Docker?](https://docs.docker.com/get-started/docker-overview/)
-- [Can I run my AI agent in a sandbox?](https://docs.docker.com/ai/sandboxes/get-started/)
-- [What is a container?](https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-a-container/)
+- [How do I get started with Docker?](https://docs.docker.com/get-started/)
+- [How do I containerize an application?](https://docs.docker.com/get-started/tutorials/run-an-app/)
+- [Can I run my AI agent in a sandbox?](https://docs.docker.com/get-started/tutorials/run-an-agent/)
 - [What are Docker Hardened Images?](https://docs.docker.com/dhi/)
 - [Why should I use Docker Compose?](https://docs.docker.com/compose/)

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/customize/kits.md](https://github.com/docker/docs/blob/9adf4bad79fbdb239706ba723e51ee9c6473bcbc/content/manuals/ai/sandboxes/customize/kits.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/customize/kits.md](https://github.com/docker/docs/blob/b98c400647c70f3e2177d513802d5d785aef232e/content/manuals/ai/sandboxes/customize/kits.md)
 
 # Kits
 
@@ -112,6 +112,7 @@ file removes. In this table, `~` is `/home/agent`.
 | `codex`            | `~/.codex/config.toml`                                                |
 | `copilot`          | `~/.copilot/config.json`                                              |
 | `cursor`           | `~/.cursor/cli-config.json`                                           |
+| `devin`            | `~/.config/devin/config.json`, `~/.config/devin/mcp_config.json`      |
 | `gemini`           | `~/.gemini/settings.json`                                             |
 | `kiro`             | `~/.kiro/settings/mcp.json`                                           |
 | `opencode`         | `~/.config/opencode/opencode.json`                                    |

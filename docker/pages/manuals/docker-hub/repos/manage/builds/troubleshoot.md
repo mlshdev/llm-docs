@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/docker-hub/repos/manage/builds/troubleshoot.md](https://github.com/docker/docs/blob/9adf4bad79fbdb239706ba723e51ee9c6473bcbc/content/manuals/docker-hub/repos/manage/builds/troubleshoot.md)
+> Commit-pinned source for Docker main: [content/manuals/docker-hub/repos/manage/builds/troubleshoot.md](https://github.com/docker/docs/blob/b98c400647c70f3e2177d513802d5d785aef232e/content/manuals/docker-hub/repos/manage/builds/troubleshoot.md)
 
 # Troubleshoot your autobuilds
 
@@ -17,7 +17,7 @@
 If a build fails, a **Retry** icon appears next to the build report line on the
 **General** and **Builds** tabs. The **Build report** page and **Timeline logs** also display a **Retry** button.
 
-![Timeline view showing the retry build button](https://raw.githubusercontent.com/docker/docs/9adf4bad79fbdb239706ba723e51ee9c6473bcbc/content/manuals/docker-hub/repos/manage/builds/images/retry-build.png)
+![Timeline view showing the retry build button](https://raw.githubusercontent.com/docker/docs/b98c400647c70f3e2177d513802d5d785aef232e/content/manuals/docker-hub/repos/manage/builds/images/retry-build.png)
 
 > \[!NOTE]
 >

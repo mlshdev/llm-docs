@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/desktop/setup/install/mac-install.md](https://github.com/docker/docs/blob/9adf4bad79fbdb239706ba723e51ee9c6473bcbc/content/manuals/desktop/setup/install/mac-install.md)
+> Commit-pinned source for Docker main: [content/manuals/desktop/setup/install/mac-install.md](https://github.com/docker/docs/blob/b98c400647c70f3e2177d513802d5d785aef232e/content/manuals/desktop/setup/install/mac-install.md)
 
 # Install Docker Desktop on Mac
 
@@ -151,7 +151,7 @@ $ sudo /Applications/Docker.app/Contents/MacOS/install --user testuser --proxy-h
 ## Where to go next
 
 - Explore [Docker's subscriptions](https://www.docker.com/pricing?ref=Docs\&refAction=DocsDesktopMacInstall) to see what Docker can offer you.
-- [Get started with Docker](https://docs.docker.com/get-started/introduction/).
+- [Build and share a containerized application](https://docs.docker.com/get-started/tutorials/run-an-app/).
 - [Explore Docker Desktop](https://docs.docker.com/desktop/use-desktop/) and all its features.
 - [Troubleshooting](https://docs.docker.com/desktop/troubleshoot-and-support/troubleshoot/) describes common problems, workarounds, how
   to run and submit diagnostics, and submit issues.

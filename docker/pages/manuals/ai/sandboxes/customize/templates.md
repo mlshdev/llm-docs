@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/customize/templates.md](https://github.com/docker/docs/blob/9adf4bad79fbdb239706ba723e51ee9c6473bcbc/content/manuals/ai/sandboxes/customize/templates.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/customize/templates.md](https://github.com/docker/docs/blob/b98c400647c70f3e2177d513802d5d785aef232e/content/manuals/ai/sandboxes/customize/templates.md)
 
 # Templates
 
@@ -44,6 +44,7 @@ CLI, and common development tools like Node.js, Python, Go, and Java.
 | `codex`               | [OpenAI Codex](https://github.com/openai/codex)                      |
 | `copilot`             | [GitHub Copilot](https://github.com/github/copilot-cli)              |
 | `cursor-agent`        | [Cursor](https://cursor.com/cli)                                     |
+| `devin`               | [Devin CLI](https://docs.devin.ai/work-with-devin/devin-cli)         |
 | `docker-agent`        | [Docker Agent](https://github.com/docker/docker-agent)               |
 | `droid`               | [Droid](https://www.factory.ai)                                      |
 | `gemini`              | [Gemini CLI](https://github.com/google-gemini/gemini-cli)            |

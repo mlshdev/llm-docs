@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/engine/install/linux-postinstall.md](https://github.com/docker/docs/blob/9adf4bad79fbdb239706ba723e51ee9c6473bcbc/content/manuals/engine/install/linux-postinstall.md)
+> Commit-pinned source for Docker main: [content/manuals/engine/install/linux-postinstall.md](https://github.com/docker/docs/blob/b98c400647c70f3e2177d513802d5d785aef232e/content/manuals/engine/install/linux-postinstall.md)
 
 # Linux post-installation steps for Docker Engine
 
@@ -264,4 +264,4 @@ options:
 
 ## Next steps
 
-- Take a look at [Get started with Docker](https://docs.docker.com/get-started/introduction/) to learn how to build an image and run it as a containerized application.
+- Take a look at [Get started with Docker](https://docs.docker.com/get-started/tutorials/run-an-app/) to learn how to build an image and run it as a containerized application.

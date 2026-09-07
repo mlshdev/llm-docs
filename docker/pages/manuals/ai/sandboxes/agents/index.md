@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/agents/_index.md](https://github.com/docker/docs/blob/9adf4bad79fbdb239706ba723e51ee9c6473bcbc/content/manuals/ai/sandboxes/agents/_index.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/agents/_index.md](https://github.com/docker/docs/blob/b98c400647c70f3e2177d513802d5d785aef232e/content/manuals/ai/sandboxes/agents/_index.md)
 
 # Supported agents
 
@@ -8,6 +8,7 @@ Docker Sandboxes runs the following agents out of the box:
 - [Codex](https://docs.docker.com/ai/sandboxes/agents/codex/)
 - [Copilot](https://docs.docker.com/ai/sandboxes/agents/copilot/)
 - [Cursor](https://docs.docker.com/ai/sandboxes/agents/cursor/)
+- [Devin](https://docs.docker.com/ai/sandboxes/agents/devin/)
 - [Docker Agent](https://docs.docker.com/ai/sandboxes/agents/docker-agent/)
 - [Droid](https://docs.docker.com/ai/sandboxes/agents/droid/)
 - [Gemini](https://docs.docker.com/ai/sandboxes/agents/gemini/)

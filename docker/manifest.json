@@ -5,9 +5,15 @@
   "repository": "docker/docs",
   "tag": "main",
   "branch": "main",
-  "sourceCommittedAt": "2026-09-07T11:15:12Z",
-  "sourceCommit": "9adf4bad79fbdb239706ba723e51ee9c6473bcbc",
-  "documentCount": 1629,
+  "sourceCommittedAt": "2026-09-07T11:38:47Z",
+  "sourceCommit": "b98c400647c70f3e2177d513802d5d785aef232e",
+  "documentCount": 1626,
+  "quarantined": [
+    {
+      "sourcePath": "content/get-started/tutorials/run-an-agent.md",
+      "reason": "Unsupported Docker shortcode sandbox-auth in content/get-started/tutorials/run-an-agent.md"
+    }
+  ],
   "notes": [
     "Docker tracks the latest main-branch commit because docker/docs does not publish current releases.",
     "Hugo content and vendored Markdown mounts are normalized without executing Hugo; includes and documentation shortcodes are expanded into plain Markdown.",

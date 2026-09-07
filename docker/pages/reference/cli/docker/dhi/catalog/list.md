@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/dhi/docker_dhi_catalog_list.yaml](https://github.com/docker/docs/blob/9adf4bad79fbdb239706ba723e51ee9c6473bcbc/data/cli/dhi/docker_dhi_catalog_list.yaml)
+> Commit-pinned source for Docker main: [data/cli/dhi/docker_dhi_catalog_list.yaml](https://github.com/docker/docs/blob/b98c400647c70f3e2177d513802d5d785aef232e/data/cli/dhi/docker_dhi_catalog_list.yaml)
 
 # docker dhi catalog list
 

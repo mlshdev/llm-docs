@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/build/building/multi-stage.md](https://github.com/docker/docs/blob/9adf4bad79fbdb239706ba723e51ee9c6473bcbc/content/manuals/build/building/multi-stage.md)
+> Commit-pinned source for Docker main: [content/manuals/build/building/multi-stage.md](https://github.com/docker/docs/blob/b98c400647c70f3e2177d513802d5d785aef232e/content/manuals/build/building/multi-stage.md)
 
 Multi-stage builds are useful to anyone who has struggled to optimize
 Dockerfiles while keeping them easy to read and maintain.

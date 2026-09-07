@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/engine/swarm/raft.md](https://github.com/docker/docs/blob/9adf4bad79fbdb239706ba723e51ee9c6473bcbc/content/manuals/engine/swarm/raft.md)
+> Commit-pinned source for Docker main: [content/manuals/engine/swarm/raft.md](https://github.com/docker/docs/blob/b98c400647c70f3e2177d513802d5d785aef232e/content/manuals/engine/swarm/raft.md)
 
 # Raft consensus in swarm mode
 

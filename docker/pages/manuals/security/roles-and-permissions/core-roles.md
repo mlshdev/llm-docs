@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/security/roles-and-permissions/core-roles.md](https://github.com/docker/docs/blob/9adf4bad79fbdb239706ba723e51ee9c6473bcbc/content/manuals/security/roles-and-permissions/core-roles.md)
+> Commit-pinned source for Docker main: [content/manuals/security/roles-and-permissions/core-roles.md](https://github.com/docker/docs/blob/b98c400647c70f3e2177d513802d5d785aef232e/content/manuals/security/roles-and-permissions/core-roles.md)
 
 # Docker core roles and permissions
 

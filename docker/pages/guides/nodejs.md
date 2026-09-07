@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/nodejs.md](https://github.com/docker/docs/blob/9adf4bad79fbdb239706ba723e51ee9c6473bcbc/content/guides/nodejs.md)
+> Commit-pinned source for Docker main: [content/guides/nodejs.md](https://github.com/docker/docs/blob/b98c400647c70f3e2177d513802d5d785aef232e/content/guides/nodejs.md)
 
 [Node.js](https://nodejs.org/en) is a JavaScript runtime for building server-side applications. This guide shows you how to containerize a TypeScript Node.js application using Docker, starting from a simple Express API and progressively adding features like a database.
 
@@ -29,7 +29,8 @@ Start by containerizing a Node.js application.
 ### Prerequisites
 
 - You have installed the latest version of [Docker Desktop](https://docs.docker.com/get-started/get-docker/).
-- You're familiar with basic Docker concepts. If you're new to Docker, start with [Get started](https://docs.docker.com/get-started/introduction/).
+- You're familiar with basic Docker concepts. If you're new to Docker, start
+  with [Build and share a containerized application](https://docs.docker.com/get-started/tutorials/run-an-app/).
 
 ### Overview
 

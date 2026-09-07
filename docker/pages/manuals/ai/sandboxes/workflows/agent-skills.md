@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/workflows/agent-skills.md](https://github.com/docker/docs/blob/9adf4bad79fbdb239706ba723e51ee9c6473bcbc/content/manuals/ai/sandboxes/workflows/agent-skills.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/workflows/agent-skills.md](https://github.com/docker/docs/blob/b98c400647c70f3e2177d513802d5d785aef232e/content/manuals/ai/sandboxes/workflows/agent-skills.md)
 
 # Share agent skills
 
@@ -76,13 +76,13 @@ The command scans the following directories in order and copies each skill
 subdirectory into the shared store. When the sandbox starts, `sbx` mounts the
 store at the path the agent reads inside the sandbox.
 
-| Agent       | Host source         | Sandbox mount target          |
-| ----------- | ------------------- | ----------------------------- |
-| Claude Code | `~/.claude/skills`  | `/home/agent/.claude/skills`  |
-| Codex       | `~/.agents/skills`  | `/home/agent/.agents/skills`  |
-| Copilot     | `~/.copilot/skills` | `/home/agent/.copilot/skills` |
-| Cursor      | `~/.cursor/skills`  | `/home/agent/.cursor/skills`  |
-| Droid       | `~/.factory/skills` | `/home/agent/.factory/skills` |
+| Agent           | Host source         | Sandbox mount target          |
+| --------------- | ------------------- | ----------------------------- |
+| Claude Code     | `~/.claude/skills`  | `/home/agent/.claude/skills`  |
+| Codex and Devin | `~/.agents/skills`  | `/home/agent/.agents/skills`  |
+| Copilot         | `~/.copilot/skills` | `/home/agent/.copilot/skills` |
+| Cursor          | `~/.cursor/skills`  | `/home/agent/.cursor/skills`  |
+| Droid           | `~/.factory/skills` | `/home/agent/.factory/skills` |
 
 All imported skills go into the same store, regardless of their source. If
 more than one source contains a skill with the same directory name, the skill

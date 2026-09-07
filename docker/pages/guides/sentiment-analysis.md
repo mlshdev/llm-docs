@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/sentiment-analysis.md](https://github.com/docker/docs/blob/9adf4bad79fbdb239706ba723e51ee9c6473bcbc/content/guides/sentiment-analysis.md)
+> Commit-pinned source for Docker main: [content/guides/sentiment-analysis.md](https://github.com/docker/docs/blob/b98c400647c70f3e2177d513802d5d785aef232e/content/guides/sentiment-analysis.md)
 
 # Build a sentiment analysis app
 

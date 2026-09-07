@@ -1,3 +1,3 @@
-> Commit-pinned source for Docker main: [content/reference/samples/ai-ml.md](https://github.com/docker/docs/blob/9adf4bad79fbdb239706ba723e51ee9c6473bcbc/content/reference/samples/ai-ml.md)
+> Commit-pinned source for Docker main: [content/reference/samples/ai-ml.md](https://github.com/docker/docs/blob/b98c400647c70f3e2177d513802d5d785aef232e/content/reference/samples/ai-ml.md)
 
 # AI/ML samples
