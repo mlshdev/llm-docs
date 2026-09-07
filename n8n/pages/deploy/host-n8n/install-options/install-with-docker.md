@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/host-n8n/install-options/install-with-docker.md](https://github.com/n8n-io/n8n-docs/blob/3317373ce39c3ce2406c8e3d99bb2da7f7180321/docs/deploy/host-n8n/install-options/install-with-docker.md)
+> Commit-pinned source for n8n main: [docs/deploy/host-n8n/install-options/install-with-docker.md](https://github.com/n8n-io/n8n-docs/blob/4ccd858d79f4bd25f580432b08de2ecf6b88f8f6/docs/deploy/host-n8n/install-options/install-with-docker.md)
 
 # Install with Docker
 
@@ -115,7 +115,7 @@ You can find a complete `docker-compose` file for PostgreSQL in the [n8n hosting
 
 To update n8n, in Docker Desktop, navigate to the **Images** tab and select **Pull** from the context menu to download the latest n8n image:
 
-![Docker Desktop Images tab with the row context menu open and Pull available](https://raw.githubusercontent.com/n8n-io/n8n-docs/3317373ce39c3ce2406c8e3d99bb2da7f7180321/docs/deploy/.gitbook/assets/docker_desktop.png)
+![Docker Desktop Images tab with the row context menu open and Pull available](https://raw.githubusercontent.com/n8n-io/n8n-docs/4ccd858d79f4bd25f580432b08de2ecf6b88f8f6/docs/deploy/.gitbook/assets/docker_desktop.png)
 
 You can also use the command line to pull the latest, or a specific version:
 
@@ -173,6 +173,10 @@ docker compose up -d
 > **Development tooling**
 >
 > The tunnel feature is a convenience tool for local development. The underlying implementation may change between n8n versions.
+
+Watch a video guide to setting up the tunnel using Cloudflare or ngrok:
+
+[Embedded media](https://www.youtube.com/embed/O9dpO81dEQ0)
 
 To use webhooks for trigger nodes of external services like GitHub, n8n has to be reachable from the web. n8n provides a tunnel service using [cloudflared](https://github.com/cloudflare/cloudflared) that redirects requests from the web to your local n8n instance. Docker must be installed for the tunnel to work.
 
