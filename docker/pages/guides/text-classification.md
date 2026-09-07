@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/text-classification.md](https://github.com/docker/docs/blob/195c0626b986095e849a7353dd94af1f46f32787/content/guides/text-classification.md)
+> Commit-pinned source for Docker main: [content/guides/text-classification.md](https://github.com/docker/docs/blob/371255294cf8db2ee20206bf5cc9c165a3a1ea16/content/guides/text-classification.md)
 
 # Build a text recognition app
 

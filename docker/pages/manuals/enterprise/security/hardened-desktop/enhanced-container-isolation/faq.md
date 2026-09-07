@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/enterprise/security/hardened-desktop/enhanced-container-isolation/faq.md](https://github.com/docker/docs/blob/195c0626b986095e849a7353dd94af1f46f32787/content/manuals/enterprise/security/hardened-desktop/enhanced-container-isolation/faq.md)
+> Commit-pinned source for Docker main: [content/manuals/enterprise/security/hardened-desktop/enhanced-container-isolation/faq.md](https://github.com/docker/docs/blob/371255294cf8db2ee20206bf5cc9c165a3a1ea16/content/manuals/enterprise/security/hardened-desktop/enhanced-container-isolation/faq.md)
 
 **Hardened Docker Desktop requirements**
 
@@ -53,7 +53,7 @@ ECI protection varies by container type and Docker Desktop version:
 
 - Containers created with `docker run` and `docker create`
 - Containers using the `docker-container` build driver
-- Kubernetes with the Kind provisioner
+- Kubernetes with the `kind` provisioner
 
 ### Platform dependent
 
@@ -63,7 +63,7 @@ ECI protection varies by container type and Docker Desktop version:
 
 - Docker Extensions
 - Docker Debug containers
-- Kubernetes with Kubeadm provisioner
+- Kubernetes with `kubeadm` provisioner
 
 For complete details, see [ECI limitations](https://docs.docker.com/enterprise/security/hardened-desktop/enhanced-container-isolation/limitations/).
 

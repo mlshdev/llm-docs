@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/get-started/docker-concepts/building-images/build-tag-and-publish-an-image.md](https://github.com/docker/docs/blob/195c0626b986095e849a7353dd94af1f46f32787/content/get-started/docker-concepts/building-images/build-tag-and-publish-an-image.md)
+> Commit-pinned source for Docker main: [content/get-started/docker-concepts/building-images/build-tag-and-publish-an-image.md](https://github.com/docker/docs/blob/371255294cf8db2ee20206bf5cc9c165a3a1ea16/content/get-started/docker-concepts/building-images/build-tag-and-publish-an-image.md)
 
 # Build, tag, and publish an image
 

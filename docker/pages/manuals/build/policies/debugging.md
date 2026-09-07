@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/build/policies/debugging.md](https://github.com/docker/docs/blob/195c0626b986095e849a7353dd94af1f46f32787/content/manuals/build/policies/debugging.md)
+> Commit-pinned source for Docker main: [content/manuals/build/policies/debugging.md](https://github.com/docker/docs/blob/371255294cf8db2ee20206bf5cc9c165a3a1ea16/content/manuals/build/policies/debugging.md)
 
 When policies don't work as expected, use the tools available to inspect policy
 evaluation and understand what's happening. This guide covers the debugging

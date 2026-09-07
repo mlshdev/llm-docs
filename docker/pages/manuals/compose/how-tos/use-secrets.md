@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/compose/how-tos/use-secrets.md](https://github.com/docker/docs/blob/195c0626b986095e849a7353dd94af1f46f32787/content/manuals/compose/how-tos/use-secrets.md)
+> Commit-pinned source for Docker main: [content/manuals/compose/how-tos/use-secrets.md](https://github.com/docker/docs/blob/371255294cf8db2ee20206bf5cc9c165a3a1ea16/content/manuals/compose/how-tos/use-secrets.md)
 
 # Manage secrets securely in Docker Compose
 

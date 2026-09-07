@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/enterprise/security/enforce-sign-in/_index.md](https://github.com/docker/docs/blob/195c0626b986095e849a7353dd94af1f46f32787/content/manuals/enterprise/security/enforce-sign-in/_index.md)
+> Commit-pinned source for Docker main: [content/manuals/enterprise/security/enforce-sign-in/_index.md](https://github.com/docker/docs/blob/371255294cf8db2ee20206bf5cc9c165a3a1ea16/content/manuals/enterprise/security/enforce-sign-in/_index.md)
 
 # Enforce sign-in for Docker Desktop
 
@@ -21,7 +21,7 @@ This page provides an overview of how sign-in enforcement works.
 
 ## How sign-in enforcement works
 
-When Docker Desktop detects a registry key, `.plist` file, or
+When Docker Desktop detects a registry key, configuration profile, `.plist` file, or
 `registry.json` file:
 
 - A **Sign in required!** prompt appears, requiring users to sign

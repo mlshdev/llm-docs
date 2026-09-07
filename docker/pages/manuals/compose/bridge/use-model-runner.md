@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/compose/bridge/use-model-runner.md](https://github.com/docker/docs/blob/195c0626b986095e849a7353dd94af1f46f32787/content/manuals/compose/bridge/use-model-runner.md)
+> Commit-pinned source for Docker main: [content/manuals/compose/bridge/use-model-runner.md](https://github.com/docker/docs/blob/371255294cf8db2ee20206bf5cc9c165a3a1ea16/content/manuals/compose/bridge/use-model-runner.md)
 
 Compose Bridge supports model-aware deployments. It can deploy and configure Docker Model Runner, a lightweight service that hosts and serves machine LLMs.
 

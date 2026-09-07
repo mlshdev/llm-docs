@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/community/contributing/index.md](https://github.com/docker/docs/blob/195c0626b986095e849a7353dd94af1f46f32787/_vendor/github.com/docker/docker-agent/docs/community/contributing/index.md)
+> Commit-pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/community/contributing/index.md](https://github.com/docker/docs/blob/371255294cf8db2ee20206bf5cc9c165a3a1ea16/_vendor/github.com/docker/docker-agent/docs/community/contributing/index.md)
 
 *Docker Agent is open source. Here's how to set up your development environment and contribute.*
 

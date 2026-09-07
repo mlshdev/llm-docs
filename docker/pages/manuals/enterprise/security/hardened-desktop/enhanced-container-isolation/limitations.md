@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/enterprise/security/hardened-desktop/enhanced-container-isolation/limitations.md](https://github.com/docker/docs/blob/195c0626b986095e849a7353dd94af1f46f32787/content/manuals/enterprise/security/hardened-desktop/enhanced-container-isolation/limitations.md)
+> Commit-pinned source for Docker main: [content/manuals/enterprise/security/hardened-desktop/enhanced-container-isolation/limitations.md](https://github.com/docker/docs/blob/371255294cf8db2ee20206bf5cc9c165a3a1ea16/content/manuals/enterprise/security/hardened-desktop/enhanced-container-isolation/limitations.md)
 
 # Enhanced Container Isolation limitations
 
@@ -74,7 +74,7 @@ The integrated Kubernetes feature, when used with the legacy Kubeadm provisioner
 
 ### Recommendation
 
-Use the newer Docker Desktop Kubernetes "KinD" provisioner (see [Cluster provisioning method](https://docs.docker.com/desktop/use-desktop/kubernetes/#cluster-provisioning-method)). In this mode, and with ECI turned on, each Kubernetes node runs in an ECI-protected container, providing stronger isolation from the Docker Desktop VM. The KinD provisioner is also faster and allows for multi-node Kubernetes clusters.
+Use the Docker Desktop Kubernetes `kind` provisioner (see [Cluster provisioning method](https://docs.docker.com/desktop/use-desktop/kubernetes/#cluster-provisioning-method)). In this mode, and with ECI turned on, each Kubernetes node runs in an ECI-protected container, providing stronger isolation from the Docker Desktop VM. The `kind` provisioner is also faster and allows for multi-node Kubernetes clusters.
 
 ## Unprotected container types
 

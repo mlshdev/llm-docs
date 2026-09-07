@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/dhi/how-to/hardened-packages.md](https://github.com/docker/docs/blob/195c0626b986095e849a7353dd94af1f46f32787/content/manuals/dhi/how-to/hardened-packages.md)
+> Commit-pinned source for Docker main: [content/manuals/dhi/how-to/hardened-packages.md](https://github.com/docker/docs/blob/371255294cf8db2ee20206bf5cc9c165a3a1ea16/content/manuals/dhi/how-to/hardened-packages.md)
 
 Docker Hardened System Packages are built from source by Docker. This ensures
 supply chain integrity throughout your entire image stack by eliminating risks
