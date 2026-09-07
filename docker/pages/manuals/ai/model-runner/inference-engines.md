@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/model-runner/inference-engines.md](https://github.com/docker/docs/blob/571f478dda32a3f19f8451bdf199633a8d1e3578/content/manuals/ai/model-runner/inference-engines.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/model-runner/inference-engines.md](https://github.com/docker/docs/blob/195c0626b986095e849a7353dd94af1f46f32787/content/manuals/ai/model-runner/inference-engines.md)
 
 # Inference engines
 

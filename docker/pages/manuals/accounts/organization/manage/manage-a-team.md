@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/accounts/organization/manage/manage-a-team.md](https://github.com/docker/docs/blob/571f478dda32a3f19f8451bdf199633a8d1e3578/content/manuals/accounts/organization/manage/manage-a-team.md)
+> Commit-pinned source for Docker main: [content/manuals/accounts/organization/manage/manage-a-team.md](https://github.com/docker/docs/blob/195c0626b986095e849a7353dd94af1f46f32787/content/manuals/accounts/organization/manage/manage-a-team.md)
 
 # Create and manage a team
 
@@ -54,8 +54,7 @@ For more information on roles, see
 ## Set team repository permissions
 
 You must create a team before you are able to configure repository permissions.
-For more details, see [Create and manage a
-team](https://docs.docker.com/accounts/organization/manage/manage-a-team/).
+For more details, see [Create a team](#create-a-team).
 
 To set team repository permissions:
 

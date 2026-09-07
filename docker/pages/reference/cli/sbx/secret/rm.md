@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/sbx_cli/sbx_secret_rm.yaml](https://github.com/docker/docs/blob/571f478dda32a3f19f8451bdf199633a8d1e3578/data/sbx_cli/sbx_secret_rm.yaml)
+> Commit-pinned source for Docker main: [data/sbx_cli/sbx_secret_rm.yaml](https://github.com/docker/docs/blob/195c0626b986095e849a7353dd94af1f46f32787/data/sbx_cli/sbx_secret_rm.yaml)
 
 # sbx secret rm
 
