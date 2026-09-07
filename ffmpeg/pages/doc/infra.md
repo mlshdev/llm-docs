@@ -1,4 +1,4 @@
-> Commit-pinned source for FFmpeg master: [doc/infra.txt](https://github.com/FFmpeg/FFmpeg/blob/7dc71230a965c5938a0947408dc4ec7c8b9fe4ca/doc/infra.txt)
+> Commit-pinned source for FFmpeg master: [doc/infra.txt](https://github.com/FFmpeg/FFmpeg/blob/5e95a3ddfbdb68e81bbe58db10c75961566c7c02/doc/infra.txt)
 
 # FFmpeg Infrastructure:
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for FFmpeg master: [README.md](https://github.com/FFmpeg/FFmpeg/blob/7dc71230a965c5938a0947408dc4ec7c8b9fe4ca/README.md)
+> Commit-pinned source for FFmpeg master: [README.md](https://github.com/FFmpeg/FFmpeg/blob/5e95a3ddfbdb68e81bbe58db10c75961566c7c02/README.md)
 
 # FFmpeg README
 
