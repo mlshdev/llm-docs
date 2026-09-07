@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/docker-hub/repos/manage/builds/setup.md](https://github.com/docker/docs/blob/b98c400647c70f3e2177d513802d5d785aef232e/content/manuals/docker-hub/repos/manage/builds/setup.md)
+> Commit-pinned source for Docker main: [content/manuals/docker-hub/repos/manage/builds/setup.md](https://github.com/docker/docs/blob/571f478dda32a3f19f8451bdf199633a8d1e3578/content/manuals/docker-hub/repos/manage/builds/setup.md)
 
 # Set up automated builds
 

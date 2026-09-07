@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/reference/compose-file/services.md](https://github.com/docker/docs/blob/b98c400647c70f3e2177d513802d5d785aef232e/content/reference/compose-file/services.md)
+> Commit-pinned source for Docker main: [content/reference/compose-file/services.md](https://github.com/docker/docs/blob/571f478dda32a3f19f8451bdf199633a8d1e3578/content/reference/compose-file/services.md)
 
 A service is an abstract definition of a computing resource within an application which can be scaled or replaced
 independently from other components. Services are backed by a set of containers, run by the platform
