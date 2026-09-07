@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/build/concepts/overview.md](https://github.com/docker/docs/blob/371255294cf8db2ee20206bf5cc9c165a3a1ea16/content/manuals/build/concepts/overview.md)
+> Commit-pinned source for Docker main: [content/manuals/build/concepts/overview.md](https://github.com/docker/docs/blob/b3f9d60b1b26476298cfc2db3dd70e74c915869f/content/manuals/build/concepts/overview.md)
 
 # Docker Build Overview
 

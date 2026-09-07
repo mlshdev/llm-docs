@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/extensions/_index.md](https://github.com/docker/docs/blob/371255294cf8db2ee20206bf5cc9c165a3a1ea16/content/manuals/extensions/_index.md)
+> Commit-pinned source for Docker main: [content/manuals/extensions/_index.md](https://github.com/docker/docs/blob/b3f9d60b1b26476298cfc2db3dd70e74c915869f/content/manuals/extensions/_index.md)
 
 # Docker Extensions
 
@@ -8,7 +8,7 @@ You can seamlessly connect your favorite development tools to your application d
 
 Anyone can use Docker Extensions and there is no limit to the number of extensions you can install.
 
-![Extensions Marketplace](https://raw.githubusercontent.com/docker/docs/371255294cf8db2ee20206bf5cc9c165a3a1ea16/static/assets/images/extensions.webp)
+![Extensions Marketplace](https://raw.githubusercontent.com/docker/docs/b3f9d60b1b26476298cfc2db3dd70e74c915869f/static/assets/images/extensions.webp)
 
 ## What extensions are available?
 

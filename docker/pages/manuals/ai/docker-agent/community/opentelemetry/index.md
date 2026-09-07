@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/community/opentelemetry/index.md](https://github.com/docker/docs/blob/371255294cf8db2ee20206bf5cc9c165a3a1ea16/_vendor/github.com/docker/docker-agent/docs/community/opentelemetry/index.md)
+> Commit-pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/community/opentelemetry/index.md](https://github.com/docker/docs/blob/b3f9d60b1b26476298cfc2db3dd70e74c915869f/_vendor/github.com/docker/docker-agent/docs/community/opentelemetry/index.md)
 
 *Docker Agent can export OpenTelemetry traces of an agent run to any OTLP/HTTP backend. This is separate from [product-analytics telemetry](https://docs.docker.com/ai/docker-agent/community/telemetry/) and is opt-in via the `--otel` flag.*
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_create.yaml](https://github.com/docker/docs/blob/371255294cf8db2ee20206bf5cc9c165a3a1ea16/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_create.yaml)
+> Commit-pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_create.yaml](https://github.com/docker/docs/blob/b3f9d60b1b26476298cfc2db3dd70e74c915869f/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_create.yaml)
 
 # docker compose create
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/dhi/how-to/select-enterprise.md](https://github.com/docker/docs/blob/371255294cf8db2ee20206bf5cc9c165a3a1ea16/content/manuals/dhi/how-to/select-enterprise.md)
+> Commit-pinned source for Docker main: [content/manuals/dhi/how-to/select-enterprise.md](https://github.com/docker/docs/blob/b3f9d60b1b26476298cfc2db3dd70e74c915869f/content/manuals/dhi/how-to/select-enterprise.md)
 
 # Get started with DHI Select and Enterprise
 

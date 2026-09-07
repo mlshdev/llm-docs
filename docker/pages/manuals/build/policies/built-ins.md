@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/build/policies/built-ins.md](https://github.com/docker/docs/blob/371255294cf8db2ee20206bf5cc9c165a3a1ea16/content/manuals/build/policies/built-ins.md)
+> Commit-pinned source for Docker main: [content/manuals/build/policies/built-ins.md](https://github.com/docker/docs/blob/b3f9d60b1b26476298cfc2db3dd70e74c915869f/content/manuals/build/policies/built-ins.md)
 
 Buildx provides built-in functions, in addition to the [Rego
 built-ins](#rego-built-in-functions), to extend Rego policies with

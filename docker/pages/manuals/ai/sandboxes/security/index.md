@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/security/_index.md](https://github.com/docker/docs/blob/371255294cf8db2ee20206bf5cc9c165a3a1ea16/content/manuals/ai/sandboxes/security/_index.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/security/_index.md](https://github.com/docker/docs/blob/b3f9d60b1b26476298cfc2db3dd70e74c915869f/content/manuals/ai/sandboxes/security/_index.md)
 
 # Security model
 
@@ -53,7 +53,7 @@ local MCP servers as trusted host integrations.
 
 The following diagram shows a sandbox with a directly mounted workspace:
 
-![Docker Sandbox security model](https://raw.githubusercontent.com/docker/docs/371255294cf8db2ee20206bf5cc9c165a3a1ea16/content/manuals/ai/sandboxes/images/sbx-security.png)
+![Docker Sandbox security model](https://raw.githubusercontent.com/docker/docs/b3f9d60b1b26476298cfc2db3dd70e74c915869f/content/manuals/ai/sandboxes/images/sbx-security.png)
 
 ## Isolation layers
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/build/building/base-images.md](https://github.com/docker/docs/blob/371255294cf8db2ee20206bf5cc9c165a3a1ea16/content/manuals/build/building/base-images.md)
+> Commit-pinned source for Docker main: [content/manuals/build/building/base-images.md](https://github.com/docker/docs/blob/b3f9d60b1b26476298cfc2db3dd70e74c915869f/content/manuals/build/building/base-images.md)
 
 All Dockerfiles start from a base image.
 A base is the image that your image extends.

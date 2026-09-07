@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/dhi-backstage.md](https://github.com/docker/docs/blob/371255294cf8db2ee20206bf5cc9c165a3a1ea16/content/guides/dhi-backstage.md)
+> Commit-pinned source for Docker main: [content/guides/dhi-backstage.md](https://github.com/docker/docs/blob/b3f9d60b1b26476298cfc2db3dd70e74c915869f/content/guides/dhi-backstage.md)
 
 This guide shows how to secure a Backstage application using Docker Hardened Images (DHI). Backstage is a CNCF open source developer portal used by thousands of organizations to manage their software catalogs, templates, and developer tooling.
 

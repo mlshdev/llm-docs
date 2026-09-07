@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/usage.md](https://github.com/docker/docs/blob/371255294cf8db2ee20206bf5cc9c165a3a1ea16/content/manuals/ai/sandboxes/usage.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/usage.md](https://github.com/docker/docs/blob/b3f9d60b1b26476298cfc2db3dd70e74c915869f/content/manuals/ai/sandboxes/usage.md)
 
 # Usage
 
@@ -338,7 +338,8 @@ $ sbx run --publish 8080:3000 --name my-sandbox claude
 ```
 
 For an existing sandbox, use [`sbx ports`](https://docs.docker.com/reference/cli/sbx/ports/) to
-forward traffic from your host:
+forward traffic from your host. Publishing a port on a stopped local sandbox
+starts it first:
 
 ```console
 $ sbx ports my-sandbox --publish 8080:3000
@@ -360,7 +361,7 @@ them in detail.
 ```console
 $ sbx ls
 SANDBOX         AGENT   STATUS   PORTS                    WORKSPACE
-my-sandbox      claude  running  127.0.0.1:8080->3000/tcp /home/user/proj
+my-sandbox      claude  running  127.0.0.1:8080->3000/tcp4 /home/user/proj
 ```
 
 To stop forwarding a port:

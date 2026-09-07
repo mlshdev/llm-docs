@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/dhi/docker_dhi_attestation_list.yaml](https://github.com/docker/docs/blob/371255294cf8db2ee20206bf5cc9c165a3a1ea16/data/cli/dhi/docker_dhi_attestation_list.yaml)
+> Commit-pinned source for Docker main: [data/cli/dhi/docker_dhi_attestation_list.yaml](https://github.com/docker/docs/blob/b3f9d60b1b26476298cfc2db3dd70e74c915869f/data/cli/dhi/docker_dhi_attestation_list.yaml)
 
 # docker dhi attestation list
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/build/metadata/attestations/sbom.md](https://github.com/docker/docs/blob/371255294cf8db2ee20206bf5cc9c165a3a1ea16/content/manuals/build/metadata/attestations/sbom.md)
+> Commit-pinned source for Docker main: [content/manuals/build/metadata/attestations/sbom.md](https://github.com/docker/docs/blob/b3f9d60b1b26476298cfc2db3dd70e74c915869f/content/manuals/build/metadata/attestations/sbom.md)
 
 SBOM attestations help ensure [software supply chain transparency](https://docs.docker.com/guides/docker-scout/) by verifying the software artifacts an image contains and the artifacts used to create the image. Metadata included in an [SBOM](https://docs.docker.com/guides/docker-scout/) for describing software artifacts may include:
 

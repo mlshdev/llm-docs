@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/secrets/docker_pass_plugins_1password_purge.yaml](https://github.com/docker/docs/blob/371255294cf8db2ee20206bf5cc9c165a3a1ea16/data/cli/secrets/docker_pass_plugins_1password_purge.yaml)
+> Commit-pinned source for Docker main: [data/cli/secrets/docker_pass_plugins_1password_purge.yaml](https://github.com/docker/docs/blob/b3f9d60b1b26476298cfc2db3dd70e74c915869f/data/cli/secrets/docker_pass_plugins_1password_purge.yaml)
 
 # docker pass plugins 1password purge
 

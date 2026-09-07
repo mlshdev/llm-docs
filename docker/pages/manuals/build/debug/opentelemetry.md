@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/build/debug/opentelemetry.md](https://github.com/docker/docs/blob/371255294cf8db2ee20206bf5cc9c165a3a1ea16/content/manuals/build/debug/opentelemetry.md)
+> Commit-pinned source for Docker main: [content/manuals/build/debug/opentelemetry.md](https://github.com/docker/docs/blob/b3f9d60b1b26476298cfc2db3dd70e74c915869f/content/manuals/build/debug/opentelemetry.md)
 
 # OpenTelemetry support
 
@@ -33,4 +33,4 @@ $ docker buildx inspect --bootstrap
 
 Buildx commands should be traced at `http://127.0.0.1:16686/`:
 
-![OpenTelemetry Buildx Bake](https://raw.githubusercontent.com/docker/docs/371255294cf8db2ee20206bf5cc9c165a3a1ea16/content/manuals/build/images/opentelemetry.png)
+![OpenTelemetry Buildx Bake](https://raw.githubusercontent.com/docker/docs/b3f9d60b1b26476298cfc2db3dd70e74c915869f/content/manuals/build/images/opentelemetry.png)

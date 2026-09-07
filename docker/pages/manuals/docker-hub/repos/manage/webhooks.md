@@ -1,8 +1,25 @@
-> Commit-pinned source for Docker main: [content/manuals/docker-hub/repos/manage/webhooks.md](https://github.com/docker/docs/blob/371255294cf8db2ee20206bf5cc9c165a3a1ea16/content/manuals/docker-hub/repos/manage/webhooks.md)
+> Commit-pinned source for Docker main: [content/manuals/docker-hub/repos/manage/webhooks.md](https://github.com/docker/docs/blob/b3f9d60b1b26476298cfc2db3dd70e74c915869f/content/manuals/docker-hub/repos/manage/webhooks.md)
 
 # Webhooks
 
 You can use webhooks to cause an action in another service in response to a push event in the repository. Webhooks are POST requests sent to a URL you define in Docker Hub.
+
+## Prerequisites
+
+For a personal repository, only the repository owner can create webhooks.
+Collaborators can't create webhooks.
+
+For an organization repository, you must be an organization owner or editor,
+or a team member with admin permissions on the repository. For more details,
+see [Organization teams](https://docs.docker.com/docker-hub/repos/manage/access/#organization-teams).
+
+To create a webhook using the Docker Hub API, authenticate with one of the
+following:
+
+- A [personal access token](https://docs.docker.com/security/access-tokens/personal-access-tokens/)
+  with delete permissions
+- An [organization access token](https://docs.docker.com/security/access-tokens/organization-access-tokens/)
+  with the `scope-webhook-edit` scope or higher
 
 ## Create a webhook
 

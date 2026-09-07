@@ -1,6 +1,6 @@
 # Docker main
 
-> Documentation generated from the latest `main` branch commit of [docker/docs](https://github.com/docker/docs) and pinned to immutable source commit `371255294cf8db2ee20206bf5cc9c165a3a1ea16`.
+> Documentation generated from the latest `main` branch commit of [docker/docs](https://github.com/docker/docs) and pinned to immutable source commit `b3f9d60b1b26476298cfc2db3dd70e74c915869f`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Docker main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
