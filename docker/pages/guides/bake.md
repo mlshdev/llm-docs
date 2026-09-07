@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/bake.md](https://github.com/docker/docs/blob/b3f9d60b1b26476298cfc2db3dd70e74c915869f/content/guides/bake.md)
+> Commit-pinned source for Docker main: [content/guides/bake.md](https://github.com/docker/docs/blob/c927b8145de313328c37bb115c9caf0b1be5aa82/content/guides/bake.md)
 
 # Mastering multi-platform builds, testing, and more with Docker Buildx Bake
 

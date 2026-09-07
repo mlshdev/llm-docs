@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/claude-code-model-runner.md](https://github.com/docker/docs/blob/b3f9d60b1b26476298cfc2db3dd70e74c915869f/content/guides/claude-code-model-runner.md)
+> Commit-pinned source for Docker main: [content/guides/claude-code-model-runner.md](https://github.com/docker/docs/blob/c927b8145de313328c37bb115c9caf0b1be5aa82/content/guides/claude-code-model-runner.md)
 
 # Use Claude Code with Docker Model Runner
 

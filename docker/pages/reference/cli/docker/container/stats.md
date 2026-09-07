@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_container_stats.yaml](https://github.com/docker/docs/blob/b3f9d60b1b26476298cfc2db3dd70e74c915869f/data/cli/engine/docker_container_stats.yaml)
+> Commit-pinned source for Docker main: [data/cli/engine/docker_container_stats.yaml](https://github.com/docker/docs/blob/c927b8145de313328c37bb115c9caf0b1be5aa82/data/cli/engine/docker_container_stats.yaml)
 
 # docker container stats
 

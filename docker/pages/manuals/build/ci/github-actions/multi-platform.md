@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/build/ci/github-actions/multi-platform.md](https://github.com/docker/docs/blob/b3f9d60b1b26476298cfc2db3dd70e74c915869f/content/manuals/build/ci/github-actions/multi-platform.md)
+> Commit-pinned source for Docker main: [content/manuals/build/ci/github-actions/multi-platform.md](https://github.com/docker/docs/blob/c927b8145de313328c37bb115c9caf0b1be5aa82/content/manuals/build/ci/github-actions/multi-platform.md)
 
 # Multi-platform image with GitHub Actions
 

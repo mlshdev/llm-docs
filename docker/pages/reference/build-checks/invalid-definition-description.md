@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/moby/buildkit/frontend/dockerfile/docs/rules/invalid-definition-description.md](https://github.com/docker/docs/blob/b3f9d60b1b26476298cfc2db3dd70e74c915869f/_vendor/github.com/moby/buildkit/frontend/dockerfile/docs/rules/invalid-definition-description.md)
+> Commit-pinned source for Docker main: [_vendor/github.com/moby/buildkit/frontend/dockerfile/docs/rules/invalid-definition-description.md](https://github.com/docker/docs/blob/c927b8145de313328c37bb115c9caf0b1be5aa82/_vendor/github.com/moby/buildkit/frontend/dockerfile/docs/rules/invalid-definition-description.md)
 
 > \[!NOTE]
 > This check is experimental and is not enabled by default. To enable it, see
