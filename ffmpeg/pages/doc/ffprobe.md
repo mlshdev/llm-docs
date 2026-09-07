@@ -1,4 +1,4 @@
-> Commit-pinned source for FFmpeg master: [doc/ffprobe.texi](https://github.com/FFmpeg/FFmpeg/blob/5e95a3ddfbdb68e81bbe58db10c75961566c7c02/doc/ffprobe.texi)
+> Commit-pinned source for FFmpeg master: [doc/ffprobe.texi](https://github.com/FFmpeg/FFmpeg/blob/6d87581efaf8a0588558e1111e6ae708a2c36b0c/doc/ffprobe.texi)
 
 # Synopsis
 

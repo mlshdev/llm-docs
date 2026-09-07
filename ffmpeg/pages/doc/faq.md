@@ -1,4 +1,4 @@
-> Commit-pinned source for FFmpeg master: [doc/faq.texi](https://github.com/FFmpeg/FFmpeg/blob/5e95a3ddfbdb68e81bbe58db10c75961566c7c02/doc/faq.texi)
+> Commit-pinned source for FFmpeg master: [doc/faq.texi](https://github.com/FFmpeg/FFmpeg/blob/6d87581efaf8a0588558e1111e6ae708a2c36b0c/doc/faq.texi)
 
 # General Questions
 
@@ -259,9 +259,9 @@ material, and try '-top 0/1' if the result looks really messed-up.
 
 ## How can I read DirectShow files?
 
-If you have built FFmpeg with `./configure --enable-avisynth`
-(only possible on MinGW/Cygwin platforms),
-then you may use any file that DirectShow can read as input.
+If you have built FFmpeg for Windows with `./configure --enable-avisynth`
+and your AviSynth+ installation provides `DirectShowSource`, then you
+may use any file that DirectShow can read as input.
 
 Just create an "input.avs" text file with this single line ...
 
@@ -573,7 +573,7 @@ already incorporate FFmpeg at (projects.html).
 
 ## Can you support my C compiler XXX?
 
-It depends. If your compiler is C99-compliant, then patches to support
+It depends. If your compiler is C11-compliant, then patches to support
 it are likely to be welcome if they do not pollute the source code
 with `#ifdef`s related to the compiler.
 
@@ -631,11 +631,6 @@ you need to explicitly state that you are using a C library. You can do this by
 encompassing your FFmpeg includes using `extern "C"`.
 
 See <http://www.parashift.com/c++-faq-lite/mixing-c-and-cpp.html#faq-32.3>
-
-## I'm using libavutil from within my C++ application but the compiler complains about 'UINT64\_C' was not declared in this scope
-
-FFmpeg is a pure C project using C99 math features, in order to enable C++
-to use them you have to append -D\_\_STDC\_CONSTANT\_MACROS to your CXXFLAGS
 
 ## I have a file in memory / a API different from \*open/\*read/ libc how do I use it with libavformat?
 

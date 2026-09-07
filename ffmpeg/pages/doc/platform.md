@@ -1,19 +1,6 @@
-> Commit-pinned source for FFmpeg master: [doc/platform.texi](https://github.com/FFmpeg/FFmpeg/blob/5e95a3ddfbdb68e81bbe58db10c75961566c7c02/doc/platform.texi)
+> Commit-pinned source for FFmpeg master: [doc/platform.texi](https://github.com/FFmpeg/FFmpeg/blob/6d87581efaf8a0588558e1111e6ae708a2c36b0c/doc/platform.texi)
 
 # Unix-like
-
-Some parts of FFmpeg cannot be built with version 2.15 of the GNU
-assembler which is still provided by a few AMD64 distributions. To
-make sure your compiler really uses the required version of gas
-after a binutils upgrade, run:
-
-```text
-$(gcc -print-prog-name=as) --version
-```
-
-If not, then you should install a different compiler that has no
-hard-coded path to gas. In the worst case pass `--disable-asm`
-to configure.
 
 ## Advanced linking configuration
 
@@ -37,17 +24,7 @@ BSD make will not build FFmpeg, you need to install and use GNU Make
 ## (Open)Solaris
 
 GNU Make is required to build FFmpeg, so you have to invoke (`gmake`),
-standard Solaris Make will not work. When building with a non-c99 front-end
-(gcc, generic suncc) add either `--extra-libs=/usr/lib/values-xpg6.o`
-or `--extra-libs=/usr/lib/64/values-xpg6.o` to the configure options
-since the libc is not c99-compliant by default. The probes performed by
-configure may raise an exception leading to the death of configure itself
-due to a bug in the system shell. Simply invoke a different shell such as
-bash directly to work around this:
-
-```text
-bash ./configure
-```
+standard Solaris Make will not work.
 
 <a id="darwin"></a>
 
@@ -56,17 +33,11 @@ bash ./configure
 The toolchain provided with Xcode is sufficient to build the basic
 unaccelerated code.
 
-Mac OS X on PowerPC or ARM (iPhone) requires a preprocessor from
-<https://github.com/FFmpeg/gas-preprocessor> or
-<https://github.com/yuvi/gas-preprocessor>(currently outdated) to build the optimized
-assembly functions. Put the Perl script somewhere
-in your PATH, FFmpeg's configure will pick it up automatically.
-
-Mac OS X on amd64 and x86 requires `nasm` to build most of the
-optimized assembly functions. [Fink](http://www.finkproject.org/),
+macOS on x86 requires `nasm` to build most of the
+optimized assembly functions.
 [Gentoo Prefix](https://wiki.gentoo.org/wiki/Project:Prefix),
-[Homebrew](https://mxcl.github.com/homebrew/)
-or [MacPorts](http://www.macports.org) can easily provide it.
+[Homebrew](https://brew.sh/)
+or [MacPorts](https://www.macports.org) can easily provide it.
 
 # DOS
 
@@ -84,16 +55,16 @@ For information about compiling FFmpeg on OS/2 see
 
 FFmpeg can be built to run natively on Windows using the MinGW-w64
 toolchain. Install the latest versions of MSYS2 and MinGW-w64 from
-<http://msys2.github.io/> and/or <http://mingw-w64.sourceforge.net/>.
+<https://www.msys2.org/> and/or <https://www.mingw-w64.org/>.
 You can find detailed installation instructions in the download section and
 the FAQ.
 
 Notes:
 
-- Building for the MSYS environment is discouraged, MSYS2 provides a full
-  MinGW-w64 environment through `mingw64_shell.bat` or
-  `mingw32_shell.bat` that should be used instead of the environment
-  provided by `msys2_shell.bat`.
+- Building for the MSYS environment is discouraged, use one of the
+  MinGW-w64 environments provided by MSYS2 instead. UCRT64 provides a GCC
+  based toolchain, CLANG64 a LLVM based one and CLANGARM64 targets Windows
+  on ARM64.
 
 - Building using MSYS2 can be sped up by disabling implicit rules in the
   Makefile by calling `make -r` instead of plain `make`. This
@@ -110,35 +81,38 @@ Notes:
 
 ### Native Windows compilation using MSYS2
 
-The MSYS2 MinGW-w64 environment provides ready to use toolchains and dependencies
-through `pacman`.
+The MSYS2 MinGW-w64 environments provide ready to use toolchains and
+dependencies through `pacman`.
 
-Make sure to use `mingw64_shell.bat` or `mingw32_shell.bat` to have
-the correct MinGW-w64 environment. The default install provides shortcuts to
-them under `MinGW-w64 Win64 Shell` and `MinGW-w64 Win32 Shell`.
+Launch the shell of the environment you want to build in using its
+launcher, for example `ucrt64.exe` or the corresponding start menu
+shortcut for UCRT64. Then install the toolchain and the FFmpeg
+dependencies. The `pacboy` wrapper from the `pactoys`
+package fills in the package name prefix of the current environment, so
+the same command works in every environment.
 
 ```text
 # normal msys2 packages
-pacman -S make pkgconf diffutils
+pacman -S make pkgconf diffutils pactoys
 
-# mingw-w64 packages and toolchains
-pacman -S mingw-w64-x86_64-nasm mingw-w64-x86_64-gcc mingw-w64-x86_64-SDL2
+# mingw-w64 packages and toolchains for the current environment
+pacboy -S cc nasm SDL2
 ```
-
-To target 32 bits replace `x86_64` with `i686` in the command above.
 
 ## Microsoft Visual C++ or Intel C++ Compiler for Windows
 
-FFmpeg can be built with MSVC 2013 or later.
+FFmpeg can be built with MSVC 2019 16.8 or later, the first version able to
+compile C11.
 
 You will need the following prerequisites:
 
-- [MSYS2](http://msys2.github.io/)
-- [NASM](http://www.nasm.us/)
+- [MSYS2](https://www.msys2.org/)
+- [NASM](https://www.nasm.us/)
   (Also available via MSYS2's package manager.)
 
-To set up a proper environment in MSYS2, you need to run `msys_shell.bat` from
-the Visual Studio or Intel Compiler command prompt.
+To set up a proper environment in MSYS2, you need to run
+`msys2_shell.cmd -use-full-path` from the Visual Studio or Intel Compiler
+command prompt.
 
 Place `nasm.exe` somewhere in your `PATH`.
 
@@ -182,26 +156,11 @@ Notes:
   - Move `zlib.lib`, `zconf.h`, and `zlib.h` to somewhere MSVC
     can see.
 
-- FFmpeg has been tested with the following on i686 and x86\_64:
-  - Visual Studio 2013 Pro and Express
-  - Intel Composer XE 2013
-  - Intel Composer XE 2013 SP1
-    Anything else is not officially supported.
-
 ### Linking to FFmpeg with Microsoft Visual C++
 
 If you plan to link with MSVC-built static libraries, you will need
 to make sure you have `Runtime Library` set to
 `Multi-threaded (/MT)` in your project's settings.
-
-You will need to define `inline` to something MSVC understands:
-
-```text
-#define inline __inline
-```
-
-Also note, that as stated in **Microsoft Visual C++**, you will need
-an MSVC-compatible [inttypes.h](http://code.google.com/p/msinttypes/).
 
 If you plan on using import libraries created by dlltool, you must
 set `References` to `No (/OPT:NOREF)` under the linker optimization
@@ -215,10 +174,8 @@ To create import libraries that work with the `/OPT:REF` option
 
 - Open the *Visual Studio Command Prompt*.
 
-Alternatively, in a normal command line prompt, call `vcvars32.bat`
-which sets up the environment variables for the Visual C++ tools
-(the standard location for this file is something like
-`C:\Program Files (x86_\Microsoft Visual Studio 10.0\VC\bin\vcvars32.bat`).
+Alternatively, in a normal command line prompt, call `vcvarsall.bat`
+which sets up the environment variables for the Visual C++ tools.
 
 - Enter the `bin` directory where the created LIB and DLL files
   are stored.
@@ -235,30 +192,27 @@ Replace `foo-version` and `foo` with the respective library names.
 
 ## Cross compilation for Windows with Linux
 
-You must use the MinGW cross compilation tools available at
-<http://www.mingw.org/>.
+You must use the MinGW-w64 cross compilation tools, which most Linux
+distributions provide as packages.
 
 Then configure FFmpeg with the following options:
 
 ```text
-./configure --target-os=mingw32 --cross-prefix=i386-mingw32msvc-
+./configure --arch=x86_64 --target-os=mingw32 --cross-prefix=x86_64-w64-mingw32-
 ```
 
 (you can change the cross-prefix according to the prefix chosen for the
-MinGW tools).
+MinGW-w64 tools).
 
-Then you can easily test FFmpeg with [Wine](http://www.winehq.com/).
+Then you can easily test FFmpeg with [Wine](https://www.winehq.org/).
 
 ## Compilation under Cygwin
-
-Please use Cygwin 1.7.x as the obsolete 1.5.x Cygwin versions lack
-llrint() in its C library.
 
 Install your Cygwin with all the "Base" packages, plus the
 following "Devel" ones:
 
 ```text
-binutils, gcc4-core, make, git, mingw-runtime, texinfo
+binutils, gcc-core, make, git, texinfo
 ```
 
 In order to run FATE you will also need the following "Utils" packages:
@@ -274,40 +228,21 @@ If you want to build FFmpeg with additional libraries, download Cygwin
 libogg-devel, libvorbis-devel
 ```
 
-These library packages are only available from
-[Cygwin Ports](http://sourceware.org/cygwinports/):
-
-```text
-libSDL-devel, libgsm-devel, libmp3lame-devel,
-speex-devel, libtheora-devel, libxvidcore-devel
-```
-
-The recommendation for x264 is to build it from source, as it evolves too
-quickly for Cygwin Ports to be up to date.
-
 ## Crosscompilation for Windows under Cygwin
 
 With Cygwin you can create Windows binaries that do not need the cygwin1.dll.
 
-Just install your Cygwin as explained before, plus these additional
-"Devel" packages:
+Just install your Cygwin as explained before, plus the MinGW-w64 cross
+toolchain "Devel" packages:
 
 ```text
-gcc-mingw-core, mingw-runtime, mingw-zlib
+mingw64-x86_64-gcc-core, mingw64-x86_64-binutils
 ```
 
-and add some special flags to your configure invocation.
-
-For a static build run
+and configure with:
 
 ```text
-./configure --target-os=mingw32 --extra-cflags=-mno-cygwin --extra-libs=-mno-cygwin
-```
-
-and for a build with shared libraries
-
-```text
-./configure --target-os=mingw32 --enable-shared --disable-static --extra-cflags=-mno-cygwin --extra-libs=-mno-cygwin
+./configure --arch=x86_64 --target-os=mingw32 --cross-prefix=x86_64-w64-mingw32-
 ```
 
 ## ARM64EC
