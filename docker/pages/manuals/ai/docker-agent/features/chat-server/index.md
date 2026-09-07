@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/features/chat-server/index.md](https://github.com/docker/docs/blob/389c95117e11ce9c45348290463964caaca3c75b/_vendor/github.com/docker/docker-agent/docs/features/chat-server/index.md)
+> Commit-pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/features/chat-server/index.md](https://github.com/docker/docs/blob/432aa8fa3c1b4c3500e6795ee5090f427ce28efb/_vendor/github.com/docker/docker-agent/docs/features/chat-server/index.md)
 
 *Expose your agents through an OpenAI-compatible Chat Completions API so any tool that already speaks OpenAI can drive a Docker Agent agent.*
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/troubleshooting.md](https://github.com/docker/docs/blob/389c95117e11ce9c45348290463964caaca3c75b/content/manuals/ai/sandboxes/troubleshooting.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/troubleshooting.md](https://github.com/docker/docs/blob/432aa8fa3c1b4c3500e6795ee5090f427ce28efb/content/manuals/ai/sandboxes/troubleshooting.md)
 
 # Troubleshooting
 
@@ -201,15 +201,24 @@ the egress path in the **PROXY** column:
 
 ## Sandbox runs out of disk space
 
-The sandbox root (`/`) filesystem defaults to 20 GB. To increase it, set `DOCKER_SANDBOXES_ROOT_SIZE`
-before creating the sandbox:
+The sandbox root (`/`) filesystem defaults to 20 GB. To increase it, set
+`DOCKER_SANDBOXES_ROOT_SIZE` before creating the sandbox:
 
 ```console
 $ DOCKER_SANDBOXES_ROOT_SIZE=40g sbx run claude
 ```
 
-`DOCKER_SANDBOXES_ROOT_SIZE` controls the root filesystem size. `DOCKER_SANDBOXES_DOCKER_SIZE`
-controls the Docker data disk (`/var/lib/docker`) size. The two are independent — set both if needed.
+`DOCKER_SANDBOXES_ROOT_SIZE` controls the root filesystem size. The Docker data
+disk at `/var/lib/docker` is independent and defaults to 10 GB. To change the
+Docker data disk size for a sandbox, set `DOCKER_SANDBOXES_DOCKER_SIZE` when you
+create it:
+
+```console
+$ DOCKER_SANDBOXES_DOCKER_SIZE=20g sbx run claude
+```
+
+The Docker data disk must be at least 512 MiB. The environment variable doesn't
+resize existing volumes.
 
 For a [clone-mode sandbox](https://docs.docker.com/ai/sandboxes/usage/#clone-mode), set
 `DOCKER_SANDBOXES_CLONED_WORKSPACE_SIZE` before creating the sandbox to
@@ -367,6 +376,19 @@ $ rm -rf ~/.config/sandboxes/
 If you have set custom `XDG_STATE_HOME`, `XDG_CACHE_HOME`, or
 `XDG_CONFIG_HOME` environment variables, replace `~/.local/state`,
 `~/.cache`, and `~/.config` with the corresponding values.
+
+## Enable automatic diagnostics uploads
+
+To opt in to automatic diagnostics uploads after certain daemon errors, run:
+
+```console
+$ sbx settings set diagnostics.autoUpload yes
+```
+
+Automatic bundles include basic system information and client, daemon, crash,
+and MCP logs. Docker Sandboxes redacts recognized identity values and
+credential patterns, but collected logs can still contain user content. Failed
+uploads remain in a local queue for a later retry.
 
 ## Report an issue
 

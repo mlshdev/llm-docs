@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/build/ci/github-actions/reproducible-builds.md](https://github.com/docker/docs/blob/389c95117e11ce9c45348290463964caaca3c75b/content/manuals/build/ci/github-actions/reproducible-builds.md)
+> Commit-pinned source for Docker main: [content/manuals/build/ci/github-actions/reproducible-builds.md](https://github.com/docker/docs/blob/432aa8fa3c1b4c3500e6795ee5090f427ce28efb/content/manuals/build/ci/github-actions/reproducible-builds.md)
 
 # Reproducible builds with GitHub Actions
 

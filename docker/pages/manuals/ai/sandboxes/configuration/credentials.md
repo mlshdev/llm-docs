@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/configuration/credentials.md](https://github.com/docker/docs/blob/389c95117e11ce9c45348290463964caaca3c75b/content/manuals/ai/sandboxes/configuration/credentials.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/configuration/credentials.md](https://github.com/docker/docs/blob/432aa8fa3c1b4c3500e6795ee5090f427ce28efb/content/manuals/ai/sandboxes/configuration/credentials.md)
 
 # Manage credentials
 
@@ -489,9 +489,10 @@ To scope the credential to a single sandbox, store it under that sandbox's name:
 $ gh auth token | sbx secret set --sandbox my-app --registry ghcr.io --password-stdin
 ```
 
-`sbx kit pull` also uses these credentials, with the Docker credential
-store as a fallback. `sbx kit push` uses only the Docker credential store —
-push targets still require a prior `docker login`.
+For Docker Hub, `sbx kit pull` and `sbx kit push` use the session from
+`sbx login`. For other registries, both commands use these credentials. Both
+commands fall back to the Docker credential store, so credentials from
+`docker login` also work.
 
 ### Remove registry credentials
 

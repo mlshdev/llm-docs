@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/scout/explore/dashboard.md](https://github.com/docker/docs/blob/389c95117e11ce9c45348290463964caaca3c75b/content/manuals/scout/explore/dashboard.md)
+> Commit-pinned source for Docker main: [content/manuals/scout/explore/dashboard.md](https://github.com/docker/docs/blob/432aa8fa3c1b4c3500e6795ee5090f427ce28efb/content/manuals/scout/explore/dashboard.md)
 
 # Dashboard
 
@@ -11,7 +11,7 @@ they need to focus on.
 
 ## Overview
 
-![A screenshot of the Docker Scout Dashboard overview](https://raw.githubusercontent.com/docker/docs/389c95117e11ce9c45348290463964caaca3c75b/content/manuals/scout/images/dashboard-overview.webp?border=true)
+![A screenshot of the Docker Scout Dashboard overview](https://raw.githubusercontent.com/docker/docs/432aa8fa3c1b4c3500e6795ee5090f427ce28efb/content/manuals/scout/images/dashboard-overview.webp?border=true)
 
 The **Overview** tab provides a summary for the repositories in the selected
 organization.
@@ -38,7 +38,7 @@ sections of the Docker Scout Dashboard:
 The **Images** view shows all images in Scout-enabled repositories for the selected environment.
 You can filter the list by selecting a different environment, or by repository name using the text filter.
 
-![Screenshot of the images view](https://raw.githubusercontent.com/docker/docs/389c95117e11ce9c45348290463964caaca3c75b/content/manuals/scout/images/dashboard-images.webp)
+![Screenshot of the images view](https://raw.githubusercontent.com/docker/docs/432aa8fa3c1b4c3500e6795ee5090f427ce28efb/content/manuals/scout/images/dashboard-images.webp)
 
 For each repository, the list displays the following details:
 

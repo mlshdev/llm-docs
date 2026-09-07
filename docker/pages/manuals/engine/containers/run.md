@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/cli/docs/reference/run.md](https://github.com/docker/docs/blob/389c95117e11ce9c45348290463964caaca3c75b/_vendor/github.com/docker/cli/docs/reference/run.md)
+> Commit-pinned source for Docker main: [_vendor/github.com/docker/cli/docs/reference/run.md](https://github.com/docker/docs/blob/432aa8fa3c1b4c3500e6795ee5090f427ce28efb/_vendor/github.com/docker/cli/docs/reference/run.md)
 
 Docker runs processes in isolated containers. A container is a process
 which runs on a host. The host may be local or remote. When you

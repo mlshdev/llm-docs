@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/install.md](https://github.com/docker/docs/blob/389c95117e11ce9c45348290463964caaca3c75b/content/manuals/ai/sandboxes/install.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/install.md](https://github.com/docker/docs/blob/432aa8fa3c1b4c3500e6795ee5090f427ce28efb/content/manuals/ai/sandboxes/install.md)
 
 # Install Docker Sandboxes
 
@@ -64,11 +64,34 @@ $ brew install docker/tap/sbx
 
 ## Install on Windows
 
+### Install for the current user
+
 Install `sbx` using Windows Package Manager:
 
 ```powershell
 winget install -h Docker.sbx
 ```
+
+WinGet installs the per-user `DockerSandboxes.msi` package in
+`%LOCALAPPDATA%\DockerSandboxes` and adds its `bin` directory to your user
+`PATH`. You can install it without administrator privileges.
+
+### Install for all users
+
+For administrator-managed deployments, download
+`DockerSandboxesMachine.msi` from the
+[Docker Sandboxes releases](https://github.com/docker/sbx-releases/releases).
+From an elevated PowerShell prompt, install the package silently:
+
+```powershell
+msiexec.exe /i DockerSandboxesMachine.msi /quiet
+```
+
+The machine-wide package installs in `%ProgramFiles%\DockerSandboxes` and adds
+its `bin` directory to the system `PATH`.
+
+A machine-wide upgrade might require restarting Windows if an `sbx` daemon in
+another user's session is using the installed files.
 
 ## Install on Ubuntu
 

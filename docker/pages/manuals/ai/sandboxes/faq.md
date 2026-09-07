@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/faq.md](https://github.com/docker/docs/blob/389c95117e11ce9c45348290463964caaca3c75b/content/manuals/ai/sandboxes/faq.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/faq.md](https://github.com/docker/docs/blob/432aa8fa3c1b4c3500e6795ee5090f427ce28efb/content/manuals/ai/sandboxes/faq.md)
 
 # FAQ
 
@@ -126,7 +126,7 @@ sandbox:
     run: [claude]
 ```
 
-Run it with `sbx run claude-safe --kit ./claude-safe/`. See
+Run it with `sbx run ./claude-safe/`. See
 [Sandbox kits](https://docs.docker.com/ai/sandboxes/customize/kits/#sandbox-kits) for the full pattern.
 
 ## How do I know if my agent is running in a sandbox?
@@ -146,10 +146,12 @@ settings, and other files under directories such as `~/.claude` remain on the
 host. Project-level configuration in the working directory remains available
 inside the sandbox.
 
-Shared agent skills are the exception. Run `sbx skills import` to copy skills
-from supported host directories into a persistent store shared with
-sandboxes. See [Share agent skills](https://docs.docker.com/ai/sandboxes/workflows/agent-skills/) for the
-supported directories, mount behavior, and per-sandbox opt-out.
+Shared agent skills are the exception. Use `sbx skills add` to install skills
+from a Git repository, or run `sbx skills import` to copy skills from supported
+host directories. `sbx` keeps the skills in a persistent store shared with
+sandboxes. See [Share agent skills](https://docs.docker.com/ai/sandboxes/workflows/agent-skills/) for repository
+management, supported host directories, mount behavior, and per-sandbox
+opt-out.
 
 Keep project-specific skills and other agent configuration in the project
 itself. This versions the configuration alongside the code. Don't use symlinks

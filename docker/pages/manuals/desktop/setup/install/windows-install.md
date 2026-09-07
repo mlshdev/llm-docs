@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/desktop/setup/install/windows-install.md](https://github.com/docker/docs/blob/389c95117e11ce9c45348290463964caaca3c75b/content/manuals/desktop/setup/install/windows-install.md)
+> Commit-pinned source for Docker main: [content/manuals/desktop/setup/install/windows-install.md](https://github.com/docker/docs/blob/432aa8fa3c1b4c3500e6795ee5090f427ce28efb/content/manuals/desktop/setup/install/windows-install.md)
 
 > **Docker Desktop terms**
 >
@@ -198,7 +198,7 @@ Docker Desktop does not start automatically after installation. To start Docker 
 
 1. Search for Docker, and select **Docker Desktop** in the search results.
 
-2. The Docker menu (![whale menu](https://raw.githubusercontent.com/docker/docs/389c95117e11ce9c45348290463964caaca3c75b/content/manuals/desktop/setup/install/images/whale-x.svg)) displays the Docker Subscription Service Agreement.
+2. The Docker menu (![whale menu](https://raw.githubusercontent.com/docker/docs/432aa8fa3c1b4c3500e6795ee5090f427ce28efb/content/manuals/desktop/setup/install/images/whale-x.svg)) displays the Docker Subscription Service Agreement.
 
    Here’s a summary of the key points:
 

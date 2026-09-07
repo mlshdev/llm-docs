@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/buildx/docker_buildx_imagetools.yaml](https://github.com/docker/docs/blob/389c95117e11ce9c45348290463964caaca3c75b/data/cli/buildx/docker_buildx_imagetools.yaml)
+> Commit-pinned source for Docker main: [data/cli/buildx/docker_buildx_imagetools.yaml](https://github.com/docker/docs/blob/432aa8fa3c1b4c3500e6795ee5090f427ce28efb/data/cli/buildx/docker_buildx_imagetools.yaml)
 
 # docker buildx imagetools
 

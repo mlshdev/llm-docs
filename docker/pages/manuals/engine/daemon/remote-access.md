@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/engine/daemon/remote-access.md](https://github.com/docker/docs/blob/389c95117e11ce9c45348290463964caaca3c75b/content/manuals/engine/daemon/remote-access.md)
+> Commit-pinned source for Docker main: [content/manuals/engine/daemon/remote-access.md](https://github.com/docker/docs/blob/432aa8fa3c1b4c3500e6795ee5090f427ce28efb/content/manuals/engine/daemon/remote-access.md)
 
 # Configure remote access for Docker daemon
 

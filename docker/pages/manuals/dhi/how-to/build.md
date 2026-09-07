@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/dhi/how-to/build.md](https://github.com/docker/docs/blob/389c95117e11ce9c45348290463964caaca3c75b/content/manuals/dhi/how-to/build.md)
+> Commit-pinned source for Docker main: [content/manuals/dhi/how-to/build.md](https://github.com/docker/docs/blob/432aa8fa3c1b4c3500e6795ee5090f427ce28efb/content/manuals/dhi/how-to/build.md)
 
 Docker Hardened Images (DHI) are built from declarative YAML definition files
 instead of traditional Dockerfiles. A single YAML file describes exactly what

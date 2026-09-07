@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/configuration/_index.md](https://github.com/docker/docs/blob/389c95117e11ce9c45348290463964caaca3c75b/content/manuals/ai/sandboxes/configuration/_index.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/configuration/_index.md](https://github.com/docker/docs/blob/432aa8fa3c1b4c3500e6795ee5090f427ce28efb/content/manuals/ai/sandboxes/configuration/_index.md)
 
 # Configure Docker Sandboxes
 
@@ -10,8 +10,10 @@ sandbox, see [Customize](https://docs.docker.com/ai/sandboxes/customize/).
 - [Credentials](https://docs.docker.com/ai/sandboxes/configuration/credentials/) configures API keys, authentication
   credentials, and registry access for sandboxed agents.
 - [Environment files](https://docs.docker.com/ai/sandboxes/configuration/environment-files/) declare reusable project
-  configuration in `.sbxenv.yaml`.
+  configuration in `sbxenv.yaml`.
 - [GPU passthrough](https://docs.docker.com/ai/sandboxes/configuration/gpu-passthrough/) configures a Linux host and sandbox for
   NVIDIA GPU workloads.
+- [Registry mirror](https://docs.docker.com/ai/sandboxes/configuration/registry-mirror/) routes Docker Hub template, kit, and
+  in-sandbox Docker image pulls through an organization's registry mirror.
 - [Upstream proxy](https://docs.docker.com/ai/sandboxes/configuration/upstream-proxy/) routes sandbox and daemon traffic through
   an operating system or corporate proxy.

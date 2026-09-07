@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/get-started.md](https://github.com/docker/docs/blob/389c95117e11ce9c45348290463964caaca3c75b/content/manuals/ai/sandboxes/get-started.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/get-started.md](https://github.com/docker/docs/blob/432aa8fa3c1b4c3500e6795ee5090f427ce28efb/content/manuals/ai/sandboxes/get-started.md)
 
 # Get started with Docker Sandboxes
 
@@ -165,7 +165,7 @@ Run `sbx` with no arguments to open the interactive dashboard: a live view of
 every sandbox where you can attach to agents, open shells, and manage network
 rules from one place.
 
-![The interactive dashboard showing sandbox status, resource usage, and network governance controls.](https://raw.githubusercontent.com/docker/docs/389c95117e11ce9c45348290463964caaca3c75b/content/manuals/ai/sandboxes/images/sbx-dashboard.png)
+![The interactive dashboard showing sandbox status, resource usage, and network governance controls.](https://raw.githubusercontent.com/docker/docs/432aa8fa3c1b4c3500e6795ee5090f427ce28efb/content/manuals/ai/sandboxes/images/sbx-dashboard.png)
 
 Then explore:
 
@@ -174,8 +174,7 @@ Then explore:
 - [Workflow patterns](https://docs.docker.com/ai/sandboxes/workflows/) — Git strategies, local services, CI, and
   authenticated tools.
 - [Sandbox environment files](https://docs.docker.com/ai/sandboxes/configuration/environment-files/) — declare and share
-  repeatable local sandbox configurations with `.sbxenv.yaml`. Requires `sbx`
-  0.39.0 or later.
+  repeatable local sandbox configurations with `sbxenv.yaml`.
 - [Customize with kits](https://docs.docker.com/ai/sandboxes/customize/) — package an agent, its tools, and its
   network rules into a reusable definition you launch with a single flag.
 - [Agents](https://docs.docker.com/ai/sandboxes/agents/) — the full list of supported agents and how to configure

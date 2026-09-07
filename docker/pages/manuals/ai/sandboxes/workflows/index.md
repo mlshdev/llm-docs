@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/workflows/_index.md](https://github.com/docker/docs/blob/389c95117e11ce9c45348290463964caaca3c75b/content/manuals/ai/sandboxes/workflows/_index.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/workflows/_index.md](https://github.com/docker/docs/blob/432aa8fa3c1b4c3500e6795ee5090f427ce28efb/content/manuals/ai/sandboxes/workflows/_index.md)
 
 # Workflow patterns
 
@@ -29,13 +29,14 @@ and external secret-provider workflows.
 ## Reuse and automate workflows
 
 Sandbox environment files work like Compose files for sandboxes: they capture
-project configuration in a versioned YAML file. Use `.sbxenv.yaml` to define
+project configuration in a versioned YAML file. Use `sbxenv.yaml` to define
 the agent, workspaces, tools, resources, credentials, and ports so contributors
 can start a consistent environment without reproducing CLI flags and setup
 steps. See [Sandbox environment files](https://docs.docker.com/ai/sandboxes/configuration/environment-files/).
 
-You can also import skills from supported host agents into a persistent store
-shared with new sandboxes. See [Share agent skills](https://docs.docker.com/ai/sandboxes/workflows/agent-skills/).
+You can also add skills from Git repositories or import them from supported
+host agents into a persistent store shared with new sandboxes. See
+[Share agent skills](https://docs.docker.com/ai/sandboxes/workflows/agent-skills/).
 
 For unattended jobs, use headless authentication and manage the sandbox
 lifecycle from scripts. See [Run sandboxes in CI](https://docs.docker.com/ai/sandboxes/workflows/automation/).

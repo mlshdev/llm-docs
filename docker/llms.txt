@@ -1,6 +1,6 @@
 # Docker main
 
-> Documentation generated from the latest `main` branch commit of [docker/docs](https://github.com/docker/docs) and pinned to immutable source commit `389c95117e11ce9c45348290463964caaca3c75b`.
+> Documentation generated from the latest `main` branch commit of [docker/docs](https://github.com/docker/docs) and pinned to immutable source commit `432aa8fa3c1b4c3500e6795ee5090f427ce28efb`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Docker main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -333,6 +333,7 @@
 - [Sandbox environment files](pages/manuals/ai/sandboxes/configuration/environment-files.md): Source `content/manuals/ai/sandboxes/configuration/environment-files.md`.
 - [Enable NVIDIA GPU passthrough](pages/manuals/ai/sandboxes/configuration/gpu-passthrough.md): Source `content/manuals/ai/sandboxes/configuration/gpu-passthrough.md`.
 - [Configure Docker Sandboxes](pages/manuals/ai/sandboxes/configuration/index.md): Source `content/manuals/ai/sandboxes/configuration/_index.md`.
+- [Configure a registry mirror](pages/manuals/ai/sandboxes/configuration/registry-mirror.md): Source `content/manuals/ai/sandboxes/configuration/registry-mirror.md`.
 - [Configure an upstream proxy](pages/manuals/ai/sandboxes/configuration/upstream-proxy.md): Source `content/manuals/ai/sandboxes/configuration/upstream-proxy.md`.
 - [Build your own agent kit](pages/manuals/ai/sandboxes/customize/build-an-agent.md): Source `content/manuals/ai/sandboxes/customize/build-an-agent.md`.
 - [Customizing sandboxes](pages/manuals/ai/sandboxes/customize/index.md): Source `content/manuals/ai/sandboxes/customize/_index.md`.
