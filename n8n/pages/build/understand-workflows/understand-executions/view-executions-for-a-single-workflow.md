@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/understand-workflows/understand-executions/view-executions-for-a-single-workflow.md](https://github.com/n8n-io/n8n-docs/blob/2db18939a2eccf89775aa7e05fa0fdee742efb36/docs/build/understand-workflows/understand-executions/view-executions-for-a-single-workflow.md)
+> Commit-pinned source for n8n main: [docs/build/understand-workflows/understand-executions/view-executions-for-a-single-workflow.md](https://github.com/n8n-io/n8n-docs/blob/72a895394e35dba4497f7c20d33337cc8f1bb0bd/docs/build/understand-workflows/understand-executions/view-executions-for-a-single-workflow.md)
 
 # Workflow-level executions list <a id="workflow-level-executions-list"></a>
 
@@ -51,7 +51,7 @@ You can filter the executions list.
 If your workflow execution fails, you can retry the execution. To retry a failed workflow:
 
 1. Open the **Executions** list.
-2. For the workflow execution you want to retry, select **Refresh** ![Refresh icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/2db18939a2eccf89775aa7e05fa0fdee742efb36/docs/build/.gitbook/assets/refresh.png).
+2. For the workflow execution you want to retry, select **Refresh** ![Refresh icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/72a895394e35dba4497f7c20d33337cc8f1bb0bd/docs/build/.gitbook/assets/refresh.png).
 3. Select either of the following options to retry the execution:
    - **Retry with currently saved workflow**: Once you make changes to your workflow, you can select this option to execute the workflow with the previous execution data.
    - **Retry with original workflow**: If you want to retry the execution without making changes to your workflow, you can select this option to retry the execution with the previous execution data.

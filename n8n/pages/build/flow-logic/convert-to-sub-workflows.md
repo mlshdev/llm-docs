@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/flow-logic/convert-to-sub-workflows.md](https://github.com/n8n-io/n8n-docs/blob/2db18939a2eccf89775aa7e05fa0fdee742efb36/docs/build/flow-logic/convert-to-sub-workflows.md)
+> Commit-pinned source for n8n main: [docs/build/flow-logic/convert-to-sub-workflows.md](https://github.com/n8n-io/n8n-docs/blob/72a895394e35dba4497f7c20d33337cc8f1bb0bd/docs/build/flow-logic/convert-to-sub-workflows.md)
 
 # Sub-workflow conversion <a id="sub-workflow-conversion"></a>
 

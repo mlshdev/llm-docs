@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/host-n8n/configure-n8n/basic-configuration/configuration-examples/specify-custom-nodes-location.md](https://github.com/n8n-io/n8n-docs/blob/2db18939a2eccf89775aa7e05fa0fdee742efb36/docs/deploy/host-n8n/configure-n8n/basic-configuration/configuration-examples/specify-custom-nodes-location.md)
+> Commit-pinned source for n8n main: [docs/deploy/host-n8n/configure-n8n/basic-configuration/configuration-examples/specify-custom-nodes-location.md](https://github.com/n8n-io/n8n-docs/blob/72a895394e35dba4497f7c20d33337cc8f1bb0bd/docs/deploy/host-n8n/configure-n8n/basic-configuration/configuration-examples/specify-custom-nodes-location.md)
 
 # Specify location for your custom nodes <a id="specify-location-for-your-custom-nodes"></a>
 

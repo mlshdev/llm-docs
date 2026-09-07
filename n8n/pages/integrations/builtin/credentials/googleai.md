@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/builtin/credentials/googleai.md](https://github.com/n8n-io/n8n-docs/blob/2db18939a2eccf89775aa7e05fa0fdee742efb36/docs/integrations/builtin/credentials/googleai.md)
+> Commit-pinned source for n8n main: [docs/integrations/builtin/credentials/googleai.md](https://github.com/n8n-io/n8n-docs/blob/72a895394e35dba4497f7c20d33337cc8f1bb0bd/docs/integrations/builtin/credentials/googleai.md)
 
 # Google Gemini(PaLM) credentials <a id="google-geminipalm-credentials"></a>
 

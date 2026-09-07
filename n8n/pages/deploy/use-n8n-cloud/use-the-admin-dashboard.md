@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/use-n8n-cloud/use-the-admin-dashboard.md](https://github.com/n8n-io/n8n-docs/blob/2db18939a2eccf89775aa7e05fa0fdee742efb36/docs/deploy/use-n8n-cloud/use-the-admin-dashboard.md)
+> Commit-pinned source for n8n main: [docs/deploy/use-n8n-cloud/use-the-admin-dashboard.md](https://github.com/n8n-io/n8n-docs/blob/72a895394e35dba4497f7c20d33337cc8f1bb0bd/docs/deploy/use-n8n-cloud/use-the-admin-dashboard.md)
 
 # Cloud admin dashboard <a id="cloud-admin-dashboard"></a>
 

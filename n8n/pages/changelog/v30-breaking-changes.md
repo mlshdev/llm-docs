@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/changelog/v30-breaking-changes.md](https://github.com/n8n-io/n8n-docs/blob/2db18939a2eccf89775aa7e05fa0fdee742efb36/docs/changelog/v30-breaking-changes.md)
+> Commit-pinned source for n8n main: [docs/changelog/v30-breaking-changes.md](https://github.com/n8n-io/n8n-docs/blob/72a895394e35dba4497f7c20d33337cc8f1bb0bd/docs/changelog/v30-breaking-changes.md)
 
 # n8n 3.0 breaking changes <a id="n8n-v30-breaking-changes"></a>
 

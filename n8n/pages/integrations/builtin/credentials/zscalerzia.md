@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/builtin/credentials/zscalerzia.md](https://github.com/n8n-io/n8n-docs/blob/2db18939a2eccf89775aa7e05fa0fdee742efb36/docs/integrations/builtin/credentials/zscalerzia.md)
+> Commit-pinned source for n8n main: [docs/integrations/builtin/credentials/zscalerzia.md](https://github.com/n8n-io/n8n-docs/blob/72a895394e35dba4497f7c20d33337cc8f1bb0bd/docs/integrations/builtin/credentials/zscalerzia.md)
 
 # Zscaler ZIA credentials <a id="zscaler-zia-credentials"></a>
 

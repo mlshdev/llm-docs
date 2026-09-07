@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/host-n8n/install-options/install-with-npm.md](https://github.com/n8n-io/n8n-docs/blob/2db18939a2eccf89775aa7e05fa0fdee742efb36/docs/deploy/host-n8n/install-options/install-with-npm.md)
+> Commit-pinned source for n8n main: [docs/deploy/host-n8n/install-options/install-with-npm.md](https://github.com/n8n-io/n8n-docs/blob/72a895394e35dba4497f7c20d33337cc8f1bb0bd/docs/deploy/host-n8n/install-options/install-with-npm.md)
 
 > **Warning**
 > **Feature availability**

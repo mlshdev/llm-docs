@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/community-nodes/building-community-nodes.md](https://github.com/n8n-io/n8n-docs/blob/2db18939a2eccf89775aa7e05fa0fdee742efb36/docs/integrations/community-nodes/building-community-nodes.md)
+> Commit-pinned source for n8n main: [docs/integrations/community-nodes/building-community-nodes.md](https://github.com/n8n-io/n8n-docs/blob/72a895394e35dba4497f7c20d33337cc8f1bb0bd/docs/integrations/community-nodes/building-community-nodes.md)
 
 # Building community nodes <a id="building-community-nodes"></a>
 

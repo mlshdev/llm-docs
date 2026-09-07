@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/code-in-n8n/use-built-in-shortcuts/http-node.md](https://github.com/n8n-io/n8n-docs/blob/2db18939a2eccf89775aa7e05fa0fdee742efb36/docs/build/code-in-n8n/use-built-in-shortcuts/http-node.md)
+> Commit-pinned source for n8n main: [docs/build/code-in-n8n/use-built-in-shortcuts/http-node.md](https://github.com/n8n-io/n8n-docs/blob/72a895394e35dba4497f7c20d33337cc8f1bb0bd/docs/build/code-in-n8n/use-built-in-shortcuts/http-node.md)
 
 # HTTP node variables <a id="http-node-variables"></a>
 
