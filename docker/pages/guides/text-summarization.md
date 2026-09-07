@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/text-summarization.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/guides/text-summarization.md)
+> Commit-pinned source for Docker main: [content/guides/text-summarization.md](https://github.com/docker/docs/blob/42a44992f49bda99e0caf2b015f0cfb0bb0c488c/content/guides/text-summarization.md)
 
 # Build a text summarization app
 

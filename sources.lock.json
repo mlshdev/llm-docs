@@ -23,8 +23,8 @@
     "docker": {
       "tag": "main",
       "branch": "main",
-      "sourceCommit": "034d46977dac45d2a9493f2465b08108ac3cf87b",
-      "sourceCommittedAt": "2026-09-04T19:49:55Z"
+      "sourceCommit": "42a44992f49bda99e0caf2b015f0cfb0bb0c488c",
+      "sourceCommittedAt": "2026-09-07T08:04:07Z"
     },
     "n8n": {
       "tag": "main",

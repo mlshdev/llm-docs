@@ -1,12 +1,12 @@
-> Commit-pinned source for Docker main: [content/manuals/agentic-platform/faq.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/agentic-platform/faq.md)
+> Commit-pinned source for Docker main: [content/manuals/agentic-platform/faq.md](https://github.com/docker/docs/blob/42a44992f49bda99e0caf2b015f0cfb0bb0c488c/content/manuals/agentic-platform/faq.md)
 
 # Docker Agentic Platform FAQ
 
 ## What can I run in Docker Agentic Platform?
 
 Docker Agentic Platform provides predefined sandbox types for Claude Code,
-Codex, OpenCode, Copilot, and Gemini CLI. Each runs in an isolated, Docker-hosted
-sandbox with a live terminal.
+Codex, OpenCode, Copilot, Gemini CLI, and Shell. Each type runs in an isolated,
+Docker-hosted sandbox with a live terminal.
 
 ## How does Docker Agentic Platform differ from Docker Sandboxes?
 

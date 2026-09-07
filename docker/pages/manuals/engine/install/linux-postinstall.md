@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/engine/install/linux-postinstall.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/engine/install/linux-postinstall.md)
+> Commit-pinned source for Docker main: [content/manuals/engine/install/linux-postinstall.md](https://github.com/docker/docs/blob/42a44992f49bda99e0caf2b015f0cfb0bb0c488c/content/manuals/engine/install/linux-postinstall.md)
 
 # Linux post-installation steps for Docker Engine
 

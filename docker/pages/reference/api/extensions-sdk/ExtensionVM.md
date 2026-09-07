@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/reference/api/extensions-sdk/ExtensionVM.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/reference/api/extensions-sdk/ExtensionVM.md)
+> Commit-pinned source for Docker main: [content/reference/api/extensions-sdk/ExtensionVM.md](https://github.com/docker/docs/blob/42a44992f49bda99e0caf2b015f0cfb0bb0c488c/content/reference/api/extensions-sdk/ExtensionVM.md)
 
 # Interface: ExtensionVM
 

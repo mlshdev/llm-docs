@@ -1,16 +1,23 @@
-> Commit-pinned source for Docker main: [content/manuals/agentic-platform/sandboxes.md](https://github.com/docker/docs/blob/034d46977dac45d2a9493f2465b08108ac3cf87b/content/manuals/agentic-platform/sandboxes.md)
+> Commit-pinned source for Docker main: [content/manuals/agentic-platform/sandboxes.md](https://github.com/docker/docs/blob/42a44992f49bda99e0caf2b015f0cfb0bb0c488c/content/manuals/agentic-platform/sandboxes.md)
 
 # Sandboxes
 
-A sandbox is an isolated runtime for an agent or tool. Docker hosts and meters
-the sandbox on managed cloud infrastructure and provides a live terminal for
+A sandbox is an isolated runtime on Docker-managed cloud infrastructure.
+Docker hosts and meters the sandbox and provides a live terminal for
 interacting with it.
 
 Docker Agentic Platform provides predefined sandbox types for Claude Code,
-Codex, OpenCode, Copilot, and Gemini CLI. Each sandbox has its own compute,
-filesystem, network access, and terminal. A sandbox continues running
-independently of your connection to the Console until it is paused, stopped by
-its lifecycle timer, or deleted.
+Codex, OpenCode, Copilot, Gemini CLI, and Shell. All sandbox types run Ubuntu on
+x86-64 compute with Docker pre-installed. Each sandbox has its own compute,
+filesystem, network access, and terminal. The compute size that you select
+determines its CPU and memory resources.
+
+The Shell type opens a Bash shell without a pre-installed agent. It uses the
+same agent-less environment as [`sbx run shell`](https://docs.docker.com/ai/sandboxes/agents/shell/)
+and is useful for working manually or installing your own agent.
+
+A sandbox continues running independently of your connection to the Console
+until it is paused, stopped by its lifecycle timer, or deleted.
 
 ## Source code and files
 
@@ -35,7 +42,7 @@ but writing to them still requires authentication.
 ## Open a sandbox
 
 After you select **Run**, Docker creates the sandbox and opens its detail page.
-Use the terminal to interact with the selected agent or tool.
+Use the terminal to interact with the sandbox.
 
 Open **Sandboxes** to review each sandbox's name, type, status, hourly rate,
 expiration, and age. Select a sandbox to reopen its detail page and terminal.
@@ -61,11 +68,11 @@ account, usage, and payment information, see [Docker Billing](https://docs.docke
 
 ## Check sandbox configuration
 
-If the agent cannot reach a service or use a tool, check the configuration that
-applies to the request:
+If the sandbox cannot reach a service or use a tool, check the configuration
+that applies to the request:
 
 - Confirm that the network policies permit the destination.
-- If the agent needs an MCP tool, confirm that its server is connected and
+- If the sandbox needs an MCP tool, confirm that its server is connected and
   authorized.
 - If the destination requires authentication, confirm that the sandbox was
   created with the service credential.
