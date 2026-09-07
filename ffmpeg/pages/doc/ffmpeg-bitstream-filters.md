@@ -1,4 +1,4 @@
-> Commit-pinned source for FFmpeg master: [doc/ffmpeg-bitstream-filters.texi](https://github.com/FFmpeg/FFmpeg/blob/ecc7eb519ec8a6625eaec5bb6ba0607980d43c82/doc/ffmpeg-bitstream-filters.texi)
+> Commit-pinned source for FFmpeg master: [doc/ffmpeg-bitstream-filters.texi](https://github.com/FFmpeg/FFmpeg/blob/e4ed85ab73406c970c7cc30207f663572f5a4c30/doc/ffmpeg-bitstream-filters.texi)
 
 # Description
 
