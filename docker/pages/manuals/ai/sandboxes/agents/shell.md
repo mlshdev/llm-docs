@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/agents/shell.md](https://github.com/docker/docs/blob/432aa8fa3c1b4c3500e6795ee5090f427ce28efb/content/manuals/ai/sandboxes/agents/shell.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/agents/shell.md](https://github.com/docker/docs/blob/9adf4bad79fbdb239706ba723e51ee9c6473bcbc/content/manuals/ai/sandboxes/agents/shell.md)
 
 # Shell
 
@@ -11,11 +11,19 @@ environment.
 $ sbx run shell ~/my-project
 ```
 
-The workspace path defaults to the current directory. To run a one-off
+`sbx run` defaults the workspace to the current directory. To run a one-off
 command instead of an interactive shell, pass it after `--`:
 
 ```console
 $ sbx run shell -- -c "echo 'Hello from sandbox'"
+```
+
+To create a [mountless sandbox](https://docs.docker.com/ai/sandboxes/usage/#choose-a-workspace), use
+`sbx create` without a workspace path, then attach by name:
+
+```console
+$ sbx create --name scratch shell
+$ sbx run --name scratch
 ```
 
 ## Default startup command

@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/integrate-ai/understand-ai-components/store-and-search-data-with-vectors.md](https://github.com/n8n-io/n8n-docs/blob/895c888b78634f5877156b7df5ff8828f020a60f/docs/build/integrate-ai/understand-ai-components/store-and-search-data-with-vectors.md)
+> Commit-pinned source for n8n main: [docs/build/integrate-ai/understand-ai-components/store-and-search-data-with-vectors.md](https://github.com/n8n-io/n8n-docs/blob/2db18939a2eccf89775aa7e05fa0fdee742efb36/docs/build/integrate-ai/understand-ai-components/store-and-search-data-with-vectors.md)
 
 # What are vector databases? <a id="what-are-vector-databases"></a>
 

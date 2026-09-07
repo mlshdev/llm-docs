@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/work-with-data/understand-n8ns-data-structure.md](https://github.com/n8n-io/n8n-docs/blob/895c888b78634f5877156b7df5ff8828f020a60f/docs/build/work-with-data/understand-n8ns-data-structure.md)
+> Commit-pinned source for n8n main: [docs/build/work-with-data/understand-n8ns-data-structure.md](https://github.com/n8n-io/n8n-docs/blob/2db18939a2eccf89775aa7e05fa0fdee742efb36/docs/build/work-with-data/understand-n8ns-data-structure.md)
 
 # How n8n structures data <a id="how-n8n-structures-data"></a>
 
@@ -101,4 +101,4 @@ Given the following data:
 
 n8n displays it in table form like this, showing the `nested` field in bold to show that it contains nested data:
 
-![Table view of the example data, with the nested field shown in bold](https://raw.githubusercontent.com/n8n-io/n8n-docs/895c888b78634f5877156b7df5ff8828f020a60f/docs/build/.gitbook/assets/nested-data.png)
+![Table view of the example data, with the nested field shown in bold](https://raw.githubusercontent.com/n8n-io/n8n-docs/2db18939a2eccf89775aa7e05fa0fdee742efb36/docs/build/.gitbook/assets/nested-data.png)

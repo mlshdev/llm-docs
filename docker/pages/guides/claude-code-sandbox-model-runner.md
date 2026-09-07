@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/claude-code-sandbox-model-runner.md](https://github.com/docker/docs/blob/432aa8fa3c1b4c3500e6795ee5090f427ce28efb/content/guides/claude-code-sandbox-model-runner.md)
+> Commit-pinned source for Docker main: [content/guides/claude-code-sandbox-model-runner.md](https://github.com/docker/docs/blob/9adf4bad79fbdb239706ba723e51ee9c6473bcbc/content/guides/claude-code-sandbox-model-runner.md)
 
 # Run Claude Code in a Docker Sandbox with Docker Model Runner
 
@@ -138,7 +138,7 @@ see the
 Run Claude Code in the sandbox and pass the model flag through to the agent:
 
 ```console
-$ sbx run claude-dmr -- --model ai/devstral-small-2
+$ sbx run --name claude-dmr -- --model ai/devstral-small-2
 ```
 
 Everything after `--` is forwarded to the Claude Code CLI.
@@ -172,7 +172,7 @@ Then point Claude Code at the packaged model the next time you run the
 sandbox:
 
 ```console
-$ sbx run claude-dmr -- --model gpt-oss:32k
+$ sbx run --name claude-dmr -- --model gpt-oss:32k
 ```
 
 ## Clean up

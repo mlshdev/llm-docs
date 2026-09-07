@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/offload/docker_offload_stop.yaml](https://github.com/docker/docs/blob/432aa8fa3c1b4c3500e6795ee5090f427ce28efb/data/cli/offload/docker_offload_stop.yaml)
+> Commit-pinned source for Docker main: [data/cli/offload/docker_offload_stop.yaml](https://github.com/docker/docs/blob/9adf4bad79fbdb239706ba723e51ee9c6473bcbc/data/cli/offload/docker_offload_stop.yaml)
 
 # docker offload stop
 

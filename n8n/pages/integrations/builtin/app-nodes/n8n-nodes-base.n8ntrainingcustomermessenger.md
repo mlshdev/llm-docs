@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/builtin/app-nodes/n8n-nodes-base.n8ntrainingcustomermessenger.md](https://github.com/n8n-io/n8n-docs/blob/895c888b78634f5877156b7df5ff8828f020a60f/docs/integrations/builtin/app-nodes/n8n-nodes-base.n8ntrainingcustomermessenger.md)
+> Commit-pinned source for n8n main: [docs/integrations/builtin/app-nodes/n8n-nodes-base.n8ntrainingcustomermessenger.md](https://github.com/n8n-io/n8n-docs/blob/2db18939a2eccf89775aa7e05fa0fdee742efb36/docs/integrations/builtin/app-nodes/n8n-nodes-base.n8ntrainingcustomermessenger.md)
 
 # Customer Messenger (n8n Training) node <a id="customer-messenger-n8n-training-node"></a>
 

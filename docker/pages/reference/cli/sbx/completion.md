@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/sbx_cli/sbx_completion.yaml](https://github.com/docker/docs/blob/432aa8fa3c1b4c3500e6795ee5090f427ce28efb/data/sbx_cli/sbx_completion.yaml)
+> Commit-pinned source for Docker main: [data/sbx_cli/sbx_completion.yaml](https://github.com/docker/docs/blob/9adf4bad79fbdb239706ba723e51ee9c6473bcbc/data/sbx_cli/sbx_completion.yaml)
 
 # sbx completion
 

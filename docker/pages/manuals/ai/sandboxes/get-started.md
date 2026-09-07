@@ -1,11 +1,11 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/get-started.md](https://github.com/docker/docs/blob/432aa8fa3c1b4c3500e6795ee5090f427ce28efb/content/manuals/ai/sandboxes/get-started.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/get-started.md](https://github.com/docker/docs/blob/9adf4bad79fbdb239706ba723e51ee9c6473bcbc/content/manuals/ai/sandboxes/get-started.md)
 
 # Get started with Docker Sandboxes
 
 Docker Sandboxes run AI coding agents in isolated microVM sandboxes. Each
 sandbox gets its own Docker daemon, filesystem, and network — the agent can
-build containers, install packages, and modify files without touching your host
-system.
+build containers, install packages, and modify files without accessing host
+resources beyond those you share.
 
 This page walks through your first session: run an agent in a sandbox, see how
 the sandbox isolates it, control what it can reach on the network, and clean
@@ -95,7 +95,8 @@ Each row shows a sandbox's name, the agent running in it, its status, any
 workspace — the host directory shared into the sandbox. That workspace is the
 one part of your machine the agent can see.
 
-By default, the workspace is shared read-write, so the agent and your host see
+When you run `sbx run` from a project directory without passing a workspace
+path, the current directory is mounted read-write. The agent and your host see
 the same files. Edits the agent makes to your project appear in your working
 tree as it writes them, and you review them as an ordinary Git diff before
 committing.
@@ -165,7 +166,7 @@ Run `sbx` with no arguments to open the interactive dashboard: a live view of
 every sandbox where you can attach to agents, open shells, and manage network
 rules from one place.
 
-![The interactive dashboard showing sandbox status, resource usage, and network governance controls.](https://raw.githubusercontent.com/docker/docs/432aa8fa3c1b4c3500e6795ee5090f427ce28efb/content/manuals/ai/sandboxes/images/sbx-dashboard.png)
+![The interactive dashboard showing sandbox status, resource usage, and network governance controls.](https://raw.githubusercontent.com/docker/docs/9adf4bad79fbdb239706ba723e51ee9c6473bcbc/content/manuals/ai/sandboxes/images/sbx-dashboard.png)
 
 Then explore:
 

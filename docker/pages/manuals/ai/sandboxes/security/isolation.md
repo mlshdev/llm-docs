@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/security/isolation.md](https://github.com/docker/docs/blob/432aa8fa3c1b4c3500e6795ee5090f427ce28efb/content/manuals/ai/sandboxes/security/isolation.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/security/isolation.md](https://github.com/docker/docs/blob/9adf4bad79fbdb239706ba723e51ee9c6473bcbc/content/manuals/ai/sandboxes/security/isolation.md)
 
 # Isolation layers
 
@@ -15,11 +15,13 @@ processes, files, or resources outside its defined boundaries.
 
 - **Process isolation:** separate kernel per sandbox; processes inside the VM
   are invisible to your host and to other sandboxes
-- **Filesystem isolation:** your workspace directory and, for supported agents
-  that haven't opted out, the dedicated [shared skills
-  store](https://docs.docker.com/ai/sandboxes/workflows/agent-skills/) are shared with the host. The rest
-  of the VM filesystem persists across restarts but is removed when you delete
-  the sandbox. Symlinks pointing outside the workspace scope are not followed.
+- **Filesystem isolation:** a host workspace is shared when you pass a
+  workspace path or use `sbx run`, which defaults to the current directory.
+  For supported agents that haven't opted out, the dedicated
+  [shared skills store](https://docs.docker.com/ai/sandboxes/workflows/agent-skills/) is also shared with the
+  host. The rest of the VM filesystem persists across restarts but is removed
+  when you delete the sandbox. Symlinks pointing outside the workspace scope
+  are not followed.
 - **Full cleanup:** when you remove a sandbox with `sbx rm`, the VM and
   everything inside it is deleted
 
@@ -94,24 +96,48 @@ flowchart TB
 
 ## Workspace isolation
 
-When you create a sandbox, you choose one of two ways to share your
-workspace with it:
+When you create a sandbox, choose how the agent receives a workspace:
 
-- **Direct mount** (the default): the agent has read-write access to
-  your working tree. There is no boundary between the agent's edits and
-  your host filesystem.
-- **Clone mode** (`--clone`): your repository is mounted read-only into
-  the VM and the agent works on a private clone inside the VM. The
-  agent's edits never reach your host until you fetch them.
+- **Mountless** (no path to `sbx create`): the sandbox doesn't receive a host
+  workspace. The agent works in the sandbox's own filesystem.
+- **Direct mount** (a path such as `.`): the agent has read-write access to
+  your working tree. There is no boundary between the agent's edits and your
+  host filesystem.
+- **Clone mode** (`--clone` and a Git path): your repository is mounted
+  read-only into the VM and the agent works on a private clone inside the VM.
+  The agent's edits never reach your host until you fetch them.
 
-See [Git workflows](https://docs.docker.com/ai/sandboxes/workflows/git/) for the workflow side of
-each.
+See [Git workflows](https://docs.docker.com/ai/sandboxes/workflows/git/) for direct-mount and clone-mode
+workflows.
 
-### Direct mount (default)
+### Mountless
 
-By default, your workspace is shared into the VM as a read-write mount.
-The agent and the host see the same files, and changes the agent makes
-appear on your host as soon as they're written.
+Omit the workspace path from `sbx create` to create a mountless sandbox, then
+attach by name:
+
+```console
+$ sbx create --name scratch claude
+$ sbx run --name scratch
+```
+
+The agent uses the sandbox template's default working directory.
+Docker-provided agent templates use `/home/agent/workspace`. If the template
+doesn't define a usable absolute working directory, the daemon uses that path.
+Files there stay within the sandbox, persist across stops and restarts, and are
+deleted when you remove the sandbox. A mountless sandbox doesn't expose a host
+project directory, but separately configured host resources such as the shared
+skills store can still be mounted.
+
+### Direct mount
+
+Pass a workspace path to share it into the VM as a read-write mount. The agent
+and the host see the same files, and changes the agent makes appear on your
+host as soon as they're written. `sbx run` mounts the current directory when
+you don't pass a path:
+
+```console
+$ sbx run claude
+```
 
 Direct mounts enforce access by path. If a workspace file is a hard link to a
 file outside the workspace, the agent can read and modify the underlying file
@@ -242,5 +268,11 @@ Credential values are never stored inside the VM. They are not available as
 environment variables or files inside the sandbox unless you explicitly set
 them. This means a compromised sandbox cannot read API keys from the local
 environment.
+
+SSH agent forwarding is enabled by default. Private keys stay on the host, but
+any process inside the sandbox can ask the forwarded agent to authenticate or
+sign data. Docker Sandboxes forwards only sockets it recognizes as SSH agents.
+A sandbox receives no SSH agent when forwarding is disabled, the configuration
+is unavailable, or the selected socket can't be used.
 
 For how to store and manage credentials, see [Credentials](https://docs.docker.com/ai/sandboxes/configuration/credentials/).

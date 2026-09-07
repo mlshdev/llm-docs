@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/enterprise/security/enforce-sign-in/_index.md](https://github.com/docker/docs/blob/432aa8fa3c1b4c3500e6795ee5090f427ce28efb/content/manuals/enterprise/security/enforce-sign-in/_index.md)
+> Commit-pinned source for Docker main: [content/manuals/enterprise/security/enforce-sign-in/_index.md](https://github.com/docker/docs/blob/9adf4bad79fbdb239706ba723e51ee9c6473bcbc/content/manuals/enterprise/security/enforce-sign-in/_index.md)
 
 # Enforce sign-in for Docker Desktop
 

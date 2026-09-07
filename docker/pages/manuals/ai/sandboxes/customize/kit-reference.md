@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/customize/kit-reference.md](https://github.com/docker/docs/blob/432aa8fa3c1b4c3500e6795ee5090f427ce28efb/content/manuals/ai/sandboxes/customize/kit-reference.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/customize/kit-reference.md](https://github.com/docker/docs/blob/9adf4bad79fbdb239706ba723e51ee9c6473bcbc/content/manuals/ai/sandboxes/customize/kit-reference.md)
 
 # Kit spec reference
 
@@ -479,6 +479,12 @@ the sandbox with the kit.
 
 Runs synchronously when a kit is applied, either during sandbox creation or
 through `sbx kit add`. Shell strings are passed to `sh -c`.
+
+Kit install commands start in the template image's configured `WORKDIR`.
+Docker-provided templates use `/home/agent/workspace`, which isn't necessarily
+the primary workspace in a direct-mounted or clone-mode sandbox. Don't rely on
+the current directory to locate workspace files. Use absolute paths for bundled
+assets from `files/home/`.
 
 | Field         | Default | Description                   |
 | ------------- | ------- | ----------------------------- |

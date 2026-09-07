@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/understand-workflows/workflow-components/find-your-workflow-id.md](https://github.com/n8n-io/n8n-docs/blob/895c888b78634f5877156b7df5ff8828f020a60f/docs/build/understand-workflows/workflow-components/find-your-workflow-id.md)
+> Commit-pinned source for n8n main: [docs/build/understand-workflows/workflow-components/find-your-workflow-id.md](https://github.com/n8n-io/n8n-docs/blob/2db18939a2eccf89775aa7e05fa0fdee742efb36/docs/build/understand-workflows/workflow-components/find-your-workflow-id.md)
 
 # Find your workflow ID <a id="find-your-workflow-id"></a>
 

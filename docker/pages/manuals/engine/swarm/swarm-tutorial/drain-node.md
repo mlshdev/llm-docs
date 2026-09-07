@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/engine/swarm/swarm-tutorial/drain-node.md](https://github.com/docker/docs/blob/432aa8fa3c1b4c3500e6795ee5090f427ce28efb/content/manuals/engine/swarm/swarm-tutorial/drain-node.md)
+> Commit-pinned source for Docker main: [content/manuals/engine/swarm/swarm-tutorial/drain-node.md](https://github.com/docker/docs/blob/9adf4bad79fbdb239706ba723e51ee9c6473bcbc/content/manuals/engine/swarm/swarm-tutorial/drain-node.md)
 
 # Drain a node on the swarm
 

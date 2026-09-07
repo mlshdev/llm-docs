@@ -1,11 +1,11 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/_index.md](https://github.com/docker/docs/blob/432aa8fa3c1b4c3500e6795ee5090f427ce28efb/content/manuals/ai/sandboxes/_index.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/_index.md](https://github.com/docker/docs/blob/9adf4bad79fbdb239706ba723e51ee9c6473bcbc/content/manuals/ai/sandboxes/_index.md)
 
 # Docker Sandboxes
 
 Docker Sandboxes run AI coding agents in isolated microVM sandboxes. Each
 sandbox gets its own Docker daemon, filesystem, and network — the agent can
-build containers, install packages, and modify files without touching your host
-system.
+build containers, install packages, and modify files without accessing host
+resources beyond those you share.
 
 > \[!NOTE]
 > The `sbx` CLI is free to use, including for commercial work. Only

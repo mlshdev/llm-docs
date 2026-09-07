@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/build/exporters/oci-docker.md](https://github.com/docker/docs/blob/432aa8fa3c1b4c3500e6795ee5090f427ce28efb/content/manuals/build/exporters/oci-docker.md)
+> Commit-pinned source for Docker main: [content/manuals/build/exporters/oci-docker.md](https://github.com/docker/docs/blob/9adf4bad79fbdb239706ba723e51ee9c6473bcbc/content/manuals/build/exporters/oci-docker.md)
 
 # OCI and Docker exporters
 

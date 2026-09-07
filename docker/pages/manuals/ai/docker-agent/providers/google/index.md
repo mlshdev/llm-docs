@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/providers/google/index.md](https://github.com/docker/docs/blob/432aa8fa3c1b4c3500e6795ee5090f427ce28efb/_vendor/github.com/docker/docker-agent/docs/providers/google/index.md)
+> Commit-pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/providers/google/index.md](https://github.com/docker/docs/blob/9adf4bad79fbdb239706ba723e51ee9c6473bcbc/_vendor/github.com/docker/docker-agent/docs/providers/google/index.md)
 
 *Use Gemini 2.5 Flash, Gemini 3 Pro, and other Google models with Docker Agent.*
 

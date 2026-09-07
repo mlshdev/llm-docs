@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/workflows/automation.md](https://github.com/docker/docs/blob/432aa8fa3c1b4c3500e6795ee5090f427ce28efb/content/manuals/ai/sandboxes/workflows/automation.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/workflows/automation.md](https://github.com/docker/docs/blob/9adf4bad79fbdb239706ba723e51ee9c6473bcbc/content/manuals/ai/sandboxes/workflows/automation.md)
 
 # Run sandboxes in CI
 
@@ -18,7 +18,7 @@ Create the sandbox in the background with `sbx create`, run agent tasks with
 `sbx exec`, and clean up with `sbx rm`:
 
 ```console
-$ sbx create --name ci-task --clone claude
+$ sbx create --name ci-task --clone claude .
 $ sbx run --name ci-task  # attach and give instructions, or use sbx exec for one-off commands
 $ git fetch sandbox-ci-task
 $ sbx rm ci-task

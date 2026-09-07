@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/administer/manage-users-and-access/set-permissions-and-roles-rbac/see-available-roles.md](https://github.com/n8n-io/n8n-docs/blob/895c888b78634f5877156b7df5ff8828f020a60f/docs/administer/manage-users-and-access/set-permissions-and-roles-rbac/see-available-roles.md)
+> Commit-pinned source for n8n main: [docs/administer/manage-users-and-access/set-permissions-and-roles-rbac/see-available-roles.md](https://github.com/n8n-io/n8n-docs/blob/2db18939a2eccf89775aa7e05fa0fdee742efb36/docs/administer/manage-users-and-access/set-permissions-and-roles-rbac/see-available-roles.md)
 
 # RBAC role types <a id="rbac-role-types"></a>
 

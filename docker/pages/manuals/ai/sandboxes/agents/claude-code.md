@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/agents/claude-code.md](https://github.com/docker/docs/blob/432aa8fa3c1b4c3500e6795ee5090f427ce28efb/content/manuals/ai/sandboxes/agents/claude-code.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/agents/claude-code.md](https://github.com/docker/docs/blob/9adf4bad79fbdb239706ba723e51ee9c6473bcbc/content/manuals/ai/sandboxes/agents/claude-code.md)
 
 # Claude Code
 
@@ -12,15 +12,17 @@ Launch Claude Code in a sandbox by pointing it at a project directory:
 $ sbx run claude ~/my-project
 ```
 
-The workspace parameter defaults to the current directory, so `sbx run claude`
-from inside your project works too. To start Claude with a specific prompt:
+To start Claude with a specific prompt in the current directory:
 
 ```console
-$ sbx run claude --name my-sandbox -- "Add error handling to the login function"
+$ sbx run --name my-sandbox claude -- "Add error handling to the login function"
 ```
 
 Everything after `--` is passed directly to Claude Code. You can also pipe in a
 prompt from a file with `-- "$(cat prompt.txt)"`.
+
+To create a [mountless sandbox](https://docs.docker.com/ai/sandboxes/usage/#choose-a-workspace), use
+`sbx create` without a workspace path, then attach by name.
 
 ## Authentication
 
@@ -66,7 +68,7 @@ itself a flag (begins with `-`), so `--dangerously-skip-permissions` is
 preserved:
 
 ```console
-$ sbx run claude -- -c   # runs claude --dangerously-skip-permissions -c
+$ sbx run --name <sandbox-name> -- -c   # runs claude --dangerously-skip-permissions -c
 ```
 
 When the first argument is a bare word, such as the `agents` subcommand, it
@@ -83,7 +85,7 @@ starts background sessions that run tasks in parallel. Pair it with
 sandbox:
 
 ```console
-$ sbx run --clone claude -- agents
+$ sbx run --clone claude . -- agents
 ```
 
 This invocation replaces the
@@ -93,7 +95,7 @@ bypass-permissions mode inside the sandbox. To work around this, either
 use Claude Code's auto mode or pass the flag explicitly:
 
 ```console
-$ sbx run --clone claude -- --dangerously-skip-permissions agents
+$ sbx run --clone claude . -- --dangerously-skip-permissions agents
 ```
 
 Claude Code may use branches or worktrees to keep changes from its background

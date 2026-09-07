@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/agents/codex.md](https://github.com/docker/docs/blob/432aa8fa3c1b4c3500e6795ee5090f427ce28efb/content/manuals/ai/sandboxes/agents/codex.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/agents/codex.md](https://github.com/docker/docs/blob/9adf4bad79fbdb239706ba723e51ee9c6473bcbc/content/manuals/ai/sandboxes/agents/codex.md)
 
 # Codex
 
@@ -15,12 +15,15 @@ Create a sandbox and run Codex for a project directory:
 $ sbx run codex ~/my-project
 ```
 
-The workspace parameter is optional and defaults to the current directory:
+`sbx run` defaults the workspace to the current directory:
 
 ```console
 $ cd ~/my-project
 $ sbx run codex
 ```
+
+To create a [mountless sandbox](https://docs.docker.com/ai/sandboxes/usage/#choose-a-workspace), use
+`sbx create` without a workspace path, then attach by name.
 
 ## Authentication
 
@@ -70,7 +73,7 @@ itself a flag (begins with `-`). A bare word — such as a prompt — replaces t
 defaults instead, so lead with the flag to keep bypass mode:
 
 ```console
-$ sbx run codex -- --dangerously-bypass-approvals-and-sandbox "fix the build"
+$ sbx run --name <sandbox-name> -- --dangerously-bypass-approvals-and-sandbox "fix the build"
 ```
 
 ## Base image

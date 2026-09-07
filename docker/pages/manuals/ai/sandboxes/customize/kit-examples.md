@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/customize/kit-examples.md](https://github.com/docker/docs/blob/432aa8fa3c1b4c3500e6795ee5090f427ce28efb/content/manuals/ai/sandboxes/customize/kit-examples.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/customize/kit-examples.md](https://github.com/docker/docs/blob/9adf4bad79fbdb239706ba723e51ee9c6473bcbc/content/manuals/ai/sandboxes/customize/kit-examples.md)
 
 # Kit examples
 
@@ -363,25 +363,10 @@ passing the child kit directory in place of a built-in agent name:
 $ sbx run ./claude-sonnet
 ```
 
-Proxy-managed OAuth isn't supported for a third-party kit that extends the
-built-in `claude` agent. Store an Anthropic API key on the host before the first
-launch:
-
-```console
-$ sbx secret set anthropic
-```
-
 When you launch the kit for the first time, `sbx` prompts you to approve its
 inherited Anthropic credentials. Because this is a third-party schema v2 kit,
 `sbx` records your approval as a
-[credential binding](https://docs.docker.com/ai/sandboxes/configuration/credentials/#credential-bindings). The
-sandbox receives a sentinel value, and the proxy injects the real API key into
-requests to the domains declared by the kit.
-
-> \[!WARNING]
-> The approval prompt also lists OAuth, but OAuth doesn't work for the extended
-> agent. If you use Claude Code's `/login` command, Claude Code stores the real
-> OAuth tokens inside the sandbox.
+[credential binding](https://docs.docker.com/ai/sandboxes/configuration/credentials/#credential-bindings).
 
 OpenCode supports an additional config file through `OPENCODE_CONFIG`. Keep the
 kit's config separate from the sandbox-managed
@@ -451,9 +436,7 @@ sandbox:
 The child inherits the built-in image, credentials, network permissions,
 persistent volumes, settings, MCP integration, agent instructions, setup
 entries, and environment variables. Its `sandbox.entrypoint` replaces the
-inherited entrypoint. Proxy-managed OAuth
-isn't supported for the extended agent, so follow the
-[Anthropic API-key setup](#customize-agent-settings) before launching it.
+inherited entrypoint.
 
 Launch by passing the sandbox kit in place of a built-in agent name:
 

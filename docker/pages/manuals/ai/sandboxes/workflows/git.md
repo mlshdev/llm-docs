@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/workflows/git.md](https://github.com/docker/docs/blob/432aa8fa3c1b4c3500e6795ee5090f427ce28efb/content/manuals/ai/sandboxes/workflows/git.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/workflows/git.md](https://github.com/docker/docs/blob/9adf4bad79fbdb239706ba723e51ee9c6473bcbc/content/manuals/ai/sandboxes/workflows/git.md)
 
 # Use Git with sandboxes
 
@@ -89,7 +89,7 @@ It's only reachable while the sandbox is running:
 1. Start a clone-mode sandbox:
 
    ```console
-   $ sbx run --clone claude
+   $ sbx run --clone claude .
    ```
 
 2. Ask the agent to create a branch before it starts editing:
@@ -122,7 +122,7 @@ It's only reachable while the sandbox is running:
    [agents view](https://docs.docker.com/ai/sandboxes/agents/claude-code/#agents-view):
 
    ```console
-   $ sbx run --clone claude
+   $ sbx run --clone claude .
    ```
 
 2. Dispatch each independent task to a separate background session. Your agent
@@ -179,11 +179,13 @@ yourself after reviewing the changes.
 
 ## Commit signing
 
-Sandboxes forward your host SSH agent into the sandbox, so the agent can
-sign commits with your SSH key without the private key ever leaving your
-host.
+SSH agent forwarding is enabled by default. When `SSH_AUTH_SOCK` is set,
+sandboxes forward your host SSH agent into the sandbox, so the agent can sign
+commits with your SSH key without the private key ever leaving your host. If
+you turned off forwarding or use a fixed SSH agent socket, see
+[SSH agent configuration](https://docs.docker.com/ai/sandboxes/configuration/credentials/#ssh-agent).
 
-1. On your host, make sure the signing key is loaded in your SSH agent:
+1. Make sure the signing key is loaded in your host SSH agent:
 
    ```console
    $ ssh-add ~/.ssh/id_ed25519

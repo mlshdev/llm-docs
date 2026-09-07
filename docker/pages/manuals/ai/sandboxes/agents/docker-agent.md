@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/agents/docker-agent.md](https://github.com/docker/docs/blob/432aa8fa3c1b4c3500e6795ee5090f427ce28efb/content/manuals/ai/sandboxes/agents/docker-agent.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/agents/docker-agent.md](https://github.com/docker/docs/blob/9adf4bad79fbdb239706ba723e51ee9c6473bcbc/content/manuals/ai/sandboxes/agents/docker-agent.md)
 
 # Docker Agent
 
@@ -12,8 +12,11 @@ Create a sandbox and run Docker Agent for a project directory:
 $ sbx run docker-agent ~/my-project
 ```
 
-The workspace parameter defaults to the current directory, so
-`sbx run docker-agent` from inside your project works too.
+`sbx run docker-agent` defaults the workspace to the current directory, so you
+can run it from inside your project.
+
+To create a [mountless sandbox](https://docs.docker.com/ai/sandboxes/usage/#choose-a-workspace), use
+`sbx create` without a workspace path, then attach by name.
 
 ## Authentication
 
@@ -55,7 +58,7 @@ as the `run` subcommand or a config file — it replaces the defaults, so includ
 `run --yolo` yourself:
 
 ```console
-$ sbx run docker-agent -- run --yolo agent.yml
+$ sbx run --name <sandbox-name> -- run --yolo agent.yml
 ```
 
 ## Base image

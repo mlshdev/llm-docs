@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/rust.md](https://github.com/docker/docs/blob/432aa8fa3c1b4c3500e6795ee5090f427ce28efb/content/guides/rust.md)
+> Commit-pinned source for Docker main: [content/guides/rust.md](https://github.com/docker/docs/blob/9adf4bad79fbdb239706ba723e51ee9c6473bcbc/content/guides/rust.md)
 
 The Rust language-specific guide teaches you how to create a containerized Rust application using Docker. In this guide, you'll learn how to:
 

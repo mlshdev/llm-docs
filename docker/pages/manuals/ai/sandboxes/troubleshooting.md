@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/troubleshooting.md](https://github.com/docker/docs/blob/432aa8fa3c1b4c3500e6795ee5090f427ce28efb/content/manuals/ai/sandboxes/troubleshooting.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/troubleshooting.md](https://github.com/docker/docs/blob/9adf4bad79fbdb239706ba723e51ee9c6473bcbc/content/manuals/ai/sandboxes/troubleshooting.md)
 
 # Troubleshooting
 
@@ -37,6 +37,38 @@ sandbox data. If the issue persists or state is corrupted, use
 If you hit persistent issues or corrupted state, run
 [`sbx reset`](https://docs.docker.com/reference/cli/sbx/reset/) to stop all VMs and delete all sandbox
 data. Create fresh sandboxes afterwards.
+
+## Sandbox doesn't contain my project files
+
+Starting with `sbx` version 0.42.0, the workspace path is optional for
+`sbx create`. When you omit it, the command creates a mountless sandbox. For
+example, these commands create and attach to a sandbox without mounting your
+host project files:
+
+```console
+$ sbx create --name <sandbox-name> <agent>
+$ sbx run --name <sandbox-name>
+```
+
+By contrast, `sbx run` mounts the current directory when you don't pass a
+workspace path:
+
+```console
+$ sbx run <agent>
+```
+
+A sandbox's workspace configuration is fixed when the sandbox is created. To
+reuse the name of an existing mountless sandbox, first
+[copy out any files you want to keep](https://docs.docker.com/ai/sandboxes/usage/#copy-files-between-host-and-sandbox),
+then remove and recreate it with a workspace path:
+
+```console
+$ sbx rm <sandbox-name>
+$ sbx run --name <sandbox-name> <agent>
+```
+
+See [Choose a workspace](https://docs.docker.com/ai/sandboxes/usage/#choose-a-workspace) for mountless, direct,
+and clone-mode behavior.
 
 ## Agent can't install packages or reach an API
 
@@ -226,23 +258,22 @@ configure the cloned workspace volume capacity. The variable accepts
 human-readable size strings such as `100g`:
 
 ```console
-$ DOCKER_SANDBOXES_CLONED_WORKSPACE_SIZE=100g sbx run --clone claude
+$ DOCKER_SANDBOXES_CLONED_WORKSPACE_SIZE=100g sbx run --clone claude .
 ```
 
 ## Filesystem operations are slow in large repositories
 
 Filesystem operations such as `git status`, `git log`, or directory scans can
-be noticeably slow when the sandbox workspace is mounted in direct mode (the
-default for workspaces without `--clone`). Virtiofs caching speeds up these
-workloads. Clone-mode sandboxes always enable it, so this tuning applies only
-to direct mode.
+be noticeably slow when you pass a workspace path and use direct mode.
+Virtiofs caching speeds up these workloads. Clone-mode sandboxes always enable
+it, so this tuning applies only to direct mode.
 
 Virtiofs caching is enabled by default on all operating systems. If you
 experience Git index corruption or unexpected file content, disable caching
 with the kill switch and recreate the sandbox:
 
 ```console
-$ DOCKER_SANDBOXES_ENABLE_VIRTIOFS_CACHE=0 sbx run <template>
+$ DOCKER_SANDBOXES_ENABLE_VIRTIOFS_CACHE=0 sbx run <agent>
 ```
 
 ## Clone mode reports "not in a Git repository" on WSL
@@ -278,6 +309,19 @@ the command again:
 
 Docker Sandboxes can sign Git commits with SSH keys from your host agent.
 For setup steps, see [Commit signing](https://docs.docker.com/ai/sandboxes/workflows/git/#commit-signing).
+
+Forwarding is enabled by default. Confirm that it hasn't been disabled and
+check whether a fixed socket path is configured:
+
+```console
+$ sbx settings get ssh.agentForwardingEnabled
+$ sbx settings get ssh.agentSocketPath
+```
+
+If you use each client's current `SSH_AUTH_SOCK`, reconnect from a shell where
+it points to the intended agent. If `ssh.agentSocketPath` returns a path,
+confirm that it points to an active host agent. After changing forwarding or
+the socket selection, run `sbx daemon restart`.
 
 If `ssh-add -L` prints `The agent has no identities.`, the sandbox can reach
 the forwarded agent, but the host agent doesn't have a loaded key. Load the

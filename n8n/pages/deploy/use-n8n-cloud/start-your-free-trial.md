@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/use-n8n-cloud/start-your-free-trial.md](https://github.com/n8n-io/n8n-docs/blob/895c888b78634f5877156b7df5ff8828f020a60f/docs/deploy/use-n8n-cloud/start-your-free-trial.md)
+> Commit-pinned source for n8n main: [docs/deploy/use-n8n-cloud/start-your-free-trial.md](https://github.com/n8n-io/n8n-docs/blob/2db18939a2eccf89775aa7e05fa0fdee742efb36/docs/deploy/use-n8n-cloud/start-your-free-trial.md)
 
 # Try free then choose a plan <a id="cloud-free-trial"></a>
 

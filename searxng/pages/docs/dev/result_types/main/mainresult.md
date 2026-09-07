@@ -1,4 +1,4 @@
-> Commit-pinned source for SearXNG master: [docs/dev/result_types/main/mainresult.rst](https://github.com/searxng/searxng/blob/c7f3080aac5de13b619c4a5ab36590a2c5165e1c/docs/dev/result_types/main/mainresult.rst)
+> Commit-pinned source for SearXNG master: [docs/dev/result_types/main/mainresult.rst](https://github.com/searxng/searxng/blob/3e454637fb9829756c805dd9c02100f0bc9520fd/docs/dev/result_types/main/mainresult.rst)
 
 .. \_result\_types.mainresult:
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/configuration/credentials.md](https://github.com/docker/docs/blob/432aa8fa3c1b4c3500e6795ee5090f427ce28efb/content/manuals/ai/sandboxes/configuration/credentials.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/configuration/credentials.md](https://github.com/docker/docs/blob/9adf4bad79fbdb239706ba723e51ee9c6473bcbc/content/manuals/ai/sandboxes/configuration/credentials.md)
 
 # Manage credentials
 
@@ -268,11 +268,31 @@ interact with GitHub APIs on your behalf.
 
 ### SSH agent
 
-If your host has an SSH agent and `SSH_AUTH_SOCK` is set, Docker Sandboxes
-forwards the agent into the sandbox and sets `SSH_AUTH_SOCK` there. The
-private keys stay on your host. Processes inside the sandbox can request
-signatures from the forwarded agent, but they can't read or copy the private
-key.
+SSH agent forwarding is enabled by default. When `SSH_AUTH_SOCK` is set,
+Docker Sandboxes uses the value from the client that creates, starts, or joins
+each sandbox. It forwards that agent into the sandbox and sets `SSH_AUTH_SOCK`
+there.
+
+If your agent exposes a stable socket path, such as the 1Password SSH agent,
+configure that path for every sandbox:
+
+```console
+$ sbx settings set ssh.agentSocketPath "$SSH_AUTH_SOCK"
+```
+
+An empty `ssh.agentSocketPath`, which is the default, uses each client's
+current `SSH_AUTH_SOCK` instead. The `ssh.agentForwardingEnabled` setting is a
+boolean that turns forwarding on or off.
+
+After changing forwarding or the socket selection, restart the daemon so
+existing sandboxes use the new configuration:
+
+```console
+$ sbx daemon restart
+```
+
+The private keys stay on your host. Processes inside the sandbox can request
+signatures from the forwarded agent, but they can't read or copy a private key.
 
 Use SSH agent forwarding for Git operations over SSH and SSH-based commit
 signing. The signing key must be loaded in the host SSH agent for sandboxed
@@ -418,13 +438,6 @@ its built-in provenance. The inherited credentials therefore require approval.
 If a third-party kit declares the same service itself, that service also
 requires approval. Kits on `schemaVersion: "1"` inject their declared
 credentials without a binding.
-
-> \[!WARNING]
-> Proxy-managed OAuth isn't supported for third-party sandbox agents, including
-> kits that extend a built-in agent. Repeating the parent's OAuth declaration in
-> the child kit doesn't activate OAuth interception. Use a stored API key when
-> the service supports one. Otherwise, an OAuth login performed inside the
-> sandbox stores the real token there.
 
 ## Registry credentials
 

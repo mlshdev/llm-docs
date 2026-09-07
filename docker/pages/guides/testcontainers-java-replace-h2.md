@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/testcontainers-java-replace-h2.md](https://github.com/docker/docs/blob/432aa8fa3c1b4c3500e6795ee5090f427ce28efb/content/guides/testcontainers-java-replace-h2.md)
+> Commit-pinned source for Docker main: [content/guides/testcontainers-java-replace-h2.md](https://github.com/docker/docs/blob/9adf4bad79fbdb239706ba723e51ee9c6473bcbc/content/guides/testcontainers-java-replace-h2.md)
 
 # Replace H2 with a real database for testing
 

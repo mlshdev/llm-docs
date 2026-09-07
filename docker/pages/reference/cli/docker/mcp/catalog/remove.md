@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/mcp/docker_mcp_catalog_remove.yaml](https://github.com/docker/docs/blob/432aa8fa3c1b4c3500e6795ee5090f427ce28efb/data/cli/mcp/docker_mcp_catalog_remove.yaml)
+> Commit-pinned source for Docker main: [data/cli/mcp/docker_mcp_catalog_remove.yaml](https://github.com/docker/docs/blob/9adf4bad79fbdb239706ba723e51ee9c6473bcbc/data/cli/mcp/docker_mcp_catalog_remove.yaml)
 
 # docker mcp catalog remove
 

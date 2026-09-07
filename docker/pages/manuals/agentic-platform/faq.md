@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/agentic-platform/faq.md](https://github.com/docker/docs/blob/432aa8fa3c1b4c3500e6795ee5090f427ce28efb/content/manuals/agentic-platform/faq.md)
+> Commit-pinned source for Docker main: [content/manuals/agentic-platform/faq.md](https://github.com/docker/docs/blob/9adf4bad79fbdb239706ba723e51ee9c6473bcbc/content/manuals/agentic-platform/faq.md)
 
 # Docker Agentic Platform FAQ
 
