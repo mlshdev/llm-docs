@@ -1,4 +1,4 @@
-> Commit-pinned source for FFmpeg master: [doc/ffmpeg-formats.texi](https://github.com/FFmpeg/FFmpeg/blob/7453f6dbde4e3b55f651bc8759018d3ded734480/doc/ffmpeg-formats.texi)
+> Commit-pinned source for FFmpeg master: [doc/ffmpeg-formats.texi](https://github.com/FFmpeg/FFmpeg/blob/08cd8df29d17b4302a105aab80a41b885dd42663/doc/ffmpeg-formats.texi)
 
 # Description
 
@@ -827,7 +827,9 @@ The id field is set to the bitrate variant index number. By setting
 the discard flags on AVStreams (by pressing 'a' or 'v' in ffplay),
 the caller can decide which variant streams to actually receive.
 The total bitrate of the variant that the stream belongs to is
-available in a metadata key named "variant\_bitrate".
+available in a metadata key named "variant\_bitrate". It is unset when
+the stream is shared by variants with different bitrates. The value is
+always available in the corresponding program's metadata.
 
 It accepts the following options:
 
