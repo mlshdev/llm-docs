@@ -5,8 +5,8 @@
   "repository": "n8n-io/n8n-docs",
   "tag": "main",
   "branch": "main",
-  "sourceCommittedAt": "2026-09-08T13:09:23Z",
-  "sourceCommit": "5202a45366dc3ba755f914c0a35159befb3a1520",
+  "sourceCommittedAt": "2026-09-08T13:45:36Z",
+  "sourceCommit": "c0d71f6a5820f602c6860f9c506c8fc6073a4636",
   "documentCount": 1316,
   "notes": [
     "n8n tracks the latest main-branch commit because n8n-docs does not publish releases or tags.",

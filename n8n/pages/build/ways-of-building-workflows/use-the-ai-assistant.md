@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/ways-of-building-workflows/use-the-ai-assistant.md](https://github.com/n8n-io/n8n-docs/blob/5202a45366dc3ba755f914c0a35159befb3a1520/docs/build/ways-of-building-workflows/use-the-ai-assistant.md)
+> Commit-pinned source for n8n main: [docs/build/ways-of-building-workflows/use-the-ai-assistant.md](https://github.com/n8n-io/n8n-docs/blob/c0d71f6a5820f602c6860f9c506c8fc6073a4636/docs/build/ways-of-building-workflows/use-the-ai-assistant.md)
 
 # Ask n8n AI
 
@@ -40,7 +40,7 @@ You can manage your AI usage settings by navigating to **Settings** > **AI Usage
 
 These settings are only available to the instance owners and administrators, and will apply to all users on the instance.
 
-![AI Usage settings page with the Send actual data values checkbox](https://raw.githubusercontent.com/n8n-io/n8n-docs/5202a45366dc3ba755f914c0a35159befb3a1520/docs/build/.gitbook/assets/ai_usage_settings.png)
+![AI Usage settings page with the Send actual data values checkbox](https://raw.githubusercontent.com/n8n-io/n8n-docs/c0d71f6a5820f602c6860f9c506c8fc6073a4636/docs/build/.gitbook/assets/ai_usage_settings.png)
 
 Choose whether to share actual workflow data (like node names, parameters, and structure) with Ask n8n AI. Disabling this option will limit the assistant's ability to provide context-aware help based on your workflows.
 

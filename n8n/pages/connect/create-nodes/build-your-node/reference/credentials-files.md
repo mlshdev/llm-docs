@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/connect/create-nodes/build-your-node/reference/credentials-files.md](https://github.com/n8n-io/n8n-docs/blob/5202a45366dc3ba755f914c0a35159befb3a1520/docs/connect/create-nodes/build-your-node/reference/credentials-files.md)
+> Commit-pinned source for n8n main: [docs/connect/create-nodes/build-your-node/reference/credentials-files.md](https://github.com/n8n-io/n8n-docs/blob/c0d71f6a5820f602c6860f9c506c8fc6073a4636/docs/connect/create-nodes/build-your-node/reference/credentials-files.md)
 
 # Credentials file <a id="credentials-file"></a>
 

@@ -35,8 +35,8 @@
     "n8n": {
       "tag": "main",
       "branch": "main",
-      "sourceCommit": "5202a45366dc3ba755f914c0a35159befb3a1520",
-      "sourceCommittedAt": "2026-09-08T13:09:23Z"
+      "sourceCommit": "c0d71f6a5820f602c6860f9c506c8fc6073a4636",
+      "sourceCommittedAt": "2026-09-08T13:45:36Z"
     },
     "grafana": {
       "tag": "v13.2.1",
