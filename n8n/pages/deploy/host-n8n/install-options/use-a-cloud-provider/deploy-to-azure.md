@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-azure.md](https://github.com/n8n-io/n8n-docs/blob/50208b802689f4eeeb23e88e9fb10a47726f9755/docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-azure.md)
+> Commit-pinned source for n8n main: [docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-azure.md](https://github.com/n8n-io/n8n-docs/blob/fb515b4db9cc670949c32d45862af957eabbff8d/docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-azure.md)
 
 # Hosting n8n on Azure <a id="hosting-n8n-on-azure"></a>
 

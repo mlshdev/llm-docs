@@ -1,12 +1,13 @@
 # n8n main
 
-> Documentation generated from the latest `main` branch commit of [n8n-io/n8n-docs](https://github.com/n8n-io/n8n-docs) and pinned to immutable source commit `50208b802689f4eeeb23e88e9fb10a47726f9755`.
+> Documentation generated from the latest `main` branch commit of [n8n-io/n8n-docs](https://github.com/n8n-io/n8n-docs) and pinned to immutable source commit `fb515b4db9cc670949c32d45862af957eabbff8d`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for n8n main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
 - n8n tracks the latest main-branch commit because n8n-docs does not publish releases or tags.
 - Pages follow each GitBook space's SUMMARY.md navigation; unpublished pages, utility spaces, and reusable fragments are omitted as standalone documents.
 - Reusable blocks are expanded from their commit-pinned Markdown sources, and GitBook hints, tabs, files, embeds, columns, and steppers are normalized to plain Markdown.
+- Quarantined sources (1): upstream pages using constructs this generator cannot convert yet are omitted and listed in `manifest.json`.
 
 ## Get Started
 
@@ -40,11 +41,10 @@
 - [Use Gateway credits](pages/build/understand-workflows/use-gateway-credits.md): Source `docs/build/understand-workflows/use-gateway-credits.md`.
 - [Build and manage agents](pages/build/build-and-manage-agents.md): Source `docs/build/build-and-manage-agents.md`.
 - [Ways of building workflows](pages/build/ways-of-building-workflows/README.md): Source `docs/build/ways-of-building-workflows/README.md`.
-- [Use AI Assistant](pages/build/ways-of-building-workflows/ai-assistant.md): Source `docs/build/ways-of-building-workflows/ai-assistant.md`.
+- [Use n8n Assistant](pages/build/ways-of-building-workflows/n8n-assistant.md): Source `docs/build/ways-of-building-workflows/n8n-assistant.md`.
 - [Build with MCP](pages/build/ways-of-building-workflows/connect-to-n8n-mcp-server.md): Source `docs/build/ways-of-building-workflows/connect-to-n8n-mcp-server.md`.
 - [Workflow templates](pages/build/ways-of-building-workflows/use-templates.md): Source `docs/build/ways-of-building-workflows/use-templates.md`.
 - [AI Workflow Builder](pages/build/ways-of-building-workflows/ai-workflow-builder.md): Source `docs/build/ways-of-building-workflows/ai-workflow-builder.md`.
-- [Ask n8n AI](pages/build/ways-of-building-workflows/use-the-ai-assistant.md): Source `docs/build/ways-of-building-workflows/use-the-ai-assistant.md`.
 - [Chat Hub](pages/build/ways-of-building-workflows/chat-hub.md): Source `docs/build/ways-of-building-workflows/chat-hub.md`.
 - [Manage workflows](pages/build/manage-workflows/README.md): Source `docs/build/manage-workflows/README.md`.
 - [Configure workflow settings](pages/build/manage-workflows/configure-workflow-settings.md): Source `docs/build/manage-workflows/configure-workflow-settings.md`.
@@ -1239,7 +1239,7 @@
 - [Manage instance settings using environment variables](pages/deploy/host-n8n/configure-n8n/manage-settings-using-environment-variables.md): Source `docs/deploy/host-n8n/configure-n8n/manage-settings-using-environment-variables.md`.
 - [Task runners](pages/deploy/host-n8n/configure-n8n/set-up-task-runners.md): Source `docs/deploy/host-n8n/configure-n8n/set-up-task-runners.md`.
 - [Durable scheduler](pages/deploy/host-n8n/configure-n8n/durable-scheduler.md): Source `docs/deploy/host-n8n/configure-n8n/durable-scheduler.md`.
-- [Set up AI Assistant](pages/deploy/host-n8n/configure-n8n/set-up-ai-assistant.md): Source `docs/deploy/host-n8n/configure-n8n/set-up-ai-assistant.md`.
+- [Set up n8n Assistant](pages/deploy/host-n8n/configure-n8n/set-up-n8n-assistant.md): Source `docs/deploy/host-n8n/configure-n8n/set-up-n8n-assistant.md`.
 - [Deploy n8n in canvas-only mode](pages/deploy/host-n8n/configure-n8n/deploy-n8n-in-canvas-only-mode.md): Source `docs/deploy/host-n8n/configure-n8n/deploy-n8n-in-canvas-only-mode.md`.
 - [License key](pages/deploy/host-n8n/configure-n8n/manage-your-license.md): Source `docs/deploy/host-n8n/configure-n8n/manage-your-license.md`.
 - [Securing n8n](pages/deploy/host-n8n/configure-n8n/security.md): Source `docs/deploy/host-n8n/configure-n8n/security.md`.

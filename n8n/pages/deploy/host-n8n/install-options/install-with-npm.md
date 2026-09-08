@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/host-n8n/install-options/install-with-npm.md](https://github.com/n8n-io/n8n-docs/blob/50208b802689f4eeeb23e88e9fb10a47726f9755/docs/deploy/host-n8n/install-options/install-with-npm.md)
+> Commit-pinned source for n8n main: [docs/deploy/host-n8n/install-options/install-with-npm.md](https://github.com/n8n-io/n8n-docs/blob/fb515b4db9cc670949c32d45862af957eabbff8d/docs/deploy/host-n8n/install-options/install-with-npm.md)
 
 > **Warning**
 > **Feature availability**
@@ -6,9 +6,9 @@
 > npm-based installs are deprecated from n8n 3.0.
 
 > **Info**
-> **AI Assistant not available**
+> **n8n Assistant not available**
 >
-> The AI Assistant feature isn't available when using the npm installation method.
+> n8n Assistant isn't available when using the npm installation method.
 
 npm is a quick way to get started with n8n on your local machine. You must have [Node.js](https://nodejs.org/en/) installed. n8n requires a Node.js version between 20.19 and 24.x, inclusive.
 

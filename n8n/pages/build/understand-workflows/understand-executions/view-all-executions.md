@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/understand-workflows/understand-executions/view-all-executions.md](https://github.com/n8n-io/n8n-docs/blob/50208b802689f4eeeb23e88e9fb10a47726f9755/docs/build/understand-workflows/understand-executions/view-all-executions.md)
+> Commit-pinned source for n8n main: [docs/build/understand-workflows/understand-executions/view-all-executions.md](https://github.com/n8n-io/n8n-docs/blob/fb515b4db9cc670949c32d45862af957eabbff8d/docs/build/understand-workflows/understand-executions/view-all-executions.md)
 
 # View all executions
 

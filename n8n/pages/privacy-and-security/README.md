@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/privacy-and-security/README.md](https://github.com/n8n-io/n8n-docs/blob/50208b802689f4eeeb23e88e9fb10a47726f9755/docs/privacy-and-security/README.md)
+> Commit-pinned source for n8n main: [docs/privacy-and-security/README.md](https://github.com/n8n-io/n8n-docs/blob/fb515b4db9cc670949c32d45862af957eabbff8d/docs/privacy-and-security/README.md)
 
 # Privacy <a id="privacy"></a>
 
@@ -129,11 +129,11 @@ To assist and improve user experience, n8n may send specific context data to LLM
 
 You can manage your AI usage settings by navigating to **Settings** > **AI Usage** in your n8n instance.
 
-More details can be found on the [AI Assistant documentation page](https://docs.n8n.io/build/ways-of-building-workflows/use-the-ai-assistant#ai-usage-settings).
+More details can be found on the [n8n Assistant documentation page](https://docs.n8n.io/build/ways-of-building-workflows/use-the-ai-assistant#ai-usage-settings).
 
 #### When n8n shares data <a id="when-n8n-shares-data"></a>
 
-Data is only sent to AI services if workspaces have opted in to use the assistant. The Assistant is enabled by default for n8n Cloud users. When a workspace opts in to use the assistant, node-specific data is transmitted only during direct interactions and active sessions with the AI assistant, ensuring no unnecessary data sharing occurs.
+Data is only sent to AI services if workspaces have opted in to use the assistant. The Assistant is enabled by default for n8n Cloud users. When a workspace opts in to use the assistant, node-specific data is transmitted only during direct interactions and active sessions with the n8n Assistant, ensuring no unnecessary data sharing occurs.
 
 #### What n8n shares <a id="what-n8n-shares"></a>
 

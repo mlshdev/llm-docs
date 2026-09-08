@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-digital-ocean.md](https://github.com/n8n-io/n8n-docs/blob/50208b802689f4eeeb23e88e9fb10a47726f9755/docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-digital-ocean.md)
+> Commit-pinned source for n8n main: [docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-digital-ocean.md](https://github.com/n8n-io/n8n-docs/blob/fb515b4db9cc670949c32d45862af957eabbff8d/docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-digital-ocean.md)
 
 # Hosting n8n on DigitalOcean <a id="hosting-n8n-on-digitalocean"></a>
 
@@ -7,7 +7,7 @@ This hosting guide shows you how to self-host n8n on a DigitalOcean droplet with
 - [Caddy](https://caddyserver.com) (a reverse proxy) to allow access to the Droplet from the internet. Caddy also automatically creates and manages SSL/TLS certificates for your n8n instance.
 - [Docker Compose](https://docs.docker.com/compose/) to create and define the application components and how they work together.
 
-Once n8n is up and running, an optional last section covers adding the AI Assistant.
+Once n8n is up and running, an optional last section covers adding n8n Assistant.
 
 > **Info**
 > **Self-hosting knowledge prerequisites**
@@ -196,9 +196,9 @@ You can stop n8n and Caddy with the following command:
 sudo docker compose stop
 ```
 
-## Optional: Add the AI Assistant <a id="optional-add-the-ai-assistant"></a>
+## Optional: Add n8n Assistant <a id="optional-add-n8n-assistant"></a>
 
-The AI Assistant needs a sandbox to run code in. You can add the same sandbox stack used in the [Docker Compose guide](https://docs.n8n.io/deploy/host-n8n/install-options/install-using-docker-compose) to this setup. A few things are worth knowing before you start:
+n8n Assistant needs a sandbox to run code in. You can add the same sandbox stack used in the [Docker Compose guide](https://docs.n8n.io/deploy/host-n8n/install-options/install-using-docker-compose) to this setup. A few things are worth knowing before you start:
 
 - This sandbox is suitable for local development and testing. The stack below uses n8n's own bundled sandbox (`n8n-sandbox`). Since a DigitalOcean droplet with a public domain is often a real deployment, consider Daytona instead if this is going to production.
 - **Resize if needed.** The sandbox runner uses Docker-in-Docker, which needs more headroom than n8n alone. Make sure you provision at least 4 GB RAM / 2 vCPU.
@@ -330,7 +330,7 @@ The AI Assistant needs a sandbox to run code in. You can add the same sandbox st
    sudo docker compose up -d
    ```
 
-6. Add your model API key. See [Set up AI Assistant](https://docs.n8n.io/deploy/host-n8n/configure-n8n/set-up-ai-assistant) for the full reference, including how to pick a model provider. Web search works out of the box via the bundled SearXNG service above; add a Brave Search key instead if you'd rather use that.
+6. Add your model API key. See [Set up n8n Assistant](https://docs.n8n.io/deploy/host-n8n/configure-n8n/set-up-n8n-assistant) for the full reference, including how to pick a model provider. Web search works out of the box via the bundled SearXNG service above; add a Brave Search key instead if you'd rather use that.
 
 > **Warning**
 > Replace the `change-me-...` placeholders in `.env` with your own unique secrets before exposing this Droplet to the internet. `sandbox-runner-1` runs privileged Docker-in-Docker. Never publish its ports, and don't route Caddy to it.

@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/use-n8n-cloud/gateway-credits/README.md](https://github.com/n8n-io/n8n-docs/blob/50208b802689f4eeeb23e88e9fb10a47726f9755/docs/deploy/use-n8n-cloud/gateway-credits/README.md)
+> Commit-pinned source for n8n main: [docs/deploy/use-n8n-cloud/gateway-credits/README.md](https://github.com/n8n-io/n8n-docs/blob/fb515b4db9cc670949c32d45862af957eabbff8d/docs/deploy/use-n8n-cloud/gateway-credits/README.md)
 
 # Gateway credits
 
@@ -52,17 +52,17 @@ When your balance reaches zero, nodes using Gateway credits stop working until y
 
 n8n has more than one kind of credit. They have separate balances and pay for different things:
 
-| Credit type             | What it pays for                                                                                                              | Where you see it                                                                    |
-| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| Gateway credits         | AI models and tool services used by nodes in your workflows                                                                   | On supported nodes, and on the **Gateway credits** tab in the Cloud admin dashboard |
-| AI Assistant credits    | Your usage of [n8n's AI Assistant](https://docs.n8n.io/build/ways-of-building-workflows/ai-assistant) and AI Workflow Builder | In the AI Assistant panel in the editor                                             |
-| Free OpenAI API credits | A legacy one-time OpenAI allowance for new Cloud users                                                                        | Only on instances without Gateway credits                                           |
+| Credit type             | What it pays for                                                                                                          | Where you see it                                                                    |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| Gateway credits         | AI models and tool services used by nodes in your workflows                                                               | On supported nodes, and on the **Gateway credits** tab in the Cloud admin dashboard |
+| n8n Assistant credits   | Your usage of [n8n Assistant](https://docs.n8n.io/build/ways-of-building-workflows/n8n-assistant) and AI Workflow Builder | In the n8n Assistant panel in the editor                                            |
+| Free OpenAI API credits | A legacy one-time OpenAI allowance for new Cloud users                                                                    | Only on instances without Gateway credits                                           |
 
-Topping up Gateway credits doesn't add AI Assistant credits, and using the AI Assistant doesn't spend your Gateway credit balance.
+Topping up Gateway credits doesn't add n8n Assistant credits, and using the n8n Assistant doesn't spend your Gateway credit balance.
 
 ## Data handling
 
-When a node runs on Gateway credits, n8n sends the request through its gateway to the service provider under n8n's own provider account. The provider receives the content of the request, such as the prompt you send to a model or the text you send to a parser, but not your identity or n8n account details. For more on how n8n handles your data, refer to [Privacy](https://docs.n8n.io/privacy-and-security/privacy) and n8n's terms of service.
+When a node runs on Gateway credits, n8n sends the request through its gateway to the service provider under n8n's own provider account. The provider receives the content of the request, such as the prompt you send to a model or the text you send to a parser, but not your identity or n8n account details. For more on how n8n handles your data, refer to [Privacy](https://docs.n8n.io/privacy-and-security) and n8n's terms of service.
 
 ## Related resources
 

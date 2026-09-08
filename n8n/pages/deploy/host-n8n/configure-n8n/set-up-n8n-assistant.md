@@ -1,11 +1,11 @@
-> Commit-pinned source for n8n main: [docs/deploy/host-n8n/configure-n8n/set-up-ai-assistant.md](https://github.com/n8n-io/n8n-docs/blob/50208b802689f4eeeb23e88e9fb10a47726f9755/docs/deploy/host-n8n/configure-n8n/set-up-ai-assistant.md)
+> Commit-pinned source for n8n main: [docs/deploy/host-n8n/configure-n8n/set-up-n8n-assistant.md](https://github.com/n8n-io/n8n-docs/blob/fb515b4db9cc670949c32d45862af957eabbff8d/docs/deploy/host-n8n/configure-n8n/set-up-n8n-assistant.md)
 
-# Set up AI Assistant
+# Set up n8n Assistant
 
 > **Info**
 > **Feature availability**
 >
-> The AI Assistant is available on:
+> n8n Assistant is available on:
 >
 > - **n8n Cloud:** Starter, Pro
 > - **Self-hosted:** Community, Registered Community, Business
@@ -15,15 +15,15 @@
 > **Info**
 > **Preview status**
 >
-> The AI Assistant is in Preview. It can make mistakes, and behavior may change while the feature is in development. Always review generated workflows before using them in production.
+> n8n Assistant is in Preview. It can make mistakes, and behavior may change while the feature is in development. Always review generated workflows before using them in production.
 
-## What AI Assistant needs
+## What n8n Assistant needs
 
-Every self-hosted AI Assistant setup needs three things:
+Every self-hosted n8n Assistant setup needs three things:
 
 - **A model provider:** An API key for Anthropic, OpenAI, or OpenRouter.
-- **A sandbox (required):** An isolated environment where AI Assistant runs code.
-- **A search provider (optional):** Lets AI Assistant look things up on the web.
+- **A sandbox (required):** An isolated environment where n8n Assistant runs code.
+- **A search provider (optional):** Lets n8n Assistant look things up on the web.
 
 How you provide the sandbox is the main decision. n8n's own bundled sandbox (`n8n-sandbox`) is a good fit for local development and testing. It's what the [one-line setup command](https://docs.n8n.io/deploy/host-n8n/install-options/one-line-setup) and [Docker Compose guide](https://docs.n8n.io/deploy/host-n8n/install-options/install-using-docker-compose) set up automatically. For production, use Daytona instead.
 
@@ -63,7 +63,7 @@ The quickest way: open the editor, go to the instance's AI settings, and add you
 
 2. Restart n8n.
 
-3. Open the editor and confirm AI Assistant appears and responds.
+3. Open the editor and confirm n8n Assistant appears and responds.
 
 `N8N_INSTANCE_AI_MODEL` defaults to `anthropic/claude-opus-4-8`. Set it explicitly only if you want a different model (see [Choose a model provider](#choose-a-model-provider)).
 
@@ -152,7 +152,7 @@ Daytona creates sandboxes on demand instead of you hosting the containers yourse
    | `N8N_ENABLED_MODULES`              | Must include `instance-ai` to enable the module.                                                                                               |
    | `N8N_INSTANCE_AI_MODEL`            | Selects the LLM in `provider/model` format. Has a default (`anthropic/claude-opus-4-8`). Set it explicitly only if you want a different model. |
    | `N8N_INSTANCE_AI_MODEL_API_KEY`    | API key for the selected provider.                                                                                                             |
-   | `N8N_INSTANCE_AI_SANDBOX_ENABLED`  | Set to `true`. AI Assistant requires a sandbox.                                                                                                |
+   | `N8N_INSTANCE_AI_SANDBOX_ENABLED`  | Set to `true`. n8n Assistant requires a sandbox.                                                                                               |
    | `N8N_INSTANCE_AI_SANDBOX_PROVIDER` | Set to `daytona`.                                                                                                                              |
    | `N8N_INSTANCE_AI_SANDBOX_IMAGE`    | Base container image for Daytona sandboxes.                                                                                                    |
    | `DAYTONA_API_URL`                  | Daytona API endpoint.                                                                                                                          |
@@ -177,7 +177,7 @@ Daytona creates sandboxes on demand instead of you hosting the containers yourse
          INSTANCE_AI_BRAVE_SEARCH_API_KEY: BSA-xxx
    ```
 
-2. Restart n8n, open the editor, and confirm AI Assistant appears and responds.
+2. Restart n8n, open the editor, and confirm n8n Assistant appears and responds.
 
 **Optional: tune the sandbox lifecycle**
 
@@ -240,7 +240,7 @@ Some local servers don't require an API key.
 
 ## Enable web search
 
-Web search lets AI Assistant look things up on the web. It's optional, and the rest of AI Assistant works without it.
+Web search lets n8n Assistant look things up on the web. It's optional, and the rest of n8n Assistant works without it.
 
 If you used the [one-line setup](https://docs.n8n.io/deploy/host-n8n/install-options/one-line-setup) or the [Docker Compose guide](https://docs.n8n.io/deploy/host-n8n/install-options/install-using-docker-compose), SearXNG is already bundled and running. No setup is needed unless you'd rather use Brave Search instead.
 
@@ -261,14 +261,14 @@ If an instance admin selects a Brave Search or SearXNG credential in the AI sett
 
 ## Enable agents
 
-Agents run on the same self-hosted stack as AI Assistant. Once AI Assistant works, add the `agents` module to [build and run agents on your instance](https://docs.n8n.io/build/build-and-manage-agents). Agents are in Preview and available from n8n 2.32.3.
+Agents run on the same self-hosted stack as n8n Assistant. Once n8n Assistant works, add the `agents` module to [build and run agents on your instance](https://docs.n8n.io/build/build-and-manage-agents). Agents are in Preview and available from n8n 2.32.3.
 
 > **Info**
 > **Feature availability**
 >
 > Agents aren't available on self-hosted Enterprise yet.
 
-You build agents manually with just the `agents` module: you pick the model, write the instructions, and attach the tools and skills yourself. AI Assistant (`instance-ai`) is optional and adds AI-assisted building, where you describe an agent and n8n scaffolds it for you.
+You build agents manually with just the `agents` module: you pick the model, write the instructions, and attach the tools and skills yourself. n8n Assistant (`instance-ai`) is optional and adds AI-assisted building, where you describe an agent and n8n scaffolds it for you.
 
 Add `agents` to `N8N_ENABLED_MODULES`, alongside `instance-ai` if you want AI-assisted building:
 
@@ -276,7 +276,7 @@ Add `agents` to `N8N_ENABLED_MODULES`, alongside `instance-ai` if you want AI-as
 # Enable the agents module (keep instance-ai for AI-assisted building)
 N8N_ENABLED_MODULES=instance-ai,agents
 
-# Knowledge base, optional: reuses the Daytona sandbox you set up for AI Assistant
+# Knowledge base, optional: reuses the Daytona sandbox you set up for n8n Assistant
 N8N_AGENTS_AI_SANDBOX_ENABLED=true
 N8N_AGENTS_AI_SANDBOX_PROVIDER=daytona
 
@@ -288,7 +288,7 @@ WEBHOOK_URL=https://your-public-url
 | -------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
 | `N8N_ENABLED_MODULES`            | Include `agents` to enable the module. Keep `instance-ai` for AI-assisted building.                               |
 | `N8N_AGENTS_AI_SANDBOX_ENABLED`  | Set to `true` to enable the knowledge base, so agents can search uploaded files. Requires a Daytona sandbox.      |
-| `N8N_AGENTS_AI_SANDBOX_PROVIDER` | Sandbox provider for the knowledge base. Use `daytona`. Reuses the Daytona keys you set for AI Assistant.         |
+| `N8N_AGENTS_AI_SANDBOX_PROVIDER` | Sandbox provider for the knowledge base. Use `daytona`. Reuses the Daytona keys you set for n8n Assistant.        |
 | `WEBHOOK_URL`                    | Public, secure URL for your instance. Required to connect agents to channels such as Slack, Telegram, and Linear. |
 
 > **Info**
@@ -303,9 +303,9 @@ WEBHOOK_URL=https://your-public-url
 
 For a full deployment example, see [Installation options](https://docs.n8n.io/deploy/host-n8n/install-options). After you enable the module, see [Build and manage agents](https://docs.n8n.io/build/build-and-manage-agents).
 
-## Disable AI Assistant
+## Disable n8n Assistant
 
-To disable AI Assistant, remove `instance-ai` from `N8N_ENABLED_MODULES`.
+To disable n8n Assistant, remove `instance-ai` from `N8N_ENABLED_MODULES`.
 
 You can also disable the module explicitly:
 
@@ -315,7 +315,7 @@ N8N_DISABLED_MODULES=instance-ai
 
 ## Troubleshooting
 
-If AI Assistant doesn't appear or doesn't work, check for these issues.
+If n8n Assistant doesn't appear or doesn't work, check for these issues.
 
 **General**
 
@@ -338,6 +338,6 @@ If AI Assistant doesn't appear or doesn't work, check for these issues.
 **Web search**
 
 - `INSTANCE_AI_BRAVE_SEARCH_API_KEY` is set, or `N8N_INSTANCE_AI_SEARXNG_URL` is set.
-- If nothing is set, this is expected. Web search is optional and the rest of AI Assistant still works.
+- If nothing is set, this is expected. Web search is optional and the rest of n8n Assistant still works.
 
 See [Configure n8n](https://docs.n8n.io/deploy/host-n8n/configure-n8n) for other configuration topics.

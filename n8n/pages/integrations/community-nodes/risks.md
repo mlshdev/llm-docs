@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/community-nodes/risks.md](https://github.com/n8n-io/n8n-docs/blob/50208b802689f4eeeb23e88e9fb10a47726f9755/docs/integrations/community-nodes/risks.md)
+> Commit-pinned source for n8n main: [docs/integrations/community-nodes/risks.md](https://github.com/n8n-io/n8n-docs/blob/fb515b4db9cc670949c32d45862af957eabbff8d/docs/integrations/community-nodes/risks.md)
 
 # Risks when using community nodes <a id="risks-when-using-community-nodes"></a>
 

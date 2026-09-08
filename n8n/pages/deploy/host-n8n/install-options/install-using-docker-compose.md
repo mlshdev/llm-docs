@@ -1,12 +1,12 @@
-> Commit-pinned source for n8n main: [docs/deploy/host-n8n/install-options/install-using-docker-compose.md](https://github.com/n8n-io/n8n-docs/blob/50208b802689f4eeeb23e88e9fb10a47726f9755/docs/deploy/host-n8n/install-options/install-using-docker-compose.md)
+> Commit-pinned source for n8n main: [docs/deploy/host-n8n/install-options/install-using-docker-compose.md](https://github.com/n8n-io/n8n-docs/blob/fb515b4db9cc670949c32d45862af957eabbff8d/docs/deploy/host-n8n/install-options/install-using-docker-compose.md)
 
 # Install using Docker Compose
 
 ## Who this is for
 
-This guide walks through building your own Docker Compose setup by hand, including the sandbox stack that powers the AI Assistant. Use it if you want full control over your configuration, or need to fold n8n into an existing Compose project.
+This guide walks through building your own Docker Compose setup by hand, including the sandbox stack that powers n8n Assistant. Use it if you want full control over your configuration, or need to fold n8n into an existing Compose project.
 
-If you just want n8n (and the AI Assistant) running quickly without writing any files yourself, use the [one-line setup](https://docs.n8n.io/deploy/host-n8n/install-options/one-line-setup) instead. It sets up everything below automatically.
+If you just want n8n (and n8n Assistant) running quickly without writing any files yourself, use the [one-line setup](https://docs.n8n.io/deploy/host-n8n/install-options/one-line-setup) instead. It sets up everything below automatically.
 
 ## What you need before you start
 
@@ -40,7 +40,7 @@ SEARXNG_SECRET=change-me-searxng-secret
 N8N_INSTANCE_AI_SEARXNG_URL=http://searxng:8080
 ```
 
-You don't need an AI provider key yet; see [Turn on the AI Assistant](https://docs.n8n.io/deploy/host-n8n/install-options/install-using-docker-compose#optional-turn-on-the-ai-assistant) below once everything's running.
+You don't need an AI provider key yet; see [Turn on n8n Assistant](https://docs.n8n.io/deploy/host-n8n/install-options/install-using-docker-compose#optional-turn-on-n8n-assistant) below once everything's running.
 
 ## Step 3: Create `searxng-settings.yml`
 
@@ -56,7 +56,7 @@ search:
 
 ## Step 4: Create `compose.yml`
 
-This defines every service you're setting up: n8n itself, the sandbox stack that lets the AI Assistant safely run code, and SearXNG for web search.
+This defines every service you're setting up: n8n itself, the sandbox stack that lets n8n Assistant safely run code, and SearXNG for web search.
 
 ## What you've just set up
 
@@ -64,11 +64,11 @@ This defines every service you're setting up: n8n itself, the sandbox stack that
 | -------------------- | -------------------------------------------------------------------------------------------------- |
 | **n8n**              | The workflow editor itself, available at `http://localhost:5678`.                                  |
 | **sandbox-certs**    | Runs once to generate the TLS certificates the other sandbox services need, then exits.            |
-| **sandbox-api**      | The control plane n8n talks to when the AI Assistant needs to run code.                            |
+| **sandbox-api**      | The control plane n8n talks to when n8n Assistant needs to run code.                               |
 | **sandbox-runner-1** | Does the actual work; a privileged Docker-in-Docker container that creates and runs the sandboxes. |
-| **searxng**          | Bundled web search backend for the AI Assistant.                                                   |
+| **searxng**          | Bundled web search backend for n8n Assistant.                                                      |
 
-This bundles n8n's own sandbox (`n8n-sandbox`), which is a good fit for local development and testing. For a production instance, n8n currently recommends Daytona as the sandbox provider instead. See [Set up the AI Assistant](https://docs.n8n.io/deploy/host-n8n/configure-n8n/set-up-ai-assistant) for how to configure a Daytona sandbox.
+This bundles n8n's own sandbox (`n8n-sandbox`), which is a good fit for local development and testing. For a production instance, n8n currently recommends Daytona as the sandbox provider instead. See [Set up n8n Assistant](https://docs.n8n.io/deploy/host-n8n/configure-n8n/set-up-n8n-assistant) for how to configure a Daytona sandbox.
 
 There's no database service defined here. n8n falls back to its built-in SQLite database, stored inside the container unless you mount a volume for it. For a production instance, swap in Postgres. See [Use PostgreSQL instead of SQLite](https://docs.n8n.io/deploy/host-n8n/install-options/install-using-docker-compose#optional-use-postgresql-instead-of-sqlite) below.
 
@@ -96,9 +96,9 @@ curl -sf http://localhost:5678/healthz
 
 Launch n8n by pointing your web browser to `http://localhost:5678`
 
-## Optional: Turn on the AI Assistant
+## Optional: Turn on n8n Assistant
 
-Everything above runs the full sandbox stack, but the AI Assistant itself stays off until you give it a model to use. You can do this from the n8n UI (in the instance's AI settings) once n8n is running, or using `.env` if you'd rather configure it before first login:
+Everything above runs the full sandbox stack, but n8n Assistant itself stays off until you give it a model to use. You can do this from the n8n UI (in the instance's AI settings) once n8n is running, or using `.env` if you'd rather configure it before first login:
 
 1. Add your AI provider key to `.env`:
 
@@ -117,7 +117,7 @@ Web search runs through the bundled SearXNG service by default. If you'd rather 
 INSTANCE_AI_BRAVE_SEARCH_API_KEY=BSA-xxx
 ```
 
-Full setup steps, including the supported model providers, are in [Set up the AI Assistant](https://docs.n8n.io/deploy/host-n8n/configure-n8n/set-up-ai-assistant).
+Full setup steps, including the supported model providers, are in [Set up n8n Assistant](https://docs.n8n.io/deploy/host-n8n/configure-n8n/set-up-n8n-assistant).
 
 ## Optional: Use PostgreSQL instead of SQLite
 

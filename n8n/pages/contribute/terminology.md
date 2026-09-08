@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/contribute/terminology.md](https://github.com/n8n-io/n8n-docs/blob/50208b802689f4eeeb23e88e9fb10a47726f9755/docs/contribute/terminology.md)
+> Commit-pinned source for n8n main: [docs/contribute/terminology.md](https://github.com/n8n-io/n8n-docs/blob/fb515b4db9cc670949c32d45862af957eabbff8d/docs/contribute/terminology.md)
 
 # Terminology and naming
 
@@ -78,7 +78,7 @@ n8n has several distinct AI-powered features for building workflows. Each is a s
 
 | Do use                                                                                          | Don't use                                            |
 | ----------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
-| AI Assistant (chat-based agent: creates, edits, tests, and publishes workflows and agents)      | assistant, the AI, chatbot                           |
+| n8n Assistant (chat-based agent: creates, edits, tests, and publishes workflows and agents)     | assistant, the AI, chatbot, AI Assistant             |
 | AI Workflow Builder (legacy, generates and refines a single workflow from a prompt)             | workflow builder, builder                            |
 | Ask n8n AI (legacy help assistant, no longer actively developed, point readers to AI Assistant) | AI assistant (as a synonym for this), help assistant |
 

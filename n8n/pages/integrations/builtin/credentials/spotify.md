@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/builtin/credentials/spotify.md](https://github.com/n8n-io/n8n-docs/blob/50208b802689f4eeeb23e88e9fb10a47726f9755/docs/integrations/builtin/credentials/spotify.md)
+> Commit-pinned source for n8n main: [docs/integrations/builtin/credentials/spotify.md](https://github.com/n8n-io/n8n-docs/blob/fb515b4db9cc670949c32d45862af957eabbff8d/docs/integrations/builtin/credentials/spotify.md)
 
 # Spotify credentials <a id="spotify-credentials"></a>
 

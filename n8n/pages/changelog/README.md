@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/changelog/README.md](https://github.com/n8n-io/n8n-docs/blob/50208b802689f4eeeb23e88e9fb10a47726f9755/docs/changelog/README.md)
+> Commit-pinned source for n8n main: [docs/changelog/README.md](https://github.com/n8n-io/n8n-docs/blob/fb515b4db9cc670949c32d45862af957eabbff8d/docs/changelog/README.md)
 
 # Changelog
 
@@ -43,11 +43,11 @@ You can now use supported AI models and services in n8n Cloud without first crea
 
 Supported AI providers include OpenAI, Anthropic, Google Gemini, Alibaba Cloud Qwen, MiniMax, and Moonshot Kimi. You can also use credits with Brave Search, Firecrawl, Browserbase, LlamaParse, and PDF.co.
 
-![Agent using tool services available with Gateway credits](https://raw.githubusercontent.com/n8n-io/n8n-docs/50208b802689f4eeeb23e88e9fb10a47726f9755/docs/changelog/.gitbook/assets/form%20hero%203.png)
+![Agent using tool services available with Gateway credits](https://raw.githubusercontent.com/n8n-io/n8n-docs/fb515b4db9cc670949c32d45862af957eabbff8d/docs/changelog/.gitbook/assets/form%20hero%203.png)
 
 On a supported node, select **Gateway credits** when setting up the credential and run your workflow. The choice is made per node, so the same workflow can use Gateway credits for one service and your own provider credentials for another.
 
-![Select Gateway credits in the Credetial dropdown ](https://raw.githubusercontent.com/n8n-io/n8n-docs/50208b802689f4eeeb23e88e9fb10a47726f9755/docs/changelog/.gitbook/assets/select%20credits.png)
+![Select Gateway credits in the Credetial dropdown ](https://raw.githubusercontent.com/n8n-io/n8n-docs/fb515b4db9cc670949c32d45862af957eabbff8d/docs/changelog/.gitbook/assets/select%20credits.png)
 
 Usage is deducted from a shared prepaid balance for the n8n instance. We align Gateway credit rates with publicly listed provider pricing wherever possible, and publish the rates for every supported service on our [service pricing page](https://app.n8n.cloud/service-pricing).
 
@@ -57,11 +57,11 @@ You can continue using your own provider credentials as before. Gateway credits 
 
 For more details, see the [Forum post](https://community.n8n.io/t/310859).
 
-## AI Assistant on self-hosted n8n: set up in minutes
+## n8n Assistant on self-hosted n8n: set up in minutes
 
 **Released:** 2026-08-18 in [n8n 2.35](https://docs.n8n.io/changelog/release-notes#n8n235)
 
-The AI Assistant [arrived on n8n Cloud in July](https://docs.n8n.io/changelog#ai-assistant-describe-a-goal-get-a-working-automation) and has worked on self-hosted n8n since then, but getting there meant enabling the `instance-ai` module and configuring a sandbox, a model, and web search through environment variables. n8n 2.35 enables the module by default, adds a one-line install that pre-configures the pieces you would otherwise assemble yourself, and allows you to choose your model provider, sandbox, and search directly in the UI.
+n8n Assistant [arrived on n8n Cloud in July](https://docs.n8n.io/changelog#n8n-assistant-describe-a-goal-get-a-working-automation) and has worked on self-hosted n8n since then, but getting there meant enabling the `instance-ai` module and configuring a sandbox, a model, and web search through environment variables. n8n 2.35 enables the module by default, adds a one-line install that pre-configures the pieces you would otherwise assemble yourself, and allows you to choose your model provider, sandbox, and search directly in the UI.
 
 Self-hosted setup needs two things, plus one worth adding:
 
@@ -75,21 +75,21 @@ On a brand-new instance, one command sets up everything except the model key:
 curl -fsSL https://get.n8n.io | sh
 ```
 
-It installs n8n with Docker Compose and pre-configures the sandbox and SearXNG web search, both free. Open the editor, add your model API key in the instance's AI settings, and start building. On an existing Docker install, the [AI Assistant setup guide](https://docs.n8n.io/deploy/host-n8n/configure-n8n/set-up-ai-assistant) covers the sandbox and search options for each deployment shape, in environment variables or in the UI.
+It installs n8n with Docker Compose and pre-configures the sandbox and SearXNG web search, both free. Open the editor, add your model API key in the instance's AI settings, and start building. On an existing Docker install, the [n8n Assistant setup guide](https://docs.n8n.io/deploy/host-n8n/configure-n8n/set-up-n8n-assistant) covers the sandbox and search options for each deployment shape, in environment variables or in the UI.
 
-AI Assistant requires Docker. npm installs will stop working with n8n 3.0 in October, so new installs should use the [one-line setup](https://docs.n8n.io/deploy/host-n8n/install-options/one-line-setup) or [Docker Compose](https://docs.n8n.io/deploy/host-n8n/install-options/install-using-docker-compose).
+n8n Assistant requires Docker. npm installs will stop working with n8n 3.0 in October, so new installs should use the [one-line setup](https://docs.n8n.io/deploy/host-n8n/install-options/one-line-setup) or [Docker Compose](https://docs.n8n.io/deploy/host-n8n/install-options/install-using-docker-compose).
 
 > **Warning**
 > **Preview status**
 >
-> AI Assistant is in Preview. It can make mistakes, and its behavior may change while it's in development. Always review generated workflows before using them in production.
+> n8n Assistant is in Preview. It can make mistakes, and its behavior may change while it's in development. Always review generated workflows before using them in production.
 
-Learn more in the [AI Assistant documentation](https://docs.n8n.io/build/ways-of-building-workflows/ai-assistant).
+Learn more in the [n8n Assistant documentation](https://docs.n8n.io/build/ways-of-building-workflows/n8n-assistant).
 
 > **Info**
 > **Feature availability**
 >
-> Self-hosted Enterprise support is coming. Enterprise customers who want to try AI Assistant before then can contact their Customer Success Manager about preview access.
+> Self-hosted Enterprise support is coming. Enterprise customers who want to try n8n Assistant before then can contact their Customer Success Manager about preview access.
 
 ## Return webhook responses of any size from your workers
 
@@ -141,15 +141,15 @@ Until now, Microsoft automations were tied to a person's OAuth session: when tha
 
 The [Kafka credential](https://docs.n8n.io/integrations/builtin/credentials/kafka) now supports mutual TLS: provide a CA certificate, client certificate, and private key (PEM) to connect to brokers that require client-certificate authentication. mTLS applies to the Kafka node, the Kafka Trigger, and the credential test, and n8n validates that certificate and key match before you save.
 
-## AI Assistant: describe a goal, get a working automation
+## n8n Assistant: describe a goal, get a working automation
 
 **Released:** 2026-07-09 in [n8n 2.29.9](https://docs.n8n.io/changelog/release-notes#n8n229)
 
-You can now describe an automation in plain language and have AI Assistant plan, build, test, and iterate on it until it actually runs. Open the chat from anywhere in your instance, or expand it into a side-by-side view with the workflow canvas, and tell it what you want to automate. It proposes a structured plan, asks clarifying questions, builds the workflow in your selected project, executes it as it goes, and fixes the errors it finds.
+You can now describe an automation in plain language and have n8n Assistant plan, build, test, and iterate on it until it actually runs. Open the chat from anywhere in your instance, or expand it into a side-by-side view with the workflow canvas, and tell it what you want to automate. It proposes a structured plan, asks clarifying questions, builds the workflow in your selected project, executes it as it goes, and fixes the errors it finds.
 
-<figure>![The AI Assistant entry point: a chat box asking what to automate, with suggestions like Score my leads.](.gitbook/assets/ai-assistant-entry-point.png)<figcaption><p>Describe what you want to automate, or start from a suggestion.</p></figcaption></figure>
+<figure>![The n8n Assistant entry point: a chat box asking what to automate, with suggestions like Score my leads.](.gitbook/assets/ai-assistant-entry-point.png)<figcaption><p>Describe what you want to automate, or start from a suggestion.</p></figcaption></figure>
 
-AI Assistant supersedes the AI Workflow Builder, and the difference is autonomy. The AI Workflow Builder generated a workflow and handed off, leaving you to run it and debug failures yourself. AI Assistant works toward your goal: it runs what it builds, detects failures, and retries until the automation works. Its scope is broader than building, too. It can manage executions, credentials, nodes, and Data Tables, run one-off tasks, and research the web when web access is enabled. Credential setup happens progressively as it builds: fill values in manually, let it fetch what it can, or mock and skip where needed, with secrets never exposed in the chat.
+n8n Assistant supersedes the AI Workflow Builder, and the difference is autonomy. The AI Workflow Builder generated a workflow and handed off, leaving you to run it and debug failures yourself. n8n Assistant works toward your goal: it runs what it builds, detects failures, and retries until the automation works. Its scope is broader than building, too. It can manage executions, credentials, nodes, and Data Tables, run one-off tasks, and research the web when web access is enabled. Credential setup happens progressively as it builds: fill values in manually, let it fetch what it can, or mock and skip where needed, with secrets never exposed in the chat.
 
 Every workflow it builds is a normal n8n workflow: a visible canvas you can open, inspect, edit, and publish, with step-by-step execution logs to audit, built on the 400+ integrations n8n already ships instead of rebuilt API connections. You stay in control throughout: high-impact actions such as publishing wait for your approval. This is an early first step, and we want your feedback on where to take it next.
 
@@ -158,10 +158,10 @@ Every workflow it builds is a normal n8n workflow: a visible canvas you can open
 >
 > This feature is in Preview. It can make mistakes, and its behavior may change while it's in development. Always review generated workflows before using them in production.
 
-Learn more in the [AI Assistant documentation](https://docs.n8n.io/build/ways-of-building-workflows/ai-assistant).
+Learn more in the [n8n Assistant documentation](https://docs.n8n.io/build/ways-of-building-workflows/n8n-assistant).
 
 > **Info**
-> **Availability:** n8n Cloud at release. Self-hosted setup followed in n8n 2.35: refer to [AI Assistant on self-hosted n8n](https://docs.n8n.io/changelog#ai-assistant-on-self-hosted-n8n-set-up-in-minutes).
+> **Availability:** n8n Cloud at release. Self-hosted setup followed in n8n 2.35: refer to [n8n Assistant on self-hosted n8n](https://docs.n8n.io/changelog#n8n-assistant-on-self-hosted-n8n-set-up-in-minutes).
 
 ## MCP server updates
 

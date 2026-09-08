@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/administer/manage-users-and-access/verify-user-identity/require-two-factor-auth.md](https://github.com/n8n-io/n8n-docs/blob/50208b802689f4eeeb23e88e9fb10a47726f9755/docs/administer/manage-users-and-access/verify-user-identity/require-two-factor-auth.md)
+> Commit-pinned source for n8n main: [docs/administer/manage-users-and-access/verify-user-identity/require-two-factor-auth.md](https://github.com/n8n-io/n8n-docs/blob/fb515b4db9cc670949c32d45862af957eabbff8d/docs/administer/manage-users-and-access/verify-user-identity/require-two-factor-auth.md)
 
 # Two-factor authentication (2FA) <a id="two-factor-authentication-2fa"></a>
 

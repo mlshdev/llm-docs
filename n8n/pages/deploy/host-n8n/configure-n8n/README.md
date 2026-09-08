@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/host-n8n/configure-n8n/README.md](https://github.com/n8n-io/n8n-docs/blob/50208b802689f4eeeb23e88e9fb10a47726f9755/docs/deploy/host-n8n/configure-n8n/README.md)
+> Commit-pinned source for n8n main: [docs/deploy/host-n8n/configure-n8n/README.md](https://github.com/n8n-io/n8n-docs/blob/fb515b4db9cc670949c32d45862af957eabbff8d/docs/deploy/host-n8n/configure-n8n/README.md)
 
 # Configure n8n
 
@@ -18,7 +18,7 @@
 
 [set-up-task-runners.md](https://docs.n8n.io/deploy/host-n8n/configure-n8n/set-up-task-runners)
 
-[set-up-ai-assistant.md](https://docs.n8n.io/deploy/host-n8n/configure-n8n/set-up-ai-assistant)
+[set-up-n8n-assistant.md](https://docs.n8n.io/deploy/host-n8n/configure-n8n/set-up-n8n-assistant)
 
 [deploy-n8n-in-canvas-only-mode.md](https://docs.n8n.io/deploy/host-n8n/configure-n8n/deploy-n8n-in-canvas-only-mode)
 

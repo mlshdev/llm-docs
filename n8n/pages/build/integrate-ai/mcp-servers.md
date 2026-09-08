@@ -1,10 +1,10 @@
-> Commit-pinned source for n8n main: [docs/build/integrate-ai/mcp-servers.md](https://github.com/n8n-io/n8n-docs/blob/50208b802689f4eeeb23e88e9fb10a47726f9755/docs/build/integrate-ai/mcp-servers.md)
+> Commit-pinned source for n8n main: [docs/build/integrate-ai/mcp-servers.md](https://github.com/n8n-io/n8n-docs/blob/fb515b4db9cc670949c32d45862af957eabbff8d/docs/build/integrate-ai/mcp-servers.md)
 
 # MCP servers
 
 n8n's node panel includes a registry of [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) servers you can connect to an agent in one click. Select a server, sign in, and its tools are available to your agent.
 
-You can also connect MCP servers in the registry to the [AI Assistant](https://docs.n8n.io/build/ways-of-building-workflows/ai-assistant).
+You can also connect MCP servers in the registry to [n8n Assistant](https://docs.n8n.io/build/ways-of-building-workflows/n8n-assistant).
 
 ## Add a registry server to an agent
 

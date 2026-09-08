@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/host-n8n/install-options/one-line-setup.md](https://github.com/n8n-io/n8n-docs/blob/50208b802689f4eeeb23e88e9fb10a47726f9755/docs/deploy/host-n8n/install-options/one-line-setup.md)
+> Commit-pinned source for n8n main: [docs/deploy/host-n8n/install-options/one-line-setup.md](https://github.com/n8n-io/n8n-docs/blob/fb515b4db9cc670949c32d45862af957eabbff8d/docs/deploy/host-n8n/install-options/one-line-setup.md)
 
 # One-line setup <a id="one-line-setup"></a>
 
@@ -22,7 +22,7 @@ You don't need to know Docker to use this guide; just have it installed and runn
 > **Info**
 > The one-line setup command requires the `docker compose` v2 plugin specifically (not the older standalone `docker-compose` binary), and checks that the Docker daemon is running. If you're using Podman, Colima, or other Docker-compatible engines, install the `docker` CLI with the compose plugin and point `DOCKER_HOST` at their socket.
 
-Watch a video guide covering this setup, from installing Docker to [turning on the AI Assistant](#optional-turn-on-the-ai-assistant):
+Watch a video guide covering this setup, from installing Docker to [turning on n8n Assistant](#optional-turn-on-n8n-assistant):
 
 [Embedded media](https://www.youtube.com/embed/t5RBVTby9EU)
 
@@ -73,27 +73,27 @@ To uninstall: docker compose -f ./n8n/compose.yml down -v   # -v DELETES all n8n
 
 Running the command sets up everything below automatically. There's nothing extra to install:
 
-| Component                         | What it's for                                                                                                                                                                                                                                                                                                         |
-| --------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **n8n**                           | The workflow editor itself, running at `http://localhost:5678`.                                                                                                                                                                                                                                                       |
-| **A built-in database**           | Stores your workflows, credentials, and execution history. This is [SQLite](https://www.sqlite.org/), a lightweight database that lives in a file. You don't need to install or manage a separate database server.                                                                                                    |
-| **AI Assistant support services** | A sandbox that safely runs the code the AI Assistant writes, and a bundled search tool so it can look things up on the web. These start automatically alongside n8n, but the assistant itself stays switched off until you add an AI provider key. See [Turn on the AI Assistant](#optional-turn-on-the-ai-assistant) |
+| Component                          | What it's for                                                                                                                                                                                                                                                                                                |
+| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **n8n**                            | The workflow editor itself, running at `http://localhost:5678`.                                                                                                                                                                                                                                              |
+| **A built-in database**            | Stores your workflows, credentials, and execution history. This is [SQLite](https://www.sqlite.org/), a lightweight database that lives in a file. You don't need to install or manage a separate database server.                                                                                           |
+| **n8n Assistant support services** | A sandbox that safely runs the code n8n Assistant writes, and a bundled search tool so it can look things up on the web. These start automatically alongside n8n, but the assistant itself stays switched off until you add an AI provider key. See [Turn on n8n Assistant](#optional-turn-on-n8n-assistant) |
 
 If you're setting n8n up for a team or a production environment, consider a more robust database like Postgres rather than the built-in default. See [Install using Docker Compose](https://docs.n8n.io/deploy/host-n8n/install-options/install-using-docker-compose) for that setup.
 
-The same goes for the sandbox: this setup uses n8n's own bundled sandbox, which is a good fit for trying things out, but for production, n8n currently recommends Daytona instead. See [Set up the AI Assistant](https://docs.n8n.io/deploy/host-n8n/configure-n8n/set-up-ai-assistant) for how to configure it.
+The same goes for the sandbox: this setup uses n8n's own bundled sandbox, which is a good fit for trying things out, but for production, n8n currently recommends Daytona instead. See [Set up n8n Assistant](https://docs.n8n.io/deploy/host-n8n/configure-n8n/set-up-n8n-assistant) for how to configure it.
 
-## Optional: Turn on the AI Assistant
+## Optional: Turn on n8n Assistant
 
-n8n works fully without the AI Assistant, which is an optional extra. Once n8n is running, the easiest way to turn it on is from the UI in the instance's AI settings. Add your model API key there. Prefer to configure it before you ever log in? Edit `.env` instead:
+n8n works fully without n8n Assistant, which is an optional extra. Once n8n is running, the easiest way to turn it on is from the UI in the instance's AI settings. Add your model API key there. Prefer to configure it before you ever log in? Edit `.env` instead:
 
 1. Open the `.env` file the command created (in `./n8n/.env` by default).
 2. Add your AI provider key to the `N8N_INSTANCE_AI_MODEL_API_KEY` line.
 3. Restart n8n: `docker compose -f ./n8n/compose.yml up -d`
 
-Full setup steps, including the supported providers, are in [Set up the AI Assistant](https://docs.n8n.io/deploy/host-n8n/configure-n8n/set-up-ai-assistant).
+Full setup steps, including the supported providers, are in [Set up n8n Assistant](https://docs.n8n.io/deploy/host-n8n/configure-n8n/set-up-n8n-assistant).
 
-By default, the AI Assistant's web search runs through a bundled search tool with no setup needed. If you'd rather use Brave Search, add your Brave API key to `INSTANCE_AI_BRAVE_SEARCH_API_KEY` in the same `.env` file. It's used automatically once it's set.
+By default, n8n Assistant's web search runs through a bundled search tool with no setup needed. If you'd rather use Brave Search, add your Brave API key to `INSTANCE_AI_BRAVE_SEARCH_API_KEY` in the same `.env` file. It's used automatically once it's set.
 
 > **Info**
 > You don't need to open any extra ports or configure anything for these services. Only n8n itself (port `5678`) is ever reachable from outside your machine. Everything else stays private by default.
