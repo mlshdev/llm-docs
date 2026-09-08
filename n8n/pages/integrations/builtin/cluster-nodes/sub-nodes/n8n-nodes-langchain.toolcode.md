@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolcode.md](https://github.com/n8n-io/n8n-docs/blob/55124d6563730229dbb346ffd0f702ff1268c8ee/docs/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolcode.md)
+> Commit-pinned source for n8n main: [docs/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolcode.md](https://github.com/n8n-io/n8n-docs/blob/3d749fdf0f717f45386ed39bd18d269811cfff0d/docs/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolcode.md)
 
 # Custom Code Tool node <a id="custom-code-tool-node"></a>
 

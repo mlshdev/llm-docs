@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/builtin/core-nodes/n8n-nodes-base.executecommand/common-issues.md](https://github.com/n8n-io/n8n-docs/blob/55124d6563730229dbb346ffd0f702ff1268c8ee/docs/integrations/builtin/core-nodes/n8n-nodes-base.executecommand/common-issues.md)
+> Commit-pinned source for n8n main: [docs/integrations/builtin/core-nodes/n8n-nodes-base.executecommand/common-issues.md](https://github.com/n8n-io/n8n-docs/blob/3d749fdf0f717f45386ed39bd18d269811cfff0d/docs/integrations/builtin/core-nodes/n8n-nodes-base.executecommand/common-issues.md)
 
 # Execute Command node common issues <a id="execute-command-node-common-issues"></a>
 

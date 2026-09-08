@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/builtin/credentials/dynatrace.md](https://github.com/n8n-io/n8n-docs/blob/55124d6563730229dbb346ffd0f702ff1268c8ee/docs/integrations/builtin/credentials/dynatrace.md)
+> Commit-pinned source for n8n main: [docs/integrations/builtin/credentials/dynatrace.md](https://github.com/n8n-io/n8n-docs/blob/3d749fdf0f717f45386ed39bd18d269811cfff0d/docs/integrations/builtin/credentials/dynatrace.md)
 
 # Dynatrace credentials <a id="dynatrace-credentials"></a>
 

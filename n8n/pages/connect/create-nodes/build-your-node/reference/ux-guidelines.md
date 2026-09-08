@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/connect/create-nodes/build-your-node/reference/ux-guidelines.md](https://github.com/n8n-io/n8n-docs/blob/55124d6563730229dbb346ffd0f702ff1268c8ee/docs/connect/create-nodes/build-your-node/reference/ux-guidelines.md)
+> Commit-pinned source for n8n main: [docs/connect/create-nodes/build-your-node/reference/ux-guidelines.md](https://github.com/n8n-io/n8n-docs/blob/3d749fdf0f717f45386ed39bd18d269811cfff0d/docs/connect/create-nodes/build-your-node/reference/ux-guidelines.md)
 
 # UX guidelines for community nodes <a id="ux-guidelines-for-community-nodes"></a>
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/builtin/credentials/send-email/yahoo.md](https://github.com/n8n-io/n8n-docs/blob/55124d6563730229dbb346ffd0f702ff1268c8ee/docs/integrations/builtin/credentials/send-email/yahoo.md)
+> Commit-pinned source for n8n main: [docs/integrations/builtin/credentials/send-email/yahoo.md](https://github.com/n8n-io/n8n-docs/blob/3d749fdf0f717f45386ed39bd18d269811cfff0d/docs/integrations/builtin/credentials/send-email/yahoo.md)
 
 # Yahoo Send Email credentials <a id="yahoo-send-email-credentials"></a>
 

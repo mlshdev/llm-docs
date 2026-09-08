@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/changelog/README.md](https://github.com/n8n-io/n8n-docs/blob/55124d6563730229dbb346ffd0f702ff1268c8ee/docs/changelog/README.md)
+> Commit-pinned source for n8n main: [docs/changelog/README.md](https://github.com/n8n-io/n8n-docs/blob/3d749fdf0f717f45386ed39bd18d269811cfff0d/docs/changelog/README.md)
 
 # Changelog
 
@@ -23,6 +23,18 @@ Every n8n release moves the platform forward. The changelog is where we call out
 > Current `stable`: 2.38.1
 > Current `beta`: 2.39.0
 
+## Error workflow executions no longer count towards your quota
+
+**Released:** 2026-09-01 in [n8n 2.38](https://docs.n8n.io/changelog/release-notes#n8n2381)
+
+Runs of your error workflows are now excluded from your execution quota, on every plan. An error workflow is the one n8n runs when another workflow fails. It receives the details of the failure (which workflow, which node, what went wrong) and does something useful with them: post to a Slack channel, send an email, open a ticket, or retry the run.
+
+Until now each of those runs counted like any other execution. Handling a failure cost you an execution on top of the failure itself, and some people left error workflows out to protect their quota. Every production workflow should have one, so n8n stopped counting them.
+
+Attach an error workflow to a workflow in its **Workflow Settings** and its runs are excluded from the count. One error workflow can serve as many workflows as you like.
+
+On Cloud the change is already live. On self-hosted it applies from 2.38.0, or 1.123.60 if you're still on v1. If some of your workflows still run without an error workflow, refer to [Handle errors gracefully](https://docs.n8n.io/build/flow-logic/handle-errors-gracefully) to set one up.
+
 ## Use AI models and tool services without setting up provider accounts or credentials
 
 **Released:** 2026-09-02 in [n8n 2.36](https://docs.n8n.io/changelog/release-notes#n8n235)
@@ -31,11 +43,11 @@ You can now use supported AI models and services in n8n Cloud without first crea
 
 Supported AI providers include OpenAI, Anthropic, Google Gemini, Alibaba Cloud Qwen, MiniMax, and Moonshot Kimi. You can also use credits with Brave Search, Firecrawl, Browserbase, LlamaParse, and PDF.co.
 
-![Agent using tool services available with Gateway credits](https://raw.githubusercontent.com/n8n-io/n8n-docs/55124d6563730229dbb346ffd0f702ff1268c8ee/docs/changelog/.gitbook/assets/form%20hero%203.png)
+![Agent using tool services available with Gateway credits](https://raw.githubusercontent.com/n8n-io/n8n-docs/3d749fdf0f717f45386ed39bd18d269811cfff0d/docs/changelog/.gitbook/assets/form%20hero%203.png)
 
 On a supported node, select **Gateway credits** when setting up the credential and run your workflow. The choice is made per node, so the same workflow can use Gateway credits for one service and your own provider credentials for another.
 
-![Select Gateway credits in the Credetial dropdown ](https://raw.githubusercontent.com/n8n-io/n8n-docs/55124d6563730229dbb346ffd0f702ff1268c8ee/docs/changelog/.gitbook/assets/select%20credits.png)
+![Select Gateway credits in the Credetial dropdown ](https://raw.githubusercontent.com/n8n-io/n8n-docs/3d749fdf0f717f45386ed39bd18d269811cfff0d/docs/changelog/.gitbook/assets/select%20credits.png)
 
 Usage is deducted from a shared prepaid balance for the n8n instance. We align Gateway credit rates with publicly listed provider pricing wherever possible, and publish the rates for every supported service on our [service pricing page](https://app.n8n.cloud/service-pricing).
 
@@ -312,11 +324,11 @@ New [Oracle DB Vector Store](https://docs.n8n.io/integrations/builtin/cluster-no
 
 **Released:** 2026-05-19 in [n8n 2.22](https://docs.n8n.io/changelog/release-notes#n8n222)
 
-Connect your agent to select MCP servers without setting up an [MCP Client node](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-langchain.mcpclient) and credential by hand. Pick a server from the nodes panel, sign in, and it's available to your agent.
+Connect your agent to select MCP servers without setting up an [MCP Client node](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-langchain.mcpClient) and credential by hand. Pick a server from the nodes panel, sign in, and it's available to your agent.
 
 Initial coverage includes some of the most-used services in the official MCP registry (Apify, Linear, monday.com, Notion, and PostHog), and we'll expand the list to cover more services soon.
 
-If you need to connect to an MCP server that isn't in the list, you can still use the [MCP Client node](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-langchain.mcpclient) with manual configuration.
+If you need to connect to an MCP server that isn't in the list, you can still use the [MCP Client node](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-langchain.mcpClient) with manual configuration.
 
 [Embedded media](https://youtu.be/RGhHFbLMXhQ)
 Connect to MCP servers with less setup

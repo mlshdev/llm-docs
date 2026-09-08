@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/connect/create-nodes/build-your-node/tutorial-build-a-programmatic-style-node.md](https://github.com/n8n-io/n8n-docs/blob/55124d6563730229dbb346ffd0f702ff1268c8ee/docs/connect/create-nodes/build-your-node/tutorial-build-a-programmatic-style-node.md)
+> Commit-pinned source for n8n main: [docs/connect/create-nodes/build-your-node/tutorial-build-a-programmatic-style-node.md](https://github.com/n8n-io/n8n-docs/blob/3d749fdf0f717f45386ed39bd18d269811cfff0d/docs/connect/create-nodes/build-your-node/tutorial-build-a-programmatic-style-node.md)
 
 # Build a programmatic-style node <a id="build-a-programmatic-style-node"></a>
 
