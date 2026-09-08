@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/host-n8n/configure-n8n/basic-configuration/use-environment-variables/nodes.md](https://github.com/n8n-io/n8n-docs/blob/72a895394e35dba4497f7c20d33337cc8f1bb0bd/docs/deploy/host-n8n/configure-n8n/basic-configuration/use-environment-variables/nodes.md)
+> Commit-pinned source for n8n main: [docs/deploy/host-n8n/configure-n8n/basic-configuration/use-environment-variables/nodes.md](https://github.com/n8n-io/n8n-docs/blob/f76180a196aec64fce97138fd0cafcb619eeef06/docs/deploy/host-n8n/configure-n8n/basic-configuration/use-environment-variables/nodes.md)
 
 # Nodes environment variables <a id="nodes-environment-variables"></a>
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/code-in-n8n/cookbook/http-request-node/README.md](https://github.com/n8n-io/n8n-docs/blob/72a895394e35dba4497f7c20d33337cc8f1bb0bd/docs/build/code-in-n8n/cookbook/http-request-node/README.md)
+> Commit-pinned source for n8n main: [docs/build/code-in-n8n/cookbook/http-request-node/README.md](https://github.com/n8n-io/n8n-docs/blob/f76180a196aec64fce97138fd0cafcb619eeef06/docs/build/code-in-n8n/cookbook/http-request-node/README.md)
 
 # Examples using n8n's HTTP Request node <a id="examples-using-n8ns-http-request-node"></a>
 

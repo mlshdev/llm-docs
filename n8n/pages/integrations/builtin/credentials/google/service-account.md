@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/builtin/credentials/google/service-account.md](https://github.com/n8n-io/n8n-docs/blob/72a895394e35dba4497f7c20d33337cc8f1bb0bd/docs/integrations/builtin/credentials/google/service-account.md)
+> Commit-pinned source for n8n main: [docs/integrations/builtin/credentials/google/service-account.md](https://github.com/n8n-io/n8n-docs/blob/f76180a196aec64fce97138fd0cafcb619eeef06/docs/integrations/builtin/credentials/google/service-account.md)
 
 # Google Service Account
 
@@ -31,7 +31,7 @@ First, create a Google Cloud Console project. If you already have a project, jum
 4. Select **Create**.
 5. Check the top navigation and make sure the project dropdown has your project selected. If not, select the project you just created.
 
-![](https://raw.githubusercontent.com/n8n-io/n8n-docs/72a895394e35dba4497f7c20d33337cc8f1bb0bd/docs/reusable-content/.gitbook/assets/google-cloud-project-dropdown.png)
+![](https://raw.githubusercontent.com/n8n-io/n8n-docs/f76180a196aec64fce97138fd0cafcb619eeef06/docs/reusable-content/.gitbook/assets/google-cloud-project-dropdown.png)
 *Check the project dropdown in the Google Cloud top navigation*
 
 ### Enable APIs <a id="enable-apis"></a>
@@ -39,7 +39,7 @@ First, create a Google Cloud Console project. If you already have a project, jum
 With your project created, enable the APIs you'll need access to:
 
 1. Access your [Google Cloud Console - Library](https://console.cloud.google.com/apis/library). Make sure you're in the correct project.
-   ![](https://raw.githubusercontent.com/n8n-io/n8n-docs/72a895394e35dba4497f7c20d33337cc8f1bb0bd/docs/reusable-content/.gitbook/assets/google-cloud-project-dropdown.png)
+   ![](https://raw.githubusercontent.com/n8n-io/n8n-docs/f76180a196aec64fce97138fd0cafcb619eeef06/docs/reusable-content/.gitbook/assets/google-cloud-project-dropdown.png)
    *Check the project dropdown in the Google Cloud top navigation*
 
 2. Go to **APIs & Services > Library**.

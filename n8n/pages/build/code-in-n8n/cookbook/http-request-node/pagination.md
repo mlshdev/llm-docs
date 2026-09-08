@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/code-in-n8n/cookbook/http-request-node/pagination.md](https://github.com/n8n-io/n8n-docs/blob/72a895394e35dba4497f7c20d33337cc8f1bb0bd/docs/build/code-in-n8n/cookbook/http-request-node/pagination.md)
+> Commit-pinned source for n8n main: [docs/build/code-in-n8n/cookbook/http-request-node/pagination.md](https://github.com/n8n-io/n8n-docs/blob/f76180a196aec64fce97138fd0cafcb619eeef06/docs/build/code-in-n8n/cookbook/http-request-node/pagination.md)
 
 # Pagination in the HTTP Request node <a id="pagination-in-the-http-request-node"></a>
 

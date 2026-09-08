@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/builtin/app-nodes/n8n-nodes-base.twitter.md](https://github.com/n8n-io/n8n-docs/blob/72a895394e35dba4497f7c20d33337cc8f1bb0bd/docs/integrations/builtin/app-nodes/n8n-nodes-base.twitter.md)
+> Commit-pinned source for n8n main: [docs/integrations/builtin/app-nodes/n8n-nodes-base.twitter.md](https://github.com/n8n-io/n8n-docs/blob/f76180a196aec64fce97138fd0cafcb619eeef06/docs/integrations/builtin/app-nodes/n8n-nodes-base.twitter.md)
 
 # X (Formerly Twitter) node <a id="x-formerly-twitter-node"></a>
 

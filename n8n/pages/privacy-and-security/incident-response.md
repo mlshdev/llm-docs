@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/privacy-and-security/incident-response.md](https://github.com/n8n-io/n8n-docs/blob/72a895394e35dba4497f7c20d33337cc8f1bb0bd/docs/privacy-and-security/incident-response.md)
+> Commit-pinned source for n8n main: [docs/privacy-and-security/incident-response.md](https://github.com/n8n-io/n8n-docs/blob/f76180a196aec64fce97138fd0cafcb619eeef06/docs/privacy-and-security/incident-response.md)
 
 # Incident response <a id="incident-response"></a>
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/host-n8n/keep-n8n-running/monitor-n8n.md](https://github.com/n8n-io/n8n-docs/blob/72a895394e35dba4497f7c20d33337cc8f1bb0bd/docs/deploy/host-n8n/keep-n8n-running/monitor-n8n.md)
+> Commit-pinned source for n8n main: [docs/deploy/host-n8n/keep-n8n-running/monitor-n8n.md](https://github.com/n8n-io/n8n-docs/blob/f76180a196aec64fce97138fd0cafcb619eeef06/docs/deploy/host-n8n/keep-n8n-running/monitor-n8n.md)
 
 # Monitoring <a id="monitoring"></a>
 

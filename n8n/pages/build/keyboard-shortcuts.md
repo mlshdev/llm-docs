@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/keyboard-shortcuts.md](https://github.com/n8n-io/n8n-docs/blob/72a895394e35dba4497f7c20d33337cc8f1bb0bd/docs/build/keyboard-shortcuts.md)
+> Commit-pinned source for n8n main: [docs/build/keyboard-shortcuts.md](https://github.com/n8n-io/n8n-docs/blob/f76180a196aec64fce97138fd0cafcb619eeef06/docs/build/keyboard-shortcuts.md)
 
 # Keyboard shortcuts and controls <a id="keyboard-shortcuts-and-controls"></a>
 
