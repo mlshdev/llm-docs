@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/secrets/docker_pass_plugins_1password_setup.yaml](https://github.com/docker/docs/blob/f0470b5edae7289b77e04ac4e015f6d3604f15ad/data/cli/secrets/docker_pass_plugins_1password_setup.yaml)
+> Commit-pinned source for Docker main: [data/cli/secrets/docker_pass_plugins_1password_setup.yaml](https://github.com/docker/docs/blob/1808ce9024d6e24a418ae6b43b2413042e2c8e42/data/cli/secrets/docker_pass_plugins_1password_setup.yaml)
 
 # docker pass plugins 1password setup
 

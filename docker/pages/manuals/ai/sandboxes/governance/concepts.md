@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/governance/concepts.md](https://github.com/docker/docs/blob/f0470b5edae7289b77e04ac4e015f6d3604f15ad/content/manuals/ai/sandboxes/governance/concepts.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/governance/concepts.md](https://github.com/docker/docs/blob/1808ce9024d6e24a418ae6b43b2413042e2c8e42/content/manuals/ai/sandboxes/governance/concepts.md)
 
 # Policy concepts
 
@@ -33,6 +33,24 @@ Rules are grouped by domain. Network and filesystem rules in a policy must
 share the same domain, either `network` or `filesystem`. MCP policies use Cedar
 statements written in the `MCP` namespace instead of the network and filesystem
 rule format.
+
+### Limits
+
+Organization policies have the following limits, which help ensure fair usage
+and resource availability across organizations:
+
+| Limit                     | Value                                               |
+| ------------------------- | --------------------------------------------------- |
+| Policies per organization | 100                                                 |
+| Rules per policy          | 250                                                 |
+| Policy size               | 400 KB total, shared across all of a policy's rules |
+
+Typical policies use only a small fraction of the policy size limit. Domain
+and file path values have no separate length limit beyond valid format.
+
+If these limits don't fit your organization's needs,
+[contact Docker Sales](https://www.docker.com/products/ai-governance/#contact-sales)
+to discuss options.
 
 ## Policy scope
 

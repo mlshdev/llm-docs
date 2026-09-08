@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/accounts/individual/deactivate-user-account.md](https://github.com/docker/docs/blob/f0470b5edae7289b77e04ac4e015f6d3604f15ad/content/manuals/accounts/individual/deactivate-user-account.md)
+> Commit-pinned source for Docker main: [content/manuals/accounts/individual/deactivate-user-account.md](https://github.com/docker/docs/blob/1808ce9024d6e24a418ae6b43b2413042e2c8e42/content/manuals/accounts/individual/deactivate-user-account.md)
 
 # Deactivate a Docker account
 

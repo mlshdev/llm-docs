@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/gha.md](https://github.com/docker/docs/blob/f0470b5edae7289b77e04ac4e015f6d3604f15ad/content/guides/gha.md)
+> Commit-pinned source for Docker main: [content/guides/gha.md](https://github.com/docker/docs/blob/1808ce9024d6e24a418ae6b43b2413042e2c8e42/content/guides/gha.md)
 
 # Introduction to GitHub Actions with Docker
 
