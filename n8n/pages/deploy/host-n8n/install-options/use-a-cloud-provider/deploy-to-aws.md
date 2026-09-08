@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-aws.md](https://github.com/n8n-io/n8n-docs/blob/f76180a196aec64fce97138fd0cafcb619eeef06/docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-aws.md)
+> Commit-pinned source for n8n main: [docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-aws.md](https://github.com/n8n-io/n8n-docs/blob/55124d6563730229dbb346ffd0f702ff1268c8ee/docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-aws.md)
 
 # Hosting n8n on Amazon Web Services <a id="hosting-n8n-on-amazon-web-services"></a>
 
@@ -33,8 +33,8 @@ While not mentioned in the documentation for eksctl, you also need to [install t
 >
 > n8n releases a new minor version most weeks. The `stable` version is for production use. `beta` is the most recent release. The `beta` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
 >
-> Current `stable`: 2.37.10
-> Current `beta`: 2.38.4
+> Current `stable`: 2.38.1
+> Current `beta`: 2.39.0
 
 ## Create a cluster <a id="create-a-cluster"></a>
 

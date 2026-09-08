@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/host-n8n/configure-n8n/security/block-specific-nodes.md](https://github.com/n8n-io/n8n-docs/blob/f76180a196aec64fce97138fd0cafcb619eeef06/docs/deploy/host-n8n/configure-n8n/security/block-specific-nodes.md)
+> Commit-pinned source for n8n main: [docs/deploy/host-n8n/configure-n8n/security/block-specific-nodes.md](https://github.com/n8n-io/n8n-docs/blob/55124d6563730229dbb346ffd0f702ff1268c8ee/docs/deploy/host-n8n/configure-n8n/security/block-specific-nodes.md)
 
 # Block access to nodes <a id="block-access-to-nodes"></a>
 

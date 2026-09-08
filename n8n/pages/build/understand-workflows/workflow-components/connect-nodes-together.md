@@ -1,10 +1,10 @@
-> Commit-pinned source for n8n main: [docs/build/understand-workflows/workflow-components/connect-nodes-together.md](https://github.com/n8n-io/n8n-docs/blob/f76180a196aec64fce97138fd0cafcb619eeef06/docs/build/understand-workflows/workflow-components/connect-nodes-together.md)
+> Commit-pinned source for n8n main: [docs/build/understand-workflows/workflow-components/connect-nodes-together.md](https://github.com/n8n-io/n8n-docs/blob/55124d6563730229dbb346ffd0f702ff1268c8ee/docs/build/understand-workflows/workflow-components/connect-nodes-together.md)
 
 # Connect nodes together
 
 A connection establishes a link between nodes to route data through the workflow. A connection between two nodes passes data from one node's output to another node's input.
 
-![Example of creating and deleting a connection](https://raw.githubusercontent.com/n8n-io/n8n-docs/f76180a196aec64fce97138fd0cafcb619eeef06/docs/build/.gitbook/assets/example.gif)
+![Example of creating and deleting a connection](https://raw.githubusercontent.com/n8n-io/n8n-docs/55124d6563730229dbb346ffd0f702ff1268c8ee/docs/build/.gitbook/assets/example.gif)
 
 ## Create a connection <a id="create-a-connection"></a>
 
@@ -12,4 +12,4 @@ To create a connection between two nodes, select the grey dot or **Add node** !\
 
 ## Delete a connection <a id="delete-a-connection"></a>
 
-Hover over the connection, then select **Delete** ![Delete connector icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/f76180a196aec64fce97138fd0cafcb619eeef06/docs/build/.gitbook/assets/delete-connector.png).
+Hover over the connection, then select **Delete** ![Delete connector icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/55124d6563730229dbb346ffd0f702ff1268c8ee/docs/build/.gitbook/assets/delete-connector.png).

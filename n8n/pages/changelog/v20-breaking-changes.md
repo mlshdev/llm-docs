@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/changelog/v20-breaking-changes.md](https://github.com/n8n-io/n8n-docs/blob/f76180a196aec64fce97138fd0cafcb619eeef06/docs/changelog/v20-breaking-changes.md)
+> Commit-pinned source for n8n main: [docs/changelog/v20-breaking-changes.md](https://github.com/n8n-io/n8n-docs/blob/55124d6563730229dbb346ffd0f702ff1268c8ee/docs/changelog/v20-breaking-changes.md)
 
 # n8n 2.0 breaking changes <a id="n8n-v20-breaking-changes"></a>
 
@@ -15,16 +15,16 @@ Previously, when an execution (parent) called a sub-execution (child) that conta
 Entering the waiting state would happen for example if the sub-execution contains a Wait node with a timeout higher than 65 seconds or a webhook call or a form submission, or a human-in-the-loop node, like the slack node.
 
 Parent-Workflow:
-![Parent workflow with a Manual Trigger connected to an Execute Workflow node](https://raw.githubusercontent.com/n8n-io/n8n-docs/f76180a196aec64fce97138fd0cafcb619eeef06/docs/changelog/.gitbook/assets/parentworkflow1.png)
+![Parent workflow with a Manual Trigger connected to an Execute Workflow node](https://raw.githubusercontent.com/n8n-io/n8n-docs/55124d6563730229dbb346ffd0f702ff1268c8ee/docs/changelog/.gitbook/assets/parentworkflow1.png)
 
 Sub-Workflow:
-![Sub-workflow triggered by Execute Workflow Trigger, running a Wait node followed by an Edit Fields node](https://raw.githubusercontent.com/n8n-io/n8n-docs/f76180a196aec64fce97138fd0cafcb619eeef06/docs/changelog/.gitbook/assets/subworkflow.png)
+![Sub-workflow triggered by Execute Workflow Trigger, running a Wait node followed by an Edit Fields node](https://raw.githubusercontent.com/n8n-io/n8n-docs/55124d6563730229dbb346ffd0f702ff1268c8ee/docs/changelog/.gitbook/assets/subworkflow.png)
 
 n8n 1.0: The parent-execution reproduces the sub-execution's input as its output.:
-![n8n 1.0: Parent execution won't receive the result of the child execution](https://raw.githubusercontent.com/n8n-io/n8n-docs/f76180a196aec64fce97138fd0cafcb619eeef06/docs/changelog/.gitbook/assets/before1.png)
+![n8n 1.0: Parent execution won't receive the result of the child execution](https://raw.githubusercontent.com/n8n-io/n8n-docs/55124d6563730229dbb346ffd0f702ff1268c8ee/docs/changelog/.gitbook/assets/before1.png)
 
 n8n 2.0: The parent execution receives the result of the child execution:
-![n8n 2.0: Parent execution will receive the result of the child execution](https://raw.githubusercontent.com/n8n-io/n8n-docs/f76180a196aec64fce97138fd0cafcb619eeef06/docs/changelog/.gitbook/assets/after1.png)
+![n8n 2.0: Parent execution will receive the result of the child execution](https://raw.githubusercontent.com/n8n-io/n8n-docs/55124d6563730229dbb346ffd0f702ff1268c8ee/docs/changelog/.gitbook/assets/after1.png)
 
 This allows using human-in-the-loop nodes in the sub-workflow and use the results (for example approving or declining an action) in the parent-workflow.
 

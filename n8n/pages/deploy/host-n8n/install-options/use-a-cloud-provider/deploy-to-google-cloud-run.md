@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-google-cloud-run.md](https://github.com/n8n-io/n8n-docs/blob/f76180a196aec64fce97138fd0cafcb619eeef06/docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-google-cloud-run.md)
+> Commit-pinned source for n8n main: [docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-google-cloud-run.md](https://github.com/n8n-io/n8n-docs/blob/55124d6563730229dbb346ffd0f702ff1268c8ee/docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-google-cloud-run.md)
 
 # Hosting n8n on Google Cloud Run <a id="hosting-n8n-on-google-cloud-run"></a>
 
@@ -25,8 +25,8 @@ If you want to deploy to Google Kubernetes Engine (GKE) instead, you can refer t
 >
 > n8n releases a new minor version most weeks. The `stable` version is for production use. `beta` is the most recent release. The `beta` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
 >
-> Current `stable`: 2.37.10
-> Current `beta`: 2.38.4
+> Current `stable`: 2.38.1
+> Current `beta`: 2.39.0
 
 ## Before you begin: get a Google Cloud project <a id="before-you-begin-get-a-google-cloud-project"></a>
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/administer/manage-users-and-access/verify-user-identity/use-saml/set-up-azure-ad-saml.md](https://github.com/n8n-io/n8n-docs/blob/f76180a196aec64fce97138fd0cafcb619eeef06/docs/administer/manage-users-and-access/verify-user-identity/use-saml/set-up-azure-ad-saml.md)
+> Commit-pinned source for n8n main: [docs/administer/manage-users-and-access/verify-user-identity/use-saml/set-up-azure-ad-saml.md](https://github.com/n8n-io/n8n-docs/blob/55124d6563730229dbb346ffd0f702ff1268c8ee/docs/administer/manage-users-and-access/verify-user-identity/use-saml/set-up-azure-ad-saml.md)
 
 # Azure AD SAML setup <a id="azure-ad-saml-setup"></a>
 

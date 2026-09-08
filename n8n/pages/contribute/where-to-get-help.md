@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/contribute/where-to-get-help.md](https://github.com/n8n-io/n8n-docs/blob/f76180a196aec64fce97138fd0cafcb619eeef06/docs/contribute/where-to-get-help.md)
+> Commit-pinned source for n8n main: [docs/contribute/where-to-get-help.md](https://github.com/n8n-io/n8n-docs/blob/55124d6563730229dbb346ffd0f702ff1268c8ee/docs/contribute/where-to-get-help.md)
 
 # Get help with n8n <a id="get-help-with-n8n"></a>
 
