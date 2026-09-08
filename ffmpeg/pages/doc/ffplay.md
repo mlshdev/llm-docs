@@ -1,4 +1,4 @@
-> Commit-pinned source for FFmpeg master: [doc/ffplay.texi](https://github.com/FFmpeg/FFmpeg/blob/6962b42aa8e40d935ec8704821e98ef67008bf45/doc/ffplay.texi)
+> Commit-pinned source for FFmpeg master: [doc/ffplay.texi](https://github.com/FFmpeg/FFmpeg/blob/1de77bb8987e2c7364302c91b9f13958e419124e/doc/ffplay.texi)
 
 # Synopsis
 

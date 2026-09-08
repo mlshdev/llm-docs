@@ -77,8 +77,8 @@
     "ffmpeg": {
       "tag": "master",
       "branch": "master",
-      "sourceCommit": "6962b42aa8e40d935ec8704821e98ef67008bf45",
-      "sourceCommittedAt": "2026-09-07T02:32:24Z"
+      "sourceCommit": "1de77bb8987e2c7364302c91b9f13958e419124e",
+      "sourceCommittedAt": "2026-08-27T23:44:27Z"
     },
     "yt-dlp": {
       "tag": "2026.08.19",
