@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/builtin/trigger-nodes/n8n-nodes-base.microsoftteamstrigger.md](https://github.com/n8n-io/n8n-docs/blob/3d749fdf0f717f45386ed39bd18d269811cfff0d/docs/integrations/builtin/trigger-nodes/n8n-nodes-base.microsoftteamstrigger.md)
+> Commit-pinned source for n8n main: [docs/integrations/builtin/trigger-nodes/n8n-nodes-base.microsoftteamstrigger.md](https://github.com/n8n-io/n8n-docs/blob/87fdf334405a611b901b1b877a0f15b8dc2a0dfb/docs/integrations/builtin/trigger-nodes/n8n-nodes-base.microsoftteamstrigger.md)
 
 # Microsoft Teams Trigger node <a id="microsoft-teams-trigger-node"></a>
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/administer/use-source-control-and-environments/work-with-environments.md](https://github.com/n8n-io/n8n-docs/blob/3d749fdf0f717f45386ed39bd18d269811cfff0d/docs/administer/use-source-control-and-environments/work-with-environments.md)
+> Commit-pinned source for n8n main: [docs/administer/use-source-control-and-environments/work-with-environments.md](https://github.com/n8n-io/n8n-docs/blob/87fdf334405a611b901b1b877a0f15b8dc2a0dfb/docs/administer/use-source-control-and-environments/work-with-environments.md)
 
 # Environments in n8n <a id="environments-in-n8n"></a>
 

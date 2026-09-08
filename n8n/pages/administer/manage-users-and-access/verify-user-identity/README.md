@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/administer/manage-users-and-access/verify-user-identity/README.md](https://github.com/n8n-io/n8n-docs/blob/3d749fdf0f717f45386ed39bd18d269811cfff0d/docs/administer/manage-users-and-access/verify-user-identity/README.md)
+> Commit-pinned source for n8n main: [docs/administer/manage-users-and-access/verify-user-identity/README.md](https://github.com/n8n-io/n8n-docs/blob/87fdf334405a611b901b1b877a0f15b8dc2a0dfb/docs/administer/manage-users-and-access/verify-user-identity/README.md)
 
 # Verify user identity <a id="verify-user-identity"></a>
 

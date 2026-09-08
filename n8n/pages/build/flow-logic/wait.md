@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/flow-logic/wait.md](https://github.com/n8n-io/n8n-docs/blob/3d749fdf0f717f45386ed39bd18d269811cfff0d/docs/build/flow-logic/wait.md)
+> Commit-pinned source for n8n main: [docs/build/flow-logic/wait.md](https://github.com/n8n-io/n8n-docs/blob/87fdf334405a611b901b1b877a0f15b8dc2a0dfb/docs/build/flow-logic/wait.md)
 
 # Waiting <a id="waiting"></a>
 

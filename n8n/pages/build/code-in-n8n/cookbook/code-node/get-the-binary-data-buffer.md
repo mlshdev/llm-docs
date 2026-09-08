@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/code-in-n8n/cookbook/code-node/get-the-binary-data-buffer.md](https://github.com/n8n-io/n8n-docs/blob/3d749fdf0f717f45386ed39bd18d269811cfff0d/docs/build/code-in-n8n/cookbook/code-node/get-the-binary-data-buffer.md)
+> Commit-pinned source for n8n main: [docs/build/code-in-n8n/cookbook/code-node/get-the-binary-data-buffer.md](https://github.com/n8n-io/n8n-docs/blob/87fdf334405a611b901b1b877a0f15b8dc2a0dfb/docs/build/code-in-n8n/cookbook/code-node/get-the-binary-data-buffer.md)
 
 # Get the binary data buffer <a id="get-the-binary-data-buffer"></a>
 

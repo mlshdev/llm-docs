@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/use-n8n-cloud/configure-cloud/change-instance-ownership-or-username.md](https://github.com/n8n-io/n8n-docs/blob/3d749fdf0f717f45386ed39bd18d269811cfff0d/docs/deploy/use-n8n-cloud/configure-cloud/change-instance-ownership-or-username.md)
+> Commit-pinned source for n8n main: [docs/deploy/use-n8n-cloud/configure-cloud/change-instance-ownership-or-username.md](https://github.com/n8n-io/n8n-docs/blob/87fdf334405a611b901b1b877a0f15b8dc2a0dfb/docs/deploy/use-n8n-cloud/configure-cloud/change-instance-ownership-or-username.md)
 
 # Change Instance Ownership or Username
 
