@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/code-in-n8n/cookbook/built-in-methods-and-variables-examples/README.md](https://github.com/n8n-io/n8n-docs/blob/87fdf334405a611b901b1b877a0f15b8dc2a0dfb/docs/build/code-in-n8n/cookbook/built-in-methods-and-variables-examples/README.md)
+> Commit-pinned source for n8n main: [docs/build/code-in-n8n/cookbook/built-in-methods-and-variables-examples/README.md](https://github.com/n8n-io/n8n-docs/blob/5202a45366dc3ba755f914c0a35159befb3a1520/docs/build/code-in-n8n/cookbook/built-in-methods-and-variables-examples/README.md)
 
 # Examples using n8n's built-in methods and variables <a id="examples-using-n8ns-built-in-methods-and-variables"></a>
 

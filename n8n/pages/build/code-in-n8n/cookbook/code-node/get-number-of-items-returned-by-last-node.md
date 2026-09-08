@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/code-in-n8n/cookbook/code-node/get-number-of-items-returned-by-last-node.md](https://github.com/n8n-io/n8n-docs/blob/87fdf334405a611b901b1b877a0f15b8dc2a0dfb/docs/build/code-in-n8n/cookbook/code-node/get-number-of-items-returned-by-last-node.md)
+> Commit-pinned source for n8n main: [docs/build/code-in-n8n/cookbook/code-node/get-number-of-items-returned-by-last-node.md](https://github.com/n8n-io/n8n-docs/blob/5202a45366dc3ba755f914c0a35159befb3a1520/docs/build/code-in-n8n/cookbook/code-node/get-number-of-items-returned-by-last-node.md)
 
 # Get number of items returned by the previous node <a id="get-number-of-items-returned-by-the-previous-node"></a>
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/manage-workflows/share-with-others.md](https://github.com/n8n-io/n8n-docs/blob/87fdf334405a611b901b1b877a0f15b8dc2a0dfb/docs/build/manage-workflows/share-with-others.md)
+> Commit-pinned source for n8n main: [docs/build/manage-workflows/share-with-others.md](https://github.com/n8n-io/n8n-docs/blob/5202a45366dc3ba755f914c0a35159befb3a1520/docs/build/manage-workflows/share-with-others.md)
 
 # Workflow sharing <a id="workflow-sharing"></a>
 
@@ -23,7 +23,7 @@ Users can share workflows they created. Instance owners, and users with the admi
 
 **Note:** This option is only available when sharing a workflow that is inside a **Personal** workspace. When trying to use the "Add users" option for a workflow that's **inside a project**, you'll get this pop-up instead:
 
-![Pop-up explaining that the project shares this workflow with everyone in it](https://raw.githubusercontent.com/n8n-io/n8n-docs/87fdf334405a611b901b1b877a0f15b8dc2a0dfb/docs/build/.gitbook/assets/sharing-within-projects.png)
+![Pop-up explaining that the project shares this workflow with everyone in it](https://raw.githubusercontent.com/n8n-io/n8n-docs/5202a45366dc3ba755f914c0a35159befb3a1520/docs/build/.gitbook/assets/sharing-within-projects.png)
 
 This is intended behavior, and it means that the workflow is shared with everyone inside that specific project. Instead of adding the user directly to the workflow, you need to add the user to the project in which the workflow is located.
 

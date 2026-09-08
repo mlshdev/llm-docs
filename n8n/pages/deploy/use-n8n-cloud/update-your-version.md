@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/use-n8n-cloud/update-your-version.md](https://github.com/n8n-io/n8n-docs/blob/87fdf334405a611b901b1b877a0f15b8dc2a0dfb/docs/deploy/use-n8n-cloud/update-your-version.md)
+> Commit-pinned source for n8n main: [docs/deploy/use-n8n-cloud/update-your-version.md](https://github.com/n8n-io/n8n-docs/blob/5202a45366dc3ba755f914c0a35159befb3a1520/docs/deploy/use-n8n-cloud/update-your-version.md)
 
 # Update your version
 

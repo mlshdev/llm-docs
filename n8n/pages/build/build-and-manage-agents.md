@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/build-and-manage-agents.md](https://github.com/n8n-io/n8n-docs/blob/87fdf334405a611b901b1b877a0f15b8dc2a0dfb/docs/build/build-and-manage-agents.md)
+> Commit-pinned source for n8n main: [docs/build/build-and-manage-agents.md](https://github.com/n8n-io/n8n-docs/blob/5202a45366dc3ba755f914c0a35159befb3a1520/docs/build/build-and-manage-agents.md)
 
 # Build and manage agents
 
@@ -13,6 +13,12 @@ An agent is an autonomous assistant you build in n8n. Each agent has a language 
 > **Preview status**
 >
 > Agents are in Preview. They can make mistakes, and their behavior may change while the feature is in development. On self-hosted, knowledge bases are also in Preview.
+
+### Video: how agents fit with workflows and AI
+
+Agents, fixed workflows, and workflows that use AI for specific steps each suit different kinds of work. Watch how the three compare, and how they work together in production-ready systems.
+
+[Embedded media](https://www.youtube.com/embed/P5x0nsY8hCg)
 
 ### What you can build with agents
 
