@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/sbx_cli/sbx_kit_push.yaml](https://github.com/docker/docs/blob/c927b8145de313328c37bb115c9caf0b1be5aa82/data/sbx_cli/sbx_kit_push.yaml)
+> Commit-pinned source for Docker main: [data/sbx_cli/sbx_kit_push.yaml](https://github.com/docker/docs/blob/f0470b5edae7289b77e04ac4e015f6d3604f15ad/data/sbx_cli/sbx_kit_push.yaml)
 
 # sbx kit push
 
@@ -33,7 +33,9 @@ image, and the source git commit when the directory is a working tree.
 The provenance is unsigned unless --sign is given, in which case it is
 signed as a DSSE in-toto attestation with the same identity or key.
 
-Authentication uses the Docker credential store.
+Authentication: the Docker Hub session from sbx login and sbx registry
+secrets (sbx secret set --registry) take priority, falling back to the
+Docker credential store.
 
 ## Options
 
@@ -49,4 +51,6 @@ Authentication uses the Docker credential store.
 
 | Option | Default | Description |
 | --- | --- | --- |
+| `--cloud` |  | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list) |
+| `--cloud-api-url` | `https://api.sandboxes-cloud.docker.com` | Cloud Sandboxes API base URL; only used with --cloud. Defaults to prod (https://api.sandboxes-cloud.docker.com). Set DOCKER_CLOUD_API_URL or pass this flag to override; a legacy value ending in /v1 is accepted. |
 | `-D`, `--debug` |  | Enable debug logging |

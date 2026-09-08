@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/build/building/cdi.md](https://github.com/docker/docs/blob/c927b8145de313328c37bb115c9caf0b1be5aa82/content/manuals/build/building/cdi.md)
+> Commit-pinned source for Docker main: [content/manuals/build/building/cdi.md](https://github.com/docker/docs/blob/f0470b5edae7289b77e04ac4e015f6d3604f15ad/content/manuals/build/building/cdi.md)
 
 The [Container Device Interface (CDI)](https://github.com/cncf-tags/container-device-interface/blob/main/SPEC.md)
 is a specification designed to standardize how devices (like GPUs, FPGAs, and

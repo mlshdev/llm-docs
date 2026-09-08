@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/desktop/settings-and-maintenance/settings.md](https://github.com/docker/docs/blob/c927b8145de313328c37bb115c9caf0b1be5aa82/content/manuals/desktop/settings-and-maintenance/settings.md)
+> Commit-pinned source for Docker main: [content/manuals/desktop/settings-and-maintenance/settings.md](https://github.com/docker/docs/blob/f0470b5edae7289b77e04ac4e015f6d3604f15ad/content/manuals/desktop/settings-and-maintenance/settings.md)
 
 # Change your Docker Desktop settings
 
@@ -6,7 +6,7 @@ Customize Docker Desktop behavior and optimize performance and resource usage wi
 
 To open **Settings** either:
 
-- Select the Docker menu ![whale menu](https://raw.githubusercontent.com/docker/docs/c927b8145de313328c37bb115c9caf0b1be5aa82/content/manuals/desktop/images/whale-x.svg) and then **Settings**
+- Select the Docker menu ![whale menu](https://raw.githubusercontent.com/docker/docs/f0470b5edae7289b77e04ac4e015f6d3604f15ad/content/manuals/desktop/images/whale-x.svg) and then **Settings**
 - Select the **Settings** icon from the Docker Desktop Dashboard.
 
 You can also locate the `settings-store.json` file at:

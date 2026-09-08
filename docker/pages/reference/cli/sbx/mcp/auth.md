@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/sbx_cli/sbx_mcp_auth.yaml](https://github.com/docker/docs/blob/c927b8145de313328c37bb115c9caf0b1be5aa82/data/sbx_cli/sbx_mcp_auth.yaml)
+> Commit-pinned source for Docker main: [data/sbx_cli/sbx_mcp_auth.yaml](https://github.com/docker/docs/blob/f0470b5edae7289b77e04ac4e015f6d3604f15ad/data/sbx_cli/sbx_mcp_auth.yaml)
 
 # sbx mcp auth
 
@@ -26,11 +26,36 @@ OAuth, and 'sbx mcp auth rm' to remove hosted credentials without removing
 local MCP server registrations.
 
 Pass --scope (repeatable) to authorize a specific set of scopes for this run,
-overriding the default recorded at 'sbx mcp add' time. Scopes are validated only
-when the server advertises a supported set (RFC 8414 scopes_supported); each
-scope must then be a member or the command fails. If the server advertises no
-supported set, the requested scopes are accepted as given. With no --scope and
-no recorded default, all advertised scopes are requested.
+overriding the default recorded at 'sbx mcp add' time. Precedence is --no-scope >
+an explicit --scope > the recorded default > the scope set the RESOURCE says it
+requires (from its RFC 9728 metadata or its WWW-Authenticate challenge) > nothing.
+With none of those, the 'scope' parameter is OMITTED and the authorization server
+applies its own default grant. The server's advertised set is never requested
+wholesale.
+
+A resource that publishes a required set therefore gets it requested without any
+flag, and the consent block marks that set as derived rather than chosen. Pass
+--no-scope to suppress it and take the server's default grant instead.
+
+Scopes you choose are validated only when the server advertises a supported set
+(RFC 8414 scopes_supported); each scope must then be a member or the command
+fails. If the server advertises no supported set, the requested scopes are
+accepted as given. A set derived from the resource's own required list is never
+validated: it is the server's statement about itself, and scopes_supported is
+allowed to be non-exhaustive.
+Membership is not a promise: scopes_supported is what the server SUPPORTS, not
+what it will grant this client, so an advertised scope can still be refused at
+consent time. In local data-plane mode a refusal prints the requested set, the
+advertised set, the scopes the server named, and a narrower retry command; the
+hosted control plane reports only that authorization failed or timed out.
+
+For an existing or freshly completed authorization, the GRANTED set — what the
+authorization server actually handed over — is reported alongside the status. An
+authorization server may grant less than was asked for; when it restates no set
+at all, RFC 6749 §5.1 makes that the set that was requested.
+
+Scope values may be URN-shaped (urn:ietf:params:oauth:scope:mail) or URL-shaped
+(https://www.fastmail.com/dev/mcp); neither needs quoting.
 
 ## Options
 
@@ -38,13 +63,17 @@ no recorded default, all advertised scopes are requested.
 | --- | --- | --- |
 | `--all` |  | Apply to all registered OAuth servers |
 | `--format` | `text` | Output format: "text" or "json" |
-| `--scope` |  | OAuth scope to authorize for this run (repeatable; overrides the recorded default; must be advertised by the server's authorization metadata) |
+| `--json` |  | Output in JSON format (alias for --format json) |
+| `--no-scope` |  | Request no scopes at all for this run, so the authorization server applies its own default grant. Suppresses both the recorded default and the resource's required set; cannot be combined with --scope |
+| `--scope` |  | OAuth scope to authorize for this run (repeatable; overrides the recorded default; must be advertised by the server's authorization metadata, which does not promise the server will grant it). With no --scope and no recorded default, the scope set the resource itself requires is requested; with none of those, no scopes are requested and the authorization server applies its own default grant |
 | `--verbose` |  | Print authorization polling progress |
 
 ## Global options
 
 | Option | Default | Description |
 | --- | --- | --- |
+| `--cloud` |  | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list) |
+| `--cloud-api-url` | `https://api.sandboxes-cloud.docker.com` | Cloud Sandboxes API base URL; only used with --cloud. Defaults to prod (https://api.sandboxes-cloud.docker.com). Set DOCKER_CLOUD_API_URL or pass this flag to override; a legacy value ending in /v1 is accepted. |
 | `-D`, `--debug` |  | Enable debug logging |
 
 ## Examples
@@ -57,4 +86,5 @@ sbx mcp auth status --all
   sbx mcp auth --all
   sbx mcp auth notion
   sbx mcp auth notion --scope read --scope write
+  sbx mcp auth notion --no-scope
 ```

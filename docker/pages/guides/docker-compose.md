@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/docker-compose.md](https://github.com/docker/docs/blob/c927b8145de313328c37bb115c9caf0b1be5aa82/content/guides/docker-compose.md)
+> Commit-pinned source for Docker main: [content/guides/docker-compose.md](https://github.com/docker/docs/blob/f0470b5edae7289b77e04ac4e015f6d3604f15ad/content/guides/docker-compose.md)
 
 # Defining and running multi-container applications with Docker Compose
 

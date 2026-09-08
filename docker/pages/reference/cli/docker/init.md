@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/init/docker_init.yaml](https://github.com/docker/docs/blob/c927b8145de313328c37bb115c9caf0b1be5aa82/data/cli/init/docker_init.yaml)
+> Commit-pinned source for Docker main: [data/cli/init/docker_init.yaml](https://github.com/docker/docs/blob/f0470b5edae7289b77e04ac4e015f6d3604f15ad/data/cli/init/docker_init.yaml)
 
 # docker init
 

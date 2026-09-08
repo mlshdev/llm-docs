@@ -1,6 +1,6 @@
 # Docker main
 
-> Documentation generated from the latest `main` branch commit of [docker/docs](https://github.com/docker/docs) and pinned to immutable source commit `c927b8145de313328c37bb115c9caf0b1be5aa82`.
+> Documentation generated from the latest `main` branch commit of [docker/docs](https://github.com/docker/docs) and pinned to immutable source commit `f0470b5edae7289b77e04ac4e015f6d3604f15ad`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Docker main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -1628,6 +1628,7 @@
 - [docker volume rm](pages/reference/cli/docker/volume/rm.md): Source `data/cli/engine/docker_volume_rm.yaml`.
 - [docker volume update](pages/reference/cli/docker/volume/update.md): Source `data/cli/engine/docker_volume_update.yaml`.
 - [sbx](pages/reference/cli/sbx.md): Source `data/sbx_cli/sbx.yaml`.
+- [sbx attach](pages/reference/cli/sbx/attach.md): Source `data/sbx_cli/sbx_attach.yaml`.
 - [sbx completion](pages/reference/cli/sbx/completion.md): Source `data/sbx_cli/sbx_completion.yaml`.
 - [sbx completion bash](pages/reference/cli/sbx/completion/bash.md): Source `data/sbx_cli/sbx_completion_bash.yaml`.
 - [sbx completion fish](pages/reference/cli/sbx/completion/fish.md): Source `data/sbx_cli/sbx_completion_fish.yaml`.
@@ -1639,6 +1640,7 @@
 - [sbx create codex](pages/reference/cli/sbx/create/codex.md): Source `data/sbx_cli/sbx_create_codex.yaml`.
 - [sbx create copilot](pages/reference/cli/sbx/create/copilot.md): Source `data/sbx_cli/sbx_create_copilot.yaml`.
 - [sbx create cursor](pages/reference/cli/sbx/create/cursor.md): Source `data/sbx_cli/sbx_create_cursor.yaml`.
+- [sbx create devin](pages/reference/cli/sbx/create/devin.md): Source `data/sbx_cli/sbx_create_devin.yaml`.
 - [sbx create docker-agent](pages/reference/cli/sbx/create/docker-agent.md): Source `data/sbx_cli/sbx_create_docker-agent.yaml`.
 - [sbx create droid](pages/reference/cli/sbx/create/droid.md): Source `data/sbx_cli/sbx_create_droid.yaml`.
 - [sbx create gemini](pages/reference/cli/sbx/create/gemini.md): Source `data/sbx_cli/sbx_create_gemini.yaml`.
@@ -1656,6 +1658,7 @@
 - [sbx env](pages/reference/cli/sbx/env.md): Source `data/sbx_cli/sbx_env.yaml`.
 - [sbx env create](pages/reference/cli/sbx/env/create.md): Source `data/sbx_cli/sbx_env_create.yaml`.
 - [sbx env exec](pages/reference/cli/sbx/env/exec.md): Source `data/sbx_cli/sbx_env_exec.yaml`.
+- [sbx env plan](pages/reference/cli/sbx/env/plan.md): Source `data/sbx_cli/sbx_env_plan.yaml`.
 - [sbx env rm](pages/reference/cli/sbx/env/rm.md): Source `data/sbx_cli/sbx_env_rm.yaml`.
 - [sbx env run](pages/reference/cli/sbx/env/run.md): Source `data/sbx_cli/sbx_env_run.yaml`.
 - [sbx exec](pages/reference/cli/sbx/exec.md): Source `data/sbx_cli/sbx_exec.yaml`.
@@ -1710,13 +1713,23 @@
 - [sbx setup ssh](pages/reference/cli/sbx/setup/ssh.md): Source `data/sbx_cli/sbx_setup_ssh.yaml`.
 - [sbx setup ssh remove](pages/reference/cli/sbx/setup/ssh/remove.md): Source `data/sbx_cli/sbx_setup_ssh_remove.yaml`.
 - [sbx skills](pages/reference/cli/sbx/skills.md): Source `data/sbx_cli/sbx_skills.yaml`.
+- [sbx skills add](pages/reference/cli/sbx/skills/add.md): Source `data/sbx_cli/sbx_skills_add.yaml`.
 - [sbx skills import](pages/reference/cli/sbx/skills/import.md): Source `data/sbx_cli/sbx_skills_import.yaml`.
 - [sbx skills ls](pages/reference/cli/sbx/skills/ls.md): Source `data/sbx_cli/sbx_skills_ls.yaml`.
+- [sbx skills rm](pages/reference/cli/sbx/skills/rm.md): Source `data/sbx_cli/sbx_skills_rm.yaml`.
+- [sbx skills update](pages/reference/cli/sbx/skills/update.md): Source `data/sbx_cli/sbx_skills_update.yaml`.
 - [sbx stop](pages/reference/cli/sbx/stop.md): Source `data/sbx_cli/sbx_stop.yaml`.
 - [sbx template](pages/reference/cli/sbx/template.md): Source `data/sbx_cli/sbx_template.yaml`.
+- [sbx template inspect](pages/reference/cli/sbx/template/inspect.md): Source `data/sbx_cli/sbx_template_inspect.yaml`.
 - [sbx template load](pages/reference/cli/sbx/template/load.md): Source `data/sbx_cli/sbx_template_load.yaml`.
 - [sbx template ls](pages/reference/cli/sbx/template/ls.md): Source `data/sbx_cli/sbx_template_ls.yaml`.
 - [sbx template rm](pages/reference/cli/sbx/template/rm.md): Source `data/sbx_cli/sbx_template_rm.yaml`.
 - [sbx template save](pages/reference/cli/sbx/template/save.md): Source `data/sbx_cli/sbx_template_save.yaml`.
+- [sbx ttl](pages/reference/cli/sbx/ttl.md): Source `data/sbx_cli/sbx_ttl.yaml`.
 - [sbx tui](pages/reference/cli/sbx/tui.md): Source `data/sbx_cli/sbx_tui.yaml`.
 - [sbx version](pages/reference/cli/sbx/version.md): Source `data/sbx_cli/sbx_version.yaml`.
+- [sbx volume](pages/reference/cli/sbx/volume.md): Source `data/sbx_cli/sbx_volume.yaml`.
+- [sbx volume create](pages/reference/cli/sbx/volume/create.md): Source `data/sbx_cli/sbx_volume_create.yaml`.
+- [sbx volume inspect](pages/reference/cli/sbx/volume/inspect.md): Source `data/sbx_cli/sbx_volume_inspect.yaml`.
+- [sbx volume ls](pages/reference/cli/sbx/volume/ls.md): Source `data/sbx_cli/sbx_volume_ls.yaml`.
+- [sbx volume rm](pages/reference/cli/sbx/volume/rm.md): Source `data/sbx_cli/sbx_volume_rm.yaml`.

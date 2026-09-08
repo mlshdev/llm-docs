@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/sbx_cli/sbx_rm.yaml](https://github.com/docker/docs/blob/c927b8145de313328c37bb115c9caf0b1be5aa82/data/sbx_cli/sbx_rm.yaml)
+> Commit-pinned source for Docker main: [data/sbx_cli/sbx_rm.yaml](https://github.com/docker/docs/blob/f0470b5edae7289b77e04ac4e015f6d3604f15ad/data/sbx_cli/sbx_rm.yaml)
 
 # sbx rm
 
@@ -8,14 +8,20 @@ Remove one or more sandboxes
 
 ## Description
 
-Remove one or more sandboxes and all associated resources.
+Remove one or more sandboxes and all associated resources. Or — with --cloud — the cloud sandbox
+ID (sbx_*) or name from "sbx --cloud ls".
 
-Stops running sandboxes, removes their containers, cleans up any Git
-worktrees, and deletes sandbox state. This action cannot be undone.
+For local sandboxes, stops them, removes their containers, cleans up any Git
+worktrees, deletes sandbox state, and deletes secrets scoped to each removed
+sandbox. This action cannot be undone. With --cloud, deletes
+the sandbox in Docker Sandboxes Cloud. This action cannot be undone.
 
 Removal requires confirmation; use --force to skip confirmation prompts
 (for non-interactive scripts) and to delete a sandbox that is in use
-(e.g. an open SSH connection). Use --all to remove every sandbox.
+(e.g. an open SSH connection). Use --all to remove every sandbox. With --cloud, --all is
+intentionally disabled as a safety gate — the blast radius covers every
+sandbox the credential can see, which may include shared or production
+workloads. Pass IDs explicitly in --cloud mode.
 
 ## Options
 
@@ -28,4 +34,6 @@ Removal requires confirmation; use --force to skip confirmation prompts
 
 | Option | Default | Description |
 | --- | --- | --- |
+| `--cloud` |  | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list) |
+| `--cloud-api-url` | `https://api.sandboxes-cloud.docker.com` | Cloud Sandboxes API base URL; only used with --cloud. Defaults to prod (https://api.sandboxes-cloud.docker.com). Set DOCKER_CLOUD_API_URL or pass this flag to override; a legacy value ending in /v1 is accepted. |
 | `-D`, `--debug` |  | Enable debug logging |

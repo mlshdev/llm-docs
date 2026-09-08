@@ -1,8 +1,8 @@
-> Commit-pinned source for Docker main: [data/sbx_cli/sbx_skills.yaml](https://github.com/docker/docs/blob/c927b8145de313328c37bb115c9caf0b1be5aa82/data/sbx_cli/sbx_skills.yaml)
+> Commit-pinned source for Docker main: [data/sbx_cli/sbx_skills.yaml](https://github.com/docker/docs/blob/f0470b5edae7289b77e04ac4e015f6d3604f15ad/data/sbx_cli/sbx_skills.yaml)
 
 # sbx skills
 
-Manage skills shared across sandboxes
+Manage skills available in sandboxes
 
 **Usage:** `sbx skills COMMAND`
 
@@ -11,16 +11,15 @@ Manage skills shared across sandboxes
 
 ## Description
 
-Manage the persistent agent skills store shared across sandboxes.
+Manage skills available to agents in Docker Sandboxes.
 
-Copy skills from supported agent directories on the host into the store with:
-  sbx skills import
-
-Sandboxes with skills sharing enabled mount the store read-write. Use
---no-share-skills when creating a sandbox to opt out.
+Skills are shared across sandboxes by default. Use --no-share-skills when
+creating a sandbox to opt out.
 
 ## Global options
 
 | Option | Default | Description |
 | --- | --- | --- |
+| `--cloud` |  | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list) |
+| `--cloud-api-url` | `https://api.sandboxes-cloud.docker.com` | Cloud Sandboxes API base URL; only used with --cloud. Defaults to prod (https://api.sandboxes-cloud.docker.com). Set DOCKER_CLOUD_API_URL or pass this flag to override; a legacy value ending in /v1 is accepted. |
 | `-D`, `--debug` |  | Enable debug logging |

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/get-started/tutorials/run-an-app.md](https://github.com/docker/docs/blob/c927b8145de313328c37bb115c9caf0b1be5aa82/content/get-started/tutorials/run-an-app.md)
+> Commit-pinned source for Docker main: [content/get-started/tutorials/run-an-app.md](https://github.com/docker/docs/blob/f0470b5edae7289b77e04ac4e015f6d3604f15ad/content/get-started/tutorials/run-an-app.md)
 
 # Build and share a containerized application
 

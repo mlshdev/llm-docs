@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/jupyter.md](https://github.com/docker/docs/blob/c927b8145de313328c37bb115c9caf0b1be5aa82/content/guides/jupyter.md)
+> Commit-pinned source for Docker main: [content/guides/jupyter.md](https://github.com/docker/docs/blob/f0470b5edae7289b77e04ac4e015f6d3604f15ad/content/guides/jupyter.md)
 
 Docker and JupyterLab are two powerful tools that can enhance your data science
 workflow. In this guide, you will learn how to use them together to create and

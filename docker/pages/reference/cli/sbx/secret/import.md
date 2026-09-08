@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/sbx_cli/sbx_secret_import.yaml](https://github.com/docker/docs/blob/c927b8145de313328c37bb115c9caf0b1be5aa82/data/sbx_cli/sbx_secret_import.yaml)
+> Commit-pinned source for Docker main: [data/sbx_cli/sbx_secret_import.yaml](https://github.com/docker/docs/blob/f0470b5edae7289b77e04ac4e015f6d3604f15ad/data/sbx_cli/sbx_secret_import.yaml)
 
 # sbx secret import
 
@@ -28,7 +28,7 @@ takes precedence at runtime so any api-key import would never be used.
 Run `sbx secret rm <service>` first if you want to switch from
 OAuth to api-key auth.
 
-Available services: anthropic, cursor, droid, github, google, groq, mistral, nebius, openai, openrouter, xai
+Available services: anthropic, copilot, cursor, devin, droid, github, google, groq, mistral, nebius, openai, openrouter, xai
 
 ## Options
 
@@ -42,6 +42,8 @@ Available services: anthropic, cursor, droid, github, google, groq, mistral, neb
 
 | Option | Default | Description |
 | --- | --- | --- |
+| `--cloud` |  | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list) |
+| `--cloud-api-url` | `https://api.sandboxes-cloud.docker.com` | Cloud Sandboxes API base URL; only used with --cloud. Defaults to prod (https://api.sandboxes-cloud.docker.com). Set DOCKER_CLOUD_API_URL or pass this flag to override; a legacy value ending in /v1 is accepted. |
 | `-D`, `--debug` |  | Enable debug logging |
 
 ## Examples

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/sbx_cli/sbx_stop.yaml](https://github.com/docker/docs/blob/c927b8145de313328c37bb115c9caf0b1be5aa82/data/sbx_cli/sbx_stop.yaml)
+> Commit-pinned source for Docker main: [data/sbx_cli/sbx_stop.yaml](https://github.com/docker/docs/blob/f0470b5edae7289b77e04ac4e015f6d3604f15ad/data/sbx_cli/sbx_stop.yaml)
 
 # sbx stop
 
@@ -8,12 +8,26 @@ Stop one or more sandboxes without removing them
 
 ## Description
 
-Stop one or more running sandboxes without removing them.
+Stop one or more running sandboxes without removing them. Or — with --cloud — the cloud sandbox
+ID (sbx_*) or name from "sbx --cloud ls".
 
 Stopped sandboxes retain their state and can be restarted with "sbx run".
+
+With --cloud, stop suspends each sandbox in place: its full state (memory +
+disk) is preserved, the host is released, and the sandbox keeps its ID.
+Restart it — same ID — by running its agent again ("sbx --cloud run <agent>")
+and picking the stopped sandbox from the prompt. A detached run (--detached)
+creates a new sandbox instead of restarting a stopped one.
+
+Stop does not create a template and does not delete the sandbox. To capture
+a durable, shareable template from a running sandbox instead, use
+"sbx --cloud template save SANDBOX TAG" (which leaves the sandbox
+running).
 
 ## Global options
 
 | Option | Default | Description |
 | --- | --- | --- |
+| `--cloud` |  | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list) |
+| `--cloud-api-url` | `https://api.sandboxes-cloud.docker.com` | Cloud Sandboxes API base URL; only used with --cloud. Defaults to prod (https://api.sandboxes-cloud.docker.com). Set DOCKER_CLOUD_API_URL or pass this flag to override; a legacy value ending in /v1 is accepted. |
 | `-D`, `--debug` |  | Enable debug logging |

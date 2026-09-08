@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/sbx_cli/sbx_secret_set.yaml](https://github.com/docker/docs/blob/c927b8145de313328c37bb115c9caf0b1be5aa82/data/sbx_cli/sbx_secret_set.yaml)
+> Commit-pinned source for Docker main: [data/sbx_cli/sbx_secret_set.yaml](https://github.com/docker/docs/blob/f0470b5edae7289b77e04ac4e015f6d3604f15ad/data/sbx_cli/sbx_secret_set.yaml)
 
 # sbx secret set
 
@@ -12,7 +12,7 @@ Create or update a service secret or registry credential.
 
 ### Service secrets
 
-Available services: anthropic, cursor, droid, github, google, groq, mistral, nebius, openai, openrouter, xai
+Available services: anthropic, copilot, cursor, devin, droid, github, google, groq, mistral, nebius, openai, openrouter, xai
 
 Service secrets apply globally by default. Use --sandbox to scope a secret to
 one sandbox. When SERVICE is omitted, an interactive prompt selects it.
@@ -47,7 +47,7 @@ service secrets, registry credentials are host-only by default:
 | `--command` |  | Use a command's standard output as the secret value |
 | `-f`, `--force` |  | Overwrite an existing secret when --token is used |
 | `--no-verify` |  | Skip checking the --ref or --command source when storing it |
-| `--oauth` |  | Start OAuth flow and store OAuth tokens (openai/global only) |
+| `--oauth` |  | Start OAuth flow and store OAuth tokens (openai/global only) With --cloud: openai or anthropic, stored only in the cloud (never the local secrets-engine) |
 | `--password-stdin` |  | Read registry password or token from stdin (use with --registry) |
 | `--ref` |  | Use a 1Password op:// reference or AWS Secrets Manager ARN as the secret source |
 | `--refresh` |  | Secret refresh policy: on-demand or after a duration (default: 55m) |
@@ -61,6 +61,8 @@ service secrets, registry credentials are host-only by default:
 
 | Option | Default | Description |
 | --- | --- | --- |
+| `--cloud` |  | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list) |
+| `--cloud-api-url` | `https://api.sandboxes-cloud.docker.com` | Cloud Sandboxes API base URL; only used with --cloud. Defaults to prod (https://api.sandboxes-cloud.docker.com). Set DOCKER_CLOUD_API_URL or pass this flag to override; a legacy value ending in /v1 is accepted. |
 | `-D`, `--debug` |  | Enable debug logging |
 
 ## Examples

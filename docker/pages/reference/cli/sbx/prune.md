@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/sbx_cli/sbx_prune.yaml](https://github.com/docker/docs/blob/c927b8145de313328c37bb115c9caf0b1be5aa82/data/sbx_cli/sbx_prune.yaml)
+> Commit-pinned source for Docker main: [data/sbx_cli/sbx_prune.yaml](https://github.com/docker/docs/blob/f0470b5edae7289b77e04ac4e015f6d3604f15ad/data/sbx_cli/sbx_prune.yaml)
 
 # sbx prune
 
@@ -20,11 +20,14 @@ stopped for longer than DURATION (e.g. since=168h to keep anything stopped
 within the last week). A sandbox whose stop time the daemon cannot report is
 left alone, since how long it has been stopped cannot be established.
 
-Use --dry-run to list what would be removed without removing anything.
+Use --dry-run to list what would be removed without removing anything, and
+--json with it for machine-readable output.
 
 Pruning requires confirmation; use --force to skip the confirmation prompt
 (for non-interactive scripts) and to remove a sandbox that is in use (e.g. an
 open SSH connection). This action cannot be undone.
+
+Secrets scoped to each successfully pruned sandbox are also deleted.
 
 Local-only: cloud sandboxes expire via their TTL.
 
@@ -35,9 +38,12 @@ Local-only: cloud sandboxes expire via their TTL.
 | `--dry-run` |  | List the sandboxes that would be removed without removing them |
 | `--filter` |  | Filter candidates (supported: since=DURATION — stopped for longer than DURATION) |
 | `-f`, `--force` |  | Skip confirmation prompts and remove even if in use (e.g. an open SSH connection) |
+| `--json` |  | Output the --dry-run listing in JSON format |
 
 ## Global options
 
 | Option | Default | Description |
 | --- | --- | --- |
+| `--cloud` |  | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list) |
+| `--cloud-api-url` | `https://api.sandboxes-cloud.docker.com` | Cloud Sandboxes API base URL; only used with --cloud. Defaults to prod (https://api.sandboxes-cloud.docker.com). Set DOCKER_CLOUD_API_URL or pass this flag to override; a legacy value ending in /v1 is accepted. |
 | `-D`, `--debug` |  | Enable debug logging |

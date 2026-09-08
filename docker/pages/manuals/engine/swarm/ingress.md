@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/engine/swarm/ingress.md](https://github.com/docker/docs/blob/c927b8145de313328c37bb115c9caf0b1be5aa82/content/manuals/engine/swarm/ingress.md)
+> Commit-pinned source for Docker main: [content/manuals/engine/swarm/ingress.md](https://github.com/docker/docs/blob/f0470b5edae7289b77e04ac4e015f6d3604f15ad/content/manuals/engine/swarm/ingress.md)
 
 Docker Engine Swarm mode makes it easy to publish ports for services to make
 them available to resources outside the swarm. All nodes participate in an
@@ -71,7 +71,7 @@ the node. For externally routable IP addresses, the port is available from
 outside the host. For all other IP addresses the access is only available from
 within the host.
 
-![Service ingress image](https://raw.githubusercontent.com/docker/docs/c927b8145de313328c37bb115c9caf0b1be5aa82/content/manuals/engine/swarm/images/ingress-routing-mesh.webp)
+![Service ingress image](https://raw.githubusercontent.com/docker/docs/f0470b5edae7289b77e04ac4e015f6d3604f15ad/content/manuals/engine/swarm/images/ingress-routing-mesh.webp)
 
 You can publish a port for an existing service using the following command:
 
@@ -204,7 +204,7 @@ You can configure an external load balancer to route requests to a swarm
 service. For example, you could configure [HAProxy](https://www.haproxy.org) to
 balance requests to an nginx service published to port 8080.
 
-![Ingress with external load balancer image](https://raw.githubusercontent.com/docker/docs/c927b8145de313328c37bb115c9caf0b1be5aa82/content/manuals/engine/swarm/images/ingress-lb.webp)
+![Ingress with external load balancer image](https://raw.githubusercontent.com/docker/docs/f0470b5edae7289b77e04ac4e015f6d3604f15ad/content/manuals/engine/swarm/images/ingress-lb.webp)
 
 In this case, port 8080 must be open between the load balancer and the nodes in
 the swarm. The swarm nodes can reside on a private network that is accessible to

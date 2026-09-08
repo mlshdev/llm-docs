@@ -5,9 +5,9 @@
   "repository": "docker/docs",
   "tag": "main",
   "branch": "main",
-  "sourceCommittedAt": "2026-09-07T18:00:49Z",
-  "sourceCommit": "c927b8145de313328c37bb115c9caf0b1be5aa82",
-  "documentCount": 1627,
+  "sourceCommittedAt": "2026-09-08T08:47:19Z",
+  "sourceCommit": "f0470b5edae7289b77e04ac4e015f6d3604f15ad",
+  "documentCount": 1640,
   "quarantined": [
     {
       "sourcePath": "content/get-started/tutorials/run-an-agent.md",
