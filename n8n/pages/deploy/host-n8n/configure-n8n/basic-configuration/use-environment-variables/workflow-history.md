@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/host-n8n/configure-n8n/basic-configuration/use-environment-variables/workflow-history.md](https://github.com/n8n-io/n8n-docs/blob/add4135738cc79c86ba3bf33e3c9756c5e6f4571/docs/deploy/host-n8n/configure-n8n/basic-configuration/use-environment-variables/workflow-history.md)
+> Commit-pinned source for n8n main: [docs/deploy/host-n8n/configure-n8n/basic-configuration/use-environment-variables/workflow-history.md](https://github.com/n8n-io/n8n-docs/blob/60d8c89b2255a4dbc77140d7e9f81376c9731ffd/docs/deploy/host-n8n/configure-n8n/basic-configuration/use-environment-variables/workflow-history.md)
 
 # Workflow history environment variables <a id="workflow-history-environment-variables"></a>
 

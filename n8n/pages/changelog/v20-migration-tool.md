@@ -1,10 +1,10 @@
-> Commit-pinned source for n8n main: [docs/changelog/v20-migration-tool.md](https://github.com/n8n-io/n8n-docs/blob/add4135738cc79c86ba3bf33e3c9756c5e6f4571/docs/changelog/v20-migration-tool.md)
+> Commit-pinned source for n8n main: [docs/changelog/v20-migration-tool.md](https://github.com/n8n-io/n8n-docs/blob/60d8c89b2255a4dbc77140d7e9f81376c9731ffd/docs/changelog/v20-migration-tool.md)
 
 # n8n 2.0 migration tool <a id="n8n-v20-migration-tool"></a>
 
 The migration tool helps you prepare your n8n instance for upgrading to n8n 2.0 by identifying workflows and configurations that need attention before the upgrade.
 
-![Migration compatibility report showing a workflow-compatible count and Workflow issues / Instance issues tabs](https://raw.githubusercontent.com/n8n-io/n8n-docs/add4135738cc79c86ba3bf33e3c9756c5e6f4571/docs/changelog/.gitbook/assets/migration-tool.png)
+![Migration compatibility report showing a workflow-compatible count and Workflow issues / Instance issues tabs](https://raw.githubusercontent.com/n8n-io/n8n-docs/60d8c89b2255a4dbc77140d7e9f81376c9731ffd/docs/changelog/.gitbook/assets/migration-tool.png)
 
 You can see all breaking changes for n8n 2.0 [on this page](https://docs.n8n.io/changelog/v20-breaking-changes).
 

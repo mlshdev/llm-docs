@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/privacy-and-security/what-you-can-do.md](https://github.com/n8n-io/n8n-docs/blob/add4135738cc79c86ba3bf33e3c9756c5e6f4571/docs/privacy-and-security/what-you-can-do.md)
+> Commit-pinned source for n8n main: [docs/privacy-and-security/what-you-can-do.md](https://github.com/n8n-io/n8n-docs/blob/60d8c89b2255a4dbc77140d7e9f81376c9731ffd/docs/privacy-and-security/what-you-can-do.md)
 
 # What you can do <a id="what-you-can-do"></a>
 

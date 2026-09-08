@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/work-with-data/reference-data/use-the-ui-mapper.md](https://github.com/n8n-io/n8n-docs/blob/add4135738cc79c86ba3bf33e3c9756c5e6f4571/docs/build/work-with-data/reference-data/use-the-ui-mapper.md)
+> Commit-pinned source for n8n main: [docs/build/work-with-data/reference-data/use-the-ui-mapper.md](https://github.com/n8n-io/n8n-docs/blob/60d8c89b2255a4dbc77140d7e9f81376c9731ffd/docs/build/work-with-data/reference-data/use-the-ui-mapper.md)
 
 # Referencing data in the UI <a id="referencing-data-in-the-ui"></a>
 
@@ -11,7 +11,7 @@ You can map data in the following ways:
 - Using the expressions editor.
 - By dragging and dropping data from the **INPUT** pane into node parameters. This generates the expression for you.
 
-![Dragging a field from the INPUT pane into a node parameter to generate an expression](https://raw.githubusercontent.com/n8n-io/n8n-docs/add4135738cc79c86ba3bf33e3c9756c5e6f4571/docs/build/.gitbook/assets/expressionEditor.gif)
+![Dragging a field from the INPUT pane into a node parameter to generate an expression](https://raw.githubusercontent.com/n8n-io/n8n-docs/60d8c89b2255a4dbc77140d7e9f81376c9731ffd/docs/build/.gitbook/assets/expressionEditor.gif)
 
 For information on errors with mapping and linking items, refer to [Item linking errors](https://docs.n8n.io/build/work-with-data/reference-data/link-data-items/item-linking-errors).
 

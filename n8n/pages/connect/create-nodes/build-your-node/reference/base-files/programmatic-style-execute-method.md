@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/connect/create-nodes/build-your-node/reference/base-files/programmatic-style-execute-method.md](https://github.com/n8n-io/n8n-docs/blob/add4135738cc79c86ba3bf33e3c9756c5e6f4571/docs/connect/create-nodes/build-your-node/reference/base-files/programmatic-style-execute-method.md)
+> Commit-pinned source for n8n main: [docs/connect/create-nodes/build-your-node/reference/base-files/programmatic-style-execute-method.md](https://github.com/n8n-io/n8n-docs/blob/60d8c89b2255a4dbc77140d7e9f81376c9731ffd/docs/connect/create-nodes/build-your-node/reference/base-files/programmatic-style-execute-method.md)
 
 # Programmatic-style execute() method <a id="programmatic-style-execute-method"></a>
 
