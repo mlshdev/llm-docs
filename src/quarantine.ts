@@ -39,6 +39,7 @@ const unresolvedSyntax: Record<ProjectId, RegExp> = {
   podman:
     /@@(?:option|include)|<<(?:subcommand|fullsubcommand|pod|container| if )/,
   docker: /\{\{[<%]\s*\/?\s*[a-zA-Z_]|\{\{\s*\$[a-zA-Z_]/,
+  container: /(?!)/,
   n8n: /\{%\s*@?[a-zA-Z-]+/,
   grafana: /\{\{[<%]\s*\/?\s*[a-zA-Z_]|\]\(ref:|<GRAFANA[_ ]VERSION>/,
   victoriametrics: hugoShortcode,

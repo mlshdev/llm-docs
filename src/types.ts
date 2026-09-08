@@ -5,6 +5,7 @@ export const projectIds = [
   "netbird",
   "podman",
   "docker",
+  "container",
   "n8n",
   "grafana",
   "victoriametrics",

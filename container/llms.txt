@@ -1,0 +1,49 @@
+# Apple container 1.3.1
+
+> Documentation generated from the latest stable release of [apple/container](https://github.com/apple/container) and pinned to immutable source commit `a9a62e28f6beb88940122a3d7b286f2d5ae8053a`.
+
+- [Full documentation](llms-full.txt): Complete normalized corpus for Apple container 1.3.1.
+- [Provenance manifest](manifest.json): Release, commit, document count, and generation notes.
+- Release-authored Markdown includes the repository guide, build instructions, user guides, tutorials, and checked-in CLI command reference.
+- Relative links, source references, and assets resolve against the immutable release commit.
+
+## Development
+
+- [Building the project](pages/building.md): Source `BUILDING.md`.
+
+## Getting started
+
+- [container](pages/index.md): Source `README.md`.
+
+## Support
+
+- [How to file effective bug reports](pages/bug-report-how-to.md): Source `docs/bug-report-how-to.md`.
+
+## Command reference
+
+- [Container CLI Command Reference](pages/command-reference.md): Source `docs/command-reference.md`.
+
+## Guides
+
+- [Inspecting containers and images](pages/container-inspection.md): Source `docs/container-inspection.md`.
+- [Container machine](pages/container-machine.md): Source `docs/container-machine.md`.
+- [config.toml reference](pages/container-system-config.md): Source `docs/container-system-config.md`.
+- [Host integration](pages/host-integration.md): Source `docs/host-integration.md`.
+- [How-to](pages/how-to.md): Source `docs/how-to.md`.
+- [Logs](pages/logs.md): Source `docs/logs.md`.
+- [Multiplatform images](pages/multiplatform-images.md): Source `docs/multiplatform-images.md`.
+- [Networking](pages/networking.md): Source `docs/networking.md`.
+- [Resource usage](pages/resource-usage.md): Source `docs/resource-usage.md`.
+- [Runtime configuration](pages/runtime-configuration.md): Source `docs/runtime-configuration.md`.
+- [Shell completions](pages/shell-completions.md): Source `docs/shell-completions.md`.
+- [Resource limits (ulimits)](pages/ulimits.md): Source `docs/ulimits.md`.
+- [Mounts and volumes](pages/volumes.md): Source `docs/volumes.md`.
+
+## Architecture
+
+- [Technical Overview](pages/technical-overview.md): Source `docs/technical-overview.md`.
+
+## Tutorials
+
+- [Customize container default configuration values](pages/tutorials/container-system-config-tutorial.md): Source `docs/tutorials/container-system-config-tutorial.md`.
+- [Tutorial](pages/tutorials/start-here.md): Source `docs/tutorials/start-here.md`.

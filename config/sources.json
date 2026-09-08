@@ -28,6 +28,12 @@
       "homepage": "https://docs.docker.com/"
     },
     {
+      "id": "container",
+      "title": "Apple container",
+      "repository": "apple/container",
+      "homepage": "https://github.com/apple/container"
+    },
+    {
       "id": "n8n",
       "title": "n8n",
       "repository": "n8n-io/n8n-docs",

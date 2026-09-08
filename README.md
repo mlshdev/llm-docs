@@ -8,6 +8,7 @@ This repository converts documentation from immutable upstream commits into dete
 - [NetBird](https://github.com/netbirdio/netbird)
 - [Podman](https://github.com/podman-container-tools/podman)
 - [Docker](https://github.com/docker/docs)
+- [Apple container](https://github.com/apple/container)
 - [n8n](https://github.com/n8n-io/n8n-docs)
 - [Grafana](https://github.com/grafana/grafana)
 - [VictoriaMetrics](https://github.com/VictoriaMetrics/VictoriaMetrics)
@@ -80,7 +81,7 @@ llms-full.txt
   pages/
 ```
 
-Project directories are named after the identifiers in `config/sources.json`: `traefik`, `netbird`, `podman`, `docker`, `n8n`, `grafana`, `victoriametrics`, `victorialogs`, `victoriametrics-datasource`, `victorialogs-datasource`, `vmestimator`, `zitadel`, `ffmpeg`, `yt-dlp`, `searxng`, `bun`, `trigger-dev`, and `aria2`.
+Project directories are named after the identifiers in `config/sources.json`: `traefik`, `netbird`, `podman`, `docker`, `container`, `n8n`, `grafana`, `victoriametrics`, `victorialogs`, `victoriametrics-datasource`, `victorialogs-datasource`, `vmestimator`, `zitadel`, `ffmpeg`, `yt-dlp`, `searxng`, `bun`, `trigger-dev`, and `aria2`.
 
 ## Source-specific conversion
 
@@ -88,6 +89,7 @@ Project directories are named after the identifiers in `config/sources.json`: `t
 - NetBird converts MDX through a fail-closed AST transform with explicit handling for its documentation components. It includes public docs from the release-matched docs commit and technical architecture Markdown from the product tag.
 - Podman templates are expanded by a non-executing TypeScript implementation of the tagged repository's preprocessing rules before collecting command/man-page Markdown, tutorials, bindings, and operational documentation.
 - Docker follows the Hugo content tree and vendored module mounts at the pinned `docker/docs` commit, expands its documentation shortcodes, and generates CLI, OpenAPI, glossary, and sample reference pages from checked-in data without executing Hugo or upstream code.
+- Apple container publishes the release-tagged repository guide, build instructions, user guides, tutorials, and checked-in CLI command reference, with relative links and assets pinned to the immutable release commit.
 - n8n follows the `SUMMARY.md` navigation for each published GitBook space, expands commit-pinned reusable blocks, normalizes GitBook presentation blocks to plain Markdown, and rewrites cross-space links without executing upstream code.
 - Grafana walks the Hugo documentation tree under `docs/sources`, resolves `relref`, `ref:`, and shared-snippet references against the pages it publishes, expands the shortcodes the manual uses, and rewrites version placeholders to the release being generated.
 - VictoriaMetrics, VictoriaLogs, and vmestimator follow the Hugo `menu.docs` navigation declared in `docs/`, inline the fragments that pages pull in with `{{% content %}}`, and expand the remaining shortcodes (`available_from`, `deprecated_from`, `collapse`, `section`) into plain Markdown.

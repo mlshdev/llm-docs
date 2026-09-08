@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "project": "container",
+  "title": "Apple container",
+  "repository": "apple/container",
+  "tag": "1.3.1",
+  "releaseId": 378819149,
+  "releasePublishedAt": "2026-08-29T00:24:57Z",
+  "sourceCommit": "a9a62e28f6beb88940122a3d7b286f2d5ae8053a",
+  "documentCount": 20,
+  "notes": [
+    "Release-authored Markdown includes the repository guide, build instructions, user guides, tutorials, and checked-in CLI command reference.",
+    "Relative links, source references, and assets resolve against the immutable release commit."
+  ]
+}

@@ -1,6 +1,7 @@
 import { buildAria2 } from "./aria2.ts";
 import { buildDatasourcePlugin } from "./datasource-plugin.ts";
 import { buildBun } from "./bun.ts";
+import { buildContainer } from "./container.ts";
 import { buildDocker } from "./docker.ts";
 import { buildFfmpeg } from "./ffmpeg.ts";
 import { buildGrafana } from "./grafana.ts";
@@ -54,6 +55,8 @@ function runAdapter(
       return buildPodman(project, lock);
     case "docker":
       return buildDocker(project, lock);
+    case "container":
+      return buildContainer(project, lock);
     case "n8n":
       return buildN8n(project, lock);
     case "grafana":

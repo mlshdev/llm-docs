@@ -1,0 +1,4494 @@
+# Apple container 1.3.1: full documentation
+
+Source repository: https://github.com/apple/container
+Release tag: 1.3.1
+Source commit: a9a62e28f6beb88940122a3d7b286f2d5ae8053a
+
+# Document: Building the project
+
+Source path: BUILDING.md
+Canonical source: https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/BUILDING.md
+
+# Building the project
+
+To build the `container` project, you need:
+
+- Mac with Apple silicon
+- macOS 15 minimum, macOS 26 recommended
+- Xcode 26, set as the [active developer directory](https://developer.apple.com/library/archive/technotes/tn2339/_index.html#//apple_ref/doc/uid/DTS40014588-CH1-HOW_DO_I_SELECT_THE_DEFAULT_VERSION_OF_XCODE_TO_USE_FOR_MY_COMMAND_LINE_TOOLS_)
+
+> \[!IMPORTANT]
+> There is a bug in the `vmnet` framework on macOS 26 that causes network creation to fail if the `container` helper applications are located under your `Documents` or `Desktop` directories. If you use `make install`, you can simply run the `container` binary in `/usr/local`. If you prefer to use the binaries that `make all` creates in your project `bin` and `libexec` directories, locate your project elsewhere, such as `~/projects/container`, until this issue is resolved.
+
+## Compile and test
+
+Build `container` and the background services from source, and run basic and integration tests in an isolated application data directory:
+
+```bash
+rm -rf test-data
+make APP_ROOT=test-data all test integration
+```
+
+Copy the binaries to `/usr/local/bin` and `/usr/local/libexec` (requires entering an administrator password):
+
+```bash
+make install
+```
+
+Or to install a release build, with better performance than the debug build:
+
+```bash
+BUILD_CONFIGURATION=release make all test integration
+BUILD_CONFIGURATION=release make install
+```
+
+## Compile protobufs
+
+`container` uses gRPC to communicate to the builder virtual machine that creates images from `Dockerfile`s, and depends on specific versions of `grpc-swift` and `swift-protobuf`. If you make changes to the gRPC APIs in the [container-builder-shim](https://github.com/apple/container-builder-shim) project, install the tools and re-generate the gRPC code in this project using:
+
+```bash
+make protos
+```
+
+## Develop using a local copy of Containerization
+
+To make changes to `container` that require changes to the Containerization project, or vice versa:
+
+1. Clone the [Containerization](https://github.com/apple/containerization) repository such that it sits next to your clone
+   of the `container` repository. Ensure that you [follow containerization instructions](https://github.com/apple/containerization/blob/main/README.md#prepare-to-build-package)
+   to prepare your build environment.
+
+2. In your development shell, go to the `container` project directory.
+
+   ```bash
+   cd container
+   ```
+
+3. If the `container` services are already running, stop them.
+
+   ```bash
+   bin/container system stop
+   ```
+
+4. Reconfigure the Swift project to use your local `containerization` package and update your `Package.resolved` file.
+
+   ```bash
+   /usr/bin/swift package edit --path ../containerization containerization
+   /usr/bin/swift package update containerization
+   ```
+
+   > \[!IMPORTANT]
+   > If you are using Xcode, do **not** run `swift package edit`. Instead, temporarily modify `Package.swift` to replace the versioned `containerization` dependency:
+   >
+   > ```swift
+   > .package(url: "https://github.com/apple/containerization.git", exact: Version(stringLiteral: scVersion)),
+   > ```
+   >
+   > with the local path dependency:
+   >
+   > ```swift
+   > .package(path: "../containerization"),
+   > ```
+   >
+   > **Note:** If you have already run `swift package edit`, whether intentionally or by accident, follow the steps in the next section to restore the normal `containerization` dependency. Otherwise, the modified `Package.swift` file will not work, and the project may fail to build.
+
+5. If you want `container` to use any changes you made in the `vminit` subproject of Containerization, set the init image in your runtime configuration file at `~/.config/container/config.toml`:
+
+   ```toml
+   [vminit]
+   image = "vminit:latest"
+   ```
+
+6. Build `container`.
+
+   ```
+   make clean all
+   ```
+
+7. Restart the `container` services.
+
+   ```
+   bin/container system stop
+   bin/container system start
+   ```
+
+To revert to using the Containerization dependency from your `Package.swift`:
+
+1. If you were using the local init filesystem, remove the `init` override from your `~/.config/container/config.toml` (or delete the `[vminit]` section if no other image settings are present).
+
+2. Use the Swift package manager to restore the normal `containerization` dependency and update your `Package.resolved` file. If you are using Xcode, revert your `Package.swift` change instead of using `swift package unedit`.
+
+   ```bash
+   /usr/bin/swift package unedit containerization
+   /usr/bin/swift package update containerization
+   ```
+
+3. Rebuild `container`.
+
+   ```bash
+   make clean all
+   ```
+
+4. Restart the `container` services.
+
+   ```bash
+   bin/container system stop
+   bin/container system start
+   ```
+
+## Develop using a local copy of container-builder-shim
+
+To test changes that require the `container-builder-shim` project:
+
+1. Clone the [container-builder-shim](https://github.com/apple/container-builder-shim) repository and navigate to its directory.
+
+2. After making the necessary changes, build the custom builder image, set it as the active builder image in `~/.config/container/config.toml`, and remove the existing `buildkit` container so the new image will be used:
+
+```bash
+container build -t builder .
+container rm -f buildkit
+```
+
+Add the following to your `~/.config/container/config.toml`:
+
+```toml
+[build]
+image = "builder:latest"
+```
+
+3. Run the `container` build as usual:
+
+```bash
+container build ...
+```
+
+> \[!IMPORTANT]
+> If your modified builder image is broken, make sure to rebuild and correctly tag the builder image before attempting to build `container-builder-shim` again.
+
+## Debug XPC Helpers
+
+Attach debugger to the XPC helpers using their launchd service labels:
+
+1. Find launchd service labels:
+
+   ```console
+   % container system start
+   % container run -d --name test debian:bookworm sleep infinity
+   test
+   % launchctl list | grep container
+   27068   0       com.apple.container.container-network-vmnet.default
+   27072   0       com.apple.container.container-core-images
+   26980   0       com.apple.container.apiserver
+   27331   0       com.apple.container.container-runtime-linux.test
+   ```
+
+2. Stop container and start again after setting the environment variable `CONTAINER_DEBUG_LAUNCHD_LABEL` to the label of service to attach debugger. Services whose label starts with the `CONTAINER_DEBUG_LAUNCHD_LABEL` will wait the debugger:
+
+   ```console
+   % export CONTAINER_DEBUG_LAUNCHD_LABEL=com.apple.container.container-runtime-linux.test
+   % container system start # Only the service `com.apple.container.container-runtime-linux.test` waits debugger
+   ```
+
+   ```console
+   % export CONTAINER_DEBUG_LAUNCHD_LABEL=com.apple.container.container-runtime-linux
+   % container system start # Every service starting with `com.apple.container.container-runtime-linux` waits debugger
+   ```
+
+3. Run the command to launch the service, and attach debugger:
+
+   ```console
+   % container run -it --name test debian:bookworm
+   ⠧ [6/6] Starting container [0s] # It hangs as the service is waiting for debugger
+   ```
+
+## Pre-commit hook
+
+Run `make pre-commit` to install a pre-commit hook that ensures that your changes have correct formatting and license headers when you run `git commit`.
+
+
+# Document: container
+
+Source path: README.md
+Canonical source: https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/README.md
+
+# container
+
+`container` is a tool that you can use to create and run Linux containers as lightweight virtual machines on your Mac. It's written in Swift, and optimized for Apple silicon.
+
+The tool consumes and produces [OCI-compatible container images](https://github.com/opencontainers/image-spec), so you can pull and run images from any standard container registry. You can push images that you build to those registries as well, and run the images in any other OCI-compatible application.
+
+`container` uses the [Containerization](https://github.com/apple/containerization) Swift package for low-level container, image, and process management.
+
+![introductory movie showing some basic commands](https://raw.githubusercontent.com/apple/container/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/assets/landing-movie.gif)
+
+## Get started
+
+### Requirements
+
+You need a Mac with Apple silicon to run `container`. To build it, see the [BUILDING](https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/BUILDING.md) document.
+
+`container` is supported on macOS 26, since it takes advantage of new features and enhancements to virtualization and networking in this release. We do not support older versions of macOS and the `container` maintainers typically will not address issues that cannot be reproduced on macOS 26.
+
+### Initial install
+
+Download the latest signed installer package for `container` from the [GitHub release page](https://github.com/apple/container/releases).
+
+To install the tool, double-click the package file and follow the instructions. Enter your administrator password when prompted, to give the installer permission to place the installed files under `/usr/local`.
+
+Start the system service with:
+
+```bash
+container system start
+```
+
+### Run your first container
+
+```bash
+container run --rm alpine echo hello
+```
+
+This pulls the `alpine` image, runs it in a lightweight Linux VM, prints `hello`, and
+removes the container when it exits. See the [tutorial](https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/tutorials/start-here.md)
+for a fuller walkthrough that builds and publishes an image of your own.
+
+### Upgrade or downgrade
+
+For both upgrading and downgrading, you can manually download and install the signed installer package by following the steps from [initial install](#initial-install) or use the `update-container.sh` script (installed to `/usr/local/bin`).
+
+If you're upgrading or downgrading, you must stop your existing `container`:
+
+```bash
+container system stop
+```
+
+To upgrade to the latest release, simply run the command below:
+
+```bash
+/usr/local/bin/update-container.sh
+```
+
+To downgrade, you must uninstall your existing `container` (the `-k` flag keeps your user data, while `-d` removes it):
+
+```bash
+/usr/local/bin/uninstall-container.sh -k
+/usr/local/bin/update-container.sh -v 0.3.0
+```
+
+Start the system service with:
+
+```bash
+container system start
+```
+
+### Uninstall
+
+Use the `uninstall-container.sh` script (installed to `/usr/local/bin`) to remove `container` from your system. To remove your user data along with the tool, run:
+
+```bash
+/usr/local/bin/uninstall-container.sh -d
+```
+
+To retain your user data so that it is available should you reinstall later, run:
+
+```bash
+/usr/local/bin/uninstall-container.sh -k
+```
+
+## Next steps
+
+- Take [a guided tour of `container`](https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/tutorials/start-here.md) by building, running, and publishing a simple web server image.
+- Learn how to [use various `container` features](https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/how-to.md).
+- Read a brief description and [technical overview](https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/technical-overview.md) of `container`.
+- Browse the [full command reference](https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/command-reference.md).
+- [Build and run](https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/BUILDING.md) `container` on your own development system.
+- View the project [API documentation](https://apple.github.io/container/documentation/).
+
+## Contributing
+
+Contributions to `container` are welcome and encouraged. Please see our [main contributing guide](https://github.com/apple/containerization/blob/main/CONTRIBUTING.md) for more information.
+
+## Project Status
+
+The container project is currently under active development. Its stability, both for consuming the project as a Swift package and the `container` tool, is only guaranteed within patch versions, such as between 0.1.1 and 0.1.2. Minor version releases may include breaking changes until we reach a 1.0.0 release.
+
+
+# Document: How to file effective bug reports
+
+Source path: docs/bug-report-how-to.md
+Canonical source: https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/bug-report-how-to.md
+
+# How to file effective bug reports
+
+This guide helps you collect the essential information needed to file effective bug reports. Providing complete and accurate information helps maintainers reproduce and fix issues faster.
+
+💡 **Example of a good bug report**: [Issue #1094](https://github.com/apple/container/issues/1094) demonstrates many of the best practices outlined in this guide.
+
+## Steps to reproduce
+
+Clear reproduction steps are essential for maintainers to understand and fix the issue.
+
+### What to include
+
+1. **Starting state**: What was your setup before the issue?
+   - Fresh installation or existing project?
+   - Any specific configuration files?
+   - Previous commands that led to this state?
+   - Has your machine recently been restarted?
+
+2. **Exact commands**: Copy-paste the exact commands you ran
+   - Include all flags and arguments
+   - Use code blocks for clarity
+
+3. **Reproducibility**: Does it happen every time or intermittently?
+   - Always reproducible
+   - Happens sometimes (describe conditions)
+   - Only happened once
+
+### Example
+
+```
+1. Create new container: `container create --name test-app ubuntu:latest`
+2. Start the container: `container start test-app`
+3. Container fails during bootstrap with error:
+   "failed to bootstrap container test-app"
+4. Container exits with code 1
+```
+
+## Problem description
+
+Provide a comprehensive description of your problem. Include what currently happens (the bug), what you expect should happen instead, and any relevant log output.
+
+### What to include
+
+#### Current behavior
+
+- Exact error messages (copy-paste, don't paraphrase)
+- Exit codes or status indicators
+- Performance issues (slowness, hangs, crashes)
+- Unexpected outputs or results
+
+#### Expected behavior
+
+- The correct output or result you anticipated
+- Reference to documentation if available
+- How it works in previous versions (if applicable)
+- Logical expectations based on the command or action
+
+#### Relevant logs
+
+Include any log output that helps illustrate the problem:
+
+- Error messages or stack traces
+- Warning messages related to your issue
+- Output from failed commands
+- Use verbose/debug flags to capture detailed information (see [Log Information](#log-information) section below for how to gather logs)
+
+## Environment information
+
+### Operating system details
+
+Run this command in Terminal to get your macOS version:
+
+```bash
+sw_vers
+```
+
+Example output:
+
+```
+ProductName:		macOS
+ProductVersion:		26.0
+BuildVersion:		12A345
+```
+
+### Xcode version
+
+Get your Xcode version with:
+
+```bash
+xcodebuild -version
+```
+
+Example output:
+
+```
+Xcode 15.0
+Build version 15A240d
+```
+
+### Container CLI version
+
+Check your Container CLI version:
+
+```bash
+container --version
+```
+
+Example output:
+
+```
+container CLI version 0.10.0-27-g9fd15f0 (build: debug, commit: 9fd15f0)
+```
+
+## Log information
+
+### Finding relevant logs
+
+When reporting issues, include logs that show:
+
+- Error messages or stack traces
+- Warning messages related to your issue
+- Output from failed commands
+
+### Getting container logs
+
+For Container CLI issues, run commands with verbose output:
+
+```bash
+container --debug <command>
+```
+
+You can also use the `container logs` command to get logs from running containers. See the [container logs](https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/command-reference.md#container-logs) documentation for full details.
+
+```bash
+container logs <container-id>
+```
+
+### System logs
+
+For system-level container issues, use the built-in system logs command. See the [container system logs](https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/command-reference.md#container-system-logs) documentation for full details.
+
+```bash
+container system logs
+```
+
+## Common information gaps
+
+### Missing context
+
+- What were you trying to accomplish?
+- What changed recently in your setup?
+- Does the issue occur in a fresh installation from main?
+
+### Incomplete error information
+
+- Full error messages (not just the last line)
+- Stack traces where relevant
+- Related warning messages
+
+### Environment variations
+
+- Does it work with a new instance of the container?
+- Does it work with a fresh install of the Container package?
+- Have your network settings changed?
+- Have your Xcode or macOS versions changed?
+
+
+# Document: Container CLI Command Reference
+
+Source path: docs/command-reference.md
+Canonical source: https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/command-reference.md
+
+# Container CLI Command Reference
+
+> \[!IMPORTANT]
+> This file contains documentation for the CURRENT BRANCH. To find documentation for official releases, find the target release on the [Release Page](https://github.com/apple/container/releases) and click the tag corresponding to your release version.
+>
+> Example: [release 0.4.1 tag](https://github.com/apple/container/tree/0.4.1)
+
+Command availability may vary depending on your macOS version.
+
+## Core Commands
+
+### `container run`
+
+Runs a container from an image. If a command is provided, it will execute inside the container; otherwise the image's default command runs. By default the container runs in the foreground and stdin remains closed unless `-i`/`--interactive` is specified.
+
+**Usage**
+
+```bash
+container run [<options>] <image> [<arguments> ...]
+```
+
+**Arguments**
+
+- `<image>`: Image name
+- `<arguments>`: Container init process arguments
+
+**Process Options**
+
+- `-e, --env <env>`: Set environment variables (format: key=value, or just key to inherit from host)
+- `--env-file <env-file>`: Read in a file of environment variables (key=value format, ignores # comments and blank lines)
+- `--gid <gid>`: Set the group ID for the process
+- `-i, --interactive`: Keep the standard input open even if not attached
+- `-t, --tty`: Open a TTY with the process
+- `-u, --user <user>`: Set the user for the process (format: name|uid\[:gid])
+- `--uid <uid>`: Set the user ID for the process
+- `--ulimit <limit>`: Set resource limits (format: `<type>=<soft>[:<hard>]`)
+- `-w, --workdir, --cwd <dir>`: Set the initial working directory inside the container
+
+**Resource Options**
+
+- `-c, --cpus <cpus>`: Number of CPUs to allocate to the container
+- `-m, --memory <memory>`: Amount of memory (1MiByte granularity), with optional K, M, G, T, or P suffix
+
+**Management Options**
+
+- `-a, --arch <arch>`: Set arch if image can target multiple architectures (default: arm64)
+- `--cap-add <cap>`: Add a Linux capability (e.g. `CAP_NET_RAW`, `NET_RAW`, or `ALL`)
+- `--cap-drop <cap>`: Drop a Linux capability (e.g. `CAP_NET_RAW`, `NET_RAW`, or `ALL`)
+- `--cidfile <cidfile>`: Write the container ID to the path provided
+- `-d, --detach`: Run the container and detach from the process
+- `--dns <ip>`: DNS nameserver IP address
+- `--dns-domain <domain>`: Default DNS domain
+- `--dns-option <option>`: DNS options
+- `--dns-search <domain>`: DNS search domains
+- `--entrypoint <cmd>`: Override the entrypoint of the image
+- `--init`: Run an init process inside the container that forwards signals and reaps processes
+- `--init-image <image>`: Use a custom init image instead of the default. This allows customizing boot-time behavior before the OCI container starts, such as running VM-level daemons, configuring eBPF filters, or debugging the init process.
+- `-k, --kernel <path>`: Set a custom kernel path
+- `-l, --label <label>`: Add a key=value label to the container
+- `--masked-path <path>`: **Experimental.** Hide a path inside the container, in addition to the runtime defaults (or `NONE` to clear prior values and the defaults)
+- `--mount <mount>`: Add a mount to the container (format: type=<>,source=<>,target=<>,readonly)
+- `--name <name>`: Use the specified name as the container ID
+- `--network <network>`: Attach the container to a network (format: `<name>[,mac=XX:XX:XX:XX:XX:XX][,mtu=VALUE]`)
+- `--no-dns`: Do not configure DNS in the container
+- `--os <os>`: Set OS if image can target multiple operating systems (default: linux)
+- `-p, --publish <spec>`: Publish a port from container to host (format: \[host-ip:]host-port:container-port\[/protocol])
+- `--platform <platform>`: Platform for the image if it's multi-platform. This takes precedence over --os and --arch
+- `--publish-socket <spec>`: Publish a socket from container to host (format: host\_path:container\_path)
+- `--read-only`: Mount the container's root filesystem as read-only
+- `--read-only-path <path>`: **Experimental.** Mark a path inside the container read-only, in addition to the runtime defaults (or `NONE` to clear prior values and the defaults)
+- `--rm, --remove`: Remove the container after it stops
+- `--rosetta`: Enable Rosetta in the container
+- `--runtime`: Set the runtime handler for the container (default: container-runtime-linux)
+- `--ssh`: Forward SSH agent socket to container
+- `--shm-size <shm-size>`: Size of `/dev/shm` (e.g. 64M, 1G)
+- `--tmpfs <tmpfs>`: Add a tmpfs mount to the container at the given path
+- `-v, --volume <volume>`: Bind mount a volume into the container
+- `--virtualization`: Expose virtualization capabilities to the container (requires host and guest support)
+
+**Registry Options**
+
+- `--scheme <scheme>`: Scheme to use when connecting to the container registry. One of (http, https, auto) (default: auto)
+
+  - **Behavior of `auto`**
+
+    When `auto` is selected, the target registry is considered **internal/local** if the registry host matches any of these criteria:
+
+    - The host is a loopback address (e.g., `localhost`, `127.*`)
+    - The host is within the `RFC1918` private IP ranges:
+      - `10.*.*.*`
+      - `192.168.*.*`
+      - `172.16.*.*` through `172.31.*.*`
+    - The host ends with the machine's default container DNS domain (as defined in `DNSConfig.defaultDomain`, located [here](https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/Sources/ContainerPersistence/ContainerSystemConfig.swift))
+
+    For internal/local registries, the client uses **HTTP**. Otherwise, it uses **HTTPS**.
+
+**Progress Options**
+
+- `--progress <type>`: Progress type (format: auto|none|ansi|plain|color) (default: auto)
+
+**Image Fetch Options**
+
+- `--max-concurrent-downloads <max-concurrent-downloads>`: Maximum number of concurrent downloads (default: 3)
+
+**Examples**
+
+```bash
+# run a container and attach an interactive shell
+container run -it ubuntu:latest /bin/bash
+
+# run a background web server
+container run -d --name web -p 8080:80 nginx:latest
+
+# set environment variables and limit resources
+container run -e NODE_ENV=production --cpus 2 --memory 1G node:18
+
+# run a container with a specific MAC address
+container run --network default,mac=02:42:ac:11:00:02 ubuntu:latest
+
+# run a container with an init process to reap zombies and forward signals
+container run --init ubuntu:latest my-app
+
+# run a container with a custom init image for boot customization
+container run --init-image local/custom-init:latest ubuntu:latest
+```
+
+### `container build`
+
+Builds an OCI image from a local build context. It reads a Dockerfile (default `Dockerfile`) or Containerfile and produces an image tagged with `-t` option. The build runs in isolation using BuildKit, and resource limits may be set for the build process itself.
+
+When no `-f/--file` is specified, the build command will look for `Dockerfile` first, then fall back to `Containerfile` if `Dockerfile` is not found.
+
+**Usage**
+
+```bash
+container build [<options>] [<context-dir>]
+```
+
+**Arguments**
+
+- `<context-dir>`: Build directory (default: .)
+
+**Options**
+
+- `-a, --arch <value>`: Add the architecture type to the build
+- `--build-arg <key=val>`: Set build-time variables
+- `-c, --cpus <cpus>`: Number of CPUs to allocate to the builder container (default: 2)
+- `--dns <ip>`: DNS nameserver IP address
+- `--dns-domain <domain>`: Default DNS domain
+- `--dns-option <option>`: DNS options
+- `--dns-search <domain>`: DNS search domains
+- `-f, --file <path>`: Path to Dockerfile
+- `-l, --label <key=val>`: Set a label
+- `-m, --memory <memory>`: Amount of builder container memory (1MiByte granularity), with optional K, M, G, T, or P suffix (default: 2048MB)
+- `--no-cache`: Do not use cache
+- `-o, --output <value>`: Output configuration for the build (format: type=\<oci|tar|local>\[,dest=]) (default: type=oci)
+- `--os <value>`: Add the OS type to the build
+- `--platform <platform>`: Add the platform to the build (format: os/arch\[/variant], takes precedence over --os and --arch)
+- `--progress <type>`: Progress type (format: auto|plain|tty) (default: auto)
+- `--pull`: Pull latest image
+- `-q, --quiet`: Suppress build output
+- `--secret <id=key,...>`: Set build-time secrets (format: id=<key>\[,env=\<ENV\_VAR>|,src=\<local/path>])
+- `--ssh <default>`: Forward SSH agent authentication to the build. Only `--ssh default` is currently supported.
+- `-t, --tag <name>`: Name for the built image (can be specified multiple times)
+- `--target <stage>`: Set the target build stage
+- `--vsock-port <port>`: Builder shim vsock port (default: 8088)
+
+**Examples**
+
+```bash
+# build an image and tag it as my-app:latest
+container build -t my-app:latest .
+
+# use a custom Dockerfile
+container build -f docker/Dockerfile.prod -t my-app:prod .
+
+# pass build args
+container build --build-arg NODE_VERSION=18 -t my-app .
+
+# build the production stage only and disable cache
+container build --target production --no-cache -t my-app:prod .
+
+# build with multiple tags
+container build -t my-app:latest -t my-app:v1.0.0 -t my-app:stable .
+```
+
+## Container Management
+
+### `container create`
+
+Creates a container from an image without starting it. This command accepts most of the same process/resource/management flags as `container run`, but leaves the container stopped after creation.
+
+**Usage**
+
+```bash
+container create [<options>] <image> [<arguments> ...]
+```
+
+**Arguments**
+
+- `<image>`: Image name
+- `<arguments>`: Container init process arguments
+
+**Process Options**
+
+- `-e, --env <env>`: Set environment variables (format: key=value, or just key to inherit from host)
+- `--env-file <env-file>`: Read in a file of environment variables (key=value format, ignores # comments and blank lines)
+- `--gid <gid>`: Set the group ID for the process
+- `-i, --interactive`: Keep the standard input open even if not attached
+- `-t, --tty`: Open a TTY with the process
+- `-u, --user <user>`: Set the user for the process (format: name|uid\[:gid])
+- `--uid <uid>`: Set the user ID for the process
+- `--ulimit <limit>`: Set resource limits (format: `<type>=<soft>[:<hard>]`)
+- `-w, --workdir, --cwd <dir>`: Set the initial working directory inside the container
+
+**Resource Options**
+
+- `-c, --cpus <cpus>`: Number of CPUs to allocate to the container
+- `-m, --memory <memory>`: Amount of memory (1MiByte granularity), with optional K, M, G, T, or P suffix
+
+**Management Options**
+
+- `-a, --arch <arch>`: Set arch if image can target multiple architectures (default: arm64)
+- `--cap-add <cap>`: Add a Linux capability (e.g. `CAP_NET_RAW`, `NET_RAW`, or `ALL`)
+- `--cap-drop <cap>`: Drop a Linux capability (e.g. `CAP_NET_RAW`, `NET_RAW`, or `ALL`)
+- `--cidfile <cidfile>`: Write the container ID to the path provided
+- `-d, --detach`: Run the container and detach from the process
+- `--dns <ip>`: DNS nameserver IP address
+- `--dns-domain <domain>`: Default DNS domain
+- `--dns-option <option>`: DNS options
+- `--dns-search <domain>`: DNS search domains
+- `--entrypoint <cmd>`: Override the entrypoint of the image
+- `--init`: Run an init process inside the container that forwards signals and reaps processes
+- `--init-image <image>`: Use a custom init image instead of the default. This allows customizing boot-time behavior before the OCI container starts, such as running VM-level daemons, configuring eBPF filters, or debugging the init process.
+- `-k, --kernel <path>`: Set a custom kernel path
+- `-l, --label <label>`: Add a key=value label to the container
+- `--masked-path <path>`: **Experimental.** Hide a path inside the container, in addition to the runtime defaults (or `NONE` to clear prior values and the defaults)
+- `--mount <mount>`: Add a mount to the container (format: type=<>,source=<>,target=<>,readonly)
+- `--name <name>`: Use the specified name as the container ID
+- `--network <network>`: Attach the container to a network (format: `<name>[,mac=XX:XX:XX:XX:XX:XX][,mtu=VALUE]`)
+- `--no-dns`: Do not configure DNS in the container
+- `--os <os>`: Set OS if image can target multiple operating systems (default: linux)
+- `-p, --publish <spec>`: Publish a port from container to host (format: \[host-ip:]host-port:container-port\[/protocol])
+- `--platform <platform>`: Platform for the image if it's multi-platform. This takes precedence over --os and --arch
+- `--publish-socket <spec>`: Publish a socket from container to host (format: host\_path:container\_path)
+- `--read-only`: Mount the container's root filesystem as read-only
+- `--read-only-path <path>`: **Experimental.** Mark a path inside the container read-only, in addition to the runtime defaults (or `NONE` to clear prior values and the defaults)
+- `--rm, --remove`: Remove the container after it stops
+- `--rosetta`: Enable Rosetta in the container
+- `--runtime`: Set the runtime handler for the container (default: container-runtime-linux)
+- `--ssh`: Forward SSH agent socket to container
+- `--shm-size <shm-size>`: Size of `/dev/shm` (e.g. 64M, 1G)
+- `--tmpfs <tmpfs>`: Add a tmpfs mount to the container at the given path
+- `-v, --volume <volume>`: Bind mount a volume into the container
+- `--virtualization`: Expose virtualization capabilities to the container (requires host and guest support)
+
+**Registry Options**
+
+- `--scheme <scheme>`: Scheme to use when connecting to the container registry. One of (http, https, auto) (default: auto)
+
+**Image Fetch Options**
+
+- `--max-concurrent-downloads <max-concurrent-downloads>`: Maximum number of concurrent downloads (default: 3)
+
+### `container start`
+
+Starts a stopped container. You can attach to the container's output streams and optionally keep STDIN open.
+
+**Usage**
+
+```bash
+container start [--attach] [--interactive] [--debug] <container-id>
+```
+
+**Arguments**
+
+- `<container-id>`: Container ID
+
+**Options**
+
+- `-a, --attach`: Attach stdout/stderr
+- `-i, --interactive`: Attach stdin
+
+### `container stop`
+
+Stops running containers gracefully by sending a signal. A timeout can be specified before a SIGKILL is issued. If no containers are specified, nothing is stopped unless `--all` is used.
+
+**Usage**
+
+```bash
+container stop [--all] [--signal <signal>] [--time <time>] [--debug] [<container-ids> ...]
+```
+
+**Arguments**
+
+- `<container-ids>`: Container IDs
+
+**Options**
+
+- `-a, --all`: Stop all running containers
+- `-s, --signal <signal>`: Signal to send to the containers (default: SIGTERM)
+- `-t, --time <time>`: Seconds to wait before killing the containers (default: 5)
+
+### `container kill`
+
+Immediately kills running containers by sending a signal (defaults to `KILL`). Use with caution: it does not allow for graceful shutdown.
+
+**Usage**
+
+```bash
+container kill [--all] [--signal <signal>] [--debug] [<container-ids> ...]
+```
+
+**Arguments**
+
+- `<container-ids>`: Container IDs
+
+**Options**
+
+- `-a, --all`: Kill or signal all running containers
+- `-s, --signal <signal>`: Signal to send to the container(s) (default: KILL)
+
+### `container delete (rm)`
+
+Deletes one or more containers. If the container is running, you may force deletion with `--force`. Without a container ID, nothing happens unless `--all` is supplied.
+
+**Usage**
+
+```bash
+container delete [--all] [--force] [--debug] [<container-ids> ...]
+```
+
+**Arguments**
+
+- `<container-ids>`: Container IDs
+
+**Options**
+
+- `-a, --all`: Delete all containers
+- `-f, --force`: Delete containers even if they are running
+
+### `container list (ls)`
+
+Lists containers. By default only running containers are shown. Output can be formatted as a table, JSON, YAML, or TOML.
+
+**Usage**
+
+```bash
+container list [--all] [--format <format>] [--quiet] [--debug]
+```
+
+**Options**
+
+- `-a, --all`: Include containers that are not running
+- `--format <format>`: Format of the output (values: json, table, yaml, toml; default: table)
+- `-q, --quiet`: Only output the container ID
+
+### `container exec`
+
+Executes a command inside a running container. It uses the same process flags as `container run` to control environment, user, and TTY settings.
+
+**Usage**
+
+```bash
+container exec [--detach] [--env <env> ...] [--env-file <env-file> ...] [--gid <gid>] [--interactive] [--tty] [--user <user>] [--uid <uid>] [--workdir <dir>] [--debug] <container-id> <arguments> ...
+```
+
+**Arguments**
+
+- `<container-id>`: Container ID
+- `<arguments>`: New process arguments
+
+**Options**
+
+- `-d, --detach`: Run the process and detach from it
+
+**Process Options**
+
+- `-e, --env <env>`: Set environment variables (format: key=value)
+- `--env-file <env-file>`: Read in a file of environment variables (key=value format, ignores # comments and blank lines)
+- `--gid <gid>`: Set the group ID for the process
+- `-i, --interactive`: Keep the standard input open even if not attached
+- `-t, --tty`: Open a TTY with the process
+- `-u, --user <user>`: Set the user for the process (format: name|uid\[:gid])
+- `--uid <uid>`: Set the user ID for the process
+- `-w, --workdir, --cwd <dir>`: Set the initial working directory inside the container
+
+### `container export`
+
+Exports a container's filesystem as a tar archive. For running containers, export automatically takes a runtime snapshot to preserve consistency. If no output file is specified, the tar stream is written to stdout.
+
+**Usage**
+
+```bash
+container export [-o <output>] [--debug] <container-id>
+```
+
+**Arguments**
+
+- `<container-id>`: Container ID
+
+**Options**
+
+- `-o, --output <output>`: Pathname for the saved container filesystem (defaults to stdout)
+
+**Examples**
+
+```bash
+# export a container's filesystem to a file
+container stop mycontainer
+container export -o mycontainer.tar mycontainer
+
+# export to stdout and pipe to another tool
+container export mycontainer > mycontainer.tar
+```
+
+### `container logs`
+
+Fetches logs from a container. You can follow the logs (`-f`/`--follow`), restrict the number of lines shown, or view boot logs.
+
+**Usage**
+
+```bash
+container logs [--boot] [--follow] [-n <n>] [--debug] <container-id>
+```
+
+**Arguments**
+
+- `<container-id>`: Container ID
+
+**Options**
+
+- `--boot`: Display the boot log for the container instead of stdio
+- `-f, --follow`: Follow log output
+- `-n <n>`: Number of lines to show from the end of the logs. If not provided this will print all of the logs
+
+### `container inspect`
+
+Displays detailed container information in JSON. Pass one or more container IDs to inspect multiple containers.
+
+**Usage**
+
+```bash
+container inspect [--debug] <container-ids> ...
+```
+
+**Arguments**
+
+- `<container-ids>`: Container IDs
+
+**Options**
+
+No options.
+
+### `container stats`
+
+Displays real-time resource usage statistics for containers. Shows CPU percentage, memory usage, network I/O, block I/O, and process count. By default, continuously updates statistics in an interactive display (like `top`). Use `--no-stream` for a single snapshot.
+
+**Usage**
+
+```bash
+container stats [--format <format>] [--no-stream] [--debug] [<container-ids> ...]
+```
+
+**Arguments**
+
+- `<container-ids>`: Container IDs or names (optional, shows all running containers if not specified)
+
+**Options**
+
+- `--format <format>`: Format of the output (values: json, table, yaml, toml; default: table)
+- `--no-stream`: Disable streaming stats and only pull the first result
+
+**Examples**
+
+```bash
+# show stats for all running containers (interactive)
+container stats
+
+# show stats for specific containers
+container stats web db cache
+
+# get a single snapshot of stats (non-interactive)
+container stats --no-stream web
+
+# output stats as JSON
+container stats --format json --no-stream web
+```
+
+### `container copy (cp)`
+
+Copies files between a container and the local filesystem. The container must be running. One of the source or destination must be a container reference in the form `container_id:path`.
+
+**Usage**
+
+```bash
+container copy [--debug] <source> <destination>
+```
+
+**Arguments**
+
+- `<source>`: Source path (local path or `container_id:path`)
+- `<destination>`: Destination path (local path or `container_id:path`)
+
+**Path Format**
+
+- Local path: `/path/to/file` or `relative/path`
+- Container path: `container_id:/path/in/container`
+
+**Examples**
+
+```bash
+# copy a file from host to container
+container cp ./config.json mycontainer:/etc/app/
+
+# copy a file from container to host
+container cp mycontainer:/var/log/app.log ./logs/
+
+# copy using the full command name
+container copy ./data.txt mycontainer:/tmp/
+```
+
+### `container prune`
+
+Removes stopped containers to reclaim disk space. The command outputs the amount of space freed after deletion.
+
+**Usage**
+
+```bash
+container prune [--debug]
+```
+
+**Options**
+
+No options.
+
+## Image Management
+
+### `container image list (ls)`
+
+Lists local images. Verbose output provides additional details such as image ID, creation time and full size; formatted output provides the same data in machine-readable form.
+
+**Usage**
+
+```bash
+container image list [--format <format>] [--quiet] [--verbose] [--debug]
+```
+
+**Options**
+
+- `--format <format>`: Format of the output (values: json, table, yaml, toml; default: table)
+- `-q, --quiet`: Only output the image name
+- `-v, --verbose`: Verbose output
+
+### `container image pull`
+
+Pulls an image from a registry. Supports specifying a platform and controlling progress display.
+
+**Usage**
+
+```bash
+container image pull [--scheme <scheme>] [--progress <type>] [--max-concurrent-downloads <max-concurrent-downloads>] [--arch <arch>] [--os <os>] [--platform <platform>] [--debug] <reference>
+```
+
+**Arguments**
+
+- `<reference>`: Image reference to pull
+
+**Options**
+
+- `--scheme <scheme>`: Scheme to use when connecting to the container registry. One of (http, https, auto) (default: auto)
+- `--progress <type>`: Progress type (format: auto|none|ansi|plain|color) (default: auto)
+- `--max-concurrent-downloads <max-concurrent-downloads>`: Maximum number of concurrent downloads (default: 3)
+- `-a, --arch <arch>`: Limit the pull to the specified architecture
+- `--os <os>`: Limit the pull to the specified OS
+- `--platform <platform>`: Limit the pull to the specified platform (format: os/arch\[/variant], takes precedence over --os and --arch)
+
+### `container image push`
+
+Pushes an image to a registry. The flags mirror those for `image pull` with the addition of specifying a platform for multi-platform images.
+
+**Usage**
+
+```bash
+container image push [--scheme <scheme>] [--progress <type>] [--arch <arch>] [--os <os>] [--platform <platform>] [--debug] <reference>
+```
+
+**Arguments**
+
+- `<reference>`: Image reference to push
+
+**Options**
+
+- `--scheme <scheme>`: Scheme to use when connecting to the container registry. One of (http, https, auto) (default: auto)
+- `--progress <type>`: Progress type (format: auto|none|ansi|plain|color) (default: auto)
+- `-a, --arch <arch>`: Limit the push to the specified architecture
+- `--os <os>`: Limit the push to the specified OS
+- `--platform <platform>`: Limit the push to the specified platform (format: os/arch\[/variant], takes precedence over --os and --arch)
+
+### `container image save`
+
+Saves an image to a tar archive on disk. Useful for exporting images for offline transport.
+
+**Usage**
+
+```bash
+container image save [--arch <arch>] [--os <os>] --output <output> [--platform <platform>] [--debug] <references> ...
+```
+
+**Arguments**
+
+- `<references>`: Image references to save
+
+**Options**
+
+- `-a, --arch <arch>`: Architecture for the saved image
+- `--os <os>`: OS for the saved image
+- `-o, --output <output>`: Pathname for the saved image
+- `--platform <platform>`: Platform for the saved image (format: os/arch\[/variant], takes precedence over --os and --arch)
+
+### `container image load`
+
+Loads images from a tar archive created by `image save`. Specify the tar file with `--input`.
+
+**Usage**
+
+```bash
+container image load --input <input> [--force] [--debug]
+```
+
+**Options**
+
+- `-i, --input <input>`: Path to the image tar archive
+- `-f, --force`: Load images even if invalid member files are detected
+
+### `container image tag`
+
+Applies a new tag to an existing image. The original image reference remains unchanged.
+
+**Usage**
+
+```bash
+container image tag <source> <target> [--debug]
+```
+
+**Arguments**
+
+- `<source>`: The existing image reference (format: image-name\[:tag])
+- `<target>`: The new image reference
+
+**Options**
+
+No options.
+
+### `container image delete (rm)`
+
+Deletes one or more images. If no images are provided, `--all` can be used to delete all images. Images currently referenced by running containers cannot be deleted without first removing those containers.
+
+**Usage**
+
+```bash
+container image delete [--all] [--force] [--debug] [<images> ...]
+```
+
+**Arguments**
+
+- `<images>`: Image names or IDs
+
+**Options**
+
+- `-a, --all`: Delete all images
+- `-f, --force`: Ignore errors for images that are not found
+
+### `container image prune`
+
+Removes unused images to reclaim disk space. By default, only removes dangling images (images with no tags). Use `-a` to remove all images not referenced by any container.
+
+**Usage**
+
+```bash
+container image prune [--all] [--debug]
+```
+
+**Options**
+
+- `-a, --all`: Remove all unused images, not just dangling ones
+
+### `container image inspect`
+
+Shows detailed information for one or more images in JSON format. Accepts image names or IDs.
+
+**Usage**
+
+```bash
+container image inspect [--debug] <images> ...
+```
+
+**Arguments**
+
+- `<images>`: Images to inspect
+
+**Options**
+
+No options.
+
+## Builder Management
+
+The builder commands manage the BuildKit-based builder used for image builds.
+
+### `container builder start`
+
+Starts the BuildKit builder container. CPU and memory limits can be set for the builder.
+
+**Usage**
+
+```bash
+container builder start [--cpus <cpus>] [--memory <memory>] [--dns <ip> ...] [--dns-domain <domain>] [--dns-option <option> ...] [--dns-search <domain> ...] [--debug]
+```
+
+**Options**
+
+- `-c, --cpus <cpus>`: Number of CPUs to allocate to the builder container (default: 2)
+- `-m, --memory <memory>`: Amount of builder container memory (1MiByte granularity), with optional K, M, G, T, or P suffix (default: 2048MB)
+- `--dns <ip>`: DNS nameserver IP address
+- `--dns-domain <domain>`: Default DNS domain
+- `--dns-option <option>`: DNS options
+- `--dns-search <domain>`: DNS search domains
+
+### `container builder status`
+
+Shows the current status of the BuildKit builder. Without flags a human-readable table is displayed; formatted output is available for scripting.
+
+**Usage**
+
+```bash
+container builder status [--format <format>] [--quiet] [--debug]
+```
+
+**Options**
+
+- `--format <format>`: Format of the output (values: json, table, yaml, toml; default: table)
+- `-q, --quiet`: Only output the container ID
+
+### `container builder stop`
+
+Stops the BuildKit builder container.
+
+**Usage**
+
+```bash
+container builder stop [--debug]
+```
+
+**Options**
+
+No options.
+
+### `container builder delete (rm)`
+
+Deletes the BuildKit builder container. It can optionally force deletion if the builder is still running.
+
+**Usage**
+
+```bash
+container builder delete [--force] [--debug]
+```
+
+**Options**
+
+- `-f, --force`: Delete the builder even if it is running
+
+## Network Management (macOS 26+)
+
+The network commands are available on macOS 26 and later and allow creation and management of user-defined container networks.
+
+### `container network create`
+
+Creates a new network with the given name.
+
+**Usage**
+
+```bash
+container network create [--internal] [--label <label> ...] [--option <option> ...] [--plugin <plugin>] [--subnet <subnet>] [--subnet-v6 <subnet-v6>] [--debug] <name>
+```
+
+**Arguments**
+
+- `<name>`: Network name
+
+**Options**
+
+- `--internal`: Restrict to host-only network
+- `--label <label>`: Set metadata for a network
+- `--option <option>`: Set a plugin-specific option (key=value); may be repeated
+- `--plugin <plugin>`: Network plugin to use (default: `container-network-vmnet`)
+- `--subnet <subnet>`: Set the IPv4 subnet for a network (CIDR format, e.g., 192.168.100.0/24)
+- `--subnet-v6 <subnet-v6>`: Set the IPv6 prefix for a network (CIDR format, e.g., fd00:1234::/64)
+
+### `container network delete (rm)`
+
+Deletes one or more networks. When deleting multiple networks, pass them as separate arguments. To delete all networks, use `--all`.
+
+**Usage**
+
+```bash
+container network delete [--all] [--debug] [<network-names> ...]
+```
+
+**Arguments**
+
+- `<network-names>`: Network names
+
+**Options**
+
+- `-a, --all`: Delete all networks
+
+### `container network prune`
+
+Removes networks not connected to any containers. However, default and system networks are preserved.
+
+**Usage**
+
+```bash
+container network prune [--debug]
+```
+
+**Options**
+
+No options.
+
+### `container network list (ls)`
+
+Lists user-defined networks.
+
+**Usage**
+
+```bash
+container network list [--format <format>] [--quiet] [--debug]
+```
+
+**Options**
+
+- `--format <format>`: Format of the output (values: json, table, yaml, toml; default: table)
+- `-q, --quiet`: Only output the network name
+
+### `container network inspect`
+
+Shows detailed information about one or more networks.
+
+**Usage**
+
+```bash
+container network inspect <networks> ... [--debug]
+```
+
+**Arguments**
+
+- `<networks>`: Networks to inspect
+
+**Options**
+
+No options.
+
+## Volume Management
+
+Manage persistent volumes for containers. Volumes can be explicitly created with `volume create` or implicitly created when referenced in container commands (e.g., `-v myvolume:/path` or `-v /path` for anonymous volumes).
+
+### `container volume create`
+
+Creates a new named volume with an optional size and driver-specific options.
+
+**Usage**
+
+```bash
+container volume create [--label <label> ...] [--opt <opt> ...] [-s <s>] [--debug] <name>
+```
+
+**Arguments**
+
+- `<name>`: Volume name
+
+**Options**
+
+- `--label <label>`: Set metadata for a volume
+- `--opt <opt>`: Set driver specific options
+- `-s <s>`: Size of the volume in bytes, with optional K, M, G, T, or P suffix. Takes precedence over `--opt size=` if both are specified.
+
+**Driver Options**
+
+Driver options are passed with `--opt key=value`. The following options are supported for the default `local` driver:
+
+- `size=<value>`: Volume size with optional unit suffix (K, M, G, T, P). Minimum 1 MiB. Equivalent to `-s`; if `-s` is also specified, `-s` takes precedence.
+- `journal=<mode>[:<size>]`: Configure ext4 journaling on the volume. `<mode>` must be one of:
+
+  - `ordered` — journals metadata only; data is written to disk before its metadata is committed (default kernel behavior, good balance of safety and performance)
+  - `writeback` — journals metadata only; data ordering relative to metadata commits is not guaranteed (fastest, least safe)
+  - `journal` — journals both metadata and data (safest, highest write amplification)
+
+  An optional `:<size>` suffix sets the journal size (same unit suffixes as `size`). If omitted, the kernel selects a default journal size.
+
+**Examples**
+
+```bash
+# create a volume with ordered journaling
+container volume create --opt journal=ordered myvolume
+
+# create a volume with writeback journaling and a 64 MiB journal
+container volume create --opt journal=writeback:64m myvolume
+
+# create a volume with full data journaling and an explicit volume size
+container volume create --opt journal=journal --opt size=10g myvolume
+```
+
+**Anonymous Volumes**
+
+Using `-v /path` or `--mount type=volume,dst=/path` without a source auto-creates a
+named volume for you, tagged with the `com.apple.container.resource.anonymous` label.
+See [Mounts and volumes](https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/volumes.md#anonymous-volumes) for how to find and clean
+these up.
+
+### `container volume delete (rm)`
+
+Deletes one or more volumes by name. Volumes that are currently in use by containers (running or stopped) cannot be deleted.
+
+**Usage**
+
+```bash
+container volume delete [--all] [--debug] [<names> ...]
+```
+
+**Arguments**
+
+- `<names>`: Volume names
+
+**Options**
+
+- `-a, --all`: Delete all volumes
+
+**Examples**
+
+```bash
+# delete a specific volume
+container volume delete myvolume
+
+# delete multiple volumes
+container volume delete vol1 vol2 vol3
+
+# delete all unused volumes
+container volume delete --all
+```
+
+### `container volume prune`
+
+Removes all volumes that have no container references. This includes volumes that are not attached to any running or stopped containers. The command reports the actual disk space reclaimed after deletion.
+
+**Usage**
+
+```bash
+container volume prune [--debug]
+```
+
+**Options**
+
+No options.
+
+### `container volume list (ls)`
+
+Lists volumes.
+
+**Usage**
+
+```bash
+container volume list [--format <format>] [--quiet] [--debug]
+```
+
+**Options**
+
+- `--format <format>`: Format of the output (values: json, table, yaml, toml; default: table)
+- `-q, --quiet`: Only output the volume name
+
+### `container volume inspect`
+
+Displays detailed information for one or more volumes in JSON.
+
+**Usage**
+
+```bash
+container volume inspect [--debug] <names> ...
+```
+
+**Arguments**
+
+- `<names>`: Volume names
+
+**Options**
+
+No options.
+
+## Registry Management
+
+The registry commands manage authentication and defaults for container registries.
+
+### `container registry login`
+
+Authenticates with a registry. You can provide credentials interactively or with flags. The login is stored for reuse by subsequent commands.
+
+**Usage**
+
+```bash
+container registry login [--scheme <scheme>] [--password-stdin] [--username <username>] [--debug] <server>
+```
+
+**Arguments**
+
+- `<server>`: Registry server name
+
+**Options**
+
+- `--scheme <scheme>`: Scheme to use when connecting to the container registry. One of (http, https, auto) (default: auto)
+- `--password-stdin`: Take the password from stdin
+- `-u, --username <username>`: Registry user name
+
+### `container registry logout`
+
+Logs out of a registry, removing stored credentials.
+
+**Usage**
+
+```bash
+container registry logout [--debug] <registry>
+```
+
+**Arguments**
+
+- `<registry>`: Registry server name
+
+**Options**
+
+No options.
+
+### `container registry list`
+
+List image registry logins.
+
+**Usage**
+
+```bash
+container registry list [--format <format>] [--quiet] [--debug]
+```
+
+**Options**
+
+- `--format <format>`: Format of the output (values: json, table, yaml, toml; default: table)
+- `-q, --quiet`: Only output the registry hostname
+
+## Container Machine Management
+
+`m` is an alias for `container machine`.
+
+### `container machine create`
+
+Creates a container machine from an image and boots it. Use `--cpus`, `--memory`, and `--home-mount` to configure it, or `--no-boot` to create it without booting.
+
+**Usage**
+
+```bash
+container machine create [<options>] <image>
+```
+
+**Arguments**
+
+- `<image>`: Container image reference (e.g., alpine:3.22)
+
+**Options**
+
+- `-n, --name <name>`: Name for the container machine
+- `--set-default`: Set this container machine as the default
+- `--no-boot`: Create the container machine without booting it
+- `--cpus <cpus>`: Number of virtual CPUs
+- `--memory <memory>`: Memory allocation (e.g., 2G, 8G). Default: half of system memory
+- `--home-mount <home-mount>`: User's home directory mount option (ro, rw, none). Default: rw
+- `--virtualization`: Enable nested virtualization. Requires Apple Silicon M3+ and macOS 15+ and kernel with CONFIG\_KVM=y.
+- `--kernel <path>`: Path to a custom kernel binary (e.g. `vmlinux`).
+
+**Management Options**
+
+- `-a, --arch <arch>`: Set arch if image can target multiple architectures (default: host architecture)
+- `--os <os>`: Set OS if image can target multiple operating systems (default: linux)
+- `--platform <platform>`: Platform for the image if it's multi-platform. This takes precedence over --os and --arch
+
+**Registry Options**
+
+- `--scheme <scheme>`: Scheme to use when connecting to the container registry. One of (http, https, auto) (default: auto)
+
+**Progress Options**
+
+- `--progress <type>`: Progress type (format: auto|none|ansi|plain|color) (default: auto)
+
+**Image Fetch Options**
+
+- `--max-concurrent-downloads <max-concurrent-downloads>`: Maximum number of concurrent downloads (default: 3)
+
+**Examples**
+
+```bash
+# create and boot a container machine named my-machine
+container machine create alpine:3.22 --name my-machine
+
+# create a container machine with custom resources and set it as the default
+container machine create --cpus 4 --memory 8G --set-default alpine:3.22
+
+# create a container machine without booting it
+container machine create --no-boot alpine:3.22
+
+# enable nested virtualization with a custom kernel built with CONFIG_KVM=y
+container machine create --virtualization --kernel ./vmlinux-kvm alpine:3.22
+```
+
+### `container machine run`
+
+Runs a command in a container machine, booting it first if needed. With no command, it opens an interactive login shell. By default the command runs as a user matching the host user.
+
+**Usage**
+
+```bash
+container machine run [<options>] [<executable>] [<arguments> ...]
+```
+
+**Arguments**
+
+- `<executable>`: Command to run (default: login shell)
+- `<arguments>`: Command arguments
+
+**Options**
+
+- `-n, --name <name>`: Container machine ID (uses default if not specified)
+- `-d, --detach`: Run a process in a container machine and detach from it
+- `--root`: Run as root instead of matching host user
+
+**Process Options**
+
+- `-e, --env <env>`: Set environment variables (format: key=value, or just key to inherit from host)
+- `--env-file <env-file>`: Read in a file of environment variables (key=value format, ignores # comments and blank lines)
+- `--gid <gid>`: Set the group ID for the process
+- `-i, --interactive`: Keep the standard input open even if not attached
+- `-t, --tty`: Open a TTY with the process
+- `-u, --user <user>`: Set the user for the process (format: name|uid\[:gid])
+- `--uid <uid>`: Set the user ID for the process
+- `-w, --workdir, --cwd <dir>`: Set the initial working directory inside the container
+
+**Examples**
+
+```bash
+# open an interactive shell in the default container machine
+container machine run
+
+# run a command in a named container machine
+container machine run -n my-machine uname -a
+
+# pass arguments to the command after --
+container machine run -n my-machine -- cat /proc/cpuinfo
+```
+
+### `container machine list (ls)`
+
+Lists container machines. The default container machine is marked in the `DEFAULT` column.
+
+**Usage**
+
+```bash
+container machine list [--format <format>] [--quiet] [--debug]
+```
+
+**Options**
+
+- `--format <format>`: Format of the output (values: json, table; default: table)
+- `-q, --quiet`: Only output the container machine ID
+
+### `container machine inspect`
+
+Displays detailed information about a container machine in JSON. Uses the default container machine if no ID is given.
+
+**Usage**
+
+```bash
+container machine inspect [--debug] [<id>]
+```
+
+**Arguments**
+
+- `<id>`: Container machine ID (uses default if not specified)
+
+**Options**
+
+No options.
+
+### `container machine set`
+
+Sets configuration values on a container machine. Changes take effect after the container machine is stopped and restarted. Uses the default container machine if no ID is given.
+
+**Usage**
+
+```bash
+container machine set [--name <name>] [--debug] <setting> ...
+```
+
+**Arguments**
+
+- `<setting>`: Configuration values (format: key=value)
+
+**Settings**
+
+- `cpus=<number>`: Number of virtual CPUs
+- `memory=<size>`: Memory allocation (e.g., 2G, 1G). Default: half of system memory
+- `home-mount=<string>`: User home directory mount option (ro, rw, none). Default: rw
+- `virtualization=<bool>`: Enable nested virtualization (`true`|`false`). Requires Apple Silicon M3+ and macOS 15+ and kernel with CONFIG\_KVM=y.
+- `kernel=<path>`: Path to a custom kernel binary. An empty value (`kernel=`) clears the override and falls back to the system default.
+
+**Options**
+
+- `-n, --name <name>`: Container machine ID (uses default if not specified)
+
+**Examples**
+
+```bash
+# set CPUs and memory on the default container machine
+container machine set cpus=4 memory=8G
+
+# update the home mount on a named container machine
+container machine set -n my-machine home-mount=ro
+
+# enable on nested virtualization and custom kernel
+container machine set virtualization=true kernel=/opt/kernels/vmlinux-kvm
+
+# clear the custom kernel override
+container machine set kernel=
+```
+
+### `container machine set-default`
+
+Sets the default container machine. Commands that take an optional container machine ID use the default when you don't provide one.
+
+**Usage**
+
+```bash
+container machine set-default [--debug] <id>
+```
+
+**Arguments**
+
+- `<id>`: Container machine ID
+
+**Options**
+
+No options.
+
+### `container machine logs`
+
+Fetches logs from a container machine. You can follow output, limit the number of lines, or view the boot log. Uses the default container machine if no ID is given.
+
+**Usage**
+
+```bash
+container machine logs [--boot] [--follow] [-n <n>] [--debug] [<id>]
+```
+
+**Arguments**
+
+- `<id>`: Container machine ID (uses default if not specified)
+
+**Options**
+
+- `--boot`: Display the boot log for the container machine instead of stdio
+- `-f, --follow`: Follow log output
+- `-n <n>`: Number of lines to show from the end of the logs. If not provided this will print all of the logs
+
+### `container machine stop`
+
+Stops a running container machine. Uses the default container machine if no ID is given.
+
+**Usage**
+
+```bash
+container machine stop [--debug] [<id>]
+```
+
+**Arguments**
+
+- `<id>`: Container machine ID (uses default if not specified)
+
+**Options**
+
+No options.
+
+### `container machine delete (rm)`
+
+Deletes a container machine, stopping it first if it is running. If it was the default, set a new one with `container machine set-default`.
+
+**Usage**
+
+```bash
+container machine delete [--debug] <id>
+```
+
+**Arguments**
+
+- `<id>`: Container machine ID
+
+**Options**
+
+No options.
+
+## System Management
+
+System commands manage the container apiserver, logs, DNS settings and kernel. These are only available on macOS hosts.
+
+### `container system start`
+
+Starts the container services and (optionally) installs a default kernel. It will start the `container-apiserver` and background services.
+
+**Usage**
+
+```bash
+container system start [--app-root <app-root>] [--install-root <install-root>] [--log-root <log-root>] [--enable-kernel-install] [--disable-kernel-install] [--timeout <timeout>] [--debug]
+```
+
+**Options**
+
+- `-a, --app-root <app-root>`: Path to the root directory for application data
+- `--install-root <install-root>`: Path to the root directory for application executables and plugins
+- `--log-root <log-root>`: Path to the root directory for log data, using macOS log facility if not set
+- `--enable-kernel-install/--disable-kernel-install`: Specify whether the default kernel should be installed or not (default: prompt user)
+- `--timeout <timeout>`: Number of seconds to wait for API service to become responsive
+
+> \[!NOTE]
+> The `--log-root` option is principally intended for short-term test and diagnostic purposes. The log handler for this option neither aggregates log messages, nor does it rotate logs.
+
+### `container system stop`
+
+Stops the container services and deregisters them from launchd. You can specify a prefix to target services created with a different launchd prefix.
+
+**Usage**
+
+```bash
+container system stop [--prefix <prefix>] [--debug]
+```
+
+**Options**
+
+- `-p, --prefix <prefix>`: Launchd prefix for services (default: com.apple.container.)
+
+### `container system status`
+
+Checks whether the container services are running and prints status information. It sends a health check request to the API server, which returns basic system information.
+
+**Usage**
+
+```bash
+container system status [--prefix <prefix>] [--format <format>] [--debug]
+```
+
+**Options**
+
+- `-p, --prefix <prefix>`: Launchd prefix for services (default: com.apple.container.)
+- `--format <format>`: Format of the output (values: json, table, yaml, toml; default: table)
+
+### `container system version`
+
+Shows version information for the CLI and, if available, the API server. The table format is consistent with other list outputs and includes a header. If the API server responds to a health check, a second row for the server is added.
+
+**Usage**
+
+```bash
+container system version [--format <format>] [--debug]
+```
+
+**Options**
+
+- `--format <format>`: Format of the output (values: json, table, yaml, toml; default: table)
+
+**Table Output**
+
+Columns: `COMPONENT`, `VERSION`, `BUILD`, `COMMIT`.
+
+Example:
+
+```bash
+container system version
+```
+
+```
+COMPONENT            VERSION                                                             BUILD    COMMIT
+container            1.2.3                                                               debug    abcdef1
+container-apiserver  container-apiserver version 1.2.3 (build: release, commit: 1234abc)  release  1234abcdef
+```
+
+**JSON Output**
+
+Each entry in the array represents a component. If the API server responds to a health check, a second entry is included. The API server's `version` field is its full single-line version string.
+
+```json
+[
+  {
+    "appName": "container",
+    "buildType": "debug",
+    "commit": "abcdef1",
+    "version": "1.2.3"
+  },
+  {
+    "appName": "container-apiserver",
+    "buildType": "release",
+    "commit": "1234abcdef",
+    "version": "container-apiserver version 1.2.3 (build: release, commit: 1234abc)"
+  }
+]
+```
+
+**YAML Output**
+
+Equivalent to the JSON output but in YAML format.
+
+```yaml
+- version: 1.2.3
+  buildType: debug
+  commit: abcdef1
+  appName: container
+- version: 'container-apiserver version 1.2.3 (build: release, commit: 1234abc)'
+  buildType: release
+  commit: 1234abcdef
+  appName: container-apiserver
+```
+
+**TOML Output**
+
+TOML output wraps the component array under an `items` key.
+
+```toml
+[[items]]
+appName = "container"
+buildType = "debug"
+commit = "abcdef1"
+version = "1.2.3"
+
+[[items]]
+appName = "container-apiserver"
+buildType = "release"
+commit = "1234abcdef"
+version = "container-apiserver version 1.2.3 (build: release, commit: 1234abc)"
+```
+
+### `container system logs`
+
+Displays logs from the container services. You can specify a time interval or follow new logs in real time.
+
+> \[!NOTE]
+> If you run `container system start --log-root`, services only write log messages to files under the log root, and `container system logs` will show no service log messages.
+
+**Usage**
+
+```bash
+container system logs [--follow] [--last <last>] [--debug]
+```
+
+**Options**
+
+- `-f, --follow`: Follow log output
+- `--last <last>`: Fetch logs starting from the specified time period (minus the current time); supported formats: m, h, d (default: 5m)
+
+### `container system df`
+
+Shows disk usage for images, containers, and volumes. Displays total count, active count, size, and reclaimable space for each resource type.
+
+**Usage**
+
+```bash
+container system df [--format <format>] [--debug]
+```
+
+**Options**
+
+- `--format <format>`: Format of the output (values: json, table, yaml, toml; default: table)
+
+### `container system dns create`
+
+Creates a local DNS domain for containers. Requires administrator privileges (use sudo).
+
+**Usage**
+
+```bash
+container system dns create [--debug] [--localhost <localhost>] <domain-name>
+```
+
+**Arguments**
+
+- `<domain-name>`: The local domain name
+
+**Options**
+
+- `--localhost <localhost>`: Set the IP address to be redirected to localhost
+
+### `container system dns delete (rm)`
+
+Deletes a local DNS domain. Requires administrator privileges (use sudo).
+
+**Usage**
+
+```bash
+container system dns delete [--debug] <domain-name>
+```
+
+**Arguments**
+
+- `<domain-name>`: The local domain name
+
+**Options**
+
+No options.
+
+### `container system dns list (ls)`
+
+Lists configured local DNS domains for containers.
+
+**Usage**
+
+```bash
+container system dns list [--format <format>] [--quiet] [--debug]
+```
+
+**Options**
+
+- `--format <format>`: Format of the output (values: json, table, yaml, toml; default: table)
+- `-q, --quiet`: Only output the domain
+
+### `container system kernel set`
+
+Installs or updates the Linux kernel used by the container runtime on macOS hosts.
+
+**Usage**
+
+```bash
+container system kernel set [--arch <arch>] [--binary <binary>] [--force] [--recommended] [--tar <tar>] [--digest <digest>] [--debug]
+```
+
+**Options**
+
+- `--arch <arch>`: The architecture of the kernel binary (values: amd64, arm64) (default: arm64)
+- `--binary <binary>`: Path to the kernel file (or archive member, if used with --tar)
+- `--force`: Overwrites an existing kernel with the same name
+- `--recommended`: Download and install the recommended kernel as the default (takes precedence over all other flags)
+- `--tar <tar>`: Filesystem path or remote URL to a tar archive containing a kernel file
+- `--digest <digest>`: Expected digest for the tar archive, for example `sha256:<hex>`. Required when `--tar` is a remote URL.
+
+### `container system property list (ls)`
+
+Lists all system properties with their current values. Output can be formatted as JSON or TOML.
+
+**Usage**
+
+```bash
+container system property list [--format <format>] [--debug]
+```
+
+**Options**
+
+- `--format <format>`: Format of the output (values: json, toml; default: toml)
+
+**Examples**
+
+```bash
+# list all properties in TOML format (default)
+container system property list
+
+# output as JSON for scripting
+container system property list --format json
+```
+
+## Kubernetes Cluster Management
+
+`container k8s` manages local single-node Kubernetes clusters backed by container VMs. Each cluster runs a Kubernetes control-plane node inside a container using `kindest/node` and `kubeadm`.
+
+> \[!IMPORTANT]
+> The `k8s` command is an experimental feature and its subcommands and options are subject to change.
+
+### `container k8s create`
+
+Creates and starts a local Kubernetes cluster. Pulls the node image if needed, runs `kubeadm init`, installs the kindnet CNI, and merges the cluster credentials into `~/.kube/config`.
+
+**Usage**
+
+```bash
+container k8s create [--name <name>] [--node-image <image>] [--rm] [<resource options>] [--debug]
+```
+
+**Options**
+
+- `--name <name>`: Cluster name (default: `k8s-dev`)
+- `--node-image <image>`: Node image reference (default: `docker.io/kindest/node:v1.35.5`)
+- `--rm`: Remove the cluster container after it stops
+
+**Resource Options**
+
+- `--cpus <cpus>`: Number of virtual CPUs (default: 1/4 of host CPUs, minimum 2)
+- `--memory <memory>`: Memory allocation (default: 1/4 of host memory, minimum 2g)
+
+**Registry Options**
+
+- `--scheme <scheme>`: Scheme for the container registry (values: http, https, auto; default: auto)
+
+**Image Fetch Options**
+
+- `--max-concurrent-downloads <n>`: Maximum number of concurrent downloads (default: 3)
+
+**Examples**
+
+```bash
+# create a cluster with the default name (k8s-dev)
+container k8s create
+
+# create a cluster with a custom name and resource allocation
+container k8s create --name my-cluster --cpus 4 --memory 8g
+
+# create a cluster that removes itself when stopped
+container k8s create --name temp-cluster --rm
+```
+
+### `container k8s start`
+
+Starts a stopped Kubernetes cluster and refreshes its entry in `~/.kube/config` (the container IP can change between starts).
+
+**Usage**
+
+```bash
+container k8s start [--name <name>] [--debug]
+```
+
+**Options**
+
+- `--name <name>`: Cluster name (default: `k8s-dev`)
+
+**Examples**
+
+```bash
+# start the default cluster
+container k8s start
+
+# start a named cluster
+container k8s start --name my-cluster
+```
+
+### `container k8s delete (rm)`
+
+Stops and deletes a Kubernetes cluster container and removes its entry from `~/.kube/config`.
+
+**Usage**
+
+```bash
+container k8s delete [--name <name>] [--debug]
+```
+
+**Options**
+
+- `--name <name>`: Cluster name (default: `k8s-dev`)
+
+**Examples**
+
+```bash
+# delete the default cluster
+container k8s delete
+
+# delete a named cluster
+container k8s delete --name my-cluster
+container k8s rm --name my-cluster
+```
+
+### `container k8s list (ls)`
+
+Lists all Kubernetes clusters with their status and node image.
+
+**Usage**
+
+```bash
+container k8s list [--debug]
+```
+
+**Examples**
+
+```bash
+container k8s list
+container k8s ls
+```
+
+### `container k8s load-image`
+
+Exports an image from the local `container` image store and imports it into the cluster's containerd (in the `k8s.io` namespace) so that Kubernetes can schedule pods that reference it.
+
+**Usage**
+
+```bash
+container k8s load-image [--name <name>] [--platform <platform>] <image> [--debug]
+```
+
+**Arguments**
+
+- `<image>`: Image reference to load (e.g. `my-app:latest`)
+
+**Options**
+
+- `--name <name>`: Cluster name (default: `k8s-dev`)
+- `--platform <platform>`: Platform of the image variant to load from a multi-arch image (format: os/arch\[/variant], default: `linux/<host-arch>`). Use this when the local store contains a multi-arch manifest list and you want to select a specific variant.
+
+**Examples**
+
+```bash
+# load an image into the default cluster
+container k8s load-image my-app:latest
+
+# load an image into a named cluster
+container k8s load-image --name my-cluster my-app:latest
+
+# load the amd64 variant of a multi-arch image
+container k8s load-image --platform linux/amd64 my-app:latest
+```
+
+### `container k8s write-config`
+
+Fetches the current kubeconfig from a running cluster and merges its context into a kubeconfig file. Use this to refresh credentials after a cluster restart or to write to an alternate config file.
+
+**Usage**
+
+```bash
+container k8s write-config [--name <name>] [--kubeconfig <path>] [--debug]
+```
+
+**Options**
+
+- `--name <name>`: Cluster name (default: `k8s-dev`)
+- `--kubeconfig <path>`: Path to the kubeconfig file to write or append to (default: `~/.kube/config`)
+
+**Examples**
+
+```bash
+# refresh credentials for the default cluster into ~/.kube/config
+container k8s write-config
+
+# write the context for a named cluster to an alternate kubeconfig file
+container k8s write-config --name my-cluster --kubeconfig ~/.kube/my-cluster.kubeconfig
+```
+
+
+# Document: Inspecting containers and images
+
+Source path: docs/container-inspection.md
+Canonical source: https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/container-inspection.md
+
+# Inspecting containers and images
+
+Get detailed, machine-readable information about your containers and images.
+
+## Get container or image details
+
+`container image list` and `container list` provide basic information for all of your images and containers. You can also use `list` and `inspect` commands to print detailed machine-readable output for resources.
+
+Use the `inspect` command and send the result to the `jq` command to get pretty-printed JSON for the images or containers that you specify:
+
+<pre>
+% container image inspect web-test | jq
+[
+  {
+    "configuration": {
+      "name": "web-test:latest",
+...
+    },
+    "variants": [
+      {
+        "platform": {
+          "os": "linux",
+          "architecture": "arm64"
+        },
+        "config": {
+          "created": "2025-05-08T22:27:23Z",
+          "architecture": "arm64",
+...
+% container inspect my-web-server | jq
+[
+  {
+    "configuration": {
+      "mounts": [],
+      "id": "my-web-server",
+      "resources": {
+        "cpus": 4,
+        "memoryInBytes": 1073741824,
+      },
+...
+    },
+    "status": {
+      "state": "running",
+      "networks": [
+        {
+          "ipv4Address": "192.168.64.3/24",
+          "ipv4Gateway": "192.168.64.1",
+          "hostname": "my-web-server.test.",
+          "network": "default"
+        }
+      ],
+...
+    }
+  }
+]
+</pre>
+
+Use the `list` command with the `--format` option to display information for all images or containers. In this example, the `--all` option shows stopped as well as running containers, and `jq` selects the IP address for each running container:
+
+<pre>
+% container ls --format json --all | jq '.[] | select ( .status.state == "running" ) | [ .configuration.id, .status.networks[0].ipv4Address ]'
+[
+  "my-web-server",
+  "192.168.64.3/24"
+]
+[
+  "buildkit",
+  "192.168.64.2/24"
+]
+</pre>
+
+See [Networking](https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/networking.md) for how to publish ports, reach the host from a
+container, set a custom MAC address, and create isolated networks.
+
+
+# Document: Container machine
+
+Source path: docs/container-machine.md
+Canonical source: https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/container-machine.md
+
+# Container machine
+
+Container machine provides a highly integrated Linux environment that works seamlessly on your Mac. Container machines are fast, lightweight and persistent. They are based on standard OCI images that can be built and shared. Host integrations such as automatic user and home directory sharing provide quick and easy access to your Linux environment no matter where you are in a terminal.
+
+## Why container machines
+
+Containers are typically modeled after an application. A container machine is modeled after a Linux environment. It runs the image's init system allowing you to register long running services or test your application under a process supervisor.
+A container machine automatically maps your username and home directory into the Linux environment. Your repositories and dotfiles are available on both platforms. Use editors and tools directly on macOS simultaneously building and running your application inside of the Linux environment.
+
+- **Edit on the Mac, build inside.** Your repo lives in `$HOME` on macOS and is mounted at `/Users/<username>` inside the container machine. Use your macOS editor or IDE; compile and run inside your container machine.
+- **Use macOS-native tooling against Linux artifacts.** Profilers, screenshot tools, browsers, and GUI debuggers on your Mac all see the same files the container machine sees — there is no copy step between "I built it" and "I am inspecting it".
+- **Real Linux services for testing.** Run a database or whatever your stack needs as a system service — `systemctl start postgresql` works on images with `systemd` installed.
+- **One environment per target distro.** Create as many container machines as you have target distros — `alpine`, `ubuntu`, `debian`. Each has the same `$HOME` and the same dotfiles from your Mac. Quickly test your application in various distributions.
+
+## Quickstart
+
+```bash
+container machine create alpine:latest --name dev
+container machine run -n dev whoami       # your host username, not root
+container machine run -n dev pwd          # /home/<you> — your Mac home dir, mounted in
+container machine run -n dev              # interactive shell; cd into your repos in $HOME
+```
+
+`container machine run` is how you get a shell or run a single command. If the container machine is stopped, `run` boots it first.
+
+## Working in a container machine
+
+### Open a shell, or run a single command
+
+With no command, `container machine run` opens an interactive shell as a user that matches your host account:
+
+```bash
+container machine run -n dev
+```
+
+Pass a command to run it once and exit:
+
+```bash
+container machine run -n dev uname -a
+container machine run -n dev -- cat /proc/cpuinfo
+```
+
+### Set a default
+
+Pick a default container machine so you can drop the `-n` flag:
+
+```bash
+container machine set-default dev
+container machine run                 # operates on dev
+```
+
+### List, inspect, stop, delete
+
+```bash
+container machine ls                  # list all container machines
+container machine inspect dev         # JSON detail for one
+container machine stop dev            # stop the container machine
+container machine rm dev              # delete, including its persistent storage
+```
+
+`container machine` has the alias `m`, so `m ls`, `m run`, etc. all work.
+
+### Resize CPUs, memory, or change the home-mount
+
+`container machine set` updates configuration on disk. Changes take effect after the next stop and start:
+
+```bash
+container machine set -n dev cpus=4 memory=8G
+container machine stop dev
+container machine run -n dev -- nproc
+```
+
+Memory defaults to half of host memory. The home-mount can be `rw` (default), `ro`, or `none`.
+
+### Nested virtualization and custom kernels
+
+A container machine supports nested virtualization. The requirements for this to work are:
+
+1. Apple Silicon **M3 or later** with **macOS 15 or later** is required.
+2. A Linux kernel with CONFIG\_KVM=y enabled. The default kernel does not support this.
+
+```bash
+container machine create \
+    --virtualization \
+    --kernel /path/to/vmlinux-kvm \
+    --name kvm-dev \
+    alpine:latest
+
+# Verify /dev/kvm is exposed:
+container machine run -n kvm-dev -- ls -l /dev/kvm
+```
+
+Options can be toggled on an existing container machine.
+
+```bash
+container machine set -n dev virtualization=true kernel=/path/to/vmlinux-kvm
+container machine stop dev
+container machine run -n dev -- ls -l /dev/kvm
+
+# reset to the default kernel
+container machine set -n dev kernel=
+```
+
+## Bring your own container machine image
+
+Any Linux image that includes `/sbin/init` works as a container machine. For example, this Dockerfile builds an Ubuntu 24.04 container machine image with `systemd` and common command-line tools:
+
+```dockerfile
+FROM ubuntu:24.04
+
+ENV container container
+
+RUN apt-get update && \
+    apt-get install -y \
+    dbus systemd openssh-server net-tools iproute2 iputils-ping curl wget vim-tiny man sudo && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/* && \
+    yes | unminimize
+
+RUN >/etc/machine-id
+RUN >/var/lib/dbus/machine-id
+
+RUN systemctl set-default multi-user.target
+RUN systemctl mask \
+      dev-hugepages.mount \
+      sys-fs-fuse-connections.mount \
+      systemd-update-utmp.service \
+      systemd-tmpfiles-setup.service \
+      console-getty.service
+RUN systemctl disable \
+      networkd-dispatcher.service
+
+RUN sed -i -e 's/^AcceptEnv LANG LC_\*$/#AcceptEnv LANG LC_*/' /etc/ssh/sshd_config
+```
+
+Build it and create a container machine from it:
+
+```bash
+container build -t local/ubuntu-machine:latest .
+container machine create local/ubuntu-machine:latest --name ubuntu
+```
+
+By default, `container` runs a built-in setup script on first boot to provision the user described above. To use your own setup instead, add an executable script at `/etc/machine/create-user.sh` to the image. It runs once, as root, on first boot, with these variables set:
+
+- `CONTAINER_GID`
+- `CONTAINER_HOME`
+- `CONTAINER_MACHINE_ID`
+- `CONTAINER_UID`
+- `CONTAINER_USER`
+
+
+# Document: config.toml reference
+
+Source path: docs/container-system-config.md
+Canonical source: https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/container-system-config.md
+
+# `config.toml` reference
+
+> \[!IMPORTANT]
+> This file contains documentation for the CURRENT BRANCH. To find documentation for official releases, find the target release on the [Release Page](https://github.com/apple/container/releases) and click the tag corresponding to your release version.
+>
+> Example: [release 0.4.1 tag](https://github.com/apple/container/tree/0.4.1)
+
+For a guided walk-through on setting default values, see [Container system config tutorial](https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/tutorials/container-system-config-tutorial.md).
+
+Source of truth: [`Sources/ContainerPersistence/ContainerSystemConfig.swift`](https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/Sources/ContainerPersistence/ContainerSystemConfig.swift).
+
+## Viewing your configuration
+
+Use `container system property list` (alias `ls`) to print the merged configuration
+the `container` service is actually using — combining your `config.toml` with
+hardcoded defaults for anything you haven't set:
+
+```console
+% container system property list
+[build]
+cpus = 2
+memory = "2048mb"
+rosetta = true
+image = "ghcr.io/apple/container-builder-shim/builder:0.13.1"
+
+[container]
+cpus = 4
+memory = "1gb"
+
+[dns]
+domain = "test"
+
+[kernel]
+binaryPath = "opt/kata/share/kata-containers/vmlinux-6.18.35-197-debug"
+url = "https://github.com/kata-containers/kata-containers/releases/download/3.32.0/kata-static-3.32.0-arm64.tar.zst"
+digest = "sha256:8736c054d9223974735394f822000823baef509e1c33405ec798240fa9b6e4b5"
+
+[network]
+
+[registry]
+domain = "docker.io"
+
+[vminit]
+image = "ghcr.io/apple/containerization/vminit:0.34.0"
+```
+
+Pass `--format json` for machine-readable output.
+
+## Top-level schema
+
+```toml
+[build]      # builder VM resources and image
+[container]  # default per-container resources
+[dns]        # default DNS domain for DNS resolution on host
+[kernel]     # guest kernel binary path, download URL, and digest
+[network]    # default subnets for new networks
+[registry]   # default registry domain
+[vminit]     # default vminitd image to use
+[plugin.<id>]  # zero or more plugin-scoped sections
+```
+
+All top-level sections are optional. Omitted sections fall back to their defaults wholesale.
+
+## `[build]`
+
+Resources and image used for the builder VM that runs `container build`.
+
+| Key       | Type                             | Default                                              | Description                                                                                                            |
+| --------- | -------------------------------- | ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `rosetta` | `Bool`                           | `true`                                               | Whether the builder VM uses Rosetta translation for non-native architectures.                                          |
+| `cpus`    | `Int`                            | `2`                                                  | CPU count for the builder VM.                                                                                          |
+| `memory`  | [MemorySize](#memorysize-format) | `"2048mb"`                                           | RAM allocation for the builder VM.                                                                                     |
+| `image`   | `String`                         | `ghcr.io/apple/container-builder-shim/builder:<tag>` | Reference for the builder image. The tag segment is taken from the project's bundled `container-builder-shim` version. |
+
+To prevent the use of Rosetta translation during container builds on a Mac with Apple
+silicon, set `rosetta = false`:
+
+```toml
+[build]
+rosetta = false
+```
+
+This ensures builds only produce native arm64 images, with no x86\_64 emulation.
+
+## `[container]`
+
+Defaults applied when `container run` / `container create` is invoked without `--cpus` or `--memory`.
+
+| Key      | Type                             | Default | Description                      |
+| -------- | -------------------------------- | ------- | -------------------------------- |
+| `cpus`   | `Int`                            | `4`     | Default CPU count per container. |
+| `memory` | [MemorySize](#memorysize-format) | `"1g"`  | Default RAM per container.       |
+
+## `[dns]`
+
+| Key      | Type      | Default | Description                                                                                                                                                                                                                                                                                                                                                                      |
+| -------- | --------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `domain` | `String?` | unset   | Local DNS domain appended to container hostnames (e.g. `"test"` makes `my-web-server` resolvable as `my-web-server.test`). When unset, no domain is appended. See [Networking: Set up DNS-based container names](https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/networking.md#set-up-dns-based-container-names) for the full walkthrough. |
+
+## `[kernel]`
+
+Guest kernel used when launching container VMs. Defaults change per release as kernels are bumped — check the [source](https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/Sources/ContainerPersistence/ContainerSystemConfig.swift) for current values.
+
+| Key          | Type     | Default                                                                                                          | Description                                                                                            |
+| ------------ | -------- | ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| `binaryPath` | `String` | `"opt/kata/share/kata-containers/vmlinux-6.18.35-197-debug"`                                                     | Path **inside** the downloaded kernel archive that points to the kernel binary.                        |
+| `url`        | `URL`    | `"https://github.com/kata-containers/kata-containers/releases/download/3.32.0/kata-static-3.32.0-arm64.tar.zst"` | Archive to download when no kernel is installed. Encoded and decoded as a plain string in TOML.        |
+| `digest`     | `String` | `"sha256:8736c054d9223974735394f822000823baef509e1c33405ec798240fa9b6e4b5"`                                      | Expected digest for the archive, for example `sha256:<hex>`. Required when configuring a custom `url`. |
+
+## `[network]`
+
+Default subnets used when creating networks without explicit `--subnet` / `--subnet-v6` flags.
+
+| Key        | Type                      | Default | Description                                                                                            |
+| ---------- | ------------------------- | ------- | ------------------------------------------------------------------------------------------------------ |
+| `subnet`   | [CIDRv4?](#cidrv4-cidrv6) | unset   | IPv4 CIDR (e.g. `"192.168.100.0/24"`). When unset, the system auto-allocates a non-overlapping subnet. |
+| `subnetv6` | [CIDRv6?](#cidrv4-cidrv6) | unset   | IPv6 CIDR (e.g. `"fd00:abcd::/64"`). When unset, the system auto-allocates.                            |
+
+## `[registry]`
+
+| Key      | Type     | Default       | Description                                                                                                    |
+| -------- | -------- | ------------- | -------------------------------------------------------------------------------------------------------------- |
+| `domain` | `String` | `"docker.io"` | Registry assumed when an image reference omits the registry host (e.g. `alpine` → `docker.io/library/alpine`). |
+
+## `[vminit]`
+
+| Key     | Type     | Default                                       | Description                                                                                                                                   |
+| ------- | -------- | --------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| `image` | `String` | `ghcr.io/apple/containerization/vminit:<tag>` | Reference for the `vminitd` image used to boot container VMs. The tag segment is taken from the project's bundled `containerization` version. |
+
+## `[plugin.<id>]`
+
+Plugins can ship their own configuration schemas under `[plugin.<id>]`, where `<id>` is the plugin's identifier. Each plugin defines and reads its own section — values under one plugin's section cannot leak into another's. Consult the documentation for the specific plugin you want to configure.
+
+| Key                | Type   | Notes                                                                                  |
+| ------------------ | ------ | -------------------------------------------------------------------------------------- |
+| `<plugin-defined>` | varies | Schema is defined by the plugin. TODO: Add tutorial on setting plugin specific values. |
+
+## Type formats
+
+### MemorySize format
+
+Quoted string with a numeric prefix and a binary unit suffix. Parsing is case-insensitive; the suffix may be one of:
+
+| Suffix family    | Unit                   | Example values      |
+| ---------------- | ---------------------- | ------------------- |
+| `b`              | bytes                  | `"1024b"`           |
+| `k`, `kb`, `kib` | kibibytes (1024 bytes) | `"512k"`, `"512kb"` |
+| `m`, `mb`, `mib` | mebibytes (1024 KiB)   | `"2048mb"`          |
+| `g`, `gb`, `gib` | gibibytes (1024 MiB)   | `"4g"`, `"4gb"`     |
+| `t`, `tb`, `tib` | tebibytes              | `"1t"`              |
+| `p`, `pb`, `pib` | pebibytes              | `"1p"`              |
+
+All units are **binary** (powers of 1024), even when written with `kb`/`mb`/`gb`. The encoded form uses lowercase suffix `b`/`kb`/`mb`/`gb`/`tb`/`pb`, e.g. a value parsed from `"2g"` is emitted as `"2gb"`.
+
+A bare integer (e.g. `"2048"`) parses as bytes.
+
+Source: [`Sources/ContainerPersistence/Measurement+Parse.swift`](https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/Sources/ContainerPersistence/Measurement%2BParse.swift).
+
+### `CIDRv4` / `CIDRv6`
+
+Quoted string. IPv4 example: `"192.168.100.0/24"`. IPv6 example: `"fd00:abcd::/64"`. The loader rejects invalid CIDR strings at decode time.
+
+
+# Document: Host integration
+
+Source path: docs/host-integration.md
+Canonical source: https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/host-integration.md
+
+# Host integration
+
+Bridge your container and your Mac: forward your SSH agent in, or reach a host
+service from inside a container.
+
+## Mount your host SSH authentication socket in your container
+
+Use the `--ssh` option to mount the macOS SSH authentication socket into your container, so that you can clone private git repositories and perform other tasks requiring passwordless SSH authentication.
+
+When you use `--ssh`, it performs the equivalent of the options `--volume "${SSH_AUTH_SOCK}:/var/host-services/ssh-auth.sock" --env SSH_AUTH_SOCK=/var/host-services/ssh-auth.sock"`. The added benefit of `--ssh` is that when you stop your container, log out, log back in, and restart your container, the system automatically updates the target path for the socket mount to the new value of `SSH_AUTH_SOCK`, so that socket forwarding continues to function.
+
+```console
+% container run -it --rm --ssh alpine:latest sh
+/ # env
+SHLVL=1
+HOME=/root
+TERM=xterm
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+SSH_AUTH_SOCK=/var/host-services/ssh-auth.sock
+PWD=/
+/ # apk add openssh-client
+(1/6) Installing openssh-keygen (10.0_p1-r7)
+(2/6) Installing ncurses-terminfo-base (6.5_p20250503-r0)
+(3/6) Installing libncursesw (6.5_p20250503-r0)
+(4/6) Installing libedit (20250104.3.1-r1)
+(5/6) Installing openssh-client-common (10.0_p1-r7)
+(6/6) Installing openssh-client-default (10.0_p1-r7)
+Executing busybox-1.37.0-r18.trigger
+OK: 12 MiB in 22 packages
+/ # ssh-add -l
+...auth key output...
+/ # apk add git
+(1/12) Installing brotli-libs (1.1.0-r2)
+(2/12) Installing c-ares (1.34.5-r0)
+(3/12) Installing libunistring (1.3-r0)
+(4/12) Installing libidn2 (2.3.7-r0)
+(5/12) Installing nghttp2-libs (1.65.0-r0)
+(6/12) Installing libpsl (0.21.5-r3)
+(7/12) Installing zstd-libs (1.5.7-r0)
+(8/12) Installing libcurl (8.14.1-r1)
+(9/12) Installing libexpat (2.7.1-r0)
+(10/12) Installing pcre2 (10.43-r1)
+(11/12) Installing git (2.49.1-r0)
+(12/12) Installing git-init-template (2.49.1-r0)
+Executing busybox-1.37.0-r18.trigger
+OK: 24 MiB in 34 packages
+/ # git clone git@github.com:some-org/some-private-repo.git
+Cloning into 'some-private-repo'...
+...
+```
+
+## Access a host service from a container
+
+> \[!IMPORTANT]
+> Due to macOS security constraints around packet filter rules, this feature has limited functionality:
+>
+> - Creating a localhost domain disables Private Relay.
+> - The local domain packet filter rule is removed on a restart.
+
+Create a DNS domain with `--localhost <ipv4-address>` to make a domain used by a container to access a host service. Any IPv4 address can be used as `<ipv4-address>`, which will be assigned to the domain name in container.
+
+Choose an IP address that is least likely to conflict with any networks or reserved IP addresses in your environment. Reasonably safe address ranges include:
+
+- The documentation ranges 192.0.2.0/24, 198.51.100.0/24, and 203.0.113.0/24.
+- The 172.16.0.0/12 private range.
+
+To connect a host HTTP server from a container, run:
+
+```bash
+mkdir -p /tmp/test; cd /tmp/test; echo "hello" > index.html
+python3 -m http.server 8000 --bind 127.0.0.1
+```
+
+Create a domain for host connection:
+
+```bash
+sudo container system dns create host.container.internal --localhost 203.0.113.113
+```
+
+Test access to the host HTTP server from a container:
+
+```console
+% container run -it --rm alpine/curl curl http://host.container.internal:8000
+hello
+```
+
+This uses the same underlying DNS mechanism described in [Networking: Set up DNS-based
+container names](https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/networking.md#set-up-dns-based-container-names), just with
+`--localhost` pointing the domain at a host address instead of a container.
+
+
+# Document: How-to
+
+Source path: docs/how-to.md
+Canonical source: https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/how-to.md
+
+# How-to
+
+> \[!IMPORTANT]
+> This file contains documentation for the CURRENT BRANCH. To find documentation for official releases, find the target release on the [Release Page](https://github.com/apple/container/releases) and click the tag corresponding to your release version.
+>
+> Example: [release 0.4.1 tag](https://github.com/apple/container/tree/0.4.1)
+
+`container` has a lot of surface area beyond the [basic tutorial](https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/tutorials/start-here.md). Each topic below has its own guide — pick the one that matches what you're trying to do.
+
+## Topics
+
+- [Resource usage](https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/resource-usage.md) — CPU and memory limits for containers and builds, overcommitting resources, monitoring usage with `container stats`, and reclaiming disk space.
+- [Mounts and volumes](https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/volumes.md) — bind-mount host directories, create named volumes, and mount temporary tmpfs storage.
+- [Networking](https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/networking.md) — DNS-based container names, container-to-container connectivity, port forwarding, custom MAC addresses, and isolated networks.
+- [Host integration](https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/host-integration.md) — forward your SSH agent into a container, and reach a service running on your Mac from inside a container.
+- [Resource limits (ulimits)](https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/ulimits.md) — per-process limits like open-file and process-count limits.
+- [Runtime configuration](https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/runtime-configuration.md) — Linux capabilities, masked and read-only paths, nested virtualization, and customizing the container's init process.
+- [Multiplatform images](https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/multiplatform-images.md) — build, run, and publish images that support both Apple silicon and x86-64.
+- [Inspecting containers and images](https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/container-inspection.md) — machine-readable `inspect` and `list` output for scripting.
+- [Logs](https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/logs.md) — container output, VM boot logs, and the `container` system's own logs.
+- [`config.toml` reference](https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/container-system-config.md) — every configuration key, its default, and how to view your merged configuration.
+- Container machines — persistent Linux environments built from OCI images, with your home directory mounted in and the filesystem surviving stop/start. See [container-machine.md](https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/container-machine.md) for the full guide.
+- [Shell completions](https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/shell-completions.md) — generate and install completion scripts for `zsh`, `bash`, and `fish`.
+
+
+# Document: Logs
+
+Source path: docs/logs.md
+Canonical source: https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/logs.md
+
+# Logs
+
+View output from your containerized applications, VM boot logs, and the `container`
+system's own logs.
+
+## View container logs
+
+The `container logs` command displays the output from your containerized application:
+
+<pre>
+% container run -d --name my-web-server --rm registry.example.com/fido/web-test:latest
+my-web-server
+% curl http://my-web-server.test
+&lt;!DOCTYPE html>&lt;html>&lt;head>&lt;title>Hello&lt;/title>&lt;/head>&lt;body>&lt;h1>Hello, world!&lt;/h1>&lt;/body>&lt;/html>
+% container logs my-web-server
+192.168.64.1 - - [15/May/2025 03:00:03] "GET / HTTP/1.1" 200 -
+%
+</pre>
+
+Use the `--boot` option to see the logs for the virtual machine boot and init process:
+
+<pre>
+% container logs --boot my-web-server
+[    0.098284] cacheinfo: Unable to detect cache hierarchy for CPU 0
+[    0.098466] random: crng init done
+[    0.099657] brd: module loaded
+[    0.100707] loop: module loaded
+[    0.100838] virtio_blk virtio2: 1/0/0 default/read/poll queues
+[    0.101051] virtio_blk virtio2: [vda] 1073741824 512-byte logical blocks (550 GB/512 GiB)
+...
+[    0.127467] EXT4-fs (vda): mounted filesystem without journal. Quota mode: disabled.
+[    0.127525] VFS: Mounted root (ext4 filesystem) readonly on device 254:0.
+[    0.127635] devtmpfs: mounted
+[    0.127773] Freeing unused kernel memory: 2816K
+[    0.143252] Run /sbin/vminitd as init process
+2025-05-15T02:24:08+0000 info vminitd : [vminitd] vminitd booting...
+2025-05-15T02:24:08+0000 info vminitd : [vminitd] serve vminitd api
+2025-05-15T02:24:08+0000 debug vminitd : [vminitd] starting process supervisor
+2025-05-15T02:24:08+0000 debug vminitd : port=1024 [vminitd] booting grpc server on vsock
+...
+2025-05-15T02:24:08+0000 debug vminitd : exits=[362: 0] pid=363 [vminitd] checking for exit of managed process
+2025-05-15T02:24:08+0000 debug vminitd : [vminitd] waiting on process my-web-server
+[    1.122742] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+2025-05-15T02:24:39+0000 debug vminitd : sec=1747275879 usec=478412 [vminitd] setTime
+%
+</pre>
+
+## View system logs
+
+The `container system logs` command allows you to look at the log messages that `container` writes:
+
+<pre>
+% container system logs | tail -8
+2025-06-02 16:46:11.560780-0700 0xf6dc5    Info        0x0                  61684  0    container-apiserver: [com.apple.container:APIServer] Registering plugin [id=com.apple.container.container-runtime-linux.my-web-server]
+2025-06-02 16:46:11.699095-0700 0xf6ea8    Info        0x0                  61733  0    container-runtime-linux: [com.apple.container:RuntimeLinuxHelper] starting container-runtime-linux [uuid=my-web-server]
+2025-06-02 16:46:11.699125-0700 0xf6ea8    Info        0x0                  61733  0    container-runtime-linux: [com.apple.container:RuntimeLinuxHelper] configuring XPC server [uuid=my-web-server]
+2025-06-02 16:46:11.700908-0700 0xf6ea8    Info        0x0                  61733  0    container-runtime-linux: [com.apple.container:RuntimeLinuxHelper] starting XPC server [uuid=my-web-server]
+2025-06-02 16:46:11.703028-0700 0xf6ea8    Info        0x0                  61733  0    container-runtime-linux: [com.apple.container:RuntimeLinuxHelper] `bootstrap` xpc handler [uuid=my-web-server]
+2025-06-02 16:46:11.720836-0700 0xf6dc3    Info        0x0                  61689  0    container-network-vmnet: [com.apple.container:NetworkVmnetHelper] allocated attachment [hostname=my-web-server.test.] [address=192.168.64.2/24] [gateway=192.168.64.1] [id=default]
+2025-06-02 16:46:12.293193-0700 0xf6eaa    Info        0x0                  61733  0    container-runtime-linux: [com.apple.container:RuntimeLinuxHelper] `start` xpc handler [uuid=my-web-server]
+2025-06-02 16:46:12.368723-0700 0xf6e93    Info        0x0                  61684  0    container-apiserver: [com.apple.container:APIServer] Handling container my-web-server Start.
+%
+</pre>
+
+See [bug report how-to](https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/bug-report-how-to.md) for gathering logs when filing an
+issue.
+
+
+# Document: Multiplatform images
+
+Source path: docs/multiplatform-images.md
+Canonical source: https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/multiplatform-images.md
+
+# Multiplatform images
+
+Build, run, and publish container images that support both Apple silicon and x86-64.
+
+## Build and run a multiplatform image
+
+Using the [project from the tutorial example](https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/tutorials/start-here.md#set-up-a-simple-project), you can create an image to use both on Apple silicon Macs and on x86-64 servers.
+
+When building the image, just add `--arch` options that direct the builder to create an image supporting both the `arm64` and `amd64` architectures:
+
+```bash
+container build --arch arm64 --arch amd64 --tag registry.example.com/fido/web-test:latest --file Dockerfile .
+```
+
+Try running the command `uname -a` with the `arm64` variant of the image to see the system information that the virtual machine reports:
+
+<pre>
+% container run --arch arm64 --rm registry.example.com/fido/web-test:latest uname -a
+Linux 7932ce5f-ec10-4fbe-a2dc-f29129a86b64 6.1.68 #1 SMP Mon Mar 31 18:27:51 UTC 2025 aarch64 GNU/Linux
+%
+</pre>
+
+When you run the command with the `amd64` architecture, the x86-64 version of `uname` runs under Rosetta translation, so that you will see information for an x86-64 system:
+
+<pre>
+% container run --arch amd64 --rm registry.example.com/fido/web-test:latest uname -a
+Linux c0376e0a-0bfd-4eea-9e9e-9f9a2c327051 6.1.68 #1 SMP Mon Mar 31 18:27:51 UTC 2025 x86_64 GNU/Linux
+%
+</pre>
+
+The command to push your multiplatform image to a registry is no different than that for a single-platform image:
+
+```bash
+container image push registry.example.com/fido/web-test:latest
+```
+
+
+# Document: Networking
+
+Source path: docs/networking.md
+Canonical source: https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/networking.md
+
+# Networking
+
+Learn how `container` networks containers with one another, with the host, and with
+external systems.
+
+Running `container system start` creates a vmnet network named `default`, to which your
+containers attach unless you specify otherwise. Every container gets an IP address on
+its network, always reachable by that IP from the host and from other containers on the
+same network (find it with `container inspect <name>`).
+
+## Set up DNS-based container names
+
+Reaching a container by name instead of IP goes through `container`'s embedded DNS
+service. Set this up in two steps:
+
+### Step 1: Tell the `container` service what domain to use
+
+Edit `~/.config/container/config.toml`:
+
+```toml
+[dns]
+domain = "test"
+```
+
+Restart the service so it picks up the change:
+
+```bash
+container system stop
+container system start
+```
+
+From this point on, every container you run gets registered under `<name>.test` inside
+`container`'s DNS service, and every container's own DNS resolver is configured to look
+up `.test` names there too.
+
+### Step 2: Tell macOS to use that domain too
+
+Step 1 only affects the `container` service and the containers it runs — your Mac's own
+DNS resolver still knows nothing about `test`. Point it at `container`'s DNS service:
+
+```bash
+sudo container system dns create test
+```
+
+Enter your administrator password when prompted. This writes a resolver file to
+`/etc/resolver/` that tells macOS: for any `*.test` query, ask `127.0.0.1` instead of
+your normal DNS server.
+
+Both steps are needed. See [`[dns]` reference](https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/container-system-config.md#dns) for the
+config-key-level detail.
+
+With both steps done, confirm it end-to-end from your Mac:
+
+```console
+% container run -d --rm --name my-web-server python:alpine python3 -m http.server 8000
+% curl http://my-web-server.test:8000
+```
+
+See [Host integration](https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/host-integration.md) for the reverse direction — reaching a
+service running on your Mac from inside a container.
+
+## Container-to-container networking
+
+From one container, use another container's DNS name to reach a service it exposes.
+This requires the DNS setup above ([Set up DNS-based container
+names](#set-up-dns-based-container-names)):
+
+```bash
+container run --rm -d --name http-server python:alpine python3 -m http.server
+container run -it --rm alpine/curl curl -v http://http-server.test:8000
+container stop http-server
+```
+
+> \[!WARNING]
+> This works for containers on the `default` network using a domain-qualified name
+> (`http-server.test`, as above). It does **not** currently work for looking up another
+> container by its *bare* hostname (no domain suffix) on a custom network created with
+> `container network create` — the kind of zero-configuration, Compose-style service
+> discovery some users expect. That gap is tracked upstream as
+> [apple/container#1809](https://github.com/apple/container/issues/1809) (open feature
+> request, not yet implemented) and related broader reports in
+> [apple/container#856](https://github.com/apple/container/issues/856). Until resolved,
+> reach a container on a custom network by its IP address instead (`container inspect <name>` to find it).
+
+## Forward traffic from `localhost` to your container
+
+Use the `--publish` option to forward TCP or UDP traffic from your loopback IP to the container you run. The option value has the form `[host-ip:]host-port:container-port[/protocol]`, where protocol may be `tcp` or `udp`, case insensitive.
+
+If your container attaches to multiple networks, the ports you publish forward to the IP address of the interface attached to the first network.
+
+To forward requests from port 8080 on the IPv4 loopback IP to a NodeJS webserver on container port 8000, run:
+
+```bash
+container run -d --rm -p 127.0.0.1:8080:8000 node:latest npx http-server -a :: -p 8000
+```
+
+Test access using `curl`:
+
+```console
+% curl http://127.0.0.1:8080
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Index of /</title>
+...
+<br><address>Node.js v25.2.1/ <a href="https://github.com/http-party/http-server">http-server</a> server running @ 127.0.0.1:8080</address>
+</body></html>
+```
+
+To forward requests from port 8080 on the IPv6 loopback IP to a NodeJS webserver on container port 8000, run:
+
+```bash
+container run -d --rm -p '[::1]:8080:8000' node:latest npx http-server -a :: -p 8000
+```
+
+Test access using `curl`:
+
+```console
+% curl -6 'http://[::1]:8080'
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Index of /</title>
+...
+<br><address>Node.js v25.2.1/ <a href="https://github.com/http-party/http-server">http-server</a> server running @ [::1]:8080</address>
+</body></html>
+```
+
+## Set a custom MAC address for your container
+
+Use the `mac` option to specify a custom MAC address for your container's network interface. This is useful for:
+
+- Network testing scenarios requiring predictable MAC addresses
+- Consistent network configuration across container restarts
+
+The MAC address must be in the format `XX:XX:XX:XX:XX:XX` (with colons or hyphens as separators). Set the two least significant bits of the first octet to `10` (locally signed, unicast address).
+
+```bash
+container run --network default,mac=02:42:ac:11:00:02 ubuntu:latest
+```
+
+To verify the MAC address is set correctly, read the interface MAC directly from sysfs inside the container:
+
+```console
+% container run --rm --network default,mac=02:42:ac:11:00:02 ubuntu:latest cat /sys/class/net/eth0/address
+02:42:ac:11:00:02
+```
+
+If you don't specify a MAC address, `container` will generate one for you. The generated address has a first nibble set to hexadecimal `f` (`fX:XX:XX:XX:XX:XX`) in case you want to minimize the very small chance of conflict between your MAC address and generated addresses.
+
+## Create and use a separate isolated network
+
+> \[!NOTE]
+> This feature is available on macOS 26 and later.
+
+Running `container system start` creates a vmnet network named `default` to which your containers will attach unless you specify otherwise.
+
+You can create a separate isolated network using `container network create`.
+
+This command creates a network named `foo`:
+
+```bash
+container network create foo
+```
+
+You can also specify custom IPv4 and IPv6 subnets when creating a network:
+
+```bash
+container network create foo --subnet 192.168.100.0/24 --subnet-v6 fd00:1234::/64
+```
+
+The `foo` network, the default network, and any other networks you create are isolated from one another. A container on one network has no connectivity to containers on other networks.
+
+Run `container network list` to see the networks that exist:
+
+```console
+% container network list
+NETWORK  SUBNET
+default  192.168.64.0/24
+foo      192.168.65.0/24
+%
+```
+
+Run a container that is attached to that network using the `--network` flag:
+
+```console
+container run -d --name my-web-server --network foo --rm web-test
+```
+
+Use `container ls` to see that the container is on the `foo` subnet:
+
+```console
+ % container ls
+ID             IMAGE            OS     ARCH   STATE    IP
+my-web-server  web-test:latest  linux  arm64  running  192.168.65.2
+```
+
+You can delete networks that you create once no containers are attached:
+
+```bash
+container stop my-web-server
+container network delete foo
+```
+
+Networks support both IPv4 and IPv6. When creating a network without explicit subnet options, the system uses default values if configured in your runtime configuration file (see [Configure default network subnets](#configure-default-network-subnets)), or automatically allocates subnets. The system validates that custom subnets don't overlap with existing networks.
+
+## Configure default network subnets
+
+You can customize the default IPv4 and IPv6 subnets used for new networks by editing your runtime configuration file at `~/.config/container/config.toml`:
+
+```toml
+[network]
+subnet = "192.168.100.1/24"
+subnetv6 = "fd00:abcd::/64"
+```
+
+These settings apply to networks created without explicit `--subnet` or `--subnet-v6` options.
+
+
+# Document: Resource usage
+
+Source path: docs/resource-usage.md
+Canonical source: https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/resource-usage.md
+
+# Resource usage
+
+Configure CPU, memory, and disk resources for your containers and builds, monitor
+usage while they run, and reclaim disk space afterward.
+
+## Configure memory and CPUs for your containers
+
+Since the containers created by `container` are lightweight virtual machines, consider the needs of your containerized application when you use `container run`.  The `--memory` and `--cpus` options allow you to override the default memory and CPU limits for the virtual machine. The default values are 1 gigabyte of RAM and 4 CPUs. You can use abbreviations for memory units; for example, to run a container for image `big` with 8 CPUs and 32 GiBytes of memory, use:
+
+```bash
+container run --rm --cpus 8 --memory 32g big
+```
+
+See [Resource limits (ulimits)](https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/ulimits.md) for per-process resource limits like open-file and process-count limits.
+
+## Configure memory and CPUs for large builds
+
+When you first run `container build`, `container` starts a *builder*, which is a utility container that builds images from your `Dockerfile`s. As with anything you run with `container run`, the builder runs in a lightweight virtual machine, so for resource-intensive builds, you may need to increase the memory and CPU limits for the builder VM.
+
+By default, the builder VM receives 2 GiBytes of RAM and 2 CPUs. You can change these limits by starting the builder container before running `container build`:
+
+```bash
+container builder start --cpus 8 --memory 32g
+```
+
+If your builder is already running and you need to modify the limits, just stop, delete, and restart the builder:
+
+```bash
+container builder stop
+container builder delete
+container builder start --cpus 8 --memory 32g
+```
+
+## Overcommit memory and CPUs across containers
+
+You can run more containers than your host has physical CPUs or memory for —
+`container` does not reject a `--cpus` or `--memory` request that exceeds physical
+capacity, whether for a single container or in aggregate across several. For example,
+on an 8-CPU, 16 GB host you could run a builder VM with 4 CPUs/8 GB and three more
+containers with 4 CPUs/2 GB each: 16 CPUs and 14 GB requested against 8 CPUs and 16 GB
+physical.
+
+This works because macOS schedules host and guest VM processes together against the
+same physical resources, the same way it schedules any set of contending processes.
+Throughput can't exceed what the physical CPUs provide, and CPU-bound containers slow
+down as more of them compete for time. For memory, once real demand exceeds physical
+RAM, macOS swaps out less-used pages — applications keep running, but performance
+degrades and becomes limited by disk I/O as swapping increases. Leaving some CPU and
+memory headroom for macOS and your other applications is a good practice.
+
+## Monitor container resource usage
+
+The `container stats` command displays real-time resource usage statistics for your running containers, similar to the `top` command for processes. This is useful for:
+
+- Monitoring CPU and memory consumption
+- Tracking network and disk I/O
+- Identifying resource-intensive containers
+- Verifying container resource limits are appropriate
+
+By default, `container stats` shows live statistics for all running containers in an interactive display:
+
+```console
+% container stats
+Container ID    Cpu %    Memory Usage           Net Rx/Tx              Block I/O               Pids
+my-web-server   2.45%    45.23 MiB / 1.00 GiB   1.23 MiB / 856.00 KiB  4.50 MiB / 2.10 MiB     3
+db              125.12%  512.50 MiB / 2.00 GiB  5.67 MiB / 3.21 MiB    125.00 MiB / 89.00 MiB  12
+```
+
+To monitor specific containers, provide their names or IDs:
+
+```console
+% container stats my-web-server db
+```
+
+For a single snapshot (non-interactive), use the `--no-stream` flag:
+
+```console
+% container stats --no-stream my-web-server
+Container ID    Cpu %    Memory Usage          Net Rx/Tx              Block I/O              Pids
+my-web-server   30.45%    45.23 MiB / 1.00 GiB  1.23 MiB / 856.00 KiB  4.50 MiB / 2.10 MiB    3
+```
+
+You can also output statistics in JSON format for scripting:
+
+```console
+% container stats --format json --no-stream my-web-server | jq
+[
+  {
+    "id": "my-web-server",
+    "memoryUsageBytes": 47431680,
+    "memoryLimitBytes": 1073741824,
+    "cpuUsageUsec": 1234567,
+    "networkRxBytes": 1289011,
+    "networkTxBytes": 876544,
+    "blockReadBytes": 4718592,
+    "blockWriteBytes": 2202009,
+    "numProcesses": 3
+  }
+]
+```
+
+**Understanding the metrics:**
+
+- **Cpu %**: Percentage of CPU usage. \~100% = one fully utilized core. A multi-core container can show > 100%.
+- **Memory Usage**: Current memory usage vs. the container's memory limit.
+- **Net Rx/Tx**: Network bytes received and transmitted.
+- **Block I/O**: Disk bytes read and written.
+- **Pids**: Number of processes running in the container.
+
+## Disk usage
+
+Each container gets a macOS sparse disk image for its writable filesystem. Named
+volumes get their own sparse disk image too. As your containerized application writes
+data, these images grow; when a container process deletes a file, the freed blocks
+aren't automatically returned to the host filesystem, so image size doesn't shrink on
+its own.
+
+Check overall usage with:
+
+```bash
+container system df
+```
+
+```console
+TYPE            TOTAL   ACTIVE   SIZE      RECLAIMABLE
+Images          12      4        3.2GB     1.1GB (34%)
+Containers      4       2        890MB     210MB (24%)
+Local Volumes   6       3        4.5GB     2.1GB (47%)
+```
+
+### Reclaim disk space
+
+Remove stopped containers:
+
+```bash
+container prune
+```
+
+Remove images not referenced by any container (add `--all` to remove all untagged and
+unused images, not just dangling ones):
+
+```bash
+container image prune
+container image prune --all
+```
+
+Remove volumes with no container references:
+
+```bash
+container volume prune
+```
+
+Reclaim space used by the builder VM's layer cache by replacing the builder:
+
+```bash
+container builder stop
+container builder delete
+```
+
+See [Mounts and volumes](https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/volumes.md) for bind mounts, named volumes, and tmpfs
+mounts.
+
+
+# Document: Runtime configuration
+
+Source path: docs/runtime-configuration.md
+Canonical source: https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/runtime-configuration.md
+
+# Runtime configuration
+
+Configure what runs inside and around your container's init process: Linux
+capabilities, path masking, nested virtualization, and the init process itself.
+
+## Control Linux capabilities
+
+By default, containers start with a restricted set of Linux capabilities:
+
+`CAP_AUDIT_WRITE`, `CAP_CHOWN`, `CAP_DAC_OVERRIDE`, `CAP_FOWNER`, `CAP_FSETID`, `CAP_KILL`, `CAP_MKNOD`, `CAP_NET_BIND_SERVICE`, `CAP_NET_RAW`, `CAP_SETFCAP`, `CAP_SETGID`, `CAP_SETPCAP`, `CAP_SETUID`, `CAP_SYS_CHROOT`
+
+You can customize the capability set using `--cap-add` and `--cap-drop` with `container run` or `container create`.
+
+Capability names can be specified with or without the `CAP_` prefix, and are case-insensitive:
+
+These are equivalent:
+
+```bash
+container run --cap-add CAP_NET_ADMIN alpine ip link set lo down
+container run --cap-add NET_ADMIN alpine ip link set lo down
+container run --cap-add net_admin alpine ip link set lo down
+```
+
+To grant all capabilities:
+
+```bash
+container run --cap-add ALL alpine sh -c "ip link set lo down && echo ok"
+```
+
+To drop all capabilities and selectively re-add only what you need:
+
+```bash
+container run --cap-drop ALL --cap-add SETUID --cap-add SETGID alpine id
+```
+
+Adds are processed after drops, so `--cap-drop ALL --cap-add ALL` results in all capabilities being granted.
+
+To grant all capabilities except specific ones:
+
+```bash
+container run --cap-add ALL --cap-drop NET_ADMIN alpine sh
+```
+
+To drop a single capability from the default set:
+
+```console
+% container run --cap-drop CHOWN alpine chown 100 /tmp
+chown: /tmp: Operation not permitted
+```
+
+## Mask and protect paths inside a container
+
+> \[!NOTE]
+> `--masked-path` and `--read-only-path` are experimental. The behavior described here is subject to change in a future release.
+
+By default, containers hide a set of sensitive paths from the workload, and mark another set read-only, matching the OCI runtime spec defaults that other production runtimes apply.
+
+Masked by default (files are replaced with `/dev/null`, directories with an empty read-only tmpfs):
+
+`/proc/asound`, `/proc/acpi`, `/proc/kcore`, `/proc/keys`, `/proc/latency_stats`, `/proc/timer_list`, `/proc/timer_stats`, `/proc/sched_debug`, `/proc/scsi`, `/sys/firmware`, `/sys/devices/virtual/powercap`
+
+Read-only by default:
+
+`/proc/bus`, `/proc/fs`, `/proc/irq`, `/proc/sys`, `/proc/sysrq-trigger`
+
+You can extend either set using `--masked-path` and `--read-only-path` with `container run` or `container create`. Both flags can be repeated, take absolute paths, and add to the defaults rather than replacing them:
+
+```console
+% container run --masked-path /etc/alpine-release alpine cat /etc/alpine-release
+% container run --read-only-path /tmp alpine touch /tmp/file
+touch: /tmp/file: Read-only file system
+```
+
+To opt out of the defaults entirely, pass the `NONE` sentinel. It clears every path accumulated so far for that flag, including the defaults:
+
+```bash
+container run --masked-path NONE alpine ls /sys/firmware
+```
+
+Because values are processed in order, `NONE` can be followed by a custom set that replaces the defaults:
+
+```bash
+container run --masked-path NONE --masked-path /run/secrets alpine sh
+```
+
+The two flags are independent, so clearing the masked paths leaves the read-only defaults in place. The paths that a container was created with are visible in `container inspect` under `configuration.maskedPaths` and `configuration.readonlyPaths`; when neither flag is used, both are absent and the runtime defaults apply.
+
+## Expose virtualization capabilities to a container
+
+> \[!NOTE]
+> This feature requires a M3 or newer Apple silicon machine and a Linux kernel that supports virtualization. For a kernel configuration that has all of the right features enabled, see <https://github.com/apple/containerization/blob/0.5.0/kernel/config-arm64#L602>.
+
+You can enable virtualization capabilities in containers by using the `--virtualization` option of `container run` and `container create`.
+
+If your machine does not have support for nested virtualization, you will see the following:
+
+```console
+container run --name nested-virtualization --virtualization --kernel /path/to/a/kernel/with/virtualization/support --rm ubuntu:latest sh -c "dmesg | grep kvm"
+Error: unsupported: "nested virtualization is not supported on the platform"
+```
+
+When nested virtualization is enabled successfully, `dmesg` will show output like the following:
+
+```console
+container run --name nested-virtualization --virtualization --kernel /path/to/a/kernel/with/virtualization/support --rm ubuntu:latest sh -c "dmesg | grep kvm"
+[    0.017245] kvm [1]: IPA Size Limit: 40 bits
+[    0.017499] kvm [1]: GICv3: no GICV resource entry
+[    0.017501] kvm [1]: disabling GICv2 emulation
+[    0.017506] kvm [1]: GIC system register CPU interface enabled
+[    0.017685] kvm [1]: vgic interrupt IRQ9
+[    0.017893] kvm [1]: Hyp mode initialized successfully
+```
+
+## Run a container with a provided init process
+
+By default, the command you specify in `container run` runs as PID 1 inside the container. This means it is responsible for reaping zombie processes and handling signals, which many applications are not designed to do. The `--init` flag runs a lightweight init process as PID 1 that automatically forwards signals and reaps orphaned child processes.
+
+```bash
+container run --init ubuntu:latest my-app
+```
+
+The init process is also available with `container create`:
+
+```bash
+container create --init --name my-container ubuntu:latest my-app
+container start my-container
+```
+
+## Use a custom init image
+
+The `--init-image` flag allows you to specify a custom init filesystem image for the lightweight VM that runs your container. This enables:
+
+- Custom boot-time logic before the OCI container starts
+- Running additional processes and daemons (e.g., eBPF network filters, logging agents) inside the VM
+- Debugging or instrumenting the init process
+
+### Create a custom init image
+
+A custom init image wraps the default `vminitd` binary, allowing you to run custom logic before handing off to the standard init process.
+
+**1. Create a wrapper binary (example in Go for easy cross-compilation):**
+
+```go
+// wrapper.go
+package main
+
+import (
+    "os"
+    "syscall"
+)
+
+func main() {
+    // Write a message to kernel log
+    kmsg, err := os.OpenFile("/dev/kmsg", os.O_WRONLY, 0)
+    if err == nil {
+        kmsg.WriteString("<6>custom-init: === CUSTOM INIT IMAGE RUNNING ===\n")
+        kmsg.Close()
+    }
+
+    // Execute the real vminitd
+    err = syscall.Exec("/sbin/vminitd.real", os.Args, os.Environ())
+    if err != nil {
+        os.Exit(1)
+    }
+}
+```
+
+**2. Build the wrapper for Linux arm64:**
+
+```bash
+CGO_ENABLED=0 GOOS=linux GOARCH=arm64 go build -o wrapper wrapper.go
+```
+
+**3. Create a Containerfile:**
+
+Use the `vminit` image tag corresponding to the `scVersion` value in the project `Package.swift` file.
+
+Or, use `vminit:latest` if you have a local `containerization` project in [edit mode](https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/BUILDING.md#develop-using-a-local-copy-of-containerization).
+
+```dockerfile
+FROM ghcr.io/apple/containerization/vminit:0.34.0 AS base
+
+FROM ghcr.io/apple/containerization/vminit:0.34.0
+COPY --from=base /sbin/vminitd /sbin/vminitd.real
+COPY wrapper /sbin/vminitd
+```
+
+**4. Build the custom init image:**
+
+```bash
+container build -t local/custom-init:latest .
+```
+
+### Run a container with a custom init image
+
+```bash
+container run --name my-container --init-image local/custom-init:latest alpine:latest echo "hello"
+```
+
+### Verify the custom init is running
+
+Check the VM boot logs to confirm your custom init code executed:
+
+```console
+% container logs --boot my-container | grep custom-init
+[    0.129230] custom-init: === CUSTOM INIT IMAGE RUNNING ===
+```
+
+See [Logs](https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/logs.md) for more on viewing container and VM boot logs.
+
+
+# Document: Shell completions
+
+Source path: docs/shell-completions.md
+Canonical source: https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/shell-completions.md
+
+# Shell completions
+
+Generate and install completion scripts for `zsh`, `bash`, and `fish`.
+
+## Overview
+
+The `container --generate-completion-script [zsh|bash|fish]` command generates completion scripts for the provided shell. Below is a detailed guide on how to install the completion scripts.
+
+> \[!NOTE]
+> See the [swift-argument-parser documentation](https://apple.github.io/swift-argument-parser/documentation/argumentparser/installingcompletionscripts/#Installing-Zsh-Completions) for more information about generating and installing shell completion scripts.
+
+## Installing `zsh` completions
+
+If you have [oh-my-zsh](https://ohmyz.sh/) installed, you already have a directory of automatically loaded completion scripts — `.oh-my-zsh/completions`. Copy your new completion script to that directory. If the `completions` directory does not exist, simply make it.
+
+```zsh
+mkdir -p ~/.oh-my-zsh/completions
+container --generate-completion-script zsh > ~/.oh-my-zsh/completions/_container
+source ~/.oh-my-zsh/completions/_container
+```
+
+> \[!NOTE]
+> Your completion script must have the filename `_container`.
+
+Without oh-my-zsh, you’ll need to add a path for completion scripts to your function path, and turn on completion script autoloading. First, add these lines to your `~/.zshrc` file:
+
+```bash
+fpath=(~/.zsh/completion $fpath)
+autoload -U compinit
+compinit
+```
+
+Next, create a directory at `~/.zsh/completion` and copy the completion script to the new directory.
+
+```zsh
+mkdir -p ~/.zsh/completion
+container --generate-completion-script zsh > ~/.zsh/completion/_container
+source ~/.zshrc
+```
+
+## Installing `bash` completions
+
+If you have [bash-completion](https://github.com/scop/bash-completion) installed, you can just copy your new completion script to the `bash_completion.d` directory.
+
+> \[!NOTE]
+> The path to the directory is dependent on how bash-completion was installed. Find the correct path and then copy the completion script there. For example, if you used homebrew to install `bash-completion`:
+>
+> ```bash
+> container --generate-completion-script bash > /opt/homebrew/etc/bash_completion.d/container
+> source /opt/homebrew/etc/bash_completion.d/container
+> ```
+
+Without bash-completion, you’ll need to source the completion script directly. Create and copy it to a directory such as `~/.bash_completions`.
+
+```bash
+mkdir -p ~/.bash_completions
+container --generate-completion-script bash >  ~/.bash_completions/container
+source ~/.bash_completions/container
+```
+
+Furthermore, you can add the following line to `~/.bash_profile` or `~/.bashrc`, in order for every new bash session to have autocompletion ready.
+
+```bash
+source ~/.bash_completions/container
+```
+
+## Installing `fish` completions
+
+Copy the completion script to any path listed in the environment variable `$fish_completion_path`.
+
+```bash
+container --generate-completion-script fish > ~/.config/fish/completions/container.fish
+```
+
+
+# Document: Technical Overview
+
+Source path: docs/technical-overview.md
+Canonical source: https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/technical-overview.md
+
+# Technical Overview
+
+> \[!IMPORTANT]
+> This file contains documentation for the CURRENT BRANCH. To find documentation for official releases, find the target release on the [Release Page](https://github.com/apple/container/releases) and click the tag corresponding to your release version.
+>
+> Example: [release 0.4.1 tag](https://github.com/apple/container/tree/0.4.1)
+
+A brief description and technical overview of `container`.
+
+## What are containers?
+
+Containers are a way to package an application and its dependencies into a single unit.  At runtime, containers provide isolation from the host machine as well as other colocated containers, allowing applications to run securely and efficiently in a wide variety of environments.
+
+Containerization is an important server-side technology that is used throughout the software lifecycle:
+
+- Backend developers use containers on their personal systems to create predictable execution environments for applications, and to develop and test their applications under conditions that better approximate how they would run in the datacenter.
+- Continuous integration and deployment (CI/CD) systems use containerization to perform reproducible builds of applications, package the results as deployable images, and deploy them to the datacenter.
+- Datacenters run container orchestration platforms that use the images to run containerized applications in a reliable, highly available compute cluster.
+
+None of this workflow would be practical without ensuring interoperability between different container implementations. The Open Container Initiative (OCI) creates and maintains these standards for container images and runtimes.
+
+## How does `container` run my container?
+
+Many operating systems support containers, but the most commonly encountered containers are those that run on the Linux operating system. With macOS, the typical way to run Linux containers is to launch a Linux virtual machine (VM) that hosts all of your containers.
+
+`container` runs containers differently. Using the open source [Containerization](https://github.com/apple/containerization) package, it runs a lightweight VM for each container that you create. This approach has the following properties:
+
+- Security: Each container has the isolation properties of a full VM, using a minimal set of core utilities and dynamic libraries to reduce resource utilization and attack surface.
+- Privacy: When sharing host data using `container`, you mount only necessary data into each VM. With a shared VM, you need to mount all data that you may ever want to use into the VM, so that it can be mounted selectively into containers.
+- Performance: Containers created using `container` require less memory than full VMs, with boot times that are comparable to containers running in a shared VM.
+
+Since `container` consumes and produces standard OCI images, you can easily build with and run images produced by other container applications, and the images that you build will run everywhere.
+
+`container` and the underlying Containerization package integrate with many of the key technologies and frameworks of macOS:
+
+- The Virtualization framework for managing Linux virtual machines and their attached devices.
+- The vmnet framework for managing the virtual network to which the containers attach.
+- XPC for interprocess communication.
+- Launchd for service management.
+- Keychain services for access to registry credentials.
+- The unified logging system for application logging.
+
+You use the `container` command line interface (CLI) to start and manage your containers, build container images, and transfer images from and to OCI container registries. The CLI uses a client library that communicates with `container-apiserver` and its helpers.
+
+The `container-apiserver` is a launch agent that launches when you run the `container system start` command, and terminates when you run `container system stop`. It provides the client APIs for managing container and network resources.
+
+When `container-apiserver` starts, it launches an XPC helper `container-core-images` that exposes an API for image management and manages the local content store, and another XPC helper `container-network-vmnet` for the virtual network. For each container that you create, `container-apiserver` launches a container runtime helper `container-runtime-linux` that exposes the management API for that specific container.
+
+\[Image unavailable: diagram showing container functional organization]
+
+## What limitations does `container` have today?
+
+With the initial release of `container`, you get basic facilities for building and running containers, but many common containerization features remain to be implemented. Consider [contributing](https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/CONTRIBUTING.md) new features and bug fixes to `container` and the Containerization projects!
+
+### Releasing container memory to macOS
+
+The macOS Virtualization framework implements only partial support for memory ballooning, which is a technology that allows virtual machines to dynamically use and relinquish host memory. When you create a container, the underlying virtual machine only uses the amount of memory that the containerized application needs. For example, you might start a container using the option `--memory 16g`, but see that the application is only using 2 GiBytes of RAM in the macOS Activity Monitor.
+
+Currently, memory pages freed to the Linux operating system by processes running in the container's VM are not relinquished to the host. If you run many memory-intensive containers, you may need to occasionally restart them to reduce memory utilization.
+
+### macOS 15 limitations
+
+`container` relies on the new features and enhancements present in macOS 26. You can run `container` on macOS 15, but you will need to be aware of some user experience and functional limitations. There is no plan to address issues found with macOS 15 that cannot be reproduced on macOS 26.
+
+#### Network isolation
+
+The vmnet framework in macOS 15 can only provide networks where the attached containers are isolated from one another. Container-to-container communication over the virtual network is not possible.
+
+#### Multiple networks
+
+In macOS 15, all containers attach to the default vmnet network. The `container network` commands are not available on macOS 15, and using the `--network` option for `container run` or `container create` will result in an error.
+
+#### Container IP addresses
+
+In macOS 15, limitations in the vmnet framework mean that the container network can only be created when the first container starts. Since the network XPC helper provides IP addresses to containers, and the helper has to start before the first container, it is possible for the network helper and vmnet to disagree on the subnet address, resulting in containers that are completely cut off from the network.
+
+Normally, vmnet creates the container network using the CIDR address 192.168.64.1/24, and on macOS 15, `container` defaults to using this CIDR address in the network helper. If your containers have no network access on macOS 15, see All networking fails on macOS 15 for diagnosis and remediation steps.
+
+
+# Document: Customize container default configuration values
+
+Source path: docs/tutorials/container-system-config-tutorial.md
+Canonical source: https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/tutorials/container-system-config-tutorial.md
+
+# Customize `container` default configuration values
+
+> \[!IMPORTANT]
+> This file contains documentation for the CURRENT BRANCH. To find documentation for official releases, find the target release on the [Release Page](https://github.com/apple/container/releases) and click the tag corresponding to your release version.
+>
+> Example: [release 0.4.1 tag](https://github.com/apple/container/tree/0.4.1)
+
+Take a guided tour of setting configurations for `container` CLI commands and services.
+
+## Configuration sources
+
+The `container` service loads values from these TOML files at startup, with first-match-wins precedence:
+
+1. Your user file at `~/.config/container/config.toml`.
+2. An optional file shipped with the `container` package install at `<installRoot>/etc/container/config.toml`.
+
+Any key absent from both files falls back to a hardcoded default. For the full schema and defaults, see the [`config.toml` reference](https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/container-system-config.md).
+
+## Create a custom user TOML configuration file
+
+The `container` service reads your file once at startup, so restart the service whenever you want changes to take effect.
+
+### Open or create your config file
+
+Your editable config lives at `~/.config/container/config.toml`. Create it if it does not exist:
+
+```bash
+mkdir -p ~/.config/container
+touch ~/.config/container/config.toml
+```
+
+### Set the values you want to customize
+
+Open the file in the editor of your choice and add only the sections and keys you want to change.
+
+For this tutorial, increase the default CPU and memory limits used for each new container, and set a DNS domain so containers get hostnames under that domain (a container named `my-web-server` becomes `my-web-server.test`).
+
+```toml
+[container]
+cpus = 8
+memory = "4g"
+
+[dns]
+domain = "test"
+```
+
+Each top-level table maps directly to a section of [ContainerSystemConfig](https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/container-system-config.md).
+
+### Restart the `container` service
+
+To make your edits take effect, stop and start the system:
+
+```bash
+container system stop
+container system start
+```
+
+### Route macOS DNS queries for the domain to `container`
+
+The `[dns] domain` change above only affects the `container` service and the containers
+it runs. Complete the setup by telling macOS to route `*.test` queries there too:
+
+```bash
+sudo container system dns create test
+```
+
+Enter your administrator password when prompted. See [Networking: Set up DNS-based
+container names](https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/networking.md#set-up-dns-based-container-names) for what this step
+does.
+
+### Verify the values are loaded
+
+Use `container system property list` (alias `ls`) to print the merged configuration that the `container` service is using.
+
+```console
+% container system property list
+[build]
+cpus = 2
+memory = "2048mb"
+rosetta = true
+image = "ghcr.io/apple/container-builder-shim/builder:0.11.0"
+
+[container]
+cpus = 8
+memory = "4gb"
+
+[dns]
+domain = "test"
+
+[kernel]
+binaryPath = "opt/kata/share/kata-containers/vmlinux-6.18.15-186"
+url = "https://github.com/kata-containers/kata-containers/releases/download/3.28.0/kata-static-3.28.0-arm64.tar.zst"
+digest = "sha256:f63d54507d1f18635d94475077e4c2330de4d8e05cedf25f7c38f063b0e66a91"
+
+[network]
+
+[registry]
+domain = "docker.io"
+
+[vminit]
+image = "ghcr.io/apple/containerization/vminit:0.34.0"
+```
+
+For machine-readable output, pass `--format json`:
+
+```bash
+container system property list --format json
+```
+
+
+# Document: Tutorial
+
+Source path: docs/tutorials/start-here.md
+Canonical source: https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/tutorials/start-here.md
+
+# Tutorial
+
+> \[!IMPORTANT]
+> This file contains documentation for the CURRENT BRANCH. To find documentation for official releases, find the target release on the [Release Page](https://github.com/apple/container/releases) and click the tag corresponding to your release version.
+>
+> Example: [release 0.4.1 tag](https://github.com/apple/container/tree/0.4.1)
+
+Take a guided tour of `container` by building, running, and publishing a simple web server image.
+
+## Try out the `container` CLI
+
+Start the application, and try out some basic commands to familiarize yourself with the command line interface (CLI) tool.
+
+### Start the container service
+
+Start the services that `container` uses:
+
+```bash
+container system start
+```
+
+If you have not installed a Linux kernel yet, the command will prompt you to install one:
+
+<pre>
+% container system start
+
+Verifying apiserver is running...
+Installing base container filesystem...
+No default kernel configured.
+Install the recommended default kernel from [https://github.com/kata-containers/kata-containers/releases/download/3.17.0/kata-static-3.17.0-arm64.tar.xz]? [Y/n]: y
+Installing kernel...
+%
+</pre>
+
+Then, verify that the application is working by running a command to list all containers:
+
+```bash
+container list --all
+```
+
+If you haven't created any containers yet, the command outputs an empty list:
+
+<pre>
+% container list --all
+ID  IMAGE  OS  ARCH  STATE  IP
+%
+</pre>
+
+### Get CLI help
+
+You can get help for any `container` CLI command by appending the `--help` option:
+
+<pre>
+% container --help
+OVERVIEW: A container platform for macOS
+
+USAGE: container [--debug] <subcommand>
+
+OPTIONS:
+  --debug                 Enable debug output [environment: CONTAINER_DEBUG]
+  --version               Show the CLI version (single line).
+  -h, --help              Show help information.
+
+Detailed version information is available under the system command:
+
+```
+container system version [--format json|table]
+```
+
+CONTAINER SUBCOMMANDS:
+  create                  Create a new container
+  delete, rm              Delete one or more containers
+  exec                    Run a new command in a running container
+  inspect                 Display information about one or more containers
+  kill                    Kill one or more running containers
+  list, ls                List containers
+  logs                    Fetch container stdio or boot logs
+  run                     Run a container
+  start                   Start a container
+  stop                    Stop one or more running containers
+
+IMAGE SUBCOMMANDS:
+  build                   Build an image from a Dockerfile
+  image, i                Manage images
+  registry, r             Manage registry configurations
+
+SYSTEM SUBCOMMANDS:
+  builder                 Manage an image builder instance
+  system, s               Manage system components
+
+%
+</pre>
+
+### Abbreviations
+
+You can save keystrokes by abbreviating commands and options. For example, abbreviate the `container list` command to `container ls`, and the `--all` option to `-a`:
+
+<pre>
+% container ls -a
+ID  IMAGE  OS  ARCH  STATE  IP
+%
+</pre>
+
+Use the `--help` flag to see which abbreviations exist.
+
+### Set up a local DNS domain (optional)
+
+`container` includes an embedded DNS service that simplifies access to your containerized applications. For what each step does, see [Networking: Set up DNS-based container names](https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/networking.md#set-up-dns-based-container-names); the short version, to set up a domain named `test`:
+
+Set `domain = "test"` under `[dns]` in `~/.config/container/config.toml`, then restart the service:
+
+```bash
+container system stop
+container system start
+```
+
+Then tell macOS to route `*.test` queries to `container`'s DNS service:
+
+```bash
+sudo container system dns create test
+```
+
+Enter your administrator password when prompted. The first command requires administrator privileges to create a file containing the domain configuration under the `/etc/resolver` directory, and to tell the macOS DNS resolver to reload its configuration files.
+
+See [Customize `container` default configuration values](https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/tutorials/container-system-config-tutorial.md) for instructions on how to set the default domain name that the `container` service uses for container name resolution on the host. With the default domain set to `test`, if you use `--name my-web-server` to start a container, queries to `my-web-server.test` will respond with that container's IP address.
+
+## Build an image
+
+Set up a `Dockerfile` for a basic Python web server, and use it to build a container image named `web-test`.
+
+### Set up a simple project
+
+Start a terminal, create a directory named `web-test` for the files needed to create the container image:
+
+```bash
+mkdir web-test
+cd web-test
+```
+
+In the `web-test` directory, create a file named `Dockerfile` with this content:
+
+```dockerfile
+FROM docker.io/python:alpine
+WORKDIR /content
+RUN apk add curl
+RUN echo '<!DOCTYPE html><html><head><title>Hello</title></head><body><h1>Hello, world!</h1></body></html>' > index.html
+CMD ["python3", "-m", "http.server", "80", "--bind", "0.0.0.0"]
+```
+
+The `FROM` line instructs the `container` builder to start with a base image containing the latest production version of Python 3.
+
+The `WORKDIR` line creates a directory `/content` in the image, and makes it the current directory.
+
+The first `RUN` line adds the `curl` command to your image, and the second `RUN` line creates a simple HTML landing page named `/content/index.html`.
+
+The `CMD` line configures the container to run a simple web server in Python on port 80. Since the working directory is `/content`, the web server runs in that directory and delivers the content of the file `/content/index.html` when a user requests the index page URL.
+
+The server listens on the wildcard address `0.0.0.0` to allow connections from the host and other containers. You can safely use the listen address `0.0.0.0` inside the container, because external systems have no access to the virtual network to which the container attaches.
+
+### Build the web server image
+
+Run the `container build` command to create an image with the name `web-test` from your `Dockerfile`:
+
+```bash
+container build --tag web-test --file Dockerfile .
+```
+
+The last argument `.` tells the builder to use the current directory (`web-test`) as the root of the build context. You can copy files within the build context into your image using the `COPY` command in your Dockerfile.
+
+After the build completes, list the images. You should see both the base image and the image that you built in the results:
+
+<pre>
+% container image list
+NAME      TAG     DIGEST
+python    alpine  b4d299311845
+web-test  latest  25b99501f174
+%
+</pre>
+
+## Run containers
+
+Using your container image, run a web server and try out different ways of interacting with it.
+
+### Start the webserver
+
+Use `container run` to start a container named `my-web-server` that runs your webserver:
+
+```bash
+container run --name my-web-server --detach --rm web-test
+```
+
+The `--detach` flag runs the container in the background, so that you can continue running commands in the same terminal. The `--rm` flag causes the container to be removed automatically after it stops.
+
+When you list containers now, `my-web-server` is present, along with the container that `container` started to build your image. Note that its IP address, shown in the `IP` column, is `192.168.64.3`:
+
+<pre>
+% container ls
+ID             IMAGE                                               OS     ARCH   STATE    IP
+buildkit       ghcr.io/apple/container-builder-shim/builder:0.0.3  linux  arm64  running  192.168.64.2
+my-web-server  web-test:latest                                     linux  arm64  running  192.168.64.3
+%
+</pre>
+
+Open the website, using the container's IP address in the URL:
+
+```bash
+open http://192.168.64.3
+```
+
+If you configured the default domain name `test` for the `container` service earlier in the tutorial, you can also open the page with the full hostname for the container:
+
+```bash
+open http://my-web-server.test
+```
+
+### Monitor container resource usage
+
+Now that your web server is running, you can monitor its resource usage with the `container stats` command:
+
+```bash
+container stats my-web-server
+```
+
+This displays real-time statistics about CPU usage, memory consumption, network traffic, disk I/O, and the number of running processes:
+
+<pre>
+% container stats --no-stream my-web-server
+Container ID    Cpu %   Memory Usage          Net Rx/Tx            Block I/O            Pids
+my-web-server   0.23%   12.45 MiB / 1.00 GiB  856.00 KiB / 1.2 KiB 2.10 MiB / 512 KiB   2
+%
+</pre>
+
+> \[!NOTE]
+> Without the `--no-stream` flag, `container stats` continuously updates the display in real-time, similar to the `top` command. Press Ctrl+C to exit the live view.
+
+See [Resource usage](https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/resource-usage.md) for what each metric means, setting
+CPU/memory limits, and reclaiming disk space.
+
+### Run other commands in the container
+
+You can run other commands in `my-web-server` by using the `container exec` command. To list the files under the content directory, run an `ls` command:
+
+<pre>
+% container exec my-web-server ls /content
+index.html
+%
+</pre>
+
+If you want to poke around in the container, run a shell and issue one or more commands:
+
+<pre>
+% container exec --tty --interactive my-web-server sh
+/content # ls
+index.html
+/content # uname -a
+Linux my-web-server 6.12.28 #1 SMP Tue May 20 15:19:05 UTC 2025 aarch64 Linux
+/content # exit
+%
+</pre>
+
+The `--tty` and `--interactive` flag allow you to interact with the shell from your host terminal. The `--tty` flag tells the shell in the container that its input is a terminal device, and the `--interactive` flag connects what you input in your host terminal to the input of the shell in the container.
+
+You will often see these two options abbreviated and specified together as `-ti` or `-it`.
+
+### Access the web server from another container
+
+Your web server is accessible from other containers as well as from your host. Launch a second container using your `web-test` image, and this time, specify a `curl` command to retrieve the `index.html` content from the first container.
+
+> \[!NOTE]
+> Container relies on the new features and enhancements present in macOS 26.
+> As a result, the functionality of accessing the web server from another container will not work on macOS 15.
+> See [https://github.com/apple/container/blob/main/docs/technical-overview.md#macos-15-limitations](https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/technical-overview.md#macos-15-limitations) for more details.
+
+```bash
+container run -it --rm web-test curl http://192.168.64.3
+```
+
+The output should appear as:
+
+<pre>
+% container run -it --rm web-test curl http://192.168.64.3
+&lt;!DOCTYPE html>&lt;html>&lt;head>&lt;title>Hello&lt;/title>&lt;/head>&lt;body>&lt;h1>Hello, world!&lt;/h1>&lt;/body>&lt;/html>
+%
+</pre>
+
+If you set up the `test` domain earlier, you can achieve the same result with:
+
+```bash
+container run -it --rm web-test curl http://my-web-server.test
+```
+
+## Run a published image
+
+Push your image to a container registry, publishing it so that you and others can use it.
+
+### Publish the web server image
+
+To publish your image, you need to push images to a registry service that stores the image for future use. Typically, you need to authenticate with a registry to push an image. This example assumes that you have an account at a hypothetical registry named `some-registry.example.com` with username `fido` and a password or token `my-secret`, and that your personal repository name is the same as your username.
+
+To sign into a secure registry with your login credentials, enter your username and password at the prompts after running:
+
+```bash
+container registry login some-registry.example.com
+```
+
+Create another name for your image that includes the registry name, your repository name, and the image name, with the tag `latest`:
+
+```bash
+container image tag web-test some-registry.example.com/fido/web-test:latest
+```
+
+Then, push the image:
+
+```bash
+container image push some-registry.example.com/fido/web-test:latest
+```
+
+> \[!NOTE]
+> By default `container` is configured to use Docker Hub.
+> You can change the default registry by setting `domain` under `[registry]` in `~/.config/container/config.toml`:
+>
+> ```toml
+> [registry]
+> domain = "some-registry.example.com"
+> ```
+>
+> See the other sub commands under `container registry` for more options.
+
+### Pull and run your image
+
+To validate your published image, stop your current web server container, remove the image that you built, and then run using the remote image:
+
+```bash
+container stop my-web-server
+container image delete web-test some-registry.example.com/fido/web-test:latest
+container run --name my-web-server --detach --rm some-registry.example.com/fido/web-test:latest
+```
+
+## Clean up
+
+Stop your container and shut down the application.
+
+### Shut down the web server
+
+Stop your web server container with:
+
+```bash
+container stop my-web-server
+```
+
+If you list all running and stopped containers, you will see that the `--rm` flag you supplied with the `container run` command caused the container to be removed:
+
+<pre>
+% container list --all
+ID        IMAGE                                               OS     ARCH   STATE    IP
+buildkit  ghcr.io/apple/container-builder-shim/builder:0.0.3  linux  arm64  running  192.168.64.2
+%
+</pre>
+
+### Stop the container service
+
+When you want to stop `container` completely, run:
+
+```bash
+container system stop
+```
+
+
+# Document: Resource limits (ulimits)
+
+Source path: docs/ulimits.md
+Canonical source: https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/ulimits.md
+
+# Resource limits (ulimits)
+
+Set per-process resource limits for your containers.
+
+## Overview
+
+The `--ulimit` option of `container run` (and `container create`) sets Linux resource
+limits (`rlimit`s) for the container's init process.
+
+## Syntax
+
+```bash
+container run --ulimit <type>=<soft>[:<hard>] ...
+```
+
+If you set a single value, it applies as both soft and hard limit:
+
+```bash
+container run --ulimit nofile=65536 -it ubuntu:24.04 bash
+```
+
+Set soft and hard limits independently:
+
+```bash
+container run --ulimit nofile=65536:131072 -it ubuntu:24.04 bash
+```
+
+Set multiple limits by repeating the flag:
+
+```bash
+container run --ulimit nofile=65536:131072 --ulimit cpu=60 -it ubuntu:24.04 bash
+```
+
+Use `unlimited` for no limit:
+
+```bash
+container run --ulimit nproc=unlimited -it ubuntu:24.04 bash
+```
+
+> \[!NOTE]
+> `nofile=unlimited` reliably fails to start the container
+> (`NSPOSIXErrorDomain Code=1 "Operation not permitted"`). This isn't a `container`
+> bug — `unlimited` sets both soft and hard limits to `UINT64_MAX`, and Linux caps
+> `RLIMIT_NOFILE`'s hard limit at the guest's `/proc/sys/fs/nr_open` (`1048576` here);
+> anything above that ceiling fails the same way, `unlimited` included. Use an explicit
+> value at or below `nr_open` instead, e.g. `nofile=1048576`.
+
+## Supported limit types
+
+| Type         | Maps to             | Description                                          |
+| ------------ | ------------------- | ---------------------------------------------------- |
+| `core`       | `RLIMIT_CORE`       | Maximum core file size, in bytes                     |
+| `cpu`        | `RLIMIT_CPU`        | Maximum CPU time, in seconds                         |
+| `data`       | `RLIMIT_DATA`       | Maximum data segment size, in bytes                  |
+| `fsize`      | `RLIMIT_FSIZE`      | Maximum file size, in bytes                          |
+| `locks`      | `RLIMIT_LOCKS`      | Maximum number of file locks                         |
+| `memlock`    | `RLIMIT_MEMLOCK`    | Maximum amount of memory that may be locked into RAM |
+| `msgqueue`   | `RLIMIT_MSGQUEUE`   | Maximum bytes in POSIX message queues                |
+| `nice`       | `RLIMIT_NICE`       | Maximum nice priority                                |
+| `nofile`     | `RLIMIT_NOFILE`     | Maximum number of open file descriptors              |
+| `nproc`      | `RLIMIT_NPROC`      | Maximum number of processes                          |
+| `rss`        | `RLIMIT_RSS`        | Maximum resident set size, in bytes                  |
+| `rtprio`     | `RLIMIT_RTPRIO`     | Maximum real-time priority                           |
+| `rttime`     | `RLIMIT_RTTIME`     | Maximum real-time CPU time, in microseconds          |
+| `sigpending` | `RLIMIT_SIGPENDING` | Maximum number of pending signals                    |
+| `stack`      | `RLIMIT_STACK`      | Maximum stack size, in bytes                         |
+
+## Inspect limits inside a container
+
+```console
+% container run -it --rm ubuntu:24.04 bash -c "ulimit -a"
+open files                          (-n) 1048576
+cpu time                   (seconds, -t) unlimited
+...
+% container run --ulimit nofile=131072 --ulimit cpu=60 -it --rm ubuntu:24.04 bash -c "ulimit -a"
+open files                          (-n) 131072
+cpu time                   (seconds, -t) 60
+...
+```
+
+
+# Document: Mounts and volumes
+
+Source path: docs/volumes.md
+Canonical source: https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/volumes.md
+
+# Mounts and volumes
+
+Share data from your host with containers, create named volumes with better
+performance and lifecycle guarantees than bind mounts, and mount temporary,
+memory-backed storage with tmpfs.
+
+## Share host data
+
+With the `--volume` option of `container run`, you can share data between the host system and one or more containers, and you can persist data across multiple container runs. Use the volume option to mount a folder on your host to a filesystem path in the container.
+
+This example mounts a folder named `assets` on your Desktop to the directory `/content/assets` in a container:
+
+<pre>
+% ls -l ~/Desktop/assets
+total 8
+-rw-r--r--@ 1 fido  staff  2410 May 13 18:36 link.svg
+% container run --volume ${HOME}/Desktop/assets:/content/assets docker.io/python:alpine ls -l /content/assets
+total 4
+-rw-r--r-- 1 root root 2410 May 14 01:36 link.svg
+%
+</pre>
+
+The argument to `--volume` in the example consists of the full pathname for the host folder and the full pathname for the mount point in the container, separated by a colon.
+
+The `--mount` option uses a comma-separated `key=value` syntax to achieve the same result:
+
+<pre>
+% container run --mount source=${HOME}/Desktop/assets,target=/content/assets docker.io/python:alpine ls -l /content/assets
+total 4
+-rw-r--r-- 1 root root 2410 May 14 01:36 link.svg
+%
+</pre>
+
+## Named volumes
+
+Named volumes offer complementary features to bind mounts. Use a named volume when you
+don't need to share data with the host filesystem, and you want better I/O performance
+than a bind mount provides.
+
+Create a named volume with `container volume create`:
+
+```bash
+container volume create foo
+```
+
+By default, a volume uses a journaled `ext4` filesystem. Configure the journal mode and
+size at creation time with `--opt`:
+
+```bash
+# ordered journaling (default)
+container volume create --opt journal=ordered myvolume
+
+# writeback journaling with a 64 MiB journal
+container volume create --opt journal=writeback:64m myvolume
+
+# full data journaling with an explicit volume size
+container volume create --opt journal=journal --opt size=10g myvolume
+```
+
+List and remove volumes:
+
+```bash
+container volume list
+container volume delete foo
+```
+
+Show a volume's configuration, including its size and the path to its backing image:
+
+```bash
+container volume inspect foo
+```
+
+```console
+[
+  {
+    "configuration" : {
+      "creationDate" : "2026-08-10T21:39:10Z",
+      "driver" : "local",
+      "format" : "ext4",
+      "labels" : {
+
+      },
+      "name" : "foo",
+      "options" : {
+
+      },
+      "sizeInBytes" : 549755813888,
+      "source" : "\/Users\/fido\/Library\/Application Support\/com.apple.container\/volumes\/foo\/volume.img"
+    },
+    "id" : "foo"
+  }
+]
+```
+
+A volume's image is sparse, so `sizeInBytes` reports the size the volume can grow to —
+512 GiB by default — rather than the space it currently occupies on disk.
+
+Remove every volume that has no container referencing it:
+
+```bash
+container volume prune
+```
+
+> \[!WARNING]
+> `container volume prune` deletes the volumes and their contents immediately, and the data
+> can't be recovered.
+
+Mount a named volume the same way you bind-mount a host directory, using the volume
+name as the source:
+
+```bash
+container run -it --rm --volume foo:/mnt/foo alpine sh
+```
+
+Or with `--mount`:
+
+```bash
+container run -it --rm --mount type=volume,source=foo,target=/mnt/foo alpine sh
+```
+
+## Anonymous volumes
+
+Using `-v /path` or `--mount type=volume,target=/path` without specifying a source creates
+a named volume for you automatically — an anonymous volume. It's named with a bare UUID
+(no prefix) and tagged with the `com.apple.container.resource.anonymous` label:
+
+```bash
+# Creates an anonymous volume
+container run -v /data alpine
+```
+
+`container volume list` marks it `anonymous` in the `TYPE` column. For scripting, select it
+by its label, since the JSON output has no type field:
+
+```bash
+VOL=$(container volume list --format json | jq -r '.[] | select(.configuration.labels["com.apple.container.resource.anonymous"] != null) | .id')
+container run -v $VOL:/data alpine
+```
+
+> \[!NOTE]
+> Unlike Docker, anonymous volumes aren't deleted automatically when the container is
+> removed with `--rm`. Delete them explicitly:
+>
+> ```bash
+> container volume delete $VOL
+> ```
+
+## Tmpfs mounts
+
+A `tmpfs` mount is temporary storage that lives only in the guest VM's memory. When the
+container stops, the mount and everything written to it are gone. You can't share a
+`tmpfs` mount between containers, unlike a bind mount or a named volume.
+
+Use a `tmpfs` mount when you need high-performance storage and don't need the data to
+persist after the container stops.
+
+Use either `--tmpfs` or `--mount type=tmpfs`. Both accept the `size` and `mode` options;
+see [Mount options](#mount-options) for the syntax each one takes.
+
+Mount a `tmpfs` filesystem at `/tmpfsmount1` with `--tmpfs`:
+
+```bash
+container run --rm --tmpfs /tmpfsmount1 alpine mount -t tmpfs
+```
+
+```console
+tmpfs on /tmpfsmount1 type tmpfs (rw,relatime)
+tmpfs on /dev/shm type tmpfs (rw,nosuid,nodev,noexec,relatime,size=65536k)
+tmpfs on /sys/firmware type tmpfs (ro,nosuid,nodev,noexec,relatime)
+```
+
+The last two entries are runtime defaults, present in every container. See
+[Runtime configuration](https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/runtime-configuration.md#mask-and-protect-paths-inside-a-container)
+for what mounts `/sys/firmware` read-only.
+
+Mount a `tmpfs` filesystem with a 512 MiB size limit using `--mount`:
+
+```bash
+container run --rm --mount type=tmpfs,target=/tmpfsmount1,size=512M alpine stat -f /tmpfsmount1
+```
+
+```console
+  File: "/tmpfsmount1"
+    ID: 89a6eaf01fc1572c Namelen: 255     Type: tmpfs
+Block size: 4096
+Blocks: Total: 131072     Free: 131071     Available: 131071
+Inodes: Total: 142352     Free: 142350
+```
+
+131072 blocks × 4096 bytes = 512 MiB, confirming the size limit took effect.
+
+Set the mount's permission bits with `mode` (octal, same as `chmod`):
+
+```bash
+container run --rm --mount type=tmpfs,target=/tmpfsmount1,size=512M,mode=1777 alpine stat -c '%a' /tmpfsmount1
+```
+
+```console
+1777
+```
+
+## Mount options
+
+Mount-time options go on `container run` or `container create`, using `--mount`,
+`--volume`, or `--tmpfs`. Creation-time options go on `container volume create`, using
+`--opt`.
+
+### Options for `--mount`
+
+`--mount` takes comma-separated `key=value` pairs. An unrecognized key is an error.
+
+| Key                            | Values                                       | Applies to                 | Description                                                                                                                                      |
+| ------------------------------ | -------------------------------------------- | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `type`                         | `bind` (alias `virtiofs`), `volume`, `tmpfs` | —                          | The kind of mount to create. Defaults to a bind mount.                                                                                           |
+| `source`, `src`                | host path, or volume name                    | bind mounts, named volumes | The host directory to share, or the name of the volume to mount. Omit it for a tmpfs mount, or to get an [anonymous volume](#anonymous-volumes). |
+| `destination`, `dst`, `target` | absolute container path                      | all                        | Where the mount appears inside the container.                                                                                                    |
+| `readonly`, `ro`               | key only, no value                           | all                        | Mount read-only.                                                                                                                                 |
+| `size`                         | for example `512M`, `1G`                     | tmpfs only                 | Upper bound on the guest memory the mount can consume.                                                                                           |
+| `mode`                         | octal, for example `1777`                    | tmpfs only                 | Permission bits for the mount point, the same as `chmod`.                                                                                        |
+
+### Options for `--volume`
+
+`--volume` uses the colon-separated form `[source:]destination[:options]`, comma-separated
+if there is more than one:
+
+```bash
+container run --rm --volume foo:/mnt/foo:ro alpine sh
+```
+
+| Key  | Values             | Description      |
+| ---- | ------------------ | ---------------- |
+| `ro` | key only, no value | Mount read-only. |
+
+### Options for `--tmpfs`
+
+`--tmpfs` uses the colon-separated form `destination[:options]`, comma-separated if there
+is more than one:
+
+```bash
+container run --rm --tmpfs /tmpfsmount1:size=64M,mode=1777 alpine sh
+```
+
+| Key    | Values                    | Description                                               |
+| ------ | ------------------------- | --------------------------------------------------------- |
+| `size` | for example `512M`, `1G`  | Upper bound on the guest memory the mount can consume.    |
+| `mode` | octal, for example `1777` | Permission bits for the mount point, the same as `chmod`. |
+
+### Options for `container volume create`
+
+| Key       | Values                                                                          | Description                                                                             |
+| --------- | ------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `size`    | for example `10g`                                                               | Size of the volume's filesystem image, fixed at creation time.                          |
+| `journal` | `ordered` (default), `writeback`, `journal`, each optionally as `<mode>:<size>` | The `ext4` journal mode, and optionally the journal size — for example `writeback:64m`. |
+

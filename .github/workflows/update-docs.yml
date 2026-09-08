@@ -112,7 +112,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          git add -- sources.lock.json llms.txt llms-full.txt traefik netbird podman docker n8n grafana victoriametrics victorialogs victoriametrics-datasource victorialogs-datasource vmestimator zitadel ffmpeg yt-dlp searxng bun trigger-dev aria2
+          git add -- sources.lock.json llms.txt llms-full.txt traefik netbird podman docker container n8n grafana victoriametrics victorialogs victoriametrics-datasource victorialogs-datasource vmestimator zitadel ffmpeg yt-dlp searxng bun trigger-dev aria2
           if git diff --cached --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
@@ -131,6 +131,7 @@ jobs:
             netbird
             podman
             docker
+            container
             n8n
             grafana
             victoriametrics
@@ -205,7 +206,7 @@ jobs:
             git fetch --quiet origin main
             git reset --quiet --hard FETCH_HEAD
 
-            rm -rf traefik netbird podman docker n8n grafana victoriametrics victorialogs victoriametrics-datasource victorialogs-datasource vmestimator zitadel ffmpeg yt-dlp searxng bun trigger-dev aria2
+            rm -rf traefik netbird podman docker container n8n grafana victoriametrics victorialogs victoriametrics-datasource victorialogs-datasource vmestimator zitadel ffmpeg yt-dlp searxng bun trigger-dev aria2
             cp _generated/sources.lock.json sources.lock.json
             cp _generated/llms.txt llms.txt
             cp _generated/llms-full.txt llms-full.txt
@@ -213,6 +214,7 @@ jobs:
             cp -R _generated/netbird netbird
             cp -R _generated/podman podman
             cp -R _generated/docker docker
+            cp -R _generated/container container
             cp -R _generated/n8n n8n
             cp -R _generated/grafana grafana
             cp -R _generated/victoriametrics victoriametrics
@@ -228,7 +230,7 @@ jobs:
             cp -R _generated/trigger-dev trigger-dev
             cp -R _generated/aria2 aria2
 
-            git add -- sources.lock.json llms.txt llms-full.txt traefik netbird podman docker n8n grafana victoriametrics victorialogs victoriametrics-datasource victorialogs-datasource vmestimator zitadel ffmpeg yt-dlp searxng bun trigger-dev aria2
+            git add -- sources.lock.json llms.txt llms-full.txt traefik netbird podman docker container n8n grafana victoriametrics victorialogs victoriametrics-datasource victorialogs-datasource vmestimator zitadel ffmpeg yt-dlp searxng bun trigger-dev aria2
             if git diff --cached --quiet; then
               echo "main already carries these snapshots; nothing to commit."
               exit 0
