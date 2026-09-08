@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/builtin/credentials/msg91.md](https://github.com/n8n-io/n8n-docs/blob/fb515b4db9cc670949c32d45862af957eabbff8d/docs/integrations/builtin/credentials/msg91.md)
+> Commit-pinned source for n8n main: [docs/integrations/builtin/credentials/msg91.md](https://github.com/n8n-io/n8n-docs/blob/add4135738cc79c86ba3bf33e3c9756c5e6f4571/docs/integrations/builtin/credentials/msg91.md)
 
 # MSG91 credentials <a id="msg91-credentials"></a>
 

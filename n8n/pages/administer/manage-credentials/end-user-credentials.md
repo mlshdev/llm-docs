@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/administer/manage-credentials/end-user-credentials.md](https://github.com/n8n-io/n8n-docs/blob/fb515b4db9cc670949c32d45862af957eabbff8d/docs/administer/manage-credentials/end-user-credentials.md)
+> Commit-pinned source for n8n main: [docs/administer/manage-credentials/end-user-credentials.md](https://github.com/n8n-io/n8n-docs/blob/add4135738cc79c86ba3bf33e3c9756c5e6f4571/docs/administer/manage-credentials/end-user-credentials.md)
 
 # End-user credentials
 
@@ -50,7 +50,7 @@ You can mix fixed and end-user credentials across nodes in one workflow. For exa
 - **Team projects only:** You can only create end-user credentials in team projects, not in personal projects. This keeps them centrally managed, where an admin sets up the credential template, rather than individual users creating their own in personal projects.
 - **OAuth credentials only:** End-user credentials support OAuth-based credential types only.
 - **One connection per user:** Each user can connect a single account per end-user credential template.
-- **Supported triggers:** End-user credential resolution works with the manual trigger, [Chat Hub](https://docs.n8n.io/build/ways-of-building-workflows/chat-hub), the MCP Server Trigger, and the [n8n Form Trigger](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.formtrigger).
+- **Supported triggers:** End-user credential resolution works with the manual trigger, [Chat Hub](https://docs.n8n.io/build/ways-of-building-workflows/chat-hub), the MCP Server Trigger, the [n8n Form Trigger](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.formtrigger), and the [Chat Trigger](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger) with **Hosted Chat** only, not Embedded Chat/webhook mode. The Form Trigger and Chat Trigger resolve end-user credentials when they use **n8n User Auth** authentication, so each user runs the workflow with their own connected account.
 
 ## Create an end-user credential
 

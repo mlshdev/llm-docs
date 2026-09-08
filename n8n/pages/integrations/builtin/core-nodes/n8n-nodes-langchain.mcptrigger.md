@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/builtin/core-nodes/n8n-nodes-langchain.mcptrigger.md](https://github.com/n8n-io/n8n-docs/blob/fb515b4db9cc670949c32d45862af957eabbff8d/docs/integrations/builtin/core-nodes/n8n-nodes-langchain.mcptrigger.md)
+> Commit-pinned source for n8n main: [docs/integrations/builtin/core-nodes/n8n-nodes-langchain.mcptrigger.md](https://github.com/n8n-io/n8n-docs/blob/add4135738cc79c86ba3bf33e3c9756c5e6f4571/docs/integrations/builtin/core-nodes/n8n-nodes-langchain.mcptrigger.md)
 
 # MCP Server Trigger node <a id="mcp-server-trigger-node"></a>
 
@@ -37,8 +37,9 @@ Select **Test URL** or **Production URL** to toggle which URL n8n displays.
 
 ### Authentication <a id="authentication"></a>
 
-You can require authentication for clients connecting to your MCP URL. Choose from these authentication methods:
+You can require authentication for clients connecting to your MCP URL. Choose from:
 
+- None
 - Bearer auth
 - Header auth
 
@@ -94,6 +95,12 @@ The MCP Server Trigger node relies on Server-Sent Events (SSE) or streamable HTT
 > **Caution when running with multiple webhook replicas**
 >
 > If you run an MCP Server Trigger node with multiple webhook replicas and don't route all `/mcp*` requests to a single, dedicated webhook replica, your SSE and streamable HTTP connections will frequently break or fail to reliably deliver events.
+
+### claude.ai asks users to sign in when Authentication is None <a id="claudeai-asks-users-to-sign-in-when-authentication-is-none"></a>
+
+claude.ai custom connectors ask you to sign in to n8n even when you set **Authentication** to **None**. claude.ai is the only client known to do this.
+
+Your instance offers n8n user authentication for other triggers. claude.ai assumes every MCP endpoint on your domain uses it.
 
 ## Related resources <a id="related-resources"></a>
 

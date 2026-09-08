@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/administer/manage-users-and-access/verify-user-identity/use-saml/set-up-okta-workforce-identity-saml.md](https://github.com/n8n-io/n8n-docs/blob/fb515b4db9cc670949c32d45862af957eabbff8d/docs/administer/manage-users-and-access/verify-user-identity/use-saml/set-up-okta-workforce-identity-saml.md)
+> Commit-pinned source for n8n main: [docs/administer/manage-users-and-access/verify-user-identity/use-saml/set-up-okta-workforce-identity-saml.md](https://github.com/n8n-io/n8n-docs/blob/add4135738cc79c86ba3bf33e3c9756c5e6f4571/docs/administer/manage-users-and-access/verify-user-identity/use-saml/set-up-okta-workforce-identity-saml.md)
 
 # Okta Workforce Identity SAML setup <a id="okta-workforce-identity-saml-setup"></a>
 
@@ -21,7 +21,7 @@ Read the [Set up SAML](https://docs.n8n.io/administer/manage-users-and-access/ve
 
 In addition to the following instructions, this visual step-by-step guide shows how to set up SAML in n8n with Okta:
 
-[Visual step-by-step guide for setting up SAML with Okta](https://raw.githubusercontent.com/n8n-io/n8n-docs/fb515b4db9cc670949c32d45862af957eabbff8d/docs/administer/.gitbook/assets/n8n-saml-with-okta.pdf)
+[Visual step-by-step guide for setting up SAML with Okta](https://raw.githubusercontent.com/n8n-io/n8n-docs/add4135738cc79c86ba3bf33e3c9756c5e6f4571/docs/administer/.gitbook/assets/n8n-saml-with-okta.pdf)
 
 1. In your Okta admin panel, select **Applications** > **Applications**.
 

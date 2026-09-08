@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/administer/use-source-control-and-environments/use-git-in-n8n.md](https://github.com/n8n-io/n8n-docs/blob/fb515b4db9cc670949c32d45862af957eabbff8d/docs/administer/use-source-control-and-environments/use-git-in-n8n.md)
+> Commit-pinned source for n8n main: [docs/administer/use-source-control-and-environments/use-git-in-n8n.md](https://github.com/n8n-io/n8n-docs/blob/add4135738cc79c86ba3bf33e3c9756c5e6f4571/docs/administer/use-source-control-and-environments/use-git-in-n8n.md)
 
 # Git and n8n <a id="git-and-n8n"></a>
 
@@ -29,7 +29,7 @@ This page introduces the Git concepts and terminology used in n8n. It doesn't co
 
 Git uses branches to maintain multiple copies of a document alongside each other. Every branch has its own version. A common pattern is to have a main branch, and then everyone who wants to contribute to the project works on their own branch (copy). When they finish their work, their branch is merged back into the main branch.
 
-![Main branch with two separate branches forked from it, each merged back into main at a different point](https://raw.githubusercontent.com/n8n-io/n8n-docs/fb515b4db9cc670949c32d45862af957eabbff8d/docs/administer/.gitbook/assets/simple-git-branch.png)
+![Main branch with two separate branches forked from it, each merged back into main at a different point](https://raw.githubusercontent.com/n8n-io/n8n-docs/add4135738cc79c86ba3bf33e3c9756c5e6f4571/docs/administer/.gitbook/assets/simple-git-branch.png)
 
 ## Local and remote: Moving work between your machine and a Git provider <a id="local-and-remote-moving-work-between-your-machine-and-a-git-provider"></a>
 

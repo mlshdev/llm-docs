@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/work-with-data/reference-data/link-data-items/how-items-link-through-workflows.md](https://github.com/n8n-io/n8n-docs/blob/fb515b4db9cc670949c32d45862af957eabbff8d/docs/build/work-with-data/reference-data/link-data-items/how-items-link-through-workflows.md)
+> Commit-pinned source for n8n main: [docs/build/work-with-data/reference-data/link-data-items/how-items-link-through-workflows.md](https://github.com/n8n-io/n8n-docs/blob/add4135738cc79c86ba3bf33e3c9756c5e6f4571/docs/build/work-with-data/reference-data/link-data-items/how-items-link-through-workflows.md)
 
 # How items link through workflows <a id="how-items-link-through-workflows"></a>
 
@@ -25,7 +25,7 @@ If n8n can't link items automatically, and the node doesn't handle the item link
 
 ## Item linking example <a id="item-linking-example"></a>
 
-![A diagram showing the threads linking multiple items back through a workflow](https://raw.githubusercontent.com/n8n-io/n8n-docs/fb515b4db9cc670949c32d45862af957eabbff8d/docs/build/.gitbook/assets/item-linking-multiple-lines.png)
+![A diagram showing the threads linking multiple items back through a workflow](https://raw.githubusercontent.com/n8n-io/n8n-docs/add4135738cc79c86ba3bf33e3c9756c5e6f4571/docs/build/.gitbook/assets/item-linking-multiple-lines.png)
 
 In this example, it's possible for n8n to link an item in one node back several steps, despite the item order changing. This means the node that sorts movies alphabetically can access information about the linked item in the node that gets famous movie actors.
 
