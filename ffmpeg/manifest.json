@@ -5,8 +5,8 @@
   "repository": "FFmpeg/FFmpeg",
   "tag": "master",
   "branch": "master",
-  "sourceCommittedAt": "2026-09-07T15:52:44Z",
-  "sourceCommit": "e4ed85ab73406c970c7cc30207f663572f5a4c30",
+  "sourceCommittedAt": "2026-09-07T02:32:24Z",
+  "sourceCommit": "6962b42aa8e40d935ec8704821e98ef67008bf45",
   "documentCount": 33,
   "notes": [
     "FFmpeg tracks master because its GitHub mirror does not publish GitHub releases.",
