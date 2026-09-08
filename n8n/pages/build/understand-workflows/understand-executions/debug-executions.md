@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/understand-workflows/understand-executions/debug-executions.md](https://github.com/n8n-io/n8n-docs/blob/c0d71f6a5820f602c6860f9c506c8fc6073a4636/docs/build/understand-workflows/understand-executions/debug-executions.md)
+> Commit-pinned source for n8n main: [docs/build/understand-workflows/understand-executions/debug-executions.md](https://github.com/n8n-io/n8n-docs/blob/50208b802689f4eeeb23e88e9fb10a47726f9755/docs/build/understand-workflows/understand-executions/debug-executions.md)
 
 # Debug and re-run past executions <a id="debug-and-re-run-past-executions"></a>
 

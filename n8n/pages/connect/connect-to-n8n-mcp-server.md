@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/connect/connect-to-n8n-mcp-server.md](https://github.com/n8n-io/n8n-docs/blob/c0d71f6a5820f602c6860f9c506c8fc6073a4636/docs/connect/connect-to-n8n-mcp-server.md)
+> Commit-pinned source for n8n main: [docs/connect/connect-to-n8n-mcp-server.md](https://github.com/n8n-io/n8n-docs/blob/50208b802689f4eeeb23e88e9fb10a47726f9755/docs/connect/connect-to-n8n-mcp-server.md)
 
 # Connect to n8n MCP server
 
@@ -8,6 +8,15 @@ n8n's built-in MCP server lets supported clients, such as Lovable or Claude Desk
 - Interact with workflows marked as available in MCP
 - Trigger and test exposed workflows
 - Create and edit workflows and data tables
+
+> **Info**
+> **Connecting a chat client such as Claude Desktop?**
+>
+> 1. [Enable MCP access](#enabling-mcp-access) on your instance.
+> 2. Copy the **Server URL** from **Settings > Instance-level MCP > Connect a client**. It ends in `/mcp-server/http`.
+> 3. Paste it into your client. For the exact steps per client, see [MCP client connection examples](https://docs.n8n.io/connect/connect-to-n8n-mcp-server/mcp-client-examples).
+>
+> The rest of this page covers the settings, permissions, and troubleshooting behind those steps.
 
 ## Difference between instance-level MCP access and MCP Server Trigger node <a id="difference-between-instance-level-mcp-access-and-mcp-server-trigger-node"></a>
 
@@ -34,7 +43,7 @@ In comparison, you configure an MCP Server Trigger node inside a single workflow
 1. Navigate to **Settings > Instance-level MCP**.
 2. Select **Enable MCP access** (requires instance owner or admin permissions).
 
-![The Instance-level MCP page before you enable MCP access, showing the Enable MCP access button](https://raw.githubusercontent.com/n8n-io/n8n-docs/c0d71f6a5820f602c6860f9c506c8fc6073a4636/docs/connect/.gitbook/assets/mcp-enable-screen.png)
+![The Instance-level MCP page before you enable MCP access, showing the Enable MCP access button](https://raw.githubusercontent.com/n8n-io/n8n-docs/50208b802689f4eeeb23e88e9fb10a47726f9755/docs/connect/.gitbook/assets/mcp-enable-screen.png)
 
 Once enabled, the page groups settings into three sections:
 
@@ -42,7 +51,7 @@ Once enabled, the page groups settings into three sections:
 - **Access**: shows how many workflows (and, if your instance has the agents feature, agents) are exposed to MCP clients, see [Exposing workflows to MCP clients](#exposing-workflows-to-mcp-clients) and [Exposing agents to MCP clients](#exposing-agents-to-mcp-clients). Instance owners and admins also see **Allowed callback URLs** here, see [Restricting OAuth callback URLs](#restricting-oauth-callback-urls).
 - **Connected clients**: shows how many clients currently have access, each with its own granted permissions. Select **View all** to review or revoke access for individual clients, see Reviewing and revoking client access.
 
-![The Instance-level MCP page after you enable MCP access, showing Connection details, Access, and Connected clients](https://raw.githubusercontent.com/n8n-io/n8n-docs/c0d71f6a5820f602c6860f9c506c8fc6073a4636/docs/connect/.gitbook/assets/mcp-enabled-screen.png)
+![The Instance-level MCP page after you enable MCP access, showing Connection details, Access, and Connected clients](https://raw.githubusercontent.com/n8n-io/n8n-docs/50208b802689f4eeeb23e88e9fb10a47726f9755/docs/connect/.gitbook/assets/mcp-enabled-screen.png)
 
 **To disable:** In **Connection details**, select the **MCP status** control and choose **Disable**. n8n asks you to confirm, since disabling disconnects every connected client and revokes its access. You can turn MCP access back on later.
 
@@ -156,7 +165,7 @@ You can use the **Options** menu !\[Options menu]\(.gitbook/assets/three-dot-opt
 2. Select the **Options** menu !\[Options icon]\(.gitbook/assets/three-dot-options-menu (1).png) next to the name of the project or folder.
 3. Select **Manage MCP access**, then either **Enable MCP** or **Disable MCP**.
 
-![Options menu with Manage MCP access expanded, showing Enable MCP access and Disable MCP access](https://raw.githubusercontent.com/n8n-io/n8n-docs/c0d71f6a5820f602c6860f9c506c8fc6073a4636/docs/connect/.gitbook/assets/mcp_bulk_toggle%20\(1\).png)
+![Options menu with Manage MCP access expanded, showing Enable MCP access and Disable MCP access](https://raw.githubusercontent.com/n8n-io/n8n-docs/50208b802689f4eeeb23e88e9fb10a47726f9755/docs/connect/.gitbook/assets/mcp_bulk_toggle%20\(1\).png)
 
 > **Info**
 > **Note**
@@ -208,7 +217,7 @@ To help MCP clients identify workflows, you can add free-text descriptions as fo
    2. Click the main **Workflow menu** (`...`) in the top-right corner.
    3. Select **Edit description**.
 
-![Workflow's main menu open, with Edit description highlighted](https://raw.githubusercontent.com/n8n-io/n8n-docs/c0d71f6a5820f602c6860f9c506c8fc6073a4636/docs/connect/.gitbook/assets/mcp_workflow_description%20\(1\).png)
+![Workflow's main menu open, with Edit description highlighted](https://raw.githubusercontent.com/n8n-io/n8n-docs/50208b802689f4eeeb23e88e9fb10a47726f9755/docs/connect/.gitbook/assets/mcp_workflow_description%20\(1\).png)
 
 ## Exposing agents to MCP clients <a id="exposing-agents-to-mcp-clients"></a>
 
@@ -306,6 +315,14 @@ If you encounter issues connecting MCP clients to your n8n instance, consider th
 - Confirm that the authentication method (OAuth or API key) is configured correctly in your MCP client.
 - If your instance runs behind a reverse proxy, load balancer, or web application firewall, make sure it doesn't strip the MCP request headers. See [MCP request headers](#mcp-request-headers).
 - Review n8n server logs for any error messages related to MCP connections.
+
+### Insufficient permissions when authorizing a client <a id="insufficient-permissions-when-authorizing-a-client"></a>
+
+Your client sends you to n8n to approve access, and you land on a page reading **You do not have sufficient permissions to authorize this request**.
+
+For the instance MCP server, this means MCP access isn't on for your instance. The message doesn't say so, but there's no other cause. While the server runs, any signed-in user can approve a client. While it's off, n8n refuses everyone.
+
+Ask an instance owner or admin to turn it on, see [Enabling MCP access](#enabling-mcp-access), then connect the client again.
 
 ### MCP request headers <a id="mcp-request-headers"></a>
 

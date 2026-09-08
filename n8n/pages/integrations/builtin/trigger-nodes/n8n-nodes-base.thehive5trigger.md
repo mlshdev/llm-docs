@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/builtin/trigger-nodes/n8n-nodes-base.thehive5trigger.md](https://github.com/n8n-io/n8n-docs/blob/c0d71f6a5820f602c6860f9c506c8fc6073a4636/docs/integrations/builtin/trigger-nodes/n8n-nodes-base.thehive5trigger.md)
+> Commit-pinned source for n8n main: [docs/integrations/builtin/trigger-nodes/n8n-nodes-base.thehive5trigger.md](https://github.com/n8n-io/n8n-docs/blob/50208b802689f4eeeb23e88e9fb10a47726f9755/docs/integrations/builtin/trigger-nodes/n8n-nodes-base.thehive5trigger.md)
 
 # TheHive 5 Trigger node <a id="thehive-5-trigger-node"></a>
 

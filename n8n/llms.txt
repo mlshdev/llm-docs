@@ -1,6 +1,6 @@
 # n8n main
 
-> Documentation generated from the latest `main` branch commit of [n8n-io/n8n-docs](https://github.com/n8n-io/n8n-docs) and pinned to immutable source commit `c0d71f6a5820f602c6860f9c506c8fc6073a4636`.
+> Documentation generated from the latest `main` branch commit of [n8n-io/n8n-docs](https://github.com/n8n-io/n8n-docs) and pinned to immutable source commit `50208b802689f4eeeb23e88e9fb10a47726f9755`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for n8n main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -1315,6 +1315,7 @@
 - [Push and pull](pages/administer/use-source-control-and-environments/push-and-pull-changes.md): Source `docs/administer/use-source-control-and-environments/push-and-pull-changes.md`.
 - [Compare changes with workflow diffs](pages/administer/use-source-control-and-environments/compare-versions.md): Source `docs/administer/use-source-control-and-environments/compare-versions.md`.
 - [Copy work between environments](pages/administer/use-source-control-and-environments/move-work-between-environments.md): Source `docs/administer/use-source-control-and-environments/move-work-between-environments.md`.
+- [Use environments programmatically with the public API](pages/administer/use-source-control-and-environments/use-environments-via-api.md): Source `docs/administer/use-source-control-and-environments/use-environments-via-api.md`.
 - [Tutorial - Create environments with source control](pages/administer/use-source-control-and-environments/tutorial-create-environments-with-source-control.md): Source `docs/administer/use-source-control-and-environments/tutorial-create-environments-with-source-control.md`.
 - [Manage credentials](pages/administer/manage-credentials/README.md): Source `docs/administer/manage-credentials/README.md`.
 - [Credential sharing](pages/administer/manage-credentials/share-credentials-securely.md): Source `docs/administer/manage-credentials/share-credentials-securely.md`.

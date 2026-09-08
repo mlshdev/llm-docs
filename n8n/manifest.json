@@ -5,9 +5,9 @@
   "repository": "n8n-io/n8n-docs",
   "tag": "main",
   "branch": "main",
-  "sourceCommittedAt": "2026-09-08T13:45:36Z",
-  "sourceCommit": "c0d71f6a5820f602c6860f9c506c8fc6073a4636",
-  "documentCount": 1316,
+  "sourceCommittedAt": "2026-09-08T14:18:18Z",
+  "sourceCommit": "50208b802689f4eeeb23e88e9fb10a47726f9755",
+  "documentCount": 1317,
   "notes": [
     "n8n tracks the latest main-branch commit because n8n-docs does not publish releases or tags.",
     "Pages follow each GitBook space's SUMMARY.md navigation; unpublished pages, utility spaces, and reusable fragments are omitted as standalone documents.",

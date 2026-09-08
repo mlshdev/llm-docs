@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/connect/connect-to-n8n-mcp-server/mcp-client-examples.md](https://github.com/n8n-io/n8n-docs/blob/c0d71f6a5820f602c6860f9c506c8fc6073a4636/docs/connect/connect-to-n8n-mcp-server/mcp-client-examples.md)
+> Commit-pinned source for n8n main: [docs/connect/connect-to-n8n-mcp-server/mcp-client-examples.md](https://github.com/n8n-io/n8n-docs/blob/50208b802689f4eeeb23e88e9fb10a47726f9755/docs/connect/connect-to-n8n-mcp-server/mcp-client-examples.md)
 
 # MCP client connection examples <a id="mcp-client-connection-examples"></a>
 
@@ -28,7 +28,7 @@ These examples show the exact commands and configuration for connecting specific
 2. Click on **Add custom connector**.
 3. Enter the following details:
    - **Name:** n8n MCP
-   - **Remote MCP Server URL**: the **Server URL** value shown in the **Connect a client** dialog
+   - **Remote MCP Server URL**: the **Server URL** value shown in the **Connect a client** dialog. It ends in `/mcp-server/http`, so it looks like `https://<your-n8n-domain>/mcp-server/http`. This isn't the address of your n8n editor. Don't paste the URL from your browser's address bar.
 4. Save the connector.
 5. When prompted, approve access for Claude Desktop.
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/builtin/credentials/solarwindsobservability.md](https://github.com/n8n-io/n8n-docs/blob/c0d71f6a5820f602c6860f9c506c8fc6073a4636/docs/integrations/builtin/credentials/solarwindsobservability.md)
+> Commit-pinned source for n8n main: [docs/integrations/builtin/credentials/solarwindsobservability.md](https://github.com/n8n-io/n8n-docs/blob/50208b802689f4eeeb23e88e9fb10a47726f9755/docs/integrations/builtin/credentials/solarwindsobservability.md)
 
 # SolarWinds Observability SaaS credentials <a id="solarwinds-observability-saas-credentials"></a>
 
