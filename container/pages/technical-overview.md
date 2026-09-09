@@ -1,4 +1,4 @@
-> Release-pinned source for Apple container 1.3.1: [docs/technical-overview.md](https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/technical-overview.md)
+> Release-pinned source for Apple container 1.4.1: [docs/technical-overview.md](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/technical-overview.md)
 
 # Technical Overview
 
@@ -52,7 +52,7 @@ When `container-apiserver` starts, it launches an XPC helper `container-core-ima
 
 ## What limitations does `container` have today?
 
-With the initial release of `container`, you get basic facilities for building and running containers, but many common containerization features remain to be implemented. Consider [contributing](https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/CONTRIBUTING.md) new features and bug fixes to `container` and the Containerization projects!
+With the initial release of `container`, you get basic facilities for building and running containers, but many common containerization features remain to be implemented. Consider [contributing](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/CONTRIBUTING.md) new features and bug fixes to `container` and the Containerization projects!
 
 ### Releasing container memory to macOS
 
@@ -76,4 +76,4 @@ In macOS 15, all containers attach to the default vmnet network. The `container 
 
 In macOS 15, limitations in the vmnet framework mean that the container network can only be created when the first container starts. Since the network XPC helper provides IP addresses to containers, and the helper has to start before the first container, it is possible for the network helper and vmnet to disagree on the subnet address, resulting in containers that are completely cut off from the network.
 
-Normally, vmnet creates the container network using the CIDR address 192.168.64.1/24, and on macOS 15, `container` defaults to using this CIDR address in the network helper. If your containers have no network access on macOS 15, see All networking fails on macOS 15 for diagnosis and remediation steps.
+Normally, vmnet creates the container network using the CIDR address 192.168.64.1/24, and on macOS 15, `container` defaults to using this CIDR address in the network helper.

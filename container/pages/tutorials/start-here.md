@@ -1,4 +1,4 @@
-> Release-pinned source for Apple container 1.3.1: [docs/tutorials/start-here.md](https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/tutorials/start-here.md)
+> Release-pinned source for Apple container 1.4.1: [docs/tutorials/start-here.md](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/tutorials/start-here.md)
 
 # Tutorial
 
@@ -107,7 +107,7 @@ Use the `--help` flag to see which abbreviations exist.
 
 ### Set up a local DNS domain (optional)
 
-`container` includes an embedded DNS service that simplifies access to your containerized applications. For what each step does, see [Networking: Set up DNS-based container names](https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/networking.md#set-up-dns-based-container-names); the short version, to set up a domain named `test`:
+`container` includes an embedded DNS service that simplifies access to your containerized applications. For what each step does, see [Networking: Set up DNS-based container names](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/networking.md#set-up-dns-based-container-names); the short version, to set up a domain named `test`:
 
 Set `domain = "test"` under `[dns]` in `~/.config/container/config.toml`, then restart the service:
 
@@ -124,7 +124,7 @@ sudo container system dns create test
 
 Enter your administrator password when prompted. The first command requires administrator privileges to create a file containing the domain configuration under the `/etc/resolver` directory, and to tell the macOS DNS resolver to reload its configuration files.
 
-See [Customize `container` default configuration values](https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/tutorials/container-system-config-tutorial.md) for instructions on how to set the default domain name that the `container` service uses for container name resolution on the host. With the default domain set to `test`, if you use `--name my-web-server` to start a container, queries to `my-web-server.test` will respond with that container's IP address.
+See [Customize `container` default configuration values](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/tutorials/container-system-config-tutorial.md) for instructions on how to set the default domain name that the `container` service uses for container name resolution on the host. With the default domain set to `test`, if you use `--name my-web-server` to start a container, queries to `my-web-server.test` will respond with that container's IP address.
 
 ## Build an image
 
@@ -235,7 +235,7 @@ my-web-server   0.23%   12.45 MiB / 1.00 GiB  856.00 KiB / 1.2 KiB 2.10 MiB / 51
 > \[!NOTE]
 > Without the `--no-stream` flag, `container stats` continuously updates the display in real-time, similar to the `top` command. Press Ctrl+C to exit the live view.
 
-See [Resource usage](https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/resource-usage.md) for what each metric means, setting
+See [Resource usage](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/resource-usage.md) for what each metric means, setting
 CPU/memory limits, and reclaiming disk space.
 
 ### Run other commands in the container
@@ -271,7 +271,7 @@ Your web server is accessible from other containers as well as from your host. L
 > \[!NOTE]
 > Container relies on the new features and enhancements present in macOS 26.
 > As a result, the functionality of accessing the web server from another container will not work on macOS 15.
-> See [https://github.com/apple/container/blob/main/docs/technical-overview.md#macos-15-limitations](https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/technical-overview.md#macos-15-limitations) for more details.
+> See [https://github.com/apple/container/blob/main/docs/technical-overview.md#macos-15-limitations](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/technical-overview.md#macos-15-limitations) for more details.
 
 ```bash
 container run -it --rm web-test curl http://192.168.64.3

@@ -1,8 +1,8 @@
-# Apple container 1.3.1
+# Apple container 1.4.1
 
-> Documentation generated from the latest stable release of [apple/container](https://github.com/apple/container) and pinned to immutable source commit `a9a62e28f6beb88940122a3d7b286f2d5ae8053a`.
+> Documentation generated from the latest stable release of [apple/container](https://github.com/apple/container) and pinned to immutable source commit `9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d`.
 
-- [Full documentation](llms-full.txt): Complete normalized corpus for Apple container 1.3.1.
+- [Full documentation](llms-full.txt): Complete normalized corpus for Apple container 1.4.1.
 - [Provenance manifest](manifest.json): Release, commit, document count, and generation notes.
 - Release-authored Markdown includes the repository guide, build instructions, user guides, tutorials, and checked-in CLI command reference.
 - Relative links, source references, and assets resolve against the immutable release commit.
@@ -30,6 +30,7 @@
 - [config.toml reference](pages/container-system-config.md): Source `docs/container-system-config.md`.
 - [Host integration](pages/host-integration.md): Source `docs/host-integration.md`.
 - [How-to](pages/how-to.md): Source `docs/how-to.md`.
+- [Kubernetes clusters](pages/kubernetes.md): Source `docs/kubernetes.md`.
 - [Logs](pages/logs.md): Source `docs/logs.md`.
 - [Multiplatform images](pages/multiplatform-images.md): Source `docs/multiplatform-images.md`.
 - [Networking](pages/networking.md): Source `docs/networking.md`.

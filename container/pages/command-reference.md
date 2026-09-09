@@ -1,4 +1,4 @@
-> Release-pinned source for Apple container 1.3.1: [docs/command-reference.md](https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/command-reference.md)
+> Release-pinned source for Apple container 1.4.1: [docs/command-reference.md](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/command-reference.md)
 
 # Container CLI Command Reference
 
@@ -92,7 +92,7 @@ container run [<options>] <image> [<arguments> ...]
       - `10.*.*.*`
       - `192.168.*.*`
       - `172.16.*.*` through `172.31.*.*`
-    - The host ends with the machine's default container DNS domain (as defined in `DNSConfig.defaultDomain`, located [here](https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/Sources/ContainerPersistence/ContainerSystemConfig.swift))
+    - The host ends with the machine's default container DNS domain (as defined in `DNSConfig.defaultDomain`, located [here](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/Sources/ContainerPersistence/ContainerSystemConfig.swift))
 
     For internal/local registries, the client uses **HTTP**. Otherwise, it uses **HTTPS**.
 
@@ -414,6 +414,30 @@ container export -o mycontainer.tar mycontainer
 
 # export to stdout and pipe to another tool
 container export mycontainer > mycontainer.tar
+```
+
+### `container clean`
+
+Cleans unused space on the root filesystem and each named volume mount in one or more running containers. The command only works while the container is running.
+
+**Usage**
+
+```bash
+container clean [--debug] <container-ids> ...
+```
+
+**Arguments**
+
+- `<container-ids>`: Container IDs
+
+**Examples**
+
+```bash
+# clean a single running container
+container clean mycontainer
+
+# clean multiple running containers
+container clean mycontainer1 mycontainer2
 ```
 
 ### `container logs`
@@ -917,7 +941,7 @@ container volume create --opt journal=journal --opt size=10g myvolume
 
 Using `-v /path` or `--mount type=volume,dst=/path` without a source auto-creates a
 named volume for you, tagged with the `com.apple.container.resource.anonymous` label.
-See [Mounts and volumes](https://github.com/apple/container/blob/a9a62e28f6beb88940122a3d7b286f2d5ae8053a/docs/volumes.md#anonymous-volumes) for how to find and clean
+See [Mounts and volumes](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/volumes.md#anonymous-volumes) for how to find and clean
 these up.
 
 ### `container volume delete (rm)`
