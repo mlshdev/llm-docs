@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.code.md](https://github.com/n8n-io/n8n-docs/blob/29b88712ada897ebe542fca518257891b3c146ee/docs/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.code.md)
+> Commit-pinned source for n8n main: [docs/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.code.md](https://github.com/n8n-io/n8n-docs/blob/399510f9e718a27db15389e854174a746bc8ab7b/docs/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.code.md)
 
 # LangChain Code
 
@@ -45,7 +45,7 @@ The main output is the normal connector found in all n8n workflows. If you have 
 
 By configuring the LangChain Code node connectors (inputs and outputs) you can use it as an app node, root node or sub-node.
 
-![Four LangChain Code nodes in one workflow, each set up as a different node type: app, root, sub-node, and sub-node with sub-nodes](https://raw.githubusercontent.com/n8n-io/n8n-docs/29b88712ada897ebe542fca518257891b3c146ee/docs/integrations/.gitbook/assets/create-node-types.png)
+![Four LangChain Code nodes in one workflow, each set up as a different node type: app, root, sub-node, and sub-node with sub-nodes](https://raw.githubusercontent.com/n8n-io/n8n-docs/399510f9e718a27db15389e854174a746bc8ab7b/docs/integrations/.gitbook/assets/create-node-types.png)
 
 | Node type                                                                                                      | Inputs                        | Outputs                                                                   | Code mode   |
 | -------------------------------------------------------------------------------------------------------------- | ----------------------------- | ------------------------------------------------------------------------- | ----------- |

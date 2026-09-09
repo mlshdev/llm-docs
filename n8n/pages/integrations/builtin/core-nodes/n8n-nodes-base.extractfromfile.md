@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile.md](https://github.com/n8n-io/n8n-docs/blob/29b88712ada897ebe542fca518257891b3c146ee/docs/integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile.md)
+> Commit-pinned source for n8n main: [docs/integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile.md](https://github.com/n8n-io/n8n-docs/blob/399510f9e718a27db15389e854174a746bc8ab7b/docs/integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile.md)
 
 # Extract From File <a id="extract-from-file"></a>
 

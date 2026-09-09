@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/host-n8n/configure-n8n/security/configure-sso.md](https://github.com/n8n-io/n8n-docs/blob/29b88712ada897ebe542fca518257891b3c146ee/docs/deploy/host-n8n/configure-n8n/security/configure-sso.md)
+> Commit-pinned source for n8n main: [docs/deploy/host-n8n/configure-n8n/security/configure-sso.md](https://github.com/n8n-io/n8n-docs/blob/399510f9e718a27db15389e854174a746bc8ab7b/docs/deploy/host-n8n/configure-n8n/security/configure-sso.md)
 
 # Set up Single Sign-On (SSO) <a id="set-up-single-sign-on-sso"></a>
 

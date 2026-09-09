@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/administer/observe-and-log/README.md](https://github.com/n8n-io/n8n-docs/blob/29b88712ada897ebe542fca518257891b3c146ee/docs/administer/observe-and-log/README.md)
+> Commit-pinned source for n8n main: [docs/administer/observe-and-log/README.md](https://github.com/n8n-io/n8n-docs/blob/399510f9e718a27db15389e854174a746bc8ab7b/docs/administer/observe-and-log/README.md)
 
 # Observe and log <a id="observe-and-log"></a>
 

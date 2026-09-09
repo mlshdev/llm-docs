@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/work-with-data/handle-special-data-types/work-with-dates-and-times.md](https://github.com/n8n-io/n8n-docs/blob/29b88712ada897ebe542fca518257891b3c146ee/docs/build/work-with-data/handle-special-data-types/work-with-dates-and-times.md)
+> Commit-pinned source for n8n main: [docs/build/work-with-data/handle-special-data-types/work-with-dates-and-times.md](https://github.com/n8n-io/n8n-docs/blob/399510f9e718a27db15389e854174a746bc8ab7b/docs/build/work-with-data/handle-special-data-types/work-with-dates-and-times.md)
 
 # Date and time with Luxon <a id="date-and-time-with-luxon"></a>
 

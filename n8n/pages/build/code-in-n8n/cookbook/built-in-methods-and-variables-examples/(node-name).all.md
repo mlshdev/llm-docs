@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/code-in-n8n/cookbook/built-in-methods-and-variables-examples/(node-name).all.md](https://github.com/n8n-io/n8n-docs/blob/29b88712ada897ebe542fca518257891b3c146ee/docs/build/code-in-n8n/cookbook/built-in-methods-and-variables-examples/(node-name).all.md)
+> Commit-pinned source for n8n main: [docs/build/code-in-n8n/cookbook/built-in-methods-and-variables-examples/(node-name).all.md](https://github.com/n8n-io/n8n-docs/blob/399510f9e718a27db15389e854174a746bc8ab7b/docs/build/code-in-n8n/cookbook/built-in-methods-and-variables-examples/(node-name).all.md)
 
 # `("<node-name>").all(branchIndex?: number, runIndex?: number)` <a id="lessnode-namegreaterallbranchindex-number-runindex-number"></a>
 

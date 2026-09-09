@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/work-with-data/data-tables.md](https://github.com/n8n-io/n8n-docs/blob/29b88712ada897ebe542fca518257891b3c146ee/docs/build/work-with-data/data-tables.md)
+> Commit-pinned source for n8n main: [docs/build/work-with-data/data-tables.md](https://github.com/n8n-io/n8n-docs/blob/399510f9e718a27db15389e854174a746bc8ab7b/docs/build/work-with-data/data-tables.md)
 
 # Data tables <a id="data-tables"></a>
 
@@ -37,7 +37,7 @@ View and work with data tables directly in the UI through a visual interface. Th
 1. In your n8n project, select the **Data tables** tab.
 2. Click the split button located in the top right corner and select **Create Data table**.
 
-![Data table creation](https://raw.githubusercontent.com/n8n-io/n8n-docs/29b88712ada897ebe542fca518257891b3c146ee/docs/build/.gitbook/assets/create-data-table.png)
+![Data table creation](https://raw.githubusercontent.com/n8n-io/n8n-docs/399510f9e718a27db15389e854174a746bc8ab7b/docs/build/.gitbook/assets/create-data-table.png)
 
 3. Enter a descriptive name for your table.
 

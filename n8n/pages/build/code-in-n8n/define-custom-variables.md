@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/code-in-n8n/define-custom-variables.md](https://github.com/n8n-io/n8n-docs/blob/29b88712ada897ebe542fca518257891b3c146ee/docs/build/code-in-n8n/define-custom-variables.md)
+> Commit-pinned source for n8n main: [docs/build/code-in-n8n/define-custom-variables.md](https://github.com/n8n-io/n8n-docs/blob/399510f9e718a27db15389e854174a746bc8ab7b/docs/build/code-in-n8n/define-custom-variables.md)
 
 # Custom variables <a id="custom-variables"></a>
 
