@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/get-started/key-concept-glossary.md](https://github.com/n8n-io/n8n-docs/blob/399510f9e718a27db15389e854174a746bc8ab7b/docs/get-started/key-concept-glossary.md)
+> Commit-pinned source for n8n main: [docs/get-started/key-concept-glossary.md](https://github.com/n8n-io/n8n-docs/blob/2d8f9dd437a0ad147e27abc19ce9fbcd9490ed43/docs/get-started/key-concept-glossary.md)
 
 # n8n Glossary
 

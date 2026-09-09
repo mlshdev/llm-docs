@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/administer/use-source-control-and-environments/move-work-between-environments.md](https://github.com/n8n-io/n8n-docs/blob/399510f9e718a27db15389e854174a746bc8ab7b/docs/administer/use-source-control-and-environments/move-work-between-environments.md)
+> Commit-pinned source for n8n main: [docs/administer/use-source-control-and-environments/move-work-between-environments.md](https://github.com/n8n-io/n8n-docs/blob/2d8f9dd437a0ad147e27abc19ce9fbcd9490ed43/docs/administer/use-source-control-and-environments/move-work-between-environments.md)
 
 # Copy work between environments <a id="copy-work-between-environments"></a>
 

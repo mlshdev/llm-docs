@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/use-n8n-cloud/configure-cloud/manage-your-data.md](https://github.com/n8n-io/n8n-docs/blob/399510f9e718a27db15389e854174a746bc8ab7b/docs/deploy/use-n8n-cloud/configure-cloud/manage-your-data.md)
+> Commit-pinned source for n8n main: [docs/deploy/use-n8n-cloud/configure-cloud/manage-your-data.md](https://github.com/n8n-io/n8n-docs/blob/2d8f9dd437a0ad147e27abc19ce9fbcd9490ed43/docs/deploy/use-n8n-cloud/configure-cloud/manage-your-data.md)
 
 # Manage your data
 

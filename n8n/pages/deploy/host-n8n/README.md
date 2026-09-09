@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/host-n8n/README.md](https://github.com/n8n-io/n8n-docs/blob/399510f9e718a27db15389e854174a746bc8ab7b/docs/deploy/host-n8n/README.md)
+> Commit-pinned source for n8n main: [docs/deploy/host-n8n/README.md](https://github.com/n8n-io/n8n-docs/blob/2d8f9dd437a0ad147e27abc19ce9fbcd9490ed43/docs/deploy/host-n8n/README.md)
 
 # Self-hosting n8n <a id="self-hosting-n8n"></a>
 

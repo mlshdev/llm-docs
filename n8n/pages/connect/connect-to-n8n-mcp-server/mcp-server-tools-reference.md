@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/connect/connect-to-n8n-mcp-server/mcp-server-tools-reference.md](https://github.com/n8n-io/n8n-docs/blob/399510f9e718a27db15389e854174a746bc8ab7b/docs/connect/connect-to-n8n-mcp-server/mcp-server-tools-reference.md)
+> Commit-pinned source for n8n main: [docs/connect/connect-to-n8n-mcp-server/mcp-server-tools-reference.md](https://github.com/n8n-io/n8n-docs/blob/2d8f9dd437a0ad147e27abc19ce9fbcd9490ed43/docs/connect/connect-to-n8n-mcp-server/mcp-server-tools-reference.md)
 
 # n8n MCP server tools reference <a id="n8n-mcp-server-tools-reference"></a>
 
