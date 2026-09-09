@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/code-in-n8n/get-coding-help-from-ai.md](https://github.com/n8n-io/n8n-docs/blob/60d8c89b2255a4dbc77140d7e9f81376c9731ffd/docs/build/code-in-n8n/get-coding-help-from-ai.md)
+> Commit-pinned source for n8n main: [docs/build/code-in-n8n/get-coding-help-from-ai.md](https://github.com/n8n-io/n8n-docs/blob/282f6a9d005a4dddb1d2182b42594b5bc66efbb6/docs/build/code-in-n8n/get-coding-help-from-ai.md)
 
 # Get coding help from AI
 
@@ -60,7 +60,7 @@ These examples show a range of possible prompts and tasks.
 
 To try the example yourself, download the example workflow and import it into n8n:
 
-[Example workflow](https://raw.githubusercontent.com/n8n-io/n8n-docs/60d8c89b2255a4dbc77140d7e9f81376c9731ffd/docs/build/.gitbook/assets/find-a-piece-of-data.json)
+[Example workflow](https://raw.githubusercontent.com/n8n-io/n8n-docs/282f6a9d005a4dddb1d2182b42594b5bc66efbb6/docs/build/.gitbook/assets/find-a-piece-of-data.json)
 
 In the third Code node, enter this prompt:
 
@@ -86,7 +86,7 @@ return notionUser ? [{ json: { notionId: notionUser.json.id } }] : [];
 
 To try the example yourself, download the example workflow and import it into n8n:
 
-[Example workflow](https://raw.githubusercontent.com/n8n-io/n8n-docs/60d8c89b2255a4dbc77140d7e9f81376c9731ffd/docs/build/.gitbook/assets/data-transformation.json)
+[Example workflow](https://raw.githubusercontent.com/n8n-io/n8n-docs/282f6a9d005a4dddb1d2182b42594b5bc66efbb6/docs/build/.gitbook/assets/data-transformation.json)
 
 In the **Join items** Code node, enter this prompt:
 
@@ -107,7 +107,7 @@ return [{ json: { usernames: result } }];
 
 To try the example yourself, download the example workflow and import it into n8n:
 
-[Example workflow](https://raw.githubusercontent.com/n8n-io/n8n-docs/60d8c89b2255a4dbc77140d7e9f81376c9731ffd/docs/build/.gitbook/assets/summarize-data.json)
+[Example workflow](https://raw.githubusercontent.com/n8n-io/n8n-docs/282f6a9d005a4dddb1d2182b42594b5bc66efbb6/docs/build/.gitbook/assets/summarize-data.json)
 
 In the **Summarize** Code node, enter this prompt:
 
@@ -164,11 +164,11 @@ return [{ json: { slackMessage } }];
 
 If your incoming data contains nested fields, using dot notation to reference them can help the AI understand what data you want.
 
-![Code node with an AI prompt referencing nested data using dot notation, such as personal\_info.first\_name](https://raw.githubusercontent.com/n8n-io/n8n-docs/60d8c89b2255a4dbc77140d7e9f81376c9731ffd/docs/build/.gitbook/assets/reference-data-dot-notation.png)
+![Code node with an AI prompt referencing nested data using dot notation, such as personal\_info.first\_name](https://raw.githubusercontent.com/n8n-io/n8n-docs/282f6a9d005a4dddb1d2182b42594b5bc66efbb6/docs/build/.gitbook/assets/reference-data-dot-notation.png)
 
 To try the example yourself, download the example workflow and import it into n8n:
 
-[Example workflow](https://raw.githubusercontent.com/n8n-io/n8n-docs/60d8c89b2255a4dbc77140d7e9f81376c9731ffd/docs/build/.gitbook/assets/reference-incoming-data-explicitly.json)
+[Example workflow](https://raw.githubusercontent.com/n8n-io/n8n-docs/282f6a9d005a4dddb1d2182b42594b5bc66efbb6/docs/build/.gitbook/assets/reference-incoming-data-explicitly.json)
 
 In the second Code node, enter this prompt:
 

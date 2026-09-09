@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/changelog/README.md](https://github.com/n8n-io/n8n-docs/blob/60d8c89b2255a4dbc77140d7e9f81376c9731ffd/docs/changelog/README.md)
+> Commit-pinned source for n8n main: [docs/changelog/README.md](https://github.com/n8n-io/n8n-docs/blob/282f6a9d005a4dddb1d2182b42594b5bc66efbb6/docs/changelog/README.md)
 
 # Changelog
 
@@ -43,11 +43,11 @@ You can now use supported AI models and services in n8n Cloud without first crea
 
 Supported AI providers include OpenAI, Anthropic, Google Gemini, Alibaba Cloud Qwen, MiniMax, and Moonshot Kimi. You can also use credits with Brave Search, Firecrawl, Browserbase, LlamaParse, and PDF.co.
 
-![Agent using tool services available with Gateway credits](https://raw.githubusercontent.com/n8n-io/n8n-docs/60d8c89b2255a4dbc77140d7e9f81376c9731ffd/docs/changelog/.gitbook/assets/form%20hero%203.png)
+![Agent using tool services available with Gateway credits](https://raw.githubusercontent.com/n8n-io/n8n-docs/282f6a9d005a4dddb1d2182b42594b5bc66efbb6/docs/changelog/.gitbook/assets/form%20hero%203.png)
 
 On a supported node, select **Gateway credits** when setting up the credential and run your workflow. The choice is made per node, so the same workflow can use Gateway credits for one service and your own provider credentials for another.
 
-![Select Gateway credits in the Credetial dropdown ](https://raw.githubusercontent.com/n8n-io/n8n-docs/60d8c89b2255a4dbc77140d7e9f81376c9731ffd/docs/changelog/.gitbook/assets/select%20credits.png)
+![Select Gateway credits in the Credetial dropdown ](https://raw.githubusercontent.com/n8n-io/n8n-docs/282f6a9d005a4dddb1d2182b42594b5bc66efbb6/docs/changelog/.gitbook/assets/select%20credits.png)
 
 Usage is deducted from a shared prepaid balance for the n8n instance. We align Gateway credit rates with publicly listed provider pricing wherever possible, and publish the rates for every supported service on our [service pricing page](https://app.n8n.cloud/service-pricing).
 
@@ -685,3 +685,22 @@ With this release you can now:
 n8n automatically totals the time from all Time Saved nodes executed during each workflow run and reports it within the insights dashboard.
 
 <figure>![](.gitbook/assets/time_saved_node_2.png)<figcaption><p>Total time saved calculation</p></figcaption></figure>
+
+### n8n 2.32 — Schedule Trigger runs survive restarts and scale across mains
+
+**Released:** 2026-07-21
+
+You can now run Schedule Trigger nodes from a database-backed queue instead of from each instance's memory. The durable scheduler records every upcoming run in the database before it's due, so a restart or crash no longer silently drops work. Any run whose time passed while an instance was down fires when the instance recovers rather than being skipped.
+
+In a multi-main setup, every main instance shares the same queue and claims runs from it. Only one instance picks up each run, so scheduling load spreads across your whole fleet instead of depending on a single leader instance. Dispatch fires at the exact scheduled instant: the scheduler claims each run ahead of time and holds it with a precision timer, so steady-state timing is not limited to a polling cadence.
+
+To opt in, set two environment variables and restart your instance:
+
+1. Set `N8N_SCHEDULER_ENABLED=true` to enable the durable scheduler.
+2. Set `N8N_USE_WORKFLOW_PUBLICATION_SERVICE=true` so the scheduler takes over Schedule Trigger nodes. Without this second flag, Schedule Trigger nodes keep running on the in-memory scheduler and n8n logs a warning.
+
+Your existing Schedule Trigger nodes switch automatically without republishing. The defaults suit most instances, but you can tune timing precision, storage, and load with additional environment variables including `N8N_SCHEDULER_MATERIALIZATION_WINDOW`, `N8N_SCHEDULER_EXECUTOR_INTERVAL`, `N8N_SCHEDULER_RETENTION`, `N8N_SCHEDULER_FAILED_RETENTION`, and `N8N_SCHEDULER_MISFIRE_GRACE`. See the Scheduler environment variables page for the full set. To monitor the scheduler, set `N8N_METRICS=true` and `N8N_METRICS_INCLUDE_SCHEDULER_METRICS=true` to expose Prometheus metrics, then import the n8n Durable Scheduler Health Grafana dashboard to track queue depth, scheduling lag, dispatch throughput, retries, and dead-letters.
+
+Note that this is a preview feature behind an environment flag, and the environment variables and default behavior can change before general availability. n8n recommends testing in a non-production environment first. If your instance is down for an extended period, missed runs are coalesced on recovery by default: only the most recent missed occurrence fires, instead of one run per missed occurrence. Tune this with `N8N_SCHEDULER_MISFIRE_GRACE` (how late a run may start and still count as on time before it's considered missed).
+
+Learn more in the [documentation](https://docs.n8n.io/deploy/host-n8n/configure-n8n/durable-scheduler).

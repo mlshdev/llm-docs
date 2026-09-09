@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/integrate-ai/langchain-in-n8n.md](https://github.com/n8n-io/n8n-docs/blob/60d8c89b2255a4dbc77140d7e9f81376c9731ffd/docs/build/integrate-ai/langchain-in-n8n.md)
+> Commit-pinned source for n8n main: [docs/build/integrate-ai/langchain-in-n8n.md](https://github.com/n8n-io/n8n-docs/blob/282f6a9d005a4dddb1d2182b42594b5bc66efbb6/docs/build/integrate-ai/langchain-in-n8n.md)
 
 # LangChain in n8n
 

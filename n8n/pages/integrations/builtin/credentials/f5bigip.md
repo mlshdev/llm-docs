@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/builtin/credentials/f5bigip.md](https://github.com/n8n-io/n8n-docs/blob/60d8c89b2255a4dbc77140d7e9f81376c9731ffd/docs/integrations/builtin/credentials/f5bigip.md)
+> Commit-pinned source for n8n main: [docs/integrations/builtin/credentials/f5bigip.md](https://github.com/n8n-io/n8n-docs/blob/282f6a9d005a4dddb1d2182b42594b5bc66efbb6/docs/integrations/builtin/credentials/f5bigip.md)
 
 # F5 Big-IP credentials <a id="f5-big-ip-credentials"></a>
 

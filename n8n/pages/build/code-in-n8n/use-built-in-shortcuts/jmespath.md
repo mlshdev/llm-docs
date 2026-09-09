@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/code-in-n8n/use-built-in-shortcuts/jmespath.md](https://github.com/n8n-io/n8n-docs/blob/60d8c89b2255a4dbc77140d7e9f81376c9731ffd/docs/build/code-in-n8n/use-built-in-shortcuts/jmespath.md)
+> Commit-pinned source for n8n main: [docs/build/code-in-n8n/use-built-in-shortcuts/jmespath.md](https://github.com/n8n-io/n8n-docs/blob/282f6a9d005a4dddb1d2182b42594b5bc66efbb6/docs/build/code-in-n8n/use-built-in-shortcuts/jmespath.md)
 
 # JMESPath method <a id="jmespath-method"></a>
 

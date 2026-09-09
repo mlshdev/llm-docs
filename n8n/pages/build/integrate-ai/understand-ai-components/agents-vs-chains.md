@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/integrate-ai/understand-ai-components/agents-vs-chains.md](https://github.com/n8n-io/n8n-docs/blob/60d8c89b2255a4dbc77140d7e9f81376c9731ffd/docs/build/integrate-ai/understand-ai-components/agents-vs-chains.md)
+> Commit-pinned source for n8n main: [docs/build/integrate-ai/understand-ai-components/agents-vs-chains.md](https://github.com/n8n-io/n8n-docs/blob/282f6a9d005a4dddb1d2182b42594b5bc66efbb6/docs/build/integrate-ai/understand-ai-components/agents-vs-chains.md)
 
 # Agents vs chains
 
@@ -383,7 +383,7 @@ To load the template into your n8n instance:
 
 1. Download the workflow JSON file.
 2. Open a new workflow in your n8n instance.
-3. Copy in the JSON, or select **Workflow menu** ![Workflow menu icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/60d8c89b2255a4dbc77140d7e9f81376c9731ffd/docs/reusable-content/.gitbook/assets/three-dots-horizontal.png) > **Import from file...**.
+3. Copy in the JSON, or select **Workflow menu** ![Workflow menu icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/282f6a9d005a4dddb1d2182b42594b5bc66efbb6/docs/reusable-content/.gitbook/assets/three-dots-horizontal.png) > **Import from file...**.
 
 The example workflows use Sticky Notes to guide you:
 
