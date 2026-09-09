@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/integrate-ai/ai-examples/use-website-content.md](https://github.com/n8n-io/n8n-docs/blob/1787aa28eed7adf00cc1b200ebebe87ef20e09f1/docs/build/integrate-ai/ai-examples/use-website-content.md)
+> Commit-pinned source for n8n main: [docs/build/integrate-ai/ai-examples/use-website-content.md](https://github.com/n8n-io/n8n-docs/blob/29b88712ada897ebe542fca518257891b3c146ee/docs/build/integrate-ai/ai-examples/use-website-content.md)
 
 # Use website content
 
@@ -741,7 +741,7 @@ To load the template into your n8n instance:
 
 1. Download the workflow JSON file.
 2. Open a new workflow in your n8n instance.
-3. Copy in the JSON, or select **Workflow menu** ![Workflow menu icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/1787aa28eed7adf00cc1b200ebebe87ef20e09f1/docs/reusable-content/.gitbook/assets/three-dots-horizontal.png) > **Import from file...**.
+3. Copy in the JSON, or select **Workflow menu** ![Workflow menu icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/29b88712ada897ebe542fca518257891b3c146ee/docs/reusable-content/.gitbook/assets/three-dots-horizontal.png) > **Import from file...**.
 
 The example workflows use Sticky Notes to guide you:
 

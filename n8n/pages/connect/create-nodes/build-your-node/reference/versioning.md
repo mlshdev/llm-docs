@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/connect/create-nodes/build-your-node/reference/versioning.md](https://github.com/n8n-io/n8n-docs/blob/1787aa28eed7adf00cc1b200ebebe87ef20e09f1/docs/connect/create-nodes/build-your-node/reference/versioning.md)
+> Commit-pinned source for n8n main: [docs/connect/create-nodes/build-your-node/reference/versioning.md](https://github.com/n8n-io/n8n-docs/blob/29b88712ada897ebe542fca518257891b3c146ee/docs/connect/create-nodes/build-your-node/reference/versioning.md)
 
 # Node versioning <a id="node-versioning"></a>
 

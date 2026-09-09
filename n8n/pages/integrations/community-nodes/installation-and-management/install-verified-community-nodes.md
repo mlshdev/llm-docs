@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/community-nodes/installation-and-management/install-verified-community-nodes.md](https://github.com/n8n-io/n8n-docs/blob/1787aa28eed7adf00cc1b200ebebe87ef20e09f1/docs/integrations/community-nodes/installation-and-management/install-verified-community-nodes.md)
+> Commit-pinned source for n8n main: [docs/integrations/community-nodes/installation-and-management/install-verified-community-nodes.md](https://github.com/n8n-io/n8n-docs/blob/29b88712ada897ebe542fca518257891b3c146ee/docs/integrations/community-nodes/installation-and-management/install-verified-community-nodes.md)
 
 # Install verified community nodes
 
