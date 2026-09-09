@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/builtin/trigger-nodes/n8n-nodes-base.getresponsetrigger.md](https://github.com/n8n-io/n8n-docs/blob/2d8f9dd437a0ad147e27abc19ce9fbcd9490ed43/docs/integrations/builtin/trigger-nodes/n8n-nodes-base.getresponsetrigger.md)
+> Commit-pinned source for n8n main: [docs/integrations/builtin/trigger-nodes/n8n-nodes-base.getresponsetrigger.md](https://github.com/n8n-io/n8n-docs/blob/4d6c9be76dc4442b9c5ae25da13c6a3f4b3b8578/docs/integrations/builtin/trigger-nodes/n8n-nodes-base.getresponsetrigger.md)
 
 # GetResponse Trigger node <a id="getresponse-trigger-node"></a>
 

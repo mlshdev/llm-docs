@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/connect/connect-to-n8n-mcp-server/mcp-client-examples.md](https://github.com/n8n-io/n8n-docs/blob/2d8f9dd437a0ad147e27abc19ce9fbcd9490ed43/docs/connect/connect-to-n8n-mcp-server/mcp-client-examples.md)
+> Commit-pinned source for n8n main: [docs/connect/connect-to-n8n-mcp-server/mcp-client-examples.md](https://github.com/n8n-io/n8n-docs/blob/4d6c9be76dc4442b9c5ae25da13c6a3f4b3b8578/docs/connect/connect-to-n8n-mcp-server/mcp-client-examples.md)
 
 # MCP client connection examples <a id="mcp-client-connection-examples"></a>
 

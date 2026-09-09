@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-heroku.md](https://github.com/n8n-io/n8n-docs/blob/2d8f9dd437a0ad147e27abc19ce9fbcd9490ed43/docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-heroku.md)
+> Commit-pinned source for n8n main: [docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-heroku.md](https://github.com/n8n-io/n8n-docs/blob/4d6c9be76dc4442b9c5ae25da13c6a3f4b3b8578/docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-heroku.md)
 
 # Hosting n8n on Heroku <a id="hosting-n8n-on-heroku"></a>
 
@@ -25,8 +25,8 @@ This hosting guide shows you how to self-host n8n on Heroku. It uses:
 >
 > n8n releases a new minor version most weeks. The `stable` version is for production use. `beta` is the most recent release. The `beta` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
 >
-> Current `stable`: 2.38.1
-> Current `beta`: 2.39.0
+> Current `stable`: 2.38.5
+> Current `beta`: 2.39.1
 
 ## Use the deployment template to create a Heroku project <a id="use-the-deployment-template-to-create-a-heroku-project"></a>
 

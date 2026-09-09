@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/builtin/trigger-nodes/n8n-nodes-base.googledrivetrigger/common-issues.md](https://github.com/n8n-io/n8n-docs/blob/2d8f9dd437a0ad147e27abc19ce9fbcd9490ed43/docs/integrations/builtin/trigger-nodes/n8n-nodes-base.googledrivetrigger/common-issues.md)
+> Commit-pinned source for n8n main: [docs/integrations/builtin/trigger-nodes/n8n-nodes-base.googledrivetrigger/common-issues.md](https://github.com/n8n-io/n8n-docs/blob/4d6c9be76dc4442b9c5ae25da13c6a3f4b3b8578/docs/integrations/builtin/trigger-nodes/n8n-nodes-base.googledrivetrigger/common-issues.md)
 
 # Google Drive Trigger node common issues <a id="google-drive-trigger-node-common-issues"></a>
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/builtin/custom-api-actions-for-existing-nodes.md](https://github.com/n8n-io/n8n-docs/blob/2d8f9dd437a0ad147e27abc19ce9fbcd9490ed43/docs/integrations/builtin/custom-api-actions-for-existing-nodes.md)
+> Commit-pinned source for n8n main: [docs/integrations/builtin/custom-api-actions-for-existing-nodes.md](https://github.com/n8n-io/n8n-docs/blob/4d6c9be76dc4442b9c5ae25da13c6a3f4b3b8578/docs/integrations/builtin/custom-api-actions-for-existing-nodes.md)
 
 # Custom API operations <a id="custom-api-operations"></a>
 
@@ -30,4 +30,4 @@ Some existing credential types have specific scopes: the parts of the API they c
 
 For example, follow the steps in [Using predefined credential types](#using-predefined-credential-types), and select **Google Calendar OAuth2 API** as your **Credential Type**. n8n displays a box listing the two scopes this credential type covers: `calendar` and `calendar.events`.
 
-![Scopes notice for the Google Calendar OAuth2 API credential type](https://raw.githubusercontent.com/n8n-io/n8n-docs/2d8f9dd437a0ad147e27abc19ce9fbcd9490ed43/docs/integrations/.gitbook/assets/scopes.png)
+![Scopes notice for the Google Calendar OAuth2 API credential type](https://raw.githubusercontent.com/n8n-io/n8n-docs/4d6c9be76dc4442b9c5ae25da13c6a3f4b3b8578/docs/integrations/.gitbook/assets/scopes.png)

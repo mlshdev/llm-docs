@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/contribute/contribution-guide-for-n8n-docs.md](https://github.com/n8n-io/n8n-docs/blob/2d8f9dd437a0ad147e27abc19ce9fbcd9490ed43/docs/contribute/contribution-guide-for-n8n-docs.md)
+> Commit-pinned source for n8n main: [docs/contribute/contribution-guide-for-n8n-docs.md](https://github.com/n8n-io/n8n-docs/blob/4d6c9be76dc4442b9c5ae25da13c6a3f4b3b8578/docs/contribute/contribution-guide-for-n8n-docs.md)
 
 # Contribution guide for n8n Docs
 
@@ -122,13 +122,13 @@ Ensure you've followed the general checklist, and edit your PR as necessary if y
 
 When you open a pull request, GitBook automatically builds a preview of your changes and links it from the PR. On the PR's **Conversation** tab, find the checks section at the bottom and click **Check the live preview on your docs site** for the space you edited:
 
-![GitBook preview link on a pull request](https://raw.githubusercontent.com/n8n-io/n8n-docs/2d8f9dd437a0ad147e27abc19ce9fbcd9490ed43/docs/contribute/.gitbook/assets/gitbook-preview-link.png)
+![GitBook preview link on a pull request](https://raw.githubusercontent.com/n8n-io/n8n-docs/4d6c9be76dc4442b9c5ae25da13c6a3f4b3b8578/docs/contribute/.gitbook/assets/gitbook-preview-link.png)
 
 You can then check how your changes render on the docs site.
 
 Once the preview finishes building, a bot also posts a **GitBook page previews** comment on your PR with a direct link to each page you changed, so you don't have to find them in the navigation. The comment updates on every push.
 
-![GitBook page previews comment on a pull request](https://raw.githubusercontent.com/n8n-io/n8n-docs/2d8f9dd437a0ad147e27abc19ce9fbcd9490ed43/docs/contribute/.gitbook/assets/gitbook-preview-links-comment.png)
+![GitBook page previews comment on a pull request](https://raw.githubusercontent.com/n8n-io/n8n-docs/4d6c9be76dc4442b9c5ae25da13c6a3f4b3b8578/docs/contribute/.gitbook/assets/gitbook-preview-links-comment.png)
 
 It's not possible to build the site locally.
 
