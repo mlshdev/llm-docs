@@ -1,4 +1,4 @@
-> Commit-pinned source for FFmpeg master: [doc/multithreading.txt](https://github.com/FFmpeg/FFmpeg/blob/a8a7a0619694629d21339a950ae5dcd0ed135cf7/doc/multithreading.txt)
+> Commit-pinned source for FFmpeg master: [doc/multithreading.txt](https://github.com/FFmpeg/FFmpeg/blob/cc7a69a36a67acb661ceb2339a41488fb7409b57/doc/multithreading.txt)
 
 # FFmpeg multithreading methods
 
