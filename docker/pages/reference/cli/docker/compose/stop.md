@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_stop.yaml](https://github.com/docker/docs/blob/6218eec744fd3fd0c714a72e04366015f4518118/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_stop.yaml)
+> Commit-pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_stop.yaml](https://github.com/docker/docs/blob/3d15caeca7608231f930137accb6d933be157b5d/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_stop.yaml)
 
 # docker compose stop
 

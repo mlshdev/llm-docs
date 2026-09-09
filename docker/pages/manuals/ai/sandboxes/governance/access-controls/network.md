@@ -1,6 +1,10 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/governance/access-controls/network.md](https://github.com/docker/docs/blob/6218eec744fd3fd0c714a72e04366015f4518118/content/manuals/ai/sandboxes/governance/access-controls/network.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/governance/access-controls/network.md](https://github.com/docker/docs/blob/3d15caeca7608231f930137accb6d933be157b5d/content/manuals/ai/sandboxes/governance/access-controls/network.md)
 
 # Network access policies
+
+The governance described here applies to local sandboxes. Organization
+governance is not available for cloud sandboxes in this release. See
+[Cloud network policy](https://docs.docker.com/ai/sandboxes/cloud/network-policy/) for cloud controls.
 
 Network access policies control outbound connections from sandboxes. Each
 policy contains one or more rules that allow the domains, IP ranges, and ports a

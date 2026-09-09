@@ -1,9 +1,9 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/workflows/_index.md](https://github.com/docker/docs/blob/6218eec744fd3fd0c714a72e04366015f4518118/content/manuals/ai/sandboxes/workflows/_index.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/workflows/_index.md](https://github.com/docker/docs/blob/3d15caeca7608231f930137accb6d933be157b5d/content/manuals/ai/sandboxes/workflows/_index.md)
 
 # Workflow patterns
 
 Choose a workflow based on how you want to develop, authenticate tools, or run
-sandboxes in automation. For command syntax and lifecycle basics, see
+local sandboxes in automation. For command syntax and lifecycle basics, see
 [Usage](https://docs.docker.com/ai/sandboxes/usage/).
 
 ## Choose how code moves

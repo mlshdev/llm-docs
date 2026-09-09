@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/builtin/handle-rate-limits.md](https://github.com/n8n-io/n8n-docs/blob/282f6a9d005a4dddb1d2182b42594b5bc66efbb6/docs/integrations/builtin/handle-rate-limits.md)
+> Commit-pinned source for n8n main: [docs/integrations/builtin/handle-rate-limits.md](https://github.com/n8n-io/n8n-docs/blob/1787aa28eed7adf00cc1b200ebebe87ef20e09f1/docs/integrations/builtin/handle-rate-limits.md)
 
 # Handle rate limits
 
@@ -39,7 +39,7 @@ Use the Loop Over Items node to batch the input items, and the Wait node to intr
 
 For example, to handle rate limits when using OpenAI:
 
-![Workflow using Loop Over Items and Wait nodes to pace requests to the OpenAI API](https://raw.githubusercontent.com/n8n-io/n8n-docs/282f6a9d005a4dddb1d2182b42594b5bc66efbb6/docs/integrations/.gitbook/assets/loop-wait.png)
+![Workflow using Loop Over Items and Wait nodes to pace requests to the OpenAI API](https://raw.githubusercontent.com/n8n-io/n8n-docs/1787aa28eed7adf00cc1b200ebebe87ef20e09f1/docs/integrations/.gitbook/assets/loop-wait.png)
 
 ## Handle rate limits in the HTTP Request node <a id="handle-rate-limits-in-the-http-request-node"></a>
 

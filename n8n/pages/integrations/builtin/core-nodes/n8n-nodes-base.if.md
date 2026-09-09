@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/builtin/core-nodes/n8n-nodes-base.if.md](https://github.com/n8n-io/n8n-docs/blob/282f6a9d005a4dddb1d2182b42594b5bc66efbb6/docs/integrations/builtin/core-nodes/n8n-nodes-base.if.md)
+> Commit-pinned source for n8n main: [docs/integrations/builtin/core-nodes/n8n-nodes-base.if.md](https://github.com/n8n-io/n8n-docs/blob/1787aa28eed7adf00cc1b200ebebe87ef20e09f1/docs/integrations/builtin/core-nodes/n8n-nodes-base.if.md)
 
 # If <a id="if"></a>
 
@@ -37,7 +37,7 @@ One data stream triggers the Merge node, which then goes and executes the other 
 
 For example, in the screenshot below there's a workflow containing an Edit Fields node, If node, and Merge node. The standard If node behavior is to execute one data stream (in the screenshot, this is the **true** output). However, due to the Merge node, both data streams execute, despite the If node not sending any data down the **false** data stream.
 
-![A workflow with an Edit Fields node, an If node, and a Merge node connected in sequence](https://raw.githubusercontent.com/n8n-io/n8n-docs/282f6a9d005a4dddb1d2182b42594b5bc66efbb6/docs/reusable-content/.gitbook/assets/if-merge-node.png)
+![A workflow with an Edit Fields node, an If node, and a Merge node connected in sequence](https://raw.githubusercontent.com/n8n-io/n8n-docs/1787aa28eed7adf00cc1b200ebebe87ef20e09f1/docs/reusable-content/.gitbook/assets/if-merge-node.png)
 
 ## Related resources <a id="related-resources"></a>
 

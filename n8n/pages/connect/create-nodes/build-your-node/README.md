@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/connect/create-nodes/build-your-node/README.md](https://github.com/n8n-io/n8n-docs/blob/282f6a9d005a4dddb1d2182b42594b5bc66efbb6/docs/connect/create-nodes/build-your-node/README.md)
+> Commit-pinned source for n8n main: [docs/connect/create-nodes/build-your-node/README.md](https://github.com/n8n-io/n8n-docs/blob/1787aa28eed7adf00cc1b200ebebe87ef20e09f1/docs/connect/create-nodes/build-your-node/README.md)
 
 # Build a node <a id="build-a-node"></a>
 

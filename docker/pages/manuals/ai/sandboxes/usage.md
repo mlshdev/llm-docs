@@ -1,6 +1,9 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/usage.md](https://github.com/docker/docs/blob/6218eec744fd3fd0c714a72e04366015f4518118/content/manuals/ai/sandboxes/usage.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/usage.md](https://github.com/docker/docs/blob/3d15caeca7608231f930137accb6d933be157b5d/content/manuals/ai/sandboxes/usage.md)
 
 # Usage
+
+This page describes local sandboxes. For cloud commands, file transfers, ports,
+and expiration, see [Use cloud sandboxes](https://docs.docker.com/ai/sandboxes/cloud/usage/).
 
 Use this page as a command-oriented guide to day-to-day `sbx` operations. For
 scenario-based recommendations, see [Workflow patterns](https://docs.docker.com/ai/sandboxes/workflows/).

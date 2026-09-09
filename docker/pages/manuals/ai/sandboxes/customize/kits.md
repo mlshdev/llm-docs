@@ -1,10 +1,13 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/customize/kits.md](https://github.com/docker/docs/blob/6218eec744fd3fd0c714a72e04366015f4518118/content/manuals/ai/sandboxes/customize/kits.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/customize/kits.md](https://github.com/docker/docs/blob/3d15caeca7608231f930137accb6d933be157b5d/content/manuals/ai/sandboxes/customize/kits.md)
 
 # Kits
 
 **Docker Sandboxes sbx requirements**
 
 - Availability: Early Access
+
+The procedures on this page use local sandboxes. For cloud template and kit
+usage, see [Customize a cloud sandbox](https://docs.docker.com/ai/sandboxes/cloud/usage/#customize-a-cloud-sandbox).
 
 > \[!NOTE]
 > Kits are experimental. The kit file format, CLI commands, and experience

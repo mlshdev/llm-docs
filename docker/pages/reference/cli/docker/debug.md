@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/debug/docker_debug.yaml](https://github.com/docker/docs/blob/6218eec744fd3fd0c714a72e04366015f4518118/data/cli/debug/docker_debug.yaml)
+> Commit-pinned source for Docker main: [data/cli/debug/docker_debug.yaml](https://github.com/docker/docs/blob/3d15caeca7608231f930137accb6d933be157b5d/data/cli/debug/docker_debug.yaml)
 
 # docker debug
 

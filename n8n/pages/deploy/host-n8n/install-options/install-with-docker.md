@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/host-n8n/install-options/install-with-docker.md](https://github.com/n8n-io/n8n-docs/blob/282f6a9d005a4dddb1d2182b42594b5bc66efbb6/docs/deploy/host-n8n/install-options/install-with-docker.md)
+> Commit-pinned source for n8n main: [docs/deploy/host-n8n/install-options/install-with-docker.md](https://github.com/n8n-io/n8n-docs/blob/1787aa28eed7adf00cc1b200ebebe87ef20e09f1/docs/deploy/host-n8n/install-options/install-with-docker.md)
 
 # Install with Docker
 
@@ -115,7 +115,7 @@ You can find a complete `docker-compose` file for PostgreSQL in the [n8n hosting
 
 To update n8n, in Docker Desktop, navigate to the **Images** tab and select **Pull** from the context menu to download the latest n8n image:
 
-![Docker Desktop Images tab with the row context menu open and Pull available](https://raw.githubusercontent.com/n8n-io/n8n-docs/282f6a9d005a4dddb1d2182b42594b5bc66efbb6/docs/deploy/.gitbook/assets/docker_desktop.png)
+![Docker Desktop Images tab with the row context menu open and Pull available](https://raw.githubusercontent.com/n8n-io/n8n-docs/1787aa28eed7adf00cc1b200ebebe87ef20e09f1/docs/deploy/.gitbook/assets/docker_desktop.png)
 
 You can also use the command line to pull the latest, or a specific version:
 

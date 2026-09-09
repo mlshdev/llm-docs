@@ -1,6 +1,9 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/security/_index.md](https://github.com/docker/docs/blob/6218eec744fd3fd0c714a72e04366015f4518118/content/manuals/ai/sandboxes/security/_index.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/security/_index.md](https://github.com/docker/docs/blob/3d15caeca7608231f930137accb6d933be157b5d/content/manuals/ai/sandboxes/security/_index.md)
 
 # Security model
+
+This page describes local sandboxes. For cloud behavior and limitations, see
+[Compare local and cloud sandboxes](https://docs.docker.com/ai/sandboxes/cloud/local-vs-cloud/).
 
 Docker Sandboxes run AI agents in microVMs so they can execute code, install
 packages, and use tools without accessing host resources beyond those you
@@ -53,7 +56,7 @@ local MCP servers as trusted host integrations.
 
 The following diagram shows a sandbox with a directly mounted workspace:
 
-![Docker Sandbox security model](https://raw.githubusercontent.com/docker/docs/6218eec744fd3fd0c714a72e04366015f4518118/content/manuals/ai/sandboxes/images/sbx-security.png)
+![Docker Sandbox security model](https://raw.githubusercontent.com/docker/docs/3d15caeca7608231f930137accb6d933be157b5d/content/manuals/ai/sandboxes/images/sbx-security.png)
 
 ## Isolation layers
 

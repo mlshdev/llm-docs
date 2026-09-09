@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/desktop/use-desktop/builds.md](https://github.com/docker/docs/blob/6218eec744fd3fd0c714a72e04366015f4518118/content/manuals/desktop/use-desktop/builds.md)
+> Commit-pinned source for Docker main: [content/manuals/desktop/use-desktop/builds.md](https://github.com/docker/docs/blob/3d15caeca7608231f930137accb6d933be157b5d/content/manuals/desktop/use-desktop/builds.md)
 
 # Explore the Builds view in Docker Desktop
 
@@ -141,7 +141,7 @@ and view it in [Jaeger](https://www.jaegertracing.io/):
 
 Now you can analyze the build trace using the Jaeger UI:
 
-![Jaeger UI screenshot](https://raw.githubusercontent.com/docker/docs/6218eec744fd3fd0c714a72e04366015f4518118/content/manuals/desktop/images/build-ui-jaeger-screenshot.png "Screenshot of a build trace in the Jaeger UI")
+![Jaeger UI screenshot](https://raw.githubusercontent.com/docker/docs/3d15caeca7608231f930137accb6d933be157b5d/content/manuals/desktop/images/build-ui-jaeger-screenshot.png "Screenshot of a build trace in the Jaeger UI")
 
 ### Dockerfile source and errors
 

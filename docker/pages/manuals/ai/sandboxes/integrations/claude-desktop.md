@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/integrations/claude-desktop.md](https://github.com/docker/docs/blob/6218eec744fd3fd0c714a72e04366015f4518118/content/manuals/ai/sandboxes/integrations/claude-desktop.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/integrations/claude-desktop.md](https://github.com/docker/docs/blob/3d15caeca7608231f930137accb6d933be157b5d/content/manuals/ai/sandboxes/integrations/claude-desktop.md)
 
 # Connect Claude Desktop to a sandbox
 
@@ -6,6 +6,9 @@
 
 - Availability: GA
 - Requires: Docker Sandboxes 0.37.0 or later
+
+These connection instructions use a local sandbox. For cloud SSH setup, see
+[Connect with SSH](https://docs.docker.com/ai/sandboxes/cloud/usage/#connect-with-ssh).
 
 Claude Desktop can run Claude Code on a remote machine over SSH. Point it at a
 sandbox so the agent works inside the isolated environment instead of on your

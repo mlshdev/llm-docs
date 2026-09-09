@@ -1,6 +1,6 @@
 # Docker main
 
-> Documentation generated from the latest `main` branch commit of [docker/docs](https://github.com/docker/docs) and pinned to immutable source commit `6218eec744fd3fd0c714a72e04366015f4518118`.
+> Documentation generated from the latest `main` branch commit of [docker/docs](https://github.com/docker/docs) and pinned to immutable source commit `3d15caeca7608231f930137accb6d933be157b5d`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Docker main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -328,6 +328,12 @@
 - [OpenCode](pages/manuals/ai/sandboxes/agents/opencode.md): Source `content/manuals/ai/sandboxes/agents/opencode.md`.
 - [Shell](pages/manuals/ai/sandboxes/agents/shell.md): Source `content/manuals/ai/sandboxes/agents/shell.md`.
 - [Architecture](pages/manuals/ai/sandboxes/architecture.md): Source `content/manuals/ai/sandboxes/architecture.md`.
+- [Authenticate cloud agents](pages/manuals/ai/sandboxes/cloud/credentials.md): Source `content/manuals/ai/sandboxes/cloud/credentials.md`.
+- [Cloud sandboxes](pages/manuals/ai/sandboxes/cloud/index.md): Source `content/manuals/ai/sandboxes/cloud/_index.md`.
+- [Compare local and cloud sandboxes](pages/manuals/ai/sandboxes/cloud/local-vs-cloud.md): Source `content/manuals/ai/sandboxes/cloud/local-vs-cloud.md`.
+- [Move a sandbox](pages/manuals/ai/sandboxes/cloud/move.md): Source `content/manuals/ai/sandboxes/cloud/move.md`.
+- [Manage cloud network policy](pages/manuals/ai/sandboxes/cloud/network-policy.md): Source `content/manuals/ai/sandboxes/cloud/network-policy.md`.
+- [Use cloud sandboxes](pages/manuals/ai/sandboxes/cloud/usage.md): Source `content/manuals/ai/sandboxes/cloud/usage.md`.
 - [Manage credentials](pages/manuals/ai/sandboxes/configuration/credentials.md): Source `content/manuals/ai/sandboxes/configuration/credentials.md`.
 - [Sandbox environment files](pages/manuals/ai/sandboxes/configuration/environment-files.md): Source `content/manuals/ai/sandboxes/configuration/environment-files.md`.
 - [Enable NVIDIA GPU passthrough](pages/manuals/ai/sandboxes/configuration/gpu-passthrough.md): Source `content/manuals/ai/sandboxes/configuration/gpu-passthrough.md`.
@@ -341,7 +347,7 @@
 - [Kits](pages/manuals/ai/sandboxes/customize/kits.md): Source `content/manuals/ai/sandboxes/customize/kits.md`.
 - [Templates](pages/manuals/ai/sandboxes/customize/templates.md): Source `content/manuals/ai/sandboxes/customize/templates.md`.
 - [FAQ](pages/manuals/ai/sandboxes/faq.md): Source `content/manuals/ai/sandboxes/faq.md`.
-- [Get started with Docker Sandboxes](pages/manuals/ai/sandboxes/get-started.md): Source `content/manuals/ai/sandboxes/get-started.md`.
+- [Get started with local Docker Sandboxes](pages/manuals/ai/sandboxes/get-started.md): Source `content/manuals/ai/sandboxes/get-started.md`.
 - [Filesystem access policies](pages/manuals/ai/sandboxes/governance/access-controls/filesystem.md): Source `content/manuals/ai/sandboxes/governance/access-controls/filesystem.md`.
 - [Access controls](pages/manuals/ai/sandboxes/governance/access-controls/index.md): Source `content/manuals/ai/sandboxes/governance/access-controls/_index.md`.
 - [Local policy](pages/manuals/ai/sandboxes/governance/access-controls/local.md): Source `content/manuals/ai/sandboxes/governance/access-controls/local.md`.

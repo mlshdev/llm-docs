@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/agentic-platform/faq.md](https://github.com/docker/docs/blob/6218eec744fd3fd0c714a72e04366015f4518118/content/manuals/agentic-platform/faq.md)
+> Commit-pinned source for Docker main: [content/manuals/agentic-platform/faq.md](https://github.com/docker/docs/blob/3d15caeca7608231f930137accb6d933be157b5d/content/manuals/agentic-platform/faq.md)
 
 # Docker Agentic Platform FAQ
 
@@ -11,14 +11,18 @@ Docker-hosted sandbox with a live terminal.
 ## How does Docker Agentic Platform differ from Docker Sandboxes?
 
 Docker Agentic Platform runs sandboxes on Docker-managed cloud infrastructure
-through a web Console. Docker Sandboxes runs sandboxes on your development
-machine through the `sbx` command. Docker Agentic Platform manages the compute,
-MCP connections, secrets, and network policies used by its hosted sandboxes.
+through a web Console. The `sbx` CLI runs local sandboxes on your development
+machine and cloud sandboxes with `sbx --cloud`. The Console and CLI have
+different workflows and secret names. See
+[Cloud sandboxes](https://docs.docker.com/ai/sandboxes/cloud/) for the CLI experience.
 
 ## Can I move a sandbox between my machine and Docker Agentic Platform?
 
-No. Local and hosted sandboxes are separate in the initial release. You cannot
-move a running sandbox or its local bind mounts into Docker Agentic Platform.
+The `sbx move` command copies a sandbox filesystem between local and cloud
+environments. It does not transfer running processes, host bind mounts, or
+managed secrets, and it leaves the source sandbox in place. See
+[Move a sandbox](https://docs.docker.com/ai/sandboxes/cloud/move/) for the CLI workflow and
+its limitations.
 
 ## Can I share sandboxes and configuration with a team?
 

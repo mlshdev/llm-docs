@@ -1,6 +1,9 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/agents/copilot.md](https://github.com/docker/docs/blob/6218eec744fd3fd0c714a72e04366015f4518118/content/manuals/ai/sandboxes/agents/copilot.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/agents/copilot.md](https://github.com/docker/docs/blob/3d15caeca7608231f930137accb6d933be157b5d/content/manuals/ai/sandboxes/agents/copilot.md)
 
 # Copilot
+
+This page describes local sandboxes. For cloud behavior and limitations, see
+[Compare local and cloud sandboxes](https://docs.docker.com/ai/sandboxes/cloud/local-vs-cloud/).
 
 This guide covers authentication, configuration, and usage of GitHub Copilot
 in a sandboxed environment.

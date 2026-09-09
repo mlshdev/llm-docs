@@ -1,6 +1,9 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/workflows/development.md](https://github.com/docker/docs/blob/6218eec744fd3fd0c714a72e04366015f4518118/content/manuals/ai/sandboxes/workflows/development.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/workflows/development.md](https://github.com/docker/docs/blob/3d15caeca7608231f930137accb6d933be157b5d/content/manuals/ai/sandboxes/workflows/development.md)
 
 # Develop and test locally
+
+This page describes local sandboxes, host services, and local port mappings.
+For cloud endpoints, see [Expose a port](https://docs.docker.com/ai/sandboxes/cloud/usage/#expose-a-port).
 
 Use a sandbox's private runtime to build images, run tests, and connect local
 tools to development services across the sandbox boundary.

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/testcontainers-java-mockserver.md](https://github.com/docker/docs/blob/6218eec744fd3fd0c714a72e04366015f4518118/content/guides/testcontainers-java-mockserver.md)
+> Commit-pinned source for Docker main: [content/guides/testcontainers-java-mockserver.md](https://github.com/docker/docs/blob/3d15caeca7608231f930137accb6d933be157b5d/content/guides/testcontainers-java-mockserver.md)
 
 # Testing REST API integrations using MockServer
 

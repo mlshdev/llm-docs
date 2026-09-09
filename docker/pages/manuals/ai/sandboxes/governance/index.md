@@ -1,6 +1,10 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/governance/_index.md](https://github.com/docker/docs/blob/6218eec744fd3fd0c714a72e04366015f4518118/content/manuals/ai/sandboxes/governance/_index.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/governance/_index.md](https://github.com/docker/docs/blob/3d15caeca7608231f930137accb6d933be157b5d/content/manuals/ai/sandboxes/governance/_index.md)
 
 # Governance
+
+The governance described here applies to local sandboxes. Organization
+governance is not available for cloud sandboxes in this release. See
+[Cloud network policy](https://docs.docker.com/ai/sandboxes/cloud/network-policy/) for cloud controls.
 
 Sandbox governance covers the policy system that controls what sandboxes can
 access over the network, on the filesystem, and through MCP. For MCP setup and
@@ -14,7 +18,7 @@ See [Local policy](https://docs.docker.com/ai/sandboxes/governance/access-contro
 **Organization policy** is configured centrally in Docker Home. Network and
 filesystem policies can also be managed via the
 [Governance API](https://docs.docker.com/reference/api/ai-governance/). Controls defined at the org
-level apply uniformly across every sandbox in the organization. Organization
+level apply uniformly across every local sandbox in the organization. Organization
 governance can also include MCP policies for sandbox MCP activity. When
 organization governance is active, only organization allow rules grant access:
 local `sbx policy` allow rules are no longer evaluated, while local deny rules

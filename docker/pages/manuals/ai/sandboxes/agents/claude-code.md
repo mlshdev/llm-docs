@@ -1,6 +1,10 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/agents/claude-code.md](https://github.com/docker/docs/blob/6218eec744fd3fd0c714a72e04366015f4518118/content/manuals/ai/sandboxes/agents/claude-code.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/agents/claude-code.md](https://github.com/docker/docs/blob/3d15caeca7608231f930137accb6d933be157b5d/content/manuals/ai/sandboxes/agents/claude-code.md)
 
 # Claude Code
+
+The following instructions apply to local sandboxes. For cloud authentication
+and usage, see [Authenticate cloud agents](https://docs.docker.com/ai/sandboxes/cloud/credentials/) and
+[Use cloud sandboxes](https://docs.docker.com/ai/sandboxes/cloud/usage/).
 
 Official documentation: [Claude Code](https://code.claude.com/docs)
 

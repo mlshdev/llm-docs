@@ -1,8 +1,8 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/configuration/_index.md](https://github.com/docker/docs/blob/6218eec744fd3fd0c714a72e04366015f4518118/content/manuals/ai/sandboxes/configuration/_index.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/configuration/_index.md](https://github.com/docker/docs/blob/3d15caeca7608231f930137accb6d933be157b5d/content/manuals/ai/sandboxes/configuration/_index.md)
 
 # Configure Docker Sandboxes
 
-Configure credentials and how Docker Sandboxes run for a project, host, or
+Configure credentials and how local sandboxes run for a project, host, or
 network environment. These settings control sandbox creation, authentication,
 and connectivity. To change the tools and agent configuration inside a
 sandbox, see [Customize](https://docs.docker.com/ai/sandboxes/customize/).

@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflow.md](https://github.com/n8n-io/n8n-docs/blob/282f6a9d005a4dddb1d2182b42594b5bc66efbb6/docs/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflow.md)
+> Commit-pinned source for n8n main: [docs/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflow.md](https://github.com/n8n-io/n8n-docs/blob/1787aa28eed7adf00cc1b200ebebe87ef20e09f1/docs/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflow.md)
 
 # Execute Sub-workflow <a id="execute-sub-workflow"></a>
 
@@ -59,7 +59,7 @@ This section walks through setting up both the parent workflow and sub-workflow.
    > You can also extract selected nodes directly using [Sub-workflow conversion](https://docs.n8n.io/build/flow-logic/convert-to-sub-workflows) in the context menu.
 
 2. **Optional**: configure which workflows can call the sub-workflow:
-   1. Select the **Options** ![Options menu](https://raw.githubusercontent.com/n8n-io/n8n-docs/282f6a9d005a4dddb1d2182b42594b5bc66efbb6/docs/reusable-content/.gitbook/assets/three-dot-options-menu.png) menu > **Settings**. n8n opens the **Workflow settings** modal.
+   1. Select the **Options** ![Options menu](https://raw.githubusercontent.com/n8n-io/n8n-docs/1787aa28eed7adf00cc1b200ebebe87ef20e09f1/docs/reusable-content/.gitbook/assets/three-dot-options-menu.png) menu > **Settings**. n8n opens the **Workflow settings** modal.
    2. Change the **This workflow can be called by** setting.	Refer to [Workflow settings](https://docs.n8n.io/build/manage-workflows/configure-workflow-settings) for more information on configuring your workflows.
 
 3. Add the **Execute Sub-workflow** trigger node (if you are searching under trigger nodes, this is also titled **When Executed by Another Workflow**).

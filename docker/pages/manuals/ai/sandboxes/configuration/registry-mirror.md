@@ -1,6 +1,9 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/configuration/registry-mirror.md](https://github.com/docker/docs/blob/6218eec744fd3fd0c714a72e04366015f4518118/content/manuals/ai/sandboxes/configuration/registry-mirror.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/configuration/registry-mirror.md](https://github.com/docker/docs/blob/3d15caeca7608231f930137accb6d933be157b5d/content/manuals/ai/sandboxes/configuration/registry-mirror.md)
 
 # Configure a registry mirror
+
+This page describes local sandboxes. For cloud behavior and limitations, see
+[Compare local and cloud sandboxes](https://docs.docker.com/ai/sandboxes/cloud/local-vs-cloud/).
 
 A registry mirror routes Docker Hub pulls for sandbox templates and OCI kits
 through your organization's registry infrastructure. If the mirror meets

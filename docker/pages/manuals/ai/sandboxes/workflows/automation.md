@@ -1,6 +1,9 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/workflows/automation.md](https://github.com/docker/docs/blob/6218eec744fd3fd0c714a72e04366015f4518118/content/manuals/ai/sandboxes/workflows/automation.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/workflows/automation.md](https://github.com/docker/docs/blob/3d15caeca7608231f930137accb6d933be157b5d/content/manuals/ai/sandboxes/workflows/automation.md)
 
 # Run sandboxes in CI
+
+This page describes local sandboxes in CI. For cloud execution without local
+virtualization, see [Run without attaching](https://docs.docker.com/ai/sandboxes/cloud/usage/#run-without-attaching).
 
 For CI environments and scripts where a browser isn't available, authenticate
 with a Docker Personal Access Token (PAT):

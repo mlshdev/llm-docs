@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/providers/overview/index.md](https://github.com/docker/docs/blob/6218eec744fd3fd0c714a72e04366015f4518118/_vendor/github.com/docker/docker-agent/docs/providers/overview/index.md)
+> Commit-pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/providers/overview/index.md](https://github.com/docker/docs/blob/3d15caeca7608231f930137accb6d933be157b5d/_vendor/github.com/docker/docker-agent/docs/providers/overview/index.md)
 
 *Docker Agent supports multiple AI model providers. Choose the right one for your use case, or use multiple providers in the same configuration.*
 

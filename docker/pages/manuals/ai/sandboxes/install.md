@@ -1,11 +1,16 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/install.md](https://github.com/docker/docs/blob/6218eec744fd3fd0c714a72e04366015f4518118/content/manuals/ai/sandboxes/install.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/install.md](https://github.com/docker/docs/blob/3d15caeca7608231f930137accb6d933be157b5d/content/manuals/ai/sandboxes/install.md)
 
 # Install Docker Sandboxes
 
-Install the `sbx` CLI to run AI coding agents in isolated microVMs. You don't
-need Docker Desktop or Docker Engine to use `sbx`.
+Install the `sbx` CLI to run AI coding agents in local or cloud sandboxes. You
+don't need Docker Desktop or Docker Engine to use `sbx`. Cloud sandboxes require
+version 0.42.0 or later.
 
 ## Prerequisites
+
+The operating system and processor requirements apply to the CLI installation.
+Hypervisor and KVM setup is required only to run local sandboxes. For cloud
+account requirements, see [Cloud sandboxes](https://docs.docker.com/ai/sandboxes/cloud/#prerequisites).
 
 ### macOS
 
@@ -16,10 +21,10 @@ need Docker Desktop or Docker Engine to use `sbx`.
 
 - Windows 11
 - A 64-bit Intel or AMD processor
-- Windows Hypervisor Platform
+- Windows Hypervisor Platform for local sandboxes
 
-To turn on Windows Hypervisor Platform, open an elevated PowerShell prompt and
-run:
+To run local sandboxes, open an elevated PowerShell prompt and turn on Windows
+Hypervisor Platform:
 
 ```powershell
 Enable-WindowsOptionalFeature -Online -FeatureName HypervisorPlatform -All
@@ -29,21 +34,22 @@ Enable-WindowsOptionalFeature -Online -FeatureName HypervisorPlatform -All
 
 - Ubuntu 24.04 or later
 - A 64-bit Intel or AMD processor, or a 64-bit Arm processor
-- KVM hardware virtualization supported and turned on by the CPU
-- Your user account in the `kvm` group
+- For local sandboxes, KVM hardware virtualization supported and turned on by
+  the CPU, and your user account in the `kvm` group
 
-If you're running inside a virtual machine or virtual desktop infrastructure
-environment, the environment must support nested virtualization.
+To run local sandboxes inside a virtual machine or virtual desktop
+infrastructure environment, the environment must support nested virtualization.
+Cloud sandboxes don't require this setup.
 
-Verify that KVM is available:
+For local sandboxes, verify that KVM is available:
 
 ```console
 $ lsmod | grep kvm
 ```
 
 A working setup shows `kvm_intel`, `kvm_amd`, `kvm_arm64`, or `kvm` in the
-output. If the output is empty, run `kvm-ok` for diagnostics. `sbx` requires
-KVM to start.
+output. If the output is empty, run `kvm-ok` for diagnostics. The local sandbox
+runtime requires KVM to start.
 
 Add your user to the `kvm` group:
 
@@ -140,4 +146,5 @@ $ sbx login
 The command opens a browser for Docker OAuth. See the [FAQ](https://docs.docker.com/ai/sandboxes/faq/) for why
 sign-in is required and how Docker handles your data.
 
-After signing in, [run your first sandbox](https://docs.docker.com/ai/sandboxes/get-started/).
+After signing in, [run your first local sandbox](https://docs.docker.com/ai/sandboxes/get-started/) or
+[get started with cloud sandboxes](https://docs.docker.com/ai/sandboxes/cloud/#get-started).

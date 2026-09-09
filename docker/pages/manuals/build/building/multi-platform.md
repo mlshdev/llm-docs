@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/build/building/multi-platform.md](https://github.com/docker/docs/blob/6218eec744fd3fd0c714a72e04366015f4518118/content/manuals/build/building/multi-platform.md)
+> Commit-pinned source for Docker main: [content/manuals/build/building/multi-platform.md](https://github.com/docker/docs/blob/3d15caeca7608231f930137accb6d933be157b5d/content/manuals/build/building/multi-platform.md)
 
 A multi-platform build refers to a single build invocation that targets
 multiple different operating system or CPU architecture combinations. When

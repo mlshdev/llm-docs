@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/build/policies/usage.md](https://github.com/docker/docs/blob/6218eec744fd3fd0c714a72e04366015f4518118/content/manuals/build/policies/usage.md)
+> Commit-pinned source for Docker main: [content/manuals/build/policies/usage.md](https://github.com/docker/docs/blob/3d15caeca7608231f930137accb6d933be157b5d/content/manuals/build/policies/usage.md)
 
 Build policies validate inputs before builds execute. This guide covers how to
 develop policies iteratively and apply them to real builds with `docker buildx

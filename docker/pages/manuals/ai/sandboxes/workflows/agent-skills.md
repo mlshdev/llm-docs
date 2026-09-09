@@ -1,11 +1,11 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/workflows/agent-skills.md](https://github.com/docker/docs/blob/6218eec744fd3fd0c714a72e04366015f4518118/content/manuals/ai/sandboxes/workflows/agent-skills.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/workflows/agent-skills.md](https://github.com/docker/docs/blob/3d15caeca7608231f930137accb6d933be157b5d/content/manuals/ai/sandboxes/workflows/agent-skills.md)
 
 # Share agent skills
 
 Shared agent skills let you install skills from Git repositories or import
-skills from supported agents on your host. `sbx` keeps installed skills in a
-persistent store that survives sandbox deletion and is shared by default with
-new sandboxes that run a supported agent.
+skills from supported agents on your host for use in local sandboxes. `sbx`
+keeps installed skills in a persistent store that survives sandbox deletion
+and is shared by default with new sandboxes that run a supported agent.
 
 > \[!NOTE]
 > Shared agent skills are experimental.
