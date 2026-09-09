@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/mistral-vibe-sandbox.md](https://github.com/docker/docs/blob/1808ce9024d6e24a418ae6b43b2413042e2c8e42/content/guides/mistral-vibe-sandbox.md)
+> Commit-pinned source for Docker main: [content/guides/mistral-vibe-sandbox.md](https://github.com/docker/docs/blob/6218eec744fd3fd0c714a72e04366015f4518118/content/guides/mistral-vibe-sandbox.md)
 
 Mistral Vibe is Mistral's open source coding agent. This guide shows how to
 package it as a Docker Sandbox agent so it runs in an isolated microVM instead

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/governance/monitor-and-enforce/monitoring.md](https://github.com/docker/docs/blob/1808ce9024d6e24a418ae6b43b2413042e2c8e42/content/manuals/ai/sandboxes/governance/monitor-and-enforce/monitoring.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/governance/monitor-and-enforce/monitoring.md](https://github.com/docker/docs/blob/6218eec744fd3fd0c714a72e04366015f4518118/content/manuals/ai/sandboxes/governance/monitor-and-enforce/monitoring.md)
 
 # Monitoring policies
 
@@ -63,6 +63,14 @@ the daemon has pulled the latest rules. If the sync state shows an error or a
 stale timestamp, the daemon may not have the most recent org policy. Run
 `sbx policy reset` to force a fresh pull. `Hidden` reports how many inactive
 rules are suppressed and how to reveal them.
+
+If Docker can't determine which organization governs your account, policy
+output shows `Governance: Unresolved`, and the dashboard shows the same
+unresolved state. For example, this happens when your account belongs to
+multiple organizations with governance enabled. Policy enforcement fails closed
+until the conflict is resolved, so local allow rules can't grant access. Contact
+an administrator for the affected organizations to resolve the conflicting
+governance configuration.
 
 ### Showing inactive rules
 
