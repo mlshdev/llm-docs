@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/engine/install/debian.md](https://github.com/docker/docs/blob/3d15caeca7608231f930137accb6d933be157b5d/content/manuals/engine/install/debian.md)
+> Commit-pinned source for Docker main: [content/manuals/engine/install/debian.md](https://github.com/docker/docs/blob/22e32a82b28b6dabf125325fe9cd79133dc1de4a/content/manuals/engine/install/debian.md)
 
 # Install Docker Engine on Debian
 
@@ -31,7 +31,6 @@ To install Docker Engine, you need one of these Debian versions:
 
 - Debian Trixie 13 (stable)
 - Debian Bookworm 12 (oldstable)
-- Debian Bullseye 11 (oldoldstable)
 
 Docker Engine for Debian is compatible with x86\_64 (or amd64), armhf (arm/v7),
 arm64, and ppc64le (ppc64el) architectures.

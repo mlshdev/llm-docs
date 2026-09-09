@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/reference/compose-file/build.md](https://github.com/docker/docs/blob/3d15caeca7608231f930137accb6d933be157b5d/content/reference/compose-file/build.md)
+> Commit-pinned source for Docker main: [content/reference/compose-file/build.md](https://github.com/docker/docs/blob/22e32a82b28b6dabf125325fe9cd79133dc1de4a/content/reference/compose-file/build.md)
 
 Build is an optional part of the Compose Specification. It tells Compose how to (re)build an application from source and lets you define the build process within a Compose file in a portable way.  `build` can be either specified as a single string defining a context path, or as a detailed build definition.
 

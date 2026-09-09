@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/moby/buildkit/frontend/dockerfile/docs/reference.md](https://github.com/docker/docs/blob/3d15caeca7608231f930137accb6d933be157b5d/_vendor/github.com/moby/buildkit/frontend/dockerfile/docs/reference.md)
+> Commit-pinned source for Docker main: [_vendor/github.com/moby/buildkit/frontend/dockerfile/docs/reference.md](https://github.com/docker/docs/blob/22e32a82b28b6dabf125325fe9cd79133dc1de4a/_vendor/github.com/moby/buildkit/frontend/dockerfile/docs/reference.md)
 
 Docker can build images automatically by reading the instructions from a
 Dockerfile. A Dockerfile is a text document that contains all the commands a

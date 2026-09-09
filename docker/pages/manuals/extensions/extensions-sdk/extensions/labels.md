@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/extensions/extensions-sdk/extensions/labels.md](https://github.com/docker/docs/blob/3d15caeca7608231f930137accb6d933be157b5d/content/manuals/extensions/extensions-sdk/extensions/labels.md)
+> Commit-pinned source for Docker main: [content/manuals/extensions/extensions-sdk/extensions/labels.md](https://github.com/docker/docs/blob/22e32a82b28b6dabf125325fe9cd79133dc1de4a/content/manuals/extensions/extensions-sdk/extensions/labels.md)
 
 # Extension image labels
 
@@ -6,7 +6,7 @@ Extensions use image labels to provide additional information such as a title, d
 
 This information is then displayed as an overview of the extension, so users can choose to install it.
 
-![An extension overview, generated from labels](https://raw.githubusercontent.com/docker/docs/3d15caeca7608231f930137accb6d933be157b5d/content/manuals/extensions/extensions-sdk/extensions/images/marketplace-details.png)
+![An extension overview, generated from labels](https://raw.githubusercontent.com/docker/docs/22e32a82b28b6dabf125325fe9cd79133dc1de4a/content/manuals/extensions/extensions-sdk/extensions/images/marketplace-details.png)
 
 You can define [image labels](https://docs.docker.com/reference/dockerfile/#label) in the extension's `Dockerfile`.
 
@@ -50,4 +50,4 @@ When you create and install your unpublished extension, you can preview the exte
 > You can re-tag your image in order to have a different image name that's not listed as a published extension.
 > Use `docker tag org/published-extension unpublished-extension` and then `docker extension install unpublished-extension`.
 
-![List preview](https://raw.githubusercontent.com/docker/docs/3d15caeca7608231f930137accb6d933be157b5d/content/manuals/extensions/extensions-sdk/extensions/images/list-preview.png)
+![List preview](https://raw.githubusercontent.com/docker/docs/22e32a82b28b6dabf125325fe9cd79133dc1de4a/content/manuals/extensions/extensions-sdk/extensions/images/list-preview.png)

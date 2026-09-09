@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/genai-pdf-bot.md](https://github.com/docker/docs/blob/3d15caeca7608231f930137accb6d933be157b5d/content/guides/genai-pdf-bot.md)
+> Commit-pinned source for Docker main: [content/guides/genai-pdf-bot.md](https://github.com/docker/docs/blob/22e32a82b28b6dabf125325fe9cd79133dc1de4a/content/guides/genai-pdf-bot.md)
 
 The generative AI (GenAI) guide teaches you how to containerize an existing GenAI application using Docker. In this guide, you’ll learn how to:
 

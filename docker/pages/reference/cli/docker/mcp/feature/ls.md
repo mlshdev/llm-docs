@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/mcp/docker_mcp_feature_ls.yaml](https://github.com/docker/docs/blob/3d15caeca7608231f930137accb6d933be157b5d/data/cli/mcp/docker_mcp_feature_ls.yaml)
+> Commit-pinned source for Docker main: [data/cli/mcp/docker_mcp_feature_ls.yaml](https://github.com/docker/docs/blob/22e32a82b28b6dabf125325fe9cd79133dc1de4a/data/cli/mcp/docker_mcp_feature_ls.yaml)
 
 # docker mcp feature ls
 

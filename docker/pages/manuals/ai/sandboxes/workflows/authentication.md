@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/workflows/authentication.md](https://github.com/docker/docs/blob/3d15caeca7608231f930137accb6d933be157b5d/content/manuals/ai/sandboxes/workflows/authentication.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/workflows/authentication.md](https://github.com/docker/docs/blob/22e32a82b28b6dabf125325fe9cd79133dc1de4a/content/manuals/ai/sandboxes/workflows/authentication.md)
 
 These workflows resolve credentials on the host for local sandboxes. For
 cloud secret setup, see [Authenticate cloud agents](https://docs.docker.com/ai/sandboxes/cloud/credentials/).

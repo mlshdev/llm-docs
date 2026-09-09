@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/compose/install/_index.md](https://github.com/docker/docs/blob/3d15caeca7608231f930137accb6d933be157b5d/content/manuals/compose/install/_index.md)
+> Commit-pinned source for Docker main: [content/manuals/compose/install/_index.md](https://github.com/docker/docs/blob/22e32a82b28b6dabf125325fe9cd79133dc1de4a/content/manuals/compose/install/_index.md)
 
 # Overview of installing Docker Compose
 
@@ -20,7 +20,7 @@ Docker Desktop is available for:
 
 > \[!TIP]
 >
-> If you have already installed Docker Desktop, you can check which version of Compose you have by selecting **About Docker Desktop** from the Docker menu ![whale menu](https://raw.githubusercontent.com/docker/docs/3d15caeca7608231f930137accb6d933be157b5d/content/manuals/desktop/images/whale-x.svg).
+> If you have already installed Docker Desktop, you can check which version of Compose you have by selecting **About Docker Desktop** from the Docker menu ![whale menu](https://raw.githubusercontent.com/docker/docs/22e32a82b28b6dabf125325fe9cd79133dc1de4a/content/manuals/desktop/images/whale-x.svg).
 
 ### Plugin (Linux only)
 

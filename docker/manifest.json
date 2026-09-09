@@ -5,8 +5,8 @@
   "repository": "docker/docs",
   "tag": "main",
   "branch": "main",
-  "sourceCommittedAt": "2026-09-09T08:12:23Z",
-  "sourceCommit": "3d15caeca7608231f930137accb6d933be157b5d",
+  "sourceCommittedAt": "2026-09-09T12:50:04Z",
+  "sourceCommit": "22e32a82b28b6dabf125325fe9cd79133dc1de4a",
   "documentCount": 1646,
   "quarantined": [
     {
