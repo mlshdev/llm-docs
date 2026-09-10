@@ -1,4 +1,4 @@
-> Commit-pinned source for FFmpeg master: [doc/build_system.txt](https://github.com/FFmpeg/FFmpeg/blob/266fff15a0f5e1165a90327ecacae82e7df107c9/doc/build_system.txt)
+> Commit-pinned source for FFmpeg master: [doc/build_system.txt](https://github.com/FFmpeg/FFmpeg/blob/3a165c77dce7fac8c54f9f9aaab5447590433748/doc/build_system.txt)
 
 FFmpeg currently uses a custom build system, this text attempts to document
 some of its obscure features and options.

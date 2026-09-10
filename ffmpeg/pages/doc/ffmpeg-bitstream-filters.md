@@ -1,4 +1,4 @@
-> Commit-pinned source for FFmpeg master: [doc/ffmpeg-bitstream-filters.texi](https://github.com/FFmpeg/FFmpeg/blob/266fff15a0f5e1165a90327ecacae82e7df107c9/doc/ffmpeg-bitstream-filters.texi)
+> Commit-pinned source for FFmpeg master: [doc/ffmpeg-bitstream-filters.texi](https://github.com/FFmpeg/FFmpeg/blob/3a165c77dce7fac8c54f9f9aaab5447590433748/doc/ffmpeg-bitstream-filters.texi)
 
 # Description
 
@@ -1024,6 +1024,177 @@ This can be useful for debugging low-level stream issues.
 
 Supports AV1, H.264, H.265, (M)JPEG, MPEG-2 and VP9, but depending
 on the build only a subset of these may be available.
+
+## trim
+
+Drop packets outside a given range, similar to the trim and atrim
+filters, but operating on packets instead of decoded frames.
+
+The range is described by a `start` and an `end` bound. At least
+one of them must be set. Each bound is fully described by three independent
+choices:
+
+-
+
+The discriminant it is compared against: the packet's presentation timestamp,
+its decoding timestamp, or its index. The two bounds need not use the same one,
+for instance a `dts` start with a `pts` end.
+--------------------------------------------
+
+## The unit its value is given in: the stream time base, milliseconds, or packets.
+
+What it is counted from: zero, or its reference packet when `start_rel`
+/ `end_rel` is set. For `start` the reference packet is the first
+packet carrying that discriminant. For `end` it is the first exported
+packet.
+
+The `start_type` and `end_type` options name a combination of the
+three. The `dur_ts` and `dur_t_msec` end types are the always relative
+forms of `pts` and `msec_pt`. A zero duration therefore produces an
+empty stream.
+
+Every packet is judged on its own discriminant, and on nothing else. A packet
+not carrying the discriminant its bound uses cannot be placed, and is dropped.
+
+`start_rel` makes `start` an offset from a reference packet
+instead of an absolute value. The reference is the first packet carrying the
+discriminant that bound uses. Its value is added to the offset once, and the
+bound stays there for the rest of the stream.
+
+`end_rel` anchors on the first exported packet instead, at the position
+`start` trimmed it to. The two bounds therefore move together.
+
+Only a discriminant that cannot come back into the range ends the stream, namely
+the packet index or the decoding timestamp. End of stream is signaled once one
+of those passes the `end` bound. A presentation timestamp past the end
+only drops its packet, so that later packets still inside the range are not
+lost.
+
+A bound given in a time unit can fall inside a packet rather than between two.
+Such a packet is trimmed. Set `trim_packets` to false to keep every
+packet exactly as it came in: exported whole if its own value is inside the
+range, dropped otherwise.
+
+Audio is trimmed in sample space, through skip samples side data. The timestamps
+and duration are left untouched, and a decoder discards the signaled samples on
+output. This needs a sample rate and a time base. Audio missing either is
+rejected rather than trimmed on the timeline. Every other media type is trimmed
+by shifting the packet timestamps and shortening its duration.
+
+Trimming inside an audio packet needs the number of samples it decodes to. Where
+the codec does not give that number, the packet is handled as though
+`trim_packets` were false.
+
+A skip larger than the packet carrying it continues into the packets after it.
+Dropping such a packet carries the remainder over to the next one. A skip that
+packet already carries replaces the remainder, as a decoder would, and the
+larger of it and this filter's own trim wins.
+
+By default a packet outside the range is dropped, whether or not later packets
+depend on it. Streams of independent frames, such as ADTS or intra only video,
+can be cut anywhere. Cutting an inter coded stream inside a group of pictures
+leaves the first packets in range undecodable.
+
+Set `preroll` to export the packets those first packets depend on as
+well. They are flagged for a decoder to decode and then drop, so the frames it
+outputs still begin at the `start` bound. Only a decoder acts on that
+flag. Use `preroll` where the stream is decoded. A muxer writes the extra
+packets like any other. A remux then covers more than the requested range.
+
+`preroll` covers the start of the range only. On a stream with B-frames
+an `end` bound on the presentation timestamp can drop a packet the last
+frames in the range need. Those frames then decode incorrectly.
+
+It accepts the following parameters:
+
+- start
+  Time or index marking the start of the accepted range. Packets before it are
+  dropped. A packet straddling it is trimmed at its start, or dropped when
+  `trim_packets` is false.
+
+- start\_type
+  How to interpret `start`:
+  - pts
+    Presentation timestamp, in stream time base (default).
+  - dts
+    Decoding timestamp, in stream time base.
+  - pkt\_index
+    Packet index, counting from zero.
+  - msec\_pt
+    Milliseconds, matched against the presentation timestamp.
+  - msec\_dt
+    Milliseconds, matched against the decoding timestamp.
+
+- start\_rel
+  Count `start` from the reference packet rather than from zero. Has no
+  effect on `pkt_index`, whose first packet is already zero. Default false.
+
+- end
+  Time or index marking the end of the accepted range. Signals end of stream when
+  reached. A packet straddling it is trimmed at its end, or exported untouched
+  when `trim_packets` is false.
+
+- end\_type
+  How to interpret `end`. Same values as `start_type`, plus:
+  - dur\_ts
+    Duration in stream time base. Same as `pts` with `end_rel` set.
+  - dur\_t\_msec
+    Duration in milliseconds. Same as `msec_pt` with `end_rel` set.
+
+- end\_rel
+  Count `end` from the first exported packet rather than from zero. The
+  reference is that packet's value on the discriminant `end_type` names. On
+  a timestamp it is taken at the position the packet is trimmed to. For audio that
+  is the time of its first retained sample. The skip that packet carries can push
+  it past the packet itself. With `pkt_index` it exports a fixed number of
+  packets, which can be combined with a timestamp-based `start`. Always set
+  for the duration types. Default false.
+
+- trim\_packets
+  Trim packets straddling a boundary. When false, packets are exported exactly as
+  they came in, with no timestamp adjustment and no skip samples side data. A
+  packet is then exported untouched if its value falls inside the range, and
+  dropped otherwise. Default true.
+
+- preroll
+  Export the packets a decoder needs to decode the first packet in range, rather
+  than dropping them for falling before the `start` bound. The filter holds
+  every packet from the last keyframe on. It exports them ahead of the first
+  packet in range, carrying `AV_PKT_FLAG_DISCARD`.
+
+Video only. Default false.
+
+- preroll\_size
+  Maximum number of packets held for `preroll`. A group of pictures longer
+  than this is dropped whole, with a warning naming the count to raise it past.
+  Default 300, which covers the keyframe intervals encoders commonly default to.
+
+For example, to keep only the 10 first packets of an ADTS stream:
+
+```text
+ffmpeg -i INPUT.aac -c copy -bsf:a trim=end=10:end_type=pkt_index OUTPUT.aac
+```
+
+To keep 5 seconds starting 1.5 seconds into the stream:
+
+```text
+ffmpeg -i INPUT.aac -c copy -bsf:a trim=start=1500:start_type=msec_pt:end=5000:end_type=dur_t_msec OUTPUT.aac
+```
+
+The same, expressed relative to the first packet so it works regardless of the
+stream's starting timestamp:
+
+```text
+ffmpeg -i INPUT.aac -c copy -bsf:a trim=start=1500:start_type=msec_pt:start_rel=1:end=5000:end_type=dur_t_msec OUTPUT.aac
+```
+
+To start on a keyframeless point of an inter coded video stream, re-encoding it
+so that the preroll is decoded rather than written out. The filter must run
+before the decoder, so it is given before the input:
+
+```text
+ffmpeg -bsf:v trim=start=17000:start_type=msec_pt:end=30000:end_type=dur_t_msec:preroll=1 -i INPUT.mp4 OUTPUT.mp4
+```
 
 ## truehd\_core
 

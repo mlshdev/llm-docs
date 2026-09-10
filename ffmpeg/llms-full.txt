@@ -2,12 +2,12 @@
 
 Source repository: https://github.com/FFmpeg/FFmpeg
 Tracked branch: master
-Source commit: 266fff15a0f5e1165a90327ecacae82e7df107c9
+Source commit: 3a165c77dce7fac8c54f9f9aaab5447590433748
 
 # Document: Synopsis
 
 Source path: doc/ffmpeg.texi
-Canonical source: https://github.com/FFmpeg/FFmpeg/blob/266fff15a0f5e1165a90327ecacae82e7df107c9/doc/ffmpeg.texi
+Canonical source: https://github.com/FFmpeg/FFmpeg/blob/3a165c77dce7fac8c54f9f9aaab5447590433748/doc/ffmpeg.texi
 
 # Synopsis
 
@@ -3900,7 +3900,7 @@ Maintainers for the specific components are listed in the file
 # Document: Synopsis
 
 Source path: doc/ffplay.texi
-Canonical source: https://github.com/FFmpeg/FFmpeg/blob/266fff15a0f5e1165a90327ecacae82e7df107c9/doc/ffplay.texi
+Canonical source: https://github.com/FFmpeg/FFmpeg/blob/3a165c77dce7fac8c54f9f9aaab5447590433748/doc/ffplay.texi
 
 # Synopsis
 
@@ -4630,7 +4630,7 @@ Maintainers for the specific components are listed in the file
 # Document: Synopsis
 
 Source path: doc/ffprobe.texi
-Canonical source: https://github.com/FFmpeg/FFmpeg/blob/266fff15a0f5e1165a90327ecacae82e7df107c9/doc/ffprobe.texi
+Canonical source: https://github.com/FFmpeg/FFmpeg/blob/3a165c77dce7fac8c54f9f9aaab5447590433748/doc/ffprobe.texi
 
 # Synopsis
 
@@ -5730,7 +5730,7 @@ Maintainers for the specific components are listed in the file
 # Document: Description
 
 Source path: doc/ffmpeg-utils.texi
-Canonical source: https://github.com/FFmpeg/FFmpeg/blob/266fff15a0f5e1165a90327ecacae82e7df107c9/doc/ffmpeg-utils.texi
+Canonical source: https://github.com/FFmpeg/FFmpeg/blob/3a165c77dce7fac8c54f9f9aaab5447590433748/doc/ffmpeg-utils.texi
 
 # Description
 
@@ -6900,7 +6900,7 @@ Maintainers for the specific components are listed in the file
 # Document: Description
 
 Source path: doc/ffmpeg-scaler.texi
-Canonical source: https://github.com/FFmpeg/FFmpeg/blob/266fff15a0f5e1165a90327ecacae82e7df107c9/doc/ffmpeg-scaler.texi
+Canonical source: https://github.com/FFmpeg/FFmpeg/blob/3a165c77dce7fac8c54f9f9aaab5447590433748/doc/ffmpeg-scaler.texi
 
 # Description
 
@@ -7148,7 +7148,7 @@ Maintainers for the specific components are listed in the file
 # Document: Description
 
 Source path: doc/ffmpeg-resampler.texi
-Canonical source: https://github.com/FFmpeg/FFmpeg/blob/266fff15a0f5e1165a90327ecacae82e7df107c9/doc/ffmpeg-resampler.texi
+Canonical source: https://github.com/FFmpeg/FFmpeg/blob/3a165c77dce7fac8c54f9f9aaab5447590433748/doc/ffmpeg-resampler.texi
 
 # Description
 
@@ -7406,7 +7406,7 @@ Maintainers for the specific components are listed in the file
 # Document: Description
 
 Source path: doc/ffmpeg-codecs.texi
-Canonical source: https://github.com/FFmpeg/FFmpeg/blob/266fff15a0f5e1165a90327ecacae82e7df107c9/doc/ffmpeg-codecs.texi
+Canonical source: https://github.com/FFmpeg/FFmpeg/blob/3a165c77dce7fac8c54f9f9aaab5447590433748/doc/ffmpeg-codecs.texi
 
 # Description
 
@@ -13649,7 +13649,7 @@ Maintainers for the specific components are listed in the file
 # Document: Description
 
 Source path: doc/ffmpeg-formats.texi
-Canonical source: https://github.com/FFmpeg/FFmpeg/blob/266fff15a0f5e1165a90327ecacae82e7df107c9/doc/ffmpeg-formats.texi
+Canonical source: https://github.com/FFmpeg/FFmpeg/blob/3a165c77dce7fac8c54f9f9aaab5447590433748/doc/ffmpeg-formats.texi
 
 # Description
 
@@ -19542,7 +19542,7 @@ Maintainers for the specific components are listed in the file
 # Document: Description
 
 Source path: doc/ffmpeg-devices.texi
-Canonical source: https://github.com/FFmpeg/FFmpeg/blob/266fff15a0f5e1165a90327ecacae82e7df107c9/doc/ffmpeg-devices.texi
+Canonical source: https://github.com/FFmpeg/FFmpeg/blob/3a165c77dce7fac8c54f9f9aaab5447590433748/doc/ffmpeg-devices.texi
 
 # Description
 
@@ -21622,7 +21622,7 @@ Maintainers for the specific components are listed in the file
 # Document: Description
 
 Source path: doc/ffmpeg-filters.texi
-Canonical source: https://github.com/FFmpeg/FFmpeg/blob/266fff15a0f5e1165a90327ecacae82e7df107c9/doc/ffmpeg-filters.texi
+Canonical source: https://github.com/FFmpeg/FFmpeg/blob/3a165c77dce7fac8c54f9f9aaab5447590433748/doc/ffmpeg-filters.texi
 
 # Description
 
@@ -56224,7 +56224,7 @@ Maintainers for the specific components are listed in the file
 # Document: Description
 
 Source path: doc/ffmpeg-protocols.texi
-Canonical source: https://github.com/FFmpeg/FFmpeg/blob/266fff15a0f5e1165a90327ecacae82e7df107c9/doc/ffmpeg-protocols.texi
+Canonical source: https://github.com/FFmpeg/FFmpeg/blob/3a165c77dce7fac8c54f9f9aaab5447590433748/doc/ffmpeg-protocols.texi
 
 # Description
 
@@ -58742,7 +58742,7 @@ Maintainers for the specific components are listed in the file
 # Document: Description
 
 Source path: doc/ffmpeg-bitstream-filters.texi
-Canonical source: https://github.com/FFmpeg/FFmpeg/blob/266fff15a0f5e1165a90327ecacae82e7df107c9/doc/ffmpeg-bitstream-filters.texi
+Canonical source: https://github.com/FFmpeg/FFmpeg/blob/3a165c77dce7fac8c54f9f9aaab5447590433748/doc/ffmpeg-bitstream-filters.texi
 
 # Description
 
@@ -59769,6 +59769,177 @@ This can be useful for debugging low-level stream issues.
 Supports AV1, H.264, H.265, (M)JPEG, MPEG-2 and VP9, but depending
 on the build only a subset of these may be available.
 
+## trim
+
+Drop packets outside a given range, similar to the trim and atrim
+filters, but operating on packets instead of decoded frames.
+
+The range is described by a `start` and an `end` bound. At least
+one of them must be set. Each bound is fully described by three independent
+choices:
+
+-
+
+The discriminant it is compared against: the packet's presentation timestamp,
+its decoding timestamp, or its index. The two bounds need not use the same one,
+for instance a `dts` start with a `pts` end.
+--------------------------------------------
+
+## The unit its value is given in: the stream time base, milliseconds, or packets.
+
+What it is counted from: zero, or its reference packet when `start_rel`
+/ `end_rel` is set. For `start` the reference packet is the first
+packet carrying that discriminant. For `end` it is the first exported
+packet.
+
+The `start_type` and `end_type` options name a combination of the
+three. The `dur_ts` and `dur_t_msec` end types are the always relative
+forms of `pts` and `msec_pt`. A zero duration therefore produces an
+empty stream.
+
+Every packet is judged on its own discriminant, and on nothing else. A packet
+not carrying the discriminant its bound uses cannot be placed, and is dropped.
+
+`start_rel` makes `start` an offset from a reference packet
+instead of an absolute value. The reference is the first packet carrying the
+discriminant that bound uses. Its value is added to the offset once, and the
+bound stays there for the rest of the stream.
+
+`end_rel` anchors on the first exported packet instead, at the position
+`start` trimmed it to. The two bounds therefore move together.
+
+Only a discriminant that cannot come back into the range ends the stream, namely
+the packet index or the decoding timestamp. End of stream is signaled once one
+of those passes the `end` bound. A presentation timestamp past the end
+only drops its packet, so that later packets still inside the range are not
+lost.
+
+A bound given in a time unit can fall inside a packet rather than between two.
+Such a packet is trimmed. Set `trim_packets` to false to keep every
+packet exactly as it came in: exported whole if its own value is inside the
+range, dropped otherwise.
+
+Audio is trimmed in sample space, through skip samples side data. The timestamps
+and duration are left untouched, and a decoder discards the signaled samples on
+output. This needs a sample rate and a time base. Audio missing either is
+rejected rather than trimmed on the timeline. Every other media type is trimmed
+by shifting the packet timestamps and shortening its duration.
+
+Trimming inside an audio packet needs the number of samples it decodes to. Where
+the codec does not give that number, the packet is handled as though
+`trim_packets` were false.
+
+A skip larger than the packet carrying it continues into the packets after it.
+Dropping such a packet carries the remainder over to the next one. A skip that
+packet already carries replaces the remainder, as a decoder would, and the
+larger of it and this filter's own trim wins.
+
+By default a packet outside the range is dropped, whether or not later packets
+depend on it. Streams of independent frames, such as ADTS or intra only video,
+can be cut anywhere. Cutting an inter coded stream inside a group of pictures
+leaves the first packets in range undecodable.
+
+Set `preroll` to export the packets those first packets depend on as
+well. They are flagged for a decoder to decode and then drop, so the frames it
+outputs still begin at the `start` bound. Only a decoder acts on that
+flag. Use `preroll` where the stream is decoded. A muxer writes the extra
+packets like any other. A remux then covers more than the requested range.
+
+`preroll` covers the start of the range only. On a stream with B-frames
+an `end` bound on the presentation timestamp can drop a packet the last
+frames in the range need. Those frames then decode incorrectly.
+
+It accepts the following parameters:
+
+- start
+  Time or index marking the start of the accepted range. Packets before it are
+  dropped. A packet straddling it is trimmed at its start, or dropped when
+  `trim_packets` is false.
+
+- start\_type
+  How to interpret `start`:
+  - pts
+    Presentation timestamp, in stream time base (default).
+  - dts
+    Decoding timestamp, in stream time base.
+  - pkt\_index
+    Packet index, counting from zero.
+  - msec\_pt
+    Milliseconds, matched against the presentation timestamp.
+  - msec\_dt
+    Milliseconds, matched against the decoding timestamp.
+
+- start\_rel
+  Count `start` from the reference packet rather than from zero. Has no
+  effect on `pkt_index`, whose first packet is already zero. Default false.
+
+- end
+  Time or index marking the end of the accepted range. Signals end of stream when
+  reached. A packet straddling it is trimmed at its end, or exported untouched
+  when `trim_packets` is false.
+
+- end\_type
+  How to interpret `end`. Same values as `start_type`, plus:
+  - dur\_ts
+    Duration in stream time base. Same as `pts` with `end_rel` set.
+  - dur\_t\_msec
+    Duration in milliseconds. Same as `msec_pt` with `end_rel` set.
+
+- end\_rel
+  Count `end` from the first exported packet rather than from zero. The
+  reference is that packet's value on the discriminant `end_type` names. On
+  a timestamp it is taken at the position the packet is trimmed to. For audio that
+  is the time of its first retained sample. The skip that packet carries can push
+  it past the packet itself. With `pkt_index` it exports a fixed number of
+  packets, which can be combined with a timestamp-based `start`. Always set
+  for the duration types. Default false.
+
+- trim\_packets
+  Trim packets straddling a boundary. When false, packets are exported exactly as
+  they came in, with no timestamp adjustment and no skip samples side data. A
+  packet is then exported untouched if its value falls inside the range, and
+  dropped otherwise. Default true.
+
+- preroll
+  Export the packets a decoder needs to decode the first packet in range, rather
+  than dropping them for falling before the `start` bound. The filter holds
+  every packet from the last keyframe on. It exports them ahead of the first
+  packet in range, carrying `AV_PKT_FLAG_DISCARD`.
+
+Video only. Default false.
+
+- preroll\_size
+  Maximum number of packets held for `preroll`. A group of pictures longer
+  than this is dropped whole, with a warning naming the count to raise it past.
+  Default 300, which covers the keyframe intervals encoders commonly default to.
+
+For example, to keep only the 10 first packets of an ADTS stream:
+
+```text
+ffmpeg -i INPUT.aac -c copy -bsf:a trim=end=10:end_type=pkt_index OUTPUT.aac
+```
+
+To keep 5 seconds starting 1.5 seconds into the stream:
+
+```text
+ffmpeg -i INPUT.aac -c copy -bsf:a trim=start=1500:start_type=msec_pt:end=5000:end_type=dur_t_msec OUTPUT.aac
+```
+
+The same, expressed relative to the first packet so it works regardless of the
+stream's starting timestamp:
+
+```text
+ffmpeg -i INPUT.aac -c copy -bsf:a trim=start=1500:start_type=msec_pt:start_rel=1:end=5000:end_type=dur_t_msec OUTPUT.aac
+```
+
+To start on a keyframeless point of an inter coded video stream, re-encoding it
+so that the preroll is decoded rather than written out. The filter must run
+before the decoder, so it is given before the input:
+
+```text
+ffmpeg -bsf:v trim=start=17000:start_type=msec_pt:end=30000:end_type=dur_t_msec:preroll=1 -i INPUT.mp4 OUTPUT.mp4
+```
+
 ## truehd\_core
 
 Extract the core from a TrueHD stream, dropping ATMOS data.
@@ -59830,7 +60001,7 @@ Maintainers for the specific components are listed in the file
 # Document: Introduction
 
 Source path: doc/developer.texi
-Canonical source: https://github.com/FFmpeg/FFmpeg/blob/266fff15a0f5e1165a90327ecacae82e7df107c9/doc/developer.texi
+Canonical source: https://github.com/FFmpeg/FFmpeg/blob/3a165c77dce7fac8c54f9f9aaab5447590433748/doc/developer.texi
 
 # Introduction
 
@@ -61111,7 +61282,7 @@ Send an announcement to the mailing list.
 # Document: General Questions
 
 Source path: doc/faq.texi
-Canonical source: https://github.com/FFmpeg/FFmpeg/blob/266fff15a0f5e1165a90327ecacae82e7df107c9/doc/faq.texi
+Canonical source: https://github.com/FFmpeg/FFmpeg/blob/3a165c77dce7fac8c54f9f9aaab5447590433748/doc/faq.texi
 
 # General Questions
 
@@ -61785,7 +61956,7 @@ causing FATE to not find files. Just replace `~` by the full path.
 # Document: Introduction
 
 Source path: doc/fate.texi
-Canonical source: https://github.com/FFmpeg/FFmpeg/blob/266fff15a0f5e1165a90327ecacae82e7df107c9/doc/fate.texi
+Canonical source: https://github.com/FFmpeg/FFmpeg/blob/3a165c77dce7fac8c54f9f9aaab5447590433748/doc/fate.texi
 
 # Introduction
 
@@ -62064,7 +62235,7 @@ make V=1 SAMPLES=/var/fate/samples THREADS=2 CPUFLAGS=mmx fate
 # Document: External libraries
 
 Source path: doc/general.texi
-Canonical source: https://github.com/FFmpeg/FFmpeg/blob/266fff15a0f5e1165a90327ecacae82e7df107c9/doc/general.texi
+Canonical source: https://github.com/FFmpeg/FFmpeg/blob/3a165c77dce7fac8c54f9f9aaab5447590433748/doc/general.texi
 
 # External libraries
 
@@ -63649,7 +63820,7 @@ performance on systems without hardware floating point support).
 # Document: Organisation
 
 Source path: doc/community.texi
-Canonical source: https://github.com/FFmpeg/FFmpeg/blob/266fff15a0f5e1165a90327ecacae82e7df107c9/doc/community.texi
+Canonical source: https://github.com/FFmpeg/FFmpeg/blob/3a165c77dce7fac8c54f9f9aaab5447590433748/doc/community.texi
 
 <a id="organisation"></a>
 
@@ -63839,7 +64010,7 @@ Finally, keep in mind the immortal words of Bill and Ted,
 # Document: Introduction
 
 Source path: doc/git-howto.texi
-Canonical source: https://github.com/FFmpeg/FFmpeg/blob/266fff15a0f5e1165a90327ecacae82e7df107c9/doc/git-howto.texi
+Canonical source: https://github.com/FFmpeg/FFmpeg/blob/3a165c77dce7fac8c54f9f9aaab5447590433748/doc/git-howto.texi
 
 # Introduction
 
@@ -64304,7 +64475,7 @@ problems with the Git server.
 # Document: General Questions
 
 Source path: doc/mailing-list-faq.texi
-Canonical source: https://github.com/FFmpeg/FFmpeg/blob/266fff15a0f5e1165a90327ecacae82e7df107c9/doc/mailing-list-faq.texi
+Canonical source: https://github.com/FFmpeg/FFmpeg/blob/3a165c77dce7fac8c54f9f9aaab5447590433748/doc/mailing-list-faq.texi
 
 # General Questions
 
@@ -64715,7 +64886,7 @@ Send a message to <ffmpeg-user-owner@ffmpeg.org>.
 # Document: Unix-like
 
 Source path: doc/platform.texi
-Canonical source: https://github.com/FFmpeg/FFmpeg/blob/266fff15a0f5e1165a90327ecacae82e7df107c9/doc/platform.texi
+Canonical source: https://github.com/FFmpeg/FFmpeg/blob/3a165c77dce7fac8c54f9f9aaab5447590433748/doc/platform.texi
 
 # Unix-like
 
@@ -64982,7 +65153,7 @@ changes.)
 # Document: FFmpeg README
 
 Source path: README.md
-Canonical source: https://github.com/FFmpeg/FFmpeg/blob/266fff15a0f5e1165a90327ecacae82e7df107c9/README.md
+Canonical source: https://github.com/FFmpeg/FFmpeg/blob/3a165c77dce7fac8c54f9f9aaab5447590433748/README.md
 
 # FFmpeg README
 
@@ -65034,7 +65205,7 @@ avoided because they are not part of our review process and will be ignored.
 # Document: Installing FFmpeg
 
 Source path: INSTALL.md
-Canonical source: https://github.com/FFmpeg/FFmpeg/blob/266fff15a0f5e1165a90327ecacae82e7df107c9/INSTALL.md
+Canonical source: https://github.com/FFmpeg/FFmpeg/blob/3a165c77dce7fac8c54f9f9aaab5447590433748/INSTALL.md
 
 # Installing FFmpeg
 
@@ -65065,7 +65236,7 @@ Canonical source: https://github.com/FFmpeg/FFmpeg/blob/266fff15a0f5e1165a90327e
 # Document: Note to Github users
 
 Source path: CONTRIBUTING.md
-Canonical source: https://github.com/FFmpeg/FFmpeg/blob/266fff15a0f5e1165a90327ecacae82e7df107c9/CONTRIBUTING.md
+Canonical source: https://github.com/FFmpeg/FFmpeg/blob/3a165c77dce7fac8c54f9f9aaab5447590433748/CONTRIBUTING.md
 
 # Note to Github users
 
@@ -65077,7 +65248,7 @@ See <https://ffmpeg.org/developer.html#Contributing> for more information.
 # Document: Build System.Txt
 
 Source path: doc/build_system.txt
-Canonical source: https://github.com/FFmpeg/FFmpeg/blob/266fff15a0f5e1165a90327ecacae82e7df107c9/doc/build_system.txt
+Canonical source: https://github.com/FFmpeg/FFmpeg/blob/3a165c77dce7fac8c54f9f9aaab5447590433748/doc/build_system.txt
 
 FFmpeg currently uses a custom build system, this text attempts to document
 some of its obscure features and options.
@@ -65151,7 +65322,7 @@ sometimes but note that it will still not run all reg tests.
 # Document: Filter design
 
 Source path: doc/filter_design.txt
-Canonical source: https://github.com/FFmpeg/FFmpeg/blob/266fff15a0f5e1165a90327ecacae82e7df107c9/doc/filter_design.txt
+Canonical source: https://github.com/FFmpeg/FFmpeg/blob/3a165c77dce7fac8c54f9f9aaab5447590433748/doc/filter_design.txt
 
 # Filter design
 
@@ -65447,7 +65618,7 @@ the work.
 # Document: FFmpeg Infrastructure:
 
 Source path: doc/infra.txt
-Canonical source: https://github.com/FFmpeg/FFmpeg/blob/266fff15a0f5e1165a90327ecacae82e7df107c9/doc/infra.txt
+Canonical source: https://github.com/FFmpeg/FFmpeg/blob/3a165c77dce7fac8c54f9f9aaab5447590433748/doc/infra.txt
 
 # FFmpeg Infrastructure:
 
@@ -65608,7 +65779,7 @@ Wikipedia entry:
 # Document: FFmpeg's bug/feature request tracker manual
 
 Source path: doc/issue_tracker.txt
-Canonical source: https://github.com/FFmpeg/FFmpeg/blob/266fff15a0f5e1165a90327ecacae82e7df107c9/doc/issue_tracker.txt
+Canonical source: https://github.com/FFmpeg/FFmpeg/blob/3a165c77dce7fac8c54f9f9aaab5447590433748/doc/issue_tracker.txt
 
 # FFmpeg's bug/feature request tracker manual
 
@@ -65826,7 +65997,7 @@ issues related to the wiki
 # Document: FFmpeg multithreading methods
 
 Source path: doc/multithreading.txt
-Canonical source: https://github.com/FFmpeg/FFmpeg/blob/266fff15a0f5e1165a90327ecacae82e7df107c9/doc/multithreading.txt
+Canonical source: https://github.com/FFmpeg/FFmpeg/blob/3a165c77dce7fac8c54f9f9aaab5447590433748/doc/multithreading.txt
 
 # FFmpeg multithreading methods
 
@@ -65899,7 +66070,7 @@ Before accessing a reference frame or its MVs, call ff\_progress\_frame\_await()
 # Document: optimization Tips (for libavcodec):
 
 Source path: doc/optimization.txt
-Canonical source: https://github.com/FFmpeg/FFmpeg/blob/266fff15a0f5e1165a90327ecacae82e7df107c9/doc/optimization.txt
+Canonical source: https://github.com/FFmpeg/FFmpeg/blob/3a165c77dce7fac8c54f9f9aaab5447590433748/doc/optimization.txt
 
 # optimization Tips (for libavcodec):
 
@@ -66174,7 +66345,7 @@ a bit old (note "+" is valid for input-output, even though the next disagrees)
 # Document: Rate Distortion.Txt
 
 Source path: doc/rate_distortion.txt
-Canonical source: https://github.com/FFmpeg/FFmpeg/blob/266fff15a0f5e1165a90327ecacae82e7df107c9/doc/rate_distortion.txt
+Canonical source: https://github.com/FFmpeg/FFmpeg/blob/3a165c77dce7fac8c54f9f9aaab5447590433748/doc/rate_distortion.txt
 
 A Quick Description Of Rate Distortion Theory.
 
@@ -66240,7 +66411,7 @@ Copyright: LGPL
 # Document: Tablegen.Txt
 
 Source path: doc/tablegen.txt
-Canonical source: https://github.com/FFmpeg/FFmpeg/blob/266fff15a0f5e1165a90327ecacae82e7df107c9/doc/tablegen.txt
+Canonical source: https://github.com/FFmpeg/FFmpeg/blob/3a165c77dce7fac8c54f9f9aaab5447590433748/doc/tablegen.txt
 
 Writing a table generator
 
@@ -66317,7 +66488,7 @@ under the "ifdef CONFIG\_HARDCODED\_TABLES" section in the Makefile.
 # Document: Transforms
 
 Source path: doc/transforms.md
-Canonical source: https://github.com/FFmpeg/FFmpeg/blob/266fff15a0f5e1165a90327ecacae82e7df107c9/doc/transforms.md
+Canonical source: https://github.com/FFmpeg/FFmpeg/blob/3a165c77dce7fac8c54f9f9aaab5447590433748/doc/transforms.md
 
 # Transforms
 
@@ -67361,7 +67532,7 @@ static av_always_inline void fft15(TXComplex *out, TXComplex *in,
 # Document: Bootstrap
 
 Source path: doc/writing_filters.txt
-Canonical source: https://github.com/FFmpeg/FFmpeg/blob/266fff15a0f5e1165a90327ecacae82e7df107c9/doc/writing_filters.txt
+Canonical source: https://github.com/FFmpeg/FFmpeg/blob/3a165c77dce7fac8c54f9f9aaab5447590433748/doc/writing_filters.txt
 
 This document is a tutorial/initiation for writing simple filters in
 libavfilter.
