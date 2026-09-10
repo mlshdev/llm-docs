@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/changelog/v10-migration-guide.md](https://github.com/n8n-io/n8n-docs/blob/675abfb6fe01f95b0e9e726b18b1bef735b792e9/docs/changelog/v10-migration-guide.md)
+> Commit-pinned source for n8n main: [docs/changelog/v10-migration-guide.md](https://github.com/n8n-io/n8n-docs/blob/898e1a72cb3fff26178a7d0a494043aaa5101a30/docs/changelog/v10-migration-guide.md)
 
 # n8n 1.0 migration guide <a id="n8n-v10-migration-guide"></a>
 

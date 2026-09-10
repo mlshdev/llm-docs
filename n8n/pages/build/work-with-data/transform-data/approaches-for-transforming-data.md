@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/work-with-data/transform-data/approaches-for-transforming-data.md](https://github.com/n8n-io/n8n-docs/blob/675abfb6fe01f95b0e9e726b18b1bef735b792e9/docs/build/work-with-data/transform-data/approaches-for-transforming-data.md)
+> Commit-pinned source for n8n main: [docs/build/work-with-data/transform-data/approaches-for-transforming-data.md](https://github.com/n8n-io/n8n-docs/blob/898e1a72cb3fff26178a7d0a494043aaa5101a30/docs/build/work-with-data/transform-data/approaches-for-transforming-data.md)
 
 # Approaches for transforming data <a id="approaches-for-transforming-data"></a>
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/changelog/release-notes.md](https://github.com/n8n-io/n8n-docs/blob/675abfb6fe01f95b0e9e726b18b1bef735b792e9/docs/changelog/release-notes.md)
+> Commit-pinned source for n8n main: [docs/changelog/release-notes.md](https://github.com/n8n-io/n8n-docs/blob/898e1a72cb3fff26178a7d0a494043aaa5101a30/docs/changelog/release-notes.md)
 
 # Release notes
 

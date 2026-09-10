@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/changelog/v30-breaking-changes.md](https://github.com/n8n-io/n8n-docs/blob/675abfb6fe01f95b0e9e726b18b1bef735b792e9/docs/changelog/v30-breaking-changes.md)
+> Commit-pinned source for n8n main: [docs/changelog/v30-breaking-changes.md](https://github.com/n8n-io/n8n-docs/blob/898e1a72cb3fff26178a7d0a494043aaa5101a30/docs/changelog/v30-breaking-changes.md)
 
 # n8n 3.0 breaking changes <a id="n8n-v30-breaking-changes"></a>
 
@@ -23,6 +23,7 @@ n8n 3.0 removes older nodes, modes, and helpers that newer patterns have replace
 - **Function** node (legacy)
 - **Function Item** node (legacy)
 - **Item Lists** node (legacy)
+- **LangChain Code** node (legacy)
 - **What to do:** Migrate affected workflows to the current recommended alternatives before upgrading:
   - Replace **Function** and **Function Item** nodes with the [Code](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.code) node. Use **Run Once for All Items** mode in place of **Function**, and **Run Once for Each Item** mode in place of **Function Item**.
   - Replace the **Item Lists** node with the node matching the operation you use: [Split Out](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.splitout), [Aggregate](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.aggregate), [Sort](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.sort), [Limit](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.limit), [Remove Duplicates](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates), or [Summarize](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.summarize).
