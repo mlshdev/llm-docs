@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/desktop/troubleshoot-and-support/troubleshoot/_index.md](https://github.com/docker/docs/blob/56ff4df658450553e83cf962aeba536b246d51c8/content/manuals/desktop/troubleshoot-and-support/troubleshoot/_index.md)
+> Commit-pinned source for Docker main: [content/manuals/desktop/troubleshoot-and-support/troubleshoot/_index.md](https://github.com/docker/docs/blob/920ee0bb1e638c6a39d7c2a1075fa2b1d8f451a7/content/manuals/desktop/troubleshoot-and-support/troubleshoot/_index.md)
 
 # Troubleshoot Docker Desktop
 
@@ -8,7 +8,7 @@ This page contains information on how to diagnose and troubleshoot Docker Deskto
 
 To navigate to **Troubleshoot** either:
 
-- Select the Docker menu Docker menu ![whale menu](https://raw.githubusercontent.com/docker/docs/56ff4df658450553e83cf962aeba536b246d51c8/content/manuals/desktop/images/whale-x.svg) and then **Troubleshoot**.
+- Select the Docker menu Docker menu ![whale menu](https://raw.githubusercontent.com/docker/docs/920ee0bb1e638c6a39d7c2a1075fa2b1d8f451a7/content/manuals/desktop/images/whale-x.svg) and then **Troubleshoot**.
 - Select the **question mark** icon near the top-right corner of the Docker Desktop Dashboard.
 
 The **Troubleshoot** menu contains the following options:

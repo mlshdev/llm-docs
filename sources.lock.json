@@ -23,8 +23,8 @@
     "docker": {
       "tag": "main",
       "branch": "main",
-      "sourceCommit": "56ff4df658450553e83cf962aeba536b246d51c8",
-      "sourceCommittedAt": "2026-09-10T10:25:02Z"
+      "sourceCommit": "920ee0bb1e638c6a39d7c2a1075fa2b1d8f451a7",
+      "sourceCommittedAt": "2026-09-10T14:20:28Z"
     },
     "container": {
       "tag": "1.4.1",

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/docker-hub/repos/create.md](https://github.com/docker/docs/blob/56ff4df658450553e83cf962aeba536b246d51c8/content/manuals/docker-hub/repos/create.md)
+> Commit-pinned source for Docker main: [content/manuals/docker-hub/repos/create.md](https://github.com/docker/docs/blob/920ee0bb1e638c6a39d7c2a1075fa2b1d8f451a7/content/manuals/docker-hub/repos/create.md)
 
 # Create a repository
 

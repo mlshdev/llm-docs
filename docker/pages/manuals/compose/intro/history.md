@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/compose/intro/history.md](https://github.com/docker/docs/blob/56ff4df658450553e83cf962aeba536b246d51c8/content/manuals/compose/intro/history.md)
+> Commit-pinned source for Docker main: [content/manuals/compose/intro/history.md](https://github.com/docker/docs/blob/920ee0bb1e638c6a39d7c2a1075fa2b1d8f451a7/content/manuals/compose/intro/history.md)
 
 # History and development of Docker Compose
 
@@ -10,7 +10,7 @@ This page provides:
 
 ## Introduction
 
-![Image showing the main differences between Compose v1, Compose v2, and Compose v5](https://raw.githubusercontent.com/docker/docs/56ff4df658450553e83cf962aeba536b246d51c8/content/manuals/compose/images/v1-versus-v2-versus-v5.png)
+![Image showing the main differences between Compose v1, Compose v2, and Compose v5](https://raw.githubusercontent.com/docker/docs/920ee0bb1e638c6a39d7c2a1075fa2b1d8f451a7/content/manuals/compose/images/v1-versus-v2-versus-v5.png)
 
 The diagram above highlights the key differences between Docker Compose v1, v2, and v5. Today, the supported Docker Compose CLI versions are Compose v2 and Compose v5, both of which are defined by the [Compose Specification](https://docs.docker.com/reference/compose-file/).
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/docker-hub/repos/archive.md](https://github.com/docker/docs/blob/56ff4df658450553e83cf962aeba536b246d51c8/content/manuals/docker-hub/repos/archive.md)
+> Commit-pinned source for Docker main: [content/manuals/docker-hub/repos/archive.md](https://github.com/docker/docs/blob/920ee0bb1e638c6a39d7c2a1075fa2b1d8f451a7/content/manuals/docker-hub/repos/archive.md)
 
 # Archive or unarchive a repository
 
@@ -8,7 +8,7 @@ or unsupported images in workflows. Archived repositories can also be unarchived
 if needed.
 
 Docker Hub highlights repositories that haven't been updated in over a year by
-displaying an icon (![outdated icon](https://raw.githubusercontent.com/docker/docs/56ff4df658450553e83cf962aeba536b246d51c8/content/manuals/docker-hub/repos/images/outdated-icon.webp)) next to them on the [**Repositories**
+displaying an icon (![outdated icon](https://raw.githubusercontent.com/docker/docs/920ee0bb1e638c6a39d7c2a1075fa2b1d8f451a7/content/manuals/docker-hub/repos/images/outdated-icon.webp)) next to them on the [**Repositories**
 page](https://hub.docker.com/repositories/). Consider reviewing these
 highlighted repositories and archiving them if necessary.
 
