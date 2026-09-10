@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/extensions/extensions-sdk/guides/use-docker-socket-from-backend.md](https://github.com/docker/docs/blob/c4f0e5b32deb9d3365c1f0be62305038a24e15e5/content/manuals/extensions/extensions-sdk/guides/use-docker-socket-from-backend.md)
+> Commit-pinned source for Docker main: [content/manuals/extensions/extensions-sdk/guides/use-docker-socket-from-backend.md](https://github.com/docker/docs/blob/56ff4df658450553e83cf962aeba536b246d51c8/content/manuals/extensions/extensions-sdk/guides/use-docker-socket-from-backend.md)
 
 # Use the Docker socket from the extension backend
 

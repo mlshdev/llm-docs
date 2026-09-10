@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/dhi/migration/migrate-from-doi.md](https://github.com/docker/docs/blob/c4f0e5b32deb9d3365c1f0be62305038a24e15e5/content/manuals/dhi/migration/migrate-from-doi.md)
+> Commit-pinned source for Docker main: [content/manuals/dhi/migration/migrate-from-doi.md](https://github.com/docker/docs/blob/56ff4df658450553e83cf962aeba536b246d51c8/content/manuals/dhi/migration/migrate-from-doi.md)
 
 Docker Hardened Images (DHI) come in both [Alpine-based and Debian-based
 variants](https://docs.docker.com/dhi/explore/available/). In many cases, migrating from another image

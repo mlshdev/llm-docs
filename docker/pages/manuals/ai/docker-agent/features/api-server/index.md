@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/features/api-server/index.md](https://github.com/docker/docs/blob/c4f0e5b32deb9d3365c1f0be62305038a24e15e5/_vendor/github.com/docker/docker-agent/docs/features/api-server/index.md)
+> Commit-pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/features/api-server/index.md](https://github.com/docker/docs/blob/56ff4df658450553e83cf962aeba536b246d51c8/_vendor/github.com/docker/docker-agent/docs/features/api-server/index.md)
 
 *Expose your agents via an HTTP API for programmatic access, web frontends, and integrations.*
 
