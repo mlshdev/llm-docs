@@ -1,6 +1,6 @@
 # SearXNG master
 
-> Documentation generated from the latest `master` branch commit of [searxng/searxng](https://github.com/searxng/searxng) and pinned to immutable source commit `3fdc6d753a339b5f4a7dc5842c94c0d8324726f1`.
+> Documentation generated from the latest `master` branch commit of [searxng/searxng](https://github.com/searxng/searxng) and pinned to immutable source commit `ba055b3e09bc0bcdb3ccbb0857542219fd8f7eb7`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for SearXNG master.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -96,6 +96,7 @@
 - [Dailymotion](pages/docs/dev/engines/online/dailymotion.md): Source `docs/dev/engines/online/dailymotion.rst`.
 - [Discourse Forums](pages/docs/dev/engines/online/discourse.md): Source `docs/dev/engines/online/discourse.rst`.
 - [DuckDuckGo Engines](pages/docs/dev/engines/online/duckduckgo.md): Source `docs/dev/engines/online/duckduckgo.rst`.
+- [Europe PMC](pages/docs/dev/engines/online/europepmc.md): Source `docs/dev/engines/online/europepmc.rst`.
 - [Exa API Engine](pages/docs/dev/engines/online/exaapi.md): Source `docs/dev/engines/online/exaapi.rst`.
 - [Geizhals](pages/docs/dev/engines/online/geizhals.md): Source `docs/dev/engines/online/geizhals.rst`.
 - [Gitea](pages/docs/dev/engines/online/gitea.md): Source `docs/dev/engines/online/gitea.rst`.
