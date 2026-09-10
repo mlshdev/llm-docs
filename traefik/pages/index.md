@@ -1,8 +1,8 @@
-> Release-pinned source for Traefik Proxy v3.7.12: [docs/content/index.md](https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/index.md)
+> Release-pinned source for Traefik Proxy v3.7.13: [docs/content/index.md](https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/index.md)
 
 # What is Traefik?
 
-![Architecture](https://raw.githubusercontent.com/traefik/traefik/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/assets/img/traefik-architecture.png)
+![Architecture](https://raw.githubusercontent.com/traefik/traefik/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/assets/img/traefik-architecture.png)
 
 Traefik is an [open-source](https://github.com/traefik/traefik) Application Proxy and the core of the Traefik Hub Runtime Platform.
 

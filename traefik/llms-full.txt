@@ -1,17 +1,17 @@
-# Traefik Proxy v3.7.12: full documentation
+# Traefik Proxy v3.7.13: full documentation
 
 Source repository: https://github.com/traefik/traefik
-Release tag: v3.7.12
-Source commit: e8f398ee30ca5643158ea9094b701b8eae9849e5
+Release tag: v3.7.13
+Source commit: fc92cc118a0557a029c7019d5ee06665127b0f13
 
 # Document: Traefik Proxy Documentation
 
 Source path: docs/content/index.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/index.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/index.md
 
 # What is Traefik?
 
-![Architecture](https://raw.githubusercontent.com/traefik/traefik/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/assets/img/traefik-architecture.png)
+![Architecture](https://raw.githubusercontent.com/traefik/traefik/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/assets/img/traefik-architecture.png)
 
 Traefik is an [open-source](https://github.com/traefik/traefik) Application Proxy and the core of the Traefik Hub Runtime Platform.
 
@@ -65,7 +65,7 @@ These concepts work together to manage your traffic from the moment a request ar
 # Document: Traefik Product Features Comparison
 
 Source path: docs/content/features/index.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/features/index.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/features/index.md
 
 # Traefik Product Features Comparison
 
@@ -215,7 +215,7 @@ All products share the same core configuration concepts, making migration straig
 # Document: Getting Started with Traefik
 
 Source path: docs/content/getting-started/index.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/getting-started/index.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/getting-started/index.md
 
 # Getting Started with Traefik
 
@@ -242,7 +242,7 @@ Make sure you have the necessary prerequisites for your chosen environment:
 # Document: Traefik Configuration Documentation
 
 Source path: docs/content/getting-started/configuration-overview.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/getting-started/configuration-overview.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/getting-started/configuration-overview.md
 
 # Configuration Introduction
 
@@ -333,7 +333,7 @@ You can browse the available features in the menu, the [providers](https://doc.t
 # Document: Kubernetes and Traefik Quick Start
 
 Source path: docs/content/getting-started/kubernetes.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/getting-started/kubernetes.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/getting-started/kubernetes.md
 
 # Getting Started with Kubernetes and Traefik
 
@@ -458,7 +458,7 @@ Access it at:
 
 <http://dashboard.localhost/dashboard/>
 
-![Traefik Dashboard Screenshot](https://raw.githubusercontent.com/traefik/traefik/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/assets/img/getting-started/traefik-dashboard.png)
+![Traefik Dashboard Screenshot](https://raw.githubusercontent.com/traefik/traefik/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/assets/img/getting-started/traefik-dashboard.png)
 
 ## Deploy a Sample Application
 
@@ -564,7 +564,7 @@ X-Real-Ip: 127.0.0.1
 
 You can also visit <http://whoami.localhost> in a browser to verify that the application is exposed correctly:
 
-![whoami application Screenshot](https://raw.githubusercontent.com/traefik/traefik/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/assets/img/getting-started/whoami-localhost.png)
+![whoami application Screenshot](https://raw.githubusercontent.com/traefik/traefik/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/assets/img/getting-started/whoami-localhost.png)
 
 ## Exposing the Application Using the Gateway API
 
@@ -572,7 +572,7 @@ Traefik supports the Kubernetes Gateway API specification, which provides a more
 When we installed Traefik earlier, we enabled the Gateway API provider.
 You can verify this in the providers section of the Traefik dashboard.
 
-![Providers Section Screenshot](https://raw.githubusercontent.com/traefik/traefik/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/assets/img/getting-started/providers.png)
+![Providers Section Screenshot](https://raw.githubusercontent.com/traefik/traefik/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/assets/img/getting-started/providers.png)
 
 To use the Gateway API:
 
@@ -644,11 +644,11 @@ X-Real-Ip: 127.0.0.1
 
 You can now visit <http://whoami.localhost> in your browser to verify that the application is exposed correctly:
 
-![whoami application Screenshot](https://raw.githubusercontent.com/traefik/traefik/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/assets/img/getting-started/whoami-localhost.png)
+![whoami application Screenshot](https://raw.githubusercontent.com/traefik/traefik/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/assets/img/getting-started/whoami-localhost.png)
 
 If you navigate to the **HTTP Routes** section of the traefik dashboard, you can see that the `whoami.localhost` route is managed by the Traefik Kubernetes Gateway API provider:
 
-![Traefik Dashboard HTTP Routes Section Screenshot](https://raw.githubusercontent.com/traefik/traefik/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/assets/img/getting-started/kubernetes-gateway.png)
+![Traefik Dashboard HTTP Routes Section Screenshot](https://raw.githubusercontent.com/traefik/traefik/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/assets/img/getting-started/kubernetes-gateway.png)
 
 That's it! You've successfully deployed Traefik and configured routing in a Kubernetes cluster.
 
@@ -664,7 +664,7 @@ That's it! You've successfully deployed Traefik and configured routing in a Kube
 # Document: Docker and Traefik Quick Start
 
 Source path: docs/content/getting-started/docker.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/getting-started/docker.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/getting-started/docker.md
 
 # Getting Started with Docker and Traefik
 
@@ -759,7 +759,7 @@ You can access the dashboard at:
 
 <http://localhost:8080/dashboard/>
 
-![Traefik Dashboard Screenshot](https://raw.githubusercontent.com/traefik/traefik/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/assets/img/getting-started/traefik-dashboard.png)
+![Traefik Dashboard Screenshot](https://raw.githubusercontent.com/traefik/traefik/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/assets/img/getting-started/traefik-dashboard.png)
 
 ## Deploy a Sample Application
 
@@ -807,11 +807,11 @@ X-Real-Ip: 192.168.147.1
 
 You can also open <http://whoami.localhost> in a browser to test the application:
 
-![whoami application Screenshot](https://raw.githubusercontent.com/traefik/traefik/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/assets/img/getting-started/whoami-localhost.png)
+![whoami application Screenshot](https://raw.githubusercontent.com/traefik/traefik/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/assets/img/getting-started/whoami-localhost.png)
 
 If you navigate to the **HTTP Routers** section of the Traefik dashboard, you can see that the `whoami.localhost` route is managed by the Traefik Docker provider:
 
-![Traefik Dashboard HTTP Routers Section Screenshot](https://raw.githubusercontent.com/traefik/traefik/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/assets/img/getting-started/docker-router.png)
+![Traefik Dashboard HTTP Routers Section Screenshot](https://raw.githubusercontent.com/traefik/traefik/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/assets/img/getting-started/docker-router.png)
 
 That's it! You've successfully deployed Traefik and configured routing in Docker.
 
@@ -826,7 +826,7 @@ That's it! You've successfully deployed Traefik and configured routing in Docker
 # Document: Setup Traefik on Kubernetes
 
 Source path: docs/content/setup/kubernetes.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/setup/kubernetes.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/setup/kubernetes.md
 
 This guide provides an in-depth walkthrough for installing and configuring Traefik Proxy within a Kubernetes cluster using the official Helm chart. In this guide, we'll cover the following:
 
@@ -1037,7 +1037,7 @@ helm install traefik traefik/traefik \
 
 Now that Traefik is deployed, you can access its dashboard at <https://dashboard.docker.localhost/>. When you access this link, your browser will prompt for the username and password. Ensure you use the credentials set in the `values.yaml` file to log in. Upon successful login, the dashboard will be displayed as shown below:
 
-![Traefik Dashboard](https://raw.githubusercontent.com/traefik/traefik/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/assets/img/setup/traefik-dashboard.png)
+![Traefik Dashboard](https://raw.githubusercontent.com/traefik/traefik/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/assets/img/setup/traefik-dashboard.png)
 
 ## Deploy a Demo Application
 
@@ -1114,7 +1114,7 @@ kubectl apply -f whoami-route.yaml
 
 After you apply the manifest, navigate to the Routes in the Traefik Dashboard; you’ll see that the <https://whoami.docker.localhost> route has been created.
 
-![Route](https://raw.githubusercontent.com/traefik/traefik/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/assets/img/setup/route-in-dashboard.png)
+![Route](https://raw.githubusercontent.com/traefik/traefik/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/assets/img/setup/route-in-dashboard.png)
 
 You can test the application using curl:
 
@@ -1144,7 +1144,7 @@ X-Real-Ip: 10.42.0.1
 
 You can also open a browser and navigate to <https://whoami.docker.localhost> to see a JSON dump from the service.
 
-![Whoami](https://raw.githubusercontent.com/traefik/traefik/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/assets/img/setup/whoami-json-dump.png)
+![Whoami](https://raw.githubusercontent.com/traefik/traefik/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/assets/img/setup/whoami-json-dump.png)
 
 ## Other Key Configuration Areas
 
@@ -1226,7 +1226,7 @@ This setup establishes Traefik with secure dashboard access and HTTPS redirectio
 # Document: Setup Traefik Proxy in Docker Standalone
 
 Source path: docs/content/setup/docker.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/setup/docker.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/setup/docker.md
 
 This guide provides an in-depth walkthrough for installing and configuring Traefik Proxy within a Docker container using the official Traefik Docker image & Docker Compose. In this guide, we'll cover the following:
 
@@ -1385,7 +1385,7 @@ Traefik will start, read its static configuration from the `command` arguments, 
 
 Now that Traefik is deployed, you can access the dashboard at <https://dashboard.docker.localhost> and it should prompt for the Basic Authentication credentials you configured:
 
-![Traefik Dashboard](https://raw.githubusercontent.com/traefik/traefik/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/assets/img/setup/traefik-dashboard-docker.png)
+![Traefik Dashboard](https://raw.githubusercontent.com/traefik/traefik/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/assets/img/setup/traefik-dashboard-docker.png)
 
 ## Test the whoami Application
 
@@ -1427,7 +1427,7 @@ The above confirms that a redirection has taken place which means our setup work
 
 You can also open a browser and navigate to <https://whoami.docker.localhost> to see a JSON dump from the service:
 
-![Whoami](https://raw.githubusercontent.com/traefik/traefik/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/assets/img/setup/whoami-json-dump.png)
+![Whoami](https://raw.githubusercontent.com/traefik/traefik/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/assets/img/setup/whoami-json-dump.png)
 
 > **Info**
 > You can also navigate to the Traefik Dashboard at <https://dashboard.docker.localhost> to see that the route has been created.
@@ -1524,7 +1524,7 @@ You now have a basic Traefik setup in Docker with secure dashboard access and HT
 # Document: Setup Traefik Proxy in Docker Swarm
 
 Source path: docs/content/setup/swarm.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/setup/swarm.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/setup/swarm.md
 
 This guide provides an in‑depth walkthrough for installing and configuring Traefik Proxy as a **Swarm service** using `docker stack deploy`. It follows the same structure as the standalone‑Docker tutorial and covers:
 
@@ -1724,7 +1724,7 @@ Swarm schedules the services on a manager node and binds ports 80/443.
 
 Open **<https://dashboard.swarm.localhost/>** in your browser — the dashboard should prompt for the basic‑auth credentials you configured.
 
-![Traefik Dashboard](https://raw.githubusercontent.com/traefik/traefik/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/assets/img/setup/traefik-dashboard-swarm.png)
+![Traefik Dashboard](https://raw.githubusercontent.com/traefik/traefik/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/assets/img/setup/traefik-dashboard-swarm.png)
 
 ## Test the whoami Application
 
@@ -1766,7 +1766,7 @@ Requesting the HTTP endpoint redirects to HTTPS, confirming the setup works.
 
 You can also open a browser and navigate to <https://whoami.swarm.localhost> to see a JSON dump from the service:
 
-![Whoami](https://raw.githubusercontent.com/traefik/traefik/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/assets/img/setup/whoami-json-dump.png)
+![Whoami](https://raw.githubusercontent.com/traefik/traefik/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/assets/img/setup/whoami-json-dump.png)
 
 ### Other Key Configuration Areas
 
@@ -1854,7 +1854,7 @@ You now have Traefik running on Docker Swarm with HTTPS, a secured dashboard, a
 # Document: Exposing Services with Traefik Proxy
 
 Source path: docs/content/expose/overview.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/expose/overview.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/expose/overview.md
 
 # Exposing Services with Traefik Proxy
 
@@ -1972,7 +1972,7 @@ Traefik Proxy supports WebSocket (WS) and WebSocket Secure (WSS) connections out
 # Document: Exposing Services with Traefik on Kubernetes - Basic
 
 Source path: docs/content/expose/kubernetes/basic.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/expose/kubernetes/basic.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/expose/kubernetes/basic.md
 
 # Exposing Services with Traefik on Kubernetes - Basic
 
@@ -2423,7 +2423,7 @@ Continue to the [Advanced Guide](https://doc.traefik.io/traefik/v3.7/expose/kube
 # Document: Exposing Services with Traefik on Kubernetes - Advanced
 
 Source path: docs/content/expose/kubernetes/advanced.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/expose/kubernetes/advanced.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/expose/kubernetes/advanced.md
 
 # Exposing Services with Traefik on Kubernetes - Advanced
 
@@ -3434,7 +3434,7 @@ Now that you've mastered both basic and advanced Traefik features with Kubernete
 # Document: Exposing Services with Traefik on Docker - Basic
 
 Source path: docs/content/expose/docker/basic.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/expose/docker/basic.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/expose/docker/basic.md
 
 # Exposing Services with Traefik on Docker - Basic
 
@@ -3691,7 +3691,7 @@ Continue to the [Advanced Guide](https://doc.traefik.io/traefik/v3.7/expose/dock
 # Document: Exposing Services with Traefik on Docker - Advanced
 
 Source path: docs/content/expose/docker/advanced.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/expose/docker/advanced.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/expose/docker/advanced.md
 
 # Exposing Services with Traefik on Docker - Advanced
 
@@ -4166,7 +4166,7 @@ Now that you've mastered both basic and advanced Traefik features with Docker, y
 # Document: Exposing Services with Traefik on Docker Swarm - Basic
 
 Source path: docs/content/expose/swarm/basic.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/expose/swarm/basic.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/expose/swarm/basic.md
 
 # Exposing Services with Traefik on Docker Swarm - Basic
 
@@ -4363,7 +4363,7 @@ Continue to the [Advanced Guide](https://doc.traefik.io/traefik/v3.7/expose/swar
 # Document: Exposing Services with Traefik on Docker Swarm - Advanced
 
 Source path: docs/content/expose/swarm/advanced.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/expose/swarm/advanced.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/expose/swarm/advanced.md
 
 # Exposing Services with Traefik on Docker Swarm - Advanced
 
@@ -4840,7 +4840,7 @@ Now that you've mastered both basic and advanced Traefik features with Docker Sw
 # Document: Secure API Access with JWT
 
 Source path: docs/content/secure/secure-api-access-with-jwt.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/secure/secure-api-access-with-jwt.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/secure/secure-api-access-with-jwt.md
 
 # Secure API Access with JWT
 
@@ -5058,7 +5058,7 @@ spec:
 # Document: Secure API Access with OIDC
 
 Source path: docs/content/secure/secure-api-access-with-oidc.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/secure/secure-api-access-with-oidc.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/secure/secure-api-access-with-oidc.md
 
 # Secure API Access with OIDC
 
@@ -5071,7 +5071,7 @@ Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9
 To authenticate the user, the middleware redirects through the authentication provider.
 Once the authentication is complete, users are redirected back to the middleware before being authorized to access the upstream application, as described in the diagram below:
 
-![OpenID Connect authentication flow](https://raw.githubusercontent.com/traefik/traefik/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/assets/img/secure/oidc-auth-flow.png)
+![OpenID Connect authentication flow](https://raw.githubusercontent.com/traefik/traefik/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/assets/img/secure/oidc-auth-flow.png)
 
 <br />
 
@@ -5175,7 +5175,7 @@ spec:
 # Document: Secure API Access with WAF
 
 Source path: docs/content/secure/secure-api-access-with-waf.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/secure/secure-api-access-with-waf.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/secure/secure-api-access-with-waf.md
 
 # Secure API Access with WAF
 
@@ -5375,7 +5375,7 @@ spec:
 # Document: Observability Overview
 
 Source path: docs/content/observe/overview.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/observe/overview.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/observe/overview.md
 
 # Observability Overview
 
@@ -5467,7 +5467,7 @@ additionalArguments:
 # Document: Logs and Access Logs
 
 Source path: docs/content/observe/logs-and-access-logs.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/observe/logs-and-access-logs.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/observe/logs-and-access-logs.md
 
 ## Logs
 
@@ -5689,7 +5689,7 @@ When using the `json` format, you can customize which fields are included in you
 # Document: Metrics
 
 Source path: docs/content/observe/metrics.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/observe/metrics.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/observe/metrics.md
 
 # Metrics
 
@@ -5811,7 +5811,7 @@ When the `observability` options are not defined on a router, it inherits the be
 # Document: Tracing
 
 Source path: docs/content/observe/tracing.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/observe/tracing.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/observe/tracing.md
 
 # Tracing
 
@@ -5922,7 +5922,7 @@ When the `observability` options are not defined on a router, it inherits the be
 # Document: Extend Traefik
 
 Source path: docs/content/extend/extend-traefik.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/extend/extend-traefik.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/extend/extend-traefik.md
 
 # Extend Traefik
 
@@ -5979,7 +5979,7 @@ Traefik users can create their own plugins and share them with the community usi
 # Document: Govern Your APIs with Traefik Hub
 
 Source path: docs/content/govern/index.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/govern/index.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/govern/index.md
 
 # Govern Your APIs with Traefik Hub
 
@@ -6040,7 +6040,7 @@ Ready to govern your APIs at scale? Explore [Traefik Hub API Management](https:/
 # Document: Migrate from Ingress NGINX Controller to Traefik
 
 Source path: docs/content/migrate/nginx-to-traefik.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/migrate/nginx-to-traefik.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/migrate/nginx-to-traefik.md
 
 # Migrate from Ingress NGINX Controller to Traefik
 
@@ -6824,11 +6824,83 @@ We welcome contributions to improve this migration guide. See our [contribution 
 # Document: Traefik Migration Documentation
 
 Source path: docs/content/migrate/v3.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/migrate/v3.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/migrate/v3.md
 
 # Migration: Steps needed between the versions
 
 This guide provides detailed migration steps for upgrading between different Traefik v3 versions. Each section covers breaking changes, deprecations, and configuration updates required for a smooth transition.
+
+***
+
+## v3.7.13
+
+### h2c Upgrade Requests
+
+Starting with `v3.7.13`, Traefik does not forward the `Upgrade: h2c` and `HTTP2-Settings` request headers
+to the backends anymore.
+
+Traefik does not implement the deprecated h2c upgrade mechanism, it only serves unencrypted HTTP/2 with prior knowledge.
+Forwarding those headers let a backend accept an upgrade that Traefik itself had not negotiated with the client.
+
+A backend that used to accept such an upgrade now serves those requests over HTTP/1.1.
+To reach a backend over unencrypted HTTP/2, declare its servers with the `h2c` scheme:
+
+**File (YAML)**
+
+```yaml
+## Dynamic configuration
+http:
+  services:
+    my-service:
+      loadBalancer:
+        servers:
+        - url: "h2c://private-ip-server-1:8080"
+```
+
+**File (TOML)**
+
+```toml
+## Dynamic configuration
+[http.services]
+  [http.services.my-service.loadBalancer]
+
+    [[http.services.my-service.loadBalancer.servers]]
+      url = "h2c://private-ip-server-1:8080"
+```
+
+The providers exposing a scheme instead of a server URL take it the same way,
+with the `traefik.http.services.<service_name>.loadbalancer.server.scheme=h2c` label,
+the `scheme: h2c` option of the Kubernetes CRD,
+or the `traefik.ingress.kubernetes.io/service.serversscheme: h2c` Kubernetes Ingress annotation.
+
+### Request Target Validation
+
+Starting with `v3.7.13`, a request whose target is rootless, that is a target made of a scheme followed by
+something that does not start with a slash, is rejected with a `400 Bad Request` response.
+Such a target is none of the four forms allowed by [rfc9112#section-3.2](https://datatracker.ietf.org/doc/html/rfc9112#section-3.2).
+
+A rootless target, for instance `http:example.com/admin`, carries no path,
+hence escaping the path handling and the routing rules while still designating a resource on the backend.
+This rejection is not configurable, as allowing such a target would reintroduce the bypass.
+
+As the validation happens before the routing, the rejected requests are not reported in the access logs.
+They are only visible at the `DEBUG` log level.
+
+### Consul Catalog and Nomad: colliding service configurations
+
+The Consul Catalog and the Nomad providers build the configuration of each service instance separately,
+and then merge all of them together. Until `v3.7.13`, the instances were identified by the normalized
+concatenation of their node, service name and service ID, which is ambiguous: two distinct instances could
+produce the same identifier, and the configuration of all but the last of them was silently discarded.
+
+Starting with `v3.7.13`, this identifier is unambiguous, and every instance contributes to the merge.
+
+> **Newly detected conflicts**
+> The configurations that were previously discarded are now merged. A router or a middleware defined by
+> several instances is only kept if all of them define it identically, and a service only if the instances
+> agree on everything but their servers, which are then pooled together. Otherwise the resource is removed
+> altogether, an error is logged, and a router served before the upgrade can disappear.
+> The merge order changes as well, and with it the order of the servers of a load-balancer.
 
 ***
 
@@ -7264,7 +7336,7 @@ and [Kubernetes Gateway](https://doc.traefik.io/traefik/v3.7/reference/install-c
 
 Starting with `v3.7.0`, the Ingress NGINX provider now supports the `nginx.ingress.kubernetes.io/custom-headers` annotation to add custom headers to the response forwarded to the client.
 
-Therefore, in the corresponding RBACs (see [KubernetesIngressNGINX](https://raw.githubusercontent.com/traefik/traefik/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/dynamic-configuration/kubernetes-ingress-nginx-rbac.yml) provider RBACs) the `configmaps` right has been added.
+Therefore, in the corresponding RBACs (see [KubernetesIngressNGINX](https://raw.githubusercontent.com/traefik/traefik/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/dynamic-configuration/kubernetes-ingress-nginx-rbac.yml) provider RBACs) the `configmaps` right has been added.
 
 **Required RBAC Updates:**
 
@@ -8180,7 +8252,7 @@ The KubernetesGateway Provider is no longer experimental in v3.1 and can be enab
 # Document: Traefik V3 Migration Documentation
 
 Source path: docs/content/migrate/v2-to-v3.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/migrate/v2-to-v3.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/migrate/v2-to-v3.md
 
 # Migration Guide: From v2 to v3
 
@@ -8340,7 +8412,7 @@ core:
 # Document: Traefik V3 Migration Details
 
 Source path: docs/content/migrate/v2-to-v3-details.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/migrate/v2-to-v3-details.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/migrate/v2-to-v3-details.md
 
 # Configuration Details for Migrating from Traefik v2 to v3
 
@@ -9249,7 +9321,7 @@ Please use the CRD definition with the API Version `apiextensions.k8s.io/v1` ins
 # Document: Traefik V2 Migration Documentation
 
 Source path: docs/content/migrate/v2.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/migrate/v2.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/migrate/v2.md
 
 # Migration: Steps needed between the v2 versions
 
@@ -9262,7 +9334,7 @@ For more information about the changes between Traefik v2 minor versions, please
 # Document: Traefik V2 Migration Documentation
 
 Source path: docs/content/migrate/v1-to-v2.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/migrate/v1-to-v2.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/migrate/v1-to-v2.md
 
 # Migration Guide: From v1 to v2
 
@@ -9286,7 +9358,7 @@ For more information about the changes in Traefik v2, please refer to the [v2 do
 # Document: Traefik Configuration Overview
 
 Source path: docs/content/reference/install-configuration/boot-environment.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/install-configuration/boot-environment.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/install-configuration/boot-environment.md
 
 # Boot Environment
 
@@ -9433,7 +9505,7 @@ helm install traefik traefik/traefik -f values.yaml
 # Document: Traefik Providers Documentation
 
 Source path: docs/content/reference/install-configuration/providers/overview.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/install-configuration/providers/overview.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/install-configuration/providers/overview.md
 
 # Overview
 
@@ -9672,7 +9744,7 @@ When `precedence` is not set, Traefik uses the following default order (highest 
 # Document: Traefik Kubernetes Gateway API Documentation
 
 Source path: docs/content/reference/install-configuration/providers/kubernetes/kubernetes-gateway.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/install-configuration/providers/kubernetes/kubernetes-gateway.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/install-configuration/providers/kubernetes/kubernetes-gateway.md
 
 # Traefik & Kubernetes with Gateway API
 
@@ -9708,7 +9780,7 @@ General functionality cannot be guaranteed for older versions.
    > (`experimental-install.yaml`) prevents the Kubernetes Gateway provider from starting:
    > no Gateway API resource is served at all, not only `TCPRoute` and `TLSRoute`.
    > Traefik keeps running and the other providers are unaffected.
-2. If you are not using the Helm Chart, install/update the Traefik [RBAC](https://raw.githubusercontent.com/traefik/traefik/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/dynamic-configuration/kubernetes-gateway-rbac.yml) for Gateway API.
+2. If you are not using the Helm Chart, install/update the Traefik [RBAC](https://raw.githubusercontent.com/traefik/traefik/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/dynamic-configuration/kubernetes-gateway-rbac.yml) for Gateway API.
 
    ```bash
    # Install Traefik RBACs for Gateway API.
@@ -9759,7 +9831,7 @@ providers:
 | <a id="opt-providers-kubernetesGateway-token"></a>`providers.kubernetesGateway.token`                                                             | Bearer token used for the Kubernetes client configuration. Accepts either the token value directly or a path to a file containing the token.                                                                                                                                                                                                                                         | ""      | No       |
 | <a id="opt-providers-kubernetesGateway-certAuthFilePath"></a>`providers.kubernetesGateway.certAuthFilePath`                                       | Path to the certificate authority file.<br />Used for the Kubernetes client configuration.                                                                                                                                                                                                                                                                                           | ""      | No       |
 | <a id="opt-providers-kubernetesGateway-namespaces"></a>`providers.kubernetesGateway.namespaces`                                                   | Array of namespaces to watch.<br />If left empty, watch all namespaces.                                                                                                                                                                                                                                                                                                              | \[]     | No       |
-| <a id="opt-providers-kubernetesGateway-labelSelector"></a>`providers.kubernetesGateway.labelSelector`                                             | Allow filtering on `GatewayClass` only. If left empty, Traefik processes all GatewayClass objects in the configured namespaces.<br />See [label-selectors](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors) for details.                                                                                                                   | ""      | No       |
+| <a id="opt-providers-kubernetesGateway-labelSelector"></a>`providers.kubernetesGateway.labelSelector`                                             | Allow filtering on `GatewayClass` only. If left empty, Traefik processes all GatewayClass objects.<br />See [label-selectors](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors) for details.                                                                                                                                                | ""      | No       |
 | <a id="opt-providers-kubernetesGateway-throttleDuration"></a>`providers.kubernetesGateway.throttleDuration`                                       | Minimum amount of time to wait between two Kubernetes events before producing a new configuration.<br />This prevents a Kubernetes cluster that updates many times per second from continuously changing your Traefik configuration.<br />If empty, every event is caught.                                                                                                           | 0s      | No       |
 | <a id="opt-providers-kubernetesGateway-nativeLBByDefault"></a>`providers.kubernetesGateway.nativeLBByDefault`                                     | Defines whether to use Native Kubernetes load-balancing mode by default. For more information, please check out the `traefik.io/service.nativelb` service annotation documentation.                                                                                                                                                                                                  | false   | No       |
 | <a id="opt-providers-kubernetesGateway-statusAddress-hostname"></a>`providers.kubernetesGateway.`<br />`statusAddress.hostname`                   | Hostname copied to the Gateway `status.addresses`.                                                                                                                                                                                                                                                                                                                                   | ""      | No       |
@@ -9831,7 +9903,7 @@ See the dedicated section in [routing](https://doc.traefik.io/traefik/v3.7/refer
 # Document: Kubernetes Custom Resources
 
 Source path: docs/content/reference/install-configuration/providers/kubernetes/kubernetes-crd.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/install-configuration/providers/kubernetes/kubernetes-crd.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/install-configuration/providers/kubernetes/kubernetes-crd.md
 
 Traefik provides some Kubernetes Custom Resources, such as `IngressRoute`, `Middleware`, etc.
 
@@ -10089,7 +10161,7 @@ For additional information on exposing services with Kubernetes, refer to the [K
 # Document: Traefik Kubernetes Ingress Documentation
 
 Source path: docs/content/reference/install-configuration/providers/kubernetes/kubernetes-ingress.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/install-configuration/providers/kubernetes/kubernetes-ingress.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/install-configuration/providers/kubernetes/kubernetes-ingress.md
 
 # Traefik & Kubernetes
 
@@ -10099,6 +10171,9 @@ it manages access to cluster services by supporting the [Ingress](https://kubern
 > **Ingress Backend Resource not supported**
 > Referencing backend service endpoints using [`spec.rules.http.paths.backend.resource`](https://kubernetes.io/docs/reference/kubernetes-api/service-resources/ingress-v1/#IngressBackend) is not supported.
 > Use `spec.rules.http.paths.backend.service` instead.
+> **Ingress API frozen**
+> The Kubernetes Ingress API is [frozen](https://kubernetes.io/docs/concepts/services-networking/ingress/) and will not receive further changes or updates.
+> You are encouraged to use the [Kubernetes Gateway provider](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/kubernetes/kubernetes-gateway) instead.
 
 ## Configuration Example
 
@@ -10257,7 +10332,7 @@ of the Traefik repository.
 # Document: Traefik Kubernetes Ingress NGINX Documentation
 
 Source path: docs/content/reference/install-configuration/providers/kubernetes/kubernetes-ingress-nginx.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/install-configuration/providers/kubernetes/kubernetes-ingress-nginx.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/install-configuration/providers/kubernetes/kubernetes-ingress-nginx.md
 
 # Traefik & Ingresses with NGINX Annotations
 
@@ -10533,7 +10608,7 @@ See the dedicated section in [routing](https://doc.traefik.io/traefik/v3.7/refer
 # Document: Traefik Knative Documentation
 
 Source path: docs/content/reference/install-configuration/providers/kubernetes/knative.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/install-configuration/providers/kubernetes/knative.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/install-configuration/providers/kubernetes/knative.md
 
 # Traefik & Knative
 
@@ -10581,7 +10656,7 @@ General functionality cannot be guaranteed for older versions.
      -p='{"data":{"example.com":""}}'
    ```
 
-5. Install/update the Traefik [RBAC](https://raw.githubusercontent.com/traefik/traefik/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/dynamic-configuration/kubernetes-knative-rbac.yml).
+5. Install/update the Traefik [RBAC](https://raw.githubusercontent.com/traefik/traefik/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/dynamic-configuration/kubernetes-knative-rbac.yml).
 
    ```bash
    kubectl apply -f https://raw.githubusercontent.com/traefik/traefik/v3.7/docs/content/reference/dynamic-configuration/kubernetes-knative-rbac.yml
@@ -10686,7 +10761,7 @@ See the dedicated section in [routing](https://doc.traefik.io/traefik/v3.7/refer
 # Document: Traefik Docker Documentation
 
 Source path: docs/content/reference/install-configuration/providers/docker.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/install-configuration/providers/docker.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/install-configuration/providers/docker.md
 
 # Traefik & Docker
 
@@ -11153,7 +11228,7 @@ You can specify which Docker API Endpoint to use with the directive [`endpoint`]
 # Document: Traefik Docker Swarm Documentation
 
 Source path: docs/content/reference/install-configuration/providers/swarm.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/install-configuration/providers/swarm.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/install-configuration/providers/swarm.md
 
 # Traefik & Docker Swarm
 
@@ -11667,7 +11742,7 @@ It allows different implementation levels of the [AAA (Authentication, Authoriza
 # Document: Nomad Service Discovery
 
 Source path: docs/content/reference/install-configuration/providers/hashicorp/nomad.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/install-configuration/providers/hashicorp/nomad.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/install-configuration/providers/hashicorp/nomad.md
 
 # Traefik & Nomad Service Discovery
 
@@ -11951,7 +12026,7 @@ See the dedicated section in [routing](https://doc.traefik.io/traefik/v3.7/refer
 # Document: Traefik Consul Documentation
 
 Source path: docs/content/reference/install-configuration/providers/hashicorp/consul.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/install-configuration/providers/hashicorp/consul.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/install-configuration/providers/hashicorp/consul.md
 
 # Traefik & Consul
 
@@ -12041,7 +12116,7 @@ See the dedicated section in [routing](https://doc.traefik.io/traefik/v3.7/refer
 # Document: Traefik Consul Catalog Documentation
 
 Source path: docs/content/reference/install-configuration/providers/hashicorp/consul-catalog.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/install-configuration/providers/hashicorp/consul-catalog.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/install-configuration/providers/hashicorp/consul-catalog.md
 
 # Traefik & Consul Catalog
 
@@ -12272,7 +12347,7 @@ See the dedicated section in [routing](https://doc.traefik.io/traefik/v3.7/refer
 # Document: Traefik Redis Documentation
 
 Source path: docs/content/reference/install-configuration/providers/kv/redis.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/install-configuration/providers/kv/redis.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/install-configuration/providers/kv/redis.md
 
 # Traefik & Redis
 
@@ -12336,7 +12411,7 @@ See the dedicated section in [routing](https://doc.traefik.io/traefik/v3.7/refer
 # Document: Traefik Consul Documentation
 
 Source path: docs/content/reference/install-configuration/providers/kv/consul.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/install-configuration/providers/kv/consul.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/install-configuration/providers/kv/consul.md
 
 # Traefik & Consul
 
@@ -12426,7 +12501,7 @@ See the dedicated section in [routing](https://doc.traefik.io/traefik/v3.7/refer
 # Document: Traefik Etcd Documentation
 
 Source path: docs/content/reference/install-configuration/providers/kv/etcd.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/install-configuration/providers/kv/etcd.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/install-configuration/providers/kv/etcd.md
 
 # Traefik & etcd
 
@@ -12476,7 +12551,7 @@ See the dedicated section in [routing](https://doc.traefik.io/traefik/v3.7/refer
 # Document: Traefik ZooKeeper Documentation
 
 Source path: docs/content/reference/install-configuration/providers/kv/zk.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/install-configuration/providers/kv/zk.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/install-configuration/providers/kv/zk.md
 
 # Traefik & ZooKeeper
 
@@ -12521,7 +12596,7 @@ See the dedicated section in [routing](https://doc.traefik.io/traefik/v3.7/refer
 # Document: Traefik File Documentation
 
 Source path: docs/content/reference/install-configuration/providers/others/file.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/install-configuration/providers/others/file.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/install-configuration/providers/others/file.md
 
 # File
 
@@ -12652,7 +12727,7 @@ http:
 # Document: Traefik AWS ECS Documentation
 
 Source path: docs/content/reference/install-configuration/providers/others/ecs.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/install-configuration/providers/others/ecs.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/install-configuration/providers/others/ecs.md
 
 # Traefik & AWS ECS
 
@@ -12883,7 +12958,7 @@ Traefik needs the following policy to read ECS information:
 # Document: Traefik HTTP Documentation
 
 Source path: docs/content/reference/install-configuration/providers/others/http.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/install-configuration/providers/others/http.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/install-configuration/providers/others/http.md
 
 # Traefik & HTTP
 
@@ -12964,7 +13039,7 @@ The HTTP provider uses the same configuration as the [File Provider](https://doc
 # Document: Traefik EntryPoints Documentation
 
 Source path: docs/content/reference/install-configuration/entrypoints.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/install-configuration/entrypoints.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/install-configuration/entrypoints.md
 
 Listening for Incoming Connections/Requests
 
@@ -13556,13 +13631,13 @@ systemd-socket-activate -l 80 -l 443 --fdname web:websecure  ./traefik --entrypo
 # Document: Traefik API & Dashboard Documentation
 
 Source path: docs/content/reference/install-configuration/api-dashboard.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/install-configuration/api-dashboard.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/install-configuration/api-dashboard.md
 
 Traefik exposes a number of information through API endpoints, such as the configuration of your routers, services, middlewares, etc.
 
 The dashboard, which is the central place that displays the current active routes handled by Traefik, fetches the data from this API.
 
-![Dashboard - Providers](https://raw.githubusercontent.com/traefik/traefik/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/assets/img/webui-dashboard.png)
+![Dashboard - Providers](https://raw.githubusercontent.com/traefik/traefik/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/assets/img/webui-dashboard.png)
 *The dashboard in action*
 
 ## Security
@@ -13835,7 +13910,7 @@ rule = "Host(`traefik.example.com`) && (PathPrefix(`/api`) || PathPrefix(`/dashb
 # Document: Certificates Resolver
 
 Source path: docs/content/reference/install-configuration/tls/certificate-resolvers/overview.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/install-configuration/tls/certificate-resolvers/overview.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/install-configuration/tls/certificate-resolvers/overview.md
 
 In Traefik, TLS Certificates can be generated using Certificates Resolvers.
 
@@ -13854,7 +13929,7 @@ The Certificates resolvers are defined in the static configuration.
 # Document: Traefik & ACME Certificates Resolver
 
 Source path: docs/content/reference/install-configuration/tls/certificate-resolvers/acme.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/install-configuration/tls/certificate-resolvers/acme.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/install-configuration/tls/certificate-resolvers/acme.md
 
 ## Configuration Example
 
@@ -14209,7 +14284,7 @@ If Let's Encrypt is not reachable, the following certificates will apply:
 # Document: Traefik Tailscale Documentation
 
 Source path: docs/content/reference/install-configuration/tls/certificate-resolvers/tailscale.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/install-configuration/tls/certificate-resolvers/tailscale.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/install-configuration/tls/certificate-resolvers/tailscale.md
 
 # Tailscale
 
@@ -14413,7 +14488,7 @@ Traefik automatically tracks the expiry date of each Tailscale certificate it fe
 # Document: Traefik SPIFFE Documentation
 
 Source path: docs/content/reference/install-configuration/tls/spiffe.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/install-configuration/tls/spiffe.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/install-configuration/tls/spiffe.md
 
 # SPIFFE
 
@@ -14504,7 +14579,7 @@ spec:
 # Document: Traefik OCSP Documentation
 
 Source path: docs/content/reference/install-configuration/tls/ocsp.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/install-configuration/tls/ocsp.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/install-configuration/tls/ocsp.md
 
 # OCSP
 
@@ -14588,7 +14663,7 @@ ocsp:
 # Document: Traefik Metrics Overview
 
 Source path: docs/content/reference/install-configuration/observability/metrics.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/install-configuration/observability/metrics.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/install-configuration/observability/metrics.md
 
 # Metrics
 
@@ -15279,7 +15354,7 @@ Here is a comprehensive list of labels that are provided by the metrics:
 # Document: Traefik Tracing Overview
 
 Source path: docs/content/reference/install-configuration/observability/tracing.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/install-configuration/observability/tracing.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/install-configuration/observability/tracing.md
 
 # Tracing
 
@@ -15376,7 +15451,7 @@ Traefik also supports the `OTEL_RESOURCE_ATTRIBUTES` env variable to set up the 
 # Document: Traefik Logs Documentation
 
 Source path: docs/content/reference/install-configuration/observability/logs-and-accesslogs.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/install-configuration/observability/logs-and-accesslogs.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/install-configuration/observability/logs-and-accesslogs.md
 
 ## Logs
 
@@ -15847,7 +15922,7 @@ services:
 # Document: Traefik Health Check Documentation
 
 Source path: docs/content/reference/install-configuration/observability/healthcheck.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/install-configuration/observability/healthcheck.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/install-configuration/observability/healthcheck.md
 
 # CLI & Ping
 
@@ -15947,7 +16022,7 @@ ping:
 # Document: Traefik FastProxy Experimental Configuration
 
 Source path: docs/content/reference/install-configuration/experimental/fastproxy.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/install-configuration/experimental/fastproxy.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/install-configuration/experimental/fastproxy.md
 
 # Traefik FastProxy Experimental Configuration
 
@@ -15998,7 +16073,7 @@ experimental:
 # Document: Traefik Plugins Experimental Configuration
 
 Source path: docs/content/reference/install-configuration/experimental/plugins.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/install-configuration/experimental/plugins.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/install-configuration/experimental/plugins.md
 
 # Traefik Plugins Experimental Configuration
 
@@ -16098,7 +16173,7 @@ experimental:
 # Document: Install Configuration Options
 
 Source path: docs/content/reference/install-configuration/configuration-options.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/install-configuration/configuration-options.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/install-configuration/configuration-options.md
 
 # Install Configuration Options
 
@@ -16158,7 +16233,7 @@ Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9
 | <a id="opt-certificatesresolvers-name-acme-dnschallenge"></a>certificatesresolvers.*name*.acme.dnschallenge                                                             | Activate DNS-01 Challenge.                                                                                                                                                                                                                                                                                                                                 | false                                                                                                                                                                     |        |      |
 | <a id="opt-certificatesresolvers-name-acme-dnschallenge-delaybeforecheck"></a>certificatesresolvers.*name*.acme.dnschallenge.delaybeforecheck                           | (Deprecated) Assume DNS propagates after a delay in seconds rather than finding and querying nameservers.                                                                                                                                                                                                                                                  | 0                                                                                                                                                                         |        |      |
 | <a id="opt-certificatesresolvers-name-acme-dnschallenge-disablepropagationcheck"></a>certificatesresolvers.*name*.acme.dnschallenge.disablepropagationcheck             | (Deprecated) Disable the DNS propagation checks before notifying ACME that the DNS challenge is ready. \[not recommended]                                                                                                                                                                                                                                  | false                                                                                                                                                                     |        |      |
-| <a id="opt-certificatesresolvers-name-acme-dnschallenge-propagation"></a>certificatesresolvers.*name*.acme.dnschallenge.propagation                                     | DNS propagation checks configuration                                                                                                                                                                                                                                                                                                                       | false                                                                                                                                                                     |        |      |
+| <a id="opt-certificatesresolvers-name-acme-dnschallenge-propagation"></a>certificatesresolvers.*name*.acme.dnschallenge.propagation                                     | DNS propagation checks configuration                                                                                                                                                                                                                                                                                                                       |                                                                                                                                                                           |        |      |
 | <a id="opt-certificatesresolvers-name-acme-dnschallenge-propagation-delaybeforechecks"></a>certificatesresolvers.*name*.acme.dnschallenge.propagation.delaybeforechecks | Defines the delay before checking the challenge TXT record propagation.                                                                                                                                                                                                                                                                                    | 0                                                                                                                                                                         |        |      |
 | <a id="opt-certificatesresolvers-name-acme-dnschallenge-propagation-disableanschecks"></a>certificatesresolvers.*name*.acme.dnschallenge.propagation.disableanschecks   | Disables the challenge TXT record propagation checks against authoritative nameservers.                                                                                                                                                                                                                                                                    | false                                                                                                                                                                     |        |      |
 | <a id="opt-certificatesresolvers-name-acme-dnschallenge-propagation-disablechecks"></a>certificatesresolvers.*name*.acme.dnschallenge.propagation.disablechecks         | Disables the challenge TXT record propagation checks (not recommended).                                                                                                                                                                                                                                                                                    | false                                                                                                                                                                     |        |      |
@@ -16653,7 +16728,7 @@ Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9
 # Document: Providing Dynamic Configuration to Traefik
 
 Source path: docs/content/reference/routing-configuration/dynamic-configuration-methods.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/dynamic-configuration-methods.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/dynamic-configuration-methods.md
 
 # Providing Dynamic (Routing) Configuration to Traefik
 
@@ -16850,7 +16925,7 @@ For providers that do not support labels, such as Consul & Nomad, you can use ta
 # Document: Traefik HTTP Routers Documentation
 
 Source path: docs/content/reference/routing-configuration/http/routing/router.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/http/routing/router.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/routing/router.md
 
 ## HTTP Router
 
@@ -16980,7 +17055,7 @@ labels:
 # Document: Traefik HTTP Routers Rules & Priority Documentation
 
 Source path: docs/content/reference/routing-configuration/http/routing/rules-and-priority.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/http/routing/rules-and-priority.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/routing/rules-and-priority.md
 
 An HTTP router is in charge of connecting incoming requests to the services that can handle them. Traefik allows you to define your matching rules and [prioritize](#priority-calculation) the routes.
 
@@ -17315,7 +17390,7 @@ In the example above, the priority is configured to allow `Router-2` to handle r
 # Document: Per-Router Observability
 
 Source path: docs/content/reference/routing-configuration/http/routing/observability.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/http/routing/observability.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/routing/observability.md
 
 Traefik's observability features include logs, access logs, metrics, and tracing. You can configure these options globally or at more specific levels, such as per router or per entry point.
 
@@ -17420,7 +17495,7 @@ Possible values are:
 # Document: Multi-Layer Routing
 
 Source path: docs/content/reference/routing-configuration/http/routing/multi-layer-routing.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/http/routing/multi-layer-routing.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/routing/multi-layer-routing.md
 
 # Multi-Layer Routing
 
@@ -17611,7 +17686,7 @@ Request → EntryPoint → Parent Router → Middleware → Child Router A → S
 # Document: Traefik HTTP Services Documentation
 
 Source path: docs/content/reference/routing-configuration/http/load-balancing/service.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/http/load-balancing/service.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/load-balancing/service.md
 
 Traefik services define how to distribute incoming traffic across your backend servers.
 This page covers two main concepts:
@@ -18844,7 +18919,7 @@ http:
 # Document: ServersTransport
 
 Source path: docs/content/reference/routing-configuration/http/load-balancing/serverstransport.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/http/load-balancing/serverstransport.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/load-balancing/serverstransport.md
 
 ServersTransport allows you to configure the transport between Traefik and your HTTP servers.
 
@@ -18982,7 +19057,7 @@ labels:
 # Document: Traefik HTTP TLS Documentation
 
 Source path: docs/content/reference/routing-configuration/http/tls/overview.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/http/tls/overview.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/tls/overview.md
 
 ## General
 
@@ -19125,7 +19200,7 @@ Every domain must have A/AAAA records pointing to Traefik.
 # Document: Traefik TLS Certificates Documentation
 
 Source path: docs/content/reference/routing-configuration/http/tls/tls-certificates.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/http/tls/tls-certificates.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/tls/tls-certificates.md
 
 > **Info**
 > When a router has to handle HTTPS traffic, it should be specified with a `tls` field of the router definition.
@@ -19321,7 +19396,7 @@ labels:
 # Document: Traefik TLS Options Documentation
 
 Source path: docs/content/reference/routing-configuration/http/tls/tls-options.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/http/tls/tls-options.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/tls/tls-options.md
 
 The TLS options allow one to configure some parameters of the TLS connection.
 
@@ -19721,7 +19796,7 @@ spec:
 # Document: Traefik Proxy Middleware Overview
 
 Source path: docs/content/reference/routing-configuration/http/middlewares/overview.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/http/middlewares/overview.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/middlewares/overview.md
 
 # HTTP Middleware Overview
 
@@ -19779,7 +19854,7 @@ Please take a look at the community-contributed plugins in the [plugin catalog](
 # Document: Traefik AddPrefix Documentation
 
 Source path: docs/content/reference/routing-configuration/http/middlewares/addprefix.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/http/middlewares/addprefix.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/middlewares/addprefix.md
 
 The `addPrefix` middleware updates the path of a request before forwarding it.
 
@@ -19848,7 +19923,7 @@ spec:
 # Document: API Key Authentication
 
 Source path: docs/content/reference/routing-configuration/http/middlewares/apikey.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/http/middlewares/apikey.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/middlewares/apikey.md
 
 > **Traefik Hub Feature**
 > This middleware is available exclusively in [Traefik Hub](https://traefik.io/traefik-hub/). Learn more about [Traefik Hub's advanced features](https://doc.traefik.io/traefik-hub/api-gateway/intro).
@@ -19907,7 +19982,7 @@ stringData:
 # Document: Traefik BasicAuth Documentation
 
 Source path: docs/content/reference/routing-configuration/http/middlewares/basicauth.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/http/middlewares/basicauth.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/middlewares/basicauth.md
 
 The `basicAuth` middleware grants access to services to authorized users only.
 
@@ -20011,7 +20086,7 @@ The option `users` supports Kubernetes secrets.
 # Document: Traefik Buffering Documentation
 
 Source path: docs/content/reference/routing-configuration/http/middlewares/buffering.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/http/middlewares/buffering.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/middlewares/buffering.md
 
 The `buffering` middleware limits the size of requests that can be forwarded to services.
 
@@ -20101,7 +20176,7 @@ At least one function is required:
 # Document: Traefik Chain Middleware Documentation
 
 Source path: docs/content/reference/routing-configuration/http/middlewares/chain.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/http/middlewares/chain.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/middlewares/chain.md
 
 The `chain` middleware enables you to define reusable combinations of other pieces of middleware.
 It makes it effortless to reuse the same groups.
@@ -20283,7 +20358,7 @@ spec:
 # Document: Traefik CircuitBreaker Documentation
 
 Source path: docs/content/reference/routing-configuration/http/middlewares/circuitbreaker.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/http/middlewares/circuitbreaker.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/middlewares/circuitbreaker.md
 
 The HTTP circuit breaker prevents stacking requests to unhealthy Services, resulting in cascading failures.
 
@@ -20436,7 +20511,7 @@ If the service operates normally during the entire recovery duration, then the c
 # Document: Traefik Compress Documentation
 
 Source path: docs/content/reference/routing-configuration/http/middlewares/compress.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/http/middlewares/compress.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/middlewares/compress.md
 
 The `compress` middleware compresses response. It supports Gzip, Brotli and Zstandard compression
 
@@ -20529,7 +20604,7 @@ Note that `application/grpc` is never compressed.
 # Document: Traefik ContentType Documentation
 
 Source path: docs/content/reference/routing-configuration/http/middlewares/contenttype.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/http/middlewares/contenttype.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/middlewares/contenttype.md
 
 The `contentType` middleware sets the `Content-Type` header value to the media type detected from the response content,
 when it is not set by the backend.
@@ -20593,7 +20668,7 @@ spec:
 # Document: Traefik DigestAuth Documentation
 
 Source path: docs/content/reference/routing-configuration/http/middlewares/digestauth.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/http/middlewares/digestauth.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/middlewares/digestauth.md
 
 The `DigestAuth` middleware grants access to services to authorized users only.
 
@@ -20687,7 +20762,7 @@ On Kubernetes, you don’t use the `users` or `usersFile` fields. Instead, you r
 # Document: Distributed RateLimit
 
 Source path: docs/content/reference/routing-configuration/http/middlewares/distributed-ratelimit.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/http/middlewares/distributed-ratelimit.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/middlewares/distributed-ratelimit.md
 
 > **Traefik Hub Feature**
 > This middleware is available exclusively in [Traefik Hub](https://traefik.io/traefik-hub/). Learn more about [Traefik Hub's advanced features](https://doc.traefik.io/traefik-hub/api-gateway/intro).
@@ -20873,7 +20948,7 @@ For more information about Redis, we recommend the [official Redis documentation
 # Document: Traefik EncodedCharacters Documentation
 
 Source path: docs/content/reference/routing-configuration/http/middlewares/encodedcharacters.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/http/middlewares/encodedcharacters.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/middlewares/encodedcharacters.md
 
 The EncodedCharacters middleware controls which ambiguous reserved encoded characters are allowed in the request path.
 
@@ -20947,7 +21022,7 @@ This helps avoid split-view situation, where Traefik and your backend interpret 
 # Document: Traefik Errors Documentation
 
 Source path: docs/content/reference/routing-configuration/http/middlewares/errorpages.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/http/middlewares/errorpages.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/middlewares/errorpages.md
 
 The `errors` middleware returns a custom page in lieu of the default, according to configured ranges of HTTP Status codes.
 
@@ -21119,7 +21194,7 @@ Set to an explicit list to forward only those headers, or set to an empty list (
 # Document: Traefik ForwardAuth Documentation
 
 Source path: docs/content/reference/routing-configuration/http/middlewares/forwardauth.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/http/middlewares/forwardauth.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/middlewares/forwardauth.md
 
 The `forwardAuth` middleware delegates authentication to an external service.
 If the service answers with a 2XX code, access is granted, and the original request is performed.
@@ -21288,7 +21363,7 @@ The following request properties are provided to the forward-auth target endpoin
 # Document: Traefik GrpcWeb Documentation
 
 Source path: docs/content/reference/routing-configuration/http/middlewares/grpcweb.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/http/middlewares/grpcweb.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/middlewares/grpcweb.md
 
 The `grpcWeb` middleware converts gRPC Web requests to HTTP/2 gRPC requests before forwarding them to the backends.
 
@@ -21366,7 +21441,7 @@ More information including how to use the settings can be found at:
 # Document: Traefik Headers Documentation
 
 Source path: docs/content/reference/routing-configuration/http/middlewares/headers.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/http/middlewares/headers.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/middlewares/headers.md
 
 The Headers middleware manages the headers of requests and responses.
 
@@ -21728,7 +21803,7 @@ It allows all origins that contain any match of a regular expression in the `acc
 # Document: HMAC
 
 Source path: docs/content/reference/routing-configuration/http/middlewares/hmac.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/http/middlewares/hmac.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/middlewares/hmac.md
 
 > **Traefik Hub Feature**
 > This middleware is available exclusively in [Traefik Hub](https://traefik.io/traefik-hub/). Learn more about [Traefik Hub's advanced features](https://doc.traefik.io/traefik-hub/api-gateway/intro).
@@ -21941,7 +22016,7 @@ Only SHA-256 and SHA-512 checksums are supported for checksum computation.
 # Document: Traefik HTTP Middlewares IPAllowList
 
 Source path: docs/content/reference/routing-configuration/http/middlewares/ipallowlist.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/http/middlewares/ipallowlist.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/middlewares/ipallowlist.md
 
 `ipAllowList` accepts / refuses requests based on the client IP.
 
@@ -22083,7 +22158,7 @@ If `depth` is set to 2, and the request `X-Forwarded-For` header is `"10.0.0.1,1
 # Document: Traefik InFlightReq Documentation
 
 Source path: docs/content/reference/routing-configuration/http/middlewares/inflightreq.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/http/middlewares/inflightreq.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/middlewares/inflightreq.md
 
 The `inFlightReq` middleware proactively prevents services from being overwhelmed with high load.
 
@@ -22208,7 +22283,7 @@ If `depth` is set to 2, and the request `X-Forwarded-For` header is `"10.0.0.1,1
 # Document: JWT Authentication
 
 Source path: docs/content/reference/routing-configuration/http/middlewares/jwt.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/http/middlewares/jwt.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/middlewares/jwt.md
 
 > **Traefik Hub Feature**
 > This middleware is available exclusively in [Traefik Hub](https://traefik.io/traefik-hub/). Learn more about [Traefik Hub's advanced features](https://doc.traefik.io/traefik-hub/api-gateway/intro).
@@ -22452,7 +22527,7 @@ urn:k8s:secret:[name]:[valueKey]
 # Document: LDAP Authentication
 
 Source path: docs/content/reference/routing-configuration/http/middlewares/ldap.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/http/middlewares/ldap.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/middlewares/ldap.md
 
 > **Traefik Hub Feature**
 > This middleware is available exclusively in [Traefik Hub](https://traefik.io/traefik-hub/). Learn more about [Traefik Hub's advanced features](https://doc.traefik.io/traefik-hub/api-gateway/intro).
@@ -22562,7 +22637,7 @@ it tries to issue a bind request with this record, otherwise it aborts a `401 Un
 # Document: OAuth 2.0 Token Introspection Authentication
 
 Source path: docs/content/reference/routing-configuration/http/middlewares/oauth2-token-introspection.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/http/middlewares/oauth2-token-introspection.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/middlewares/oauth2-token-introspection.md
 
 > **Traefik Hub Feature**
 > This middleware is available exclusively in [Traefik Hub](https://traefik.io/traefik-hub/). Learn more about [Traefik Hub's advanced features](https://doc.traefik.io/traefik-hub/api-gateway/intro).
@@ -22782,7 +22857,7 @@ stringData:
 # Document: OAuth 2.0 Client Credentials Authentication
 
 Source path: docs/content/reference/routing-configuration/http/middlewares/oauth2-client-credentials.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/http/middlewares/oauth2-client-credentials.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/middlewares/oauth2-client-credentials.md
 
 > **Traefik Hub Feature**
 > This middleware is available exclusively in [Traefik Hub](https://traefik.io/traefik-hub/). Learn more about [Traefik Hub's advanced features](https://doc.traefik.io/traefik-hub/api-gateway/intro).
@@ -23049,7 +23124,7 @@ The following Redis modes are supported:
 # Document: OpenID Connect Authentication
 
 Source path: docs/content/reference/routing-configuration/http/middlewares/oidc.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/http/middlewares/oidc.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/middlewares/oidc.md
 
 > **Traefik Hub Feature**
 > This middleware is available exclusively in [Traefik Hub](https://traefik.io/traefik-hub/). Learn more about [Traefik Hub's advanced features](https://doc.traefik.io/traefik-hub/api-gateway/intro).
@@ -23498,7 +23573,7 @@ the CSRF token value (extracted from the cookie) have to be sent to the server i
 # Document: Open Policy Agent
 
 Source path: docs/content/reference/routing-configuration/http/middlewares/opa.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/http/middlewares/opa.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/middlewares/opa.md
 
 > **Traefik Hub Feature**
 > This middleware is available exclusively in [Traefik Hub](https://traefik.io/traefik-hub/). Learn more about [Traefik Hub's advanced features](https://doc.traefik.io/traefik-hub/api-gateway/intro).
@@ -23573,7 +23648,7 @@ spec:
 # Document: Traefik PassTLSClientCert Documentation
 
 Source path: docs/content/reference/routing-configuration/http/middlewares/passtlsclientcert.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/http/middlewares/passtlsclientcert.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/middlewares/passtlsclientcert.md
 
 The `passTLSClientCert` middleware adds the selected data from the passed client TLS certificate to a header.
 
@@ -23857,7 +23932,7 @@ Subject="DC=org,DC=cheese,C=FR,C=US,ST=Cheese org state,ST=Cheese com state,L=TO
 # Document: Traefik RateLimit Documentation
 
 Source path: docs/content/reference/routing-configuration/http/middlewares/ratelimit.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/http/middlewares/ratelimit.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/middlewares/ratelimit.md
 
 The `rateLimit` middleware ensures that services will receive a *fair* amount of requests, and allows you to define what fair is.
 
@@ -24151,7 +24226,7 @@ Example to group IPs together as same source:
 # Document: Traefik RedirectRegex Documentation
 
 Source path: docs/content/reference/routing-configuration/http/middlewares/redirectregex.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/http/middlewares/redirectregex.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/middlewares/redirectregex.md
 
 The `RedirectRegex` redirects a request using regex matching and replacement.
 
@@ -24245,7 +24320,7 @@ The `replacement` option defines how to modify the URL to have the new target UR
 # Document: Traefik RedirectScheme Documentation
 
 Source path: docs/content/reference/routing-configuration/http/middlewares/redirectscheme.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/http/middlewares/redirectscheme.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/middlewares/redirectscheme.md
 
 The `RedirectScheme` middleware redirects the request if the request scheme is different from the configured scheme.
 
@@ -24330,7 +24405,7 @@ spec:
 # Document: Traefik ReplacePath Documentation
 
 Source path: docs/content/reference/routing-configuration/http/middlewares/replacepath.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/http/middlewares/replacepath.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/middlewares/replacepath.md
 
 The `replacePath` middleware will:
 
@@ -24402,7 +24477,7 @@ spec:
 # Document: Traefik ReplacePathRegex Documentation
 
 Source path: docs/content/reference/routing-configuration/http/middlewares/replacepathregex.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/http/middlewares/replacepathregex.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/middlewares/replacepathregex.md
 
 The `replacePathRegex` middleware will:
 
@@ -24480,7 +24555,7 @@ labels:
 # Document: Traefik HTTP Retry Documentation
 
 Source path: docs/content/reference/routing-configuration/http/middlewares/retry.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/http/middlewares/retry.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/middlewares/retry.md
 
 The `retry` middleware retries requests a given number of times to a backend server if that server does not reply.
 As soon as the server answers, the middleware stops retrying, regardless of the response status.
@@ -24635,7 +24710,7 @@ If `disableRetryOnNetworkError` is set to `true`, you must define the `status` o
 # Document: Traefik StripPrefix Documentation
 
 Source path: docs/content/reference/routing-configuration/http/middlewares/stripprefix.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/http/middlewares/stripprefix.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/middlewares/stripprefix.md
 
 The `stripPrefix` middleware strips the matching path prefix and stores it in an `X-Forwarded-Prefix` header.
 
@@ -24710,7 +24785,7 @@ spec:
 # Document: Traefik StripPrefixRegex Documentation
 
 Source path: docs/content/reference/routing-configuration/http/middlewares/stripprefixregex.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/http/middlewares/stripprefixregex.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/middlewares/stripprefixregex.md
 
 The `stripPrefixRegex` middleware strips the matching path prefix and stores it in an `X-Forwarded-Prefix` header.
 
@@ -24790,7 +24865,7 @@ Using the previous example, the backend should return `/products/shoes/image.png
 # Document: Coraza Web Application Firewall
 
 Source path: docs/content/reference/routing-configuration/http/middlewares/waf.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/http/middlewares/waf.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/middlewares/waf.md
 
 > **Traefik Hub Feature**
 > This middleware is available exclusively in [Traefik Hub](https://traefik.io/traefik-hub/). Learn more about [Traefik Hub's advanced features](https://doc.traefik.io/traefik-hub/api-gateway/intro).
@@ -24856,7 +24931,7 @@ spec:
 # Document: Traefik TCP Routers Documentation
 
 Source path: docs/content/reference/routing-configuration/tcp/routing/router.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/tcp/routing/router.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/tcp/routing/router.md
 
 ## TCP Router
 
@@ -24969,7 +25044,7 @@ labels:
 # Document: Traefik TCP Routers Rules & Priority Documentation
 
 Source path: docs/content/reference/routing-configuration/tcp/routing/rules-and-priority.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/tcp/routing/rules-and-priority.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/tcp/routing/rules-and-priority.md
 
 ## General
 
@@ -25208,7 +25283,7 @@ Traefik reserves a range of priorities for its internal routers, the maximum use
 # Document: Traefik TCP Services Documentation
 
 Source path: docs/content/reference/routing-configuration/tcp/service.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/tcp/service.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/tcp/service.md
 
 ## General
 
@@ -25456,7 +25531,7 @@ tcp:
 # Document: ServersTransport TCP
 
 Source path: docs/content/reference/routing-configuration/tcp/serverstransport.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/tcp/serverstransport.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/tcp/serverstransport.md
 
 ServersTransport allows to configure the transport between Traefik and your TCP servers.
 
@@ -25594,7 +25669,7 @@ The option specifies the version of the protocol to be used. Either 1 or 2.
 # Document: Traefik TLS Documentation
 
 Source path: docs/content/reference/routing-configuration/tcp/tls.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/tcp/tls.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/tcp/tls.md
 
 ## General
 
@@ -25772,7 +25847,7 @@ Every domain must have A/AAAA records pointing to Traefik.
 # Document: Traefik Proxy TCP Middleware Overview
 
 Source path: docs/content/reference/routing-configuration/tcp/middlewares/overview.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/tcp/middlewares/overview.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/tcp/middlewares/overview.md
 
 # TCP Middleware Overview
 
@@ -25897,7 +25972,7 @@ spec:
 # Document: Traefik InFlightConn Middleware - TCP
 
 Source path: docs/content/reference/routing-configuration/tcp/middlewares/inflightconn.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/tcp/middlewares/inflightconn.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/tcp/middlewares/inflightconn.md
 
 To proactively prevent Services from being overwhelmed with high load, the number of allowed simultaneous connections by IP can be limited with the `inFlightConn` TCP middleware.
 
@@ -25964,7 +26039,7 @@ spec:
 # Document: Traefik TCP Middlewares IPAllowList
 
 Source path: docs/content/reference/routing-configuration/tcp/middlewares/ipallowlist.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/tcp/middlewares/ipallowlist.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/tcp/middlewares/ipallowlist.md
 
 `iPAllowList` limits allowed requests based on the client IP.
 
@@ -26036,7 +26111,7 @@ spec:
 # Document: Traefik UDP Routers Documentation
 
 Source path: docs/content/reference/routing-configuration/udp/routing/router.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/udp/routing/router.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/udp/routing/router.md
 
 ## UDP Router
 
@@ -26116,7 +26191,7 @@ Session timeout can be configured using the `entryPoints.name.udp.timeout` optio
 # Document: Traefik UDP Routers Rules & Priority Documentation
 
 Source path: docs/content/reference/routing-configuration/udp/routing/rules-priority.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/udp/routing/rules-priority.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/udp/routing/rules-priority.md
 
 A router is in charge of connecting incoming requests to the services that can handle them.
 
@@ -26241,7 +26316,7 @@ labels:
 # Document: Traefik UDP Services Documentation
 
 Source path: docs/content/reference/routing-configuration/udp/service.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/udp/service.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/udp/service.md
 
 ### General
 
@@ -26356,7 +26431,7 @@ udp:
 # Document: Traefik Kubernetes Gateway
 
 Source path: docs/content/reference/routing-configuration/kubernetes/gateway-api.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/kubernetes/gateway-api.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/kubernetes/gateway-api.md
 
 # Traefik & Kubernetes with Gateway API
 
@@ -27270,11 +27345,11 @@ spec:
 # Document: Kubernetes IngressRoute
 
 Source path: docs/content/reference/routing-configuration/kubernetes/crd/http/ingressroute.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/kubernetes/crd/http/ingressroute.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/kubernetes/crd/http/ingressroute.md
 
 `IngressRoute` is the CRD implementation of a [Traefik HTTP router](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/routing/rules-and-priority).
 
-Before creating `IngressRoute` objects, you need to apply the Traefik Kubernetes CRDs such as [Definitions](https://raw.githubusercontent.com/traefik/traefik/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/dynamic-configuration/kubernetes-crd-definition-v1.yml) and [RBAC](https://raw.githubusercontent.com/traefik/traefik/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/dynamic-configuration/kubernetes-crd-rbac.yml) to your Kubernetes cluster.
+Before creating `IngressRoute` objects, you need to apply the Traefik Kubernetes CRDs such as [Definitions](https://raw.githubusercontent.com/traefik/traefik/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/dynamic-configuration/kubernetes-crd-definition-v1.yml) and [RBAC](https://raw.githubusercontent.com/traefik/traefik/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/dynamic-configuration/kubernetes-crd-rbac.yml) to your Kubernetes cluster.
 
 This registers the `IngressRoute` kind and other Traefik-specific resources.
 
@@ -27671,7 +27746,7 @@ When a child IngressRoute references a parent IngressRoute with multiple routes,
 # Document: Kubernetes Service
 
 Source path: docs/content/reference/routing-configuration/kubernetes/crd/http/service.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/kubernetes/crd/http/service.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/kubernetes/crd/http/service.md
 
 `Service` is the implementation of a [Traefik HTTP service](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/load-balancing/service).
 
@@ -28201,7 +28276,7 @@ If you do not configure the above, Traefik will assume an http connection.
 # Document: Traefik Kubernetes Services Documentation
 
 Source path: docs/content/reference/routing-configuration/kubernetes/crd/http/traefikservice.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/kubernetes/crd/http/traefikservice.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/kubernetes/crd/http/traefikservice.md
 
 A `TraefikService` is a custom resource that sits on top of the Kubernetes Services. It enables advanced load-balancing features such as a [Weighted Round Robin](#weighted-round-robin) load balancing, a [Highest Random Weight](#highest-random-weight) load balancing, a [Mirroring](#mirroring), or a [Failover](#failover) between your Kubernetes Services.
 
@@ -28889,7 +28964,7 @@ The exhaustive list of the service options is described in the [`Service`](https
 # Document: Kubernetes serversTransport
 
 Source path: docs/content/reference/routing-configuration/kubernetes/crd/http/serverstransport.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/kubernetes/crd/http/serverstransport.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/kubernetes/crd/http/serverstransport.md
 
 A `ServersTransport` allows you to configure the connection between Traefik and the HTTP servers in Kubernetes.
 
@@ -28973,7 +29048,7 @@ spec:
 # Document: Traefik Kubernetes Middleware Documentation
 
 Source path: docs/content/reference/routing-configuration/kubernetes/crd/http/middleware.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/kubernetes/crd/http/middleware.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/kubernetes/crd/http/middleware.md
 
 `Middleware` is the CRD implementation of a [Traefik middleware](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/middlewares/overview).
 
@@ -29031,7 +29106,7 @@ For more information about the available middlewares, navigate to the dedicated 
 # Document: TLSOption
 
 Source path: docs/content/reference/routing-configuration/kubernetes/crd/tls/tlsoption.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/kubernetes/crd/tls/tlsoption.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/kubernetes/crd/tls/tlsoption.md
 
 The TLS options allow you to configure some parameters of the TLS connection in Traefik.
 
@@ -29121,7 +29196,7 @@ The default behavior is summed up in the table below:
 # Document: TLSStore
 
 Source path: docs/content/reference/routing-configuration/kubernetes/crd/tls/tlsstore.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/kubernetes/crd/tls/tlsstore.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/kubernetes/crd/tls/tlsstore.md
 
 In Traefik, certificates are grouped together in certificates stores.
 
@@ -29164,7 +29239,7 @@ spec:
 # Document: Kubernetes IngressRouteTCP
 
 Source path: docs/content/reference/routing-configuration/kubernetes/crd/tcp/ingressroutetcp.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/kubernetes/crd/tcp/ingressroutetcp.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/kubernetes/crd/tcp/ingressroutetcp.md
 
 `IngressRouteTCP` is the CRD implementation of a [Traefik TCP router](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/tcp/routing/rules-and-priority).
 
@@ -29418,7 +29493,7 @@ spec:
 # Document: ServersTransportTCP
 
 Source path: docs/content/reference/routing-configuration/kubernetes/crd/tcp/serverstransporttcp.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/kubernetes/crd/tcp/serverstransporttcp.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/kubernetes/crd/tcp/serverstransporttcp.md
 
 `ServersTransportTCP` is the CRD implementation of [ServersTransportTCP](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/tcp/serverstransport).
 
@@ -29480,7 +29555,7 @@ spec:
 # Document: Kubernetes MiddlewareTCP
 
 Source path: docs/content/reference/routing-configuration/kubernetes/crd/tcp/middlewaretcp.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/kubernetes/crd/tcp/middlewaretcp.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/kubernetes/crd/tcp/middlewaretcp.md
 
 `MiddlewareTCP` is the CRD implementation of a [Traefik TCP middleware](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/tcp/middlewares/overview).
 
@@ -29535,7 +29610,7 @@ More information about available TCP middlewares in the dedicated [middlewares s
 # Document: IngressRouteUDP
 
 Source path: docs/content/reference/routing-configuration/kubernetes/crd/udp/ingressrouteudp.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/kubernetes/crd/udp/ingressrouteudp.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/kubernetes/crd/udp/ingressrouteudp.md
 
 `IngressRouteUDP` is the CRD implementation of a [Traefik UDP router](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/udp/routing/rules-priority).
 
@@ -29739,7 +29814,7 @@ spec:
 # Document: Kubernetes Ingress Routing Configuration
 
 Source path: docs/content/reference/routing-configuration/kubernetes/ingress.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/kubernetes/ingress.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/kubernetes/ingress.md
 
 # Traefik & Kubernetes with Ingress
 
@@ -30217,7 +30292,7 @@ This will allow users to create a "default router" that will match all unmatched
 # Document: Traefik Kubernetes Ingress NGINX Routing Configuration
 
 Source path: docs/content/reference/routing-configuration/kubernetes/ingress-nginx.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/kubernetes/ingress-nginx.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/kubernetes/ingress-nginx.md
 
 # Traefik & Ingresses with NGINX Annotations
 
@@ -30720,7 +30795,7 @@ Some behaviors that are globally configurable in NGINX (such as default SSL redi
 # Document: Traefik Knative Documentation
 
 Source path: docs/content/reference/routing-configuration/kubernetes/knative.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/kubernetes/knative.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/kubernetes/knative.md
 
 # Traefik & Knative
 
@@ -30816,7 +30891,7 @@ Check out the Knative documentation for [HTTP/HTTPS configuration](https://knati
 # Document: Traefik Docker Routing Documentation
 
 Source path: docs/content/reference/routing-configuration/other-providers/docker.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/other-providers/docker.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/other-providers/docker.md
 
 # Traefik & Docker
 
@@ -31172,7 +31247,7 @@ You can declare UDP Routers and/or Services using labels.
 # Document: Traefik Docker Swarm Routing Documentation
 
 Source path: docs/content/reference/routing-configuration/other-providers/swarm.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/other-providers/swarm.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/other-providers/swarm.md
 
 # Traefik & Docker Swarm
 
@@ -31541,7 +31616,7 @@ You can declare UDP Routers and/or Services using labels.
 # Document: Traefik Consul Catalog Routing
 
 Source path: docs/content/reference/routing-configuration/other-providers/consul-catalog.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/other-providers/consul-catalog.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/other-providers/consul-catalog.md
 
 # Traefik & Consul Catalog
 
@@ -31847,7 +31922,7 @@ That means, if you just expose lets say port `:1337` on the consul Catalog ui, t
 # Document: Traefik Nomad Service Discovery Routing
 
 Source path: docs/content/reference/routing-configuration/other-providers/nomad.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/other-providers/nomad.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/other-providers/nomad.md
 
 # Traefik and Nomad Service Discovery
 
@@ -32169,7 +32244,7 @@ That means, if you just expose lets say port `:1337` on the Nomad job, traefik w
 # Document: Traefik ECS Documentation
 
 Source path: docs/content/reference/routing-configuration/other-providers/ecs.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/other-providers/ecs.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/other-providers/ecs.md
 
 # Traefik & ECS
 
@@ -32480,7 +32555,7 @@ More information about available middlewares in the dedicated [middlewares secti
 # Document: Traefik Routing Configuration with KV stores
 
 Source path: docs/content/reference/routing-configuration/other-providers/kv.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/other-providers/kv.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/other-providers/kv.md
 
 # Traefik & KV Stores
 
@@ -32741,7 +32816,7 @@ The configuration to resolve the default certificate should be defined in a TLS 
 # Document: Traefik File Routing Configuration
 
 Source path: docs/content/reference/routing-configuration/other-providers/file.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/routing-configuration/other-providers/file.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/other-providers/file.md
 
 # Traefik File Routing Configuration
 
@@ -33297,7 +33372,7 @@ To illustrate, it is possible to easily define multiple routers, services, and T
 # Document: Request Path
 
 Source path: docs/content/security/request-path.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/security/request-path.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/security/request-path.md
 
 # Request Path
 
@@ -33447,7 +33522,7 @@ entryPoints:
 # Document: Content-Length
 
 Source path: docs/content/security/content-length.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/security/content-length.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/security/content-length.md
 
 Traefik acts as a streaming proxy. By default, it checks each chunk of data against the `Content-Length` header as it passes it on to the backend or client.
 This live check blocks truncated or over‑long streams without holding the entire message.
@@ -33475,7 +33550,7 @@ With buffering enabled, Traefik will:
 # Document: HTTP/2 Header Memory
 
 Source path: docs/content/security/http2-header-memory.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/security/http2-header-memory.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/security/http2-header-memory.md
 
 # HTTP/2 Header Memory Exhaustion
 
@@ -33559,7 +33634,7 @@ entryPoints:
 # Document: Headers with Aliasing Names
 
 Source path: docs/content/security/header-aliases.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/security/header-aliases.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/security/header-aliases.md
 
 # Headers with Aliasing Names
 
@@ -33650,7 +33725,7 @@ entryPoints:
 # Document: Traefik in Multi-Tenant Kubernetes Clusters
 
 Source path: docs/content/security/multi-tenant-kubernetes.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/security/multi-tenant-kubernetes.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/security/multi-tenant-kubernetes.md
 
 # Traefik in Multi-Tenant Kubernetes Clusters
 
@@ -33714,7 +33789,7 @@ For new deployments in multi-tenant environments, adopting Gateway API is the re
 # Document: Releases
 
 Source path: docs/content/deprecation/releases.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/deprecation/releases.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/deprecation/releases.md
 
 # Releases
 
@@ -33762,7 +33837,7 @@ And these are our guiding rules for version support, as of Traefik v3.6:
 # Document: Feature Deprecation Notices
 
 Source path: docs/content/deprecation/features.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/deprecation/features.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/deprecation/features.md
 
 # Feature Deprecation Notices
 
@@ -33797,7 +33872,7 @@ An entry point cannot configure both options with different values.
 # Document: Traefik Contribution Documentation
 
 Source path: docs/content/contributing/thank-you.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/contributing/thank-you.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/contributing/thank-you.md
 
 # Thank You!
 
@@ -33830,7 +33905,7 @@ So once again, thank you for your invaluable help in making Traefik such a good 
 # Document: Traefik Submitting Issues Documentation
 
 Source path: docs/content/contributing/submitting-issues.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/contributing/submitting-issues.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/contributing/submitting-issues.md
 
 # Submitting Issues
 
@@ -33893,7 +33968,7 @@ Every maintainer / Traefik user is not a native English speaker, so if you somet
 # Document: Traefik Pull Requests Documentation
 
 Source path: docs/content/contributing/submitting-pull-requests.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/contributing/submitting-pull-requests.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/contributing/submitting-pull-requests.md
 
 # Before You Submit a Pull Request
 
@@ -34148,7 +34223,7 @@ If you do these things, your pull requests will get merged with less friction.
 # Document: Traefik Security Documentation
 
 Source path: docs/content/contributing/submitting-security-issues.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/contributing/submitting-security-issues.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/contributing/submitting-security-issues.md
 
 # Security
 
@@ -34287,7 +34362,7 @@ Quality over quantity helps keep Traefik safe for everyone.
 # Document: Traefik Security Decisions
 
 Source path: docs/content/contributing/security-decisions.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/contributing/security-decisions.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/contributing/security-decisions.md
 
 # Security Decisions
 
@@ -34603,7 +34678,7 @@ before concluding that a finding is release-candidate only, and tell us which on
 # Document: Traefik Building & Testing Documentation
 
 Source path: docs/content/contributing/building-testing.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/contributing/building-testing.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/contributing/building-testing.md
 
 # Building and Testing
 
@@ -34717,7 +34792,7 @@ TESTFLAGS="-test.run TestAccessLogSuite -testify.m ^TestAccessLog$" make test-in
 # Document: Traefik Contribution Documentation
 
 Source path: docs/content/contributing/documentation.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/contributing/documentation.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/contributing/documentation.md
 
 # Documentation
 
@@ -34827,7 +34902,7 @@ Running ["HtmlCheck", "ImageCheck", "ScriptCheck", "LinkCheck"] on /app/site/bas
 # Document: Traefik Data Collection Documentation
 
 Source path: docs/content/contributing/data-collection.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/contributing/data-collection.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/contributing/data-collection.md
 
 # Data Collection
 
@@ -34984,7 +35059,7 @@ Traefik anonymizes all configuration fields by default, except those explicitly 
 # Document: Traefik Advocation Documentation
 
 Source path: docs/content/contributing/advocating.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/contributing/advocating.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/contributing/advocating.md
 
 # Advocating
 
@@ -35016,7 +35091,7 @@ Top contributors get unique swag to celebrate.
 # Document: Traefik Maintainers Documentation
 
 Source path: docs/content/contributing/maintainers.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/contributing/maintainers.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/contributing/maintainers.md
 
 # Maintainers
 
@@ -35062,11 +35137,11 @@ Please read the [maintainer's guidelines](https://doc.traefik.io/traefik/v3.7/co
 # Document: Traefik Maintainer's Guidelines Documentation
 
 Source path: docs/content/contributing/maintainers-guidelines.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/contributing/maintainers-guidelines.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/contributing/maintainers-guidelines.md
 
 # Maintainer's Guidelines
 
-![Maintainer's Guidelines](https://raw.githubusercontent.com/traefik/traefik/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/assets/img/maintainers-guidelines.png)
+![Maintainer's Guidelines](https://raw.githubusercontent.com/traefik/traefik/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/assets/img/maintainers-guidelines.png)
 
 Welcome to the Traefik Community.
 
@@ -35191,7 +35266,7 @@ maintainers' activity and involvement will be reviewed on a regular basis.
 # Document: Traefik Getting Started FAQ
 
 Source path: docs/content/getting-started/faq.md
-Canonical source: https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/getting-started/faq.md
+Canonical source: https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/getting-started/faq.md
 
 # FAQ
 

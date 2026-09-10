@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/customize/_index.md](https://github.com/docker/docs/blob/22e32a82b28b6dabf125325fe9cd79133dc1de4a/content/manuals/ai/sandboxes/customize/_index.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/customize/_index.md](https://github.com/docker/docs/blob/c4f0e5b32deb9d3365c1f0be62305038a24e15e5/content/manuals/ai/sandboxes/customize/_index.md)
 
 # Customizing sandboxes
 
@@ -6,8 +6,8 @@
 
 - Availability: Early Access
 
-Docker Sandboxes offers two ways to customize a local sandbox beyond the
-built-in defaults:
+Docker Sandboxes offers two ways to customize a sandbox beyond the built-in
+defaults:
 
 - [Templates](https://docs.docker.com/ai/sandboxes/customize/templates/) — reusable sandbox images with tools, packages,
   and configuration baked in. Extend a base image with a Dockerfile, or

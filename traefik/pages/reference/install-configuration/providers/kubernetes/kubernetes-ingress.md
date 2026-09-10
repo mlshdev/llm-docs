@@ -1,4 +1,4 @@
-> Release-pinned source for Traefik Proxy v3.7.12: [docs/content/reference/install-configuration/providers/kubernetes/kubernetes-ingress.md](https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/reference/install-configuration/providers/kubernetes/kubernetes-ingress.md)
+> Release-pinned source for Traefik Proxy v3.7.13: [docs/content/reference/install-configuration/providers/kubernetes/kubernetes-ingress.md](https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/install-configuration/providers/kubernetes/kubernetes-ingress.md)
 
 # Traefik & Kubernetes
 
@@ -8,6 +8,9 @@ it manages access to cluster services by supporting the [Ingress](https://kubern
 > **Ingress Backend Resource not supported**
 > Referencing backend service endpoints using [`spec.rules.http.paths.backend.resource`](https://kubernetes.io/docs/reference/kubernetes-api/service-resources/ingress-v1/#IngressBackend) is not supported.
 > Use `spec.rules.http.paths.backend.service` instead.
+> **Ingress API frozen**
+> The Kubernetes Ingress API is [frozen](https://kubernetes.io/docs/concepts/services-networking/ingress/) and will not receive further changes or updates.
+> You are encouraged to use the [Kubernetes Gateway provider](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/kubernetes/kubernetes-gateway) instead.
 
 ## Configuration Example
 

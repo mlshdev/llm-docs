@@ -1,39 +1,37 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/_index.md](https://github.com/docker/docs/blob/22e32a82b28b6dabf125325fe9cd79133dc1de4a/content/manuals/ai/sandboxes/_index.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/_index.md](https://github.com/docker/docs/blob/c4f0e5b32deb9d3365c1f0be62305038a24e15e5/content/manuals/ai/sandboxes/_index.md)
 
 # Docker Sandboxes
 
-Docker Sandboxes run AI coding agents in isolated environments on your machine
-or on Docker-managed cloud infrastructure. Use the `sbx` CLI to create and
-manage either kind of sandbox.
+Docker Sandboxes run AI coding agents in isolated microVM sandboxes. Each
+sandbox gets its own Docker daemon, filesystem, and network — the agent can
+build containers, install packages, and modify files without accessing host
+resources beyond those you share.
 
-The `sbx` CLI and local sandbox compute are free to use, including for commercial
-work. Cloud compute is metered through a
-[Docker Agentic Platform plan](https://docs.docker.com/subscription-billing/plans/docker-agentic-platform/).
-Model-provider charges are separate.
+> \[!NOTE]
+> The `sbx` CLI is free to use, including for commercial work. Only
+> [organization governance](https://docs.docker.com/ai/sandboxes/governance/) requires a separate paid subscription.
 
 Organization admins can
 [centrally manage sandbox network, filesystem, and MCP policies](https://docs.docker.com/ai/sandboxes/governance/access-controls/organization/),
-for local sandboxes across developer machines.
+so the same controls apply uniformly across every developer's machine.
 Available on a separate paid subscription.
 
 ## Get started
 
-[Install the `sbx` CLI](https://docs.docker.com/ai/sandboxes/install/) and sign in, then choose where to run your
-agent:
+Follow the [installation guide](https://docs.docker.com/ai/sandboxes/install/) to check the system requirements,
+install the `sbx` CLI, and sign in.
 
-| Environment     | Use it for                                                 | Start here                                                                          |
-| --------------- | ---------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| Local sandboxes | Work with files and supported hardware on your machine     | [Get started locally](https://docs.docker.com/ai/sandboxes/get-started/)            |
-| Cloud sandboxes | Run on Docker-managed compute without local virtualization | [Get started in the cloud](https://docs.docker.com/ai/sandboxes/cloud/#get-started) |
+Then launch an agent in a sandbox:
 
-The two environments have separate credentials, network policies, and lifecycle
-controls. See [Compare local and cloud sandboxes](https://docs.docker.com/ai/sandboxes/cloud/local-vs-cloud/)
-before adapting a workflow.
+```console
+$ cd ~/my-project
+$ sbx run claude
+```
+
+See the [get started guide](https://docs.docker.com/ai/sandboxes/get-started/) for a first-session walkthrough, or
+jump to the [usage guide](https://docs.docker.com/ai/sandboxes/usage/) for basic commands.
 
 ## Learn more
-
-The following guides describe local sandbox workflows. For cloud workflows,
-see [Cloud sandboxes](https://docs.docker.com/ai/sandboxes/cloud/).
 
 - [Agents](https://docs.docker.com/ai/sandboxes/agents/) — supported agents and per-agent configuration
 - [Workflows](https://docs.docker.com/ai/sandboxes/workflows/) — patterns for Git, local development,

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/text-classification.md](https://github.com/docker/docs/blob/22e32a82b28b6dabf125325fe9cd79133dc1de4a/content/guides/text-classification.md)
+> Commit-pinned source for Docker main: [content/guides/text-classification.md](https://github.com/docker/docs/blob/c4f0e5b32deb9d3365c1f0be62305038a24e15e5/content/guides/text-classification.md)
 
 # Build a text recognition app
 
@@ -378,7 +378,7 @@ To run the application using Docker:
    >
    > For Windows users, you may get an error when running the container. Verify
    > that the line endings in the `entrypoint.sh` are `LF` (`\n`) and not `CRLF` (`\r\n`),
-   > then rebuild the image. For more details, see \[Avoid unexpected syntax errors, use Unix style line endings for files in containers]\(/desktop/troubleshoot-and-support/troubleshoot/topics/#Unexpected-syntax-errors-use-Unix-style-line endings-for-files-in-containers).
+   > then rebuild the image. For more details, see [Avoid unexpected syntax errors, use Unix style line endings for files in containers](https://docs.docker.com/desktop/troubleshoot-and-support/troubleshoot/topics/#unexpected-syntax-errors-use-unix-style-line-endings-for-files-in-containers).
 
    You will see the following in your console after the container starts.
 

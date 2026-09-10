@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "projects": {
     "traefik": {
-      "tag": "v3.7.12",
-      "releaseId": 377175367,
-      "releasePublishedAt": "2026-08-26T13:42:21Z",
-      "sourceCommit": "e8f398ee30ca5643158ea9094b701b8eae9849e5"
+      "tag": "v3.7.13",
+      "releaseId": 382715786,
+      "releasePublishedAt": "2026-09-04T12:40:17Z",
+      "sourceCommit": "fc92cc118a0557a029c7019d5ee06665127b0f13"
     },
     "netbird": {
       "tag": "v0.77.1",
@@ -23,8 +23,8 @@
     "docker": {
       "tag": "main",
       "branch": "main",
-      "sourceCommit": "22e32a82b28b6dabf125325fe9cd79133dc1de4a",
-      "sourceCommittedAt": "2026-09-09T12:50:04Z"
+      "sourceCommit": "c4f0e5b32deb9d3365c1f0be62305038a24e15e5",
+      "sourceCommittedAt": "2026-09-10T07:04:19Z"
     },
     "container": {
       "tag": "1.4.1",

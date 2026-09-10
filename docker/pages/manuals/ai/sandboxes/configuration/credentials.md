@@ -1,10 +1,6 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/configuration/credentials.md](https://github.com/docker/docs/blob/22e32a82b28b6dabf125325fe9cd79133dc1de4a/content/manuals/ai/sandboxes/configuration/credentials.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/configuration/credentials.md](https://github.com/docker/docs/blob/c4f0e5b32deb9d3365c1f0be62305038a24e15e5/content/manuals/ai/sandboxes/configuration/credentials.md)
 
 # Manage credentials
-
-These credential stores and authentication flows apply to local sandboxes.
-Cloud credentials require separate setup: see
-[Authenticate cloud agents](https://docs.docker.com/ai/sandboxes/cloud/credentials/).
 
 Most agents need an API key for their model provider. An HTTP/HTTPS proxy on
 your host intercepts outbound requests from the sandbox, looks up the matching

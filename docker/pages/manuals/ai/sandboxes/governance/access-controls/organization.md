@@ -1,14 +1,10 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/governance/access-controls/organization.md](https://github.com/docker/docs/blob/22e32a82b28b6dabf125325fe9cd79133dc1de4a/content/manuals/ai/sandboxes/governance/access-controls/organization.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/governance/access-controls/organization.md](https://github.com/docker/docs/blob/c4f0e5b32deb9d3365c1f0be62305038a24e15e5/content/manuals/ai/sandboxes/governance/access-controls/organization.md)
 
 # Organization policies
 
-The governance described here applies to local sandboxes. Organization
-governance is not available for cloud sandboxes in this release. See
-[Cloud network policy](https://docs.docker.com/ai/sandboxes/cloud/network-policy/) for cloud controls.
-
 [Local policies](https://docs.docker.com/ai/sandboxes/governance/access-controls/local/) give individual developers control over what their
 sandboxes can access. Organization policy moves that control to the admin level:
-organization policies apply to local sandboxes across the organization, either to
+organization policies apply to sandboxes across the organization, either to
 every member or to specific teams. When organization governance is active, only
 organization allow rules grant access: local `sbx policy` allow rules are no
 longer evaluated and can't expand what the organization permits. Local network

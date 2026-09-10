@@ -1,4 +1,4 @@
-> Release-pinned source for Traefik Proxy v3.7.12: [docs/content/contributing/data-collection.md](https://github.com/traefik/traefik/blob/e8f398ee30ca5643158ea9094b701b8eae9849e5/docs/content/contributing/data-collection.md)
+> Release-pinned source for Traefik Proxy v3.7.13: [docs/content/contributing/data-collection.md](https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/contributing/data-collection.md)
 
 # Data Collection
 

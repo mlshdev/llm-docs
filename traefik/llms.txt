@@ -1,8 +1,8 @@
-# Traefik Proxy v3.7.12
+# Traefik Proxy v3.7.13
 
-> Documentation generated from the latest stable release of [traefik/traefik](https://github.com/traefik/traefik) and pinned to immutable source commit `e8f398ee30ca5643158ea9094b701b8eae9849e5`.
+> Documentation generated from the latest stable release of [traefik/traefik](https://github.com/traefik/traefik) and pinned to immutable source commit `fc92cc118a0557a029c7019d5ee06665127b0f13`.
 
-- [Full documentation](llms-full.txt): Complete normalized corpus for Traefik Proxy v3.7.12.
+- [Full documentation](llms-full.txt): Complete normalized corpus for Traefik Proxy v3.7.13.
 - [Provenance manifest](manifest.json): Release, commit, document count, and generation notes.
 - Pages follow docs/mkdocs.yml navigation order from the immutable release tag.
 - MkDocs include fragments are expanded; repeated commercial callouts and non-text assets are omitted.

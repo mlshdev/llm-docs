@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/engine/swarm/how-swarm-mode-works/nodes.md](https://github.com/docker/docs/blob/22e32a82b28b6dabf125325fe9cd79133dc1de4a/content/manuals/engine/swarm/how-swarm-mode-works/nodes.md)
+> Commit-pinned source for Docker main: [content/manuals/engine/swarm/how-swarm-mode-works/nodes.md](https://github.com/docker/docs/blob/c4f0e5b32deb9d3365c1f0be62305038a24e15e5/content/manuals/engine/swarm/how-swarm-mode-works/nodes.md)
 
 # How nodes work
 

@@ -1,12 +1,6 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/workflows/git.md](https://github.com/docker/docs/blob/22e32a82b28b6dabf125325fe9cd79133dc1de4a/content/manuals/ai/sandboxes/workflows/git.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/workflows/git.md](https://github.com/docker/docs/blob/c4f0e5b32deb9d3365c1f0be62305038a24e15e5/content/manuals/ai/sandboxes/workflows/git.md)
 
 # Use Git with sandboxes
-
-These workspace modes apply to local sandboxes. In cloud sandboxes,
-[transfer files or clone a remote repository](https://docs.docker.com/ai/sandboxes/cloud/usage/#transfer-files).
-To copy a sandbox filesystem between environments, see
-[Move a sandbox](https://docs.docker.com/ai/sandboxes/cloud/move/). Host mounts and clone-mode volumes are not
-included in that snapshot.
 
 Sandboxes support three approaches for working with Git repositories. The
 right choice depends on whether you want branch isolation and whether you

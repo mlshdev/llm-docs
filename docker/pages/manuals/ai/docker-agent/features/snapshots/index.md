@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/features/snapshots/index.md](https://github.com/docker/docs/blob/22e32a82b28b6dabf125325fe9cd79133dc1de4a/_vendor/github.com/docker/docker-agent/docs/features/snapshots/index.md)
+> Commit-pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/features/snapshots/index.md](https://github.com/docker/docs/blob/c4f0e5b32deb9d3365c1f0be62305038a24e15e5/_vendor/github.com/docker/docker-agent/docs/features/snapshots/index.md)
 
 *Shadow-git snapshots capture your workspace at turn boundaries so you can review what an agent changed and undo it without touching your real git history.*
 

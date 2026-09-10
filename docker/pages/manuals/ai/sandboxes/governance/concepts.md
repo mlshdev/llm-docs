@@ -1,10 +1,6 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/governance/concepts.md](https://github.com/docker/docs/blob/22e32a82b28b6dabf125325fe9cd79133dc1de4a/content/manuals/ai/sandboxes/governance/concepts.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/governance/concepts.md](https://github.com/docker/docs/blob/c4f0e5b32deb9d3365c1f0be62305038a24e15e5/content/manuals/ai/sandboxes/governance/concepts.md)
 
 # Policy concepts
-
-The governance described here applies to local sandboxes. Organization
-governance is not available for cloud sandboxes in this release. See
-[Cloud network policy](https://docs.docker.com/ai/sandboxes/cloud/network-policy/) for cloud controls.
 
 ## Resource model
 

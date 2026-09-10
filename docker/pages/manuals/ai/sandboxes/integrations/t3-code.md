@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/integrations/t3-code.md](https://github.com/docker/docs/blob/22e32a82b28b6dabf125325fe9cd79133dc1de4a/content/manuals/ai/sandboxes/integrations/t3-code.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/integrations/t3-code.md](https://github.com/docker/docs/blob/c4f0e5b32deb9d3365c1f0be62305038a24e15e5/content/manuals/ai/sandboxes/integrations/t3-code.md)
 
 # Connect T3 Code to a sandbox
 
@@ -6,9 +6,6 @@
 
 - Availability: GA
 - Requires: Docker Sandboxes 0.37.0 or later
-
-These connection instructions use a local sandbox. For cloud SSH setup, see
-[Connect with SSH](https://docs.docker.com/ai/sandboxes/cloud/usage/#connect-with-ssh).
 
 T3 Code's SSH integration lets the desktop app drive coding agents inside a
 sandbox. T3 Code has no dedicated Docker Sandboxes integration — it treats the

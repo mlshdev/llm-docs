@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/dhi/how-to/use.md](https://github.com/docker/docs/blob/22e32a82b28b6dabf125325fe9cd79133dc1de4a/content/manuals/dhi/how-to/use.md)
+> Commit-pinned source for Docker main: [content/manuals/dhi/how-to/use.md](https://github.com/docker/docs/blob/c4f0e5b32deb9d3365c1f0be62305038a24e15e5/content/manuals/dhi/how-to/use.md)
 
 # Use a Docker Hardened Image
 
@@ -16,7 +16,7 @@ package manager, and may run as a non-root user by default.
 > pull DHI Community images. You can authenticate using either of the following:
 >
 > - **Docker ID and password:** Use your Docker Hub username and password. If
->   you don't have a Docker account, \[create one]\(../../accounts/individual/create-account.md
+>   you don't have a Docker account, [create one](https://docs.docker.com/accounts/individual/create-account/)
 >   for free.
 > - **Access token:** Use a [personal access token
 >   (PAT)](https://docs.docker.com/security/access-tokens/personal-access-tokens/) for personal accounts, or an

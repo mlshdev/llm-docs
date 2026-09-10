@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/desktop/troubleshoot-and-support/troubleshoot/topics.md](https://github.com/docker/docs/blob/22e32a82b28b6dabf125325fe9cd79133dc1de4a/content/manuals/desktop/troubleshoot-and-support/troubleshoot/topics.md)
+> Commit-pinned source for Docker main: [content/manuals/desktop/troubleshoot-and-support/troubleshoot/topics.md](https://github.com/docker/docs/blob/c4f0e5b32deb9d3365c1f0be62305038a24e15e5/content/manuals/desktop/troubleshoot-and-support/troubleshoot/topics.md)
 
 # Troubleshoot topics for Docker Desktop
 
@@ -161,7 +161,7 @@ On macOS, users without administrator privileges cannot perform in-app upgrades 
 To upgrade Docker Desktop:
 
 - Ask an administrator to install the newer version over the existing one.
-- Use the \[]`--user` install flag]\(/manuals/desktop/setup/install/mac-install.md#security-and-access) if appropriate for your setup.
+- Use the [`--user` install flag](https://docs.docker.com/desktop/setup/install/mac-install/#security-and-access) if appropriate for your setup.
 
 ### Persistent notification telling me an application has changed my Desktop configurations
 
@@ -369,7 +369,7 @@ Your machine must have the following features for Docker Desktop to function cor
    Note that many Windows devices already have virtualization enabled, so this may not apply.
 4. Hypervisor enabled at Windows startup
 
-![WSL 2 enabled](https://raw.githubusercontent.com/docker/docs/22e32a82b28b6dabf125325fe9cd79133dc1de4a/content/manuals/desktop/images/wsl2-enabled.png)
+![WSL 2 enabled](https://raw.githubusercontent.com/docker/docs/c4f0e5b32deb9d3365c1f0be62305038a24e15e5/content/manuals/desktop/images/wsl2-enabled.png)
 
 It must be possible to run WSL 2 commands without error, for example:
 
@@ -396,7 +396,7 @@ On Windows 10 Pro or Enterprise, you can also use Hyper-V with the following fea
    Note that many Windows devices already have virtualization enabled, so this may not apply.
 3. Hypervisor enabled at Windows startup
 
-![Hyper-V on Windows features](https://raw.githubusercontent.com/docker/docs/22e32a82b28b6dabf125325fe9cd79133dc1de4a/content/manuals/desktop/images/hyperv-enabled.png)
+![Hyper-V on Windows features](https://raw.githubusercontent.com/docker/docs/c4f0e5b32deb9d3365c1f0be62305038a24e15e5/content/manuals/desktop/images/hyperv-enabled.png)
 
 Docker Desktop requires Hyper-V as well as the Hyper-V Module for Windows
 PowerShell to be installed and enabled. The Docker Desktop installer enables
@@ -414,7 +414,7 @@ In the subsequent screen, verify that Hyper-V is enabled.
 In addition to [Hyper-V](#hyper-v) or [WSL 2](https://docs.docker.com/desktop/features/wsl/), virtualization must be turned on. Check the
 Performance tab on the Task Manager. Alternatively, you can type `systeminfo` into your terminal. If you see `Hyper-V Requirements: A hypervisor has been detected. Features required for Hyper-V will not be displayed`, then virtualization is enabled.
 
-![Task Manager](https://raw.githubusercontent.com/docker/docs/22e32a82b28b6dabf125325fe9cd79133dc1de4a/content/manuals/desktop/images/virtualization-enabled.png)
+![Task Manager](https://raw.githubusercontent.com/docker/docs/c4f0e5b32deb9d3365c1f0be62305038a24e15e5/content/manuals/desktop/images/virtualization-enabled.png)
 
 If you manually uninstall Hyper-V, WSL 2 or turn off virtualization,
 Docker Desktop cannot start.

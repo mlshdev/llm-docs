@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/ai-overview.md](https://github.com/docker/docs/blob/22e32a82b28b6dabf125325fe9cd79133dc1de4a/content/manuals/ai-overview.md)
+> Commit-pinned source for Docker main: [content/manuals/ai-overview.md](https://github.com/docker/docs/blob/c4f0e5b32deb9d3365c1f0be62305038a24e15e5/content/manuals/ai-overview.md)
 
 # Docker AI overview
 
@@ -26,11 +26,10 @@ in YAML. You configure agents with specific roles, models, and tools, then
 run them from your terminal. Docker Agent is a general-purpose agent runtime,
 not specific to Docker tasks.
 
-Docker Sandboxes provides isolated environments for running coding agents
-[locally](https://docs.docker.com/ai/sandboxes/get-started/) or
-[in the cloud](https://docs.docker.com/ai/sandboxes/cloud/). Sandboxes is the isolation layer;
-the agents themselves are separate tools. Agent configuration and supported
-features differ between local and cloud sandboxes.
+**Docker Sandboxes** provides isolated microVM environments for running coding
+agents. It supports multiple agents including Claude Code, Codex, Copilot,
+Devin, Gemini, and Docker Agent. Sandboxes is the isolation layer — the agents
+themselves are separate tools.
 
 **Model Runner** lets you run LLMs locally. Other tools like Docker Agent can
 use Model Runner as a model provider.
