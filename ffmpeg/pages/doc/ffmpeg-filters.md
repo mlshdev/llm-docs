@@ -1,4 +1,4 @@
-> Commit-pinned source for FFmpeg master: [doc/ffmpeg-filters.texi](https://github.com/FFmpeg/FFmpeg/blob/88ead7c01f11eefe1c31154afafd4e13a231fe89/doc/ffmpeg-filters.texi)
+> Commit-pinned source for FFmpeg master: [doc/ffmpeg-filters.texi](https://github.com/FFmpeg/FFmpeg/blob/266fff15a0f5e1165a90327ecacae82e7df107c9/doc/ffmpeg-filters.texi)
 
 # Description
 
