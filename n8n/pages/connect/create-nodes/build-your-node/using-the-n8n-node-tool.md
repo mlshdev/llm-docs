@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/connect/create-nodes/build-your-node/using-the-n8n-node-tool.md](https://github.com/n8n-io/n8n-docs/blob/898e1a72cb3fff26178a7d0a494043aaa5101a30/docs/connect/create-nodes/build-your-node/using-the-n8n-node-tool.md)
+> Commit-pinned source for n8n main: [docs/connect/create-nodes/build-your-node/using-the-n8n-node-tool.md](https://github.com/n8n-io/n8n-docs/blob/5aec983c3c35cfa0cca8d922681a4ade5c93da01/docs/connect/create-nodes/build-your-node/using-the-n8n-node-tool.md)
 
 # Using the n8n-node tool <a id="using-the-n8n-node-tool"></a>
 
@@ -98,7 +98,7 @@ This will start an interactive prompt where you can define the details of your p
 - **What is your node called?** The name of your node. This impacts the name of your project directory, package name, and the n8n node itself. The name must use one of the following formats:
   - `n8n-nodes-<YOUR_NODE_NAME>`
   - `@<YOUR_ORG>/n8n-nodes-<YOUR_NODE_NAME>`
-- **What kind of node are you building?** The [node type](https://docs.n8n.io/connect/create-nodes/plan-your-node/choose-a-node-building-style) you want to build:
+- **What kind of node are you building?** The [node building style](https://docs.n8n.io/connect/create-nodes/plan-your-node/choose-a-node-building-style) you want to use:
   - **HTTP API**: A low-code, declarative node structure that's designed for faster approval for n8n Cloud.
   - **Other**: A programmatic style node with full flexibility.
 - **What template do you want to use?** When using the HTTP API, you can choose the template to start from:
@@ -200,7 +200,7 @@ npm run dev
 
 Visit your `localhost:5678` to sign in to your n8n instance. If you open a workflow, your node appears in the nodes panel:
 
-![Trigger search panel in the workflow editor, listing a matching node in the results](https://raw.githubusercontent.com/n8n-io/n8n-docs/898e1a72cb3fff26178a7d0a494043aaa5101a30/docs/connect/.gitbook/assets/node_in_nodes_panel.png)
+![Trigger search panel in the workflow editor, listing a matching node in the results](https://raw.githubusercontent.com/n8n-io/n8n-docs/5aec983c3c35cfa0cca8d922681a4ade5c93da01/docs/connect/.gitbook/assets/node_in_nodes_panel.png)
 
 From there, you can add it to your workflow and test the node's functionality as you develop.
 

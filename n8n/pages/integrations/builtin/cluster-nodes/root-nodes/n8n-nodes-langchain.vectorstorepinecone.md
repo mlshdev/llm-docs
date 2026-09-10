@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepinecone.md](https://github.com/n8n-io/n8n-docs/blob/898e1a72cb3fff26178a7d0a494043aaa5101a30/docs/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepinecone.md)
+> Commit-pinned source for n8n main: [docs/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepinecone.md](https://github.com/n8n-io/n8n-docs/blob/5aec983c3c35cfa0cca8d922681a4ade5c93da01/docs/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepinecone.md)
 
 # Pinecone Vector Store
 
@@ -149,7 +149,7 @@ View n8n's [Advanced AI](https://docs.n8n.io/build/integrate-ai) documentation.
 
 Your Pinecone index and namespace are available in your Pinecone account.
 
-![Pinecone console showing the index name and namespace location for a project](https://raw.githubusercontent.com/n8n-io/n8n-docs/898e1a72cb3fff26178a7d0a494043aaa5101a30/docs/integrations/.gitbook/assets/pinecone-index-namespace.png)
+![Pinecone console showing the index name and namespace location for a project](https://raw.githubusercontent.com/n8n-io/n8n-docs/5aec983c3c35cfa0cca8d922681a4ade5c93da01/docs/integrations/.gitbook/assets/pinecone-index-namespace.png)
 
 [^1]: A vector store, or vector database, stores mathematical representations of information. Use with embeddings and retrievers to create a database that your AI can access when answering questions.
 

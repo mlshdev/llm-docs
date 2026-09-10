@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/code-in-n8n/using-the-code-node.md](https://github.com/n8n-io/n8n-docs/blob/898e1a72cb3fff26178a7d0a494043aaa5101a30/docs/build/code-in-n8n/using-the-code-node.md)
+> Commit-pinned source for n8n main: [docs/build/code-in-n8n/using-the-code-node.md](https://github.com/n8n-io/n8n-docs/blob/5aec983c3c35cfa0cca8d922681a4ade5c93da01/docs/build/code-in-n8n/using-the-code-node.md)
 
 # Using the Code node <a id="using-the-code-node"></a>
 

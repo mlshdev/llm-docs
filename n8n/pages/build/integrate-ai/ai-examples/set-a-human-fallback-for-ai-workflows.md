@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/integrate-ai/ai-examples/set-a-human-fallback-for-ai-workflows.md](https://github.com/n8n-io/n8n-docs/blob/898e1a72cb3fff26178a7d0a494043aaa5101a30/docs/build/integrate-ai/ai-examples/set-a-human-fallback-for-ai-workflows.md)
+> Commit-pinned source for n8n main: [docs/build/integrate-ai/ai-examples/set-a-human-fallback-for-ai-workflows.md](https://github.com/n8n-io/n8n-docs/blob/5aec983c3c35cfa0cca8d922681a4ade5c93da01/docs/build/integrate-ai/ai-examples/set-a-human-fallback-for-ai-workflows.md)
 
 # Set a human fallback for AI workflows
 
@@ -393,7 +393,7 @@ To load the template into your n8n instance:
 
 1. Download the workflow JSON file.
 2. Open a new workflow in your n8n instance.
-3. Copy in the JSON, or select **Workflow menu** ![Workflow menu icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/898e1a72cb3fff26178a7d0a494043aaa5101a30/docs/reusable-content/.gitbook/assets/three-dots-horizontal.png) > **Import from file...**.
+3. Copy in the JSON, or select **Workflow menu** ![Workflow menu icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/5aec983c3c35cfa0cca8d922681a4ade5c93da01/docs/reusable-content/.gitbook/assets/three-dots-horizontal.png) > **Import from file...**.
 
 The example workflows use Sticky Notes to guide you:
 

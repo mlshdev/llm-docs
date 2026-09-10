@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/host-n8n/configure-n8n/scaling/measure-performance.md](https://github.com/n8n-io/n8n-docs/blob/898e1a72cb3fff26178a7d0a494043aaa5101a30/docs/deploy/host-n8n/configure-n8n/scaling/measure-performance.md)
+> Commit-pinned source for n8n main: [docs/deploy/host-n8n/configure-n8n/scaling/measure-performance.md](https://github.com/n8n-io/n8n-docs/blob/5aec983c3c35cfa0cca8d922681a4ade5c93da01/docs/deploy/host-n8n/configure-n8n/scaling/measure-performance.md)
 
 # Performance and benchmarking <a id="performance-and-benchmarking"></a>
 
@@ -28,7 +28,7 @@ Setup:
 - n8n setup: Single n8n instance (running in main mode, with Postgres database)
 - Workflow: Webhook Trigger node, Edit Fields node
 
-![](https://raw.githubusercontent.com/n8n-io/n8n-docs/898e1a72cb3fff26178a7d0a494043aaa5101a30/docs/deploy/.gitbook/assets/benchmarking-single-instance-100-250.png)
+![](https://raw.githubusercontent.com/n8n-io/n8n-docs/5aec983c3c35cfa0cca8d922681a4ade5c93da01/docs/deploy/.gitbook/assets/benchmarking-single-instance-100-250.png)
 *This graph shows the percentage of requests to the Webhook Trigger node getting a response within 100 seconds, and how that varies with load. Under higher loads n8n usually still processes the data, but takes over 100s to respond.*
 
 ## Example: Multi-instance performance <a id="example-multi-instance-performance"></a>
@@ -42,5 +42,5 @@ Setup:
 - Workflow: Webhook Trigger node, Edit Fields node
 - Multi-instance setups use [Queue mode](https://docs.n8n.io/deploy/host-n8n/configure-n8n/scaling/enable-queue-mode)
 
-![](https://raw.githubusercontent.com/n8n-io/n8n-docs/898e1a72cb3fff26178a7d0a494043aaa5101a30/docs/deploy/.gitbook/assets/benchmarking-multi-instance-500-2500.png)
+![](https://raw.githubusercontent.com/n8n-io/n8n-docs/5aec983c3c35cfa0cca8d922681a4ade5c93da01/docs/deploy/.gitbook/assets/benchmarking-multi-instance-500-2500.png)
 *This graph shows the percentage of requests to the Webhook Trigger node getting a response within 100 seconds, and how that varies with load. Under higher loads n8n usually still processes the data, but takes over 100s to respond.*

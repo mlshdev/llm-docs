@@ -1,21 +1,28 @@
-> Commit-pinned source for n8n main: [docs/connect/create-nodes/plan-your-node/choose-a-node-building-style.md](https://github.com/n8n-io/n8n-docs/blob/898e1a72cb3fff26178a7d0a494043aaa5101a30/docs/connect/create-nodes/plan-your-node/choose-a-node-building-style.md)
+> Commit-pinned source for n8n main: [docs/connect/create-nodes/plan-your-node/choose-a-node-building-style.md](https://github.com/n8n-io/n8n-docs/blob/5aec983c3c35cfa0cca8d922681a4ade5c93da01/docs/connect/create-nodes/plan-your-node/choose-a-node-building-style.md)
 
 # Choose your node building approach <a id="choose-your-node-building-approach"></a>
 
-n8n has two node-building styles, declarative and programmatic.
+n8n has two node-building styles, declarative and programmatic. Build your node in the declarative style. It's the default for new nodes.
 
-You should use the declarative style for most nodes. This style:
+The declarative style:
 
 - Uses a JSON-based syntax, making it simpler to write, with less risk of introducing bugs.
 - Is more future-proof.
 - Supports integration with REST APIs.
+- Needs no `execute()` method, so there's less code to write and maintain.
 
-The programmatic style is more verbose. You must use the programmatic style for:
+If you're not sure which style your node needs, start declarative. The [`n8n-node` tool](https://docs.n8n.io/connect/create-nodes/build-your-node/using-the-n8n-node-tool) scaffolds a declarative node for you, and [Build a declarative-style node](https://docs.n8n.io/connect/create-nodes/build-your-node/tutorial-build-a-declarative-style-node) walks through a complete example.
 
-- Trigger nodes
-- Any node that isn't REST-based. This includes nodes that need to call a GraphQL API and nodes that use external dependencies.
-- Any node that needs to transform incoming data.
-- Full versioning. Refer to [Node versioning](https://docs.n8n.io/connect/create-nodes/build-your-node/reference/versioning) for more information on types of versioning.
+## When you need the programmatic style
+
+The programmatic style is more verbose, and it puts your node's behavior in code that you have to maintain. Treat it as the exception. Use the programmatic style when your node is one of these:
+
+- A trigger node.
+- A node that isn't REST-based. This includes nodes that need to call a GraphQL API and nodes that use external dependencies.
+- A node that needs to transform data beyond what routing handles. The declarative style can change the request with `routing.request.preSend` and the API response with `routing.output.postReceive`. Use the programmatic style when your node needs to work on incoming items independently of a single API call.
+- A node that needs feature-based versioning to branch its behavior in code, using `this.isNodeFeatureEnabled()`. Declarative nodes can still use light versioning, and can read feature flags with `@feature` in `displayOptions`. Refer to [Node versioning](https://docs.n8n.io/connect/create-nodes/build-your-node/reference/versioning) for more information on types of versioning.
+
+If your node isn't on this list, build it in the declarative style.
 
 ## Data handling differences <a id="data-handling-differences"></a>
 
@@ -25,7 +32,86 @@ The main difference between the declarative and programmatic styles is how they 
 
 To understand the difference between the declarative and programmatic styles, compare the two code snippets below. This example creates a simplified version of the SendGrid integration, called "FriendGrid." The following code snippets aren't complete: they emphasize the differences in the node building styles.
 
-In programmatic style:
+FriendGrid calls a REST API and doesn't transform its input, so the declarative style is the right choice for it. In declarative style:
+
+```js
+import { INodeType, INodeTypeDescription } from 'n8n-workflow';
+
+// Create the FriendGrid class
+export class FriendGrid implements INodeType {
+  description: INodeTypeDescription = {
+    displayName: 'FriendGrid',
+    name: 'friendGrid',
+    . . .
+    // Set up the basic request configuration
+    requestDefaults: {
+      baseURL: 'https://api.sendgrid.com/v3/marketing'
+    },
+    properties: [
+      {
+        displayName: 'Resource',
+        . . .
+      },
+      {
+        displayName: 'Operation',
+        name: 'operation',
+        type: 'options',
+        displayOptions: {
+          show: {
+            resource: [
+              'contact',
+            ],
+          },
+        },
+        options: [
+          {
+            name: 'Create',
+            value: 'create',
+            description: 'Create a contact',
+            // Add the routing object
+            routing: {
+              request: {
+                method: 'POST',
+                url: '=/contacts',
+                send: {
+                  type: 'body',
+                  properties: {
+                    email: '={{$parameter["email"]}}'
+                  }
+                }
+              },
+              // Handle the response to contact creation
+              output: {
+                postReceive: [
+                  {
+                    type: 'set',
+                    properties: {
+                      value: '={{ { "success": $response } }}'
+                    }
+                  }
+                ]
+              }
+            }
+          },
+        ],
+        default: 'create',
+        description: 'The operation to perform.',
+      },
+      {
+        displayName: 'Email',
+        . . .
+      },
+      {
+        displayName: 'Additional Fields',
+        // Sets up optional fields
+      },
+    ],
+  }
+  // No execute method needed
+}
+```
+
+The same node in programmatic style needs an `execute()` method to read the parameters and build the request by hand:
 
 ```js
 import {
@@ -120,84 +206,5 @@ export class FriendGrid implements INodeType {
     // Map data to n8n data
     return [this.helpers.returnJsonArray(responseData)];
   }
-}
-```
-
-In declarative style:
-
-```js
-import { INodeType, INodeTypeDescription } from 'n8n-workflow';
-
-// Create the FriendGrid class
-export class FriendGrid implements INodeType {
-  description: INodeTypeDescription = {
-    displayName: 'FriendGrid',
-    name: 'friendGrid',
-    . . .
-    // Set up the basic request configuration
-    requestDefaults: {
-      baseURL: 'https://api.sendgrid.com/v3/marketing'
-    },
-    properties: [
-      {
-        displayName: 'Resource',
-        . . .
-      },
-      {
-        displayName: 'Operation',
-        name: 'operation',
-        type: 'options',
-        displayOptions: {
-          show: {
-            resource: [
-              'contact',
-            ],
-          },
-        },
-        options: [
-          {
-            name: 'Create',
-            value: 'create',
-            description: 'Create a contact',
-            // Add the routing object
-            routing: {
-              request: {
-                method: 'POST',
-                url: '=/contacts',
-                send: {
-                  type: 'body',
-                  properties: {
-                    email: {{$parameter["email"]}}
-                  }
-                }
-              }
-            },
-            // Handle the response to contact creation
-            output: {
-              postReceive: [
-                {
-                  type: 'set',
-                  properties: {
-                    value: '={{ { "success": $response } }}'
-                  }
-                }
-              ]
-            }
-          },
-        ],
-        default: 'create',
-        description: 'The operation to perform.',
-      },
-      {
-        displayName: 'Email',
-        . . .
-      },
-      {
-        displayName: 'Additional Fields',
-        // Sets up optional fields
-      },
-    ],
-  }
-  // No execute method needed
 }
 ```

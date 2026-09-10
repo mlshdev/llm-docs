@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/connect/create-nodes/build-your-node/reference/code-standards.md](https://github.com/n8n-io/n8n-docs/blob/898e1a72cb3fff26178a7d0a494043aaa5101a30/docs/connect/create-nodes/build-your-node/reference/code-standards.md)
+> Commit-pinned source for n8n main: [docs/connect/create-nodes/build-your-node/reference/code-standards.md](https://github.com/n8n-io/n8n-docs/blob/5aec983c3c35cfa0cca8d922681a4ade5c93da01/docs/connect/create-nodes/build-your-node/reference/code-standards.md)
 
 # Code standards <a id="code-standards"></a>
 
@@ -11,6 +11,12 @@ The n8n node linter provides automatic checking for many of the node-building st
 ## Use the n8n-node tool <a id="use-the-n8n-node-tool"></a>
 
 n8n recommends using the [`n8n-node` CLI tool](https://docs.n8n.io/connect/create-nodes/build-your-node/using-the-n8n-node-tool) to build and test your node. In particular, this is important if you plan on [submitting your node for verification](https://docs.n8n.io/connect/create-nodes/deploy-your-node/submit-community-nodes#submit-your-node-for-verification-by-n8n). This ensures that your node has the correct structure and follows community node requirements. It also simplifies linting and testing.
+
+## Use the declarative style
+
+Build your node in the declarative style. It's the default, and it keeps your node shorter and easier to maintain by describing requests in the `routing` key instead of an `execute()` method.
+
+Use the programmatic style only when your node needs it: trigger nodes, non-REST APIs, nodes that transform incoming data, or nodes that need feature-based versioning. Declarative nodes can still use light versioning. Refer to [Choose your node building approach](https://docs.n8n.io/connect/create-nodes/plan-your-node/choose-a-node-building-style) for the full list and for a side-by-side comparison of the two styles.
 
 ## Write in TypeScript <a id="write-in-typescript"></a>
 

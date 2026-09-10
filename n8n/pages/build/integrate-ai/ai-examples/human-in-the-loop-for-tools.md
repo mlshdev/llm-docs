@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/integrate-ai/ai-examples/human-in-the-loop-for-tools.md](https://github.com/n8n-io/n8n-docs/blob/898e1a72cb3fff26178a7d0a494043aaa5101a30/docs/build/integrate-ai/ai-examples/human-in-the-loop-for-tools.md)
+> Commit-pinned source for n8n main: [docs/build/integrate-ai/ai-examples/human-in-the-loop-for-tools.md](https://github.com/n8n-io/n8n-docs/blob/5aec983c3c35cfa0cca8d922681a4ade5c93da01/docs/build/integrate-ai/ai-examples/human-in-the-loop-for-tools.md)
 
 # Human-in-the-loop for AI tool calls <a id="human-in-the-loop-for-ai-tool-calls"></a>
 
