@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/builtin/app-nodes/n8n-nodes-base.venafitlsprotectcloud.md](https://github.com/n8n-io/n8n-docs/blob/4d6c9be76dc4442b9c5ae25da13c6a3f4b3b8578/docs/integrations/builtin/app-nodes/n8n-nodes-base.venafitlsprotectcloud.md)
+> Commit-pinned source for n8n main: [docs/integrations/builtin/app-nodes/n8n-nodes-base.venafitlsprotectcloud.md](https://github.com/n8n-io/n8n-docs/blob/675abfb6fe01f95b0e9e726b18b1bef735b792e9/docs/integrations/builtin/app-nodes/n8n-nodes-base.venafitlsprotectcloud.md)
 
 # Venafi TLS Protect Cloud node <a id="venafi-tls-protect-cloud-node"></a>
 

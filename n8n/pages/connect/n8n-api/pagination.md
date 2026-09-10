@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/connect/n8n-api/pagination.md](https://github.com/n8n-io/n8n-docs/blob/4d6c9be76dc4442b9c5ae25da13c6a3f4b3b8578/docs/connect/n8n-api/pagination.md)
+> Commit-pinned source for n8n main: [docs/connect/n8n-api/pagination.md](https://github.com/n8n-io/n8n-docs/blob/675abfb6fe01f95b0e9e726b18b1bef735b792e9/docs/connect/n8n-api/pagination.md)
 
 # API pagination <a id="api-pagination"></a>
 
