@@ -83,8 +83,8 @@
     "ffmpeg": {
       "tag": "master",
       "branch": "master",
-      "sourceCommit": "22b96de8034f5441f0e407184269c60310f0142a",
-      "sourceCommittedAt": "2026-09-10T10:57:13Z"
+      "sourceCommit": "efb0a7e5e78ab261ad8ac5af0ff867fe9ce8c99a",
+      "sourceCommittedAt": "2026-08-28T16:34:20Z"
     },
     "yt-dlp": {
       "tag": "2026.08.19",
