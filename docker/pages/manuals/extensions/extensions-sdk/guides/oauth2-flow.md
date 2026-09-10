@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/extensions/extensions-sdk/guides/oauth2-flow.md](https://github.com/docker/docs/blob/920ee0bb1e638c6a39d7c2a1075fa2b1d8f451a7/content/manuals/extensions/extensions-sdk/guides/oauth2-flow.md)
+> Commit-pinned source for Docker main: [content/manuals/extensions/extensions-sdk/guides/oauth2-flow.md](https://github.com/docker/docs/blob/2f7b1064bd44cf6c3eddead9e945823e4f565a7b/content/manuals/extensions/extensions-sdk/guides/oauth2-flow.md)
 
 # Authentication
 
@@ -16,7 +16,7 @@ The Authorization Code grant type is used by confidential and public clients to 
 
 After the user returns to the client via the redirect URL, the application gets the authorization code from the URL and uses it to request an access token.
 
-![Flow for OAuth 2.0](https://raw.githubusercontent.com/docker/docs/920ee0bb1e638c6a39d7c2a1075fa2b1d8f451a7/content/manuals/extensions/extensions-sdk/guides/images/oauth.png)
+![Flow for OAuth 2.0](https://raw.githubusercontent.com/docker/docs/2f7b1064bd44cf6c3eddead9e945823e4f565a7b/content/manuals/extensions/extensions-sdk/guides/images/oauth.png)
 
 The image above shows that:
 

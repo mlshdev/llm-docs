@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/accounts/company/_index.md](https://github.com/docker/docs/blob/920ee0bb1e638c6a39d7c2a1075fa2b1d8f451a7/content/manuals/accounts/company/_index.md)
+> Commit-pinned source for Docker main: [content/manuals/accounts/company/_index.md](https://github.com/docker/docs/blob/2f7b1064bd44cf6c3eddead9e945823e4f565a7b/content/manuals/accounts/company/_index.md)
 
 # Company overview
 
@@ -18,7 +18,7 @@ A company sits at the top of the hierarchy and groups multiple Docker
 organizations for centralized configuration. Companies are only available
 for Docker Business subscribers.
 
-![Diagram showing Docker’s administration hierarchy with Company at the top, followed by Organizations, Teams, and Members](https://raw.githubusercontent.com/docker/docs/920ee0bb1e638c6a39d7c2a1075fa2b1d8f451a7/content/manuals/accounts/organization/images/docker-admin-structure.webp)
+![Diagram showing Docker’s administration hierarchy with Company at the top, followed by Organizations, Teams, and Members](https://raw.githubusercontent.com/docker/docs/2f7b1064bd44cf6c3eddead9e945823e4f565a7b/content/manuals/accounts/organization/images/docker-admin-structure.webp)
 
 An organization sits below the company. You group teams and members there
 and assign access to repositories. Every Docker Team and Business

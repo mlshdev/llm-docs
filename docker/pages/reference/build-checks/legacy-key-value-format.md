@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/moby/buildkit/frontend/dockerfile/docs/rules/legacy-key-value-format.md](https://github.com/docker/docs/blob/920ee0bb1e638c6a39d7c2a1075fa2b1d8f451a7/_vendor/github.com/moby/buildkit/frontend/dockerfile/docs/rules/legacy-key-value-format.md)
+> Commit-pinned source for Docker main: [_vendor/github.com/moby/buildkit/frontend/dockerfile/docs/rules/legacy-key-value-format.md](https://github.com/docker/docs/blob/2f7b1064bd44cf6c3eddead9e945823e4f565a7b/_vendor/github.com/moby/buildkit/frontend/dockerfile/docs/rules/legacy-key-value-format.md)
 
 # LegacyKeyValueFormat
 
