@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/docker-hub/repos/manage/hub-images/manage.md](https://github.com/docker/docs/blob/14df09affa43a67a6a8f7927a3578a4e4ff1bc28/content/manuals/docker-hub/repos/manage/hub-images/manage.md)
+> Commit-pinned source for Docker main: [content/manuals/docker-hub/repos/manage/hub-images/manage.md](https://github.com/docker/docs/blob/5e8a1f493e574ad6a8b44d838e8df07f2befa31e/content/manuals/docker-hub/repos/manage/hub-images/manage.md)
 
 # Image Management
 
@@ -10,7 +10,7 @@ Images and image indexes are the foundation of container images within a
 repository. The following diagram shows the relationship between images and
 image indexes.
 
-![a pretty wide image](https://raw.githubusercontent.com/docker/docs/14df09affa43a67a6a8f7927a3578a4e4ff1bc28/content/manuals/docker-hub/repos/manage/hub-images/images/image-index.svg)
+![a pretty wide image](https://raw.githubusercontent.com/docker/docs/5e8a1f493e574ad6a8b44d838e8df07f2befa31e/content/manuals/docker-hub/repos/manage/hub-images/images/image-index.svg)
 
 This structure enables multi-architecture support through a single reference. It
 is important to note that images are not always referenced by an image index.

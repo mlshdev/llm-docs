@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/gordon/how-to/permissions.md](https://github.com/docker/docs/blob/14df09affa43a67a6a8f7927a3578a4e4ff1bc28/content/manuals/ai/gordon/how-to/permissions.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/gordon/how-to/permissions.md](https://github.com/docker/docs/blob/5e8a1f493e574ad6a8b44d838e8df07f2befa31e/content/manuals/ai/gordon/how-to/permissions.md)
 
 # Gordon's permission model
 
@@ -31,7 +31,7 @@ To change the default permission settings for Gordon:
 2. Select **Gordon** in the sidebar.
 3. Select the settings icon at the bottom of text input.
 
-![Session settings icon](https://raw.githubusercontent.com/docker/docs/14df09affa43a67a6a8f7927a3578a4e4ff1bc28/content/manuals/ai/gordon/images/gordon_permission_settings.avif)
+![Session settings icon](https://raw.githubusercontent.com/docker/docs/5e8a1f493e574ad6a8b44d838e8df07f2befa31e/content/manuals/ai/gordon/images/gordon_permission_settings.avif)
 
 In the **Basic** tab you can configure whether Gordon should ask for permission
 before using a tool.

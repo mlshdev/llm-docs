@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/docker-hub/image-library/search.md](https://github.com/docker/docs/blob/14df09affa43a67a6a8f7927a3578a4e4ff1bc28/content/manuals/docker-hub/image-library/search.md)
+> Commit-pinned source for Docker main: [content/manuals/docker-hub/image-library/search.md](https://github.com/docker/docs/blob/5e8a1f493e574ad6a8b44d838e8df07f2befa31e/content/manuals/docker-hub/image-library/search.md)
 
 # Docker Hub search
 
@@ -21,6 +21,7 @@ specific needs of developers and organizations. These products include:
 
 - Images
 - Extensions
+- Sandbox kits
 - Helm charts
 - Compose files
 - AI models
@@ -66,6 +67,20 @@ Desktop's interface.
 
 To learn more about extensions, see [Docker
 Extensions](https://docs.docker.com/extensions/).
+
+#### Sandbox kits
+
+Docker Hub hosts kits for [Docker Sandboxes](https://docs.docker.com/ai/sandboxes/),
+which run AI coding agents in isolated microVM sandboxes. A kit packages what
+an agent needs to run in a sandbox, such as its image, tools, credentials,
+network rules, and startup commands. Sandbox kits come in two kinds:
+
+- Sandbox: Defines a full agent from scratch, including its image and
+  entrypoint.
+- Mixin: Layers tools, credentials, or configuration onto an existing agent.
+
+To learn more about building and running kits, see
+[Kits](https://docs.docker.com/ai/sandboxes/customize/kits/).
 
 #### Helm charts
 
@@ -271,3 +286,16 @@ extension has been reviewed by Docker for quality and reliability.
 >
 > The **Reviewed by Docker** filter is only available for extensions. To make
 > the filter available, you must select only the **Extensions** filter in **Products**.
+
+### Sandbox Kit type
+
+The **Sandbox Kit type** filter lets you narrow sandbox kit results by kind.
+
+- **Sandbox**: Kits that define a full agent from scratch.
+- **Mixin**: Kits that layer onto an existing agent's sandbox.
+
+> \[!NOTE]
+>
+> The **Sandbox Kit type** filter is only available for sandbox kits. To make
+> the filter available, you must select only the **Sandbox kits** filter in
+> **Products**.

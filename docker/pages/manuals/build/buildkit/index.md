@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/build/buildkit/_index.md](https://github.com/docker/docs/blob/14df09affa43a67a6a8f7927a3578a4e4ff1bc28/content/manuals/build/buildkit/_index.md)
+> Commit-pinned source for Docker main: [content/manuals/build/buildkit/_index.md](https://github.com/docker/docs/blob/5e8a1f493e574ad6a8b44d838e8df07f2befa31e/content/manuals/build/buildkit/_index.md)
 
 # BuildKit
 
@@ -36,7 +36,7 @@ dependency graph that can be used to put together complex build
 definitions. It also supports features not exposed in Dockerfiles, like direct
 data mounting and nested invocation.
 
-![](https://raw.githubusercontent.com/docker/docs/14df09affa43a67a6a8f7927a3578a4e4ff1bc28/content/manuals/build/images/buildkit-dag.svg)
+![](https://raw.githubusercontent.com/docker/docs/5e8a1f493e574ad6a8b44d838e8df07f2befa31e/content/manuals/build/images/buildkit-dag.svg)
 
 Everything about execution and caching of your builds is defined in LLB. The
 caching model is entirely rewritten compared to the legacy builder. Rather than

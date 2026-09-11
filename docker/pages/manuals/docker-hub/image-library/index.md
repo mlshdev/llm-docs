@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/docker-hub/image-library/_index.md](https://github.com/docker/docs/blob/14df09affa43a67a6a8f7927a3578a4e4ff1bc28/content/manuals/docker-hub/image-library/_index.md)
+> Commit-pinned source for Docker main: [content/manuals/docker-hub/image-library/_index.md](https://github.com/docker/docs/blob/5e8a1f493e574ad6a8b44d838e8df07f2befa31e/content/manuals/docker-hub/image-library/_index.md)
 
 # Content library
 
@@ -14,6 +14,7 @@ In this section, learn about:
   Docker Official Images, Verified Publisher content, and Docker-Sponsored Open
   Source Software images, all vetted for security and reliability to streamline
   your workflows.
-- [Catalogs](https://docs.docker.com/docker-hub/image-library/catalogs/): Explore specialized collections like the generative AI catalogs.
+- [Generative AI](https://docs.docker.com/docker-hub/image-library/catalogs/): Explore Docker Hub's generative AI catalogs
+  and sandbox kits.
 - [Mirroring](https://docs.docker.com/docker-hub/image-library/mirror/): Learn how to create a mirror of Docker Hub's
   container image library as a pull-through cache.

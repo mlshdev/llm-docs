@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/accounts/organization/_index.md](https://github.com/docker/docs/blob/14df09affa43a67a6a8f7927a3578a4e4ff1bc28/content/manuals/accounts/organization/_index.md)
+> Commit-pinned source for Docker main: [content/manuals/accounts/organization/_index.md](https://github.com/docker/docs/blob/5e8a1f493e574ad6a8b44d838e8df07f2befa31e/content/manuals/accounts/organization/_index.md)
 
 # Organization accounts
 
@@ -28,7 +28,7 @@ For how individual, organization, and company accounts compare, see
 The following diagram shows how organizations relate to teams and members.
 
 ![Diagram showing how teams and members relate within a Docker
-organization](https://raw.githubusercontent.com/docker/docs/14df09affa43a67a6a8f7927a3578a4e4ff1bc28/content/manuals/accounts/organization/images/org-structure.webp)
+organization](https://raw.githubusercontent.com/docker/docs/5e8a1f493e574ad6a8b44d838e8df07f2befa31e/content/manuals/accounts/organization/images/org-structure.webp)
 
 An organization includes owners, members, and optional teams. Organization
 owners have full administrator access to manage members, roles, and teams.

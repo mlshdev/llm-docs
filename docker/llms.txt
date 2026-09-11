@@ -1,6 +1,6 @@
 # Docker main
 
-> Documentation generated from the latest `main` branch commit of [docker/docs](https://github.com/docker/docs) and pinned to immutable source commit `14df09affa43a67a6a8f7927a3578a4e4ff1bc28`.
+> Documentation generated from the latest `main` branch commit of [docker/docs](https://github.com/docker/docs) and pinned to immutable source commit `5e8a1f493e574ad6a8b44d838e8df07f2befa31e`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Docker main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -663,7 +663,7 @@
 
 ## Docker Hub
 
-- [Docker Hub catalogs](pages/manuals/docker-hub/image-library/catalogs.md): Source `content/manuals/docker-hub/image-library/catalogs.md`.
+- [Generative AI content](pages/manuals/docker-hub/image-library/catalogs.md): Source `content/manuals/docker-hub/image-library/catalogs.md`.
 - [Content library](pages/manuals/docker-hub/image-library/index.md): Source `content/manuals/docker-hub/image-library/_index.md`.
 - [Mirror the Docker Hub library](pages/manuals/docker-hub/image-library/mirror.md): Source `content/manuals/docker-hub/image-library/mirror.md`.
 - [Docker Hub search](pages/manuals/docker-hub/image-library/search.md): Source `content/manuals/docker-hub/image-library/search.md`.

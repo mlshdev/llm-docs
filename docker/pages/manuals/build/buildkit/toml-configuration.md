@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/moby/buildkit/docs/buildkitd.toml.md](https://github.com/docker/docs/blob/14df09affa43a67a6a8f7927a3578a4e4ff1bc28/_vendor/github.com/moby/buildkit/docs/buildkitd.toml.md)
+> Commit-pinned source for Docker main: [_vendor/github.com/moby/buildkit/docs/buildkitd.toml.md](https://github.com/docker/docs/blob/5e8a1f493e574ad6a8b44d838e8df07f2befa31e/_vendor/github.com/moby/buildkit/docs/buildkitd.toml.md)
 
 The TOML file used to configure the buildkitd daemon settings has a short
 list of global settings followed by a series of sections for specific areas

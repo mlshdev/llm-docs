@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/desktop/setup/install/linux/archlinux.md](https://github.com/docker/docs/blob/14df09affa43a67a6a8f7927a3578a4e4ff1bc28/content/manuals/desktop/setup/install/linux/archlinux.md)
+> Commit-pinned source for Docker main: [content/manuals/desktop/setup/install/linux/archlinux.md](https://github.com/docker/docs/blob/5e8a1f493e574ad6a8b44d838e8df07f2befa31e/content/manuals/desktop/setup/install/linux/archlinux.md)
 
 # Install Docker Desktop on Arch-based distributions
 
