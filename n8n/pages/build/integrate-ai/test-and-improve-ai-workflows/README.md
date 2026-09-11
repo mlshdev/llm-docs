@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/integrate-ai/test-and-improve-ai-workflows/README.md](https://github.com/n8n-io/n8n-docs/blob/03028bf08eed0089ba60c3ae97520bdc9224d8ea/docs/build/integrate-ai/test-and-improve-ai-workflows/README.md)
+> Commit-pinned source for n8n main: [docs/build/integrate-ai/test-and-improve-ai-workflows/README.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/build/integrate-ai/test-and-improve-ai-workflows/README.md)
 
 # Test and improve AI workflows <a id="test-and-improve-ai-workflows"></a>
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/administer/use-source-control-and-environments/push-and-pull-changes.md](https://github.com/n8n-io/n8n-docs/blob/03028bf08eed0089ba60c3ae97520bdc9224d8ea/docs/administer/use-source-control-and-environments/push-and-pull-changes.md)
+> Commit-pinned source for n8n main: [docs/administer/use-source-control-and-environments/push-and-pull-changes.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/administer/use-source-control-and-environments/push-and-pull-changes.md)
 
 # Push and pull <a id="push-and-pull"></a>
 
@@ -18,16 +18,16 @@ This document assumes some familiarity with Git concepts and terminology. Refer 
 >
 > You must be an instance owner or instance admin to pull changes from git.
 
-To pull work from Git, select **Pull** ![Pull icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/03028bf08eed0089ba60c3ae97520bdc9224d8ea/docs/administer/.gitbook/assets/pull-icon.png) in the main menu.
+To pull work from Git, select **Pull** ![Pull icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/administer/.gitbook/assets/pull-icon.png) in the main menu.
 
 <details>
 
 <summary>View screenshot</summary>
 
-![](https://raw.githubusercontent.com/n8n-io/n8n-docs/03028bf08eed0089ba60c3ae97520bdc9224d8ea/docs/reusable-content/.gitbook/assets/pull-push-menu-closed.png)
+![](https://raw.githubusercontent.com/n8n-io/n8n-docs/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/reusable-content/.gitbook/assets/pull-push-menu-closed.png)
 *Pull and push buttons when menu is closed*
 
-![](https://raw.githubusercontent.com/n8n-io/n8n-docs/03028bf08eed0089ba60c3ae97520bdc9224d8ea/docs/reusable-content/.gitbook/assets/pull-push-menu-open.png)
+![](https://raw.githubusercontent.com/n8n-io/n8n-docs/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/reusable-content/.gitbook/assets/pull-push-menu-open.png)
 *Pull and push buttons when menu is open*
 
 </details>
@@ -80,7 +80,7 @@ If you pull changes to a published workflow, n8n unpublishes the workflow while 
 
 To push work to Git:
 
-1. Select **Push** ![Push icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/03028bf08eed0089ba60c3ae97520bdc9224d8ea/docs/reusable-content/.gitbook/assets/push-icon.png) in the main menu.
+1. Select **Push** ![Push icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/reusable-content/.gitbook/assets/push-icon.png) in the main menu.
 2. In the **Commit and push changes** modal, select which workflows and data tables you want to push. You can filter by status (new, modified, deleted) and search for items. n8n automatically pushes tags, and variable and credential stubs.
 
    n8n pushes the current saved version, not the published version, of the workflow. You need to then separately publish versions on the remote server.

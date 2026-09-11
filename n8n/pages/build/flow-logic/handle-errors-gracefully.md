@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/flow-logic/handle-errors-gracefully.md](https://github.com/n8n-io/n8n-docs/blob/03028bf08eed0089ba60c3ae97520bdc9224d8ea/docs/build/flow-logic/handle-errors-gracefully.md)
+> Commit-pinned source for n8n main: [docs/build/flow-logic/handle-errors-gracefully.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/build/flow-logic/handle-errors-gracefully.md)
 
 # Error handling <a id="error-handling"></a>
 
@@ -22,7 +22,7 @@ You can use the same error workflow for multiple workflows.
 2. Give the workflow a name, for example `Error Handler`.
 3. Select **Save**.
 4. In the workflow where you want to use this error workflow:
-   1. Select **Options** ![Options menu icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/03028bf08eed0089ba60c3ae97520bdc9224d8ea/docs/reusable-content/.gitbook/assets/three-dot-options-menu.png) > **Settings**.
+   1. Select **Options** ![Options menu icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/reusable-content/.gitbook/assets/three-dot-options-menu.png) > **Settings**.
    2. In **Error workflow**, select the workflow you just created. For example, if you used the name Error Handler, select **Error handler**.
    3. Select **Save**.
       Now, when this workflow errors, the related error workflow runs.

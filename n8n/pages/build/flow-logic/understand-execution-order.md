@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/flow-logic/understand-execution-order.md](https://github.com/n8n-io/n8n-docs/blob/03028bf08eed0089ba60c3ae97520bdc9224d8ea/docs/build/flow-logic/understand-execution-order.md)
+> Commit-pinned source for n8n main: [docs/build/flow-logic/understand-execution-order.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/build/flow-logic/understand-execution-order.md)
 
 # Execution order in multi-branch workflows <a id="execution-order-in-multi-branch-workflows"></a>
 

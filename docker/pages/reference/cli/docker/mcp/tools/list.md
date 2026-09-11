@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/mcp/docker_mcp_tools_list.yaml](https://github.com/docker/docs/blob/5e8a1f493e574ad6a8b44d838e8df07f2befa31e/data/cli/mcp/docker_mcp_tools_list.yaml)
+> Commit-pinned source for Docker main: [data/cli/mcp/docker_mcp_tools_list.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/mcp/docker_mcp_tools_list.yaml)
 
 # docker mcp tools list
 

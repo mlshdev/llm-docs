@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/administer/manage-credentials/end-user-credentials.md](https://github.com/n8n-io/n8n-docs/blob/03028bf08eed0089ba60c3ae97520bdc9224d8ea/docs/administer/manage-credentials/end-user-credentials.md)
+> Commit-pinned source for n8n main: [docs/administer/manage-credentials/end-user-credentials.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/administer/manage-credentials/end-user-credentials.md)
 
 # End-user credentials
 
@@ -59,10 +59,10 @@ You can mix fixed and end-user credentials across nodes in one workflow. For exa
 3. Configure the connection. For OAuth credentials, include the **Client ID**, **Client Secret**, and **OAuth Redirect URL** to register with the service.
 4. Select **Save**.
 
-Users with project access can now connect their own account to this credential. When a user runs a workflow that uses the credential, n8n prompts them to connect if they haven't already. They can also connect from the n8n UI, by opening a node on the canvas or from the project's **Credentials** list.
+Users can now connect their own account to this credential. When a user runs a workflow that uses the credential, n8n prompts them to connect if they haven't already. Users with project access can also connect ahead of time from the n8n UI, by opening a node on the canvas or from the project's **Credentials** list.
 
 > **Info**
-> Some trigger nodes, such as the **MCP Server Trigger**, let you require that the triggering user has permission to execute the trigger. When you enable this, only users with a project role that allows workflow execution can trigger it. A user without that role can't connect their account.
+> Some trigger nodes, such as the **MCP Server Trigger**, **Chat Trigger**, and **Form Trigger**, let you require that the triggering user has permission to execute the trigger. When you enable this, only users with a project role that allows workflow execution can trigger it. A user without that role can't connect their account.
 
 ## Connect your account
 

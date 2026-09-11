@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/administer/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-instance-roles.md](https://github.com/n8n-io/n8n-docs/blob/03028bf08eed0089ba60c3ae97520bdc9224d8ea/docs/administer/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-instance-roles.md)
+> Commit-pinned source for n8n main: [docs/administer/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-instance-roles.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/administer/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-instance-roles.md)
 
 # Custom instance roles <a id="custom-instance-roles"></a>
 

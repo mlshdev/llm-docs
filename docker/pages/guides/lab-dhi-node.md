@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/lab-dhi-node.md](https://github.com/docker/docs/blob/5e8a1f493e574ad6a8b44d838e8df07f2befa31e/content/guides/lab-dhi-node.md)
+> Commit-pinned source for Docker main: [content/guides/lab-dhi-node.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/guides/lab-dhi-node.md)
 
 # Lab: Migrating a Node App to Docker Hardened Images
 

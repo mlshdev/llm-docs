@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/flow-logic/split-with-conditionals.md](https://github.com/n8n-io/n8n-docs/blob/03028bf08eed0089ba60c3ae97520bdc9224d8ea/docs/build/flow-logic/split-with-conditionals.md)
+> Commit-pinned source for n8n main: [docs/build/flow-logic/split-with-conditionals.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/build/flow-logic/split-with-conditionals.md)
 
 # Splitting workflows with conditional nodes <a id="splitting-workflows-with-conditional-nodes"></a>
 
@@ -6,7 +6,7 @@ Splitting uses the [IF](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-
 
 Compare these workflows:
 
-![Diagram comparing a linear bug-report workflow with one that branches by urgency and support plan](https://raw.githubusercontent.com/n8n-io/n8n-docs/03028bf08eed0089ba60c3ae97520bdc9224d8ea/docs/build/.gitbook/assets/single-multi-branch-workflow.png)
+![Diagram comparing a linear bug-report workflow with one that branches by urgency and support plan](https://raw.githubusercontent.com/n8n-io/n8n-docs/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/build/.gitbook/assets/single-multi-branch-workflow.png)
 
 The first workflow is linear: a user submits a bug and the workflow emails support. The second workflow starts the same way but splits depending on whether the user marked the issue urgent, then splits again by the user's support plan.
 
