@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/host-n8n/install-options/use-a-cloud-provider/use-docker-compose.md](https://github.com/n8n-io/n8n-docs/blob/24049fd7db31bdc9fb1c7192a246e65d58739d9b/docs/deploy/host-n8n/install-options/use-a-cloud-provider/use-docker-compose.md)
+> Commit-pinned source for n8n main: [docs/deploy/host-n8n/install-options/use-a-cloud-provider/use-docker-compose.md](https://github.com/n8n-io/n8n-docs/blob/656d085e69007e11a1172aa117dcd6b013c5b553/docs/deploy/host-n8n/install-options/use-a-cloud-provider/use-docker-compose.md)
 
 # Docker-Compose <a id="docker-compose"></a>
 
@@ -25,8 +25,8 @@ You can find Docker Compose configurations for various architectures in the [n8n
 >
 > n8n releases a new minor version most weeks. The `stable` version is for production use. `beta` is the most recent release. The `beta` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
 >
-> Current `stable`: 2.38.6
-> Current `beta`: 2.39.2
+> Current `stable`: 2.38.7
+> Current `beta`: 2.39.4
 
 ## 1. Install Docker and Docker Compose <a id="1-install-docker-and-docker-compose"></a>
 

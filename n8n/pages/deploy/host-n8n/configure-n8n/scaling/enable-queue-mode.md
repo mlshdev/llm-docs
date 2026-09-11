@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/host-n8n/configure-n8n/scaling/enable-queue-mode.md](https://github.com/n8n-io/n8n-docs/blob/24049fd7db31bdc9fb1c7192a246e65d58739d9b/docs/deploy/host-n8n/configure-n8n/scaling/enable-queue-mode.md)
+> Commit-pinned source for n8n main: [docs/deploy/host-n8n/configure-n8n/scaling/enable-queue-mode.md](https://github.com/n8n-io/n8n-docs/blob/656d085e69007e11a1172aa117dcd6b013c5b553/docs/deploy/host-n8n/configure-n8n/scaling/enable-queue-mode.md)
 
 # Queue mode <a id="queue-mode"></a>
 
@@ -28,7 +28,7 @@ This is the process flow:
    - Posts to Redis, saying that the execution has finished.
 6. Redis notifies the main instance.
 
-![Diagram showing the flow of data between the main n8n instance, Redis, the n8n workers, and the n8n database](https://raw.githubusercontent.com/n8n-io/n8n-docs/24049fd7db31bdc9fb1c7192a246e65d58739d9b/docs/deploy/.gitbook/assets/queue-mode-flow.png)
+![Diagram showing the flow of data between the main n8n instance, Redis, the n8n workers, and the n8n database](https://raw.githubusercontent.com/n8n-io/n8n-docs/656d085e69007e11a1172aa117dcd6b013c5b553/docs/deploy/.gitbook/assets/queue-mode-flow.png)
 
 ## Configuring workers <a id="configuring-workers"></a>
 

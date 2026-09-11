@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/administer/manage-users-and-access/verify-user-identity/use-oidc/set-up-oidc.md](https://github.com/n8n-io/n8n-docs/blob/24049fd7db31bdc9fb1c7192a246e65d58739d9b/docs/administer/manage-users-and-access/verify-user-identity/use-oidc/set-up-oidc.md)
+> Commit-pinned source for n8n main: [docs/administer/manage-users-and-access/verify-user-identity/use-oidc/set-up-oidc.md](https://github.com/n8n-io/n8n-docs/blob/656d085e69007e11a1172aa117dcd6b013c5b553/docs/administer/manage-users-and-access/verify-user-identity/use-oidc/set-up-oidc.md)
 
 # Set up OIDC <a id="set-up-oidc"></a>
 
@@ -202,7 +202,7 @@ The steps to setup OIDC in Okta are similar as with Auth0 described below.
 
 For Okta, you can download a visual step-by-step guide as PDF:
 
-[Visual step-by-step guide for setting up OIDC with Okta](https://raw.githubusercontent.com/n8n-io/n8n-docs/24049fd7db31bdc9fb1c7192a246e65d58739d9b/docs/administer/.gitbook/assets/n8n-oidc-with-okta.pdf)
+[Visual step-by-step guide for setting up OIDC with Okta](https://raw.githubusercontent.com/n8n-io/n8n-docs/656d085e69007e11a1172aa117dcd6b013c5b553/docs/administer/.gitbook/assets/n8n-oidc-with-okta.pdf)
 
 ### Auth0 <a id="auth0"></a>
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-openshift-local-crc.md](https://github.com/n8n-io/n8n-docs/blob/24049fd7db31bdc9fb1c7192a246e65d58739d9b/docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-openshift-local-crc.md)
+> Commit-pinned source for n8n main: [docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-openshift-local-crc.md](https://github.com/n8n-io/n8n-docs/blob/656d085e69007e11a1172aa117dcd6b013c5b553/docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-openshift-local-crc.md)
 
 # Hosting n8n on OpenShift Local (CRC) <a id="hosting-n8n-on-openshift-local-crc"></a>
 
