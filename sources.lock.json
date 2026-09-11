@@ -57,10 +57,10 @@
       "sourceCommit": "46a54c976fa3d404396050e8a5ee6c5b0320efc5"
     },
     "victoriametrics-datasource": {
-      "tag": "v0.26.0",
-      "releaseId": 386983143,
-      "releasePublishedAt": "2026-09-11T11:22:01Z",
-      "sourceCommit": "94608e41975acecbe90699fe32cc9f687b275563"
+      "tag": "v0.26.1",
+      "releaseId": 387057789,
+      "releasePublishedAt": "2026-09-11T13:25:52Z",
+      "sourceCommit": "58cb4614080bded813362124d4a808d0359a1ccb"
     },
     "victorialogs-datasource": {
       "tag": "v0.32.0",

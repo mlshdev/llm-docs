@@ -1,8 +1,12 @@
-> Release-pinned source for VictoriaMetrics datasource for Grafana v0.26.0: [CHANGELOG.md](https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/94608e41975acecbe90699fe32cc9f687b275563/CHANGELOG.md)
+> Release-pinned source for VictoriaMetrics datasource for Grafana v0.26.1: [CHANGELOG.md](https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/58cb4614080bded813362124d4a808d0359a1ccb/CHANGELOG.md)
 
 # Changelog
 
 ## tip
+
+- MAINTENANCE: fix the frontend build of the plugin.
+
+## v0.26.0
 
 - FEATURE: align `start` and `end` of range queries to the query step. See [#539](https://github.com/VictoriaMetrics/victoriametrics-datasource/issues/539).
   - **Note:** if a query returns 50 or more data points, VictoriaMetrics shifts `start` and `end` a bit further on its own side to make response caching work, so the returned timestamps may not match the selected time range exactly. Add `nocache=1` to the datasource custom query parameters to turn this off.
