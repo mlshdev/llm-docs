@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/github-sonarqube-sandbox.md](https://github.com/docker/docs/blob/2f7b1064bd44cf6c3eddead9e945823e4f565a7b/content/guides/github-sonarqube-sandbox.md)
+> Commit-pinned source for Docker main: [content/guides/github-sonarqube-sandbox.md](https://github.com/docker/docs/blob/2054b419afd87a3232f2e77366a561e172e27c67/content/guides/github-sonarqube-sandbox.md)
 
 This guide demonstrates how to build an AI-powered code quality workflow using
 [E2B sandboxes](https://e2b.dev/docs) with Docker’s MCP catalog. You’ll create

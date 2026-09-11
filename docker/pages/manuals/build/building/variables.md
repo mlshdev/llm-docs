@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/build/building/variables.md](https://github.com/docker/docs/blob/2f7b1064bd44cf6c3eddead9e945823e4f565a7b/content/manuals/build/building/variables.md)
+> Commit-pinned source for Docker main: [content/manuals/build/building/variables.md](https://github.com/docker/docs/blob/2054b419afd87a3232f2e77366a561e172e27c67/content/manuals/build/building/variables.md)
 
 In Docker Build, build arguments (`ARG`) and environment variables (`ENV`)
 both serve as a means to pass information into the build process.

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/guides/compaction/index.md](https://github.com/docker/docs/blob/2f7b1064bd44cf6c3eddead9e945823e4f565a7b/_vendor/github.com/docker/docker-agent/docs/guides/compaction/index.md)
+> Commit-pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/guides/compaction/index.md](https://github.com/docker/docs/blob/2054b419afd87a3232f2e77366a561e172e27c67/_vendor/github.com/docker/docker-agent/docs/guides/compaction/index.md)
 
 *How to keep long-running sessions from filling the model's context window.*
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/engine/storage/volumes.md](https://github.com/docker/docs/blob/2f7b1064bd44cf6c3eddead9e945823e4f565a7b/content/manuals/engine/storage/volumes.md)
+> Commit-pinned source for Docker main: [content/manuals/engine/storage/volumes.md](https://github.com/docker/docs/blob/2054b419afd87a3232f2e77366a561e172e27c67/content/manuals/engine/storage/volumes.md)
 
 # Volumes
 
@@ -480,7 +480,7 @@ the `logs` volume. The containers can't access the other container's logs.
 When building fault-tolerant applications, you may need to configure multiple
 replicas of the same service to have access to the same files.
 
-![shared storage](https://raw.githubusercontent.com/docker/docs/2f7b1064bd44cf6c3eddead9e945823e4f565a7b/content/manuals/engine/storage/images/volumes-shared-storage.webp)
+![shared storage](https://raw.githubusercontent.com/docker/docs/2054b419afd87a3232f2e77366a561e172e27c67/content/manuals/engine/storage/images/volumes-shared-storage.webp)
 
 There are several ways to achieve this when developing your applications.
 One is to add logic to your application to store files on a cloud object

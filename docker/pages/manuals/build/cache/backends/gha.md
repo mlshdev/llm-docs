@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/build/cache/backends/gha.md](https://github.com/docker/docs/blob/2f7b1064bd44cf6c3eddead9e945823e4f565a7b/content/manuals/build/cache/backends/gha.md)
+> Commit-pinned source for Docker main: [content/manuals/build/cache/backends/gha.md](https://github.com/docker/docs/blob/2054b419afd87a3232f2e77366a561e172e27c67/content/manuals/build/cache/backends/gha.md)
 
 # GitHub Actions cache
 
@@ -80,6 +80,11 @@ $ docker buildx build --push -t <registry>/<image2> \
 GitHub's [cache access restrictions](https://docs.github.com/en/actions/advanced-guides/caching-dependencies-to-speed-up-workflows#restrictions-for-accessing-a-cache),
 still apply. Only the cache for the current branch, the base branch and the
 default branch is accessible by a workflow.
+
+Cache writes also depend on the workflow's cache access. Some events receive
+read-only access in the default-branch context. See
+[Cache write restrictions](https://docs.docker.com/build/ci/github-actions/cache/#cache-write-restrictions)
+for affected triggers and how to configure cache imports and exports.
 
 ## Version
 

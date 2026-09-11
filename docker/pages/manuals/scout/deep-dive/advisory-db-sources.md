@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/scout/deep-dive/advisory-db-sources.md](https://github.com/docker/docs/blob/2f7b1064bd44cf6c3eddead9e945823e4f565a7b/content/manuals/scout/deep-dive/advisory-db-sources.md)
+> Commit-pinned source for Docker main: [content/manuals/scout/deep-dive/advisory-db-sources.md](https://github.com/docker/docs/blob/2054b419afd87a3232f2e77366a561e172e27c67/content/manuals/scout/deep-dive/advisory-db-sources.md)
 
 # Advisory database sources and matching service
 

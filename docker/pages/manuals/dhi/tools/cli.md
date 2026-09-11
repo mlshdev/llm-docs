@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/dhi/tools/cli.md](https://github.com/docker/docs/blob/2f7b1064bd44cf6c3eddead9e945823e4f565a7b/content/manuals/dhi/tools/cli.md)
+> Commit-pinned source for Docker main: [content/manuals/dhi/tools/cli.md](https://github.com/docker/docs/blob/2054b419afd87a3232f2e77366a561e172e27c67/content/manuals/dhi/tools/cli.md)
 
 The `docker dhi` command-line interface (CLI) is a tool for managing Docker Hardened Images:
 
