@@ -1,4 +1,4 @@
-> Commit-pinned source for FFmpeg master: [doc/ffmpeg-formats.texi](https://github.com/FFmpeg/FFmpeg/blob/5815e6343c99a2e728f6481e9c59f85c3f6f7668/doc/ffmpeg-formats.texi)
+> Commit-pinned source for FFmpeg master: [doc/ffmpeg-formats.texi](https://github.com/FFmpeg/FFmpeg/blob/f7fbb1260e1df3389143cfbbc603008f4230ee48/doc/ffmpeg-formats.texi)
 
 # Description
 
@@ -1867,6 +1867,24 @@ It comprises the following muxers.
   PlayStation Portable MP4/MPEG-4 Part 14 format variant. This is based
   on MPEG-4 Part 14 format with a few incompatible variants, used to
   play files on PlayStation devices.
+
+### Stereoscopic 3D
+
+When the output stream has stereoscopic 3D side data (see the
+`-stereo3d` option), these muxers write:
+
+-
+
+MP4: Google spatial-media `st3d` and Apple `vexu` can be
+written for supported metadata with `-strict unofficial`.
+Stricter compliance levels skip these boxes. Warnings are logged
+when stereoscopic or spherical side data is present, naming
+`st3d` or `sv3d`, respectively; there is no corresponding
+compliance warning for `vexu`. Monoscopic layouts do not
+produce an `eyes` box.
+----------------------
+
+MOV: Apple `vexu` eyes only. `st3d` is not written.
 
 ### Fragmentation
 
@@ -4469,6 +4487,11 @@ French).
 
 - stereo\_mode
   Set stereo 3D video layout of two views in a single video track.
+  The `-stereo3d` option overrides existing stereoscopic side data
+  and `stereo_mode` metadata for the selected output stream.
+  Otherwise, stream-level `stereo_mode` metadata takes priority over
+  global metadata, and stereoscopic side data is used when neither tag is
+  present.
 
 The following values are recognized:
 

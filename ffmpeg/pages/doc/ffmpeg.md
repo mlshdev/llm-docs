@@ -1,4 +1,4 @@
-> Commit-pinned source for FFmpeg master: [doc/ffmpeg.texi](https://github.com/FFmpeg/FFmpeg/blob/5815e6343c99a2e728f6481e9c59f85c3f6f7668/doc/ffmpeg.texi)
+> Commit-pinned source for FFmpeg master: [doc/ffmpeg.texi](https://github.com/FFmpeg/FFmpeg/blob/f7fbb1260e1df3389143cfbbc603008f4230ee48/doc/ffmpeg.texi)
 
 # Synopsis
 
@@ -2102,6 +2102,45 @@ numerator and denominator of the aspect ratio. For example "4:3",
 If used together with `-vcodec copy`, it will affect the aspect ratio
 stored at container level, but not the aspect ratio stored in encoded
 frames, if it exists.
+
+- -stereo3d\[:*stream\_specifier*] *layout* (*output,per-stream*)
+  Set stereoscopic 3D layout metadata on the output stream. This does
+  *not* rearrange pixels; use `-vf stereo3d` for that.
+
+The metadata is stored as `AV_PKT_DATA_STEREO3D` side data on the
+output stream. Muxers that already consume that side data will write the
+corresponding container boxes or elements, including:
+
+-
+
+## MP4 Google spatial-media `st3d` (requires `-strict unofficial`)
+
+## QuickTime MOV Apple `vexu` eyes (no `st3d`)
+
+Matroska `StereoMode`; `-stereo3d` overrides the
+`stereo_mode` metadata tag, including a value inherited from the
+input
+
+*layout* is case-insensitive. The following values are accepted:
+
+- 2d
+- mono
+  Monoscopic video.
+- sbs
+- sbsl
+- side by side
+  Side-by-side, left eye on the left.
+- tb
+- tbl
+- top and bottom
+  Top-and-bottom, left eye on top.
+
+Inverted layouts such as `sbsr` are not supported. An empty stream
+specifier applies to video streams only and is ignored for audio and
+other types. An explicit specifier on a non-video stream (for example
+`-stereo3d:a`) is an error.
+
+Recommended form: `-stereo3d:v sbsl`.
 
 - -display\_rotation\[:*stream\_specifier*] *rotation* (*input,per-stream*)
   Set video rotation metadata.
