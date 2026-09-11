@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/builtin/app-nodes/n8n-nodes-langchain.googlegemini.md](https://github.com/n8n-io/n8n-docs/blob/5aec983c3c35cfa0cca8d922681a4ade5c93da01/docs/integrations/builtin/app-nodes/n8n-nodes-langchain.googlegemini.md)
+> Commit-pinned source for n8n main: [docs/integrations/builtin/app-nodes/n8n-nodes-langchain.googlegemini.md](https://github.com/n8n-io/n8n-docs/blob/24049fd7db31bdc9fb1c7192a246e65d58739d9b/docs/integrations/builtin/app-nodes/n8n-nodes-langchain.googlegemini.md)
 
 # Google Gemini node <a id="google-gemini-node"></a>
 

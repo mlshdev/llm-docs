@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/connect/n8n-cli.md](https://github.com/n8n-io/n8n-docs/blob/5aec983c3c35cfa0cca8d922681a4ade5c93da01/docs/connect/n8n-cli.md)
+> Commit-pinned source for n8n main: [docs/connect/n8n-cli.md](https://github.com/n8n-io/n8n-docs/blob/24049fd7db31bdc9fb1c7192a246e65d58739d9b/docs/connect/n8n-cli.md)
 
 # Getting started with n8n CLI <a id="getting-started-with-n8n-cli"></a>
 

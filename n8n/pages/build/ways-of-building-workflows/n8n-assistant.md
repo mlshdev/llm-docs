@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/ways-of-building-workflows/n8n-assistant.md](https://github.com/n8n-io/n8n-docs/blob/5aec983c3c35cfa0cca8d922681a4ade5c93da01/docs/build/ways-of-building-workflows/n8n-assistant.md)
+> Commit-pinned source for n8n main: [docs/build/ways-of-building-workflows/n8n-assistant.md](https://github.com/n8n-io/n8n-docs/blob/24049fd7db31bdc9fb1c7192a246e65d58739d9b/docs/build/ways-of-building-workflows/n8n-assistant.md)
 
 # Use n8n Assistant
 

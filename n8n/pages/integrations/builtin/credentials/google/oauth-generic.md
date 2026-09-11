@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/builtin/credentials/google/oauth-generic.md](https://github.com/n8n-io/n8n-docs/blob/5aec983c3c35cfa0cca8d922681a4ade5c93da01/docs/integrations/builtin/credentials/google/oauth-generic.md)
+> Commit-pinned source for n8n main: [docs/integrations/builtin/credentials/google/oauth-generic.md](https://github.com/n8n-io/n8n-docs/blob/24049fd7db31bdc9fb1c7192a246e65d58739d9b/docs/integrations/builtin/credentials/google/oauth-generic.md)
 
 # Google OAuth2 generic
 
@@ -43,7 +43,7 @@ First, create a Google Cloud Console project. If you already have a project, jum
 4. Select **Create**.
 5. Check the top navigation and make sure the project dropdown has your project selected. If not, select the project you just created.
 
-![](https://raw.githubusercontent.com/n8n-io/n8n-docs/5aec983c3c35cfa0cca8d922681a4ade5c93da01/docs/reusable-content/.gitbook/assets/google-cloud-project-dropdown.png)
+![](https://raw.githubusercontent.com/n8n-io/n8n-docs/24049fd7db31bdc9fb1c7192a246e65d58739d9b/docs/reusable-content/.gitbook/assets/google-cloud-project-dropdown.png)
 *Check the project dropdown in the Google Cloud top navigation*
 
 ### Enable APIs <a id="enable-apis"></a>
@@ -51,7 +51,7 @@ First, create a Google Cloud Console project. If you already have a project, jum
 With your project created, enable the APIs you'll need access to:
 
 1. Access your [Google Cloud Console - Library](https://console.cloud.google.com/apis/library). Make sure you're in the correct project.
-   ![](https://raw.githubusercontent.com/n8n-io/n8n-docs/5aec983c3c35cfa0cca8d922681a4ade5c93da01/docs/reusable-content/.gitbook/assets/google-cloud-project-dropdown.png)
+   ![](https://raw.githubusercontent.com/n8n-io/n8n-docs/24049fd7db31bdc9fb1c7192a246e65d58739d9b/docs/reusable-content/.gitbook/assets/google-cloud-project-dropdown.png)
    *Check the project dropdown in the Google Cloud top navigation*
 
 2. Go to **APIs & Services > Library**.

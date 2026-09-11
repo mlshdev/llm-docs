@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolvectorstore.md](https://github.com/n8n-io/n8n-docs/blob/5aec983c3c35cfa0cca8d922681a4ade5c93da01/docs/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolvectorstore.md)
+> Commit-pinned source for n8n main: [docs/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolvectorstore.md](https://github.com/n8n-io/n8n-docs/blob/24049fd7db31bdc9fb1c7192a246e65d58739d9b/docs/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolvectorstore.md)
 
 # Vector Store Question Answer Tool node <a id="vector-store-question-answer-tool-node"></a>
 
@@ -49,7 +49,7 @@ Spaces in the node name are converted to underscores in the tool description.
 > Invalid 'tools[0].function.name': string does not match pattern. Expected a string that matches the pattern '^[a-zA-Z0-9_-]+$'.
 > ```
 >
-> ![Error message shown when a tool name contains special characters](https://raw.githubusercontent.com/n8n-io/n8n-docs/5aec983c3c35cfa0cca8d922681a4ade5c93da01/docs/integrations/.gitbook/assets/name-characters-error.png)
+> ![Error message shown when a tool name contains special characters](https://raw.githubusercontent.com/n8n-io/n8n-docs/24049fd7db31bdc9fb1c7192a246e65d58739d9b/docs/integrations/.gitbook/assets/name-characters-error.png)
 >
 > Use only alphanumeric characters, spaces, dashes, and underscores in node names.
 

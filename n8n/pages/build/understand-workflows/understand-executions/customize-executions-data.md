@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/understand-workflows/understand-executions/customize-executions-data.md](https://github.com/n8n-io/n8n-docs/blob/5aec983c3c35cfa0cca8d922681a4ade5c93da01/docs/build/understand-workflows/understand-executions/customize-executions-data.md)
+> Commit-pinned source for n8n main: [docs/build/understand-workflows/understand-executions/customize-executions-data.md](https://github.com/n8n-io/n8n-docs/blob/24049fd7db31bdc9fb1c7192a246e65d58739d9b/docs/build/understand-workflows/understand-executions/customize-executions-data.md)
 
 # Custom executions data <a id="custom-executions-data"></a>
 

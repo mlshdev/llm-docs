@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/host-n8n/install-options/one-line-setup.md](https://github.com/n8n-io/n8n-docs/blob/5aec983c3c35cfa0cca8d922681a4ade5c93da01/docs/deploy/host-n8n/install-options/one-line-setup.md)
+> Commit-pinned source for n8n main: [docs/deploy/host-n8n/install-options/one-line-setup.md](https://github.com/n8n-io/n8n-docs/blob/24049fd7db31bdc9fb1c7192a246e65d58739d9b/docs/deploy/host-n8n/install-options/one-line-setup.md)
 
 # One-line setup <a id="one-line-setup"></a>
 
