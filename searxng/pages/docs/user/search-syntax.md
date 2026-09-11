@@ -1,4 +1,4 @@
-> Commit-pinned source for SearXNG master: [docs/user/search-syntax.rst](https://github.com/searxng/searxng/blob/931fd9787b1517d88af2876175d8c31b03e11671/docs/user/search-syntax.rst)
+> Commit-pinned source for SearXNG master: [docs/user/search-syntax.rst](https://github.com/searxng/searxng/blob/ffe96f8a6f46d61c8dd30b3327c370293d1a9a15/docs/user/search-syntax.rst)
 
 .. \_search-syntax:
 

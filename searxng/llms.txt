@@ -1,6 +1,6 @@
 # SearXNG master
 
-> Documentation generated from the latest `master` branch commit of [searxng/searxng](https://github.com/searxng/searxng) and pinned to immutable source commit `931fd9787b1517d88af2876175d8c31b03e11671`.
+> Documentation generated from the latest `master` branch commit of [searxng/searxng](https://github.com/searxng/searxng) and pinned to immutable source commit `ffe96f8a6f46d61c8dd30b3327c370293d1a9a15`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for SearXNG master.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
