@@ -5,8 +5,8 @@
   "repository": "searxng/searxng",
   "tag": "master",
   "branch": "master",
-  "sourceCommittedAt": "2026-09-11T14:24:58Z",
-  "sourceCommit": "6a27c210082188262d0f96000be6216ffdccd81b",
+  "sourceCommittedAt": "2026-09-11T14:57:14Z",
+  "sourceCommit": "61d660276f1288e7d512e8d8da46cb8442728454",
   "documentCount": 178,
   "notes": [
     "SearXNG tracks master because the repository publishes neither GitHub releases nor release tags.",

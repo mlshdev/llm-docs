@@ -1,4 +1,4 @@
-> Commit-pinned source for SearXNG master: [docs/src/index.rst](https://github.com/searxng/searxng/blob/6a27c210082188262d0f96000be6216ffdccd81b/docs/src/index.rst)
+> Commit-pinned source for SearXNG master: [docs/src/index.rst](https://github.com/searxng/searxng/blob/61d660276f1288e7d512e8d8da46cb8442728454/docs/src/index.rst)
 
 # Source-Code
 

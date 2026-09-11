@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/governance/concepts.md](https://github.com/docker/docs/blob/2054b419afd87a3232f2e77366a561e172e27c67/content/manuals/ai/sandboxes/governance/concepts.md)
+> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/governance/concepts.md](https://github.com/docker/docs/blob/14df09affa43a67a6a8f7927a3578a4e4ff1bc28/content/manuals/ai/sandboxes/governance/concepts.md)
 
 # Policy concepts
 
@@ -81,12 +81,12 @@ rules have no effect.
 
 **Hostname patterns**
 
-| Pattern               | Example           | Matches                                            |
-| --------------------- | ----------------- | -------------------------------------------------- |
-| Exact hostname        | `example.com`     | `example.com` only, not subdomains                 |
-| Single-level wildcard | `*.example.com`   | One subdomain level: `api.example.com`             |
-| Multi-level wildcard  | `**.example.com`  | Any depth: `api.example.com`, `v2.api.example.com` |
-| Hostname with port    | `example.com:443` | `example.com` on port 443 only                     |
+| Pattern               | Example           | Matches                                                      |
+| --------------------- | ----------------- | ------------------------------------------------------------ |
+| Exact hostname        | `example.com`     | `example.com` on any port, not subdomains                    |
+| Single-level wildcard | `*.example.com`   | One subdomain level, any port: `api.example.com`             |
+| Multi-level wildcard  | `**.example.com`  | Any depth, any port: `api.example.com`, `v2.api.example.com` |
+| Hostname with port    | `example.com:443` | `example.com` on port 443 only                               |
 
 `example.com` and `*.example.com` don't cover each other. Specify both if you
 need to match the root domain and its subdomains.

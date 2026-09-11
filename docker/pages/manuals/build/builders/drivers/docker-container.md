@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/build/builders/drivers/docker-container.md](https://github.com/docker/docs/blob/2054b419afd87a3232f2e77366a561e172e27c67/content/manuals/build/builders/drivers/docker-container.md)
+> Commit-pinned source for Docker main: [content/manuals/build/builders/drivers/docker-container.md](https://github.com/docker/docs/blob/14df09affa43a67a6a8f7927a3578a4e4ff1bc28/content/manuals/build/builders/drivers/docker-container.md)
 
 The Docker container driver allows creation of a managed and customizable
 BuildKit environment in a dedicated Docker container.

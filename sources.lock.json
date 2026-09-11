@@ -23,8 +23,8 @@
     "docker": {
       "tag": "main",
       "branch": "main",
-      "sourceCommit": "2054b419afd87a3232f2e77366a561e172e27c67",
-      "sourceCommittedAt": "2026-09-11T08:05:16Z"
+      "sourceCommit": "14df09affa43a67a6a8f7927a3578a4e4ff1bc28",
+      "sourceCommittedAt": "2026-09-11T15:04:04Z"
     },
     "container": {
       "tag": "1.4.1",
@@ -95,8 +95,8 @@
     "searxng": {
       "tag": "master",
       "branch": "master",
-      "sourceCommit": "6a27c210082188262d0f96000be6216ffdccd81b",
-      "sourceCommittedAt": "2026-09-11T14:24:58Z"
+      "sourceCommit": "61d660276f1288e7d512e8d8da46cb8442728454",
+      "sourceCommittedAt": "2026-09-11T14:57:14Z"
     },
     "bun": {
       "tag": "bun-v1.4.2",

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/providers/openai/index.md](https://github.com/docker/docs/blob/2054b419afd87a3232f2e77366a561e172e27c67/_vendor/github.com/docker/docker-agent/docs/providers/openai/index.md)
+> Commit-pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/providers/openai/index.md](https://github.com/docker/docs/blob/14df09affa43a67a6a8f7927a3578a4e4ff1bc28/_vendor/github.com/docker/docker-agent/docs/providers/openai/index.md)
 
 *Use GPT-5.6, GPT-4o, GPT-5, GPT-5-mini, and other OpenAI models with Docker Agent.*
 

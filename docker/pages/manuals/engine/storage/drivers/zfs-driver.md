@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/engine/storage/drivers/zfs-driver.md](https://github.com/docker/docs/blob/2054b419afd87a3232f2e77366a561e172e27c67/content/manuals/engine/storage/drivers/zfs-driver.md)
+> Commit-pinned source for Docker main: [content/manuals/engine/storage/drivers/zfs-driver.md](https://github.com/docker/docs/blob/14df09affa43a67a6a8f7927a3578a4e4ff1bc28/content/manuals/engine/storage/drivers/zfs-driver.md)
 
 # ZFS storage driver
 
@@ -144,7 +144,7 @@ ZFS uses the following objects:
 
 The process of creating a clone:
 
-![ZFS snapshots and clones](https://raw.githubusercontent.com/docker/docs/2054b419afd87a3232f2e77366a561e172e27c67/content/manuals/engine/storage/drivers/images/zfs_clones.webp?w=450)
+![ZFS snapshots and clones](https://raw.githubusercontent.com/docker/docs/14df09affa43a67a6a8f7927a3578a4e4ff1bc28/content/manuals/engine/storage/drivers/images/zfs_clones.webp?w=450)
 
 1. A read-only snapshot is created from the filesystem.
 2. A writable clone is created from the snapshot. This contains any differences
@@ -168,7 +168,7 @@ on a ZFS Snapshot of the top layer of the image it's created from.
 The diagram below shows how this is put together with a running container based
 on a two-layer image.
 
-![ZFS pool for Docker container](https://raw.githubusercontent.com/docker/docs/2054b419afd87a3232f2e77366a561e172e27c67/content/manuals/engine/storage/drivers/images/zfs_zpool.webp?w=600)
+![ZFS pool for Docker container](https://raw.githubusercontent.com/docker/docs/14df09affa43a67a6a8f7927a3578a4e4ff1bc28/content/manuals/engine/storage/drivers/images/zfs_zpool.webp?w=600)
 
 When you start a container, the following steps happen in order:
 
@@ -201,7 +201,7 @@ the dataset it was created from (the snapshots of its parent layers). Read
 operations are fast, even if the data being read is from a deep layer.
 This diagram illustrates how block sharing works:
 
-![ZFS block sharing](https://raw.githubusercontent.com/docker/docs/2054b419afd87a3232f2e77366a561e172e27c67/content/manuals/engine/storage/drivers/images/zpool_blocks.webp?w=450)
+![ZFS block sharing](https://raw.githubusercontent.com/docker/docs/14df09affa43a67a6a8f7927a3578a4e4ff1bc28/content/manuals/engine/storage/drivers/images/zpool_blocks.webp?w=450)
 
 ### Writing files
 
