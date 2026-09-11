@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/understand-workflows/create-and-edit-credentials.md](https://github.com/n8n-io/n8n-docs/blob/656d085e69007e11a1172aa117dcd6b013c5b553/docs/build/understand-workflows/create-and-edit-credentials.md)
+> Commit-pinned source for n8n main: [docs/build/understand-workflows/create-and-edit-credentials.md](https://github.com/n8n-io/n8n-docs/blob/9594a4eeafcb99be28b81f978b93e2f9bb786a1d/docs/build/understand-workflows/create-and-edit-credentials.md)
 
 # Create and edit credentials
 
@@ -221,7 +221,7 @@ To load the template into your n8n instance:
 
 1. Download the workflow JSON file.
 2. Open a new workflow in your n8n instance.
-3. Copy in the JSON, or select **Workflow menu** ![Workflow menu icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/656d085e69007e11a1172aa117dcd6b013c5b553/docs/reusable-content/.gitbook/assets/three-dots-horizontal.png) > **Import from file...**.
+3. Copy in the JSON, or select **Workflow menu** ![Workflow menu icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/9594a4eeafcb99be28b81f978b93e2f9bb786a1d/docs/reusable-content/.gitbook/assets/three-dots-horizontal.png) > **Import from file...**.
 
 The example workflows use Sticky Notes to guide you:
 

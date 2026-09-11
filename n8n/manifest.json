@@ -5,9 +5,9 @@
   "repository": "n8n-io/n8n-docs",
   "tag": "main",
   "branch": "main",
-  "sourceCommittedAt": "2026-09-11T10:02:26Z",
-  "sourceCommit": "656d085e69007e11a1172aa117dcd6b013c5b553",
-  "documentCount": 1316,
+  "sourceCommittedAt": "2026-09-11T12:43:58Z",
+  "sourceCommit": "9594a4eeafcb99be28b81f978b93e2f9bb786a1d",
+  "documentCount": 1318,
   "quarantined": [
     {
       "sourcePath": "docs/build/ways-of-building-workflows/use-the-ai-assistant.md",

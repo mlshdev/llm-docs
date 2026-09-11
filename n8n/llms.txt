@@ -1,6 +1,6 @@
 # n8n main
 
-> Documentation generated from the latest `main` branch commit of [n8n-io/n8n-docs](https://github.com/n8n-io/n8n-docs) and pinned to immutable source commit `656d085e69007e11a1172aa117dcd6b013c5b553`.
+> Documentation generated from the latest `main` branch commit of [n8n-io/n8n-docs](https://github.com/n8n-io/n8n-docs) and pinned to immutable source commit `9594a4eeafcb99be28b81f978b93e2f9bb786a1d`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for n8n main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -827,6 +827,7 @@
 - [Anthropic credentials](pages/integrations/builtin/credentials/anthropic.md): Source `docs/integrations/builtin/credentials/anthropic.md`.
 - [APITemplate.io credentials](pages/integrations/builtin/credentials/apitemplateio.md): Source `docs/integrations/builtin/credentials/apitemplateio.md`.
 - [Asana credentials](pages/integrations/builtin/credentials/asana.md): Source `docs/integrations/builtin/credentials/asana.md`.
+- [Atlassian credentials](pages/integrations/builtin/credentials/atlassian.md): Source `docs/integrations/builtin/credentials/atlassian.md`.
 - [Auth0 Management credentials](pages/integrations/builtin/credentials/auth0management.md): Source `docs/integrations/builtin/credentials/auth0management.md`.
 - [Autopilot credentials](pages/integrations/builtin/credentials/autopilot.md): Source `docs/integrations/builtin/credentials/autopilot.md`.
 - [AWS credentials](pages/integrations/builtin/credentials/aws.md): Source `docs/integrations/builtin/credentials/aws.md`.
@@ -861,6 +862,7 @@
 - [Cockpit credentials](pages/integrations/builtin/credentials/cockpit.md): Source `docs/integrations/builtin/credentials/cockpit.md`.
 - [Coda credentials](pages/integrations/builtin/credentials/coda.md): Source `docs/integrations/builtin/credentials/coda.md`.
 - [Cohere credentials](pages/integrations/builtin/credentials/cohere.md): Source `docs/integrations/builtin/credentials/cohere.md`.
+- [Confluence credentials](pages/integrations/builtin/credentials/confluence.md): Source `docs/integrations/builtin/credentials/confluence.md`.
 - [Contentful credentials](pages/integrations/builtin/credentials/contentful.md): Source `docs/integrations/builtin/credentials/contentful.md`.
 - [ConvertAPI credentials](pages/integrations/builtin/credentials/convertapi.md): Source `docs/integrations/builtin/credentials/convertapi.md`.
 - [ConvertKit credentials](pages/integrations/builtin/credentials/convertkit.md): Source `docs/integrations/builtin/credentials/convertkit.md`.

@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/builtin/deprecated-nodes.md](https://github.com/n8n-io/n8n-docs/blob/656d085e69007e11a1172aa117dcd6b013c5b553/docs/integrations/builtin/deprecated-nodes.md)
+> Commit-pinned source for n8n main: [docs/integrations/builtin/deprecated-nodes.md](https://github.com/n8n-io/n8n-docs/blob/9594a4eeafcb99be28b81f978b93e2f9bb786a1d/docs/integrations/builtin/deprecated-nodes.md)
 
 # Deprecated and versioned nodes <a id="deprecated-and-versioned-nodes"></a>
 
