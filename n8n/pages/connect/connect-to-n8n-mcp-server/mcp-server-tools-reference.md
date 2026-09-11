@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/connect/connect-to-n8n-mcp-server/mcp-server-tools-reference.md](https://github.com/n8n-io/n8n-docs/blob/9594a4eeafcb99be28b81f978b93e2f9bb786a1d/docs/connect/connect-to-n8n-mcp-server/mcp-server-tools-reference.md)
+> Commit-pinned source for n8n main: [docs/connect/connect-to-n8n-mcp-server/mcp-server-tools-reference.md](https://github.com/n8n-io/n8n-docs/blob/03028bf08eed0089ba60c3ae97520bdc9224d8ea/docs/connect/connect-to-n8n-mcp-server/mcp-server-tools-reference.md)
 
 # n8n MCP server tools reference <a id="n8n-mcp-server-tools-reference"></a>
 
@@ -515,7 +515,7 @@ Search for workflow executions with optional filters. Returns execution metadata
 | `startedAfter`  | `string`   | No       | ISO 8601 timestamp. Only return executions that started after this time.                                                                |
 | `startedBefore` | `string`   | No       | ISO 8601 timestamp. Only return executions that started before this time.                                                               |
 | `limit`         | `integer`  | No       | Limit the number of results (max 200)                                                                                                   |
-| `lastId`        | `string`   | No       | Cursor for pagination. Pass the last execution ID from the previous page.                                                               |
+| `cursor`        | `string`   | No       | Cursor for pagination. Pass the `nextCursor` from the previous page. Treat it as opaque.                                                |
 
 #### Output <a id="output"></a>
 
@@ -531,11 +531,13 @@ Search for workflow executions with optional filters. Returns execution metadata
 | `data[].waitTill`   | `string \| null` | ISO timestamp until when the execution is waiting                                                                                                                    |
 | `count`             | `integer`        | Total matching executions, or `-1` if the count is unavailable                                                                                                       |
 | `estimated`         | `boolean`        | Whether the count is an estimate for large datasets                                                                                                                  |
+| `nextCursor`        | `string \| null` | Cursor for the next page, or `null` when no next page exists                                                                                                         |
 | `error`             | `string`         | Error message if the query failed                                                                                                                                    |
 
 #### Notes <a id="notes"></a>
 
 - Renamed from `search_executions` in n8n 2.34.0.
+- `cursor` replaces the earlier `lastId` parameter. Pass the `nextCursor` value from the previous response and treat it as an opaque string.
 
 ***
 

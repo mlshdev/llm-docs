@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/code-in-n8n/use-built-in-shortcuts/n8n-metadata.md](https://github.com/n8n-io/n8n-docs/blob/9594a4eeafcb99be28b81f978b93e2f9bb786a1d/docs/build/code-in-n8n/use-built-in-shortcuts/n8n-metadata.md)
+> Commit-pinned source for n8n main: [docs/build/code-in-n8n/use-built-in-shortcuts/n8n-metadata.md](https://github.com/n8n-io/n8n-docs/blob/03028bf08eed0089ba60c3ae97520bdc9224d8ea/docs/build/code-in-n8n/use-built-in-shortcuts/n8n-metadata.md)
 
 # n8n metadata <a id="n8n-metadata"></a>
 

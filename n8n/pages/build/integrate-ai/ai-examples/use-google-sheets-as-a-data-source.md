@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/integrate-ai/ai-examples/use-google-sheets-as-a-data-source.md](https://github.com/n8n-io/n8n-docs/blob/9594a4eeafcb99be28b81f978b93e2f9bb786a1d/docs/build/integrate-ai/ai-examples/use-google-sheets-as-a-data-source.md)
+> Commit-pinned source for n8n main: [docs/build/integrate-ai/ai-examples/use-google-sheets-as-a-data-source.md](https://github.com/n8n-io/n8n-docs/blob/03028bf08eed0089ba60c3ae97520bdc9224d8ea/docs/build/integrate-ai/ai-examples/use-google-sheets-as-a-data-source.md)
 
 # Use Google Sheets as a data source
 
@@ -677,7 +677,7 @@ To load the template into your n8n instance:
 
 1. Download the workflow JSON file.
 2. Open a new workflow in your n8n instance.
-3. Copy in the JSON, or select **Workflow menu** ![Workflow menu icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/9594a4eeafcb99be28b81f978b93e2f9bb786a1d/docs/reusable-content/.gitbook/assets/three-dots-horizontal.png) > **Import from file...**.
+3. Copy in the JSON, or select **Workflow menu** ![Workflow menu icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/03028bf08eed0089ba60c3ae97520bdc9224d8ea/docs/reusable-content/.gitbook/assets/three-dots-horizontal.png) > **Import from file...**.
 
 The example workflows use Sticky Notes to guide you:
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/host-n8n/configure-n8n/basic-configuration/configuration-examples/configure-the-base-url.md](https://github.com/n8n-io/n8n-docs/blob/9594a4eeafcb99be28b81f978b93e2f9bb786a1d/docs/deploy/host-n8n/configure-n8n/basic-configuration/configuration-examples/configure-the-base-url.md)
+> Commit-pinned source for n8n main: [docs/deploy/host-n8n/configure-n8n/basic-configuration/configuration-examples/configure-the-base-url.md](https://github.com/n8n-io/n8n-docs/blob/03028bf08eed0089ba60c3ae97520bdc9224d8ea/docs/deploy/host-n8n/configure-n8n/basic-configuration/configuration-examples/configure-the-base-url.md)
 
 # Configure the Base URL for n8n's front end access <a id="configure-the-base-url-for-n8ns-front-end-access"></a>
 
