@@ -1,8 +1,17 @@
-> Release-pinned source for VictoriaMetrics datasource for Grafana v0.25.2: [CHANGELOG.md](https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/302cac37e958cf3d40413f04ebed199536649e34/CHANGELOG.md)
+> Release-pinned source for VictoriaMetrics datasource for Grafana v0.26.0: [CHANGELOG.md](https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/94608e41975acecbe90699fe32cc9f687b275563/CHANGELOG.md)
 
 # Changelog
 
 ## tip
+
+- FEATURE: align `start` and `end` of range queries to the query step. See [#539](https://github.com/VictoriaMetrics/victoriametrics-datasource/issues/539).
+  - **Note:** if a query returns 50 or more data points, VictoriaMetrics shifts `start` and `end` a bit further on its own side to make response caching work, so the returned timestamps may not match the selected time range exactly. Add `nocache=1` to the datasource custom query parameters to turn this off.
+
+- BUGFIX: bring back warning about partial response. See [#542](https://github.com/VictoriaMetrics/victoriametrics-datasource/issues/542). Thanks to @ilyalabun for contributing.
+
+- BUGFIX: send `start`, `end` and `time` query params as unix milliseconds instead of whole seconds, so zoomed-in graphs with sub-second steps are no longer cut off at the edges. See [#539](https://github.com/VictoriaMetrics/victoriametrics-datasource/issues/539).
+
+## v0.25.2
 
 - BUGFIX: fix client-side crash when opening the variable editor with the `Label values` query type on Grafana 13.x. See [#532](https://github.com/VictoriaMetrics/victoriametrics-datasource/issues/532).
 
