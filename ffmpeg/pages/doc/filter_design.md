@@ -1,4 +1,4 @@
-> Commit-pinned source for FFmpeg master: [doc/filter_design.txt](https://github.com/FFmpeg/FFmpeg/blob/61cabd62cbf0d240620ef7caa382d665268e61b4/doc/filter_design.txt)
+> Commit-pinned source for FFmpeg master: [doc/filter_design.txt](https://github.com/FFmpeg/FFmpeg/blob/884590dd4aad5fcc7a91fbbb7af8a5da80b61d96/doc/filter_design.txt)
 
 # Filter design
 
