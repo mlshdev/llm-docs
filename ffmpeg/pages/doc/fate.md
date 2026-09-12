@@ -1,4 +1,4 @@
-> Commit-pinned source for FFmpeg master: [doc/fate.texi](https://github.com/FFmpeg/FFmpeg/blob/f7fbb1260e1df3389143cfbbc603008f4230ee48/doc/fate.texi)
+> Commit-pinned source for FFmpeg master: [doc/fate.texi](https://github.com/FFmpeg/FFmpeg/blob/709f8fececd0ec6586208010e1d578abf3340dfc/doc/fate.texi)
 
 # Introduction
 
