@@ -1,4 +1,4 @@
-> Commit-pinned source for SearXNG master: [SECURITY.md](https://github.com/searxng/searxng/blob/a667e8c9057d4be542df5adbe9b42adeb8fb2395/SECURITY.md)
+> Commit-pinned source for SearXNG master: [SECURITY.md](https://github.com/searxng/searxng/blob/d4f00d15d4c2b8260124a9039b80bc9c1c26499b/SECURITY.md)
 
 # Security Policy
 
