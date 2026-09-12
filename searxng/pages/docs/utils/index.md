@@ -1,4 +1,4 @@
-> Commit-pinned source for SearXNG master: [docs/utils/index.rst](https://github.com/searxng/searxng/blob/61d660276f1288e7d512e8d8da46cb8442728454/docs/utils/index.rst)
+> Commit-pinned source for SearXNG master: [docs/utils/index.rst](https://github.com/searxng/searxng/blob/87bf8c86ed79053db5e7b5310bc5ec975805cb11/docs/utils/index.rst)
 
 .. \_searx\_utils:
 .. \_toolboxing:

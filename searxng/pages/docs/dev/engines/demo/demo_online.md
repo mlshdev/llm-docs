@@ -1,4 +1,4 @@
-> Commit-pinned source for SearXNG master: [docs/dev/engines/demo/demo_online.rst](https://github.com/searxng/searxng/blob/61d660276f1288e7d512e8d8da46cb8442728454/docs/dev/engines/demo/demo_online.rst)
+> Commit-pinned source for SearXNG master: [docs/dev/engines/demo/demo_online.rst](https://github.com/searxng/searxng/blob/87bf8c86ed79053db5e7b5310bc5ec975805cb11/docs/dev/engines/demo/demo_online.rst)
 
 .. \_demo online engine:
 
