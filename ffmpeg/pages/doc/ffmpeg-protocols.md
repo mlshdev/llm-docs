@@ -1,4 +1,4 @@
-> Commit-pinned source for FFmpeg master: [doc/ffmpeg-protocols.texi](https://github.com/FFmpeg/FFmpeg/blob/57a2e704b4a6eda5d061b45aacde6b19c026bfc0/doc/ffmpeg-protocols.texi)
+> Commit-pinned source for FFmpeg master: [doc/ffmpeg-protocols.texi](https://github.com/FFmpeg/FFmpeg/blob/2b822b7fb6ed195546bc9fd9bdb794e98222bdce/doc/ffmpeg-protocols.texi)
 
 # Description
 
@@ -1213,6 +1213,11 @@ This protocol accepts the following options.
 - private\_key
   Specify the path of the file containing private key to use during authorization.
   By default libssh searches for keys in the `~/.ssh/` directory.
+
+- verify
+  Verify the server host key against the known\_hosts file before
+  authenticating, if set to 1. Servers that are not in the file, or whose
+  key differs from the one recorded there, are refused. Default value is 1.
 
 Example: Play a file stored on remote server.
 
